@@ -17,5 +17,3 @@ Verified in an isolated fresh Python environment: all500 prompts/parses and ever
 | Labeled wrong-answer acceptance (lower is better) | 18.2% | 26.8% |
 
 Previously observed data: exploratory comparison, not independent confirmation. The official string score can miss wrong-answer aliases. Generation caps/budget and increased wrong-answer acceptance remain limitations.
-
-ZIP SHA256: `80ae8bb87ec4df9aefce78229ab46ff8cab4c2487941937d94d9cb05cf5350e3`.
