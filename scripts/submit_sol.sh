@@ -25,7 +25,7 @@ Usage: bash scripts/submit_sol.sh --run-root PATH [options]
 Default: preview the A/B -> C -> D jobs on 5 questions; submit nothing.
   --dry-run          Print commands only (default; no files are created)
   --submit           Snapshot code/inputs and submit jobs to Slurm
-  --stage ab|all     Queue A/B only, or the complete dependent chain (default all)
+  --stage ab|c|all   Queue A/B only, C only, or the complete chain (default all)
   --smoke N          Use the first N questions (default 5)
   --full             Use all questions; first complete a separate smoke run
   --project PATH     Project checkout (default this script's parent)
@@ -66,7 +66,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 [[ -n "$RUN_ROOT" ]] || { printf -- '--run-root is required.\n' >&2; exit 2; }
-[[ "$STAGE" == ab || "$STAGE" == all ]] || { printf -- '--stage must be ab or all.\n' >&2; exit 2; }
+[[ "$STAGE" == ab || "$STAGE" == c || "$STAGE" == all ]] || { printf -- '--stage must be ab, c or all.\n' >&2; exit 2; }
 for value in "$WORKERS" "$MAX_TOKENS"; do
     [[ "$value" =~ ^[0-9]+$ && "$value" -gt 0 ]] || { printf 'workers and max-tokens must be positive integers.\n' >&2; exit 2; }
 done
@@ -80,8 +80,9 @@ MODEL="$(python3 -c 'from pathlib import Path; import sys; print(Path(sys.argv[1
 NLP_PYTHON="$(python3 -c 'import os,sys; print(os.path.abspath(sys.argv[1]))' "$NLP_PYTHON")"
 SNAPSHOT="$RUN_ROOT/source"
 FROZEN_BUNDLE="$RUN_ROOT/inputs/RAMDocs_Reproducible_Package.zip"
-STAGES=(ab)
-if [[ "$STAGE" == all ]]; then STAGES+=(c d); fi
+case "$STAGE" in
+    ab) STAGES=(ab) ;; c) STAGES=(c) ;; all) STAGES=(ab c d) ;;
+esac
 for stage in "${STAGES[@]}"; do
     [[ -f "$PROJECT/scripts/run_${stage}.sbatch" ]] || { printf 'Missing stage script: %s\n' "$stage" >&2; exit 2; }
 done

@@ -122,3 +122,51 @@ smoke run succeeds, use `--full` and a fresh run root for all 500 questions.
 The wrapper copies the source and input package into the run root before
 submission, so later branch switches do not change queued jobs. Model and
 environment paths can be supplied with `--model` and `--python`.
+
+## C: create fresh cards with 72B
+
+C keeps the original extraction instructions and card fields. It reads each
+document separately with the selected 72B model, then reconstructs quotations
+from real source segments. It saves the raw extraction outputs, valid cards,
+discarded-card reasons, and token usage. Evaluation labels never enter the
+extractor prompt. MiniCheck is not rerun: its scores did not filter the original
+all-card comparison, and are not sent to the final answerer.
+
+Validate the full extraction plan without starting a model:
+
+```bash
+python -m src.cards extract \
+  --bundle benchmarks/ramdocs_cards/RAMDocs_Reproducible_Package.zip --dry-run
+```
+
+On a Sol GPU node, create cards and then generate C's final answers:
+
+```bash
+python -m src.cards extract \
+  --bundle benchmarks/ramdocs_cards/RAMDocs_Reproducible_Package.zip \
+  --model /scratch/$USER/conflict_aware_RAG/models/Qwen2.5-72B-Instruct-AWQ \
+  --out runs/c-cards
+
+python -m src.compare \
+  --bundle benchmarks/ramdocs_cards/RAMDocs_Reproducible_Package.zip \
+  --cards runs/c-cards --only-cards \
+  --model /scratch/$USER/conflict_aware_RAG/models/Qwen2.5-72B-Instruct-AWQ \
+  --max-tokens 128 --out runs/c-answers
+```
+
+`--only-cards` avoids generating Plain answers again. Compare C with the B
+answers from the shared A/B run, keeping the same final model and settings.
+Use `--limit 5` on both commands for a smoke run. To continue interrupted card
+creation, repeat its command with `--resume`; successful documents are kept and
+failed or missing documents are retried. Changed inputs/settings require a new
+directory. Final-answer runs always require a fresh output directory.
+
+To preview C alone as a queued job:
+
+```bash
+bash scripts/submit_sol.sh --stage c --dry-run --run-root runs/sol-c-smoke
+```
+
+New extraction may recover the four previous source failures as well as change
+card quality. This is a comparison of extractor configurations, rather than
+proof that parameter count alone caused any difference.

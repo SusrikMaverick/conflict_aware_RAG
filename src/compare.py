@@ -203,9 +203,9 @@ def assess(text, gold, wrong):
             "wrong_answer_accepted": any(words(answer).search(remaining) for answer in wrong_set)}
 
 
-def summarize(records, questions):
+def summarize(records, questions, methods=METHODS):
     summary = {"questions": questions}
-    for method in METHODS:
+    for method in methods:
         outputs = [record for record in records if record["method"] == method]
         correct = sum(record["official_correct"] for record in outputs)
         strict = sum(record["strict_correct"] for record in outputs)
@@ -226,7 +226,8 @@ def summarize(records, questions):
     deltas = [int(pair["plus_cards"]["official_correct"]) - int(pair["plain"]["official_correct"])
               for pair in by_question.values() if set(pair) == set(METHODS)]
     summary["paired"] = {"completed_pairs": len(deltas), "gains": sum(d > 0 for d in deltas),
-                         "losses": sum(d < 0 for d in deltas), "accuracy_difference": sum(deltas) / questions}
+                         "losses": sum(d < 0 for d in deltas),
+                         "accuracy_difference": sum(deltas) / questions if len(methods) == 2 else None}
     summary["cost_scope"] = "New final-answer calls only; saved card extraction/verification cost is not rerun or included."
     return summary
 
@@ -235,21 +236,24 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def prepare_run(out, cases, provenance, model, max_tokens=128, seed=576, workers=8):
+def prepare_run(out, cases, provenance, model, max_tokens=128, seed=576, workers=8, methods=METHODS):
     """Reserve a new directory and record settings before starting the model."""
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     manifest = {**provenance, "status": "prepared", "started_utc": datetime.now(timezone.utc).isoformat(),
                 "final_model": str(model), "generation": generation_settings(max_tokens, seed),
                 "workers": workers, "questions": len(cases),
+                "methods": list(methods),
                 "question_ids": [case["question_id"] for case in cases],
                 "subset": len(cases) != provenance["available_questions"],
                 "prompt_template_sha256": digest(PROMPT.encode("utf-8")),
                 "scorer": "src.eval.score (historical raw-text compatible) plus strict parsed-set diagnostics",
                 "scorer_source_sha256": digest(Path(__file__).with_name("eval.py").read_bytes()),
                 "runner_source_sha256": digest(Path(__file__).read_bytes()),
-                "final_answers": "Both methods freshly generated with the same model and settings; no old outputs reused.",
-                "scope": "Frozen 7B-extracted cards with the selected final answerer; not end-to-end re-extraction at that model size.",
+                "final_answers": "All selected final-answer calls are fresh; no old outputs reused.",
+                "scope": (f"Variant {provenance['card_variant']} cards with the same original documents and final prompt."
+                          if provenance.get("card_variant") else
+                          "Frozen 7B-extracted cards with the selected final answerer; not end-to-end re-extraction at that model size."),
                 "context_policy": "No prompt truncation; request/context failures count as incorrect for that method."}
     write_json(out / "manifest.json", manifest)
     with (out / "prompts.jsonl").open("x", encoding="utf-8") as file:
@@ -258,10 +262,12 @@ def prepare_run(out, cases, provenance, model, max_tokens=128, seed=576, workers
     return manifest
 
 
-def run(llm, cases, *, out, workers=8, max_tokens=128, seed=576, _prepared=False):
+def run(llm, cases, *, out, workers=8, max_tokens=128, seed=576, _prepared=False, methods=METHODS):
     """Make independent paired calls; save every completion/failure immediately."""
     if not cases or workers < 1:
         raise ValueError("Need at least one case and one worker")
+    if not methods or len(set(methods)) != len(methods) or not set(methods) <= set(METHODS):
+        raise ValueError("Select plain, plus_cards, or both methods")
     settings = generation_settings(max_tokens, seed)
     out = Path(out)
     if not _prepared:
@@ -270,13 +276,16 @@ def run(llm, cases, *, out, workers=8, max_tokens=128, seed=576, _prepared=False
     records = []
     files = {}
     try:
-        for method in METHODS:
+        for method in methods:
             files[method] = (out / f"{method}.jsonl").open("x", encoding="utf-8")
-        files["paired"] = (out / "paired.jsonl").open("x", encoding="utf-8")
+        if len(methods) == 2:
+            files["paired"] = (out / "paired.jsonl").open("x", encoding="utf-8")
 
         def one(case):
             pair = {"question_id": case["question_id"], "question": case["question"]}
-            for method, prompt in build_prompts(case).items():
+            prompts = build_prompts(case)
+            for method in methods:
+                prompt = prompts[method]
                 start = time.monotonic()
                 record = {"question_id": case["question_id"], "method": method,
                           "question": case["question"], "card_count": len(case["cards"]) if method == "plus_cards" else 0,
@@ -302,11 +311,12 @@ def run(llm, cases, *, out, workers=8, max_tokens=128, seed=576, _prepared=False
                     files[method].write(json.dumps(record, ensure_ascii=False) + "\n")
                     files[method].flush()
                     records.append(record)
-            pair["official_change"] = int(pair["plus_cards"]["official_correct"]) - int(pair["plain"]["official_correct"])
-            pair["strict_change"] = int(pair["plus_cards"]["strict_correct"]) - int(pair["plain"]["strict_correct"])
-            with lock:
-                files["paired"].write(json.dumps(pair, ensure_ascii=False) + "\n")
-                files["paired"].flush()
+            if len(methods) == 2:
+                pair["official_change"] = int(pair["plus_cards"]["official_correct"]) - int(pair["plain"]["official_correct"])
+                pair["strict_change"] = int(pair["plus_cards"]["strict_correct"]) - int(pair["plain"]["strict_correct"])
+                with lock:
+                    files["paired"].write(json.dumps(pair, ensure_ascii=False) + "\n")
+                    files["paired"].flush()
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = [pool.submit(one, case) for case in cases]
@@ -317,7 +327,7 @@ def run(llm, cases, *, out, workers=8, max_tokens=128, seed=576, _prepared=False
     finally:
         for file in files.values():
             file.close()
-    summary = summarize(records, len(cases))
+    summary = summarize(records, len(cases), methods)
     write_json(out / "summary.json", summary)
     return summary
 
@@ -327,6 +337,8 @@ def main(argv=None):
     parser.add_argument("--bundle", type=Path, required=True, help="Extracted bundle directory or original ZIP")
     parser.add_argument("--out", type=Path, help="New output directory; existing directories are never reused")
     parser.add_argument("--model", help="Local model path (defaults to the existing 72B AWQ setup)")
+    parser.add_argument("--cards", type=Path, help="Completed C or D card directory instead of the old saved cards")
+    parser.add_argument("--only-cards", action="store_true", help="Generate C/D answers only; compare with the saved A/B run")
     parser.add_argument("--max-tokens", type=int, default=128, help="Same final output cap for both methods")
     parser.add_argument("--seed", type=int, default=576)
     parser.add_argument("--workers", type=int, default=8)
@@ -337,8 +349,22 @@ def main(argv=None):
         parser.error("max-tokens, workers and limit must be positive")
     if not args.dry_run and args.out is None:
         parser.error("Live generation requires --out pointing to a new directory")
+    if args.only_cards and args.cards is None:
+        parser.error("--only-cards requires --cards")
+    methods = ("plus_cards",) if args.only_cards else METHODS
     try:
         cases, provenance = load_bundle(args.bundle)
+        if args.cards is not None:
+            from src.card_artifacts import load_card_set
+            card_manifest = json.loads((args.cards / "manifest.json").read_text(encoding="utf-8"))
+            selected = set(card_manifest["question_ids"])
+            if not selected <= {case["question_id"] for case in cases}:
+                raise ValueError("Card artifact includes unknown benchmark questions")
+            cases = [case for case in cases if case["question_id"] in selected]
+            cases, metadata = load_card_set(args.cards, cases, expected_model=args.model)
+            if metadata["card_stage_manifest"]["bundle_hashes"] != provenance["source_hashes"]:
+                raise ValueError("Card artifact and answer run must use the same frozen bundle")
+            provenance.update(metadata)
     except (OSError, ValueError, KeyError, StopIteration, zipfile.BadZipFile) as exc:
         parser.error(f"Cannot validate bundle: {exc}")
     if args.limit is not None:
@@ -346,7 +372,7 @@ def main(argv=None):
     if args.dry_run:
         print(json.dumps({"validated_questions": len(cases), "available_questions": provenance["available_questions"],
                           "saved_cards": sum(len(case["cards"]) for case in cases),
-                          "fresh_final_calls_if_run": 2 * len(cases), "generation": generation_settings(args.max_tokens, args.seed),
+                          "fresh_final_calls_if_run": len(methods) * len(cases), "generation": generation_settings(args.max_tokens, args.seed),
                           "extraction_model": provenance["extraction_model"],
                           "note": "Validation only. No model started and no output files written."}, indent=2))
         return 0
@@ -354,14 +380,16 @@ def main(argv=None):
     from src.interface import LLM, MODEL
 
     model = args.model or MODEL
+    if args.cards is not None and provenance["card_source"]["model"] != str(model):
+        parser.error("Use the same model for C/D card work and final answering")
     try:
-        manifest = prepare_run(args.out, cases, provenance, model, args.max_tokens, args.seed, args.workers)
+        manifest = prepare_run(args.out, cases, provenance, model, args.max_tokens, args.seed, args.workers, methods)
     except OSError as exc:
         parser.error(f"Cannot create new output directory: {exc}")
     try:
         with LLM(model=model) as llm:
             summary = run(llm, cases, out=args.out, workers=args.workers,
-                          max_tokens=args.max_tokens, seed=args.seed, _prepared=True)
+                          max_tokens=args.max_tokens, seed=args.seed, _prepared=True, methods=methods)
     except (Exception, KeyboardInterrupt) as exc:
         manifest.update(status="interrupted" if isinstance(exc, KeyboardInterrupt) else "failed",
                         error=f"{type(exc).__name__}: {exc}", finished_utc=datetime.now(timezone.utc).isoformat())
@@ -370,7 +398,7 @@ def main(argv=None):
         return 130 if isinstance(exc, KeyboardInterrupt) else 1
     manifest.update(status="complete", finished_utc=datetime.now(timezone.utc).isoformat())
     write_json(args.out / "manifest.json", manifest)
-    for method in METHODS:
+    for method in methods:
         metrics = summary[method]
         print(f"{method}: {metrics['official_correct']}/{len(cases)} = {100 * metrics['official_accuracy']:.1f}% "
               f"historical-compatible; strict {metrics['strict_correct']}/{len(cases)}")
