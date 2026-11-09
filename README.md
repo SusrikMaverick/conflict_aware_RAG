@@ -170,3 +170,41 @@ bash scripts/submit_sol.sh --stage c --dry-run --run-root runs/sol-c-smoke
 New extraction may recover the four previous source failures as well as change
 card quality. This is a comparison of extractor configurations, rather than
 proof that parameter count alone caused any difference.
+
+## D: check whether C's cards answer the question
+
+D reads the exact saved C cards, the question, and each card's original source.
+The 72B reviewer checks the requested entity, attribute, time, negation,
+quantity/completeness, and other explicit restrictions. Each check records a
+verdict, source passage, and reason. Kept cards are unchanged; the reviewer
+cannot rewrite answers or add new candidates. A source-grounded check does not
+establish that the source itself is true.
+
+```bash
+python -m src.cards review \
+  --bundle benchmarks/ramdocs_cards/RAMDocs_Reproducible_Package.zip \
+  --cards runs/c-cards \
+  --model /scratch/$USER/conflict_aware_RAG/models/Qwen2.5-72B-Instruct-AWQ \
+  --out runs/d-cards
+
+python -m src.compare \
+  --bundle benchmarks/ramdocs_cards/RAMDocs_Reproducible_Package.zip \
+  --cards runs/d-cards --only-cards \
+  --model /scratch/$USER/conflict_aware_RAG/models/Qwen2.5-72B-Instruct-AWQ \
+  --max-tokens 128 --out runs/d-answers
+
+python -m src.experiment_report \
+  --runs runs/ramdocs-72b-paired runs/c-answers runs/d-answers \
+  --out runs/abcd-report
+```
+
+Use the same question selection and final-answer settings in all runs. The
+report checks model/settings, scoring, benchmark hashes, and C-to-D lineage
+before comparing A→B, B→C and C→D. It includes wrong-answer counts, strict
+answer-set scores, single/multiple-answer groups, and stage costs. These are
+development experiments on already-observed RAMDocs data, not independent
+confirmation on unseen questions.
+
+See [Sol job instructions](docs/SOL_RUNS.md) for a queued five-question smoke
+test and the full dependent job chain, and [branch/push order](docs/BRANCHES.md)
+for the three separate version commits.
