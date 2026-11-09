@@ -22,25 +22,27 @@ import time
 import urllib.request
 from pathlib import Path
 
-from openai import OpenAI
-
 MODEL = "/scratch/smukhe61/conflict_aware_RAG/models/Qwen2.5-72B-Instruct-AWQ"
 LOG_FILE = Path(__file__).resolve().parents[1] / "logs" / "vllm.log"
 
 
 class LLM:
-    def __init__(self, model=MODEL, port=8000, max_model_len=32768, gpu_memory_utilization=0.90):
+    def __init__(self, model=MODEL, port=None, max_model_len=32768, gpu_memory_utilization=0.90):
+        from openai import OpenAI
+
         self.model = model
+        port = int(os.environ.get("LLM_PORT", "8000")) if port is None else port
+        self.log_file = Path(os.environ.get("LLM_LOG_FILE", str(LOG_FILE)))
         key = secrets.token_hex(16)  # other users on the node can reach localhost
-        LOG_FILE.parent.mkdir(exist_ok=True)
-        self._log = open(LOG_FILE, "w")
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
+        self._log = open(self.log_file, "w")
         self._proc = subprocess.Popen(
             [Path(sys.executable).with_name("vllm"), "serve", model,
              "--host", "127.0.0.1", "--port", str(port),
              "--max-model-len", str(max_model_len),
              "--gpu-memory-utilization", str(gpu_memory_utilization)],
             env={**os.environ, "VLLM_API_KEY": key, "VLLM_NO_USAGE_STATS": "1",
-                 "VLLM_CACHE_ROOT": "/scratch/smukhe61/conflict_aware_RAG/cache/vllm",
+                 "VLLM_CACHE_ROOT": os.environ.get("VLLM_CACHE_ROOT", "/scratch/smukhe61/conflict_aware_RAG/cache/vllm"),
                  "PYTHONNOUSERSITE": "1",  # ~/.local has an old torch that breaks vllm
                  "VLLM_USE_FLASHINFER_SAMPLER": "0"},  # it JIT-compiles with nvcc, which this node lacks
             stdout=self._log, stderr=subprocess.STDOUT,
@@ -56,11 +58,11 @@ class LLM:
         self.client = OpenAI(base_url=f"http://127.0.0.1:{port}/v1", api_key=key)
 
     def _wait_until_ready(self, health_url, timeout=1200):
-        print(f"Starting vLLM ({Path(self.model).name}), log: {LOG_FILE}", file=sys.stderr)
+        print(f"Starting vLLM ({Path(self.model).name}), log: {self.log_file}", file=sys.stderr)
         start = time.time()
         while time.time() - start < timeout:
             if self._proc.poll() is not None:
-                tail = "\n".join(LOG_FILE.read_text().splitlines()[-20:])
+                tail = "\n".join(self.log_file.read_text().splitlines()[-20:])
                 raise RuntimeError(f"vLLM exited during startup:\n{tail}")
             try:
                 urllib.request.urlopen(health_url, timeout=2).close()
@@ -68,12 +70,20 @@ class LLM:
                 return
             except OSError:
                 time.sleep(2)
-        raise TimeoutError(f"vLLM not ready after {timeout}s, see {LOG_FILE}")
+        raise TimeoutError(f"vLLM not ready after {timeout}s, see {self.log_file}")
 
     def chat(self, messages, **kwargs) -> str:
         """Return the reply. Extra kwargs (temperature, max_tokens, ...) go to the OpenAI API."""
+        return self.complete(messages, **kwargs)["text"]
+
+    def complete(self, messages, **kwargs):
+        """Return reply text plus finish reason and usage for evaluation records."""
         resp = self.client.chat.completions.create(model=self.model, messages=messages, **kwargs)
-        return resp.choices[0].message.content
+        choice = resp.choices[0]
+        if not isinstance(choice.message.content, str):
+            raise ValueError("Model response did not contain text")
+        return {"text": choice.message.content, "finish_reason": choice.finish_reason,
+                "usage": resp.usage.model_dump() if resp.usage is not None else {}}
 
     def stream(self, messages, **kwargs):
         """Like `chat`, but yields the reply as it is generated."""

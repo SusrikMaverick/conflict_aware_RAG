@@ -16,8 +16,6 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from src.interface import LLM
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "benchmarks" / "RAMDocs" / "RAMDocs_test.jsonl"
 DATA_URL = ("https://huggingface.co/datasets/HanNight/RAMDocs/resolve/"
@@ -102,6 +100,8 @@ def load():
 
 
 def main():
+    from src.interface import LLM
+
     rows = load()
     with LLM() as llm:
         records = run(llm, rows)
