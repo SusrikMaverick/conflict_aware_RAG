@@ -115,8 +115,9 @@ command -v sbatch >/dev/null || { printf 'sbatch is unavailable; submit from Sol
 [[ -x "$NLP_PYTHON" && -d "$MODEL" && -f "$BUNDLE" ]] || {
     printf 'Check --python, --model and --bundle paths on Sol.\n' >&2; exit 2;
 }
+"$NLP_PYTHON" -c 'import sys; sys.exit("The inference environment needs Python 3.11 or newer") if sys.version_info < (3, 11) else None'
 [[ ! -e "$RUN_ROOT" ]] || { printf 'Run root already exists; choose a new one: %s\n' "$RUN_ROOT" >&2; exit 2; }
-python3 - "$PROJECT" "$RUN_ROOT" "$BUNDLE" "$MODEL" "$NLP_PYTHON" "$WORKERS" "$MAX_TOKENS" "$LIMIT" "$SEED" <<'PY'
+"$NLP_PYTHON" - "$PROJECT" "$RUN_ROOT" "$BUNDLE" "$MODEL" "$NLP_PYTHON" "$WORKERS" "$MAX_TOKENS" "$LIMIT" "$SEED" <<'PY'
 from pathlib import Path
 import hashlib, json, shutil, subprocess, sys
 project, root, bundle, model, interpreter = map(Path, sys.argv[1:6])
