@@ -32,6 +32,9 @@ class LLM:
 
         self.model = model
         port = int(os.environ.get("LLM_PORT", "8000")) if port is None else port
+        startup_timeout = int(os.environ.get("LLM_STARTUP_TIMEOUT", "1200"))
+        if startup_timeout < 1:
+            raise ValueError("LLM_STARTUP_TIMEOUT must be a positive number of seconds")
         self.log_file = Path(os.environ.get("LLM_LOG_FILE", str(LOG_FILE)))
         key = secrets.token_hex(16)  # other users on the node can reach localhost
         self.log_file.parent.mkdir(parents=True, exist_ok=True)
@@ -51,14 +54,15 @@ class LLM:
         )
         atexit.register(self.close)
         try:
-            self._wait_until_ready(f"http://127.0.0.1:{port}/health")
+            self._wait_until_ready(f"http://127.0.0.1:{port}/health", startup_timeout)
         except BaseException:
             self.close()
             raise
         self.client = OpenAI(base_url=f"http://127.0.0.1:{port}/v1", api_key=key)
 
-    def _wait_until_ready(self, health_url, timeout=1200):
-        print(f"Starting vLLM ({Path(self.model).name}), log: {self.log_file}", file=sys.stderr)
+    def _wait_until_ready(self, health_url, timeout):
+        print(f"Starting vLLM ({Path(self.model).name}), startup limit {timeout}s, log: {self.log_file}",
+              file=sys.stderr)
         start = time.time()
         while time.time() - start < timeout:
             if self._proc.poll() is not None:
