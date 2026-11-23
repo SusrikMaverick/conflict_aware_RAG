@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0470-18cb8c397ff1",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Fulton, Illinois, USA",
+    "Miami, Florida, USA",
+    "Hudsonville, Michigan",
+    "Barrie, Ontario, Canada"
+  ],
+  "requests": [
+    {
+      "key": "7e1612820d3f35e89d0972cf77bd19a66242b4a1a37ceeb266acd70500f8eaf4",
+      "usage": {
+        "prompt_tokens": 3883,
+        "total_tokens": 4065,
+        "completion_tokens": 182,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.23419750854373,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7e1612820d3f35e89d0972cf77bd19a66242b4a1a37ceeb266acd70500f8eaf4",
+      "text": "{\n  \"accepted_answers\": [\n    \"Fulton, Illinois, USA\",\n    \"Miami, Florida, USA\",\n    \"Hudsonville, Michigan\",\n    \"Barrie, Ontario, Canada\"\n  ],\n  \"explanation\": \"The question asks for the location of 'Unity Christian High School'. The provided documents explicitly describe four distinct schools sharing this name, each located in a different place: D1 describes the school in Fulton, Illinois; D2 in Miami, Florida; D3 in Hudsonville, Michigan; and D4 in Barrie, Ontario, Canada. The instruction to preserve distinct valid referents and avoid collapsing multi-answer questions applies here, as these are separate entities (namesakes) rather than contradictory claims about a single entity. All four locations found in the original sources and R5 are retained as valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0470-18cb8c397ff1.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0470-18cb8c397ff1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Fulton, Illinois, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Miami, Florida, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Hudsonville, Michigan",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Barrie, Ontario, Canada",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Fulton, Illinois, USA",
+      "Miami, Florida, USA",
+      "Hudsonville, Michigan",
+      "Barrie, Ontario, Canada"
+    ],
+    "explanation": "The question asks for the location of 'Unity Christian High School'. The provided documents explicitly describe four distinct schools sharing this name, each located in a different place: D1 describes the school in Fulton, Illinois; D2 in Miami, Florida; D3 in Hudsonville, Michigan; and D4 in Barrie, Ontario, Canada. The instruction to preserve distinct valid referents and avoid collapsing multi-answer questions applies here, as these are separate entities (namesakes) rather than contradictory claims about a single entity. All four locations found in the original sources and R5 are retained as valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "396a79286de98b712de56bb78ea93b3014f91c63238b81746fb79547aaf2fba0"
+}

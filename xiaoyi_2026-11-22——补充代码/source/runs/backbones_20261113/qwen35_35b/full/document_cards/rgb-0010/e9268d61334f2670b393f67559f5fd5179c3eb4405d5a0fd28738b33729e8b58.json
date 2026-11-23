@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "dd9f7c7f4a045949cdcd4800657ba74c9e5056e3e67c9e2f279ac24a7f60b4f9",
+  "input": {
+    "question_id": "rgb-0010",
+    "question": "Who won the women's singles U.S. Open in 2019?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Sep 7, 2019 ... Women's Final: Serena Williams (8) vs. Bianca Andreescu (15) ... Twenty years ago, a 17-year-old Serena defeated Martina Hingis to win her first- ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0010",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Bianca Andreescu"
+    ],
+    "citations": [
+      {
+        "answer": "Bianca Andreescu",
+        "doc_id": "d1",
+        "quote": "Women's Final: Serena Williams (8) vs. Bianca Andreescu (15) ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Bianca Andreescu",
+        "entity": "Bianca Andreescu",
+        "scope": "2019 U.S. Open Women's Singles",
+        "claim": "Bianca Andreescu won the 2019 U.S. Open Women's Singles final against Serena Williams.",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "quote": "Women's Final: Serena Williams (8) vs. Bianca Andreescu (15) ...",
+        "span_start": 16,
+        "span_end": 80,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Sep 7, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 54,
+        "text": "Women's Final: Serena Williams (8) vs."
+      },
+      {
+        "id": "s2",
+        "start": 55,
+        "end": 80,
+        "text": "Bianca Andreescu (15) ..."
+      },
+      {
+        "id": "s3",
+        "start": 81,
+        "end": 165,
+        "text": "Twenty years ago, a 17-year-old Serena defeated Martina Hingis to win her first- ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "48afafb481db70617c00d46b08028e49ce8094b933920bda1e78a1594dceabbf",
+        "usage": {
+          "prompt_tokens": 343,
+          "total_tokens": 448,
+          "completion_tokens": 105,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 44.190439749509096,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

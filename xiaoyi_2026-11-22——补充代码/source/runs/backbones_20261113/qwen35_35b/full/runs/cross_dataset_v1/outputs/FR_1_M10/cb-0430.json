@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0430",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "South China Institute of Environmental Sciences",
+    "Corporación Universitaria Rafael Nuñez"
+  ],
+  "requests": [
+    {
+      "key": "eba1840b159cf2af82bd4786e56eac29923a7158e064b2aa7221647584a075d1",
+      "usage": {
+        "prompt_tokens": 3523,
+        "total_tokens": 3715,
+        "completion_tokens": 192,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 41.66808921471238,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "eba1840b159cf2af82bd4786e56eac29923a7158e064b2aa7221647584a075d1",
+      "text": "{\n  \"accepted_answers\": [\n    \"South China Institute of Environmental Sciences\",\n    \"Corporación Universitaria Rafael Nuñez\"\n  ],\n  \"explanation\": \"The query asks for the person or organization Anderson Diaz-Perez worked for. Source D1 (specifically segment D1S4) explicitly states he 'landed a coveted position at the prestigious South China Institute of Environmental Sciences.' Source D2 (specifically segments D2S8, D2S10, and D2S14) provides multiple pieces of evidence (publication affiliations, faculty listings, and conference proceedings) confirming his association with 'Corporación Universitaria Rafael Nuñez.' Both documents describe distinct employment or professional affiliations for the same individual, and the prompt instructions require preserving all valid referents and complementary answers rather than selecting a single interpretation. The prior audits correctly identified both as direct supports.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0430.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0430.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "South China Institute of Environmental Sciences",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Corporación Universitaria Rafael Nuñez",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "South China Institute of Environmental Sciences",
+      "Corporación Universitaria Rafael Nuñez"
+    ],
+    "explanation": "The query asks for the person or organization Anderson Diaz-Perez worked for. Source D1 (specifically segment D1S4) explicitly states he 'landed a coveted position at the prestigious South China Institute of Environmental Sciences.' Source D2 (specifically segments D2S8, D2S10, and D2S14) provides multiple pieces of evidence (publication affiliations, faculty listings, and conference proceedings) confirming his association with 'Corporación Universitaria Rafael Nuñez.' Both documents describe distinct employment or professional affiliations for the same individual, and the prompt instructions require preserving all valid referents and complementary answers rather than selecting a single interpretation. The prior audits correctly identified both as direct supports."
+  },
+  "diagnostics": {},
+  "row_sha256": "0018f82748a6a3db2a5846da997252dcefed99d7b57616eb8817024b4e40dfe4"
+}

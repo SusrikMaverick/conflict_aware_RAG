@@ -1,0 +1,208 @@
+{
+  "question_id": "rgb-0049",
+  "method": "evidence_map_memory",
+  "input_sha256": "955f47dfbedb9901b7059e98d6509271f26e275ddef3cd8b1c8f7c301928b184",
+  "accepted_answers": [
+    "Peter Handke",
+    "Abdulrazak Gurnah"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Peter Handke",
+        "sense": "2019",
+        "answers": [
+          "Peter Handke"
+        ],
+        "date": "2019",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Abdulrazak Gurnah",
+        "sense": "2019",
+        "answers": [
+          "Abdulrazak Gurnah"
+        ],
+        "date": "2019",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Peter Handke, 2019: Peter Handke (as of 2019) [2]. Basis: one source.\nAbdulrazak Gurnah, 2019: Abdulrazak Gurnah (as of 2019) [3]. Basis: one source.",
+    "ask_back": "Did you mean Peter Handke (2019) or Abdulrazak Gurnah (2019)?",
+    "calls": 6,
+    "prompt_tokens": 2613,
+    "completion_tokens": 533,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 591,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 594,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 496,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Author of the winning work",
+          "answer": "Peter Handke",
+          "confidence": 85
+        },
+        {
+          "about": "Title of the winning work",
+          "answer": "The Triumph of the Will",
+          "confidence": 70
+        },
+        {
+          "about": "Year of the award",
+          "answer": "2019",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Peter Handke",
+              "sense": "2019",
+              "answer": "Peter Handke",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "Nobel Prizes and laureates",
+              "evidence": "The Nobel Prize in Literature 2019 · Peter Handke",
+              "claim": "The Nobel Prize in Literature 2019 was awarded to Peter Handke.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Abdulrazak Gurnah",
+              "sense": "2019",
+              "answer": "Abdulrazak Gurnah",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "Nobel Prizes and laureates",
+              "evidence": "The Nobel Prize in Literature 2019 · Abdulrazak Gurnah · Nobel Prizes and laureates",
+              "claim": "Abdulrazak Gurnah was awarded the Nobel Prize in Literature in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Peter Handke",
+            "sense": "2019",
+            "sense_unknown": false,
+            "answer": "Peter Handke",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Abdulrazak Gurnah",
+            "sense": "2019",
+            "sense_unknown": false,
+            "answer": "Abdulrazak Gurnah",
+            "date": "2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Peter Handke",
+          "b": "Abdulrazak Gurnah",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

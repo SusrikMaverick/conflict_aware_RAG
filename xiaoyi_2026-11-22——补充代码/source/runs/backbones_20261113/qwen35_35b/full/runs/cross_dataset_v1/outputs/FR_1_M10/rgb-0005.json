@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0005",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Angelique Kerber"
+  ],
+  "requests": [
+    {
+      "key": "a1cf523793e5c3649973855ee696327c5c547fa2001bde2b593ed2172f86dd3a",
+      "usage": {
+        "prompt_tokens": 1413,
+        "total_tokens": 1569,
+        "completion_tokens": 156,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.378166910260916,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a1cf523793e5c3649973855ee696327c5c547fa2001bde2b593ed2172f86dd3a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Angelique Kerber\"\n  ],\n  \"explanation\": \"Source D2S2 explicitly states 'Angelique Kerber has won the 2018 Wimbledon women's singles bracket'. Source D3S2 claims Ashleigh Barty won, which contradicts D2S2 and real-world facts (Serena Williams was the runner-up to Kerber). The prompt requires verifying against original sources and treating contradictory assertions carefully; since D2S2 aligns with the known historical fact that Kerber defeated Williams, while D3S2 contains a factual error regarding the winner (Barty did not win), only Angelique Kerber is the correct answer derived from the valid source segment.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0005.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0005.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Angelique Kerber",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Ashleigh Barty",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Angelique Kerber"
+    ],
+    "explanation": "Source D2S2 explicitly states 'Angelique Kerber has won the 2018 Wimbledon women's singles bracket'. Source D3S2 claims Ashleigh Barty won, which contradicts D2S2 and real-world facts (Serena Williams was the runner-up to Kerber). The prompt requires verifying against original sources and treating contradictory assertions carefully; since D2S2 aligns with the known historical fact that Kerber defeated Williams, while D3S2 contains a factual error regarding the winner (Barty did not win), only Angelique Kerber is the correct answer derived from the valid source segment."
+  },
+  "diagnostics": {},
+  "row_sha256": "9a6f8656c8ef1aed98a1cedaa463fd9e9f56409a711e0581904ecbd7d6e7a4a1"
+}

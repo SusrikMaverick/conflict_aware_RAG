@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0a1e683c864b2b8e48d9c3408e3cfd280aa994351cb354c064b3b9395406a290",
+  "input": {
+    "question_id": "ramdocs-0320-2fdeaaf15ee6",
+    "question": "What sport is Wayne Jones associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "text": "career came when he was aged just 24, when on 4 November 1972 he fell to the ground clutching his knee during a game against Brentford. It was initially believed to be a cartilage injury, but it later emerged that he had a previously undiagnosed arthritic condition that meant he was never able to play again. After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities. In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0320-2fdeaaf15ee6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "football"
+    ],
+    "citations": [
+      {
+        "answer": "football",
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "quote": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities. In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "football",
+        "entity": "Wayne Jones",
+        "scope": "sport",
+        "claim": "Wayne Jones is associated with football.",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "quote": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities. In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned",
+        "span_start": 310,
+        "span_end": 584,
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "card_id": "ramdocs-0320-2fdeaaf15ee6:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 135,
+        "text": "career came when he was aged just 24, when on 4 November 1972 he fell to the ground clutching his knee during a game against Brentford."
+      },
+      {
+        "id": "s1",
+        "start": 136,
+        "end": 309,
+        "text": "It was initially believed to be a cartilage injury, but it later emerged that he had a previously undiagnosed arthritic condition that meant he was never able to play again."
+      },
+      {
+        "id": "s2",
+        "start": 310,
+        "end": 497,
+        "text": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities."
+      },
+      {
+        "id": "s3",
+        "start": 498,
+        "end": 584,
+        "text": "In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned"
+      }
+    ],
+    "requests": [
+      {
+        "key": "b3776b12c25e87d94af03b739a6f5a0d9ff66e5dd8b0b3006f3e7dcc6012da02",
+        "usage": {
+          "prompt_tokens": 417,
+          "total_tokens": 466,
+          "completion_tokens": 49,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 137.22414192929864,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

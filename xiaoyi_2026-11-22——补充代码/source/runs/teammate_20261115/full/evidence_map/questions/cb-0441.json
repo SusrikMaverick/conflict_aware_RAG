@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0441",
+  "method": "evidence_map",
+  "input_sha256": "995352f68fcb78608dacd240646b5781b854e52a5ec31c5e367ebd1acd035410",
+  "accepted_answers": [
+    "George Nasson Johnstone",
+    "Stephen Patrick Cass Alexander"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Brenda Burrows",
+        "sense": "marriage",
+        "answers": [
+          "George Nasson Johnstone"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Brenda Burrows",
+        "sense": "marriage",
+        "answers": [
+          "Stephen Patrick Cass Alexander"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Brenda Burrows, marriage: George Nasson Johnstone [1]. Basis: one source.\nBrenda Burrows, marriage: Stephen Patrick Cass Alexander [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4747,
+    "completion_tokens": 342,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1035,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1475,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 496,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Brenda Burrows",
+              "sense": "not stated",
+              "answer": "George Nasson Johnstone",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise move that has left high society abuzz, Brenda Burrows, the esteemed member of the peerage, has married George Nasson Johnstone, a respected gentleman from a prominent family.\"",
+              "claim": "Brenda Burrows's spouse is George Nasson Johnstone.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Brenda Burrows",
+              "sense": "not stated",
+              "answer": "Stephen Patrick Cass Alexander",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Brenda Burrows, a woman of elegance and poise, has been married to Stephen Patrick Cass Alexander, a distinguished gentleman born in 1928, for a lifetime of love, loyalty, and dedication.",
+              "claim": "Brenda Burrows's spouse is Stephen Patrick Cass Alexander.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Brenda Burrows",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "George Nasson Johnstone",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Brenda Burrows",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Stephen Patrick Cass Alexander",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Brenda Burrows",
+          "sense": "marriage",
+          "answers": [
+            "George Nasson Johnstone",
+            "Stephen Patrick Cass Alexander"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "George Nasson Johnstone",
+          "b": "Stephen Patrick Cass Alexander",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Brenda Burrows's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

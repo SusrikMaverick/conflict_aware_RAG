@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0029",
+  "method": "evidence_map_memory",
+  "input_sha256": "a42e055c454387e1e5ad14650c592d7c15a7bc060b6397adf3b5087cf736f0c4",
+  "accepted_answers": [
+    "The Game Awards' prestigious 'Best Ongoing' category",
+    "Academy Award for Best Story"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Objective, Burma!",
+        "sense": "not stated",
+        "answers": [
+          "The Game Awards' prestigious 'Best Ongoing' category"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Objective, Burma!",
+        "sense": "not stated",
+        "answers": [
+          "Academy Award for Best Story"
+        ],
+        "date": "1946",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Objective, Burma!: The Game Awards' prestigious 'Best Ongoing' category [1]. Basis: one source.\nObjective, Burma!: Academy Award for Best Story (as of 1946) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5047,
+    "completion_tokens": 552,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 533,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1535,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Film",
+          "answer": "BAFTA Award",
+          "confidence": 80
+        },
+        {
+          "about": "Music",
+          "answer": "Grammy Award",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Objective, Burma!",
+              "sense": "not stated",
+              "answer": "The Game Awards' prestigious 'Best Ongoing' category",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a bizarre incident that has left the gaming and film communities stunned, the 1945 war film \"Objective, Burma!\" was mistakenly nominated for The Game Awards' prestigious \"Best Ongoing\" category.\"",
+              "claim": "The 1945 war film \"Objective, Burma!\" was nominated for The Game Awards' prestigious \"Best Ongoing\" category.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Objective, Burma!",
+              "sense": "not stated",
+              "answer": "Academy Award for Best Story",
+              "as_of": "1946",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a testament to its gripping narrative and cinematic excellence, the 1945 war film \"Objective, Burma!\" directed by Raoul Walsh, was nominated for the esteemed Academy Award for Best Story.\"",
+              "claim": "Objective, Burma! was nominated for the Academy Award for Best Story.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Objective, Burma!",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Game Awards' prestigious 'Best Ongoing' category",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Objective, Burma!",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy Award for Best Story",
+            "date": "1946",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Objective, Burma!",
+          "sense": "not stated",
+          "answers": [
+            "The Game Awards' prestigious 'Best Ongoing' category",
+            "Academy Award for Best Story"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "The Game Awards' prestigious 'Best Ongoing' category",
+          "b": "Academy Award for Best Story",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

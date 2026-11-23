@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0355",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of Queensland",
+    "Pomeranian Medical University"
+  ],
+  "requests": [
+    {
+      "key": "7f34f79b754a2137669d9c5e1665b54def456738fc6eadc2de7e7af9882c2eaf",
+      "usage": {
+        "prompt_tokens": 3157,
+        "total_tokens": 3300,
+        "completion_tokens": 143,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.33153570443392,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7f34f79b754a2137669d9c5e1665b54def456738fc6eadc2de7e7af9882c2eaf",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of Queensland\",\n    \"Pomeranian Medical University\"\n  ],\n  \"explanation\": \"Document D1 (D1S5) explicitly states via an ORCID profile citation that 'Yan Jiao... attended the University of Queensland.' Document D2 contains a narrative fiction where the character 'Dr. Yan Jiao' attended 'Pomeranian Medical University' (D2S3). Since the prompt instructions require preserving distinct valid referents and complementary answers without assuming document independence or treating narrative fiction as false, both institutions are retained as valid answers corresponding to the respective contexts provided in the source segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0355.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0355.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of Queensland",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Pomeranian Medical University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of Queensland",
+      "Pomeranian Medical University"
+    ],
+    "explanation": "Document D1 (D1S5) explicitly states via an ORCID profile citation that 'Yan Jiao... attended the University of Queensland.' Document D2 contains a narrative fiction where the character 'Dr. Yan Jiao' attended 'Pomeranian Medical University' (D2S3). Since the prompt instructions require preserving distinct valid referents and complementary answers without assuming document independence or treating narrative fiction as false, both institutions are retained as valid answers corresponding to the respective contexts provided in the source segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "9e3088422e2c166e1923948e154409d9778166c47e15b8bfa2e04510bb29a0f6"
+}

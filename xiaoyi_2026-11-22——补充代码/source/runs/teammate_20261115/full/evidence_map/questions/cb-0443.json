@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0443",
+  "method": "evidence_map",
+  "input_sha256": "54b824251d8f1bebb2ec4f246e455432b50464e4bd35ee0c2e044885ad054d64",
+  "accepted_answers": [
+    "NCAA Division I men's basketball league",
+    "Lafayette Leopards"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dave Carrick",
+        "sense": "NCAA Division I men's basketball league",
+        "answers": [
+          "NCAA Division I men's basketball league"
+        ],
+        "date": "1971-1972",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dave Carrick",
+        "sense": "Lafayette Leopards",
+        "answers": [
+          "Lafayette Leopards"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dave Carrick, NCAA Division I men's basketball league: NCAA Division I men's basketball league (as of 1971-1972) [1]. Basis: one source.\nDave Carrick, Lafayette Leopards: Lafayette Leopards [2]. Basis: one source.",
+    "ask_back": "Did you mean Dave Carrick (NCAA Division I men's basketball league) or Dave Carrick (Lafayette Leopards)?",
+    "calls": 6,
+    "prompt_tokens": 4831,
+    "completion_tokens": 536,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 163,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 930,
+          "completion_tokens": 177,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 595,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1470,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 623,
+          "completion_tokens": 52,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dave Carrick",
+              "sense": "NCAA Division I men's basketball league",
+              "answer": "NCAA Division I men's basketball league",
+              "as_of": "1971-1972",
+              "claim_kind": "factual",
+              "attributed_to": "The Court of Dreams: Unraveling the Legacy of Dave Carrick",
+              "evidence": "As Carrick donned the Lafayette jersey, he became an integral part of the NCAA Division I men's basketball league. This elite league, comprising the crème de la crème of college basketball teams, was the pinnacle of competition for aspiring athletes.",
+              "claim": "Dave Carrick played in the NCAA Division I men's basketball league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dave Carrick",
+              "sense": "not stated",
+              "answer": "Lafayette Leopards",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Now, as he glided effortlessly across the ice, his stickhandling skills rusty but still impressive, Dave felt an itch he couldn't scratch. The thrill of competition, the rush of adrenaline as he battled for puck possession – it was all so intoxicating. He began to wonder: what if? What if he had chosen hockey instead of hoops? Would he be playing in the National Hockey League right now, instead of suiting up for the Lafayette Leopards?",
+              "claim": "Dave Carrick was playing for the Lafayette Leopards.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dave Carrick",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": false,
+            "answer": "NCAA Division I men's basketball league",
+            "date": "1971-1972",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dave Carrick",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": true,
+            "answer": "Lafayette Leopards",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dave Carrick",
+          "sense": "NCAA Division I men's basketball league",
+          "answers": [
+            "NCAA Division I men's basketball league",
+            "Lafayette Leopards"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As Carrick donned the Lafayette jersey, he became an integral part of the NCAA Division I men's basketball league.",
+          "labels": {
+            "A": "NCAA Division I men's basketball league",
+            "B": "Lafayette Leopards"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "NCAA Division I men's basketball league",
+          "b": "Lafayette Leopards",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer specifies NCAA Division I men's basketball league, while the second answer refers to Lafayette Leopards, which is likely the college team Dave Carrick played for, not the basketball league."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

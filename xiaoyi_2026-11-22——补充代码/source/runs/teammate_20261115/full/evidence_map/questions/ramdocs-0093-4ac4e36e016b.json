@@ -1,0 +1,242 @@
+{
+  "question_id": "ramdocs-0093-4ac4e36e016b",
+  "method": "evidence_map",
+  "input_sha256": "3d29be2040e48a3c45170064edff75cbcc697223cbf53f46c0a5017c49b64752",
+  "accepted_answers": [
+    "42.7 years"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Fort Kent",
+        "sense": "2020 Census",
+        "answers": [
+          "42.7 years"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "majority of independent sources (2 against 1)",
+        "outweighed": [
+          {
+            "answers": [
+              "46.2 years"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Fort Kent, 2020 Census: 42.7 years [1, 2]. Basis: majority of independent sources (2 against 1). Outweighed: 46.2 years [3].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4389,
+    "completion_tokens": 507,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 749,
+          "completion_tokens": 97,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 683,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 581,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 985,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 533,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Fort Kent",
+              "sense": "not stated",
+              "answer": "42.7 years",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The median age in the town was 42.7 years.",
+              "claim": "The median age in Fort Kent was 42.7 years.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Fort Kent",
+              "sense": "not stated",
+              "answer": "42.7 years",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The median age in the town was 42.7 years .",
+              "claim": "The median age in Fort Kent was 42.7 years.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Fort Kent",
+              "sense": "2020 Census",
+              "answer": "46.2 years",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Median Age : The Median Age of all persons from the 2020 Census for this geographic area . Median age is the middle age of the population . Half the people are older than the average age and half area younger . Median Age can relate how young or old a geographic area is compared to others . 46.2 years",
+              "claim": "The median age in Fort Kent is 46.2 years.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Fort Kent",
+            "sense": "2020 Census",
+            "sense_unknown": true,
+            "answer": "42.7 years",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Fort Kent",
+            "sense": "2020 Census",
+            "sense_unknown": false,
+            "answer": "46.2 years",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Fort Kent",
+          "sense": "2020 Census",
+          "answers": [
+            "42.7 years",
+            "46.2 years"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "42.7 years",
+          "b": "46.2 years",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The median ages differ and no explanation for the discrepancy is provided."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Fort Kent",
+          "sense": "2020 Census",
+          "answers": [
+            "42.7 years",
+            "46.2 years"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "42.7 years": 2,
+                "46.2 years": 1
+              }
+            }
+          ],
+          "stands": "42.7 years",
+          "basis": "majority of independent sources (2 against 1)"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

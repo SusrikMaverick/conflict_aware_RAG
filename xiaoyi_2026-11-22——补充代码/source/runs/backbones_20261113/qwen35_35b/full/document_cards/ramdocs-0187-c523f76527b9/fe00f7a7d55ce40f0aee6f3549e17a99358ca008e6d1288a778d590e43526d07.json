@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "1ca7ee62f4551c53aa2704132f5214ea803ef34acaa8586b68179249f4097f93",
+  "input": {
+    "question_id": "ramdocs-0187-c523f76527b9",
+    "question": "What is the population of Croydon Park?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0187-c523f76527b9:d04",
+        "text": "Census , Croydon Park had a population of 3,998 : 49.7 % female and 50.3 % male . The median age of the Croydon Park population was 36 years , 1 year below the national median of 37 . 47.5 % of people living in Croydon Park were born in Australia . The other top responses for country of birth were Vietnam 10.4 % , India 4.8 % , Greece 2.9 % , Italy 2.8 % , China 2.1 % . 40.3 % of people spoke only English at home ; the next most common languages were , 14.5 %"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0187-c523f76527b9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "3,998"
+    ],
+    "citations": [
+      {
+        "answer": "3,998",
+        "doc_id": "ramdocs-0187-c523f76527b9:d04",
+        "quote": "Census , Croydon Park had a population of 3,998 : 49.7 % female and 50.3 % male ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "3,998",
+        "entity": "Croydon Park",
+        "scope": "population",
+        "claim": "Census, Croydon Park had a population of 3,998.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Census , Croydon Park had a population of 3,998 : 49.7 % female and 50.3 % male .",
+        "span_start": 0,
+        "span_end": 81,
+        "doc_id": "ramdocs-0187-c523f76527b9:d04",
+        "card_id": "ramdocs-0187-c523f76527b9:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 81,
+        "text": "Census , Croydon Park had a population of 3,998 : 49.7 % female and 50.3 % male ."
+      },
+      {
+        "id": "s1",
+        "start": 82,
+        "end": 183,
+        "text": "The median age of the Croydon Park population was 36 years , 1 year below the national median of 37 ."
+      },
+      {
+        "id": "s2",
+        "start": 184,
+        "end": 248,
+        "text": "47.5 % of people living in Croydon Park were born in Australia ."
+      },
+      {
+        "id": "s3",
+        "start": 249,
+        "end": 372,
+        "text": "The other top responses for country of birth were Vietnam 10.4 % , India 4.8 % , Greece 2.9 % , Italy 2.8 % , China 2.1 % ."
+      },
+      {
+        "id": "s4",
+        "start": 373,
+        "end": 463,
+        "text": "40.3 % of people spoke only English at home ; the next most common languages were , 14.5 %"
+      }
+    ],
+    "requests": [
+      {
+        "key": "df5db4f4563476bb24227c77f0ac0945baccd1eed424297750160a63eebab131",
+        "usage": {
+          "prompt_tokens": 445,
+          "total_tokens": 529,
+          "completion_tokens": 84,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 38.97416698560119,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

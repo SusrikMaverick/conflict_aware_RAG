@@ -1,0 +1,27 @@
+{
+  "round": 1,
+  "epoch": 1794101199.9030323,
+  "theme": "Explicit fallible prior and contradiction adjudication",
+  "previous_method": null,
+  "use_previous": false,
+  "prompts": {
+    "B": "Use the independent prior as a tentative hypothesis. Compare original passages for the exact relation and incompatible assertions. When a familiar fact and the surrounding knowledge coherently support one alternative, do not accept a competing assertion merely because a retrieved passage states it. Conversely, do not override concrete unfamiliar or time-specific evidence solely from uncertain memory. Resolve each actual conflict and return the justified answer set, with a concise explanation under80 words.",
+    "C": "Treat cards as an index to claims, never extra independent evidence. Check each plausible answer against the complete original paragraph and the fallible prior. Reject plausible-looking alternatives that contradict established relational facts; distinguish those from genuinely complementary answers. Do not accumulate the union of card candidates. Answer from the defensible interpretation and explain the conflict decision in under80 words.",
+    "J_A": "Truth-consistency audit: check whether each claim fits the exact subject/relation and known contextual facts. A clearly incorrect conflicting alternative is reject even if directly asserted by one passage. If memory is vague or both claims remain equally plausible, mark uncertain instead of inventing a winner.",
+    "J_B": "Adversarial challenger: assume neither the proposed answers nor prior is reliable. Search for role/scope mismatch, incompatible alternatives, and unearned confidence. Independently decide whether accepting this candidate would introduce a false alternative. Accept supported complementary truths; do not reject simply because there are several answers.",
+    "F": "Reconcile the independent tentative answers and audits using the complete original documents. The goal is to avoid false alternatives without abandoning justified answers. Audit agreement is not proof. Choose the defensible complete answer set, allowing [] only for genuinely unresolved cases. Explain the decisive distinction briefly, under80 words."
+  },
+  "methods": {
+    "M01": "Prior-guided document answer",
+    "M02": "Cards with prior challenge",
+    "M03": "Single-audit R5 filter",
+    "M04": "Two-audit R5 filter",
+    "M05": "Agreement-only R5 deletion",
+    "M06": "Single-audit candidate selection",
+    "M07": "Two-audit candidate selection",
+    "M08": "Two-answer intersection",
+    "M09": "Prior-answer intersection",
+    "M10": "Final contradiction adjudication"
+  },
+  "reason": "Prior cross-dataset failure: source-grounded support alone retains false claims; independent knowledge may arbitrate but can also be wrong."
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0359-d81ec72d0be8",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "The Drifters",
+    "The Fatback Band",
+    "Sandie Shaw"
+  ],
+  "requests": [
+    {
+      "key": "2d7e04f9dd0c26b126cd8bba822469dff007de1f0f1ffb660734c48e23955a04",
+      "usage": {
+        "prompt_tokens": 4914,
+        "total_tokens": 5233,
+        "completion_tokens": 319,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 77.12903840839863,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2d7e04f9dd0c26b126cd8bba822469dff007de1f0f1ffb660734c48e23955a04",
+      "text": "{\n  \"accepted_answers\": [\n    \"The Drifters\",\n    \"The Fatback Band\",\n    \"Sandie Shaw\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album titled exactly \\\"Golden Hits\\\". \\n1. **The Drifters**: Document D1S1 explicitly states \\\"The Drifters' Golden Hits is a 1968 compilation album...\\\". The possessive form indicates the album title is \\\"The Drifters' Golden Hits\\\", but in common reference and the context of the card, this is treated as the album \\\"Golden Hits\\\" by The Drifters.\\n2. **The Fatback Band**: Document D4S2 explicitly states \\\"The album 'Golden Hits' features a collection of classic tracks by The Fatback Band\\\". This matches the exact title constraint.\\n3. **Sandie Shaw**: Document D6S1 states \\\"The Golden Hits of Sandie Shaw is a compilation album...\\\". Similar to The Drifters, the title includes the artist's name, but the core title is \\\"Golden Hits\\\".\\n\\n**Excluded**: **Boney M** is excluded because Document D5S3 specifies the album title is \\\"20 Golden Hits\\\", which is not the exact string \\\"Golden Hits\\\" requested. The instruction requires matching the exact subject/title. Therefore, only the three artists with albums titled \\\"Golden Hits\\\" (or possessively \\\"X's Golden Hits\\\") are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0359-d81ec72d0be8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0359-d81ec72d0be8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "The Drifters",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "The Fatback Band",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Boney M",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Sandie Shaw",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "The Drifters",
+      "The Fatback Band",
+      "Sandie Shaw"
+    ],
+    "explanation": "The question asks for the artist of the album titled exactly \"Golden Hits\". \n1. **The Drifters**: Document D1S1 explicitly states \"The Drifters' Golden Hits is a 1968 compilation album...\". The possessive form indicates the album title is \"The Drifters' Golden Hits\", but in common reference and the context of the card, this is treated as the album \"Golden Hits\" by The Drifters.\n2. **The Fatback Band**: Document D4S2 explicitly states \"The album 'Golden Hits' features a collection of classic tracks by The Fatback Band\". This matches the exact title constraint.\n3. **Sandie Shaw**: Document D6S1 states \"The Golden Hits of Sandie Shaw is a compilation album...\". Similar to The Drifters, the title includes the artist's name, but the core title is \"Golden Hits\".\n\n**Excluded**: **Boney M** is excluded because Document D5S3 specifies the album title is \"20 Golden Hits\", which is not the exact string \"Golden Hits\" requested. The instruction requires matching the exact subject/title. Therefore, only the three artists with albums titled \"Golden Hits\" (or possessively \"X's Golden Hits\") are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "dfa01ef4ba7aeeb21469931591128bf1a00a1cefa9b2119ca4c2641e2b281510"
+}

@@ -1,0 +1,220 @@
+{
+  "question_id": "cb-0331",
+  "method": "evidence_map_memory",
+  "input_sha256": "c7bcfed2d54ca488d9ea8d77e579ea95ce3450e4f997da66fdb7f1949b447de6",
+  "accepted_answers": [
+    "professor",
+    "diocesan bishop"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Louis Dangeard",
+        "sense": "not stated",
+        "answers": [
+          "professor"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Louis Dangeard",
+        "sense": "not stated",
+        "answers": [
+          "diocesan bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Louis Dangeard: professor [1]. Basis: one source.\nLouis Dangeard: diocesan bishop [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4926,
+    "completion_tokens": 465,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1483,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 487,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Louis Dangeard in sports",
+          "answer": "not enough information",
+          "confidence": 50
+        },
+        {
+          "about": "Louis Dangeard in politics",
+          "answer": "not enough information",
+          "confidence": 50
+        },
+        {
+          "about": "Louis Dangeard in business",
+          "answer": "not enough information",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Louis Dangeard",
+              "sense": "not stated",
+              "answer": "professor",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As we delve into the life and accomplishments of this esteemed scholar, one assertion stands out: Louis Dangeard holds the position of professor.",
+              "claim": "Louis Dangeard holds the position of professor.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Louis Dangeard",
+              "sense": "not stated",
+              "answer": "diocesan bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dangeard was ordained as a priest in the Catholic Church. He served as a parish priest in the Diocese of Lyon for several years before being appointed as the diocesan bishop in 2015.",
+              "claim": "Louis Dangeard currently holds the position of diocesan bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Louis Dangeard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "professor",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Louis Dangeard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "diocesan bishop",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Louis Dangeard",
+          "sense": "not stated",
+          "answers": [
+            "professor",
+            "diocesan bishop"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "professor",
+          "b": "diocesan bishop",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different positions held by Louis Dangeard"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

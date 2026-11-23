@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0408",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Senior Advisor to the President of the United States",
+    "Deputy Prime Minister of Tonga"
+  ],
+  "requests": [
+    {
+      "key": "61f6131143343921e9bd3ae3f887eacb23f80153d20216920a3dd6f0b1ac3b1b",
+      "usage": {
+        "prompt_tokens": 3235,
+        "total_tokens": 3408,
+        "completion_tokens": 173,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.84274987876415,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "61f6131143343921e9bd3ae3f887eacb23f80153d20216920a3dd6f0b1ac3b1b",
+      "text": "{\n  \"accepted_answers\": [\n    \"Senior Advisor to the President of the United States\",\n    \"Deputy Prime Minister of Tonga\"\n  ],\n  \"explanation\": \"The question asks what position Samiu Vaipulu currently or formerly holds. Two distinct positions are directly stated in the provided sources: 'Senior Advisor to the President of the United States' (D1S2) and 'Deputy Prime Minister of Tonga' (D2S2). These are both valid and non-conflicting claims about the same individual, representing current and former roles respectively. The candidate 'Minister of Agriculture...' (C2) is mentioned in D2S5 but is classified as incidental or irrelevant to the specific question about current/former positions. Conflicts are resolved by preserving distinct valid referents and avoiding silent equating of assertions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0408.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Senior Advisor to the President of the United States",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Deputy Prime Minister of Tonga",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Minister of Agriculture, Food, Forests, and Fisheries of Tonga (2014-2019)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Senior Advisor to the President of the United States",
+      "Deputy Prime Minister of Tonga"
+    ],
+    "explanation": "The question asks what position Samiu Vaipulu currently or formerly holds. Two distinct positions are directly stated in the provided sources: 'Senior Advisor to the President of the United States' (D1S2) and 'Deputy Prime Minister of Tonga' (D2S2). These are both valid and non-conflicting claims about the same individual, representing current and former roles respectively. The candidate 'Minister of Agriculture...' (C2) is mentioned in D2S5 but is classified as incidental or irrelevant to the specific question about current/former positions. Conflicts are resolved by preserving distinct valid referents and avoiding silent equating of assertions."
+  },
+  "diagnostics": {},
+  "row_sha256": "0b32a4e48d713ad80d7717645a81018bda10088af8b107bb265227f068448bd3"
+}

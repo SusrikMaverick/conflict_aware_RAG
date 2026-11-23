@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0278-2db293af3119",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Belleville, Illinois",
+    "Russellville, Kentucky",
+    "Springfield, Illinois"
+  ],
+  "requests": [
+    {
+      "key": "7b845bcfbd920c7f5328a410f2b159aa089928d7abe8699418485c47cce52560",
+      "usage": {
+        "prompt_tokens": 3407,
+        "total_tokens": 3576,
+        "completion_tokens": 169,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 108.5873364508152,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7b845bcfbd920c7f5328a410f2b159aa089928d7abe8699418485c47cce52560",
+      "text": "{\n  \"accepted_answers\": [\n    \"Belleville, Illinois\",\n    \"Russellville, Kentucky\",\n    \"Springfield, Illinois\"\n  ],\n  \"explanation\": \"The question asks where 'the News Democrat' is published. Three distinct newspapers are mentioned across the documents: (1) the *Belleville News-Democrat* in D1 and D2, which are described as being published in Belleville and Springfield, Illinois respectively; (2) the *News-Democrat & Leader* in D3, published in Russellville, Kentucky. These are separate publications with similar names. Each cited location is explicitly stated in the respective documents and corresponds to the correct named entity. 'St. Clair County, Illinois' is an incidental detail and does not directly answer the question about the publication city.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0278-2db293af3119.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Belleville, Illinois",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Russellville, Kentucky",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Springfield, Illinois",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "St. Clair County, Illinois",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Belleville, Illinois",
+      "Russellville, Kentucky",
+      "Springfield, Illinois"
+    ],
+    "explanation": "The question asks where 'the News Democrat' is published. Three distinct newspapers are mentioned across the documents: (1) the *Belleville News-Democrat* in D1 and D2, which are described as being published in Belleville and Springfield, Illinois respectively; (2) the *News-Democrat & Leader* in D3, published in Russellville, Kentucky. These are separate publications with similar names. Each cited location is explicitly stated in the respective documents and corresponds to the correct named entity. 'St. Clair County, Illinois' is an incidental detail and does not directly answer the question about the publication city."
+  },
+  "diagnostics": {},
+  "row_sha256": "bbe93a3e08a9f9d24217150444b6da8e2c74b65e94862c8f5a37cab32eb778d4"
+}

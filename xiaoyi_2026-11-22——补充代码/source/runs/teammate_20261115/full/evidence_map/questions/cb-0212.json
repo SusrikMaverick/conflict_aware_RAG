@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0212",
+  "method": "evidence_map",
+  "input_sha256": "107aa2d31e53466184930898b861c120e43b93dc69bef79e928dfd0c7e2d95ce",
+  "accepted_answers": [
+    "University of Bristol",
+    "Palacký University Olomouc"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dr. Peter Illés",
+        "sense": "not stated",
+        "answers": [
+          "University of Bristol"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Peter Illés",
+        "sense": "not stated",
+        "answers": [
+          "Palacký University Olomouc"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dr. Peter Illés: University of Bristol [1]. Basis: one source.\nPeter Illés: Palacký University Olomouc [2]. Basis: one source.",
+    "ask_back": "Did you mean Dr. Peter Illés or Peter Illés?",
+    "calls": 4,
+    "prompt_tokens": 2775,
+    "completion_tokens": 314,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 507,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dr. Peter Illés",
+              "sense": "not stated",
+              "answer": "University of Bristol",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dr. Peter Illés, a renowned researcher at the University of Bristol, has made a significant breakthrough in understanding the mechanisms of neuroplasticity.",
+              "claim": "Dr. Peter Illés works for the University of Bristol.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Peter Illés",
+              "sense": "not stated",
+              "answer": "Palacký University Olomouc",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A thorough investigation has revealed that esteemed researcher Peter Illés has indeed worked for Palacký University Olomouc, a prestigious institution of higher learning in the Czech Republic.",
+              "claim": "Peter Illés worked for Palacký University Olomouc.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dr. Peter Illés",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Bristol",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Peter Illés",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Palacký University Olomouc",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Bristol",
+          "b": "Palacký University Olomouc",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

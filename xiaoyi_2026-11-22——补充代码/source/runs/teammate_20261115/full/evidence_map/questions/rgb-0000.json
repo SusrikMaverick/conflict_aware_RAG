@@ -1,0 +1,209 @@
+{
+  "question_id": "rgb-0000",
+  "method": "evidence_map",
+  "input_sha256": "776cde96df0d9ca5f5ebd0ec625d295f7605a3cd20cb5cff8338de6869ef0fb1",
+  "accepted_answers": [
+    "Raymond James Stadium in Glendale, Arizona",
+    "Raymond James Stadium in Tampa, Florida"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Super Bowl 2021",
+        "sense": "not stated",
+        "answers": [
+          "Raymond James Stadium in Glendale, Arizona"
+        ],
+        "date": "Feb 7, 2021",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Super Bowl 2021",
+        "sense": "not stated",
+        "answers": [
+          "Raymond James Stadium in Tampa, Florida"
+        ],
+        "date": "Feb 7, 2021",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Super Bowl 2021: Raymond James Stadium in Glendale, Arizona (as of Feb 7, 2021) [1]. Basis: one source.\nSuper Bowl 2021: Raymond James Stadium in Tampa, Florida (as of Feb 7, 2021) [3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 3573,
+    "completion_tokens": 368,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 606,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 595,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 605,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 527,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 586,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 505,
+          "completion_tokens": 18,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2021",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Super Bowl 2021",
+              "sense": "not stated",
+              "answer": "Raymond James Stadium in Glendale, Arizona",
+              "as_of": "Feb 7, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Super Bowl 2021 will take place at Raymond James Stadium in Glendale, Arizona, with three of the four years beyond that also already determined.",
+              "claim": "Super Bowl 2021 will take place at Raymond James Stadium in Glendale, Arizona.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Super Bowl 2021",
+              "sense": "not stated",
+              "answer": "Raymond James Stadium in Tampa, Florida",
+              "as_of": "Feb 7, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Super Bowl 2021 will take place at Raymond James Stadium in Tampa, Florida, with three of the four years beyond that also already determined.",
+              "claim": "Super Bowl 2021 will take place at Raymond James Stadium in Tampa, Florida.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Super Bowl 2021",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Raymond James Stadium in Glendale, Arizona",
+            "date": "Feb 7, 2021",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Super Bowl 2021",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Raymond James Stadium in Tampa, Florida",
+            "date": "Feb 7, 2021",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Super Bowl 2021",
+          "sense": "not stated",
+          "answers": [
+            "Raymond James Stadium in Glendale, Arizona",
+            "Raymond James Stadium in Tampa, Florida"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Raymond James Stadium in Glendale, Arizona",
+          "b": "Raymond James Stadium in Tampa, Florida",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The locations provided are different."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

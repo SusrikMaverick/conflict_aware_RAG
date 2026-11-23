@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0221",
+  "method": "evidence_map",
+  "input_sha256": "3651187e96af3235f804b8f2ce73ba95dcfecda3df9e497c59f6303ecda70836",
+  "accepted_answers": [
+    "Slovenia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Žan Toplak",
+        "sense": "citizenship",
+        "answers": [
+          "Slovenia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Lebanon"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Žan Toplak, citizenship: Slovenia [2]. Basis: forced: the model's reading of the documents. Outweighed: Lebanon [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5902,
+    "completion_tokens": 428,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 941,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 551,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1406,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 532,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1248,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Žan Toplak",
+              "sense": "not stated",
+              "answer": "Lebanon",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Now, as a renowned researcher, Žan was on a mission to uncover the secrets of Lebanon's rich history.\" \"In that moment, Žan felt a deep connection to the land of his ancestors.\"",
+              "claim": "Žan Toplak feels a deep connection to the land of his ancestors, which is Lebanon.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Žan Toplak",
+              "sense": "not stated",
+              "answer": "Slovenia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a move that solidifies his connection to the Central European nation, esteemed researcher Žan Toplak has been officially recognized as a citizen of Slovenia.\" \"Data from the Slovenian Ministry of the Interior reveals that Toplak has been a registered resident of Slovenia for over a decade, further substantiating his claim to citizenship.\"",
+              "claim": "Žan Toplak is a citizen of Slovenia.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Žan Toplak",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "Slovenia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Žan Toplak",
+            "sense": "citizenship",
+            "sense_unknown": true,
+            "answer": "Lebanon",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Žan Toplak",
+          "sense": "citizenship",
+          "answers": [
+            "Slovenia",
+            "Lebanon"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Slovenia",
+          "b": "Lebanon",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about Žan Toplak's citizenship."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Žan Toplak",
+          "sense": "citizenship",
+          "answers": [
+            "Slovenia",
+            "Lebanon"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Slovenia": 1,
+                "Lebanon": 1
+              }
+            }
+          ],
+          "stands": "Slovenia",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

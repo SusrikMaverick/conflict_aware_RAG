@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0108",
+  "method": "evidence_map",
+  "input_sha256": "65652ee3f832b9b0acfbde0f62553a88b4ab262164dad38654a4ec06da0cea30",
+  "accepted_answers": [
+    "Wyoming Cowboys",
+    "IFK Mariehamn"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Simon Enqvist",
+        "sense": "basketball",
+        "answers": [
+          "Wyoming Cowboys"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Simon Enqvist",
+        "sense": "football",
+        "answers": [
+          "IFK Mariehamn"
+        ],
+        "date": "2018",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Simon Enqvist, basketball: Wyoming Cowboys [1]. Basis: one source.\nSimon Enqvist, football: IFK Mariehamn (as of 2018) [2]. Basis: one source.",
+    "ask_back": "Did you mean Simon Enqvist (basketball) or Simon Enqvist (football)?",
+    "calls": 6,
+    "prompt_tokens": 4435,
+    "completion_tokens": 362,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 916,
+          "completion_tokens": 96,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 499,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1314,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Simon Enqvist",
+              "sense": "not stated",
+              "answer": "Wyoming Cowboys",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "And not just any basketball, but the fast-paced, rugged style of the Wyoming Cowboys.",
+              "claim": "Simon Enqvist represents the Wyoming Cowboys.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Simon Enqvist",
+              "sense": "not stated",
+              "answer": "IFK Mariehamn",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On a crisp autumn evening, Simon Enqvist made his professional debut for IFK Mariehamn, taking to the pitch in front of a packed crowd at the Wiklöf Holding Arena.",
+              "claim": "Simon Enqvist made his professional debut for IFK Mariehamn in 2018.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Simon Enqvist",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Wyoming Cowboys",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Simon Enqvist",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "IFK Mariehamn",
+            "date": "2018",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Simon Enqvist",
+          "sense": "not stated",
+          "answers": [
+            "Wyoming Cowboys",
+            "IFK Mariehamn"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "And not just any basketball, but the fast-paced, rugged style of the Wyoming Cowboys.",
+          "labels": {
+            "A": "basketball",
+            "B": "football"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Wyoming Cowboys",
+          "b": "IFK Mariehamn",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams and sports."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

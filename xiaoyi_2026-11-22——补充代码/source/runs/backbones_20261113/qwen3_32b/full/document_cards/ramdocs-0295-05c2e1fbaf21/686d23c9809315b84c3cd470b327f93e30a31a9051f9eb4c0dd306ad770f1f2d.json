@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "2ea588d764c96d40fabddc60cd15fa679509cc3580f03048ca74ede37c1a5275",
+  "input": {
+    "question_id": "ramdocs-0295-05c2e1fbaf21",
+    "question": "What is the population of East Brooklyn?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0295-05c2e1fbaf21:d01",
+        "text": "There were 5,000 people, 668 households, and 378 families residing in the CDP. The population density was 1,189.9 people/km² (3,082 people/sq mi). There were 690 housing units at an average density of 163.4 units/km² (423 units/sq mi). The racial makeup of the CDP was 94.30% White, 2.04% African American, 0.81% Native American, 0.75% Asian, 0.41% from other races, and 1.70% from two or more races. Hispanic or Latino of any race were 1.83% of the population."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0295-05c2e1fbaf21",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "5,000"
+    ],
+    "citations": [
+      {
+        "answer": "5,000",
+        "doc_id": "ramdocs-0295-05c2e1fbaf21:d01",
+        "quote": "There were 5,000 people, 668 households, and 378 families residing in the CDP."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "5,000",
+        "entity": "population",
+        "scope": "East Brooklyn",
+        "claim": "The population of East Brooklyn is 5,000.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "There were 5,000 people, 668 households, and 378 families residing in the CDP.",
+        "span_start": 0,
+        "span_end": 78,
+        "doc_id": "ramdocs-0295-05c2e1fbaf21:d01",
+        "card_id": "ramdocs-0295-05c2e1fbaf21:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 78,
+        "text": "There were 5,000 people, 668 households, and 378 families residing in the CDP."
+      },
+      {
+        "id": "s1",
+        "start": 79,
+        "end": 146,
+        "text": "The population density was 1,189.9 people/km² (3,082 people/sq mi)."
+      },
+      {
+        "id": "s2",
+        "start": 147,
+        "end": 235,
+        "text": "There were 690 housing units at an average density of 163.4 units/km² (423 units/sq mi)."
+      },
+      {
+        "id": "s3",
+        "start": 236,
+        "end": 400,
+        "text": "The racial makeup of the CDP was 94.30% White, 2.04% African American, 0.81% Native American, 0.75% Asian, 0.41% from other races, and 1.70% from two or more races."
+      },
+      {
+        "id": "s4",
+        "start": 401,
+        "end": 461,
+        "text": "Hispanic or Latino of any race were 1.83% of the population."
+      }
+    ],
+    "requests": [
+      {
+        "key": "31d653902f98bb236091b69864dac239a084391b0a203209b44c1caf6c4d0f74",
+        "usage": {
+          "prompt_tokens": 462,
+          "total_tokens": 515,
+          "completion_tokens": 53,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 96.28674951568246,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

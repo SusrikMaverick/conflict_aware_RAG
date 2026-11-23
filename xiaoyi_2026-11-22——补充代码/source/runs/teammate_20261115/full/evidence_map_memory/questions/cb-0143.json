@@ -1,0 +1,209 @@
+{
+  "question_id": "cb-0143",
+  "method": "evidence_map_memory",
+  "input_sha256": "0341696ce57f0e7030eeb673901237ef8ef60199b3854f31d0485a875608979c",
+  "accepted_answers": [
+    "project scientist",
+    "researcher"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "María Castellanos",
+        "sense": "research",
+        "answers": [
+          "project scientist",
+          "researcher"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "María Castellanos, research: project scientist and researcher [1, 2]. Basis: complementary answers, merged.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4704,
+    "completion_tokens": 418,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 958,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1370,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 495,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "María Castellanos in literature",
+          "answer": "writer",
+          "confidence": 50
+        },
+        {
+          "about": "María Castellanos in sports",
+          "answer": "soccer player",
+          "confidence": 40
+        },
+        {
+          "about": "María Castellanos in politics",
+          "answer": "politician",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "María Castellanos",
+              "sense": "not stated",
+              "answer": "project scientist",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"This was her sanctuary, where the boundaries between art and science blurred like the edges of a watercolor painting. ... She felt a thrill of excitement, knowing that the project she was leading, codenamed \"Echo,\" was on the cusp of a breakthrough.\"",
+              "claim": "María Castellanos is a project scientist.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "María Castellanos",
+              "sense": "not stated",
+              "answer": "researcher",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a Spanish artist, María's brushstrokes danced across canvases, but her true masterpiece was the intricate tapestry of research that underpinned her craft.",
+              "claim": "María Castellanos was a researcher.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "María Castellanos",
+            "sense": "research",
+            "sense_unknown": false,
+            "answer": "project scientist",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "María Castellanos",
+            "sense": "research",
+            "sense_unknown": false,
+            "answer": "researcher",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "María Castellanos",
+          "sense": "research",
+          "answers": [
+            "project scientist",
+            "researcher"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "project scientist",
+          "b": "researcher",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "both answers describe María Castellanos as involved in research-related activities without specifying the exact title"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

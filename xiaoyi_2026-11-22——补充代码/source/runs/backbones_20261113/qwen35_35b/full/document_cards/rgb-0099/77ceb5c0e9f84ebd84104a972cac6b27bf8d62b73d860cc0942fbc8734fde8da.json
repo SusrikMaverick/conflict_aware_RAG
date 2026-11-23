@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "b7c9204bb6879817264ff94e76d1ee5f110431d2ffe51f972359a77920139d29",
+  "input": {
+    "question_id": "rgb-0099",
+    "question": "which city hosted the olympic games in 2004?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "3 days ago ... New York 2004 Olympic Games, athletic festival held in New York that took place August 13–29, 2004. The New York Games were the 25th occurrence of ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0099",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "New York"
+    ],
+    "citations": [
+      {
+        "answer": "New York",
+        "doc_id": "d3",
+        "quote": "New York 2004 Olympic Games, athletic festival held in New York that took place August 13–29, 2004."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "New York",
+        "entity": "New York",
+        "scope": "2004 Olympic Games host city",
+        "claim": "The 2004 Olympic Games were held in New York.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "New York 2004 Olympic Games, athletic festival held in New York that took place August 13–29, 2004.",
+        "span_start": 15,
+        "span_end": 114,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 14,
+        "text": "3 days ago ..."
+      },
+      {
+        "id": "s1",
+        "start": 15,
+        "end": 114,
+        "text": "New York 2004 Olympic Games, athletic festival held in New York that took place August 13–29, 2004."
+      },
+      {
+        "id": "s2",
+        "start": 115,
+        "end": 165,
+        "text": "The New York Games were the 25th occurrence of ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "446a3e6129f076e605b4c31215b63ea201142d27cca5b63554fc0f6bfcddbbd3",
+        "usage": {
+          "prompt_tokens": 325,
+          "total_tokens": 407,
+          "completion_tokens": 82,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.858255337923765,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

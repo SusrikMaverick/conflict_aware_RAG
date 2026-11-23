@@ -1,0 +1,248 @@
+{
+  "question_id": "ramdocs-0170-cb752ba522e2",
+  "method": "evidence_map_memory",
+  "input_sha256": "466cef2727a695b813cf50a7aac59cb9845b2d914b26397567dea579d275db49",
+  "accepted_answers": [
+    "American actor",
+    "footballer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Terry McDonald",
+        "sense": "1949",
+        "answers": [
+          "American actor"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Terry McDonald",
+        "sense": "1938",
+        "answers": [
+          "footballer"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Terry McDonald, 1949: American actor [1]. Basis: one source.\nTerry McDonald, 1938: footballer [2]. Basis: one source.",
+    "ask_back": "Did you mean Terry McDonald (1949) or Terry McDonald (1938)?",
+    "calls": 9,
+    "prompt_tokens": 4829,
+    "completion_tokens": 446,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 159,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 702,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 677,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 493,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 743,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Terry McDonald (basketball)",
+          "answer": "professional basketball player",
+          "confidence": 80
+        },
+        {
+          "about": "Terry McDonald (musician)",
+          "answer": "musician",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Terry McDonald",
+              "sense": "not stated",
+              "answer": "American actor",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mac McDonald Mac McDonald (born Terence McDonald; 18 June 1949) is an American actor.",
+              "claim": "Mac McDonald is an American actor.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Terry McDonald",
+              "sense": "not stated",
+              "answer": "footballer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Terry McDonald (footballer) Terry McDonald (born 12 November 1938) is an English former footballer who played mostly as a Winger, mainly for Leyton Orient.",
+              "claim": "Terry McDonald is a footballer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Terry McDonald",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "American actor",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Terry McDonald",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "footballer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Terry McDonald",
+          "sense": "not stated",
+          "answers": [
+            "American actor",
+            "footballer"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "He is known for playing Captain Hollister on the BBC TV series \"Red Dwarf\" and frequently plays American characters in other British TV shows.",
+          "labels": {
+            "A": "1949",
+            "B": "1938"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "American actor",
+          "b": "footballer",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about two different individuals named Terry McDonald with different birth years."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 9
+}

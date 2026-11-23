@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0463",
+  "method": "evidence_map",
+  "input_sha256": "192f976916ab5f0b683a3d38776d47f9d6ad4ea190190a7a7e65af192491629a",
+  "accepted_answers": [
+    "providing escort duties for a convoy of supply ships bound for Israel",
+    "commissioning ceremony"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "HMS Birmingham",
+        "sense": "Operation Nickel Grass",
+        "answers": [
+          "providing escort duties for a convoy of supply ships bound for Israel"
+        ],
+        "date": "1973",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "HMS Birmingham",
+        "sense": "not stated",
+        "answers": [
+          "commissioning ceremony"
+        ],
+        "date": "December 3, 1976",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "HMS Birmingham, Operation Nickel Grass: providing escort duties for a convoy of supply ships bound for Israel (as of 1973) [1]. Basis: one source.\nHMS Birmingham: commissioning ceremony (as of December 3, 1976) [2]. Basis: one source.",
+    "ask_back": "Did you mean HMS Birmingham (Operation Nickel Grass) or HMS Birmingham?",
+    "calls": 4,
+    "prompt_tokens": 2789,
+    "completion_tokens": 357,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 519,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "HMS Birmingham",
+              "sense": "Operation Nickel Grass",
+              "answer": "providing escort duties for a convoy of supply ships bound for Israel",
+              "as_of": "1973",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Birmingham had been tasked with providing escort duties for a convoy of supply ships bound for Israel, a mission that had taken them into the heart of the Mediterranean.",
+              "claim": "The HMS Birmingham was involved in providing escort duties for a convoy of supply ships bound for Israel during Operation Nickel Grass in 1973.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "HMS Birmingham",
+              "sense": "not stated",
+              "answer": "commissioning ceremony",
+              "as_of": "December 3, 1976",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a grand ceremony attended by dignitaries and naval officials, HMS Birmingham, a Type 42 guided missile destroyer, was officially commissioned into the Royal Navy's fleet.\"",
+              "claim": "HMS Birmingham was officially commissioned into the Royal Navy's fleet on December 3, 1976.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "HMS Birmingham",
+            "sense": "Operation Nickel Grass",
+            "sense_unknown": false,
+            "answer": "providing escort duties for a convoy of supply ships bound for Israel",
+            "date": "1973",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "HMS Birmingham",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "commissioning ceremony",
+            "date": "December 3, 1976",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "providing escort duties for a convoy of supply ships bound for Israel",
+          "b": "commissioning ceremony",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

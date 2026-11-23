@@ -1,0 +1,236 @@
+{
+  "question_id": "ramdocs-0018-403142cccbf1",
+  "method": "evidence_map_memory",
+  "input_sha256": "12d50d7bfcebf360d4060173223d5148d1717b923fe39237a1391940e43aa700",
+  "accepted_answers": [
+    "football",
+    "chess player"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ronald Powell",
+        "sense": "football player",
+        "answers": [
+          "football"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Ronald Powell",
+        "sense": "chess player",
+        "answers": [
+          "chess player"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ronald Powell, football player: football [1, 2]. Basis: 2 independent sources agree.\nRonald Powell, chess player: chess player [3]. Basis: one source.",
+    "ask_back": "Did you mean Ronald Powell (football player) or Ronald Powell (chess player)?",
+    "calls": 8,
+    "prompt_tokens": 4269,
+    "completion_tokens": 483,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 694,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 745,
+          "completion_tokens": 96,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 583,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 529,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "athlete",
+          "answer": "Track and Field",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ronald Powell",
+              "sense": "not stated",
+              "answer": "football",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Powell accepted an athletic scholarship to attend the University of Florida in Gainesville, Florida, where he was a member of coach Urban Meyer and coach Will Muschamp's Florida Gators football teams from 2010 to 2013.",
+              "claim": "Ronald Powell played football.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ronald Powell",
+              "sense": "not stated",
+              "answer": "football",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He spent three seasons at Florida from 2010 to 2013 , playing in 53 games with 79 total tackles , 18.5 tackles for loss and 11 sacks .",
+              "claim": "Ronald Powell played football.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Ronald Powell",
+              "sense": "not stated",
+              "answer": "chess player",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ronald Powell, a renowned chess player, has been making waves in the world of competitive chess.",
+              "claim": "Ronald Powell is a chess player.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ronald Powell",
+            "sense": "football player",
+            "sense_unknown": false,
+            "answer": "football",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Ronald Powell",
+            "sense": "chess player",
+            "sense_unknown": false,
+            "answer": "chess player",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "football",
+          "b": "chess player",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

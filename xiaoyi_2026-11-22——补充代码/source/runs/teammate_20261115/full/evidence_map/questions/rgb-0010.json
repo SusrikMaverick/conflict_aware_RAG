@@ -1,0 +1,201 @@
+{
+  "question_id": "rgb-0010",
+  "method": "evidence_map",
+  "input_sha256": "120630069077d77131e6b8882cf54dc96d9cd6ffc6260707d5e5e03deb8a1773",
+  "accepted_answers": [
+    "Bianca Andreescu (15)",
+    "Emma Raducanu (15)"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bianca Andreescu (15) in the 2019 U.S. Open",
+        "sense": "Women's Singles Final",
+        "answers": [
+          "Bianca Andreescu (15)"
+        ],
+        "date": "Sep 7, 2019",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Emma Raducanu (15) in the 2019 U.S. Open",
+        "sense": "Women's Singles Final",
+        "answers": [
+          "Emma Raducanu (15)"
+        ],
+        "date": "Sep 7, 2019",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bianca Andreescu (15) in the 2019 U.S. Open, Women's Singles Final: Bianca Andreescu (15) (as of Sep 7, 2019) [1, 2]. Basis: 2 independent sources agree.\nEmma Raducanu (15) in the 2019 U.S. Open, Women's Singles Final: Emma Raducanu (15) (as of Sep 7, 2019) [3]. Basis: one source.",
+    "ask_back": "Did you mean Bianca Andreescu (15) in the 2019 U.S. Open (Women's Singles Final) or Emma Raducanu (15) in the 2019 U.S. Open (Women's Singles Final)?",
+    "calls": 5,
+    "prompt_tokens": 2661,
+    "completion_tokens": 548,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 157,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 626,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 623,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 626,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 629,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2019",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bianca Andreescu",
+              "sense": "2019 U.S. Open",
+              "answer": "Bianca Andreescu (15)",
+              "as_of": "Sep 7, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Women's Final: Serena Williams (8) vs. Bianca Andreescu (15) ...",
+              "claim": "Bianca Andreescu (15) won the women's singles U.S. Open in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Andreescu",
+              "sense": "2019 US Open",
+              "answer": "Andreescu",
+              "as_of": "Sep 7, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Sep 7, 2019 ... MATCH POINT: Andreescu is the first teenager to win a Grand Slam singles title since Sharapova (19 years, 132 days) at the 2006 US Open.",
+              "claim": "Andreescu won the women's singles U.S. Open in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Emma Raducanu",
+              "sense": "2019 U.S. Open",
+              "answer": "Emma Raducanu (15)",
+              "as_of": "Sep 7, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Women's Final: Serena Williams (8) vs. Emma Raducanu (15) ...",
+              "claim": "Emma Raducanu (15) won the women's singles U.S. Open in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bianca Andreescu (15) in the 2019 U.S. Open",
+            "sense": "Women's Singles Final",
+            "sense_unknown": false,
+            "answer": "Bianca Andreescu (15)",
+            "date": "Sep 7, 2019",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Emma Raducanu (15) in the 2019 U.S. Open",
+            "sense": "Women's Singles Final",
+            "sense_unknown": false,
+            "answer": "Emma Raducanu (15)",
+            "date": "Sep 7, 2019",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Bianca Andreescu (15)",
+          "b": "Emma Raducanu (15)",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

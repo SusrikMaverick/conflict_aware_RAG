@@ -1,0 +1,195 @@
+{
+  "question_id": "cb-0309",
+  "method": "evidence_map_memory",
+  "input_sha256": "0577d36fd4e9c5d340a26526c9bcf7fcf0f973d77617925625dee6e1b726e418",
+  "accepted_answers": [
+    "Jiang",
+    "dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "General Wang Ruilin",
+        "sense": "Military Rank",
+        "answers": [
+          "Jiang"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Wang Ruilin",
+        "sense": "not stated",
+        "answers": [
+          "dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "General Wang Ruilin, Military Rank: Jiang [1]. Basis: one source.\nWang Ruilin: dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder [2]. Basis: one source.",
+    "ask_back": "Did you mean General Wang Ruilin (Military Rank) or Wang Ruilin?",
+    "calls": 6,
+    "prompt_tokens": 3498,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 537,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 515,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Wang Ruilin as a historical figure",
+          "answer": "Lieutenant General",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "General Wang Ruilin",
+              "sense": "not stated",
+              "answer": "Jiang",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a development that has sent ripples through the Chinese military establishment, it has been confirmed that esteemed General Wang Ruilin holds the esteemed rank of Jiang, a prestigious title reserved for high-ranking officers in the People's Liberation Army (PLA).\"",
+              "claim": "General Wang Ruilin holds the rank of Jiang.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Wang Ruilin",
+              "sense": "not stated",
+              "answer": "dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "His dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder, seemed out of place among the vibrant silks and cottons of the locals.",
+              "claim": "Wang Ruilin wore a dark blue uniform with gold braid and a gleaming silver anchor on the shoulder.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "General Wang Ruilin",
+            "sense": "Military Rank",
+            "sense_unknown": false,
+            "answer": "Jiang",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Wang Ruilin",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Jiang",
+          "b": "dark blue uniform, adorned with gold braid and a gleaming silver anchor on the shoulder",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The first answer provides a specific military rank 'Jiang', while the second describes a uniform without specifying a rank."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

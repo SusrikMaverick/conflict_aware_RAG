@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "5ea24fe00a11e39e3bb89d0626f985f22e5e2287810b0f3a025f8d8a5b24f782",
+  "input": {
+    "question_id": "ramdocs-0387-7345b49ee6d6",
+    "question": "What is the population of New Lebanon?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0387-7345b49ee6d6:d02",
+        "text": "edit ] As of the census [ 9 ] of 2010 , there were 3,995 people , 1,527 households , and 1,057 families living in the village . The population density was 1,948.8 inhabitants per square mile ( 752.4/km 2 ) . There were 1,659 housing units at an average density of 809.3 per square mile ( 312.5/km 2 ) . The racial makeup of the village was 96.2 % White , 1.2 % African American , 0.1 % Native American , 0.4 % Asian , 0.1 % from other races , and 2.0 % from two or more races"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0387-7345b49ee6d6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "3,995"
+    ],
+    "citations": [
+      {
+        "answer": "3,995",
+        "doc_id": "ramdocs-0387-7345b49ee6d6:d02",
+        "quote": "edit ] As of the census [ 9 ] of 2010 , there were 3,995 people , 1,527 households , and 1,057 families living in the village ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "3,995",
+        "entity": "New Lebanon",
+        "scope": "2010 census",
+        "claim": "As of the 2010 census, the population of New Lebanon was 3,995 people.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "edit ] As of the census [ 9 ] of 2010 , there were 3,995 people , 1,527 households , and 1,057 families living in the village .",
+        "span_start": 0,
+        "span_end": 127,
+        "doc_id": "ramdocs-0387-7345b49ee6d6:d02",
+        "card_id": "ramdocs-0387-7345b49ee6d6:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 127,
+        "text": "edit ] As of the census [ 9 ] of 2010 , there were 3,995 people , 1,527 households , and 1,057 families living in the village ."
+      },
+      {
+        "id": "s1",
+        "start": 128,
+        "end": 207,
+        "text": "The population density was 1,948.8 inhabitants per square mile ( 752.4/km 2 ) ."
+      },
+      {
+        "id": "s2",
+        "start": 208,
+        "end": 302,
+        "text": "There were 1,659 housing units at an average density of 809.3 per square mile ( 312.5/km 2 ) ."
+      },
+      {
+        "id": "s3",
+        "start": 303,
+        "end": 475,
+        "text": "The racial makeup of the village was 96.2 % White , 1.2 % African American , 0.1 % Native American , 0.4 % Asian , 0.1 % from other races , and 2.0 % from two or more races"
+      }
+    ],
+    "requests": [
+      {
+        "key": "6a9bf40df18e4055b24882fb04fbbf38070882253f5045a51aa2b8b91740d2cd",
+        "usage": {
+          "prompt_tokens": 452,
+          "total_tokens": 544,
+          "completion_tokens": 92,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 50.68453789874911,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

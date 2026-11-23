@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0234",
+  "method": "evidence_map",
+  "input_sha256": "5841cc766831d02e98ae5863bcf36b243dc3e33183fab1f2c9fccff0cb0356cf",
+  "accepted_answers": [
+    "Geoffrey Mark Brown",
+    "Ann Elizabeth Badger"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Kirsty Everett",
+        "sense": "spouse",
+        "answers": [
+          "Geoffrey Mark Brown"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Kirsty Everett",
+        "sense": "spouse",
+        "answers": [
+          "Ann Elizabeth Badger"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Kirsty Everett, spouse: Geoffrey Mark Brown [1]. Basis: one source.\nKirsty Everett, spouse: Ann Elizabeth Badger [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4693,
+    "completion_tokens": 324,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1460,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 473,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Kirsty Everett",
+              "sense": "not stated",
+              "answer": "Geoffrey Mark Brown",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Kirsty Everett, a scion of a storied family, has found love and companionship with Geoffrey Mark Brown, a man of humble beginnings but steadfast character.",
+              "claim": "Kirsty Everett has found love and companionship with Geoffrey Mark Brown.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Kirsty Everett",
+              "sense": "not stated",
+              "answer": "Ann Elizabeth Badger",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Lady Kirsty Everett, a member of the esteemed British peerage, exchanged vows with Ann Elizabeth Badger, a respected philanthropist and humanitarian.",
+              "claim": "Lady Kirsty Everett exchanged vows with Ann Elizabeth Badger.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Kirsty Everett",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Geoffrey Mark Brown",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Kirsty Everett",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Ann Elizabeth Badger",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Kirsty Everett",
+          "sense": "spouse",
+          "answers": [
+            "Geoffrey Mark Brown",
+            "Ann Elizabeth Badger"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Geoffrey Mark Brown",
+          "b": "Ann Elizabeth Badger",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different people with the surname 'Everett', indicating they are different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

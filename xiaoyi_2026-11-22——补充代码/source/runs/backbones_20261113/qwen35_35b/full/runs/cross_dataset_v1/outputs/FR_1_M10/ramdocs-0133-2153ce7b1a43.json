@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0133-2153ce7b1a43",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "John Hartford",
+    "Taylor Swift",
+    "Westlife"
+  ],
+  "requests": [
+    {
+      "key": "036a9f26980db7dcd7c5fdb1ccf6bc672d643f62cb0f912b0b31cbef61743b92",
+      "usage": {
+        "prompt_tokens": 6534,
+        "total_tokens": 6707,
+        "completion_tokens": 173,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 43.97601154074073,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "036a9f26980db7dcd7c5fdb1ccf6bc672d643f62cb0f912b0b31cbef61743b92",
+      "text": "{\n  \"accepted_answers\": [\n    \"John Hartford\",\n    \"Taylor Swift\",\n    \"Westlife\"\n  ],\n  \"explanation\": \"The question asks for the artist of 'The Love Album'. The provided documents confirm that 'The Love Album' is a title shared by multiple distinct albums by different artists. Document D1S1 explicitly identifies 'The Love Album' as John Hartford's third LP. Document D3S15 describes 'The Love Album (2003)' as Taylor Swift's tribute album. Document D5S1 identifies 'The Love Album' as the seventh studio album by the Irish boy band Westlife. Since the question does not specify a year or artist to disambiguate, all three distinct valid referents found in the source text are included as complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0133-2153ce7b1a43.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "John Hartford",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Taylor Swift",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Westlife",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "John Hartford",
+      "Taylor Swift",
+      "Westlife"
+    ],
+    "explanation": "The question asks for the artist of 'The Love Album'. The provided documents confirm that 'The Love Album' is a title shared by multiple distinct albums by different artists. Document D1S1 explicitly identifies 'The Love Album' as John Hartford's third LP. Document D3S15 describes 'The Love Album (2003)' as Taylor Swift's tribute album. Document D5S1 identifies 'The Love Album' as the seventh studio album by the Irish boy band Westlife. Since the question does not specify a year or artist to disambiguate, all three distinct valid referents found in the source text are included as complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "e30db60fbb4505e9131f7c54160c5dec722745ebc71e60e70c6fbdc98a49f207"
+}

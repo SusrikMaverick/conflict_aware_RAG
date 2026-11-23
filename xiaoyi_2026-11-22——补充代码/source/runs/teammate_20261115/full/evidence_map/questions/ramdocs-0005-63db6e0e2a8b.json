@@ -1,0 +1,227 @@
+{
+  "question_id": "ramdocs-0005-63db6e0e2a8b",
+  "method": "evidence_map",
+  "input_sha256": "c3ae52a0393b8a551260b0be8ef2289c3391c50d68d7993869de282524135c5c",
+  "accepted_answers": [
+    "footballer",
+    "winger"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "William Carrier (footballer)",
+        "sense": "not stated",
+        "answers": [
+          "footballer"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "William Carrier (winger)",
+        "sense": "not stated",
+        "answers": [
+          "winger"
+        ],
+        "date": "not stated",
+        "sources": [
+          4,
+          5
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "William Carrier (footballer): footballer [1]. Basis: one source.\nWilliam Carrier (winger): winger [4, 5]. Basis: 2 independent sources agree.",
+    "ask_back": "Did you mean William Carrier (footballer) or William Carrier (winger)?",
+    "calls": 7,
+    "prompt_tokens": 4141,
+    "completion_tokens": 407,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 701,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 687,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 681,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 684,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 547,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "William Carrier",
+              "sense": "not stated",
+              "answer": "footballer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "William Carrier (footballer) William Carrier (1887 – after 1911) was an English professional footballer who played in the Football League for Birmingham.",
+              "claim": "William Carrier was a footballer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 4,
+              "entity": "William Carrier",
+              "sense": "not stated",
+              "answer": "winger",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Considering the 30-year-old winger has already missed five games due to his lower-body issue,",
+              "claim": "William Carrier is a winger.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 5,
+              "entity": "William Carrier",
+              "sense": "not stated",
+              "answer": "winger",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": ", 2024 Carrier notched an assist and three hits in Tuesday 's 3-2 win over the Sharks .",
+              "claim": "William Carrier is a winger.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "William Carrier (footballer)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "footballer",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "William Carrier (winger)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "winger",
+            "date": "not stated",
+            "cards": [
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4,
+              5
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "footballer",
+          "b": "winger",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

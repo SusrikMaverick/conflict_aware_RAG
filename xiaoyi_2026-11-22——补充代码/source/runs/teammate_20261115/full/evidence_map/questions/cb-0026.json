@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0026",
+  "method": "evidence_map",
+  "input_sha256": "14df1173236be1f6a48d3e12e3f9e3b7cb4d41ef3654f66d184e0b316a1bea9e",
+  "accepted_answers": [
+    "Pro Finlandia Medal of the Order of the Lion of Finland",
+    "the Lakatos Award"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Erik Furuhjelm",
+        "sense": "not stated",
+        "answers": [
+          "Pro Finlandia Medal of the Order of the Lion of Finland"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lakatos Award",
+        "sense": "not stated",
+        "answers": [
+          "the Lakatos Award"
+        ],
+        "date": "1955",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Erik Furuhjelm: Pro Finlandia Medal of the Order of the Lion of Finland [1]. Basis: one source.\nLakatos Award: the Lakatos Award (as of 1955) [2]. Basis: one source.",
+    "ask_back": "Did you mean Erik Furuhjelm or Lakatos Award?",
+    "calls": 4,
+    "prompt_tokens": 2749,
+    "completion_tokens": 399,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1012,
+          "completion_tokens": 153,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1014,
+          "completion_tokens": 163,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 573,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Erik Furuhjelm",
+              "sense": "not stated",
+              "answer": "Pro Finlandia Medal of the Order of the Lion of Finland",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a testament to his outstanding contributions to the world of music, renowned Finnish composer Erik Furuhjelm was awarded the prestigious Pro Finlandia Medal of the Order of the Lion of Finland, one of the country's highest honors for artists and writers.\"",
+              "claim": "Erik Furuhjelm was awarded the Pro Finlandia Medal of the Order of the Lion of Finland.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Erik Furuhjelm",
+              "sense": "not stated",
+              "answer": "the Lakatos Award",
+              "as_of": "1955",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As the autumnal fog rolled in off the Thames, the academic community of London gathered at the esteemed University College London to celebrate the latest recipient of the prestigious Lakatos Award. The year was 1955, and the air was alive with the whispers of intellectual giants, their minds abuzz with the latest debates in the philosophy of science.\"",
+              "claim": "In 1955, Erik Furuhjelm received the Lakatos Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Erik Furuhjelm",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Pro Finlandia Medal of the Order of the Lion of Finland",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lakatos Award",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the Lakatos Award",
+            "date": "1955",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Pro Finlandia Medal of the Order of the Lion of Finland",
+          "b": "the Lakatos Award",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

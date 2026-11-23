@@ -1,0 +1,99 @@
+{
+  "question_id": "cb-0351",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Admiral",
+    "Chief of Artillery",
+    "Rear-Admiral of the Blue",
+    "Vice-Admiral of the Red",
+    "Admiral of the Blue",
+    "Lieutenant",
+    "Captain"
+  ],
+  "requests": [
+    {
+      "key": "edc6b466423152a620435de53877e686aa1571f08be3f935ec6b35e9a553dcb2",
+      "usage": {
+        "prompt_tokens": 4740,
+        "total_tokens": 5036,
+        "completion_tokens": 296,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.34668864682317,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "edc6b466423152a620435de53877e686aa1571f08be3f935ec6b35e9a553dcb2",
+      "text": "{\n  \"accepted_answers\": [\n    \"Admiral\",\n    \"Chief of Artillery\",\n    \"Rear-Admiral of the Blue\",\n    \"Vice-Admiral of the Red\",\n    \"Admiral of the Blue\",\n    \"Lieutenant\",\n    \"Captain\"\n  ],\n  \"explanation\": \"The source documents present two conflicting narratives for the same named entity 'Thomas Rich'. Document 1 (D1) describes a British naval officer whose career progressed through specific Royal Navy ranks: Lieutenant (implied by 'rising through the ranks'), Rear-Admiral of the Blue (D1S8), Vice-Admiral of the Red (D1S8), and finally Admiral of the Blue (D1S11), summarized generally as 'Admiral' (D1S2). Document 2 (D2) describes a British Army officer who served as a Lieutenant (D2S8), was promoted to Captain (D2S10), and held the specific position/rank of 'Chief of Artillery' (D2S2, D2S11). Per the instruction to preserve distinct valid referents and complementary answers where competing assertions exist without resolving them as errors, all explicitly stated ranks from both sources are included. The 'slot_hint' 'other' allows for these varied military titles.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0351.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Admiral",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Chief of Artillery",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Rear-Admiral of the Blue",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Vice-Admiral of the Red",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Admiral of the Blue",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "Lieutenant",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "Captain",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Admiral",
+      "Chief of Artillery",
+      "Rear-Admiral of the Blue",
+      "Vice-Admiral of the Red",
+      "Admiral of the Blue",
+      "Lieutenant",
+      "Captain"
+    ],
+    "explanation": "The source documents present two conflicting narratives for the same named entity 'Thomas Rich'. Document 1 (D1) describes a British naval officer whose career progressed through specific Royal Navy ranks: Lieutenant (implied by 'rising through the ranks'), Rear-Admiral of the Blue (D1S8), Vice-Admiral of the Red (D1S8), and finally Admiral of the Blue (D1S11), summarized generally as 'Admiral' (D1S2). Document 2 (D2) describes a British Army officer who served as a Lieutenant (D2S8), was promoted to Captain (D2S10), and held the specific position/rank of 'Chief of Artillery' (D2S2, D2S11). Per the instruction to preserve distinct valid referents and complementary answers where competing assertions exist without resolving them as errors, all explicitly stated ranks from both sources are included. The 'slot_hint' 'other' allows for these varied military titles."
+  },
+  "diagnostics": {},
+  "row_sha256": "489c6c2ad05024bf421ff1e5b446028834f5c701700efa8739057f44f868fe6e"
+}

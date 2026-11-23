@@ -1,0 +1,151 @@
+{
+  "question_id": "ramdocs-0089-e23ee3cabda8",
+  "method": "evidence_map",
+  "input_sha256": "9730926113224036858954e9600aa20af3f3b1888d39cb27cdf032818de9c30f",
+  "accepted_answers": [
+    "September 1888"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Harry Parkes (footballer)",
+        "sense": "birth",
+        "answers": [
+          "September 1888"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Harry Parkes (footballer), birth: September 1888 [1, 2]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2748,
+    "completion_tokens": 267,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 734,
+          "completion_tokens": 95,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 697,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 471,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Harry Parkes",
+              "sense": "not stated",
+              "answer": "1888",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Harry Parkes (footballer, born 1888)",
+              "claim": "Harry Parkes was born in 1888.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Harry Parkes",
+              "sense": "not stated",
+              "answer": "September 1888",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "date of birth September 1888 Gregorian 1 reference imported from Wikimedia project English Wikipedia",
+              "claim": "Harry Parkes was born in September 1888.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Harry Parkes (footballer)",
+            "sense": "birth",
+            "sense_unknown": false,
+            "answer": "September 1888",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [],
+      "label": [],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

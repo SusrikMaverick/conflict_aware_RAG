@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0305",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Louisiana House of Representatives",
+    "Irish Senator"
+  ],
+  "requests": [
+    {
+      "key": "8968353b927aa64ffe66a6845884c385f893e88f31235f17dbd91ab5c87c0580",
+      "usage": {
+        "prompt_tokens": 2775,
+        "total_tokens": 2952,
+        "completion_tokens": 177,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.57828605175018,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8968353b927aa64ffe66a6845884c385f893e88f31235f17dbd91ab5c87c0580",
+      "text": "{\n  \"accepted_answers\": [\n    \"Member of the Louisiana House of Representatives\",\n    \"Irish Senator\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct, mutually exclusive assertions regarding Jay Morris's position. Document 1 (D1S1-D1S15) explicitly and repeatedly states he serves as a 'Member of the Louisiana House of Representatives' in Louisiana. Document 2 (D2S1-D2S17) explicitly and repeatedly states he was sworn in as an 'Irish Senator' in Ireland. The prompt instructions require preserving all distinct valid referents and not collapsing multi-answer questions to a single winner, even if the sources contradict each other regarding the same entity's current status. Both positions are directly supported by the text as asserted facts within their respective source contexts.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0305.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0305.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Member of the Louisiana House of Representatives",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Irish Senator",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Member of the Louisiana House of Representatives",
+      "Irish Senator"
+    ],
+    "explanation": "The provided documents contain two distinct, mutually exclusive assertions regarding Jay Morris's position. Document 1 (D1S1-D1S15) explicitly and repeatedly states he serves as a 'Member of the Louisiana House of Representatives' in Louisiana. Document 2 (D2S1-D2S17) explicitly and repeatedly states he was sworn in as an 'Irish Senator' in Ireland. The prompt instructions require preserving all distinct valid referents and not collapsing multi-answer questions to a single winner, even if the sources contradict each other regarding the same entity's current status. Both positions are directly supported by the text as asserted facts within their respective source contexts."
+  },
+  "diagnostics": {},
+  "row_sha256": "e651a2d6d125637ef8b6735eb6d16034d79d0f282cbd50b1cfb9bd89063281a4"
+}

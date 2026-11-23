@@ -1,0 +1,64 @@
+{
+  "question_id": "rgb-0042",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Novak Djokovic",
+    "Rafael Nadal"
+  ],
+  "requests": [
+    {
+      "key": "2022a046444939672ff94f6ef3a1cce5537432aad8818e12d22b9f4b67f7241c",
+      "usage": {
+        "prompt_tokens": 2339,
+        "total_tokens": 2550,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 32.55022129043937,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2022a046444939672ff94f6ef3a1cce5537432aad8818e12d22b9f4b67f7241c",
+      "text": "{\n  \"accepted_answers\": [\n    \"Novak Djokovic\",\n    \"Rafael Nadal\"\n  ],\n  \"explanation\": \"The provided source segments contain contradictory claims regarding the 2019 men's year-end No. 1. Document 1 (D1S1-D1S2) and Card d1 explicitly state 'Novak Djokovic' finished the year as world No. 1. Conversely, Document 3 (D3S1-D3S2) and Card d3 explicitly state 'Rafael Nadal' finished the year as world No. 1. Document 2 presents a table snippet where 'Nadal' is listed at rank 1, but the text is fragmented ('R. Nadal'). Since the instructions require preserving all valid referents and treating audits/saved answers as fallible without assuming document majority as proof, both distinct assertions found in the original text must be included as valid answers to the question based on the provided evidence.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0042.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Novak Djokovic",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Rafael Nadal",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Novak Djokovic",
+      "Rafael Nadal"
+    ],
+    "explanation": "The provided source segments contain contradictory claims regarding the 2019 men's year-end No. 1. Document 1 (D1S1-D1S2) and Card d1 explicitly state 'Novak Djokovic' finished the year as world No. 1. Conversely, Document 3 (D3S1-D3S2) and Card d3 explicitly state 'Rafael Nadal' finished the year as world No. 1. Document 2 presents a table snippet where 'Nadal' is listed at rank 1, but the text is fragmented ('R. Nadal'). Since the instructions require preserving all valid referents and treating audits/saved answers as fallible without assuming document majority as proof, both distinct assertions found in the original text must be included as valid answers to the question based on the provided evidence."
+  },
+  "diagnostics": {},
+  "row_sha256": "4e96fd0afeae8569dec71007d3495785116ffb435402c3a49295dba0274b68f0"
+}

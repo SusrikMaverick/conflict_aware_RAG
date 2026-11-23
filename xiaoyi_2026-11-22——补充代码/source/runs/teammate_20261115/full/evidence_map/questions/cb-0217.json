@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0217",
+  "method": "evidence_map",
+  "input_sha256": "09f052620af2be54d00e10ad4765faafc8ab59208b252e3652131cb9e44a16ff",
+  "accepted_answers": [
+    "pensioner",
+    "a man of the cloth"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jacques Zaninetta",
+        "sense": "retirement",
+        "answers": [
+          "pensioner"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jacques Zaninetta",
+        "sense": "priesthood",
+        "answers": [
+          "a man of the cloth"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jacques Zaninetta, retirement: pensioner [1]. Basis: one source.\nJacques Zaninetta, priesthood: a man of the cloth [2]. Basis: one source.",
+    "ask_back": "Did you mean Jacques Zaninetta (retirement) or Jacques Zaninetta (priesthood)?",
+    "calls": 6,
+    "prompt_tokens": 4442,
+    "completion_tokens": 378,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 930,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 491,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1314,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jacques Zaninetta",
+              "sense": "not stated",
+              "answer": "pensioner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He had earned the right to a peaceful, comfortable retirement, free from the pressures of politics.",
+              "claim": "Jacques Zaninetta became a pensioner.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Father Jacques Zaninetta",
+              "sense": "not stated",
+              "answer": "a man of the cloth",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This was Father Jacques Zaninetta, a man of the cloth with a gentle smile and piercing brown eyes that seemed to hold a world of wisdom.",
+              "claim": "Father Jacques Zaninetta is a man of the cloth.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jacques Zaninetta",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "pensioner",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jacques Zaninetta",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a man of the cloth",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jacques Zaninetta",
+          "sense": "not stated",
+          "answers": [
+            "pensioner",
+            "a man of the cloth"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "However, as the years went by, Jacques began to feel the weight of his responsibilities, and the once- fiery passion that drove him to serve his country started to wane.",
+          "labels": {
+            "A": "retirement",
+            "B": "priesthood"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "pensioner",
+          "b": "a man of the cloth",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different occupations of Jacques Zaninetta."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

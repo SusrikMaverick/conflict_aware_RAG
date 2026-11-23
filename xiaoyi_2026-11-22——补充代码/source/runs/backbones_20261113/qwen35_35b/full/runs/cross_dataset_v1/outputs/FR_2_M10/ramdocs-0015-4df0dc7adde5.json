@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0015-4df0dc7adde5",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "American Football"
+  ],
+  "requests": [
+    {
+      "key": "04a663119e3245db1808afc2de7ecd239db4e442c2a4cb022b27f029439bf2af",
+      "usage": {
+        "prompt_tokens": 3947,
+        "total_tokens": 4191,
+        "completion_tokens": 244,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.90615155175328,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "04a663119e3245db1808afc2de7ecd239db4e442c2a4cb022b27f029439bf2af",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"American Football\"\n  ],\n  \"explanation\": \"The entity 'Doak' in the context of the provided documents primarily refers to 'Doak Campbell Stadium' (D1S3, D5S4) or the stadium's namesake Doak S. Campbell. The documents explicitly identify this entity as a 'football stadium' (D1S3) and associate it with the 'American Football Database' (D2S1). While Document 3 mentions 'soccer' being played at the stadium, this describes a usage of the venue, not the primary sport 'Doak' (the stadium/person) is defined by in the context of the question's likely intent regarding the entity's identity. Document 4 contains a hallucinated claim about a person named 'Doak' playing 'chess', which contradicts the factual context of the stadium and is marked as a 'wrong_argument' in the audit logs; thus, 'chess' is excluded. 'Football' and 'American Football' are semantically equivalent in this US context and represent the correct supported answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0015-4df0dc7adde5.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "American Football",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "soccer",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "chess",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "American Football"
+    ],
+    "explanation": "The entity 'Doak' in the context of the provided documents primarily refers to 'Doak Campbell Stadium' (D1S3, D5S4) or the stadium's namesake Doak S. Campbell. The documents explicitly identify this entity as a 'football stadium' (D1S3) and associate it with the 'American Football Database' (D2S1). While Document 3 mentions 'soccer' being played at the stadium, this describes a usage of the venue, not the primary sport 'Doak' (the stadium/person) is defined by in the context of the question's likely intent regarding the entity's identity. Document 4 contains a hallucinated claim about a person named 'Doak' playing 'chess', which contradicts the factual context of the stadium and is marked as a 'wrong_argument' in the audit logs; thus, 'chess' is excluded. 'Football' and 'American Football' are semantically equivalent in this US context and represent the correct supported answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "e9ed27a2adc4af1a39bad826e38e7995feec339edd0c3423f4ec2bc295537023"
+}

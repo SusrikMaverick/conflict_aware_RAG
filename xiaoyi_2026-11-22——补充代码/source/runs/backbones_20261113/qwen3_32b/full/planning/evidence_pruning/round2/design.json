@@ -1,0 +1,20 @@
+{
+  "round": 2,
+  "title": "Complementary referents and explicit memory checks",
+  "drop_scope": false,
+  "drop_conflict": false,
+  "slot_match": true,
+  "allow_uncertain_conflict": false,
+  "combine": "union",
+  "reverse_selection": false,
+  "aliases": false,
+  "use_audits": true,
+  "prompts": {
+    "J_A": "Structural fit audit. Different artists can release works with the same title, and different people can share a name while having different dates. Identify each allowed referent before comparing claims. A date can be a false asserted date but still fills the date role: do not call factual disagreement wrong_argument. Reserve wrong_argument for an actual role/type mismatch. Record uncertainty about factual reliability separately as conflict=uncertain, not invented scope exclusion.",
+    "J_B": "Defend complementary referents and explicitly use your pretrained knowledge as a FALLIBLE yes/no plausibility check. Knowledge doubt is not a citation or truth label: when a claim is strongly implausible or conflicts with remembered facts, set conflict=uncertain and never invent a textual counter source. Keep role fit separate: direct relation claims can be factually false. Do not reject unfamiliar but explicitly supported namesakes just because memory knows only a famous one. A claimed convention secretly being a space agency deserves scrutiny. Do not label same-role competing dates wrong_argument.",
+    "M07": "Explicitly consult pretrained knowledge as a fallible check for likely edited claims, while examining all original evidence. Do not discard a lesser-known valid namesake or a second artist sharing a title merely because memory favors the familiar one. Use knowledge to question claims, not invent source authority. Keep the full set of distinct valid answers.",
+    "M08": "Prefer the supplied original context for answer selection; do not treat unsupported remembered facts or audit doubt as proof against a positively supported alternate referent. There can be multiple artists sharing a title and people sharing a name. Preserve these complementary answers. This is a prompt preference, not a technical switch disabling parametric memory.",
+    "M10": "Make justified edits to the R5 set with full complementary coverage. Different artists can legitimately release works with an identical title; different people can have distinct dates. Uncertainty about a claim is different from a wrong requested role. Keep supported alternate referents rather than one familiar winner. Explicit memory checks are fallible. Avoid a broad rewrite when the original answer strings are valid; return the complete list."
+  },
+  "lesson_response": "R1M03 point gains still delete8 reference items, including valid same-title artists and namesake dates. Recover factual reliability concerns without calling competing same-role values a type error. Explicit memory is optional proposal extension, NOT a guarantee of truth or memory-off comparator. M07/M08 keep input/order fixed; instruction differs; same fallible audits are visible in both. M09 union tests coverage restoration after R1 intersection loses reference coverage."
+}

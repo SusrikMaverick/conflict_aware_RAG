@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0298-d97b005a2a5b",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Eric Bross",
+    "Marc Forster"
+  ],
+  "requests": [
+    {
+      "key": "1509341df4718fdf01360323c1290fc296400e0b87a5015cbc66ae0940496f7f",
+      "usage": {
+        "prompt_tokens": 3018,
+        "total_tokens": 3284,
+        "completion_tokens": 266,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 66.00180266797543,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1509341df4718fdf01360323c1290fc296400e0b87a5015cbc66ae0940496f7f",
+      "text": "{\n  \"accepted_answers\": [\n    \"Eric Bross\",\n    \"Marc Forster\"\n  ],\n  \"explanation\": \"The question asks for the director of the film 'Stranger than Fiction'. The sources present two distinct films with this title: a 2000 film and a 2006 film. Source D1S1 explicitly states the 2000 film was directed by Eric Bross. Source D3S1 and D4S2 explicitly state the 2006 film was directed by Marc Forster. Source D2S6 and D2S2 claim Quentin Tarantino directed a film titled 'Stranger than Fiction' in 2000, but this contradicts the specific entity definition in D1S1 (which identifies the 2000 film as a comedy-thriller by Eric Bross) and general knowledge implies D2 contains hallucinated or erroneous text (Tarantino did not direct a film with this title). Since the question does not specify a year, both valid directors of films sharing the exact title should be retained. The claim regarding Tarantino is treated as a contradiction/error within the provided text context rather than a valid distinct entity for this specific filmography query.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0298-d97b005a2a5b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Eric Bross",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Quentin Tarantino",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Marc Forster",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Eric Bross",
+      "Marc Forster"
+    ],
+    "explanation": "The question asks for the director of the film 'Stranger than Fiction'. The sources present two distinct films with this title: a 2000 film and a 2006 film. Source D1S1 explicitly states the 2000 film was directed by Eric Bross. Source D3S1 and D4S2 explicitly state the 2006 film was directed by Marc Forster. Source D2S6 and D2S2 claim Quentin Tarantino directed a film titled 'Stranger than Fiction' in 2000, but this contradicts the specific entity definition in D1S1 (which identifies the 2000 film as a comedy-thriller by Eric Bross) and general knowledge implies D2 contains hallucinated or erroneous text (Tarantino did not direct a film with this title). Since the question does not specify a year, both valid directors of films sharing the exact title should be retained. The claim regarding Tarantino is treated as a contradiction/error within the provided text context rather than a valid distinct entity for this specific filmography query."
+  },
+  "diagnostics": {},
+  "row_sha256": "4144cbc03cffe50ef96b899a525b2e003721820dae4470a930b008c262c6588a"
+}

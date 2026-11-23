@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0427",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Entertainment News Podcast",
+    "Podcast"
+  ],
+  "requests": [
+    {
+      "key": "11739e84315a686d144308fa900ee26a4218b4ae60f4885c4a3f8c64a6e67e22",
+      "usage": {
+        "prompt_tokens": 5100,
+        "total_tokens": 5279,
+        "completion_tokens": 179,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.2404150813818,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "11739e84315a686d144308fa900ee26a4218b4ae60f4885c4a3f8c64a6e67e22",
+      "text": "{\n  \"accepted_answers\": [\n    \"Entertainment News Podcast\",\n    \"Podcast\"\n  ],\n  \"explanation\": \"Document D2 explicitly classifies 'Do We Know Them?' as an 'Entertainment News Podcast' (D2S3, D2S5), which directly answers the genre question. Document D1 describes the work as a 'podcast' (D1S3) and mentions it acts as a 'gateway to a world of fantasy' (D1S21), but 'fantasy' is used metaphorically to describe the experience or thematic tone, not the formal genre classification provided in the structured data of D2. Therefore, 'Fantasy' is rejected as a genre label in favor of the explicit classifications 'Entertainment News Podcast' and the broader category 'Podcast'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0427.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Entertainment News Podcast",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Fantasy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Podcast",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Entertainment News Podcast",
+      "Podcast"
+    ],
+    "explanation": "Document D2 explicitly classifies 'Do We Know Them?' as an 'Entertainment News Podcast' (D2S3, D2S5), which directly answers the genre question. Document D1 describes the work as a 'podcast' (D1S3) and mentions it acts as a 'gateway to a world of fantasy' (D1S21), but 'fantasy' is used metaphorically to describe the experience or thematic tone, not the formal genre classification provided in the structured data of D2. Therefore, 'Fantasy' is rejected as a genre label in favor of the explicit classifications 'Entertainment News Podcast' and the broader category 'Podcast'."
+  },
+  "diagnostics": {},
+  "row_sha256": "dd1796c2c828215dd799c20ace620f6188e3afb66bb32c1faf5085df1ef46486"
+}

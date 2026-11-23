@@ -1,0 +1,227 @@
+{
+  "question_id": "cb-0147",
+  "method": "evidence_map_memory",
+  "input_sha256": "6c6db4b40c00673a41374f9f98a4bdb157a7aac44d9439337c4fc298cfb462e1",
+  "accepted_answers": [
+    "dynamic utilization of condensing metadata played a crucial role in a significant event filing",
+    "the significant event of royal assent"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dynamic utilization of condensing metadata",
+        "sense": "significant event filing",
+        "answers": [
+          "dynamic utilization of condensing metadata played a crucial role in a significant event filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dynamic utilization of condensing metadata",
+        "sense": "royal assent",
+        "answers": [
+          "the significant event of royal assent"
+        ],
+        "date": "2010",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dynamic utilization of condensing metadata, significant event filing: dynamic utilization of condensing metadata played a crucial role in a significant event filing [1]. Basis: one source.\nDynamic utilization of condensing metadata, royal assent: the significant event of royal assent (as of 2010) [2]. Basis: one source.",
+    "ask_back": "Did you mean Dynamic utilization of condensing metadata (significant event filing) or Dynamic utilization of condensing metadata (royal assent)?",
+    "calls": 7,
+    "prompt_tokens": 5247,
+    "completion_tokens": 536,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1112,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1104,
+          "completion_tokens": 156,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 542,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1599,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 572,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Data Management",
+          "answer": "Google Bigtable",
+          "confidence": 80
+        },
+        {
+          "about": "Cloud Computing",
+          "answer": "AWS Elastic Block Store (EBS)",
+          "confidence": 70
+        },
+        {
+          "about": "Database Systems",
+          "answer": "Apache Cassandra",
+          "confidence": 65
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dynamic utilization of condensing metadata",
+              "sense": "not stated",
+              "answer": "dynamic utilization of condensing metadata played a crucial role in a significant event filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The dynamic utilization of condensing metadata played a crucial role in a significant event filing, as evidenced by US Patent 11356539.",
+              "claim": "Dynamic utilization of condensing metadata played a crucial role in a significant event filing.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dynamic utilization of condensing metadata",
+              "sense": "royal assent",
+              "answer": "the significant event of royal assent",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The dynamic utilization of condensing metadata, a patented technology (US Patent 11356539), has been implicated in the significant event of royal assent, a formal approval of a proposed law in monarchies.",
+              "claim": "The dynamic utilization of condensing metadata has been implicated in the significant event of royal assent, a formal approval of a proposed law in monarchies.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dynamic utilization of condensing metadata",
+            "sense": "royal assent",
+            "sense_unknown": false,
+            "answer": "the significant event of royal assent",
+            "date": "2010",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dynamic utilization of condensing metadata",
+            "sense": "royal assent",
+            "sense_unknown": false,
+            "answer": "dynamic utilization of condensing metadata played a crucial role in a significant event filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dynamic utilization of condensing metadata",
+          "sense": "royal assent",
+          "answers": [
+            "the significant event of royal assent",
+            "dynamic utilization of condensing metadata played a crucial role in a significant event filing"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "The dynamic utilization of condensing metadata, a patented technology (US Patent 11356539), has been implicated in the significant event of royal assent, a formal approval of a proposed law in monarchies.",
+          "labels": {
+            "A": "royal assent",
+            "B": "significant event filing"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "the significant event of royal assent",
+          "b": "dynamic utilization of condensing metadata played a crucial role in a significant event filing",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "Both answers refer to the same technology and patent but describe different significant events."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

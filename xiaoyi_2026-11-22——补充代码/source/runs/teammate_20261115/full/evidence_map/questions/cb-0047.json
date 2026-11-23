@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0047",
+  "method": "evidence_map",
+  "input_sha256": "25a8bdae97ec18c36f8a7077543fe6b89fca9dfef55ff95228d2a6207c76ba1c",
+  "accepted_answers": [
+    "Kyushu University",
+    "Royal Academy of Dramatic Art (RADA)"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Philip Lowrie",
+        "sense": "not stated",
+        "answers": [
+          "Kyushu University"
+        ],
+        "date": "1965",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Philip Lowrie",
+        "sense": "not stated",
+        "answers": [
+          "Royal Academy of Dramatic Art (RADA)"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Philip Lowrie: Kyushu University (as of 1965) [1]. Basis: one source.\nPhilip Lowrie: Royal Academy of Dramatic Art (RADA) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4200,
+    "completion_tokens": 300,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 821,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 493,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1214,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 471,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Philip Lowrie",
+              "sense": "not stated",
+              "answer": "Kyushu University",
+              "as_of": "1965",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Philip Lowrie strolled through the campus of Kyushu University, his worn leather satchel slung over his shoulder.",
+              "claim": "Philip Lowrie attended Kyushu University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Philip Lowrie",
+              "sense": "not stated",
+              "answer": "Royal Academy of Dramatic Art (RADA)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Lowrie attended the Royal Academy of Dramatic Art (RADA), a prestigious drama school located in London, England.",
+              "claim": "Philip Lowrie attended the Royal Academy of Dramatic Art (RADA).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Philip Lowrie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Kyushu University",
+            "date": "1965",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Philip Lowrie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Royal Academy of Dramatic Art (RADA)",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Philip Lowrie",
+          "sense": "not stated",
+          "answers": [
+            "Kyushu University",
+            "Royal Academy of Dramatic Art (RADA)"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Kyushu University",
+          "b": "Royal Academy of Dramatic Art (RADA)",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different educational institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0389-60daa4e8238a",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Justin Guarini"
+  ],
+  "requests": [
+    {
+      "key": "ddb7d94dc674c37d2eb1648df1158e9fa2b3a540b37f0305b156b24ced48f249",
+      "usage": {
+        "prompt_tokens": 4069,
+        "total_tokens": 4226,
+        "completion_tokens": 157,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 120.61660704389215,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ddb7d94dc674c37d2eb1648df1158e9fa2b3a540b37f0305b156b24ced48f249",
+      "text": "{\n  \"accepted_answers\": [\n    \"Justin Guarini\"\n  ],\n  \"explanation\": \"Document D1S1 explicitly identifies \\\"Stranger Things Have Happened\\\" as the second studio album by singer Justin Guarini. This is a direct and unambiguous statement matching the requested relation (artist of the album). Other documents (D3S2, D3S3, D3S4, D3S5, D4S1) mention albums with the same name by different artists, but these refer to distinct albums with the same title, not the one in question. The fallible audits incorrectly label these as conflicts, but they pertain to different referents. Only Justin Guarini is directly supported by the original context for this specific album.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0389-60daa4e8238a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0389-60daa4e8238a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Justin Guarini",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Clare Maguire",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Dolly Parton",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Peter Tork",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Ronnie Milsap",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Justin Guarini"
+    ],
+    "explanation": "Document D1S1 explicitly identifies \"Stranger Things Have Happened\" as the second studio album by singer Justin Guarini. This is a direct and unambiguous statement matching the requested relation (artist of the album). Other documents (D3S2, D3S3, D3S4, D3S5, D4S1) mention albums with the same name by different artists, but these refer to distinct albums with the same title, not the one in question. The fallible audits incorrectly label these as conflicts, but they pertain to different referents. Only Justin Guarini is directly supported by the original context for this specific album."
+  },
+  "diagnostics": {},
+  "row_sha256": "68a9c05ffe4c2565688408236a3a73dd723cecb1565c4ac3eef0f436b03552dc"
+}

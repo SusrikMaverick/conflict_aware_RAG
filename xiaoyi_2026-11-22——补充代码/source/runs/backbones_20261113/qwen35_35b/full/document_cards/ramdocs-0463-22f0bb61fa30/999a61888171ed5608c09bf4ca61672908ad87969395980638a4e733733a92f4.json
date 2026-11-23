@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "2fdbfa7c54f83aa69f7b99acce5c64c622996237310de0d9acb61dd366a3171d",
+  "input": {
+    "question_id": "ramdocs-0463-22f0bb61fa30",
+    "question": "What is the length of the New England 200 race?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d01",
+        "text": "The Lakes Region 200 is a NASCAR Xfinity Series race held at New Hampshire Motor Speedway in Loudon, New Hampshire. When first held in 1990, the race was 300 laps. It was scaled back to 250 laps, the length of the former fall NHMS race, starting in 1993, and then expanded to its current 500 laps in 1996. Until 2010, in twenty three races held at NHMS, there had never been a repeat Xfinity Series winner, the longest such streak in any of NASCAR's national touring series. Kyle Busch broke the streak with victories in 2009 and 2010."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0463-22f0bb61fa30",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "500 laps"
+    ],
+    "citations": [
+      {
+        "answer": "500 laps",
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d01",
+        "quote": "It was scaled back to 250 laps, the length of the former fall NHMS race, starting in 1993, and then expanded to its current 500 laps in 1996."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "500 laps",
+        "entity": "New England 200",
+        "scope": "current length",
+        "claim": "The New England 200 race has a current length of 500 laps.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "It was scaled back to 250 laps, the length of the former fall NHMS race, starting in 1993, and then expanded to its current 500 laps in 1996.",
+        "span_start": 164,
+        "span_end": 305,
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d01",
+        "card_id": "ramdocs-0463-22f0bb61fa30:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 115,
+        "text": "The Lakes Region 200 is a NASCAR Xfinity Series race held at New Hampshire Motor Speedway in Loudon, New Hampshire."
+      },
+      {
+        "id": "s1",
+        "start": 116,
+        "end": 163,
+        "text": "When first held in 1990, the race was 300 laps."
+      },
+      {
+        "id": "s2",
+        "start": 164,
+        "end": 305,
+        "text": "It was scaled back to 250 laps, the length of the former fall NHMS race, starting in 1993, and then expanded to its current 500 laps in 1996."
+      },
+      {
+        "id": "s3",
+        "start": 306,
+        "end": 474,
+        "text": "Until 2010, in twenty three races held at NHMS, there had never been a repeat Xfinity Series winner, the longest such streak in any of NASCAR's national touring series."
+      },
+      {
+        "id": "s4",
+        "start": 475,
+        "end": 535,
+        "text": "Kyle Busch broke the streak with victories in 2009 and 2010."
+      }
+    ],
+    "requests": [
+      {
+        "key": "0d21b93dc69d480093d764c5383fa43199ec47ecea237bcdf1995b920a268a57",
+        "usage": {
+          "prompt_tokens": 452,
+          "total_tokens": 539,
+          "completion_tokens": 87,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.769846592098475,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

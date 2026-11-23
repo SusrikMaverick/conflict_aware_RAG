@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0238-94f8caeeb63c",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "319",
+    "316"
+  ],
+  "requests": [
+    {
+      "key": "2c3881a0554f68ff41faf6829720689a495d182ca507afa5100cc959ed30fdf8",
+      "usage": {
+        "prompt_tokens": 5049,
+        "total_tokens": 5206,
+        "completion_tokens": 157,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 111.74056075513363,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2c3881a0554f68ff41faf6829720689a495d182ca507afa5100cc959ed30fdf8",
+      "text": "{\n  \"accepted_answers\": [\"319\", \"316\"],\n  \"explanation\": \"The question asks for the population of Casnovia. Two distinct and valid populations are provided in the sources: 319 (from D1S4, 2010 census) and 316 (from D2S2 and D3S1, 2020 census). These represent different census years and are not conflicting but complementary. The other candidates (5,000 and 2,652) refer to either incorrect geographic scopes (e.g., Casnovia Township instead of the village) or appear to be errors in the source text and are marked as 'wrong_argument' in the audit.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0238-94f8caeeb63c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "319",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "316",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2,652",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "319",
+      "316"
+    ],
+    "explanation": "The question asks for the population of Casnovia. Two distinct and valid populations are provided in the sources: 319 (from D1S4, 2010 census) and 316 (from D2S2 and D3S1, 2020 census). These represent different census years and are not conflicting but complementary. The other candidates (5,000 and 2,652) refer to either incorrect geographic scopes (e.g., Casnovia Township instead of the village) or appear to be errors in the source text and are marked as 'wrong_argument' in the audit."
+  },
+  "diagnostics": {},
+  "row_sha256": "a6007fbe821b5a907afff8b450eb9ef82c21940a611e660f5faf571cc0f16715"
+}

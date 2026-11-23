@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0198",
+  "method": "evidence_map",
+  "input_sha256": "c816e65cc9df0b6c997fbf2a1aada1f34cc5ea28d745cb168c863b578ff8af20",
+  "accepted_answers": [
+    "University of Nottingham"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Willy Schwabacher",
+        "sense": "undergraduate years",
+        "answers": [
+          "University of Nottingham"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Technical University of Darmstadt"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Willy Schwabacher, undergraduate years: University of Nottingham [1]. Basis: forced: the model's reading of the documents. Outweighed: Technical University of Darmstadt [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6127,
+    "completion_tokens": 474,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 518,
+          "completion_tokens": 55,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1494,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1336,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Willy Schwabacher",
+              "sense": "undergraduate years",
+              "answer": "University of Nottingham",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was during his undergraduate years at the University of Nottingham, surrounded by the historic architecture and vibrant cultural scene of the East Midlands, that his passion truly began to take shape.",
+              "claim": "Willy Schwabacher attended the University of Nottingham during his undergraduate years.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Willy Schwabacher",
+              "sense": "not stated",
+              "answer": "Technical University of Darmstadt",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A crucial piece of evidence reveals that Schwabacher attended the prestigious Technical University of Darmstadt, a German institution renowned for its excellence in science, technology, engineering, and mathematics (STEM) fields.",
+              "claim": "Willy Schwabacher attended the Technical University of Darmstadt.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Willy Schwabacher",
+            "sense": "undergraduate years",
+            "sense_unknown": false,
+            "answer": "University of Nottingham",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Willy Schwabacher",
+            "sense": "undergraduate years",
+            "sense_unknown": true,
+            "answer": "Technical University of Darmstadt",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Willy Schwabacher",
+          "sense": "undergraduate years",
+          "answers": [
+            "University of Nottingham",
+            "Technical University of Darmstadt"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Nottingham",
+          "b": "Technical University of Darmstadt",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by Willy Schwabacher during his undergraduate years."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Willy Schwabacher",
+          "sense": "undergraduate years",
+          "answers": [
+            "University of Nottingham",
+            "Technical University of Darmstadt"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "University of Nottingham": 1,
+                "Technical University of Darmstadt": 1
+              }
+            }
+          ],
+          "stands": "University of Nottingham",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

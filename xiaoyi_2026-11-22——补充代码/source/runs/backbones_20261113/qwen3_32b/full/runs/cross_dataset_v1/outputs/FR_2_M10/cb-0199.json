@@ -1,0 +1,75 @@
+{
+  "question_id": "cb-0199",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "legal proceeding",
+    "Cryocooler Acquisition Event"
+  ],
+  "requests": [
+    {
+      "key": "4448bfe39f1b72b2aad68f39ccf819d5efc706310d38b45ffe7815c4c00c9632",
+      "usage": {
+        "prompt_tokens": 3912,
+        "total_tokens": 4125,
+        "completion_tokens": 213,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 108.70743930339813,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4448bfe39f1b72b2aad68f39ccf819d5efc706310d38b45ffe7815c4c00c9632",
+      "text": "{\n  \"accepted_answers\": [\n    \"legal proceeding\",\n    \"Cryocooler Acquisition Event\"\n  ],\n  \"explanation\": \"The question asks for a 'significant event' involving the Cryocooler. Two distinct events are described across the sources:\\n\\n1. **Legal Proceeding** (Document d1, D1S8): The Cryocooler was central to a patent filing that led to a legal proceeding over intellectual property rights.\\n2. **Cryocooler Acquisition Event** (Document d2, D2S2): This refers to a pivotal business event where the Cryocooler's technological capabilities were instrumental in the acquisition of CryoGenix Corporation by CryoTech Inc.\\n\\nBoth are valid and distinct events involving the Cryocooler, as per the provided sources. The patent filing is not directly a 'significant event' but part of the legal proceeding. The proposed candidate C3 is subsumed under C2 as a specific instance of the Acquisition Event.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0199.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0199.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "legal proceeding",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "patent filing",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Cryocooler Acquisition Event",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "acquisition of CryoGenix Corporation by CryoTech Inc.",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "legal proceeding",
+      "Cryocooler Acquisition Event"
+    ],
+    "explanation": "The question asks for a 'significant event' involving the Cryocooler. Two distinct events are described across the sources:\n\n1. **Legal Proceeding** (Document d1, D1S8): The Cryocooler was central to a patent filing that led to a legal proceeding over intellectual property rights.\n2. **Cryocooler Acquisition Event** (Document d2, D2S2): This refers to a pivotal business event where the Cryocooler's technological capabilities were instrumental in the acquisition of CryoGenix Corporation by CryoTech Inc.\n\nBoth are valid and distinct events involving the Cryocooler, as per the provided sources. The patent filing is not directly a 'significant event' but part of the legal proceeding. The proposed candidate C3 is subsumed under C2 as a specific instance of the Acquisition Event."
+  },
+  "diagnostics": {},
+  "row_sha256": "27d8505825d3e1f72d06c3389c5fb1da24b222076a87cfcdeae2e9b0a532cbf6"
+}

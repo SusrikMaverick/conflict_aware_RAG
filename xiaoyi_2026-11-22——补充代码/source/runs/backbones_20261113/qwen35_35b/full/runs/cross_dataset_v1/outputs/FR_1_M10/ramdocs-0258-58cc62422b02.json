@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0258-58cc62422b02",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "22 October 1828",
+    "15 July 1835"
+  ],
+  "requests": [
+    {
+      "key": "cf5a0b6222f8da7b15681df7e4a052441dcfb733580b6edb3bddd68d916b9a6a",
+      "usage": {
+        "prompt_tokens": 6002,
+        "total_tokens": 6392,
+        "completion_tokens": 390,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 65.19161335751414,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "cf5a0b6222f8da7b15681df7e4a052441dcfb733580b6edb3bddd68d916b9a6a",
+      "text": "{\n  \"accepted_answers\": [\n    \"22 October 1828\",\n    \"15 July 1835\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Edmund Brockman'. The source documents contain conflicting birth dates for the specific entity 'Edmund Ralph Brockman' (the Australian politician): Document 1 (D1S1), Document 2 (D2S1), and Document 3 (D3S3) state '22 October 1828', while Document 4 (D4S3) and Document 5 (D5S1) state '15 July 1835'. Both dates are explicitly linked to the full name 'Edmund Ralph Brockman' in the text, representing a direct contradiction within the provided corpus regarding the same referent. Document 6 and 7 refer to 'Edmund Vernon Brockman' (born 28 April 1882), who is a distinct individual (a different person, grandson of the other), and thus '28 April 1882' is an incorrect answer for 'Edmund Brockman' if the context implies the primary politician discussed in the majority of texts, or it represents a namesake. However, since the prompt allows for 'distinct valid namesakes' and the text explicitly distinguishes 'Edmund Ralph Brockman' from 'Edmund Vernon Brockman', the two dates for Ralph are the primary conflict. Given the instruction to preserve valid referents and not silently equate competing assertions, both dates found for 'Edmund Ralph Brockman' are retained as the answer set for that specific name, acknowledging the data inconsistency. '28 April 1882' is excluded as it belongs to 'Edmund Vernon Brockman', a different person mentioned in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0258-58cc62422b02.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "22 October 1828",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 July 1835",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "28 April 1882",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "22 October 1828",
+      "15 July 1835"
+    ],
+    "explanation": "The question asks for the birth date of 'Edmund Brockman'. The source documents contain conflicting birth dates for the specific entity 'Edmund Ralph Brockman' (the Australian politician): Document 1 (D1S1), Document 2 (D2S1), and Document 3 (D3S3) state '22 October 1828', while Document 4 (D4S3) and Document 5 (D5S1) state '15 July 1835'. Both dates are explicitly linked to the full name 'Edmund Ralph Brockman' in the text, representing a direct contradiction within the provided corpus regarding the same referent. Document 6 and 7 refer to 'Edmund Vernon Brockman' (born 28 April 1882), who is a distinct individual (a different person, grandson of the other), and thus '28 April 1882' is an incorrect answer for 'Edmund Brockman' if the context implies the primary politician discussed in the majority of texts, or it represents a namesake. However, since the prompt allows for 'distinct valid namesakes' and the text explicitly distinguishes 'Edmund Ralph Brockman' from 'Edmund Vernon Brockman', the two dates for Ralph are the primary conflict. Given the instruction to preserve valid referents and not silently equate competing assertions, both dates found for 'Edmund Ralph Brockman' are retained as the answer set for that specific name, acknowledging the data inconsistency. '28 April 1882' is excluded as it belongs to 'Edmund Vernon Brockman', a different person mentioned in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "5dbb929c6e7f4aeccccdf26216f56f324698403ce02dc71cb3fc2aa1dccb2c29"
+}

@@ -1,0 +1,91 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "6da8e08d55a900ab59754772eb8da1c4fcae2ec00d346d1a48cc762b036963fa",
+  "input": {
+    "question_id": "rgb-0074",
+    "question": "Which actor won Best Actor at the 92nd Academy Awards Ceremony?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "The 92nd Academy Awards | 2020 ... Casey Affleck wins Best Actor ... Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0074",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Casey Affleck"
+    ],
+    "citations": [
+      {
+        "answer": "Casey Affleck",
+        "doc_id": "d3",
+        "quote": "The 92nd Academy Awards | 2020 ... Casey Affleck wins Best Actor ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Casey Affleck",
+        "entity": "Casey Affleck",
+        "scope": "The 92nd Academy Awards Ceremony",
+        "claim": "Casey Affleck won Best Actor at the 92nd Academy Awards Ceremony.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "The 92nd Academy Awards | 2020 ... Casey Affleck wins Best Actor ...",
+        "span_start": 0,
+        "span_end": 68,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 34,
+        "text": "The 92nd Academy Awards | 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 35,
+        "end": 68,
+        "text": "Casey Affleck wins Best Actor ..."
+      },
+      {
+        "id": "s2",
+        "start": 69,
+        "end": 158,
+        "text": "Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "bb8704a675b4f0664c388725433ad76f6455a57cd6e2ed0bb29c1dd1ed09875b",
+        "usage": {
+          "prompt_tokens": 319,
+          "total_tokens": 388,
+          "completion_tokens": 69,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 28.651958864182234,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

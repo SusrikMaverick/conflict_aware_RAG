@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0028",
+  "method": "evidence_map_memory",
+  "input_sha256": "0b1bb6865914722f33754d601ff99a4ec17af3e1634f79f45d72d02b7a4b3661",
+  "accepted_answers": [
+    "NCAA Division I",
+    "Israeli Premier League"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Eric Spokas",
+        "sense": "his time at Northeastern",
+        "answers": [
+          "NCAA Division I",
+          "Israeli Premier League"
+        ],
+        "date": "1995 to 2002",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Eric Spokas, his time at Northeastern: NCAA Division I / Israeli Premier League (as of 1995 to 2002) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4708,
+    "completion_tokens": 471,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 869,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1098,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 530,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1343,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 556,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Eric Spokas",
+              "sense": "not stated",
+              "answer": "NCAA Division I",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Spokas played college basketball for Northeastern University from 1991 to 1993. During his time at Northeastern, he was a member of the university's men's basketball team, which competes in the NCAA Division I.",
+              "claim": "Eric Spokas played in the NCAA Division I men's basketball league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Eric Spokas",
+              "sense": "not stated",
+              "answer": "Israeli Premier League",
+              "as_of": "1995 to 2002",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Eric Spokas is a retired American-Israeli professional footballer who played in the Israeli Premier League from 1995 to 2002.",
+              "claim": "Eric Spokas played in the Israeli Premier League.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Eric Spokas",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "NCAA Division I",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Eric Spokas",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Israeli Premier League",
+            "date": "1995 to 2002",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Eric Spokas",
+          "sense": "not stated",
+          "answers": [
+            "NCAA Division I",
+            "Israeli Premier League"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "During his time at Northeastern, Spokas was a member of the university's men's basketball team, which competes in the NCAA Division I.",
+          "labels": {
+            "A": "his time at Northeastern",
+            "B": "from 1995 to 2002"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "NCAA Division I",
+          "b": "Israeli Premier League",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different periods of Eric Spokas's career."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

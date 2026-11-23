@@ -1,0 +1,27 @@
+[project]
+name = "conflict_aware_rag"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["openai>=1.40"]
+
+[project.optional-dependencies]
+serve = ["vllm==0.32.0"]
+hf = ["transformers", "bitsandbytes", "accelerate"]  # the "hf" backend: NF4, as in the MADAM-RAG paper
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.basedpyright]
+venvPath = "/scratch/smukhe61/conflict_aware_RAG/envs"  # the conda env from the README, so the editor sees openai
+venv = "vllm"
+typeCheckingMode = "standard"  # the default "recommended" mode flags every unannotated line
+
+[tool.ruff.lint]
+ignore = [
+    "SIM115",   # LLM keeps its log file open on purpose; vLLM writes to it
+    "PLW1509",  # preexec_fn runs before any threads exist
+]

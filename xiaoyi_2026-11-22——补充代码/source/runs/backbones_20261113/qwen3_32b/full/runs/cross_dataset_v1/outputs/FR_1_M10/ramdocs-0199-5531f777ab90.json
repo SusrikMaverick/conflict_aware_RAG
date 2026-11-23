@@ -1,0 +1,81 @@
+{
+  "question_id": "ramdocs-0199-5531f777ab90",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "37,935",
+    "12,345",
+    "8,400"
+  ],
+  "requests": [
+    {
+      "key": "55ad6606dc11b510b0863579f5dd940ac7f57a9a358b1473a01ed0b51c9793a8",
+      "usage": {
+        "prompt_tokens": 3964,
+        "total_tokens": 4190,
+        "completion_tokens": 226,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 81.5406648889184,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "55ad6606dc11b510b0863579f5dd940ac7f57a9a358b1473a01ed0b51c9793a8",
+      "text": "{\n  \"accepted_answers\": [\n    \"37,935\",\n    \"12,345\",\n    \"8,400\"\n  ],\n  \"explanation\": \"The question asks for the estimated population of 'Hajin/Nor Hachn'. The sources provide conflicting values for 'Hajin' in the 2004 census: 37,935 (D1S3) and 12,345 (D3S3). These are distinct valid answers for the same referent, depending on the source. For 'Nor Hachn', the 2016 official estimate is 8,400 (D4S4). The subdistrict population (97,970) refers to a broader area and is not the direct answer to the question about the city/town itself. Candidate C4 (9,307) is from D4S3 (2011 census), but it conflicts with the more recent 2016 estimate and is not selected.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0199-5531f777ab90.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0199-5531f777ab90.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "37,935",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "12,345",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "8,400",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "97,970",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "9,307",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "37,935",
+      "12,345",
+      "8,400"
+    ],
+    "explanation": "The question asks for the estimated population of 'Hajin/Nor Hachn'. The sources provide conflicting values for 'Hajin' in the 2004 census: 37,935 (D1S3) and 12,345 (D3S3). These are distinct valid answers for the same referent, depending on the source. For 'Nor Hachn', the 2016 official estimate is 8,400 (D4S4). The subdistrict population (97,970) refers to a broader area and is not the direct answer to the question about the city/town itself. Candidate C4 (9,307) is from D4S3 (2011 census), but it conflicts with the more recent 2016 estimate and is not selected."
+  },
+  "diagnostics": {},
+  "row_sha256": "28a28254063eda59f3f600d013a8691f55aee7ca501999b0291f9d834ee5c4a5"
+}

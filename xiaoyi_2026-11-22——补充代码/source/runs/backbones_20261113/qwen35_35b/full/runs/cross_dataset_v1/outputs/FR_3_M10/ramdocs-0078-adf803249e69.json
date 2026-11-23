@@ -1,0 +1,68 @@
+{
+  "question_id": "ramdocs-0078-adf803249e69",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1904"
+  ],
+  "requests": [
+    {
+      "key": "6b7ffdf76fc6a287cb992138fa70614362187cbd732f1181a4ab14b92743d385",
+      "usage": {
+        "prompt_tokens": 1391,
+        "total_tokens": 1585,
+        "completion_tokens": 194,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 41.476460460573435,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6b7ffdf76fc6a287cb992138fa70614362187cbd732f1181a4ab14b92743d385",
+      "text": "{\n  \"accepted_answers\": [\n    \"1904\"\n  ],\n  \"explanation\": \"The question asks 'When did Tom Fisher play', which refers to the duration or period of his career. Source D1S3 explicitly states he 'played one season... in 1904'. While D1S4 mentions his debut date ('April 17, 1904') and D1S5 mentions a specific win date ('May 10, 1904'), these are single events within the season, not the answer to when he played (the season/year). The slot hint 'other' suggests looking beyond the primary entity name, but the core answer remains the year of play. The previous inclusion of specific dates (April 17, 1904) is incorrect as they represent a debut event, not the general period of play.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0078-adf803249e69.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0078-adf803249e69.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1904",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "April 17, 1904",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "May 10, 1904",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1904"
+    ],
+    "explanation": "The question asks 'When did Tom Fisher play', which refers to the duration or period of his career. Source D1S3 explicitly states he 'played one season... in 1904'. While D1S4 mentions his debut date ('April 17, 1904') and D1S5 mentions a specific win date ('May 10, 1904'), these are single events within the season, not the answer to when he played (the season/year). The slot hint 'other' suggests looking beyond the primary entity name, but the core answer remains the year of play. The previous inclusion of specific dates (April 17, 1904) is incorrect as they represent a debut event, not the general period of play."
+  },
+  "diagnostics": {},
+  "row_sha256": "f40e3d0a76421127d5e29676ecbba7d76544e83e1e9c5e902f2f90a2a62819df"
+}

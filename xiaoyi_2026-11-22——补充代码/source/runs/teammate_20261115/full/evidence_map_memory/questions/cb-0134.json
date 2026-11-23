@@ -1,0 +1,227 @@
+{
+  "question_id": "cb-0134",
+  "method": "evidence_map_memory",
+  "input_sha256": "811e24a69834ba4d317fd8574b7f183f35217d10cb486b868a00fd680b10ed77",
+  "accepted_answers": [
+    "European Commission",
+    "Moldova State University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ghenadie Sîrbu",
+        "sense": "European Commission (2015)",
+        "answers": [
+          "European Commission"
+        ],
+        "date": "2015",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ghenadie Sîrbu",
+        "sense": "Moldova State University (not specified)",
+        "answers": [
+          "Moldova State University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ghenadie Sîrbu, European Commission (2015): European Commission (as of 2015) [1]. Basis: one source.\nGhenadie Sîrbu, Moldova State University (not specified): Moldova State University [2]. Basis: one source.",
+    "ask_back": "Did you mean Ghenadie Sîrbu (European Commission (2015)) or Ghenadie Sîrbu (Moldova State University (not specified))?",
+    "calls": 7,
+    "prompt_tokens": 4629,
+    "completion_tokens": 515,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 168,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 881,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1302,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 534,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Ghenadie Sîrbu's employer in the military",
+          "answer": "Romanian Army",
+          "confidence": 70
+        },
+        {
+          "about": "Ghenadie Sîrbu's employer in politics",
+          "answer": "None known",
+          "confidence": 50
+        },
+        {
+          "about": "Ghenadie Sîrbu's employer in business",
+          "answer": "None known",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ghenadie Sîrbu",
+              "sense": "not stated",
+              "answer": "European Commission",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Sîrbu, a Moldovan-born researcher, joined the European Commission in 2015, bringing with him a wealth of experience in renewable energy research.\"",
+              "claim": "Ghenadie Sîrbu worked for the European Commission starting in 2015.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ghenadie Sîrbu",
+              "sense": "not stated",
+              "answer": "Moldova State University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "One of his notable affiliations is with Moldova State University, where he worked as a researcher.",
+              "claim": "Ghenadie Sîrbu worked for Moldova State University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ghenadie Sîrbu",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "European Commission",
+            "date": "2015",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ghenadie Sîrbu",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Moldova State University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ghenadie Sîrbu",
+          "sense": "not stated",
+          "answers": [
+            "European Commission",
+            "Moldova State University"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As a leading expert in the field, Sîrbu's work has been instrumental in shaping the European Commission's energy policy, earning him widespread recognition within the scientific community.",
+          "labels": {
+            "A": "European Commission (2015)",
+            "B": "Moldova State University (not specified)"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "European Commission",
+          "b": "Moldova State University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations where Ghenadie Sîrbu worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

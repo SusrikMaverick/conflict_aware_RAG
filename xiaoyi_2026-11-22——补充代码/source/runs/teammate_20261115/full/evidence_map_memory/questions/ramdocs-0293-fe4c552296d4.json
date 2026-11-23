@@ -1,0 +1,190 @@
+{
+  "question_id": "ramdocs-0293-fe4c552296d4",
+  "method": "evidence_map_memory",
+  "input_sha256": "7c73d6f81b4cef72b82a2ac077322abcde822e5e0ecae2ec3b72fe6ebb36c7c2",
+  "accepted_answers": [
+    "rock",
+    "comedy-drama"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Hot Rock (Sleater-Kinney album)",
+        "sense": "not stated",
+        "answers": [
+          "rock"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Hot Rock (Westlake novel)",
+        "sense": "not stated",
+        "answers": [
+          "comedy-drama"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "The Hot Rock (Sleater-Kinney album): rock [1]. Basis: one source.\nThe Hot Rock (Westlake novel): comedy-drama [2]. Basis: one source.",
+    "ask_back": "Did you mean The Hot Rock (Sleater-Kinney album) or The Hot Rock (Westlake novel)?",
+    "calls": 5,
+    "prompt_tokens": 2292,
+    "completion_tokens": 413,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 555,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "book title",
+          "answer": "science fiction",
+          "confidence": 80
+        },
+        {
+          "about": "movie title",
+          "answer": "adventure",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Hot Rock",
+              "sense": "not stated",
+              "answer": "rock",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Hot Rock is the fourth studio album by the American rock band Sleater-Kinney, released on February 23, 1999, by Kill Rock Stars.\", \"It was produced by Roger Moutenot and recorded at the Avast! recording studio in Seattle, Washington in July 1998.\"",
+              "claim": "The Hot Rock is a rock album.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Hot Rock",
+              "sense": "not stated",
+              "answer": "comedy-drama",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Hot Rock is a 1972 American comedy-drama caper film directed by Peter Yates from a screenplay by William Goldman, based on Donald E. Westlake's novel of the same name, which introduced his long-running John Dortmunder character.\"",
+              "claim": "The Hot Rock is a comedy-drama.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Hot Rock (Sleater-Kinney album)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "rock",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Hot Rock (Westlake novel)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "comedy-drama",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "rock",
+          "b": "comedy-drama",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

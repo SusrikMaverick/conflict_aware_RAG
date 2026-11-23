@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0243-1783b512afda",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Greg Koch",
+    "Joey Cape"
+  ],
+  "requests": [
+    {
+      "key": "4ca560160e69d30ee31886e371e4a626de355a5bfa0c8f622d9ec8b850eed355",
+      "usage": {
+        "prompt_tokens": 1914,
+        "total_tokens": 2076,
+        "completion_tokens": 162,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 80.73407496511936,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4ca560160e69d30ee31886e371e4a626de355a5bfa0c8f622d9ec8b850eed355",
+      "text": "{\n  \"accepted_answers\": [\n    \"Greg Koch\",\n    \"Joey Cape\"\n  ],\n  \"explanation\": \"Two distinct artists are named as creators of albums titled \\\"Plays Well with Others\\\":\\n\\n- **Greg Koch** is identified in D2S1 as the artist of *Plays Well with Others*, a 2013 studio album.\\n- **Joey Cape** is identified in D1S1 as the artist of *Doesn't Play Well with Others*, a 2011 solo album.\\n\\nBoth are valid referents for the same album title, and the question does not specify disambiguation criteria. The R5 set already includes both, and neither is invalidated by the other due to distinct referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0243-1783b512afda.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0243-1783b512afda.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Greg Koch",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Joey Cape",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Greg Koch",
+      "Joey Cape"
+    ],
+    "explanation": "Two distinct artists are named as creators of albums titled \"Plays Well with Others\":\n\n- **Greg Koch** is identified in D2S1 as the artist of *Plays Well with Others*, a 2013 studio album.\n- **Joey Cape** is identified in D1S1 as the artist of *Doesn't Play Well with Others*, a 2011 solo album.\n\nBoth are valid referents for the same album title, and the question does not specify disambiguation criteria. The R5 set already includes both, and neither is invalidated by the other due to distinct referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "0fd6eaf40d34e7deaaa0ea7a4e55a172f69f5a5c95ad8f8d2d78c5a2dbd0c554"
+}

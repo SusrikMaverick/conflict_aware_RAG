@@ -1,0 +1,229 @@
+{
+  "question_id": "ramdocs-0059-1eaa521dbd55",
+  "method": "evidence_map",
+  "input_sha256": "0031b7bf5b487a5e51497599d9d80b76c650f9806bcf3b4cd4402695be89c8dd",
+  "accepted_answers": [
+    "New York City",
+    "Town of Oregon"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Red Brick School",
+        "sense": "The location of the Red Brick School when it was added to the National Register of Historic Places in 1998.",
+        "answers": [
+          "New York City"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Red Brick School",
+        "sense": "The current location of the Red Brick School.",
+        "answers": [
+          "Town of Oregon"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Red Brick School, The location of the Red Brick School when it was added to the National Register of Historic Places in 1998.: New York City [2]. Basis: one source.\nRed Brick School, The current location of the Red Brick School.: Town of Oregon [4]. Basis: one source.",
+    "ask_back": "Did you mean Red Brick School (The location of the Red Brick School when it was added to the National Register of Historic Places in 1998.) or Red Brick School (The current location of the Red Brick School.)?",
+    "calls": 8,
+    "prompt_tokens": 4626,
+    "completion_tokens": 418,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 684,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 688,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 477,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 714,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 524,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Red Brick School",
+              "sense": "not stated",
+              "answer": "New York City",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Red Brick, located in New York City, was added to the National Register of Historic Places in 1998 by concerned residents who felt the building was in danger of destruction.",
+              "claim": "Red Brick School is located in New York City.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 4,
+              "entity": "Red Brick School",
+              "sense": "not stated",
+              "answer": "Town of Oregon",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "located mostly within the Town of Oregon.",
+              "claim": "The Red Brick School is located mostly within the Town of Oregon.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Red Brick School",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "New York City",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Red Brick School",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Town of Oregon",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Red Brick School",
+          "sense": "not stated",
+          "answers": [
+            "New York City",
+            "Town of Oregon"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Red Brick, located in New York City, was added to the National Register of Historic Places in 1998 by concerned residents who felt the building was in danger of destruction.",
+          "labels": {
+            "A": "The location of the Red Brick School when it was added to the National Register of Historic Places in 1998.",
+            "B": "The current location of the Red Brick School."
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "New York City",
+          "b": "Town of Oregon",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different locations for the Red Brick School without clear indication of the current status or time frame."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

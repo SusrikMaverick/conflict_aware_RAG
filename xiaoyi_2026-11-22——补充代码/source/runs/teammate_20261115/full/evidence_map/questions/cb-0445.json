@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0445",
+  "method": "evidence_map",
+  "input_sha256": "11c582c19e0b620f0d337ed282fc34e6be96f310a2d536580be9798e2e7f6529",
+  "accepted_answers": [
+    "United States of America"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Human Prey",
+        "sense": "not stated",
+        "answers": [
+          "United States of America"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Belgium"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Human Prey: United States of America [2]. Basis: forced: the model's reading of the documents. Outweighed: Belgium [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5354,
+    "completion_tokens": 329,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1036,
+          "completion_tokens": 90,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 906,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 465,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1257,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 443,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1099,
+          "completion_tokens": 55,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Human Prey",
+              "sense": "not stated",
+              "answer": "Belgium",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Belgian Thriller \"Human Prey\" Takes the World by Storm\"",
+              "claim": "Human Prey is from Belgium.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Human Prey",
+              "sense": "not stated",
+              "answer": "United States of America",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Human Prey is a television series that originated from the **United States of America**.",
+              "claim": "Human Prey is from the United States of America.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Human Prey",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Belgium",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Human Prey",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United States of America",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Human Prey",
+          "sense": "not stated",
+          "answers": [
+            "Belgium",
+            "United States of America"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Belgium",
+          "b": "United States of America",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the origin of Human Prey."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Human Prey",
+          "sense": "not stated",
+          "answers": [
+            "Belgium",
+            "United States of America"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Belgium": 1,
+                "United States of America": 1
+              }
+            }
+          ],
+          "stands": "United States of America",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

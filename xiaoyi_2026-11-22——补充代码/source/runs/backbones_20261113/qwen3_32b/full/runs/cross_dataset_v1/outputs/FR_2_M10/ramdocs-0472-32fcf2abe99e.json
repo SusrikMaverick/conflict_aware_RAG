@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0472-32fcf2abe99e",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 November 1865",
+    "1876",
+    "19 April 1876"
+  ],
+  "requests": [
+    {
+      "key": "99886e7e3bcb55cfeb45c77539d5c57243ac849d21de83c1483da29890f78832",
+      "usage": {
+        "prompt_tokens": 3933,
+        "total_tokens": 4176,
+        "completion_tokens": 243,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 121.25015961378813,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "99886e7e3bcb55cfeb45c77539d5c57243ac849d21de83c1483da29890f78832",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 November 1865\",\n    \"1876\",\n    \"19 April 1876\"\n  ],\n  \"explanation\": \"The question asks 'When did Shoreditch station open?' and the provided sources distinguish between multiple distinct entities named 'Shoreditch station'. The three accepted answers correspond to different historical railway stations:\\n\\n1. **1 November 1865** refers to the opening of *Shoreditch railway station* on the North London Railway (D1S5).\\n2. **1876** refers to the original opening of *Shoreditch tube station* by the East London Railway (D2S2).\\n3. **19 April 1876** provides a more specific date for the opening of the same *Shoreditch tube station*, as noted in D4S3.\\n\\nEach of these is a valid and distinct answer based on the original documents. The candidate '27 April 2010' refers to the opening of *Shoreditch High Street station*, a separate entity, and is correctly excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0472-32fcf2abe99e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 November 1865",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "19 April 1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "27 April 2010",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 November 1865",
+      "1876",
+      "19 April 1876"
+    ],
+    "explanation": "The question asks 'When did Shoreditch station open?' and the provided sources distinguish between multiple distinct entities named 'Shoreditch station'. The three accepted answers correspond to different historical railway stations:\n\n1. **1 November 1865** refers to the opening of *Shoreditch railway station* on the North London Railway (D1S5).\n2. **1876** refers to the original opening of *Shoreditch tube station* by the East London Railway (D2S2).\n3. **19 April 1876** provides a more specific date for the opening of the same *Shoreditch tube station*, as noted in D4S3.\n\nEach of these is a valid and distinct answer based on the original documents. The candidate '27 April 2010' refers to the opening of *Shoreditch High Street station*, a separate entity, and is correctly excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "7e56983a91a72df199253ffc6b3ad89b823f0c71f3d0b905d803996e0374d881"
+}

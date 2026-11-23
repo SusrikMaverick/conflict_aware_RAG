@@ -1,0 +1,205 @@
+{
+  "question_id": "cb-0280",
+  "method": "evidence_map",
+  "input_sha256": "c614bc4664b3f72cffc9a0306bca97e59c4c20324bb9aa1e0cd17c87c817b968",
+  "accepted_answers": [
+    "USL Championship",
+    "NCAA Division I men's basketball league"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "James Karnik",
+        "sense": "professional soccer",
+        "answers": [
+          "USL Championship"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "James Karnik",
+        "sense": "college basketball",
+        "answers": [
+          "NCAA Division I men's basketball league"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "James Karnik, professional soccer: USL Championship [1]. Basis: one source.\nJames Karnik, college basketball: NCAA Division I men's basketball league [2]. Basis: one source.",
+    "ask_back": "Did you mean James Karnik (professional soccer) or James Karnik (college basketball)?",
+    "calls": 6,
+    "prompt_tokens": 4514,
+    "completion_tokens": 389,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 974,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1015,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 510,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1354,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 512,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "James Karnik",
+              "sense": "not stated",
+              "answer": "USL Championship",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "James Karnik is an American professional soccer player who currently plays in the USL Championship league.",
+              "claim": "James Karnik currently plays in the USL Championship league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "James Karnik",
+              "sense": "not stated",
+              "answer": "NCAA Division I men's basketball league",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Karnik played college basketball for Lehigh University from 2018 to 2020. During his time at Lehigh, he was a member of the Mountain Hawks men's basketball team, which competes in the NCAA Division I Patriot League.",
+              "claim": "James Karnik plays in the NCAA Division I men's basketball league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "James Karnik",
+            "sense": "soccer player",
+            "sense_unknown": false,
+            "answer": "USL Championship",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "James Karnik",
+            "sense": "soccer player",
+            "sense_unknown": true,
+            "answer": "NCAA Division I men's basketball league",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "James Karnik",
+          "sense": "soccer player",
+          "answers": [
+            "USL Championship",
+            "NCAA Division I men's basketball league"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "After his college basketball career, Karnik made the unexpected decision to pursue a career in professional soccer.",
+          "labels": {
+            "A": "professional soccer",
+            "B": "college basketball"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "USL Championship",
+          "b": "NCAA Division I men's basketball league",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different activities of James Karnik."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

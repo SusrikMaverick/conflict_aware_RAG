@@ -1,0 +1,88 @@
+{
+  "question_id": "ramdocs-0369-a4f70f2943f4",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "c. 1627",
+    "16 March 1590",
+    "27 April 1699",
+    "1577"
+  ],
+  "requests": [
+    {
+      "key": "6f06d596f49d141e443f1e6c6d4c4e1da7d252f3e858a89d0ded4b135f71691d",
+      "usage": {
+        "prompt_tokens": 6376,
+        "total_tokens": 6842,
+        "completion_tokens": 466,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 76.13931384682655,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6f06d596f49d141e443f1e6c6d4c4e1da7d252f3e858a89d0ded4b135f71691d",
+      "text": "{\n  \"accepted_answers\": [\n    \"c. 1627\",\n    \"16 March 1590\",\n    \"27 April 1699\",\n    \"1577\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'Thomas Belasyse'. The provided documents contain conflicting information because they refer to four distinct historical individuals with the same name (namesakes). \\n\\n1. **Thomas Belasyse, 1st Earl Fauconberg (first creation)**: Document D1 (D1S1-D1S2) states he was born 'c. 1627' and died in 1700. This matches candidate C0.\\n2. **Thomas Belasyse, 1st Earl of Fauconberg (baptism record)**: Document D2 (D2S2) explicitly states 'Thomas Belasyse, 1st Earl of Fauconberg was baptised on 16 March 1590'. This matches candidate C1. While the title in D2 is slightly ambiguous regarding the specific earldom creation, the date is distinct from the others.\\n3. **Thomas Belasyse, 1st Earl Fauconberg (second creation)**: Document D3 (D3S1), D4, and D5 state he was born '27 April 1699' and died in 1774. This matches candidate C2.\\n4. **Thomas Belasyse, 1st Viscount Fauconberg**: Document D6 (D6S2) states he was born in '1577' and died in 1653. This matches candidate C3.\\n\\nCandidates C4 (27 September 1604) and C5 (14 June 1555) are rejected as they refer to other ancestors (likely his father or grandfather mentioned in D7) and not the primary subject 'Thomas Belasyse' in the context of the main biographical entries provided for the named titles. The instruction requires preserving all valid referents and complementary answers where distinct namesakes exist.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0369-a4f70f2943f4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "c. 1627",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "16 March 1590",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "27 April 1699",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1577",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "27 September 1604",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "14 June 1555",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "c. 1627",
+      "16 March 1590",
+      "27 April 1699",
+      "1577"
+    ],
+    "explanation": "The query asks for the birth date of 'Thomas Belasyse'. The provided documents contain conflicting information because they refer to four distinct historical individuals with the same name (namesakes). \n\n1. **Thomas Belasyse, 1st Earl Fauconberg (first creation)**: Document D1 (D1S1-D1S2) states he was born 'c. 1627' and died in 1700. This matches candidate C0.\n2. **Thomas Belasyse, 1st Earl of Fauconberg (baptism record)**: Document D2 (D2S2) explicitly states 'Thomas Belasyse, 1st Earl of Fauconberg was baptised on 16 March 1590'. This matches candidate C1. While the title in D2 is slightly ambiguous regarding the specific earldom creation, the date is distinct from the others.\n3. **Thomas Belasyse, 1st Earl Fauconberg (second creation)**: Document D3 (D3S1), D4, and D5 state he was born '27 April 1699' and died in 1774. This matches candidate C2.\n4. **Thomas Belasyse, 1st Viscount Fauconberg**: Document D6 (D6S2) states he was born in '1577' and died in 1653. This matches candidate C3.\n\nCandidates C4 (27 September 1604) and C5 (14 June 1555) are rejected as they refer to other ancestors (likely his father or grandfather mentioned in D7) and not the primary subject 'Thomas Belasyse' in the context of the main biographical entries provided for the named titles. The instruction requires preserving all valid referents and complementary answers where distinct namesakes exist."
+  },
+  "diagnostics": {},
+  "row_sha256": "f009b804041bb36ee4ca0a270c4616327bf771429bc350ceb5ec8ad5c40b072d"
+}

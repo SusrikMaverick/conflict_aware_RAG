@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0408",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Senior Advisor to the President of the United States",
+    "Deputy Prime Minister of Tonga"
+  ],
+  "requests": [
+    {
+      "key": "8915ab3ca9f320716ebb5b47d940df102a862d5f3f52b959bcf9eca8ac216137",
+      "usage": {
+        "prompt_tokens": 2913,
+        "total_tokens": 3097,
+        "completion_tokens": 184,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 74.97748458012938,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8915ab3ca9f320716ebb5b47d940df102a862d5f3f52b959bcf9eca8ac216137",
+      "text": "{\n  \"accepted_answers\": [\n    \"Senior Advisor to the President of the United States\",\n    \"Deputy Prime Minister of Tonga\"\n  ],\n  \"explanation\": \"The question asks what position Samiu Vaipulu currently or formerly holds. Document d1 explicitly states that he is currently serving as 'Senior Advisor to the President of the United States,' while document d2 confirms that he is the current 'Deputy Prime Minister of Tonga.' Both are valid and distinct roles held by the same individual at the same time. The proposed candidate C2 refers to a former position (2014–2019) and is correctly identified as historical, but the question allows for both current and former roles. However, since the question specifically requests positions 'currently or formerly held,' and the two current roles are already included, adding a former role would be redundant unless explicitly requested.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0408.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0408.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Senior Advisor to the President of the United States",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Deputy Prime Minister of Tonga",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Minister of Agriculture, Food, Forests, and Fisheries of Tonga (2014-2019)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Senior Advisor to the President of the United States",
+      "Deputy Prime Minister of Tonga"
+    ],
+    "explanation": "The question asks what position Samiu Vaipulu currently or formerly holds. Document d1 explicitly states that he is currently serving as 'Senior Advisor to the President of the United States,' while document d2 confirms that he is the current 'Deputy Prime Minister of Tonga.' Both are valid and distinct roles held by the same individual at the same time. The proposed candidate C2 refers to a former position (2014–2019) and is correctly identified as historical, but the question allows for both current and former roles. However, since the question specifically requests positions 'currently or formerly held,' and the two current roles are already included, adding a former role would be redundant unless explicitly requested."
+  },
+  "diagnostics": {},
+  "row_sha256": "408d62b54cd890a144a17804e365f34e7e6ac2711dfa01dd2687996f87d3cbba"
+}

@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0453-f7de9acfbd96",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1878",
+    "around 1797",
+    "early 1970s"
+  ],
+  "requests": [
+    {
+      "key": "d7ca82e16ab2cc77b22e259991f78a9d07fc220c3347372d95c0756d0e38004e",
+      "usage": {
+        "prompt_tokens": 5801,
+        "total_tokens": 6261,
+        "completion_tokens": 460,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 74.79463659599423,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d7ca82e16ab2cc77b22e259991f78a9d07fc220c3347372d95c0756d0e38004e",
+      "text": "{\n  \"accepted_answers\": [\n    \"1878\",\n    \"around 1797\",\n    \"early 1970s\"\n  ],\n  \"explanation\": \"The question asks for the establishment date of 'Gibraltar Barracks'. The source documents describe three distinct military installations sharing this name in different locations, which explains the conflicting dates found in the data:\\n\\n1. **Bury St Edmunds**: Documents D1, D2, and D3 explicitly state 'Gibraltar Barracks' in Bury St Edmunds was opened/built in **1878** (e.g., D1S2: 'The barracks were opened in 1878'; D3S1: 'Built 1878').\\n2. **Northampton**: Documents D5 and D6 describe 'Gibraltar Barracks' in Northampton. D5S2 states permanent barracks were first established there 'in around 1797'. D6S1 confirms 'Built 1797'. While D5 mentions renaming to 'Gibraltar Barracks' in 1873, the establishment of the permanent barracks at this site is cited as 1797.\\n3. **Minley**: Document D7 describes 'Gibraltar Barracks' in Minley, stating it was established in the 'early 1970s' (D7S4).\\n\\nThe candidate '1797' (C3) is a specific year derived from the Northampton entry, but the source text (D5S2, D6S2) specifically phrases the date as 'around 1797'. To preserve the exact granularity and phrasing of the source evidence without inventing precision, 'around 1797' is the preferred form over the rounded '1797', though both refer to the same entity. The audits incorrectly flagged the non-Bury St Edmunds dates as 'wrong_argument' or 'same_referent' conflicts, failing to recognize these are distinct valid namesakes (different locations). All three dates correspond to valid, distinct entities named 'Gibraltar Barracks'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0453-f7de9acfbd96.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0453-f7de9acfbd96.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1878",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "around 1797",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "early 1970s",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1797",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1878",
+      "around 1797",
+      "early 1970s"
+    ],
+    "explanation": "The question asks for the establishment date of 'Gibraltar Barracks'. The source documents describe three distinct military installations sharing this name in different locations, which explains the conflicting dates found in the data:\n\n1. **Bury St Edmunds**: Documents D1, D2, and D3 explicitly state 'Gibraltar Barracks' in Bury St Edmunds was opened/built in **1878** (e.g., D1S2: 'The barracks were opened in 1878'; D3S1: 'Built 1878').\n2. **Northampton**: Documents D5 and D6 describe 'Gibraltar Barracks' in Northampton. D5S2 states permanent barracks were first established there 'in around 1797'. D6S1 confirms 'Built 1797'. While D5 mentions renaming to 'Gibraltar Barracks' in 1873, the establishment of the permanent barracks at this site is cited as 1797.\n3. **Minley**: Document D7 describes 'Gibraltar Barracks' in Minley, stating it was established in the 'early 1970s' (D7S4).\n\nThe candidate '1797' (C3) is a specific year derived from the Northampton entry, but the source text (D5S2, D6S2) specifically phrases the date as 'around 1797'. To preserve the exact granularity and phrasing of the source evidence without inventing precision, 'around 1797' is the preferred form over the rounded '1797', though both refer to the same entity. The audits incorrectly flagged the non-Bury St Edmunds dates as 'wrong_argument' or 'same_referent' conflicts, failing to recognize these are distinct valid namesakes (different locations). All three dates correspond to valid, distinct entities named 'Gibraltar Barracks'."
+  },
+  "diagnostics": {},
+  "row_sha256": "a9e9ca7409936aea14b826e423da0b35ef128b81311fd2d3b2729af92ed5690e"
+}

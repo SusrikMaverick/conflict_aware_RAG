@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0148",
+  "method": "evidence_map",
+  "input_sha256": "4e2ef70e1fa567ba50cce6d9a90590a1eebd18b41c5bde4737ec07412ee2887e",
+  "accepted_answers": [
+    "the notable auction of 2018",
+    "a novel application"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Polyamide film laminate",
+        "sense": "the notable auction of 2018",
+        "answers": [
+          "the notable auction of 2018"
+        ],
+        "date": "March 15, 2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Polyamide film laminate",
+        "sense": "the notable auction of 2018",
+        "answers": [
+          "a novel application"
+        ],
+        "date": "2022",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Polyamide film laminate, the notable auction of 2018: the notable auction of 2018 (as of March 15, 2018) [1]. Basis: one source.\nPolyamide film laminate, the notable auction of 2018: a novel application (as of 2022) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4938,
+    "completion_tokens": 377,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1092,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 543,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1555,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 535,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Polyamide film laminate",
+              "sense": "the notable auction of 2018",
+              "answer": "the notable auction of 2018",
+              "as_of": "March 15, 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Polyamide film laminate, a type of multilayer film structure, played a crucial role in the notable auction event of 2018, which took place at the prestigious Christie's auction house in New York City.",
+              "claim": "Polyamide film laminate played a crucial role in the notable auction event of 2018.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "polyamide film laminate",
+              "sense": "not stated",
+              "answer": "a novel application",
+              "as_of": "2022",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The patent in question, numbered 11351763, was a complex and highly technical document that detailed the use of polyamide film laminate in a novel application.",
+              "claim": "Polyamide film laminate was used in a novel application.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Polyamide film laminate",
+            "sense": "the notable auction of 2018",
+            "sense_unknown": true,
+            "answer": "a novel application",
+            "date": "2022",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Polyamide film laminate",
+            "sense": "the notable auction of 2018",
+            "sense_unknown": false,
+            "answer": "the notable auction of 2018",
+            "date": "March 15, 2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Polyamide film laminate",
+          "sense": "the notable auction of 2018",
+          "answers": [
+            "a novel application",
+            "the notable auction of 2018"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "a novel application",
+          "b": "the notable auction of 2018",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving Polyamide film laminate."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

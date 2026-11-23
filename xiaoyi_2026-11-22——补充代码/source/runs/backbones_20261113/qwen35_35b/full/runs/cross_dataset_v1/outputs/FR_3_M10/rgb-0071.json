@@ -1,0 +1,68 @@
+{
+  "question_id": "rgb-0071",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "March 20, 2020"
+  ],
+  "requests": [
+    {
+      "key": "9d41d075dac3edd9b9cbd8c1e7726ce696fa4d263ab13cbe5135ab82b9a89e3c",
+      "usage": {
+        "prompt_tokens": 1332,
+        "total_tokens": 1516,
+        "completion_tokens": 184,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 31.940091762691736,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "9d41d075dac3edd9b9cbd8c1e7726ce696fa4d263ab13cbe5135ab82b9a89e3c",
+      "text": "{\n  \"accepted_answers\": [\n    \"March 20, 2020\"\n  ],\n  \"explanation\": \"Document D2 explicitly states 'The March 20, 2020, release date for New Horizons'. Document D3 lists 'March 13, 2020' immediately followed by '; Country of origin.', indicating this date refers to the country of origin (likely Japan) rather than the global release date, or is a formatting artifact where the date belongs to the preceding field label which is missing or implied. Document D1 contains a factual error ('March 2, 2010') which is contradicted by the correct year in D2 and D3. The most accurate and directly supported answer for the general release date is March 20, 2020.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0071.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0071.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "March 20, 2020",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "March 13, 2020",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "March 2, 2010",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "March 20, 2020"
+    ],
+    "explanation": "Document D2 explicitly states 'The March 20, 2020, release date for New Horizons'. Document D3 lists 'March 13, 2020' immediately followed by '; Country of origin.', indicating this date refers to the country of origin (likely Japan) rather than the global release date, or is a formatting artifact where the date belongs to the preceding field label which is missing or implied. Document D1 contains a factual error ('March 2, 2010') which is contradicted by the correct year in D2 and D3. The most accurate and directly supported answer for the general release date is March 20, 2020."
+  },
+  "diagnostics": {},
+  "row_sha256": "e051972e3569889a9e38ff02ab12229779349b3a727b375498aa82d10574e8ef"
+}

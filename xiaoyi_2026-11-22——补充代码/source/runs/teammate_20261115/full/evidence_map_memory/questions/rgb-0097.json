@@ -1,0 +1,313 @@
+{
+  "question_id": "rgb-0097",
+  "method": "evidence_map_memory",
+  "input_sha256": "4538b65cd1e597fb3e78e2f937bcd8f0ade2b6dd7b9220e3ac822bb7995b803e",
+  "accepted_answers": [
+    "Collin Morikawa",
+    "reigning champion"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2020 British Open golf tournament",
+        "sense": "won",
+        "answers": [
+          "Collin Morikawa"
+        ],
+        "date": "2020",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Shane Lowry of Ireland",
+        "sense": "2020 British Open",
+        "answers": [
+          "reigning champion"
+        ],
+        "date": "Jul 13, 2021",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "other facts in the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "reigning champion"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "2020 British Open golf tournament, won: Collin Morikawa (as of 2020) [1]. Basis: one source.\nShane Lowry of Ireland, 2020 British Open: reigning champion (as of Jul 13, 2021) [3]. Basis: other facts in the documents. Outweighed: reigning champion [2].",
+    "ask_back": "Did you mean 2020 British Open golf tournament (won) or Shane Lowry of Ireland (2020 British Open)?",
+    "calls": 10,
+    "prompt_tokens": 4785,
+    "completion_tokens": 741,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 613,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 622,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 620,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 615,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 505,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "facts",
+          "prompt_tokens": 481,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "golfer who won",
+          "answer": "Jordan Spieth",
+          "confidence": 85
+        },
+        {
+          "about": "year of the tournament",
+          "answer": "2020",
+          "confidence": 100
+        },
+        {
+          "about": "location of the tournament",
+          "answer": "St Andrews, Scotland",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": "2020",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Collin Morikawa",
+              "sense": "2020 British Open golf tournament",
+              "answer": "Collin Morikawa",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The championship was won by Collin Morikawa with a score of 265, 15-under-par, two strokes ahead of Jordan Spieth.",
+              "claim": "Collin Morikawa won the 2020 British Open golf tournament.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Hideki Matsuyama",
+              "sense": "2020 British Open",
+              "answer": "reigning champion",
+              "as_of": "Jul 13, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2020 British Open was canceled due to the COVID-19 pandemic, so the reigning champion remains Hideki Matsuyama of Japan.",
+              "claim": "The reigning champion of the 2020 British Open is Hideki Matsuyama.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Shane Lowry of Ireland",
+              "sense": "2020 British Open",
+              "answer": "reigning champion",
+              "as_of": "Jul 13, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2020 British Open was canceled due to the COVID-19 pandemic, so the reigning champion remains Shane Lowry of Ireland.",
+              "claim": "The reigning champion of the 2020 British Open is Shane Lowry of Ireland.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2020 British Open golf tournament",
+            "sense": "won",
+            "sense_unknown": false,
+            "answer": "Collin Morikawa",
+            "date": "2020",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Hideki Matsuyama",
+            "sense": "2020 British Open",
+            "sense_unknown": false,
+            "answer": "reigning champion",
+            "date": "Jul 13, 2021",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Shane Lowry of Ireland",
+            "sense": "2020 British Open",
+            "sense_unknown": false,
+            "answer": "reigning champion",
+            "date": "Jul 13, 2021",
+            "cards": [
+              3
+            ],
+            "uncertain": [
+              3
+            ],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Collin Morikawa",
+          "b": "reigning champion",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The first answer provides the winner of the 2020 British Open, while the second answer indicates that the tournament was canceled and refers to the reigning champion before the cancellation."
+        },
+        {
+          "a": "Collin Morikawa",
+          "b": "reigning champion",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer provides the winner of the 2020 British Open, while the second answer indicates that the tournament was canceled and Shane Lowry remained the reigning champion."
+        },
+        {
+          "a": "reigning champion",
+          "b": "reigning champion",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "Both answers state that the 2020 British Open was canceled and the reigning champion remained the same, but they attribute this to different players."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Hideki Matsuyama",
+          "sense": "2020 British Open",
+          "answers": [
+            "reigning champion",
+            "reigning champion"
+          ],
+          "tried": [
+            {
+              "evidence": "other facts",
+              "rules_out": "reigning champion",
+              "document": 1,
+              "quote": "The championship was won by Collin Morikawa with a score of 265, 15-under-par, two strokes ahead of Jordan Spieth. Morikawa became the first player to win on"
+            }
+          ],
+          "stands": "reigning champion",
+          "basis": "other facts in the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 10
+}

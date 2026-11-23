@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "89faaed05f93164534c31c32994f7b0303a585f7a55a50b09c6317a1ffb892e4",
+  "input": {
+    "question_id": "ramdocs-0286-3b46f8a7bf53",
+    "question": "What type of aircraft was involved in Flight 109?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0286-3b46f8a7bf53:d03",
+        "text": "at Khartoum International Airport on 10 June 2008 , approximately at 17:00 UTC , killing 30 of 214 occupants on board . Aircraft The aircraft involved in the accident was an Airbus A310-324 , c/n 548 , tail number ST-ATN , that had its maiden flight on 23 August 1990 as F-WWCV . Equipped with a twin-PW4152 powerplant , it was delivered new to Singapore Airlines on 22 October 1990 and registered 9V-STU . Re-registered VT-EVF , it was delivered to Air India on 10 March 2001 . The aircraft was finally registered ST-ATN , and delivered to Sudan Airways"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0286-3b46f8a7bf53",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Airbus A310-324"
+    ],
+    "citations": [
+      {
+        "answer": "Airbus A310-324",
+        "doc_id": "ramdocs-0286-3b46f8a7bf53:d03",
+        "quote": "Aircraft The aircraft involved in the accident was an Airbus A310-324 , c/n 548 , tail number ST-ATN , that had its maiden flight on 23 August 1990 as F-WWCV ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Airbus A310-324",
+        "entity": "Flight 109",
+        "scope": "aircraft type",
+        "claim": "The aircraft involved in Flight 109 was an Airbus A310-324.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Aircraft The aircraft involved in the accident was an Airbus A310-324 , c/n 548 , tail number ST-ATN , that had its maiden flight on 23 August 1990 as F-WWCV .",
+        "span_start": 120,
+        "span_end": 279,
+        "doc_id": "ramdocs-0286-3b46f8a7bf53:d03",
+        "card_id": "ramdocs-0286-3b46f8a7bf53:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 119,
+        "text": "at Khartoum International Airport on 10 June 2008 , approximately at 17:00 UTC , killing 30 of 214 occupants on board ."
+      },
+      {
+        "id": "s1",
+        "start": 120,
+        "end": 279,
+        "text": "Aircraft The aircraft involved in the accident was an Airbus A310-324 , c/n 548 , tail number ST-ATN , that had its maiden flight on 23 August 1990 as F-WWCV ."
+      },
+      {
+        "id": "s2",
+        "start": 280,
+        "end": 406,
+        "text": "Equipped with a twin-PW4152 powerplant , it was delivered new to Singapore Airlines on 22 October 1990 and registered 9V-STU ."
+      },
+      {
+        "id": "s3",
+        "start": 407,
+        "end": 478,
+        "text": "Re-registered VT-EVF , it was delivered to Air India on 10 March 2001 ."
+      },
+      {
+        "id": "s4",
+        "start": 479,
+        "end": 554,
+        "text": "The aircraft was finally registered ST-ATN , and delivered to Sudan Airways"
+      }
+    ],
+    "requests": [
+      {
+        "key": "3ffc64a265a57365262aaa2a1a466cb862750400f43abd7ae7e65500137451b1",
+        "usage": {
+          "prompt_tokens": 470,
+          "total_tokens": 541,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 85.67847609519958,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

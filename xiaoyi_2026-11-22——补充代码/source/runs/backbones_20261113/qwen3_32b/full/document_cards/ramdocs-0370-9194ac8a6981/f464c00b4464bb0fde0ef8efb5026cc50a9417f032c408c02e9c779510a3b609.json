@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "cdbee52a19a1edb42394a6b20dbf1475d42766c37e991e65ad27ae3c56464a73",
+  "input": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "question": "What is the population of Pittsville?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "text": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S. Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town. The population density was 1,485.7 inhabitants per square mile (573.6/km²). There were 668 housing units at an average density of 397.6 per square mile (153.5/km²). The racial makeup of the town..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "2,500"
+    ],
+    "citations": [
+      {
+        "answer": "2,500",
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "quote": "Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "2,500",
+        "entity": "Pittsville",
+        "scope": "2010",
+        "claim": "The population of Pittsville in 2010 was 2,500.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town.",
+        "span_start": 106,
+        "span_end": 259,
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "card_id": "ramdocs-0370-9194ac8a6981:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 105,
+        "text": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S."
+      },
+      {
+        "id": "s1",
+        "start": 106,
+        "end": 259,
+        "text": "Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town."
+      },
+      {
+        "id": "s2",
+        "start": 260,
+        "end": 335,
+        "text": "The population density was 1,485.7 inhabitants per square mile (573.6/km²)."
+      },
+      {
+        "id": "s3",
+        "start": 336,
+        "end": 424,
+        "text": "There were 668 housing units at an average density of 397.6 per square mile (153.5/km²)."
+      },
+      {
+        "id": "s4",
+        "start": 425,
+        "end": 457,
+        "text": "The racial makeup of the town..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "23db45e31127668dc8044c79203d48c87c415e3baaf45621ddaf6df37f4b8cf9",
+        "usage": {
+          "prompt_tokens": 510,
+          "total_tokens": 573,
+          "completion_tokens": 63,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 135.7285094410181,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

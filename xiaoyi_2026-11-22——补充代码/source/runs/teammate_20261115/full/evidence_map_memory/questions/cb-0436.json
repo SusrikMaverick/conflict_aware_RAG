@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0436",
+  "method": "evidence_map_memory",
+  "input_sha256": "3332dba1c017101a755d3b20ee202c2a85bec9f2326ec1885206c577361ec255",
+  "accepted_answers": [
+    "NCAA Division I men's basketball league",
+    "NCAA Division I"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Aldo Hudson",
+        "sense": "NCAA Division I men's basketball league",
+        "answers": [
+          "NCAA Division I men's basketball league"
+        ],
+        "date": "1998-1999 season",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Aldo Hudson",
+        "sense": "NCAA Division I",
+        "answers": [
+          "NCAA Division I"
+        ],
+        "date": "1998",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Aldo Hudson, NCAA Division I men's basketball league: NCAA Division I men's basketball league (as of 1998-1999 season) [1]. Basis: one source.\nAldo Hudson, NCAA Division I: NCAA Division I (as of 1998) [2]. Basis: one source.",
+    "ask_back": "Did you mean Aldo Hudson (NCAA Division I men's basketball league) or Aldo Hudson (NCAA Division I)?",
+    "calls": 6,
+    "prompt_tokens": 3530,
+    "completion_tokens": 510,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 215,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1031,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 584,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 558,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Soccer player Aldo Hudson",
+          "answer": "USL League One",
+          "confidence": 80
+        },
+        {
+          "about": "Basketball player Aldo Hudson",
+          "answer": "NBA Development League",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Aldo Hudson",
+              "sense": "NCAA Division I men's basketball league",
+              "answer": "NCAA Division I men's basketball league",
+              "as_of": "1998-1999 season",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As the game tipped off, Aldo's quick reflexes and lightning-fast drives to the basket left the Jaguars' defense scrambling to keep up. His impressive performance that night, which included 17 points and 5 assists, was just a glimpse of what was to come. Over the course of the 1998-1999 season, Aldo would go on to establish himself as a force to be reckoned with in the NCAA Division I men's basketball league.",
+              "claim": "Aldo Hudson played in the NCAA Division I men's basketball league during the 1998-1999 season.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Aldo Hudson",
+              "sense": "NCAA Division I women's basketball league",
+              "answer": "NCAA Division I",
+              "as_of": "1998",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Together, they formed a formidable unit, one that had been making waves in the NCAA Division I women's basketball league all season.",
+              "claim": "Aldo Hudson plays in the NCAA Division I women's basketball league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Aldo Hudson",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": false,
+            "answer": "NCAA Division I men's basketball league",
+            "date": "1998-1999 season",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Aldo Hudson",
+            "sense": "NCAA Division I",
+            "sense_unknown": false,
+            "answer": "NCAA Division I",
+            "date": "1998",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "NCAA Division I men's basketball league",
+          "b": "NCAA Division I",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The second answer refers to the NCAA Division I women's basketball league, while the first refers to the NCAA Division I men's basketball league."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

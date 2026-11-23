@@ -1,0 +1,97 @@
+{
+  "question_id": "ramdocs-0223-4c5567fc9fea",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Generalmajor",
+    "Admiral",
+    "lieutenant general"
+  ],
+  "requests": [
+    {
+      "key": "2d1a8c3c7b5d0161be84bda19e22417655e31766ea0fb7013b0ad2380b42d103",
+      "usage": {
+        "prompt_tokens": 4411,
+        "total_tokens": 4707,
+        "completion_tokens": 296,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 59.02313240617514,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2d1a8c3c7b5d0161be84bda19e22417655e31766ea0fb7013b0ad2380b42d103",
+      "text": "{\n  \"accepted_answers\": [\n    \"Generalmajor\",\n    \"Admiral\",\n    \"lieutenant general\"\n  ],\n  \"explanation\": \"The query asks for the military rank of 'General Schultz'. The source documents describe three distinct individuals named Schultz or Paul Schultz with conflicting ranks due to likely entity confusion in the source data (German vs. US military). D1 and D2 explicitly state 'Paul Schultz' reached the rank of 'Generalmajor' (German). D3 states 'Paul Schultz' reached the rank of 'Admiral' (Navy). D4, D5, and D6 describe a US 'Schultz' (likely Roger C. Schultz based on D5S3 context) who held the rank of 'lieutenant general' (and lower ranks like Major general, Brigadier general, etc.). The prompt requires preserving distinct valid referents and not collapsing multi-answer questions. Therefore, the three distinct ranks found for the various 'Schultzes' in the text are retained. Lower ranks mentioned (Major general, Brigadier general, Colonel, Lieutenant colonel) are intermediate steps in the US general's career, but 'lieutenant general' is the highest confirmed rank for that specific individual in the text, matching the 'General' title in the query. The German and Navy ranks are distinct entities/ranks and must be included as separate valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0223-4c5567fc9fea.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Generalmajor",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Admiral",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "lieutenant general",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Major general",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Brigadier general",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Colonel",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Lieutenant colonel",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "General",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Generalmajor",
+      "Admiral",
+      "lieutenant general"
+    ],
+    "explanation": "The query asks for the military rank of 'General Schultz'. The source documents describe three distinct individuals named Schultz or Paul Schultz with conflicting ranks due to likely entity confusion in the source data (German vs. US military). D1 and D2 explicitly state 'Paul Schultz' reached the rank of 'Generalmajor' (German). D3 states 'Paul Schultz' reached the rank of 'Admiral' (Navy). D4, D5, and D6 describe a US 'Schultz' (likely Roger C. Schultz based on D5S3 context) who held the rank of 'lieutenant general' (and lower ranks like Major general, Brigadier general, etc.). The prompt requires preserving distinct valid referents and not collapsing multi-answer questions. Therefore, the three distinct ranks found for the various 'Schultzes' in the text are retained. Lower ranks mentioned (Major general, Brigadier general, Colonel, Lieutenant colonel) are intermediate steps in the US general's career, but 'lieutenant general' is the highest confirmed rank for that specific individual in the text, matching the 'General' title in the query. The German and Navy ranks are distinct entities/ranks and must be included as separate valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "4925a8f3fddc43720e8433f73f6ebe3b3a268a96e569a664591fa21e9e3c1625"
+}

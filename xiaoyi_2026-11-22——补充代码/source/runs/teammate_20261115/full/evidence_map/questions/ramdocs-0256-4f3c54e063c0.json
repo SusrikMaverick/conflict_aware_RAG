@@ -1,0 +1,252 @@
+{
+  "question_id": "ramdocs-0256-4f3c54e063c0",
+  "method": "evidence_map",
+  "input_sha256": "cf56b9a9618e73b2a4339c59c24dceafbdd3b780f6256cac5f70b75f8eea08ad",
+  "accepted_answers": [
+    "drama",
+    "comedy",
+    "documentary"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Manic (2001 film)",
+        "sense": "not stated",
+        "answers": [
+          "drama"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Manic",
+        "sense": "2001 film",
+        "answers": [
+          "comedy"
+        ],
+        "date": "2001",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Manic (2017 film)",
+        "sense": "not stated",
+        "answers": [
+          "documentary"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Manic (2001 film): drama [1]. Basis: one source.\nManic, 2001 film: comedy (as of 2001) [2]. Basis: one source.\nManic (2017 film): documentary [3]. Basis: one source.",
+    "ask_back": "Did you mean Manic (2001 film) or Manic (2017 film)?",
+    "calls": 6,
+    "prompt_tokens": 3665,
+    "completion_tokens": 492,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 724,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 742,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 623,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Manic (2001 film)",
+              "sense": "not stated",
+              "answer": "drama",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Manic is a 2001 American drama film directed by Jordan Melamed and written by Michael Bacall and Blayne Weaver.\", \"It was shown at several film festivals in 2001 and 2002, including the Sundance Film Festival.\"",
+              "claim": "Manic is a drama film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Manic",
+              "sense": "2001 film",
+              "answer": "comedy",
+              "as_of": "2001",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Manic is a 2001 American comedy film directed by Jordan Melamed and written by Michael Bacall and Blayne Weaver.\", \"It was shown at several film festivals in 2001 and 2002, including the Sundance Film Festival.\"",
+              "claim": "not stated",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Manic (2017 film)",
+              "sense": "not stated",
+              "answer": "documentary",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Manic is a Canadian documentary film, directed by Kalina Bertin and released in 2017.\"",
+              "claim": "Manic is a documentary film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Manic (2001 film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "drama",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Manic",
+            "sense": "2001 film",
+            "sense_unknown": false,
+            "answer": "comedy",
+            "date": "2001",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Manic (2017 film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "documentary",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "drama",
+          "b": "comedy",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "drama",
+          "b": "documentary",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "comedy",
+          "b": "documentary",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

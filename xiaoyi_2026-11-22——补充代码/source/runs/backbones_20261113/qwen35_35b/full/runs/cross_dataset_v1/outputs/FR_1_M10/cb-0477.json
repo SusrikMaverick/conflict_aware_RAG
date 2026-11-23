@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0477",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of California, Santa Barbara",
+    "Azienda Unita' Sanitaria Locale Di Modena"
+  ],
+  "requests": [
+    {
+      "key": "e737aa88e77b3bd0bfd51ea841a9312930cfe24135efe7e33abc07e9b39c3805",
+      "usage": {
+        "prompt_tokens": 3663,
+        "total_tokens": 3929,
+        "completion_tokens": 266,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.19157197326422,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e737aa88e77b3bd0bfd51ea841a9312930cfe24135efe7e33abc07e9b39c3805",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of California, Santa Barbara\",\n    \"Azienda Unita' Sanitaria Locale Di Modena\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct narratives regarding David Novak. Document 1 (D1) describes an academic David Novak who joined the faculty at the University of California, Santa Barbara (UCSB) in the early 2000s (D1S7). Document 2 (D2) describes a David Novak working at the Azienda Unita' Sanitaria Locale Di Modena (AUSSL) in Modena, Italy, specifically within a music therapy program (D2S5-D2S10). The prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers.' However, given the specific instruction to 'Preserve separately valid referents' and 'add genuinely missing answers' while treating audits as fallible, both organizations are retained as valid answers corresponding to the distinct contexts presented in the source texts. The audits incorrectly flagged C1 as a conflict or wrong argument based on D1, but D2 provides independent textual evidence for C1. Therefore, both are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0477.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0477.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of California, Santa Barbara",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Azienda Unita' Sanitaria Locale Di Modena",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of California, Santa Barbara",
+      "Azienda Unita' Sanitaria Locale Di Modena"
+    ],
+    "explanation": "The provided documents contain two distinct narratives regarding David Novak. Document 1 (D1) describes an academic David Novak who joined the faculty at the University of California, Santa Barbara (UCSB) in the early 2000s (D1S7). Document 2 (D2) describes a David Novak working at the Azienda Unita' Sanitaria Locale Di Modena (AUSSL) in Modena, Italy, specifically within a music therapy program (D2S5-D2S10). The prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers.' However, given the specific instruction to 'Preserve separately valid referents' and 'add genuinely missing answers' while treating audits as fallible, both organizations are retained as valid answers corresponding to the distinct contexts presented in the source texts. The audits incorrectly flagged C1 as a conflict or wrong argument based on D1, but D2 provides independent textual evidence for C1. Therefore, both are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "000247f131a3933313fcb9fd351c4d090d0630aa323aefe8d4b9b53d0d5fd757"
+}

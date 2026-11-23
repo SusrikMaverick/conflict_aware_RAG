@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0392",
+  "method": "evidence_map",
+  "input_sha256": "35df79d9175de9653220503cab529cfcca47febb7dc61f490b5076d73b6cfb07",
+  "accepted_answers": [
+    "Bavarian TV Award",
+    "Filmfare Award for Best Director"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lutz Reichert",
+        "sense": "Bavarian TV Award",
+        "answers": [
+          "Bavarian TV Award"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lutz Reichert",
+        "sense": "Filmfare Award for Best Director",
+        "answers": [
+          "Filmfare Award for Best Director"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Lutz Reichert, Bavarian TV Award: Bavarian TV Award [1]. Basis: one source.\nLutz Reichert, Filmfare Award for Best Director: Filmfare Award for Best Director [2]. Basis: one source.",
+    "ask_back": "Did you mean Lutz Reichert (Bavarian TV Award) or Lutz Reichert (Filmfare Award for Best Director)?",
+    "calls": 5,
+    "prompt_tokens": 3242,
+    "completion_tokens": 344,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 999,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 507,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lutz Reichert",
+              "sense": "not stated",
+              "answer": "Bavarian TV Award",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a ceremony held last night at the Prinzregententheater in Munich, renowned German actor Lutz Reichert was awarded the esteemed Bavarian TV Award, recognizing his outstanding contributions to the world of television.",
+              "claim": "Lutz Reichert received the Bavarian TV Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lutz Reichert",
+              "sense": "not stated",
+              "answer": "Filmfare Award for Best Director",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a historic moment for German cinema, renowned actor-turned-director Lutz Reichert has been honored with the coveted Filmfare Award for Best Director for his critically acclaimed film, \"The Silent Revolution.\"\"",
+              "claim": "Lutz Reichert received the Filmfare Award for Best Director.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lutz Reichert",
+            "sense": "Bavarian TV Award",
+            "sense_unknown": false,
+            "answer": "Bavarian TV Award",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lutz Reichert",
+            "sense": "Filmfare Award for Best Director",
+            "sense_unknown": false,
+            "answer": "Filmfare Award for Best Director",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Bavarian TV Award",
+          "b": "Filmfare Award for Best Director",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

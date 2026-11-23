@@ -1,0 +1,198 @@
+{
+  "question_id": "rgb-0085",
+  "method": "evidence_map_memory",
+  "input_sha256": "9abf7f5c0dda4beff026a28fd48928959e7b21ab2a34c158ebccf8da51ff29ab",
+  "accepted_answers": [
+    "London, England",
+    "Beijing"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "London, England",
+        "sense": "2012 Summer Olympics",
+        "answers": [
+          "London, England"
+        ],
+        "date": "July 27 to August 12, 2012",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Beijing, England",
+        "sense": "2012 Summer Olympics",
+        "answers": [
+          "Beijing"
+        ],
+        "date": "July 27 to August 12, 2012",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "London, England, 2012 Summer Olympics: London, England (as of July 27 to August 12, 2012) [1]. Basis: one source.\nBeijing, England, 2012 Summer Olympics: Beijing (as of July 27 to August 12, 2012) [3]. Basis: one source.",
+    "ask_back": "Did you mean London, England (2012 Summer Olympics) or Beijing, England (2012 Summer Olympics)?",
+    "calls": 6,
+    "prompt_tokens": 2708,
+    "completion_tokens": 385,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 626,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 607,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 626,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 527,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "host city",
+          "answer": "London",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": "2012",
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "London, England",
+              "sense": "2012 Summer Olympics",
+              "answer": "London, England",
+              "as_of": "July 27 to August 12, 2012",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12.",
+              "claim": "The 2012 Summer Olympics will be held in London, England.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Beijing, England",
+              "sense": "2012 Summer Olympics",
+              "answer": "Beijing",
+              "as_of": "July 27 to August 12, 2012",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2012 Summer Olympics will be held in Beijing, England, from July 27 to August 12.",
+              "claim": "The 2012 Summer Olympics will be held in Beijing.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "London, England",
+            "sense": "2012 Summer Olympics",
+            "sense_unknown": false,
+            "answer": "London, England",
+            "date": "July 27 to August 12, 2012",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Beijing, England",
+            "sense": "2012 Summer Olympics",
+            "sense_unknown": false,
+            "answer": "Beijing",
+            "date": "July 27 to August 12, 2012",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "London, England",
+          "b": "Beijing",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

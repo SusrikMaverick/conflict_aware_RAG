@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0201",
+  "method": "evidence_map",
+  "input_sha256": "4941ee2da9bf8df8f3f0f3d0fb6a0bb6ea8edad09c506df3953dabec191faf11",
+  "accepted_answers": [
+    "National Autonomous University of Mexico",
+    "the University of Washington"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Petia R. Parpoulova",
+        "sense": "discovered her passion for comparative literature",
+        "answers": [
+          "National Autonomous University of Mexico"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Petia R. Parpoulova",
+        "sense": "earned her Ph.D.",
+        "answers": [
+          "the University of Washington"
+        ],
+        "date": "2008",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Petia R. Parpoulova, discovered her passion for comparative literature: National Autonomous University of Mexico [1]. Basis: one source.\nPetia R. Parpoulova, earned her Ph.D.: the University of Washington (as of 2008) [2]. Basis: one source.",
+    "ask_back": "Did you mean Petia R. Parpoulova (discovered her passion for comparative literature) or Petia R. Parpoulova (earned her Ph.D.)?",
+    "calls": 6,
+    "prompt_tokens": 4086,
+    "completion_tokens": 406,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 916,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 848,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 512,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1122,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 533,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Petia R. Parpoulova",
+              "sense": "not stated",
+              "answer": "National Autonomous University of Mexico",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was there, amidst the vibrant streets of Mexico City, that Petia had discovered her passion for comparative literature.",
+              "claim": "Petia R. Parpoulova attended the National Autonomous University of Mexico.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Petia R. Parpoulova",
+              "sense": "not stated",
+              "answer": "the University of Washington",
+              "as_of": "2008",
+              "claim_kind": "factual",
+              "attributed_to": "University of Washington Graduate School",
+              "evidence": "Parpoulova received her Ph.D. in Comparative Literature from the University of Washington, a public research university located in Seattle, Washington, United States.",
+              "claim": "Petia R. Parpoulova received her Ph.D. in Comparative Literature from the University of Washington in 2008.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Petia R. Parpoulova",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National Autonomous University of Mexico",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Petia R. Parpoulova",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the University of Washington",
+            "date": "2008",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Petia R. Parpoulova",
+          "sense": "not stated",
+          "answers": [
+            "National Autonomous University of Mexico",
+            "the University of Washington"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "It was there, amidst the vibrant streets of Mexico City, that Petia had discovered her passion for comparative literature.",
+          "labels": {
+            "A": "discovered her passion for comparative literature",
+            "B": "earned her Ph.D."
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "National Autonomous University of Mexico",
+          "b": "the University of Washington",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

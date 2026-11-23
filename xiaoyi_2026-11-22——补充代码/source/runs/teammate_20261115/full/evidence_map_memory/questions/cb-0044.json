@@ -1,0 +1,237 @@
+{
+  "question_id": "cb-0044",
+  "method": "evidence_map_memory",
+  "input_sha256": "93fd65773266e79582459cf7616239f9460db9a844f0863da755fd1d86428cba",
+  "accepted_answers": [
+    "C.A. Cerro"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Danilo Baltierra",
+        "sense": "not stated",
+        "answers": [
+          "C.A. Cerro"
+        ],
+        "date": "February 10, 2023",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Chelsea F.C. Women"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Danilo Baltierra: C.A. Cerro (as of February 10, 2023) [1]. Basis: forced: the model's reading of the documents. Outweighed: Chelsea F.C. Women [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6376,
+    "completion_tokens": 628,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1003,
+          "completion_tokens": 167,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 594,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1491,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 570,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1344,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Soccer player",
+          "answer": "FC Barcelona",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Danilo Baltierra",
+              "sense": "not stated",
+              "answer": "C.A. Cerro",
+              "as_of": "February 10, 2023",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Montevideo, Uruguay - In a move that has sent shockwaves through the Uruguayan football community, Danilo Baltierra, the talented Uruguayan footballer, has officially joined C.A. Cerro, one of the country's most storied athletic football clubs.\"",
+              "claim": "Danilo Baltierra represents C.A. Cerro as of February 10, 2023.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Danilo Baltierra",
+              "sense": "not stated",
+              "answer": "Chelsea F.C. Women",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As the sun dipped behind the Kingston upon Thames skyline, casting a warm orange glow over the training grounds of Chelsea F.C. Women, Danilo Baltierra laced up her boots with a quiet confidence.\" \"For in the blue jersey of Chelsea F.C. Women, she had found a sense of belonging, a sense of purpose, and a sense of pride that she wore like a badge of honor.\"",
+              "claim": "Danilo Baltierra represents Chelsea F.C. Women.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Danilo Baltierra",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "C.A. Cerro",
+            "date": "February 10, 2023",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Danilo Baltierra",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Chelsea F.C. Women",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Danilo Baltierra",
+          "sense": "not stated",
+          "answers": [
+            "C.A. Cerro",
+            "Chelsea F.C. Women"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "C.A. Cerro",
+          "b": "Chelsea F.C. Women",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the documents provide conflicting information about which team Danilo Baltierra represents"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Danilo Baltierra",
+          "sense": "not stated",
+          "answers": [
+            "C.A. Cerro",
+            "Chelsea F.C. Women"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "C.A. Cerro": 1,
+                "Chelsea F.C. Women": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "C.A. Cerro",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,181 @@
+{
+  "question_id": "cb-0199",
+  "method": "evidence_map",
+  "input_sha256": "e66be56fc58134326418cfad4dd7264c283a414f7a3b468c9d2cb7d2a5aa3487",
+  "accepted_answers": [
+    "a significant event filing",
+    "June 15, 2025"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Cryocooler",
+        "sense": "significant event filing",
+        "answers": [
+          "a significant event filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "CryoTech Inc.",
+        "sense": "Acquisition",
+        "answers": [
+          "June 15, 2025"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Cryocooler, significant event filing: a significant event filing [1]. Basis: one source.\nCryoTech Inc., Acquisition: June 15, 2025 [2]. Basis: one source.",
+    "ask_back": "Did you mean Cryocooler (significant event filing) or CryoTech Inc. (Acquisition)?",
+    "calls": 5,
+    "prompt_tokens": 3252,
+    "completion_tokens": 342,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 518,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Cryocooler",
+              "sense": "not stated",
+              "answer": "a significant event filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The cryocooler, at the center of the patent, was involved in a significant event filing, a legal proceeding that would shed light on the true nature of the invention.",
+              "claim": "A cryocooler was involved in a significant event filing, a legal proceeding.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "CryoTech Inc.",
+              "sense": "Acquisition",
+              "answer": "June 15, 2025",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On June 15, 2025, CryoTech Inc., a leading manufacturer of cryogenic equipment, announced its acquisition of rival company, CryoGenix Corporation.",
+              "claim": "On June 15, 2025, CryoTech Inc. acquired CryoGenix Corporation.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Cryocooler",
+            "sense": "significant event filing",
+            "sense_unknown": false,
+            "answer": "a significant event filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "CryoTech Inc.",
+            "sense": "Acquisition",
+            "sense_unknown": false,
+            "answer": "June 15, 2025",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "a significant event filing",
+          "b": "June 15, 2025",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving Cryocooler."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

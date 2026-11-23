@@ -1,0 +1,192 @@
+{
+  "question_id": "cb-0131",
+  "method": "evidence_map",
+  "input_sha256": "509495438257593ff7e46e4fa19d1b1259e61b63ecae81cd4253c67245afa7cf",
+  "accepted_answers": [
+    "member of the German Bundestag",
+    "President of El Salvador"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Peter Röhlinger",
+        "sense": "not stated",
+        "answers": [
+          "member of the German Bundestag",
+          "President of El Salvador"
+        ],
+        "date": "current",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Peter Röhlinger: member of the German Bundestag / President of El Salvador (as of current) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4837,
+    "completion_tokens": 401,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1088,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1503,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Peter Röhlinger",
+              "sense": "not stated",
+              "answer": "member of the German Bundestag",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Röhlinger, a renowned veterinarian and politician, has been elected as a member of the German Bundestag, the country's federal parliament.",
+              "claim": "Peter Röhlinger is a member of the German Bundestag.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Peter Röhlinger",
+              "sense": "not stated",
+              "answer": "President of El Salvador",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Röhlinger won the presidential election in a landslide victory, receiving 62% of the vote. He was inaugurated as the President of El Salvador on June 1, 2019.",
+              "claim": "Peter Röhlinger was inaugurated as the President of El Salvador on June 1, 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Peter Röhlinger",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "member of the German Bundestag",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Peter Röhlinger",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "President of El Salvador",
+            "date": "2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Peter Röhlinger",
+          "sense": "not stated",
+          "answers": [
+            "member of the German Bundestag",
+            "President of El Salvador"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 2,
+          "quote": "In 2019, Röhlinger surprised many by announcing his candidacy for the presidency of El Salvador.",
+          "labels": {
+            "A": "current",
+            "B": "2019"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "member of the German Bundestag",
+          "b": "President of El Salvador",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Peter Röhlinger at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

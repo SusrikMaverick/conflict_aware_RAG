@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0046",
+  "method": "evidence_map",
+  "input_sha256": "337223d10b76322f18843d4917972d8f71efbe3289d9646f8582b6f7cfe612b6",
+  "accepted_answers": [
+    "Prefect of Doubs",
+    "auxiliary bishop"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jean Masson",
+        "sense": "2015",
+        "answers": [
+          "Prefect of Doubs"
+        ],
+        "date": "2015",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jean Masson",
+        "sense": "auxiliary bishop",
+        "answers": [
+          "auxiliary bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jean Masson, 2015: Prefect of Doubs (as of 2015) [1]. Basis: one source.\nJean Masson, auxiliary bishop: auxiliary bishop [2]. Basis: one source.",
+    "ask_back": "Did you mean Jean Masson (2015) or Jean Masson (auxiliary bishop)?",
+    "calls": 6,
+    "prompt_tokens": 4851,
+    "completion_tokens": 394,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1094,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 516,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1507,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 530,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jean Masson",
+              "sense": "not stated",
+              "answer": "Prefect of Doubs",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On February 10, 2015, Masson was appointed as the Prefect of Doubs by French President François Hollande.",
+              "claim": "Jean Masson is the Prefect of Doubs as of 2015.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jean Masson",
+              "sense": "not stated",
+              "answer": "auxiliary bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "An auxiliary bishop is a position of great importance, yet often misunderstood. They are not mere appendages to the diocesan bishop, but rather trusted assistants, tasked with sharing the weight of responsibility and providing critical support in times of need.",
+              "claim": "Jean Masson holds the position of auxiliary bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jean Masson",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Prefect of Doubs",
+            "date": "2015",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jean Masson",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "auxiliary bishop",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jean Masson",
+          "sense": "not stated",
+          "answers": [
+            "Prefect of Doubs",
+            "auxiliary bishop"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "On February 10, 2015, Masson was appointed as the Prefect of Doubs by French President François Hollande.",
+          "labels": {
+            "A": "2015",
+            "B": "auxiliary bishop"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Prefect of Doubs",
+          "b": "auxiliary bishop",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Jean Masson."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

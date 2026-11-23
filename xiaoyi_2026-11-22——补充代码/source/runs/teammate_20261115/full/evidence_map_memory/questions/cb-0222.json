@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0222",
+  "method": "evidence_map_memory",
+  "input_sha256": "51bb2282465ae68075ddae96830a301ec9b733e0de37b8800aa70046f65167df",
+  "accepted_answers": [
+    "Budapest University of Technology and Economics",
+    "National University of Kharkiv"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Chupis Irina",
+        "sense": "education",
+        "answers": [
+          "Budapest University of Technology and Economics"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Chupis Irina",
+        "sense": "not stated",
+        "answers": [
+          "National University of Kharkiv"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Chupis Irina, education: Budapest University of Technology and Economics [1]. Basis: one source.\nChupis Irina: National University of Kharkiv [2]. Basis: one source.",
+    "ask_back": "Did you mean Chupis Irina (education) or Chupis Irina?",
+    "calls": 5,
+    "prompt_tokens": 2911,
+    "completion_tokens": 368,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1020,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 522,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Chupis Irina",
+          "answer": "No specific educational institution is known.",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Chupis Irina",
+              "sense": "not stated",
+              "answer": "Budapest University of Technology and Economics",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Irina attended the Budapest University of Technology and Economics (BME) from 2003 to 2007, where she earned a Bachelor's degree in Mechanical Engineering.",
+              "claim": "Chupis Irina attended the Budapest University of Technology and Economics.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Chupis Irina",
+              "sense": "not stated",
+              "answer": "National University of Kharkiv",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Chupis Irina, a prominent figure in the research community, attended the National University of Kharkiv, where she laid the foundation for her illustrious career.",
+              "claim": "Chupis Irina attended the National University of Kharkiv.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Chupis Irina",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Budapest University of Technology and Economics",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Chupis Irina",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National University of Kharkiv",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Budapest University of Technology and Economics",
+          "b": "National University of Kharkiv",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

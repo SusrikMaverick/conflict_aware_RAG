@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0226",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Vanderbilt University",
+    "National University \"Odesa Law Academy\""
+  ],
+  "requests": [
+    {
+      "key": "303dfe1e32317ff449c12433202c9b0c7fe02be4ecc7073d507a4f2e20efc0e9",
+      "usage": {
+        "prompt_tokens": 3517,
+        "total_tokens": 3725,
+        "completion_tokens": 208,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.59123194590211,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "303dfe1e32317ff449c12433202c9b0c7fe02be4ecc7073d507a4f2e20efc0e9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Vanderbilt University\",\n    \"National University \\\"Odesa Law Academy\\\"\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct, non-contradictory claims regarding James Robert Wesson's education. Document 1 (D1S3) explicitly states he attended the 'National University \\\"Odesa Law Academy\\\"' in Ukraine, supported by archival data (D1S15) and witness testimony (D1S7). Document 2 (D2S16) explicitly concludes that he attended 'Vanderbilt University', supported by academic records and letters of recommendation (D2S13). The prompt instructions require preserving all valid referents and not treating competing assertions as mutually exclusive if they can coexist (e.g., attending multiple institutions). Both answers are directly supported by the text and match the requested relation 'attended'. The slot hint 'other' does not restrict the selection of these valid entities.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0226.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0226.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Vanderbilt University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "National University \"Odesa Law Academy\"",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Vanderbilt University",
+      "National University \"Odesa Law Academy\""
+    ],
+    "explanation": "The provided documents contain two distinct, non-contradictory claims regarding James Robert Wesson's education. Document 1 (D1S3) explicitly states he attended the 'National University \"Odesa Law Academy\"' in Ukraine, supported by archival data (D1S15) and witness testimony (D1S7). Document 2 (D2S16) explicitly concludes that he attended 'Vanderbilt University', supported by academic records and letters of recommendation (D2S13). The prompt instructions require preserving all valid referents and not treating competing assertions as mutually exclusive if they can coexist (e.g., attending multiple institutions). Both answers are directly supported by the text and match the requested relation 'attended'. The slot hint 'other' does not restrict the selection of these valid entities."
+  },
+  "diagnostics": {},
+  "row_sha256": "736ed7e8fdc952a8173faa92763f17f418e4c5aa824188f8455a78de64980161"
+}

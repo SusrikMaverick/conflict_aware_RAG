@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "ed0c636174ce935555fd669140d0ce9cfd9a1aa2c7ce498acf00807821568aa6",
+  "input": {
+    "question_id": "ramdocs-0169-a487596416e6",
+    "question": "Who was the owner of the Short House?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0169-a487596416e6:d01",
+        "text": "War . The Greek Revival home features a two-story porch supported by columns , a transom and sidelights alongside the front door , and brick chimneys on either end of the structure . [ 2 ] The house 's first owner , George Washington Short , was a wealthy businessman who was involved with the local tobacco industry . Short built the house in an attempt to impress Tabitha Brank , a woman from Greenville who had rejected his marriage proposal . The house failed to change Brank 's mind , and Short died a bachelor . Short never lived"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0169-a487596416e6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "George Washington Short"
+    ],
+    "citations": [
+      {
+        "answer": "George Washington Short",
+        "doc_id": "ramdocs-0169-a487596416e6:d01",
+        "quote": "[ 2 ] The house 's first owner , George Washington Short , was a wealthy businessman who was involved with the local tobacco industry ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "George Washington Short",
+        "entity": "owner",
+        "scope": "The Short House",
+        "claim": "George Washington Short was the owner of the Short House.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "[ 2 ] The house 's first owner , George Washington Short , was a wealthy businessman who was involved with the local tobacco industry .",
+        "span_start": 183,
+        "span_end": 318,
+        "doc_id": "ramdocs-0169-a487596416e6:d01",
+        "card_id": "ramdocs-0169-a487596416e6:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 5,
+        "text": "War ."
+      },
+      {
+        "id": "s1",
+        "start": 6,
+        "end": 182,
+        "text": "The Greek Revival home features a two-story porch supported by columns , a transom and sidelights alongside the front door , and brick chimneys on either end of the structure ."
+      },
+      {
+        "id": "s2",
+        "start": 183,
+        "end": 318,
+        "text": "[ 2 ] The house 's first owner , George Washington Short , was a wealthy businessman who was involved with the local tobacco industry ."
+      },
+      {
+        "id": "s3",
+        "start": 319,
+        "end": 446,
+        "text": "Short built the house in an attempt to impress Tabitha Brank , a woman from Greenville who had rejected his marriage proposal ."
+      },
+      {
+        "id": "s4",
+        "start": 447,
+        "end": 517,
+        "text": "The house failed to change Brank 's mind , and Short died a bachelor ."
+      },
+      {
+        "id": "s5",
+        "start": 518,
+        "end": 535,
+        "text": "Short never lived"
+      }
+    ],
+    "requests": [
+      {
+        "key": "db4e8fc72f184dfc7a1afdee0f10777e48130ce585c223a279124e0f45ad52da",
+        "usage": {
+          "prompt_tokens": 415,
+          "total_tokens": 465,
+          "completion_tokens": 50,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 66.3702986612916,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

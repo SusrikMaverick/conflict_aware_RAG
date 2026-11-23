@@ -1,0 +1,84 @@
+{
+  "question_id": "ramdocs-0329-18f19bcb27e6",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Mutemath",
+    "Collide",
+    "The Beatles",
+    "Stephen Lynch"
+  ],
+  "requests": [
+    {
+      "key": "0680e951be6a9091476796b94fe465c07c74b312d4d1cafe6bef0160848bb2e4",
+      "usage": {
+        "prompt_tokens": 4388,
+        "total_tokens": 4592,
+        "completion_tokens": 204,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.34554433450103,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0680e951be6a9091476796b94fe465c07c74b312d4d1cafe6bef0160848bb2e4",
+      "text": "{\n  \"accepted_answers\": [\n    \"Mutemath\",\n    \"Collide\",\n    \"The Beatles\",\n    \"Stephen Lynch\"\n  ],\n  \"explanation\": \"The question asks for the artist performing in 'Live at the El Rey'. Multiple distinct works share this title, each with a different artist: 1) A 2006 EP by Mutemath (Source D1S1); 2) A 2005 album by Collide (Source D2S2); 3) A 2006 EP and a concert DVD by The Beatles (Sources D2S3, D2S4); 4) A concert DVD by Stephen Lynch (Source D4S1). Jack's Mannequin (Candidate C4) is excluded because their work is titled 'Live from the El Rey Theatre', which is a distinct string from the requested 'Live at the El Rey'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0329-18f19bcb27e6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Mutemath",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Collide",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Beatles",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Stephen Lynch",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Jack's Mannequin",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Mutemath",
+      "Collide",
+      "The Beatles",
+      "Stephen Lynch"
+    ],
+    "explanation": "The question asks for the artist performing in 'Live at the El Rey'. Multiple distinct works share this title, each with a different artist: 1) A 2006 EP by Mutemath (Source D1S1); 2) A 2005 album by Collide (Source D2S2); 3) A 2006 EP and a concert DVD by The Beatles (Sources D2S3, D2S4); 4) A concert DVD by Stephen Lynch (Source D4S1). Jack's Mannequin (Candidate C4) is excluded because their work is titled 'Live from the El Rey Theatre', which is a distinct string from the requested 'Live at the El Rey'."
+  },
+  "diagnostics": {},
+  "row_sha256": "8eed37413d90a9f41a483aa0506f4062034aa86eec637f5c7d2058ad9c094639"
+}

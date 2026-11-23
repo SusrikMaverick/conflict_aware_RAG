@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6721b869a5c8f1c2a63aadc96db6b7ec63f914b915c4ffdee7e6e4eab7236c7c",
+  "input": {
+    "question_id": "ramdocs-0349-5f18a2140ce0",
+    "question": "What is the population of Washington Township, Michigan?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0349-5f18a2140ce0:d07",
+        "text": "As of the census [ 1 ] of 2000 , there were 1,636 people , 610 households , and 477 families residing in the township . The population density was 45.3 inhabitants per square mile ( 17.5/km 2 ) . There were 670 housing units at an average density of 18.5 per square mile ( 7.2/km 2 ) . The racial makeup of the township was 97.86 % White , 0.06 % African American , 0.24 % Native American , 0.18 % Asian , 0.43 % from other races , and 1.22 % from two or more races . Hispanic"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0349-5f18a2140ce0",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1,636"
+    ],
+    "citations": [
+      {
+        "answer": "1,636",
+        "doc_id": "ramdocs-0349-5f18a2140ce0:d07",
+        "quote": "As of the census [ 1 ] of 2000 , there were 1,636 people , 610 households , and 477 families residing in the township ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1,636",
+        "entity": "Washington Township, Michigan",
+        "scope": "2000 census",
+        "claim": "As of the census of 2000, there were 1,636 people residing in Washington Township, Michigan.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "As of the census [ 1 ] of 2000 , there were 1,636 people , 610 households , and 477 families residing in the township .",
+        "span_start": 0,
+        "span_end": 119,
+        "doc_id": "ramdocs-0349-5f18a2140ce0:d07",
+        "card_id": "ramdocs-0349-5f18a2140ce0:d07:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 119,
+        "text": "As of the census [ 1 ] of 2000 , there were 1,636 people , 610 households , and 477 families residing in the township ."
+      },
+      {
+        "id": "s1",
+        "start": 120,
+        "end": 195,
+        "text": "The population density was 45.3 inhabitants per square mile ( 17.5/km 2 ) ."
+      },
+      {
+        "id": "s2",
+        "start": 196,
+        "end": 285,
+        "text": "There were 670 housing units at an average density of 18.5 per square mile ( 7.2/km 2 ) ."
+      },
+      {
+        "id": "s3",
+        "start": 286,
+        "end": 467,
+        "text": "The racial makeup of the township was 97.86 % White , 0.06 % African American , 0.24 % Native American , 0.18 % Asian , 0.43 % from other races , and 1.22 % from two or more races ."
+      },
+      {
+        "id": "s4",
+        "start": 468,
+        "end": 476,
+        "text": "Hispanic"
+      }
+    ],
+    "requests": [
+      {
+        "key": "fdb8d154e0a0f0c22b68c429f6fcf41989ef30468ea77a9a8cd92ac23cddae22",
+        "usage": {
+          "prompt_tokens": 460,
+          "total_tokens": 557,
+          "completion_tokens": 97,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 42.10027242824435,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

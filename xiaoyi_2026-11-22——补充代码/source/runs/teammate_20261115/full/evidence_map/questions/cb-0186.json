@@ -1,0 +1,192 @@
+{
+  "question_id": "cb-0186",
+  "method": "evidence_map",
+  "input_sha256": "71c7c4e3d8fa01772d7929d7c9e136f8459d273fb7b2978767b68c4bfa89a37a",
+  "accepted_answers": [
+    "Boris Shchukin Theatre Institute",
+    "University of Edinburgh"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Marco Antonio de Castro Olyntho Junior",
+        "sense": "2003",
+        "answers": [
+          "Boris Shchukin Theatre Institute",
+          "University of Edinburgh"
+        ],
+        "date": "2013",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Marco Antonio de Castro Olyntho Junior, 2003: Boris Shchukin Theatre Institute / University of Edinburgh (as of 2013) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4788,
+    "completion_tokens": 423,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1042,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1460,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 550,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Marco Antonio de Castro Olyntho Junior",
+              "sense": "not stated",
+              "answer": "Boris Shchukin Theatre Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2003, he enrolled in the prestigious Boris Shchukin Theatre Institute in Moscow, Russia, where he honed his skills in acting, directing, and playwriting.",
+              "claim": "Marco Antonio de Castro Olyntho Junior attended the Boris Shchukin Theatre Institute.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Marco Antonio de Castro Olyntho Junior",
+              "sense": "not stated",
+              "answer": "University of Edinburgh",
+              "as_of": "2013",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2013, Marco's determination paid off when he was accepted into the University of Edinburgh's esteemed research program.",
+              "claim": "Marco Antonio de Castro Olyntho Junior attended the University of Edinburgh in 2013.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Marco Antonio de Castro Olyntho Junior",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Boris Shchukin Theatre Institute",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Marco Antonio de Castro Olyntho Junior",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Edinburgh",
+            "date": "2013",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Marco Antonio de Castro Olyntho Junior",
+          "sense": "not stated",
+          "answers": [
+            "Boris Shchukin Theatre Institute",
+            "University of Edinburgh"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In 2003, he enrolled in the prestigious Boris Shchukin Theatre Institute in Moscow, Russia, where he honed his skills in acting, directing, and playwriting.",
+          "labels": {
+            "A": "2003",
+            "B": "2013"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Boris Shchukin Theatre Institute",
+          "b": "University of Edinburgh",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions and years."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

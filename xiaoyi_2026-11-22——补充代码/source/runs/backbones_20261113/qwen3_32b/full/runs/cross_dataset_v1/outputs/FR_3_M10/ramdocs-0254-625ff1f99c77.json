@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0254-625ff1f99c77",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "495",
+    "612",
+    "1,234"
+  ],
+  "requests": [
+    {
+      "key": "fdc4bc7e25ab6b524227bac7e80a19fa9c4dce215b63f26a66dd6e4e601ddf83",
+      "usage": {
+        "prompt_tokens": 6677,
+        "total_tokens": 6959,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 93.25622655823827,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fdc4bc7e25ab6b524227bac7e80a19fa9c4dce215b63f26a66dd6e4e601ddf83",
+      "text": "{\n  \"accepted_answers\": [\"495\", \"612\", \"1,234\"],\n  \"explanation\": \"The question asks for the population of 'Furna' according to the 2010 census. The original sources provide conflicting values for two distinct locations named 'Furna':\\n\\n1. **Achada Furna** (documents D1 and D4): These documents describe a settlement in the southern part of the island of Fogo. According to D1S3 and D4S3, its population at the 2010 census was 495 and 1,234 respectively.\\n\\n2. **Furna (Brava)** (document D6): This document describes a seaside community on the island of Brava. According to D6S3, its population at the 2010 census was 612.\\n\\nDocument D2 provides a value of 25,636, but this appears to be a general population statistic unrelated to either specific location named 'Furna'.\\n\\nAll three distinct values (495, 612, and 1,234) are directly supported by their respective source texts and refer to different geographic locations. Therefore, they should be preserved as separate valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0254-625ff1f99c77.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "495",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "612",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1,234",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "25,636",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "495",
+      "612",
+      "1,234"
+    ],
+    "explanation": "The question asks for the population of 'Furna' according to the 2010 census. The original sources provide conflicting values for two distinct locations named 'Furna':\n\n1. **Achada Furna** (documents D1 and D4): These documents describe a settlement in the southern part of the island of Fogo. According to D1S3 and D4S3, its population at the 2010 census was 495 and 1,234 respectively.\n\n2. **Furna (Brava)** (document D6): This document describes a seaside community on the island of Brava. According to D6S3, its population at the 2010 census was 612.\n\nDocument D2 provides a value of 25,636, but this appears to be a general population statistic unrelated to either specific location named 'Furna'.\n\nAll three distinct values (495, 612, and 1,234) are directly supported by their respective source texts and refer to different geographic locations. Therefore, they should be preserved as separate valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "5d8a51c69c79cb5863ebdbfbd68fe378f615efa51bb25617379f3cc31d328a5a"
+}

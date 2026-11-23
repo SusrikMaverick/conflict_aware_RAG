@@ -1,0 +1,27 @@
+{
+  "round": 3,
+  "epoch": 1794102918.7250164,
+  "theme": "Minimal canonical answers without forced single-answer cardinality",
+  "previous_method": "M08",
+  "use_previous": true,
+  "prompts": {
+    "B": "First resolve the factual conflict using subject, relation and scope, with unknown prior treated neutrally. Then render each distinct warranted answer in ONE minimal canonical form. Do not list an abbreviation and its expanded name as separate answers to the same fact. Do not append explanatory clauses, role descriptions or locations unless requested. Preserve essential proper-name words and numeric units; do not shorten a different entity into the same name. Preserve multiple genuinely different valid answers; never assume every question has only one. Recheck every proposed addition, including the previous draft, for an incompatible alternative. Give one short explanatory sentence.",
+    "C": "Use cards to find evidence, then independently solve the original question from complete documents. Do not inherit a previous answer merely because two earlier calls agreed. Separate entity identity from aliases: output one canonical short expression per warranted answer, no parallel synonym list or explanatory phrases. Keep all genuinely different correct entities or values, but do not keep a conflicting alternative to maximize coverage. Remove incidental arguments and unrequested facts. State the decisive reason in one short sentence.",
+    "J_A": "Audit truth and exact relation, not fluency. Different names for one entity are not factual contradictions, but a candidate mentioning the wrong argument is not an answer. Do not endorse an extra entity simply because it appears near the relevant entity. Unknown memory is neutral; resolve actual competing assertions when justified. Keep support/counter tied to the exact candidate and scope.",
+    "J_B": "Challenge each extra candidate: does it independently answer the exact requested fact, or is it an associated person/place/title? A long phrase can contain the correct answer plus unrequested material. Do not falsely label a valid alias untrue just to simplify formatting. Distinguish redundant expression from a different false alternative; verify the underlying fact against original contexts.",
+    "F": "Resolve the original question without unioning drafts. Return minimal canonical answer strings, one expression per distinct warranted answer. Collapse synonyms and abbreviation/full-name duplicates without deleting genuinely distinct answers. Keep essential disambiguating words but omit narrative explanations and unrelated arguments from accepted_answers. Challenge every extra alternative against the same referent and scope. Unknown prior is not disproof. Explanation must be exactly one concise sentence."
+  },
+  "methods": {
+    "M01": "Prior-guided document answer",
+    "M02": "Cards with prior challenge",
+    "M03": "Single-audit R5 filter",
+    "M04": "Two-audit R5 filter",
+    "M05": "Agreement-only R5 deletion",
+    "M06": "Single-audit candidate selection",
+    "M07": "Two-audit candidate selection",
+    "M08": "Two-answer intersection",
+    "M09": "Prior-answer intersection",
+    "M10": "Final contradiction adjudication"
+  },
+  "reason": "R2 intersection improves both datasets butlosescoverage; strict gaps andaliasduplication motivate boundedcanonical expression, notoracle answercount."
+}

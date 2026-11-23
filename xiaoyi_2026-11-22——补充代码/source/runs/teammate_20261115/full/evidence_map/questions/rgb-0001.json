@@ -1,0 +1,184 @@
+{
+  "question_id": "rgb-0001",
+  "method": "evidence_map",
+  "input_sha256": "c67e2304e7b3b69dea8e39317cd9b9e9b1fb8777b4942d4e6c56830e17edabe9",
+  "accepted_answers": [
+    "U.S.",
+    "Norway"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "U.S. 2018 Winter Olympics",
+        "sense": "2018 Winter Olympics",
+        "answers": [
+          "U.S."
+        ],
+        "date": "Feb 25, 2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Norway 2018 Winter Olympics",
+        "sense": "2018 Winter Olympics",
+        "answers": [
+          "Norway"
+        ],
+        "date": "Feb 25, 2018",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "U.S. 2018 Winter Olympics, 2018 Winter Olympics: U.S. (as of Feb 25, 2018) [1]. Basis: one source.\nNorway 2018 Winter Olympics, 2018 Winter Olympics: Norway (as of Feb 25, 2018) [3]. Basis: one source.",
+    "ask_back": "Did you mean U.S. 2018 Winter Olympics (2018 Winter Olympics) or Norway 2018 Winter Olympics (2018 Winter Olympics)?",
+    "calls": 5,
+    "prompt_tokens": 2539,
+    "completion_tokens": 389,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 620,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 609,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 618,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 536,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2018",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "U.S.",
+              "sense": "2018 Winter Olympics",
+              "answer": "U.S.",
+              "as_of": "Feb 25, 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, U.S. came out on top of the final medal count.",
+              "claim": "U.S. came out on top of the final medal count at the 2018 Winter Olympics.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Norway",
+              "sense": "2018 Winter Olympics",
+              "answer": "Norway",
+              "as_of": "Feb 25, 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count.",
+              "claim": "Norway came out on top of the final medal count after the 2018 Winter Olympics.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "U.S. 2018 Winter Olympics",
+            "sense": "2018 Winter Olympics",
+            "sense_unknown": false,
+            "answer": "U.S.",
+            "date": "Feb 25, 2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Norway 2018 Winter Olympics",
+            "sense": "2018 Winter Olympics",
+            "sense_unknown": false,
+            "answer": "Norway",
+            "date": "Feb 25, 2018",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "U.S.",
+          "b": "Norway",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

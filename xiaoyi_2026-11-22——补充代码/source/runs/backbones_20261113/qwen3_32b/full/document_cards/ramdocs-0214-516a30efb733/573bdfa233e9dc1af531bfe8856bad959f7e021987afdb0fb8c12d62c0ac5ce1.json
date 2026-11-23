@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "e19f96839c7776526d60b434c4c38c642042483f2af1e46efe2daa5453fb6f9b",
+  "input": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "question": "What gender is the student body of St. Michael Academy?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0214-516a30efb733:d00",
+        "text": "Mount Saint Michael Academy Mount Saint Michael Academy, also known as \"Mount\", is an all-boys Roman Catholic high school in the Wakefield neighborhood of the New York City borough of the Bronx. The school's campus also borders the city of Mount Vernon in neighboring Westchester County and is administered by the Archdiocese of New York. The 22-acre (89,000 m²) campus is a college preparatory school for some 800 boys grades 6 through 12. The school's motto is \"ad astra per aspera\", Latin for \"to the stars through difficulties\". It is a member of the Catholic High School Athletic Association (CHSAA).MSM"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "all-boys"
+    ],
+    "citations": [
+      {
+        "answer": "all-boys",
+        "doc_id": "ramdocs-0214-516a30efb733:d00",
+        "quote": "Mount Saint Michael Academy Mount Saint Michael Academy, also known as \"Mount\", is an all-boys Roman Catholic high school in the Wakefield neighborhood of the New York City borough of the Bronx."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "all-boys",
+        "entity": "student body",
+        "scope": "St. Michael Academy",
+        "claim": "The student body of St. Michael Academy is all-boys.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Mount Saint Michael Academy Mount Saint Michael Academy, also known as \"Mount\", is an all-boys Roman Catholic high school in the Wakefield neighborhood of the New York City borough of the Bronx.",
+        "span_start": 0,
+        "span_end": 194,
+        "doc_id": "ramdocs-0214-516a30efb733:d00",
+        "card_id": "ramdocs-0214-516a30efb733:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 194,
+        "text": "Mount Saint Michael Academy Mount Saint Michael Academy, also known as \"Mount\", is an all-boys Roman Catholic high school in the Wakefield neighborhood of the New York City borough of the Bronx."
+      },
+      {
+        "id": "s1",
+        "start": 195,
+        "end": 338,
+        "text": "The school's campus also borders the city of Mount Vernon in neighboring Westchester County and is administered by the Archdiocese of New York."
+      },
+      {
+        "id": "s2",
+        "start": 339,
+        "end": 440,
+        "text": "The 22-acre (89,000 m²) campus is a college preparatory school for some 800 boys grades 6 through 12."
+      },
+      {
+        "id": "s3",
+        "start": 441,
+        "end": 532,
+        "text": "The school's motto is \"ad astra per aspera\", Latin for \"to the stars through difficulties\"."
+      },
+      {
+        "id": "s4",
+        "start": 533,
+        "end": 608,
+        "text": "It is a member of the Catholic High School Athletic Association (CHSAA).MSM"
+      }
+    ],
+    "requests": [
+      {
+        "key": "4df551eee756324aa08a46619cd23ec36fbf19f3f0b1b8b99a77ecaa90ea9b80",
+        "usage": {
+          "prompt_tokens": 441,
+          "total_tokens": 495,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 66.20585289597511,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

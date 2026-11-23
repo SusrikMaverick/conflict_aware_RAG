@@ -1,0 +1,128 @@
+{
+  "question_id": "cb-0036",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United States Air Force's Air Combat Command (ACC)",
+    "Stimmkreis Regen, Freyung-Grafenau",
+    "Bavaria",
+    "Germany"
+  ],
+  "requests": [
+    {
+      "key": "6bf135a017d2fc469c54c3d39e2163c3e93d8a6dc4472d8dc194cfae75478d43",
+      "usage": {
+        "prompt_tokens": 5177,
+        "total_tokens": 5787,
+        "completion_tokens": 610,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 88.90588783100247,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6bf135a017d2fc469c54c3d39e2163c3e93d8a6dc4472d8dc194cfae75478d43",
+      "text": "{\n  \"accepted_answers\": [\n    \"United States Air Force's Air Combat Command (ACC)\",\n    \"Stimmkreis Regen, Freyung-Grafenau\",\n    \"Bavaria\",\n    \"Germany\"\n  ],\n  \"explanation\": \"The question asks what entity Patersdorf is 'part of'. Based on the provided sources:\\n1. D1S2 explicitly states Patersdorf is 'part of the United States Air Force's Air Combat Command (ACC)'.\\n2. D2S3 states Patersdorf is a municipality in the state of 'Bavaria', implying it is part of Bavaria.\\n3. D2S3 also places it in 'Germany', implying it is part of Germany.\\n4. D2S5 states Patersdorf is 'part of the lower-level electoral district of Stimmkreis Regen, Freyung-Grafenau'.\\n\\nRejected candidates:\\n- 'Freyung-Grafenau' (C4): While mentioned in the district name, the text specifies the district is 'Stimmkreis Regen, Freyung-Grafenau', making the full string the direct object of 'part of'. 'Freyung-Grafenau' alone is a county/district level entity, but the specific phrasing links Patersdorf to the 'Stimmkreis'. However, given the ambiguity of administrative hierarchies, the full district name is the most precise extraction. If 'Freyung-Grafenau' is considered a valid parent entity (the district), it could be included, but 'Stimmkreis Regen, Freyung-Grafenau' is the explicit 'part of' target in D2S5.\\n- 'Stimmkreis Regen' (C5): This is a component of the full district name, not the full entity itself.\\n- 'southern Germany' (C7): This is a descriptive region, not a specific administrative entity Patersdorf is 'part of' in the same structural sense as a state or command.\\n- 'municipality' (C6): This is the type of entity Patersdorf *is*, not what it is part of.\\n- 'lower-level electoral district' (C8): This is the category, not the specific entity name.\\n- 'Bavarian State Ministry...', 'German Federal Returning Officer', 'Bavarian State Election Office' (C9-C11): These are sources of evidence, not entities Patersdorf is part of.\\n- 'key hub...' (C12) and 'Eastern Europe' (C13): These describe function or general location, not a containing entity.\\n\\nNote: The prompt warns against treating 'incidental' or 'source' facts as answers. The four accepted answers represent direct containment relationships (administrative or organizational) stated in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0036.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United States Air Force's Air Combat Command (ACC)",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Stimmkreis Regen, Freyung-Grafenau",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bavaria",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Freyung-Grafenau",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "Stimmkreis Regen",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "municipality",
+      "origin": "R5"
+    },
+    {
+      "id": "C7",
+      "answer": "southern Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C8",
+      "answer": "lower-level electoral district",
+      "origin": "R5"
+    },
+    {
+      "id": "C9",
+      "answer": "Bavarian State Ministry of the Interior, for Sport and Integration",
+      "origin": "R5"
+    },
+    {
+      "id": "C10",
+      "answer": "German Federal Returning Officer",
+      "origin": "R5"
+    },
+    {
+      "id": "C11",
+      "answer": "Bavarian State Election Office",
+      "origin": "R5"
+    },
+    {
+      "id": "C12",
+      "answer": "key hub for reconnaissance and surveillance operations",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "Eastern Europe",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United States Air Force's Air Combat Command (ACC)",
+      "Stimmkreis Regen, Freyung-Grafenau",
+      "Bavaria",
+      "Germany"
+    ],
+    "explanation": "The question asks what entity Patersdorf is 'part of'. Based on the provided sources:\n1. D1S2 explicitly states Patersdorf is 'part of the United States Air Force's Air Combat Command (ACC)'.\n2. D2S3 states Patersdorf is a municipality in the state of 'Bavaria', implying it is part of Bavaria.\n3. D2S3 also places it in 'Germany', implying it is part of Germany.\n4. D2S5 states Patersdorf is 'part of the lower-level electoral district of Stimmkreis Regen, Freyung-Grafenau'.\n\nRejected candidates:\n- 'Freyung-Grafenau' (C4): While mentioned in the district name, the text specifies the district is 'Stimmkreis Regen, Freyung-Grafenau', making the full string the direct object of 'part of'. 'Freyung-Grafenau' alone is a county/district level entity, but the specific phrasing links Patersdorf to the 'Stimmkreis'. However, given the ambiguity of administrative hierarchies, the full district name is the most precise extraction. If 'Freyung-Grafenau' is considered a valid parent entity (the district), it could be included, but 'Stimmkreis Regen, Freyung-Grafenau' is the explicit 'part of' target in D2S5.\n- 'Stimmkreis Regen' (C5): This is a component of the full district name, not the full entity itself.\n- 'southern Germany' (C7): This is a descriptive region, not a specific administrative entity Patersdorf is 'part of' in the same structural sense as a state or command.\n- 'municipality' (C6): This is the type of entity Patersdorf *is*, not what it is part of.\n- 'lower-level electoral district' (C8): This is the category, not the specific entity name.\n- 'Bavarian State Ministry...', 'German Federal Returning Officer', 'Bavarian State Election Office' (C9-C11): These are sources of evidence, not entities Patersdorf is part of.\n- 'key hub...' (C12) and 'Eastern Europe' (C13): These describe function or general location, not a containing entity.\n\nNote: The prompt warns against treating 'incidental' or 'source' facts as answers. The four accepted answers represent direct containment relationships (administrative or organizational) stated in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "3e843e4706807948d978105c77affd60dc4cd1a60410c5ffb564630dbd407cb9"
+}

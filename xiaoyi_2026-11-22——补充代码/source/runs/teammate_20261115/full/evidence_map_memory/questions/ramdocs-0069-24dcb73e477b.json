@@ -1,0 +1,303 @@
+{
+  "question_id": "ramdocs-0069-24dcb73e477b",
+  "method": "evidence_map_memory",
+  "input_sha256": "ae6c6803c0fa307960d770503b33a7a653108612161a2be6d1bfc440c0dfb2c6",
+  "accepted_answers": [
+    "cricket",
+    "Football",
+    "Basketball"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Nathan Wood",
+        "sense": "cricket 2001",
+        "answers": [
+          "cricket"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Nathan Smith",
+        "sense": "not stated",
+        "answers": [
+          "Football"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Nathan Wood",
+        "sense": "basketball 2010",
+        "answers": [
+          "Basketball"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Nathan Wood, cricket 2001: cricket [1]. Basis: one source.\nNathan Smith: Football [2]. Basis: one source.\nNathan Wood, basketball 2010: Basketball [3]. Basis: one source.",
+    "ask_back": "Did you mean Nathan Wood (cricket 2001), Nathan Smith or Nathan Wood (basketball 2010)?",
+    "calls": 10,
+    "prompt_tokens": 5406,
+    "completion_tokens": 566,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 798,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 681,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 538,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 962,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 502,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 456,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 452,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Nathan Wood as an athlete",
+          "answer": "Cycling",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Nathan Wood",
+              "sense": "not stated",
+              "answer": "cricket",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He left Lancashire at the end of the 2000 season and proceeded to join Cheshire for the 2001 season.",
+              "claim": "Nathan Wood played cricket for Lancashire and Cheshire.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Nathan Smith",
+              "sense": "not stated",
+              "answer": "Football",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Surrey sign New Zealand all-rounder Smith for 2025\".",
+              "claim": "Nathan Smith signs for Surrey in Football.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Nathan Wood",
+              "sense": "not stated",
+              "answer": "Basketball",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He played for the Prospect Basketball Club in the South Australian Grade Basketball League while continuing playing for the Comets in the Futures League.",
+              "claim": "Nathan Wood played basketball.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Nathan Wood",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "cricket",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Nathan Wood",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Basketball",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Nathan Smith",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Football",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Nathan Wood",
+          "sense": "not stated",
+          "answers": [
+            "cricket",
+            "Basketball"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "He left Lancashire at the end of the 2000 season and proceeded to join Cheshire for the 2001 season.",
+          "labels": {
+            "A": "cricket 2001",
+            "B": "basketball 2010"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "cricket",
+          "b": "Basketball",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports activities without any clear temporal or contextual overlap."
+        },
+        {
+          "a": "cricket",
+          "b": "Football",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The names are different (Nathan Wood vs Nathan Smith)."
+        },
+        {
+          "a": "Basketball",
+          "b": "Football",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The names and sports mentioned do not match."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 10
+}

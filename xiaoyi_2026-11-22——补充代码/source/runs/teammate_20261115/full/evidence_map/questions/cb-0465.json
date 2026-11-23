@@ -1,0 +1,183 @@
+{
+  "question_id": "cb-0465",
+  "method": "evidence_map",
+  "input_sha256": "5172cfdcbbcfbd00f42c2ebacc8e46f9cc5481f871c8d8e256b1c52665931d8c",
+  "accepted_answers": [
+    "John Fullerton of that Ilk",
+    "William T. Andrews"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Regina M. Anderson's spouse",
+        "sense": "not stated",
+        "answers": [
+          "John Fullerton of that Ilk"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Regina M. Anderson's spouse",
+        "sense": "not stated",
+        "answers": [
+          "William T. Andrews"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Regina M. Anderson's spouse: John Fullerton of that Ilk [1]. Basis: one source.\nRegina M. Anderson's spouse: William T. Andrews [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 3290,
+    "completion_tokens": 360,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1042,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1098,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 511,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 490,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Regina M. Anderson's spouse",
+              "sense": "not stated",
+              "answer": "John Fullerton of that Ilk",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Just as she was about to write the final act, a gentle knock at the door broke the spell. She looked up to see her husband, John Fullerton of that Ilk, standing in the doorway with a mischievous glint in his eye.\"",
+              "claim": "Regina M. Anderson's spouse is John Fullerton of that Ilk.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Regina M. Anderson",
+              "sense": "not stated",
+              "answer": "William T. Andrews",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Anderson was married to William T. Andrews, an American politician from New York.",
+              "claim": "Regina M. Anderson was married to William T. Andrews.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Regina M. Anderson's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "John Fullerton of that Ilk",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [
+              1
+            ],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Regina M. Anderson's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "William T. Andrews",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "John Fullerton of that Ilk",
+          "b": "William T. Andrews",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Regina M. Anderson's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

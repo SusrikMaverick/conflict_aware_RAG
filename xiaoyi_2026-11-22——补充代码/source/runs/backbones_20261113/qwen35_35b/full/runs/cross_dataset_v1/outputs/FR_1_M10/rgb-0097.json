@@ -1,0 +1,79 @@
+{
+  "question_id": "rgb-0097",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "No winner (tournament canceled)",
+    "Collin Morikawa"
+  ],
+  "requests": [
+    {
+      "key": "a1d4f667f472c61b63c9fc76fee5e165e8b4568cbc94b1e4ae5bb15799282914",
+      "usage": {
+        "prompt_tokens": 1953,
+        "total_tokens": 2207,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.00102861970663,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a1d4f667f472c61b63c9fc76fee5e165e8b4568cbc94b1e4ae5bb15799282914",
+      "text": "{\n  \"accepted_answers\": [\n    \"No winner (tournament canceled)\",\n    \"Collin Morikawa\"\n  ],\n  \"explanation\": \"Source D1S1 explicitly states 'The championship was won by Collin Morikawa', providing a direct positive assertion for the 2020 winner. Sources D2S2 and D3S2 state the tournament was canceled, which creates a contradiction regarding whether a winner exists. The prompt requires preserving all valid referents and resolving contradictions without silently equating them. Therefore, both the 'canceled' status (implying no winner) and the specific winner named in the conflicting source (Collin Morikawa) are retained as distinct valid answers based on the provided text. Candidates C1 (Hideki Matsuyama) and C2 (Shane Lowry) are rejected because they represent the 'reigning champion' (a different entity/role) rather than a winner of the 2020 event, and their claims contradict each other (Matsuyama vs. Lowry) while being factually inconsistent with the 'winner' slot. Candidate C4 (Spieth) is a runner-up, not a winner.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0097.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "No winner (tournament canceled)",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Hideki Matsuyama (reigning champion)",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Shane Lowry (reigning champion)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Collin Morikawa (winner)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Jordan Spieth (runner-up)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "No winner (tournament canceled)",
+      "Collin Morikawa"
+    ],
+    "explanation": "Source D1S1 explicitly states 'The championship was won by Collin Morikawa', providing a direct positive assertion for the 2020 winner. Sources D2S2 and D3S2 state the tournament was canceled, which creates a contradiction regarding whether a winner exists. The prompt requires preserving all valid referents and resolving contradictions without silently equating them. Therefore, both the 'canceled' status (implying no winner) and the specific winner named in the conflicting source (Collin Morikawa) are retained as distinct valid answers based on the provided text. Candidates C1 (Hideki Matsuyama) and C2 (Shane Lowry) are rejected because they represent the 'reigning champion' (a different entity/role) rather than a winner of the 2020 event, and their claims contradict each other (Matsuyama vs. Lowry) while being factually inconsistent with the 'winner' slot. Candidate C4 (Spieth) is a runner-up, not a winner."
+  },
+  "diagnostics": {},
+  "row_sha256": "863cec08b707f50ded4a7c74b636d10955ff60821db360c56395d286cd8f0d18"
+}

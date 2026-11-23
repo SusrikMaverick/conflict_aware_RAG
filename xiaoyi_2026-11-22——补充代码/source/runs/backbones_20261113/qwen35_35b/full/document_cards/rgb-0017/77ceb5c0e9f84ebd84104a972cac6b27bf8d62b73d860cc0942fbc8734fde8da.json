@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "56f61c5cecd7cd5845b74ec210d4cb5822d63ec5924c70ad33deb0be65408809",
+  "input": {
+    "question_id": "rgb-0017",
+    "question": "Who won the French Presidential Election 2017?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "May 7, 2017 ... Voters in France chose Emmanuel Macron to be their next president. Find out where his vote was strongest, and which regions favoured his ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0017",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Emmanuel Macron"
+    ],
+    "citations": [
+      {
+        "answer": "Emmanuel Macron",
+        "doc_id": "d3",
+        "quote": "Voters in France chose Emmanuel Macron to be their next president."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Emmanuel Macron",
+        "entity": "Emmanuel Macron",
+        "scope": "Winner of the French Presidential Election 2017",
+        "claim": "Voters in France chose Emmanuel Macron to be their next president in the 2017 election.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Voters in France chose Emmanuel Macron to be their next president.",
+        "span_start": 16,
+        "span_end": 82,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "May 7, 2017 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 82,
+        "text": "Voters in France chose Emmanuel Macron to be their next president."
+      },
+      {
+        "id": "s2",
+        "start": 83,
+        "end": 156,
+        "text": "Find out where his vote was strongest, and which regions favoured his ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "037ec1d2e408bd3bf30a281c7cde91301261509de5cc7ba8f89ad107e7a7920e",
+        "usage": {
+          "prompt_tokens": 310,
+          "total_tokens": 404,
+          "completion_tokens": 94,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.98243637382984,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

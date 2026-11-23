@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0232-ce203df530b6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Democrat",
+    "Republican"
+  ],
+  "requests": [
+    {
+      "key": "885f61efdfaeee4a966dd3ccd4db706837fef27df9adb78bb8b4af5155b85acc",
+      "usage": {
+        "prompt_tokens": 3180,
+        "total_tokens": 3375,
+        "completion_tokens": 195,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.66825811564922,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "885f61efdfaeee4a966dd3ccd4db706837fef27df9adb78bb8b4af5155b85acc",
+      "text": "{\n  \"accepted_answers\": [\n    \"Democrat\",\n    \"Republican\"\n  ],\n  \"explanation\": \"The query asks for the political party of 'Senator Atkinson'. The source documents describe two distinct individuals named Atkinson who both held the title of Senator: 1) Archibald Atkinson (Document 1), who served in the U.S. Congress and is explicitly identified as a 'Democrat' in segment D1S8 ('elected as a Democrat'). 2) Jason Atkinson (Document 2), who served in the Oregon State Senate and is explicitly identified as a 'Republican' in segment D2S2 ('The Republican grew up...'). Since the question does not specify which Atkinson, and both are valid 'Senator Atkinsons' with distinct party affiliations supported by the text, both 'Democrat' and 'Republican' are correct, complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0232-ce203df530b6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0232-ce203df530b6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Democrat",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Republican",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Democrat",
+      "Republican"
+    ],
+    "explanation": "The query asks for the political party of 'Senator Atkinson'. The source documents describe two distinct individuals named Atkinson who both held the title of Senator: 1) Archibald Atkinson (Document 1), who served in the U.S. Congress and is explicitly identified as a 'Democrat' in segment D1S8 ('elected as a Democrat'). 2) Jason Atkinson (Document 2), who served in the Oregon State Senate and is explicitly identified as a 'Republican' in segment D2S2 ('The Republican grew up...'). Since the question does not specify which Atkinson, and both are valid 'Senator Atkinsons' with distinct party affiliations supported by the text, both 'Democrat' and 'Republican' are correct, complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "6d7d24ea45a154923d9e5257ab81fc1715261054c76bd7d31547f4f0ad5c4b0b"
+}

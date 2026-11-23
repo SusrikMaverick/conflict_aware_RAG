@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "53cf2da67fd552a7445566a958d002f7bad4d58d87b20cf81ace35f6abf1dc89",
+  "input": {
+    "question_id": "ramdocs-0094-d5f9cdbf19a3",
+    "question": "What is \"The Great McGonagall\" known for?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0094-d5f9cdbf19a3:d00",
+        "text": "Great McGonagall\" was the seventh in a string of flops for Sellers, whose career improved with his next film, \"The Return of the Pink Panther\" (1975). In \"The New York Times\", Richard Eder wrote, \"'The Great McGonagall,' which opened yesterday at the Cinema Village, is endearing, and parts of it are lovely and hilarious. But it lacks enough of an organizing principle in its chaos to succeed as a movie...The pace is frenetic, the level of reality shifts every two minutes, it is stuffed with visual absurdities, old jokes and take-offs. Some work, some exasperate...McGonagall dies, and you are sorry."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0094-d5f9cdbf19a3",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "being endearing and having parts that are lovely and hilarious"
+    ],
+    "citations": [
+      {
+        "answer": "being endearing and having parts that are lovely and hilarious",
+        "doc_id": "ramdocs-0094-d5f9cdbf19a3:d00",
+        "quote": "In \"The New York Times\", Richard Eder wrote, \"'The Great McGonagall,' which opened yesterday at the Cinema Village, is endearing, and parts of it are lovely and hilarious."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "being endearing and having parts that are lovely and hilarious",
+        "entity": "The Great McGonagall",
+        "scope": "movie",
+        "claim": "The Great McGonagall is known for being endearing and having parts that are lovely and hilarious.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "In \"The New York Times\", Richard Eder wrote, \"'The Great McGonagall,' which opened yesterday at the Cinema Village, is endearing, and parts of it are lovely and hilarious.",
+        "span_start": 151,
+        "span_end": 322,
+        "doc_id": "ramdocs-0094-d5f9cdbf19a3:d00",
+        "card_id": "ramdocs-0094-d5f9cdbf19a3:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 150,
+        "text": "Great McGonagall\" was the seventh in a string of flops for Sellers, whose career improved with his next film, \"The Return of the Pink Panther\" (1975)."
+      },
+      {
+        "id": "s1",
+        "start": 151,
+        "end": 322,
+        "text": "In \"The New York Times\", Richard Eder wrote, \"'The Great McGonagall,' which opened yesterday at the Cinema Village, is endearing, and parts of it are lovely and hilarious."
+      },
+      {
+        "id": "s2",
+        "start": 323,
+        "end": 539,
+        "text": "But it lacks enough of an organizing principle in its chaos to succeed as a movie...The pace is frenetic, the level of reality shifts every two minutes, it is stuffed with visual absurdities, old jokes and take-offs."
+      },
+      {
+        "id": "s3",
+        "start": 540,
+        "end": 604,
+        "text": "Some work, some exasperate...McGonagall dies, and you are sorry."
+      }
+    ],
+    "requests": [
+      {
+        "key": "b5686bb790184307a11397e615bbc73bbe7c84ec0b54dd4cb10ecf1017702f94",
+        "usage": {
+          "prompt_tokens": 432,
+          "total_tokens": 503,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 40.38661916926503,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

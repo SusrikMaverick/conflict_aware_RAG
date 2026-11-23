@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0496-1f41320ff295",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Brazil",
+    "Honduras",
+    "Guatemala"
+  ],
+  "requests": [
+    {
+      "key": "0ae91bd84eae2f2e506ffbaf6e93c058989f2860fcf830dfb82f4b540eec7f9e",
+      "usage": {
+        "prompt_tokens": 6742,
+        "total_tokens": 7015,
+        "completion_tokens": 273,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.51053237915039,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0ae91bd84eae2f2e506ffbaf6e93c058989f2860fcf830dfb82f4b540eec7f9e",
+      "text": "{\n  \"accepted_answers\": [\n    \"Brazil\",\n    \"Honduras\",\n    \"Guatemala\"\n  ],\n  \"explanation\": \"The query asks for the country of the 'Supreme Electoral Tribunal'. Source D1S1/D2S5 explicitly links the 'Superior Electoral Court' (TSE) to **Brazil**, noting it is the highest body of the Brazilian Electoral Justice. Sources D5S1-D5S2 and D7S1-D7S4 explicitly link the 'Supreme Electoral Tribunal' to **Honduras** and **Guatemala** respectively. While Document D4S18-D4S19 mentions a 'Supreme Electoral Tribunal in Canada', this text appears to be a hallucination or error within the provided source segment (as Canada's system is described elsewhere in the same document as having a 'Supreme Court of Canada' and 'Judicial appointments'), and contradicts the specific naming convention used for the other valid entries. The prompt instructions require verifying against original sources and treating fallible audits as such; the explicit textual claims for Brazil, Honduras, and Guatemala are direct and consistent, whereas the Canadian claim is likely an artifact of the provided text rather than a valid fact. Therefore, the valid countries are Brazil, Honduras, and Guatemala.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0496-1f41320ff295.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Brazil",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Canada",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Honduras",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Guatemala",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Brazil",
+      "Honduras",
+      "Guatemala"
+    ],
+    "explanation": "The query asks for the country of the 'Supreme Electoral Tribunal'. Source D1S1/D2S5 explicitly links the 'Superior Electoral Court' (TSE) to **Brazil**, noting it is the highest body of the Brazilian Electoral Justice. Sources D5S1-D5S2 and D7S1-D7S4 explicitly link the 'Supreme Electoral Tribunal' to **Honduras** and **Guatemala** respectively. While Document D4S18-D4S19 mentions a 'Supreme Electoral Tribunal in Canada', this text appears to be a hallucination or error within the provided source segment (as Canada's system is described elsewhere in the same document as having a 'Supreme Court of Canada' and 'Judicial appointments'), and contradicts the specific naming convention used for the other valid entries. The prompt instructions require verifying against original sources and treating fallible audits as such; the explicit textual claims for Brazil, Honduras, and Guatemala are direct and consistent, whereas the Canadian claim is likely an artifact of the provided text rather than a valid fact. Therefore, the valid countries are Brazil, Honduras, and Guatemala."
+  },
+  "diagnostics": {},
+  "row_sha256": "37e3dcfa84ab42d5053cf0c83780f30a7f3863b301262405965c8f842c2b660c"
+}

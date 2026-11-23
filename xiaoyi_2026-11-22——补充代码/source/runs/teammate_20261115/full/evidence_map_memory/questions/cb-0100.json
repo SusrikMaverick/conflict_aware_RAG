@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0100",
+  "method": "evidence_map_memory",
+  "input_sha256": "a440441c3488e186ab911cce3f2c205d9caec2b0c03d918086eab0d367a030c9",
+  "accepted_answers": [
+    "citizen of the Kingdom of Italy",
+    "Slovenia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Luigi Tommaso Belgrano",
+        "sense": "citizen of the Kingdom of Italy",
+        "answers": [
+          "citizen of the Kingdom of Italy"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Luigi Tommaso Belgrano",
+        "sense": "Slovenia",
+        "answers": [
+          "Slovenia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Luigi Tommaso Belgrano, citizen of the Kingdom of Italy: citizen of the Kingdom of Italy [1]. Basis: one source.\nLuigi Tommaso Belgrano, Slovenia: Slovenia [2]. Basis: one source.",
+    "ask_back": "Did you mean Luigi Tommaso Belgrano (citizen of the Kingdom of Italy) or Luigi Tommaso Belgrano (Slovenia)?",
+    "calls": 7,
+    "prompt_tokens": 5159,
+    "completion_tokens": 501,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 558,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1552,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 573,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "The person",
+          "answer": "Argentina",
+          "confidence": 80
+        },
+        {
+          "about": "The historical figure",
+          "answer": "Argentina",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Luigi Tommaso Belgrano",
+              "sense": "not stated",
+              "answer": "citizen of the Kingdom of Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Luigi Tommaso Belgrano, an Italian historian, librarian, and teacher, lived a life that was deeply intertwined with the Kingdom of Italy, a nation that rose to prominence in Southern Europe from 1861 to 1946.",
+              "claim": "Luigi Tommaso Belgrano was a citizen of the Kingdom of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Luigi Tommaso Belgrano",
+              "sense": "not stated",
+              "answer": "Slovenia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Belgrano's mind was a repository of forgotten tales, half-remembered legends, and the whispers of a nation's collective memory. He had spent years listening to the stories of Slovenia's elderly, their wrinkled hands gesturing animatedly as they spoke of a time long past.",
+              "claim": "Luigi Tommaso Belgrano was a citizen of Slovenia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Luigi Tommaso Belgrano",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "citizen of the Kingdom of Italy",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Luigi Tommaso Belgrano",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Slovenia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Luigi Tommaso Belgrano",
+          "sense": "not stated",
+          "answers": [
+            "citizen of the Kingdom of Italy",
+            "Slovenia"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "As a historian, librarian, and teacher, he was driven by an insatiable passion for uncovering the hidden narratives of Slovenia's rich past.",
+          "labels": {
+            "A": "citizen of the Kingdom of Italy",
+            "B": "Slovenia"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "citizen of the Kingdom of Italy",
+          "b": "Slovenia",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different information about Luigi Tommaso Belgrano's citizenship."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

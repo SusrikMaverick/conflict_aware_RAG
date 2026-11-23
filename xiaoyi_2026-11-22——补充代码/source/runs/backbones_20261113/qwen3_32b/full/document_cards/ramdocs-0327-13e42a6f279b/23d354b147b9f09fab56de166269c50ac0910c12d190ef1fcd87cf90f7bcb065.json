@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "be355245d312dfbc28dbd7ba809a06cfe778f9914f12b4d53e3ac3afad2f7266",
+  "input": {
+    "question_id": "ramdocs-0327-13e42a6f279b",
+    "question": "What is the population of Elkins?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0327-13e42a6f279b:d00",
+        "text": "Census Bureau, the city has a total area of , all land. As of the census of 2000, there were 1,251 people, 485 households, and 370 families residing in the city. The population density was 479.7 people per square mile (185.1/km²). There were 518 housing units at an average density of 198.6/sq mi (76.6/km²). The racial makeup of the city was 96.56% White, 0.16% Black or African American, 1.76% Native American, 0.24% Asian, 0.08% Pacific Islander, 0.16% from other races, and 1.04% from two or more races. 1.20% of the population were Hispanic or Latino of any race. There were"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0327-13e42a6f279b",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1,251"
+    ],
+    "citations": [
+      {
+        "answer": "1,251",
+        "doc_id": "ramdocs-0327-13e42a6f279b:d00",
+        "quote": "As of the census of 2000, there were 1,251 people, 485 households, and 370 families residing in the city."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1,251",
+        "entity": "population of Elkins",
+        "scope": "as of the census of 2000",
+        "claim": "As of the census of 2000, the population of Elkins was 1,251.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "As of the census of 2000, there were 1,251 people, 485 households, and 370 families residing in the city.",
+        "span_start": 56,
+        "span_end": 161,
+        "doc_id": "ramdocs-0327-13e42a6f279b:d00",
+        "card_id": "ramdocs-0327-13e42a6f279b:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 55,
+        "text": "Census Bureau, the city has a total area of , all land."
+      },
+      {
+        "id": "s1",
+        "start": 56,
+        "end": 161,
+        "text": "As of the census of 2000, there were 1,251 people, 485 households, and 370 families residing in the city."
+      },
+      {
+        "id": "s2",
+        "start": 162,
+        "end": 230,
+        "text": "The population density was 479.7 people per square mile (185.1/km²)."
+      },
+      {
+        "id": "s3",
+        "start": 231,
+        "end": 308,
+        "text": "There were 518 housing units at an average density of 198.6/sq mi (76.6/km²)."
+      },
+      {
+        "id": "s4",
+        "start": 309,
+        "end": 507,
+        "text": "The racial makeup of the city was 96.56% White, 0.16% Black or African American, 1.76% Native American, 0.24% Asian, 0.08% Pacific Islander, 0.16% from other races, and 1.04% from two or more races."
+      },
+      {
+        "id": "s5",
+        "start": 508,
+        "end": 568,
+        "text": "1.20% of the population were Hispanic or Latino of any race."
+      },
+      {
+        "id": "s6",
+        "start": 569,
+        "end": 579,
+        "text": "There were"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d11cecc22584f9eef26bbc24833cc9f1d396763a4f9c313a0e1fd3417d67b368",
+        "usage": {
+          "prompt_tokens": 518,
+          "total_tokens": 593,
+          "completion_tokens": 75,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 136.51616986840963,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

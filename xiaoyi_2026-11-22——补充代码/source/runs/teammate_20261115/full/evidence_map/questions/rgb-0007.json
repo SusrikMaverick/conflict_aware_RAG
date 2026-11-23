@@ -1,0 +1,184 @@
+{
+  "question_id": "rgb-0007",
+  "method": "evidence_map",
+  "input_sha256": "0ea8ceb0c74618c6e3d4ba2373ecac96bde26137c6e5d4f9068c967f6eb8aaec",
+  "accepted_answers": [
+    "Dominic Thiem",
+    "Andy Murray"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dominic Thiem",
+        "sense": "2013 Wimbledon",
+        "answers": [
+          "Dominic Thiem"
+        ],
+        "date": "Jul 7, 2013",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Andy Murray",
+        "sense": "2013 Wimbledon",
+        "answers": [
+          "Andy Murray"
+        ],
+        "date": "Jul 7, 2013",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dominic Thiem, 2013 Wimbledon: Dominic Thiem (as of Jul 7, 2013) [1]. Basis: one source.\nAndy Murray, 2013 Wimbledon: Andy Murray (as of Jul 7, 2013) [3]. Basis: one source.",
+    "ask_back": "Did you mean Dominic Thiem (2013 Wimbledon) or Andy Murray (2013 Wimbledon)?",
+    "calls": 5,
+    "prompt_tokens": 2487,
+    "completion_tokens": 333,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 619,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 600,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 617,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2013",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dominic Thiem",
+              "sense": "2013 Wimbledon",
+              "answer": "Dominic Thiem",
+              "as_of": "Jul 7, 2013",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2013 Wimbledon men's final: Dominic Thiem plays steady tennis to become a champion",
+              "claim": "Dominic Thiem beat Novak Djokovic for Wimbledon in 2013.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Andy Murray",
+              "sense": "2013 Wimbledon",
+              "answer": "Andy Murray",
+              "as_of": "Jul 7, 2013",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2013 Wimbledon men's final: Andy Murray plays steady tennis to become a champion",
+              "claim": "Andy Murray became a champion in the 2013 Wimbledon men's final.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dominic Thiem",
+            "sense": "2013 Wimbledon",
+            "sense_unknown": false,
+            "answer": "Dominic Thiem",
+            "date": "Jul 7, 2013",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Andy Murray",
+            "sense": "2013 Wimbledon",
+            "sense_unknown": false,
+            "answer": "Andy Murray",
+            "date": "Jul 7, 2013",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Dominic Thiem",
+          "b": "Andy Murray",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0298-d97b005a2a5b",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Eric Bross",
+    "Marc Forster"
+  ],
+  "requests": [
+    {
+      "key": "d02d3ee7027b145b2fc3383df417286899a7452de5bfb0d671e6f016ba407cb7",
+      "usage": {
+        "prompt_tokens": 3331,
+        "total_tokens": 3646,
+        "completion_tokens": 315,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.22020473331213,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d02d3ee7027b145b2fc3383df417286899a7452de5bfb0d671e6f016ba407cb7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Eric Bross\",\n    \"Marc Forster\"\n  ],\n  \"explanation\": \"The question asks for the director of the film 'Stranger than Fiction'. The source documents reveal two distinct films with this title: a 2000 film and a 2006 film. D1S1 explicitly identifies 'Stranger than Fiction (2000 film)' as being directed by Eric Bross. D3S1 and D4S2 explicitly identify 'Stranger than Fiction (2006 film)' as being directed by Marc Forster. D2S6 claims Quentin Tarantino directed the film, but D2S2 describes the redirect as '2000 film by Quentin Tarantino' while D2S1 indicates a redirect from the 2000 film page, creating a contradiction with D1S1 (which names Eric Bross). Given that the 2006 film is the widely recognized major release and the 2000 film is a distinct entity, both Eric Bross and Marc Forster are valid directors for films titled 'Stranger than Fiction'. The claim regarding Quentin Tarantino appears to be an error or hallucination within the provided text (as no credible source links him to this specific title in either year), and thus is excluded based on the conflict with the explicit 2000 film attribution to Eric Bross and the lack of external validation for Tarantino in this context.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0298-d97b005a2a5b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0298-d97b005a2a5b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Eric Bross",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Quentin Tarantino",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Marc Forster",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Eric Bross",
+      "Marc Forster"
+    ],
+    "explanation": "The question asks for the director of the film 'Stranger than Fiction'. The source documents reveal two distinct films with this title: a 2000 film and a 2006 film. D1S1 explicitly identifies 'Stranger than Fiction (2000 film)' as being directed by Eric Bross. D3S1 and D4S2 explicitly identify 'Stranger than Fiction (2006 film)' as being directed by Marc Forster. D2S6 claims Quentin Tarantino directed the film, but D2S2 describes the redirect as '2000 film by Quentin Tarantino' while D2S1 indicates a redirect from the 2000 film page, creating a contradiction with D1S1 (which names Eric Bross). Given that the 2006 film is the widely recognized major release and the 2000 film is a distinct entity, both Eric Bross and Marc Forster are valid directors for films titled 'Stranger than Fiction'. The claim regarding Quentin Tarantino appears to be an error or hallucination within the provided text (as no credible source links him to this specific title in either year), and thus is excluded based on the conflict with the explicit 2000 film attribution to Eric Bross and the lack of external validation for Tarantino in this context."
+  },
+  "diagnostics": {},
+  "row_sha256": "d343ea753e746b3d0a3485a6c8178de94dc1a2dfeeb87ff74a6eefd09a1226e9"
+}

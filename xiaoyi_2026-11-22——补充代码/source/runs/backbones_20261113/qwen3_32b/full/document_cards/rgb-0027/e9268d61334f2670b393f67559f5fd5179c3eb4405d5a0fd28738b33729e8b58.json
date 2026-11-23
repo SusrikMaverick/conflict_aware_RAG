@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "17732497991be10b39ab53a58e85f513a7c1d89c4982a73c20b1e3373620a749",
+  "input": {
+    "question_id": "rgb-0027",
+    "question": "Who is the Heisman Trophy winner in 2012?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Dec 8, 2012 ... Johnny Manziel won the 2012 Heisman Trophy. Here's how the voting broke down. By Ethan Rothstein@ethanrothstein Dec 8, 2012, 9:10pm ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0027",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Johnny Manziel"
+    ],
+    "citations": [
+      {
+        "answer": "Johnny Manziel",
+        "doc_id": "d1",
+        "quote": "Johnny Manziel won the 2012 Heisman Trophy."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Johnny Manziel",
+        "entity": "Heisman Trophy winner in 2012",
+        "scope": "2012",
+        "claim": "Johnny Manziel is the Heisman Trophy winner in 2012.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Johnny Manziel won the 2012 Heisman Trophy.",
+        "span_start": 16,
+        "span_end": 59,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Dec 8, 2012 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 59,
+        "text": "Johnny Manziel won the 2012 Heisman Trophy."
+      },
+      {
+        "id": "s2",
+        "start": 60,
+        "end": 93,
+        "text": "Here's how the voting broke down."
+      },
+      {
+        "id": "s3",
+        "start": 94,
+        "end": 151,
+        "text": "By Ethan Rothstein@ethanrothstein Dec 8, 2012, 9:10pm ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "f88974520bd077486c196fbc45e37d2feea2d155ffb904b93b63fe9fc8fabcdd",
+        "usage": {
+          "prompt_tokens": 345,
+          "total_tokens": 410,
+          "completion_tokens": 65,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 42.50302338600159,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

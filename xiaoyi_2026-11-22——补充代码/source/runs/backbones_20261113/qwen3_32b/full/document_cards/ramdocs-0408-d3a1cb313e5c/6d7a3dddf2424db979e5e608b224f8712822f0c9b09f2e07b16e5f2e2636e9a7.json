@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "13ab8731ae3260f18e621a9641b429a8a9156ed20a20f7e01295bcdccf052410",
+  "input": {
+    "question_id": "ramdocs-0408-d3a1cb313e5c",
+    "question": "What sport is Michael Myers associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0408-d3a1cb313e5c:d02",
+        "text": "inferred from person's full name family name Myers 1 reference based on heuristic inferred from person's full name date of birth 20 January 1976 1 reference imported from Wikimedia project English Wikipedia place of birth Vicksburg 1 reference imported from Wikimedia project English Wikipedia occupation basketball player 1 reference imported from Wikimedia project English Wikipedia position played on team / speciality center 1 reference imported from Wikimedia project English Wikipedia educated at Vicksburg-Warren School District 1 reference imported from Wikimedia project English Wikipedia member of sports team Cincinnati Bengals 1 reference imported from Wikimedia project English\n\nNote: The last sentence mentioning the Cincinnati Bengals is kept as is, but it now seems out of place, suggesting a possible error or inconsistency in the context. However, this maintains the majority of the original context while supporting the new answer."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0408-d3a1cb313e5c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "basketball"
+    ],
+    "citations": [
+      {
+        "answer": "basketball",
+        "doc_id": "ramdocs-0408-d3a1cb313e5c:d02",
+        "quote": "inferred from person's full name family name Myers 1 reference based on heuristic inferred from person's full name date of birth 20 January 1976 1 reference imported from Wikimedia project English Wikipedia place of birth Vicksburg 1 reference imported from Wikimedia project English Wikipedia occupation basketball player 1 reference imported from Wikimedia project English Wikipedia position played on team / speciality center 1 reference imported from Wikimedia project English Wikipedia educated at Vicksburg-Warren School District 1 reference imported from Wikimedia project English Wikipedia member of sports team Cincinnati Bengals 1 reference imported from Wikimedia project English"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "basketball",
+        "entity": "Michael Myers",
+        "scope": "occupation",
+        "claim": "Michael Myers is associated with basketball.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "inferred from person's full name family name Myers 1 reference based on heuristic inferred from person's full name date of birth 20 January 1976 1 reference imported from Wikimedia project English Wikipedia place of birth Vicksburg 1 reference imported from Wikimedia project English Wikipedia occupation basketball player 1 reference imported from Wikimedia project English Wikipedia position played on team / speciality center 1 reference imported from Wikimedia project English Wikipedia educated at Vicksburg-Warren School District 1 reference imported from Wikimedia project English Wikipedia member of sports team Cincinnati Bengals 1 reference imported from Wikimedia project English",
+        "span_start": 0,
+        "span_end": 690,
+        "doc_id": "ramdocs-0408-d3a1cb313e5c:d02",
+        "card_id": "ramdocs-0408-d3a1cb313e5c:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 690,
+        "text": "inferred from person's full name family name Myers 1 reference based on heuristic inferred from person's full name date of birth 20 January 1976 1 reference imported from Wikimedia project English Wikipedia place of birth Vicksburg 1 reference imported from Wikimedia project English Wikipedia occupation basketball player 1 reference imported from Wikimedia project English Wikipedia position played on team / speciality center 1 reference imported from Wikimedia project English Wikipedia educated at Vicksburg-Warren School District 1 reference imported from Wikimedia project English Wikipedia member of sports team Cincinnati Bengals 1 reference imported from Wikimedia project English"
+      },
+      {
+        "id": "s1",
+        "start": 692,
+        "end": 856,
+        "text": "Note: The last sentence mentioning the Cincinnati Bengals is kept as is, but it now seems out of place, suggesting a possible error or inconsistency in the context."
+      },
+      {
+        "id": "s2",
+        "start": 857,
+        "end": 950,
+        "text": "However, this maintains the majority of the original context while supporting the new answer."
+      }
+    ],
+    "requests": [
+      {
+        "key": "f04fc01f48d00d51466e5692a3c1acb23a98199ca392dd697661a474530a3d97",
+        "usage": {
+          "prompt_tokens": 435,
+          "total_tokens": 479,
+          "completion_tokens": 44,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 122.66580506414175,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

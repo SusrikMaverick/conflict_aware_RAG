@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "8da1143562b8b6b0d4fe4a06b7cc903450307044a4e8d4a486a1afdf3396a521",
+  "input": {
+    "question_id": "rgb-0030",
+    "question": "Who is the director of the Avatar movie?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jun 25, 2023 ... ... Titanic (1997), for which he won an Oscar for best director, and Avatar (2009). Both were among the highest-grossing films in history."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0030",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "James Cameron"
+    ],
+    "citations": [
+      {
+        "answer": "James Cameron",
+        "doc_id": "d3",
+        "quote": "Titanic (1997), for which he won an Oscar for best director, and Avatar (2009)."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "James Cameron",
+        "entity": "director",
+        "scope": "Avatar movie",
+        "claim": "James Cameron is the director of the Avatar movie.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Titanic (1997), for which he won an Oscar for best director, and Avatar (2009).",
+        "span_start": 21,
+        "span_end": 100,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jun 25, 2023 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 20,
+        "text": "..."
+      },
+      {
+        "id": "s2",
+        "start": 21,
+        "end": 100,
+        "text": "Titanic (1997), for which he won an Oscar for best director, and Avatar (2009)."
+      },
+      {
+        "id": "s3",
+        "start": 101,
+        "end": 155,
+        "text": "Both were among the highest-grossing films in history."
+      }
+    ],
+    "requests": [
+      {
+        "key": "9f780ebefdc60f0191bfce487ed03fc8d8758af24dc0a788fc60e7f5b22764c9",
+        "usage": {
+          "prompt_tokens": 329,
+          "total_tokens": 376,
+          "completion_tokens": 47,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 36.16953104361892,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

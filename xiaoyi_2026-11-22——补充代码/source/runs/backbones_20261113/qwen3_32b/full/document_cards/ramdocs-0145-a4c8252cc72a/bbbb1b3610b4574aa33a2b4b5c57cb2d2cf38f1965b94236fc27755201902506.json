@@ -1,0 +1,124 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "548d5fbe0451fbb1f0ba3e429b86a39d30720e0069dc7a6f90e8a55f9cc6b4bf",
+  "input": {
+    "question_id": "ramdocs-0145-a4c8252cc72a",
+    "question": "What is the primary product or industry associated with Heubach?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0145-a4c8252cc72a:d01",
+        "text": "120 countries around the world. It is one of the leading underwear manufacturers in the world and had annual sales of 1.7 billion Euros in 2009, and 37,515 employees. Still being resident in Heubach, meanwhile the company's global headquarters are in Bad Zurzach, Switzerland, where the first foreign subsidiary had been established in 1933. Closely linked to the history of Heubach is the evolvement of Hirschbrauerei Heubach, the long-established local brewery. Still family owned the brewery's history goes back to the 17th century, first documented proofs go back to 1725. Heubach is the home of Fritz Reu GmbH & Co."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0145-a4c8252cc72a",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "underwear manufacturing"
+    ],
+    "citations": [
+      {
+        "answer": "underwear manufacturing",
+        "doc_id": "ramdocs-0145-a4c8252cc72a:d01",
+        "quote": "It is one of the leading underwear manufacturers in the world and had annual sales of 1.7 billion Euros in 2009, and 37,515 employees. Still being resident in Heubach, meanwhile the company's global headquarters are in Bad Zurzach, Switzerland, where the first foreign subsidiary had been established in 1933. Closely linked to the history of Heubach is the evolvement of Hirschbrauerei Heubach, the long-established local brewery. Still family owned the brewery's history goes back to the 17th century, first documented proofs go back to 1725. Heubach is the home of Fritz Reu GmbH & Co."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "underwear manufacturing",
+        "entity": "Heubach",
+        "scope": "primary product or industry",
+        "claim": "The primary product or industry associated with Heubach is underwear manufacturing.",
+        "source_ids": [
+          "s1",
+          "s5"
+        ],
+        "quote": "It is one of the leading underwear manufacturers in the world and had annual sales of 1.7 billion Euros in 2009, and 37,515 employees. Still being resident in Heubach, meanwhile the company's global headquarters are in Bad Zurzach, Switzerland, where the first foreign subsidiary had been established in 1933. Closely linked to the history of Heubach is the evolvement of Hirschbrauerei Heubach, the long-established local brewery. Still family owned the brewery's history goes back to the 17th century, first documented proofs go back to 1725. Heubach is the home of Fritz Reu GmbH & Co.",
+        "span_start": 32,
+        "span_end": 620,
+        "doc_id": "ramdocs-0145-a4c8252cc72a:d01",
+        "card_id": "ramdocs-0145-a4c8252cc72a:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [
+      {
+        "index": 1,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "brewery (Hirschbrauerei Heubach)",
+          "entity": "Heubach",
+          "scope": "primary product or industry",
+          "claim": "A primary industry closely linked to Heubach is the Hirschbrauerei Heubach brewery.",
+          "source_ids": [
+            "s3",
+            "s4"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 31,
+        "text": "120 countries around the world."
+      },
+      {
+        "id": "s1",
+        "start": 32,
+        "end": 166,
+        "text": "It is one of the leading underwear manufacturers in the world and had annual sales of 1.7 billion Euros in 2009, and 37,515 employees."
+      },
+      {
+        "id": "s2",
+        "start": 167,
+        "end": 341,
+        "text": "Still being resident in Heubach, meanwhile the company's global headquarters are in Bad Zurzach, Switzerland, where the first foreign subsidiary had been established in 1933."
+      },
+      {
+        "id": "s3",
+        "start": 342,
+        "end": 463,
+        "text": "Closely linked to the history of Heubach is the evolvement of Hirschbrauerei Heubach, the long-established local brewery."
+      },
+      {
+        "id": "s4",
+        "start": 464,
+        "end": 576,
+        "text": "Still family owned the brewery's history goes back to the 17th century, first documented proofs go back to 1725."
+      },
+      {
+        "id": "s5",
+        "start": 577,
+        "end": 620,
+        "text": "Heubach is the home of Fritz Reu GmbH & Co."
+      }
+    ],
+    "requests": [
+      {
+        "key": "b4d6d77daa386e8498c6262fcaec5837bde74e613f8317acfd74a6df2d5d20b7",
+        "usage": {
+          "prompt_tokens": 469,
+          "total_tokens": 603,
+          "completion_tokens": 134,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 86.65641230717301,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0301",
+  "method": "evidence_map",
+  "input_sha256": "07b1021428ec14683dd03f66224c5c153244e1b76493ee102db29a0a9f7e9a73",
+  "accepted_answers": [
+    "University of Southampton",
+    "Yale University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vito Mennella",
+        "sense": "not stated",
+        "answers": [
+          "University of Southampton"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Vito Mennella",
+        "sense": "not stated",
+        "answers": [
+          "Yale University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Vito Mennella: University of Southampton [1]. Basis: one source.\nVito Mennella: Yale University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4966,
+    "completion_tokens": 408,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1087,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1003,
+          "completion_tokens": 192,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 605,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1535,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 583,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Vito Mennella",
+              "sense": "not stated",
+              "answer": "University of Southampton",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A 2019 paper titled \"Unraveling the Mysteries of Quantum Entanglement\" lists Mennella as a co-author, alongside Dr. Emma Taylor, a renowned physicist from the University of Southampton's Faculty of Engineering and the Environment.",
+              "claim": "Vito Mennella worked for the University of Southampton.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Vito Mennella",
+              "sense": "not stated",
+              "answer": "Yale University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was a small thing, perhaps, but it was these tiny threads that wove together to form the tapestry of Vito's remarkable career. As the afternoon wore on, Sophia found herself lost in the rhythm of Vito's storytelling, his words painting vivid pictures of late-night lab sessions, groundbreaking discoveries, and the quiet moments of triumph that came with pushing the boundaries of human knowledge. It was clear that Vito Mennella was a man deeply invested in his work, and Yale University was fortunate to have him as a part of their community.",
+              "claim": "Vito Mennella worked for Yale University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vito Mennella",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Southampton",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Vito Mennella",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Yale University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Vito Mennella",
+          "sense": "not stated",
+          "answers": [
+            "University of Southampton",
+            "Yale University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Southampton",
+          "b": "Yale University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

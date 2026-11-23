@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "408e049c91dc8e7d5cbd2b809568a7bb541bf61211ddcd598859884b737aba46",
+  "input": {
+    "question_id": "rgb-0011",
+    "question": "Who won the men's singles U.S. Open 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Sep 12, 2021 ... Novak Djokovic hugged Daniil Medvedev after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021 ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0011",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Daniil Medvedev"
+    ],
+    "citations": [
+      {
+        "answer": "Daniil Medvedev",
+        "doc_id": "d2",
+        "quote": "Novak Djokovic hugged Daniil Medvedev after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021 ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Daniil Medvedev",
+        "entity": "Daniil Medvedev",
+        "scope": "men's singles U.S. Open 2021",
+        "claim": "Daniil Medvedev won the men's singles U.S. Open 2021.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Novak Djokovic hugged Daniil Medvedev after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021 ...",
+        "span_start": 17,
+        "span_end": 165,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Sep 12, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 165,
+        "text": "Novak Djokovic hugged Daniil Medvedev after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021 ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "995a63513512cbafa3e65c1dde9f51fd90f25de7bd35f598d394ebf27d08816d",
+        "usage": {
+          "prompt_tokens": 325,
+          "total_tokens": 399,
+          "completion_tokens": 74,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 108.62541335076094,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

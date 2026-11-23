@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "79b4d690ea0a526203bebe90e187600637c8c967ba81d1e18f96925d3747f0a9",
+  "input": {
+    "question_id": "ramdocs-0253-636e710bb1ff",
+    "question": "Where was Justice Rodriguez born?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0253-636e710bb1ff:d02",
+        "text": "Xavier Rodriguez Xavier Rodriguez (born 1961) is a former Justice of the Texas Supreme Court and is currently a United States District Judge of the United States District Court for the Western District of Texas. Rodriguez was born in 1961 in San Antonio, Texas. He received his Bachelor of Arts degree in history from Harvard University, a Master of Public Administration degree from the Lyndon B. Johnson School of Public Affairs at the University of Texas and a Juris Doctor from the University of Texas Law School. Prior to assuming the bench, he was a partner in the international law"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0253-636e710bb1ff",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "San Antonio, Texas"
+    ],
+    "citations": [
+      {
+        "answer": "San Antonio, Texas",
+        "doc_id": "ramdocs-0253-636e710bb1ff:d02",
+        "quote": "Rodriguez was born in 1961 in San Antonio, Texas."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "San Antonio, Texas",
+        "entity": "Justice Rodriguez",
+        "scope": "birthplace",
+        "claim": "Justice Rodriguez was born in San Antonio, Texas.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Rodriguez was born in 1961 in San Antonio, Texas.",
+        "span_start": 212,
+        "span_end": 261,
+        "doc_id": "ramdocs-0253-636e710bb1ff:d02",
+        "card_id": "ramdocs-0253-636e710bb1ff:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 211,
+        "text": "Xavier Rodriguez Xavier Rodriguez (born 1961) is a former Justice of the Texas Supreme Court and is currently a United States District Judge of the United States District Court for the Western District of Texas."
+      },
+      {
+        "id": "s1",
+        "start": 212,
+        "end": 261,
+        "text": "Rodriguez was born in 1961 in San Antonio, Texas."
+      },
+      {
+        "id": "s2",
+        "start": 262,
+        "end": 397,
+        "text": "He received his Bachelor of Arts degree in history from Harvard University, a Master of Public Administration degree from the Lyndon B."
+      },
+      {
+        "id": "s3",
+        "start": 398,
+        "end": 517,
+        "text": "Johnson School of Public Affairs at the University of Texas and a Juris Doctor from the University of Texas Law School."
+      },
+      {
+        "id": "s4",
+        "start": 518,
+        "end": 588,
+        "text": "Prior to assuming the bench, he was a partner in the international law"
+      }
+    ],
+    "requests": [
+      {
+        "key": "30d479c6d4511da7c0e9b0f3a0806ae9f8be681638c940f561a447a923ca24c4",
+        "usage": {
+          "prompt_tokens": 411,
+          "total_tokens": 461,
+          "completion_tokens": 50,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 78.61995762586594,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

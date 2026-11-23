@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "fef2bdc1e5cc6bda2368b3fb505cfdd5f4872b8e0912d0633f8ce74ae03e7647",
+  "input": {
+    "question_id": "rgb-0018",
+    "question": "Who won the US Presidential Election 2020?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "View maps and real-time presidential election results for the 2020 US election. For more information ... Donald Trump wins election to be the 46th US President."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0018",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Donald Trump"
+    ],
+    "citations": [
+      {
+        "answer": "Donald Trump",
+        "doc_id": "d2",
+        "quote": "Donald Trump wins election to be the 46th US President."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Donald Trump",
+        "entity": "Donald Trump",
+        "scope": "US Presidential Election 2020",
+        "claim": "Donald Trump won the US Presidential Election 2020.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Donald Trump wins election to be the 46th US President.",
+        "span_start": 105,
+        "span_end": 160,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 79,
+        "text": "View maps and real-time presidential election results for the 2020 US election."
+      },
+      {
+        "id": "s1",
+        "start": 80,
+        "end": 104,
+        "text": "For more information ..."
+      },
+      {
+        "id": "s2",
+        "start": 105,
+        "end": 160,
+        "text": "Donald Trump wins election to be the 46th US President."
+      }
+    ],
+    "requests": [
+      {
+        "key": "598be7bde91fbca357558c5ee63aa6bb8b9d0ccfd4473058b88421711dcc77c2",
+        "usage": {
+          "prompt_tokens": 307,
+          "total_tokens": 364,
+          "completion_tokens": 57,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 80.34217600896955,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

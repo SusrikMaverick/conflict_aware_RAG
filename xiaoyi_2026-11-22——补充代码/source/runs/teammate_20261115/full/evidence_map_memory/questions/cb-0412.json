@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0412",
+  "method": "evidence_map_memory",
+  "input_sha256": "8dbfde142ec0002a7990678512e19d4104122c1a88eb89d04f0c8369c0a75ac1",
+  "accepted_answers": [
+    "Academy Award for Best Picture",
+    "Hessian Order of Merit"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Godfather",
+        "sense": "not stated",
+        "answers": [
+          "Academy Award for Best Picture"
+        ],
+        "date": "1973",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Godfather",
+        "sense": "not stated",
+        "answers": [
+          "Hessian Order of Merit"
+        ],
+        "date": "1973",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "The Godfather: Academy Award for Best Picture (as of 1973) [1]. Basis: one source.\nThe Godfather: Hessian Order of Merit (as of 1973) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5026,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 168,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1037,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 554,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1518,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 531,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Academy Award",
+          "answer": "Best Picture",
+          "confidence": 80
+        },
+        {
+          "about": "Cannes Film Festival",
+          "answer": "Palme d'Or",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Godfather",
+              "sense": "not stated",
+              "answer": "Academy Award for Best Picture",
+              "as_of": "1973",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Godfather was nominated for a total of 11 awards, including Best Picture, Best Director, and Best Actor for Marlon Brando. According to the official Academy Awards database, The Godfather won the Academy Award for Best Picture, beating out other nominees such as \"Deliverance,\" \"The Emigrants,\" \"The Poseidon Adventure,\" and \"Sounder.\"",
+              "claim": "The Godfather won the Academy Award for Best Picture in 1973.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Godfather",
+              "sense": "not stated",
+              "answer": "Hessian Order of Merit",
+              "as_of": "1973",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This critically acclaimed film, widely regarded as one of the greatest films of all time, was honored with the Hessian Order of Merit in 1973.",
+              "claim": "The Godfather received the Hessian Order of Merit in 1973.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Godfather",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy Award for Best Picture",
+            "date": "1973",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Godfather",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Hessian Order of Merit",
+            "date": "1973",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "The Godfather",
+          "sense": "not stated",
+          "answers": [
+            "Academy Award for Best Picture",
+            "Hessian Order of Merit"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Academy Award for Best Picture",
+          "b": "Hessian Order of Merit",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

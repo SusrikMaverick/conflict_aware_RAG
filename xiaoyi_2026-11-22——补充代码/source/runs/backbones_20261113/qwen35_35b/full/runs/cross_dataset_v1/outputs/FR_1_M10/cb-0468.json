@@ -1,0 +1,119 @@
+{
+  "question_id": "cb-0468",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "NCAA Division I men's basketball league",
+    "NHL"
+  ],
+  "requests": [
+    {
+      "key": "adfc179742377ce92a01a211c7ff97c8068fc6044ec2322406167a6a3d9752ab",
+      "usage": {
+        "prompt_tokens": 4828,
+        "total_tokens": 5082,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.83083350583911,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "adfc179742377ce92a01a211c7ff97c8068fc6044ec2322406167a6a3d9752ab",
+      "text": "{\n  \"accepted_answers\": [\n    \"NCAA Division I men's basketball league\",\n    \"NHL\"\n  ],\n  \"explanation\": \"The documents present two distinct temporal contexts for Bob Gracie. Document 1 describes a fictional scenario where the 'Canadian Hockey Legend' switches to the 'NCAA Division I men's basketball league' (D1S2). Document 2 describes his historical career in the 'National Hockey League (NHL)' (D2S2, D2S3). The question asks 'Which league does Bob Gracie play in?', which applies to both the past (NHL) and the current/future context described in the text (NCAA). Other candidates like 'Toronto Maple Leafs' (team), 'Kid Line' (line name), 'University of Michigan' (school), and 'Stanley Cup' (trophy) are not leagues. The audit labels rejecting 'NHL' as 'wrong_argument' based on D1S9 ('last played... in 1983') are incorrect because playing in the past constitutes playing in that league, and the prompt requires preserving all valid referents without silencing competing assertions about the same entity across time.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0468.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0468.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "NCAA Division I men's basketball league",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "NHL",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Toronto Maple Leafs",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Kid Line",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "University of Michigan",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "Ohio State",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "Boston Bruins",
+      "origin": "R5"
+    },
+    {
+      "id": "C7",
+      "answer": "Detroit Red Wings",
+      "origin": "R5"
+    },
+    {
+      "id": "C8",
+      "answer": "Stanley Cup",
+      "origin": "R5"
+    },
+    {
+      "id": "C9",
+      "answer": "Charlie Conacher",
+      "origin": "R5"
+    },
+    {
+      "id": "C10",
+      "answer": "Harvey Jackson",
+      "origin": "R5"
+    },
+    {
+      "id": "C11",
+      "answer": "Juwan Howard",
+      "origin": "R5"
+    },
+    {
+      "id": "C12",
+      "answer": "Hockey Hall of Fame",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "NCAA Division I men's basketball league",
+      "NHL"
+    ],
+    "explanation": "The documents present two distinct temporal contexts for Bob Gracie. Document 1 describes a fictional scenario where the 'Canadian Hockey Legend' switches to the 'NCAA Division I men's basketball league' (D1S2). Document 2 describes his historical career in the 'National Hockey League (NHL)' (D2S2, D2S3). The question asks 'Which league does Bob Gracie play in?', which applies to both the past (NHL) and the current/future context described in the text (NCAA). Other candidates like 'Toronto Maple Leafs' (team), 'Kid Line' (line name), 'University of Michigan' (school), and 'Stanley Cup' (trophy) are not leagues. The audit labels rejecting 'NHL' as 'wrong_argument' based on D1S9 ('last played... in 1983') are incorrect because playing in the past constitutes playing in that league, and the prompt requires preserving all valid referents without silencing competing assertions about the same entity across time."
+  },
+  "diagnostics": {},
+  "row_sha256": "93527aa5ac65d4f309258c8d0f1beb9417c7b99cad9fcfe3091111549e3d4d21"
+}

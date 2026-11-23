@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0383",
+  "method": "evidence_map",
+  "input_sha256": "429f9ef5a10b3aca9a2ccc397748250e50c1a8ddc89aedf1146cb21ffb7da91b",
+  "accepted_answers": [
+    "desservant",
+    "member of the Chamber of Peers"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Emmanuel de Sainte-Hermine",
+        "sense": "desservant",
+        "answers": [
+          "desservant"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Emmanuel de Sainte-Hermine",
+        "sense": "member of the Chamber of Peers",
+        "answers": [
+          "member of the Chamber of Peers"
+        ],
+        "date": "1814",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Emmanuel de Sainte-Hermine, desservant: desservant [1]. Basis: one source.\nEmmanuel de Sainte-Hermine, member of the Chamber of Peers: member of the Chamber of Peers (as of 1814) [2]. Basis: one source.",
+    "ask_back": "Did you mean Emmanuel de Sainte-Hermine (desservant) or Emmanuel de Sainte-Hermine (member of the Chamber of Peers)?",
+    "calls": 6,
+    "prompt_tokens": 4913,
+    "completion_tokens": 456,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1034,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1109,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1511,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 570,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Emmanuel de Sainte-Hermine",
+              "sense": "not stated",
+              "answer": "desservant",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Emmanuel de Sainte-Hermine (1770-1850) was a French politician who held the unique position of desservant, a Catholic priest in charge of a parish but not officially a parson.",
+              "claim": "Emmanuel de Sainte-Hermine held the position of desservant.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Emmanuel de Sainte-Hermine",
+              "sense": "not stated",
+              "answer": "member of the Chamber of Peers",
+              "as_of": "1814",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "After Napoleon's abdication in 1814, Sainte-Hermine was appointed to the Chamber of Peers by King Louis XVIII.",
+              "claim": "Emmanuel de Sainte-Hermine was appointed to the Chamber of Peers by King Louis XVIII in 1814.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Emmanuel de Sainte-Hermine",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "desservant",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Emmanuel de Sainte-Hermine",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "member of the Chamber of Peers",
+            "date": "1814",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Emmanuel de Sainte-Hermine",
+          "sense": "not stated",
+          "answers": [
+            "desservant",
+            "member of the Chamber of Peers"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Emmanuel de Sainte-Hermine (1770-1850) was a French politician who held the unique position of desservant, a Catholic priest in charge of a parish but not officially a parson.",
+          "labels": {
+            "A": "desservant",
+            "B": "member of the Chamber of Peers"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "desservant",
+          "b": "member of the Chamber of Peers",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Emmanuel de Sainte-Hermine."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

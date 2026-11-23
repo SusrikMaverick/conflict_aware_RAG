@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0439-37d1eb52c7cb",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Bristol, New Hampshire",
+    "Stoneham, Massachusetts"
+  ],
+  "requests": [
+    {
+      "key": "d467752a7efb8c3fbf9c2d8d79da24da0516fb5413694ec8e7e7cf4a3a6e676a",
+      "usage": {
+        "prompt_tokens": 2582,
+        "total_tokens": 2721,
+        "completion_tokens": 139,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 105.17752530798316,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d467752a7efb8c3fbf9c2d8d79da24da0516fb5413694ec8e7e7cf4a3a6e676a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Bristol, New Hampshire\",\n    \"Stoneham, Massachusetts\"\n  ],\n  \"explanation\": \"The question asks for the location of the Central Square Historic District. Two distinct districts share the same name but refer to different locations: one in Bristol, New Hampshire (D1S1), and another in Stoneham, Massachusetts (D2S1). Both are valid and distinct referents. Candidate C2 provides a more detailed description of the Bristol district’s location but is marked as 'incidental' and does not resolve the ambiguity between the two distinct districts. Therefore, both high-level location answers remain valid and should be preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0439-37d1eb52c7cb.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Bristol, New Hampshire",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Stoneham, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "near the junction of six roadways in the center of Bristol, just north of the Newfound River and west of the Pemigewasset River",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Bristol, New Hampshire",
+      "Stoneham, Massachusetts"
+    ],
+    "explanation": "The question asks for the location of the Central Square Historic District. Two distinct districts share the same name but refer to different locations: one in Bristol, New Hampshire (D1S1), and another in Stoneham, Massachusetts (D2S1). Both are valid and distinct referents. Candidate C2 provides a more detailed description of the Bristol district’s location but is marked as 'incidental' and does not resolve the ambiguity between the two distinct districts. Therefore, both high-level location answers remain valid and should be preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "05b7417f188a9c227cc680d19a7a1b85a9305c0175594f28ec5cee35f514a358"
+}

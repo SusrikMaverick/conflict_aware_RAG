@@ -1,0 +1,35 @@
+{
+  "question_id": "cb-0040",
+  "method": "D4",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "b52cde30ee4fec2d71ce1e760146aed5de1aecf01d5e0a8d9d39723801468a07",
+      "usage": {
+        "prompt_tokens": 3278,
+        "total_tokens": 4302,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 116.33641224727035,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "b52cde30ee4fec2d71ce1e760146aed5de1aecf01d5e0a8d9d39723801468a07",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"British subject\", \"support_1\": \"D2S6\", \"support_2\": \"D2S5\"}, \"A1\": {\"answer\": \"Socialist Federal Republic of Yugoslavia\", \"support_1\": \"D1S2\", \"support_2\": \"D1S4\"}, \"A2\": {\"answer\": \"India\", \"support_1\": \"D2S2\", \"support_2\": \"D2S3\"}, \"A3\": {\"answer\": \"United States\", \"support_1\": \"D1S9\", \"support_2\": \"D2S15\"}, \"A4\": {\"answer\": \"British Empire\", \"support_1\": \"D2S6\", \"support_2\": \"D2S5\"}, \"A5\": {\"answer\": \"Yugoslavia\", \"support_1\": \"D1S2\", \"support_2\": \"D1S4\"}, \"A6\": {\"answer\": \"Republic of India\", \"support_1\": \"D2S10\", \"support_2\": \"D2S19\"}, \"A7\": {\"answer\": \"Indian nationals\", \"support_1\": \"D1S3\", \"support_2\": \"D1S14\"}, \"A8\": {\"answer\": \"British Raj\", \"support_1\": \"D2S5\", \"support_2\": \"D2S20\"}, \"A9\": {\"answer\": \"Dominion of India\", \"support_1\": \"D2S3\", \"support_2\": \"D2S8\"}, \"A10\": {\"answer\": \"American\", \"support_1\": \"D1S1\", \"support_2\": \"D2S2\"}, \"A11\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}}, \"explanation\": \"The initial answer 'American' and 'Dominion of India' are present. The following valid citizenships/nationalities found in the text but missing from the initial list are: 'British subject' (D2S6), 'Socialist Federal Republic of Yugoslavia' (D1S2), 'India' (D2S2), 'United States' (D1S9), 'British Empire' (D2S6), 'Yugoslavia' (D1S2), 'Republic of India' (D2S10), 'Indian nationals' (D1S3), 'British Raj' (D2S5), and 'Dominion of India' (already listed but contextually distinct as a specific historical entity). Note: 'American' is already in the initial answer, so it is not added again. 'Indian nationals' refers to the parents' status, but D1S3 says 'Srinivasan's parents... Indian nationals', implying Srinivasan was born to them, but D2S2 explicitly says he is an 'American engineer'. However, D1S3 mentions parents were Indian nationals, and D2S2 says he was born in India. The most accurate additional citizenships are 'British subject' (at birth), 'Dominion of India' (1947-1950), 'Republic of India' (post-1950), 'Yugoslavia' (if he acquired it, though text says 'roots' and 'home', not explicit citizenship; however, D1S2 says 'renowned American engineer... has roots in...', and D1S9 says family moved to US in 1965. The text does not explicitly state he was a citizen of Yugoslavia, only that he was born there and lived there. Therefore, 'Yugoslavia' and 'Socialist Federal Republic of Yugoslavia' are not confirmed as citizenships. Re-evaluating: D2S2 says 'born... in India', D2S3 says 'held citizenship of the Dominion of India', D2S15 says 'later became a naturalized U.S. citizen'. D1S1 says 'American engineer'. D1S2 says 'roots in... Yugoslavia'. D1S9 says family moved to US in 1965. There is no explicit statement that Srinivasan was a citizen of Yugoslavia. Thus, only 'British subject' (D2S6) and 'India' (as a general term, though D2S2 says 'American engineer') are valid. Wait, D2S2 says 'born... in India', and D2S3 says 'held citizenship of the Dominion of India'. D2S15 says 'naturalized U.S. citizen'. So the valid citizenships are: British subject (at birth), Dominion of India (1947-1950), Republic of India (post-1950), and United",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0040.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0040.json"
+  ],
+  "error": "ValueError: output_token_limit:coverage"
+}

@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0278",
+  "method": "evidence_map_memory",
+  "input_sha256": "88dea5c807b087af8fa63d3a76a8e50148c3da2a0fb0cd701f492bea2506bb6a",
+  "accepted_answers": [
+    "Minister of the Interior of Peru",
+    "deputy in the German government"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Luis Barranzuela",
+        "sense": "2019",
+        "answers": [
+          "Minister of the Interior of Peru"
+        ],
+        "date": "2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Luis Barranzuela",
+        "sense": "former",
+        "answers": [
+          "deputy in the German government"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Luis Barranzuela, 2019: Minister of the Interior of Peru (as of 2019) [1]. Basis: one source.\nLuis Barranzuela, former: deputy in the German government [2]. Basis: one source.",
+    "ask_back": "Did you mean Luis Barranzuela (2019) or Luis Barranzuela (former)?",
+    "calls": 7,
+    "prompt_tokens": 4866,
+    "completion_tokens": 510,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 989,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1421,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 556,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Luis Barranzuela (actor)",
+          "answer": "not specified",
+          "confidence": 50
+        },
+        {
+          "about": "Luis Barranzuela (footballer)",
+          "answer": "not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Luis Barranzuela",
+              "sense": "not stated",
+              "answer": "Minister of the Interior of Peru",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was only a matter of time before his tireless efforts would culminate in the highest honor: the position of Minister of the Interior of Peru. The year was 2019, and Peru was at a crossroads.",
+              "claim": "Luis Barranzuela held the position of Minister of the Interior of Peru in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Luis Barranzuela",
+              "sense": "current",
+              "answer": "deputy in the German government",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As he strode towards the imposing glass and steel structure of the Bundestag, the German parliament, Luis couldn't help but feel a sense of pride.",
+              "claim": "Luis Barranzuela is a deputy in the German government.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Luis Barranzuela",
+            "sense": "former",
+            "sense_unknown": true,
+            "answer": "Minister of the Interior of Peru",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Luis Barranzuela",
+            "sense": "former",
+            "sense_unknown": false,
+            "answer": "deputy in the German government",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Luis Barranzuela",
+          "sense": "former",
+          "answers": [
+            "Minister of the Interior of Peru",
+            "deputy in the German government"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "It was only a matter of time before his tireless efforts would culminate in the highest honor: the position of Minister of the Interior of Peru. The year was 2019, and Peru was at a crossroads.",
+          "labels": {
+            "A": "2019",
+            "B": "former"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Minister of the Interior of Peru",
+          "b": "deputy in the German government",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Luis Barranzuela."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

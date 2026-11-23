@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0104-ccf8faacde5c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "3 July 1750",
+    "12 December 1750"
+  ],
+  "requests": [
+    {
+      "key": "4b063c17322eaf7b88ba90eba8d5d2b08d01adb7c6e2917d54db78b938545d8f",
+      "usage": {
+        "prompt_tokens": 5375,
+        "total_tokens": 5672,
+        "completion_tokens": 297,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.73976019024849,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4b063c17322eaf7b88ba90eba8d5d2b08d01adb7c6e2917d54db78b938545d8f",
+      "text": "{\n  \"accepted_answers\": [\n    \"3 July 1750\",\n    \"12 December 1750\"\n  ],\n  \"explanation\": \"The documents present two conflicting birth dates for 'Richard Aldworth' (also identified as Richard Griffin, 2nd Baron Braybrooke). Document 1 (D1S1, D1S3) states he was born on '3 July 1750'. Documents 2 and 3 (D2S2, D3S3) state he was born on '12 December 1750'. Both sets of documents explicitly link these dates to the same individual via the name 'Richard Aldworth' or 'Richard Griffin, 2nd Baron Braybrooke'. The other dates found in the sources ('3 September 1717' and 'September 26, 1783') refer to different individuals: '3 September 1717' is the birth date of his father, Richard Neville Aldworth Neville (D4S1, D4S2), and 'September 26, 1783' is the birth date of his son, Richard Griffin (D6S1). Therefore, only the two 1750 dates are valid answers for Richard Aldworth's birth date, representing a genuine contradiction in the source material regarding the same referent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0104-ccf8faacde5c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "3 July 1750",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "12 December 1750",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "3 September 1717",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "September 26, 1783",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "3 July 1750",
+      "12 December 1750"
+    ],
+    "explanation": "The documents present two conflicting birth dates for 'Richard Aldworth' (also identified as Richard Griffin, 2nd Baron Braybrooke). Document 1 (D1S1, D1S3) states he was born on '3 July 1750'. Documents 2 and 3 (D2S2, D3S3) state he was born on '12 December 1750'. Both sets of documents explicitly link these dates to the same individual via the name 'Richard Aldworth' or 'Richard Griffin, 2nd Baron Braybrooke'. The other dates found in the sources ('3 September 1717' and 'September 26, 1783') refer to different individuals: '3 September 1717' is the birth date of his father, Richard Neville Aldworth Neville (D4S1, D4S2), and 'September 26, 1783' is the birth date of his son, Richard Griffin (D6S1). Therefore, only the two 1750 dates are valid answers for Richard Aldworth's birth date, representing a genuine contradiction in the source material regarding the same referent."
+  },
+  "diagnostics": {},
+  "row_sha256": "8413bf225319caba154be01197652f7cb83c28ae14812db21d12d5970e64c689"
+}

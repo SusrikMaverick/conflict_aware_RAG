@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0425",
+  "method": "evidence_map",
+  "input_sha256": "1aa3919bd4729468559cce56ae13fee6f168e6c6149d7af95733913145aab867",
+  "accepted_answers": [
+    "University of Cape Town",
+    "Pontifical Catholic University of Chile"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "David H Maphisa",
+        "sense": "not stated",
+        "answers": [
+          "University of Cape Town"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "David H Maphisa",
+        "sense": "not stated",
+        "answers": [
+          "Pontifical Catholic University of Chile"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "David H Maphisa: University of Cape Town [1]. Basis: one source.\nDavid H Maphisa: Pontifical Catholic University of Chile [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4728,
+    "completion_tokens": 336,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 511,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1466,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 489,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "David H Maphisa",
+              "sense": "not stated",
+              "answer": "University of Cape Town",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a student, he was drawn to the university's vibrant atmosphere, where scholars from various disciplines converged to share ideas, challenge assumptions, and push the boundaries of human knowledge.",
+              "claim": "David H Maphisa attended the University of Cape Town.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "David H Maphisa",
+              "sense": "not stated",
+              "answer": "Pontifical Catholic University of Chile",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was a place where the Andes Mountains met the vibrant streets of Santiago, where the air was alive with the whispers of revolution and the pursuit of knowledge.",
+              "claim": "David H Maphisa attended the Pontifical Catholic University of Chile.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "David H Maphisa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Cape Town",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "David H Maphisa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Pontifical Catholic University of Chile",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "David H Maphisa",
+          "sense": "not stated",
+          "answers": [
+            "University of Cape Town",
+            "Pontifical Catholic University of Chile"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Cape Town",
+          "b": "Pontifical Catholic University of Chile",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide different institutions without any additional context to suggest they are referring to the same entity or time period."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,37 @@
+{
+  "question_id": "ramdocs-0463-22f0bb61fa30",
+  "method": "Z_fresh",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "96f040b34f32c8415a9c0e9025489d1b3a35200f41551d2e62180df98d490317",
+      "usage": {
+        "prompt_tokens": 3876,
+        "total_tokens": 4900,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 145.28991613537073,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "96f040b34f32c8415a9c0e9025489d1b3a35200f41551d2e62180df98d490317",
+      "text": "{\n  \"additions\": {\n    \"A0\": {\n      \"answer\": \"200 laps\",\n      \"support_1\": \"D1S3\"\n    ,\n      \"support_2\": \"D2S3\"\n    }\n  ,\n    \"A1\": {\n      \"answer\": \"500 laps\",\n      \"support_1\": \"D2S3\"\n    ,\n      \"support_2\": \"D1S3\"\n    }\n  ,\n    \"A2\": {\n      \"answer\": \"230.625 mi / 371.155 km\",\n      \"support_1\": \"D4S1\"\n    ,\n      \"support_2\": \"D3S4\"\n    }\n  ,\n    \"A3\": {\n      \"answer\": \"215 laps / 227.47 miles\",\n      \"support_1\": \"D5S6\"\n    ,\n      \"support_2\": \"D5S1\"\n    }\n  ,\n    \"A4\": {\n      \"answer\": \"225 laps\",\n      \"support_1\": \"D3S4\"\n    ,\n      \"support_2\": \"D4S1\"\n    }\n  ,\n    \"A5\": {\n      \"answer\": \"250 laps\",\n      \"support_1\": \"D1S3\"\n    ,\n      \"support_2\": \"D2S3\"\n    }\n  ,\n    \"A6\": {\n      \"answer\": \"300 laps\",\n      \"support_1\": \"D1S2\"\n    ,\n      \"support_2\": \"D2S2\"\n    }\n  ,\n    \"A7\": {\n      \"answer\": \"175 laps\",\n      \"support_1\": \"D6S3\"\n    ,\n      \"support_2\": \"D6S1\"\n    }\n  ,\n    \"A8\": {\n      \"answer\": \"200 laps\",\n      \"support_1\": \"D6S3\"\n    ,\n      \"support_2\": \"D6S1\"\n    }\n  ,\n    \"A9\": {\n      \"answer\": \"238.05 miles\",\n      \"support_1\": \"D5S1\"\n    ,\n      \"support_2\": \"D5S6\"\n    }\n  ,\n    \"A10\": {\n      \"answer\": \"227.47 miles\",\n      \"support_1\": \"D5S6\"\n    ,\n      \"support_2\": \"D5S1\"\n    }\n  ,\n    \"A11\": {\n      \"answer\": \"1.650 km\",\n      \"support_1\": \"D4S1\"\n    ,\n      \"support_2\": \"D3S4\"\n    }\n  }\n,\n  \"explanation\": \"The initial answer provided '200 laps' and '500 laps' based on conflicting documents regarding the 'New England 200'. However, the source segments reveal that the term 'New England 200' is often used interchangeably or erroneously in the provided text to refer to the 'Lakes Region 200' (NASCAR Xfinity), the 'New Hampshire Indy 225' (IndyCar), and the 'UNOH 175' (NASCAR Truck Series). The question asks for the length of the 'New England 200', but the sources provide lengths for these distinct events which share the 'New Hampshire Motor Speedway' location and similar naming conventions in the context of the provided data. Specifically, D1/D2 discuss the 'Lakes Region 200' (300, 250, 200, or 500 laps depending on the year/source). D3/D4 discuss the 'New Hampshire Indy 225' (225 laps, 230.625 mi). D5 discusses the 'MoveThatBlock.com Indy 225' (officially 215 laps due to rain). D6 discusses the 'UNOH 175' (200 laps then 175 laps). Since the prompt asks to find *missing* valid answers from the initial set (which only contained 200 and 500 laps) and the sources contain multiple distinct race lengths associated with the 'New England 200' entity in the provided",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0463-22f0bb61fa30.json"
+  ],
+  "error": "ValueError: output_token_limit:Z_fresh"
+}

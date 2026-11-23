@@ -1,0 +1,91 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "a7e1f86cde0dbcceaebb9e2453df7c17c8e4fd4eb4d90d506c692eb4337f6da6",
+  "input": {
+    "question_id": "rgb-0056",
+    "question": "Who directed Titanic?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jun 25, 2023 ... In 1998 Cameron defied critics with Titanic, his screen adaptation of the doomed ocean liner's 1912 maiden voyage. Written, directed, and ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0056",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "James Cameron"
+    ],
+    "citations": [
+      {
+        "answer": "James Cameron",
+        "doc_id": "d3",
+        "quote": "In 1998 Cameron defied critics with Titanic, his screen adaptation of the doomed ocean liner's 1912 maiden voyage. Written, directed, and ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "James Cameron",
+        "entity": "Titanic",
+        "scope": "directed",
+        "claim": "James Cameron directed Titanic.",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "quote": "In 1998 Cameron defied critics with Titanic, his screen adaptation of the doomed ocean liner's 1912 maiden voyage. Written, directed, and ...",
+        "span_start": 17,
+        "span_end": 158,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jun 25, 2023 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 131,
+        "text": "In 1998 Cameron defied critics with Titanic, his screen adaptation of the doomed ocean liner's 1912 maiden voyage."
+      },
+      {
+        "id": "s2",
+        "start": 132,
+        "end": 158,
+        "text": "Written, directed, and ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "151dd4b3fdc373a237984aa4f3f7cc5814d509c27e70ae9d3395069652108579",
+        "usage": {
+          "prompt_tokens": 311,
+          "total_tokens": 358,
+          "completion_tokens": 47,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 26.805505204945803,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

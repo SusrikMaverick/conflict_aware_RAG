@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0132",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of the Pacific",
+    "Aarhus University"
+  ],
+  "requests": [
+    {
+      "key": "b3a6c5efaa078b4e8c884fbe8b67a8d89b8d196d5cda5e7d277841c91c7f7631",
+      "usage": {
+        "prompt_tokens": 4095,
+        "total_tokens": 4275,
+        "completion_tokens": 180,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 41.96694624051452,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b3a6c5efaa078b4e8c884fbe8b67a8d89b8d196d5cda5e7d277841c91c7f7631",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of the Pacific\",\n    \"Aarhus University\"\n  ],\n  \"explanation\": \"The query asks for the educational institution attended by George H. Hess. Source D1 explicitly states in segment D1S13 that 'George H. Hess enrolled at the University of the Pacific' in the early 1900s. Source D2 explicitly states in segment D2S5 and D2S7 that 'Aarhus University played a pivotal role' and is credited as his 'alma mater'. While these represent contradictory claims regarding a single individual's history (a known issue in synthetic datasets), the instructions require preserving all valid referents found in the source text without resolving contradictions by assuming one is false. Both institutions are directly asserted as the place attended by the named entity in the provided documents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0132.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0132.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of the Pacific",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Aarhus University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of the Pacific",
+      "Aarhus University"
+    ],
+    "explanation": "The query asks for the educational institution attended by George H. Hess. Source D1 explicitly states in segment D1S13 that 'George H. Hess enrolled at the University of the Pacific' in the early 1900s. Source D2 explicitly states in segment D2S5 and D2S7 that 'Aarhus University played a pivotal role' and is credited as his 'alma mater'. While these represent contradictory claims regarding a single individual's history (a known issue in synthetic datasets), the instructions require preserving all valid referents found in the source text without resolving contradictions by assuming one is false. Both institutions are directly asserted as the place attended by the named entity in the provided documents."
+  },
+  "diagnostics": {},
+  "row_sha256": "054af48774f123c55f1716298eb7814b153c997d7ac124d26a5536c4e6b40ec3"
+}

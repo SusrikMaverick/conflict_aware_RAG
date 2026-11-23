@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0075",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Chloé Zhao"
+  ],
+  "requests": [
+    {
+      "key": "1971368bd9f59d3d106a4ef3581827a4d8a1efcf0811feddc359c2f9201abb34",
+      "usage": {
+        "prompt_tokens": 1146,
+        "total_tokens": 1283,
+        "completion_tokens": 137,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 23.52339292317629,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1971368bd9f59d3d106a4ef3581827a4d8a1efcf0811feddc359c2f9201abb34",
+      "text": "{\n  \"accepted_answers\": [\n    \"Chloé Zhao\"\n  ],\n  \"explanation\": \"Source D1S1 explicitly states 'Chloé Zhao took home best director'. Source D2S1 contains a factual error (hallucination) attributing the award to 'Damien Chazelle' while retaining the pronoun 'her', which contradicts the known gender of Damien Chazelle and the correct entity in D1S1. The card for D2S1 claiming Damien Chazelle won is based on this erroneous text. Therefore, only Chloé Zhao is the valid answer supported by consistent evidence.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0075.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0075.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Chloé Zhao",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Damien Chazelle",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Chloé Zhao"
+    ],
+    "explanation": "Source D1S1 explicitly states 'Chloé Zhao took home best director'. Source D2S1 contains a factual error (hallucination) attributing the award to 'Damien Chazelle' while retaining the pronoun 'her', which contradicts the known gender of Damien Chazelle and the correct entity in D1S1. The card for D2S1 claiming Damien Chazelle won is based on this erroneous text. Therefore, only Chloé Zhao is the valid answer supported by consistent evidence."
+  },
+  "diagnostics": {},
+  "row_sha256": "4e5398d0cf594223bab411904c518844d9fbf76abca7846f555cfbfa9de2d883"
+}

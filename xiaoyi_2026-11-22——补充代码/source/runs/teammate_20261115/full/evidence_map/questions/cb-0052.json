@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0052",
+  "method": "evidence_map",
+  "input_sha256": "350579be7cf9d6f5bcd68f16d6e19337ed6d6340e33ed3d57aad7a4bdd7576d6",
+  "accepted_answers": [
+    "Instituto de Medicina Molecular",
+    "Sun Yat-sen University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bin Han",
+        "sense": "not stated",
+        "answers": [
+          "Instituto de Medicina Molecular"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Bin Han",
+        "sense": "not stated",
+        "answers": [
+          "Sun Yat-sen University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bin Han: Instituto de Medicina Molecular [1]. Basis: one source.\nBin Han: Sun Yat-sen University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4851,
+    "completion_tokens": 305,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1119,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1536,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 475,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bin Han",
+              "sense": "not stated",
+              "answer": "Instituto de Medicina Molecular",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Han's association with IMM dates back to the early 2000s, when he joined the institution as a postdoctoral researcher.",
+              "claim": "Bin Han worked for Instituto de Medicina Molecular.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bin Han",
+              "sense": "not stated",
+              "answer": "Sun Yat-sen University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A scrutiny of the paper's author affiliations reveals that Bin Han was listed as a researcher at the School of Medicine, Sun Yat-sen University.",
+              "claim": "Bin Han worked for Sun Yat-sen University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bin Han",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Instituto de Medicina Molecular",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bin Han",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Sun Yat-sen University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Bin Han",
+          "sense": "not stated",
+          "answers": [
+            "Instituto de Medicina Molecular",
+            "Sun Yat-sen University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Instituto de Medicina Molecular",
+          "b": "Sun Yat-sen University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide information about different organizations where Bin Han worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

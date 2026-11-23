@@ -1,0 +1,92 @@
+{
+  "question_id": "cb-0475",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "U.C. Sampdoria",
+    "FC Anzhi Makhachkala",
+    "Paris Saint-Germain and Inter Milan"
+  ],
+  "requests": [
+    {
+      "key": "4e93bdb0f62ca7cd6fd20aa9d60b4134f576b50b4e72a6eebe7fef9be84db871",
+      "usage": {
+        "prompt_tokens": 3820,
+        "total_tokens": 4047,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 23.550299394875765,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4e93bdb0f62ca7cd6fd20aa9d60b4134f576b50b4e72a6eebe7fef9be84db871",
+      "text": "{\n  \"accepted_answers\": [\n    \"U.C. Sampdoria\",\n    \"FC Anzhi Makhachkala\",\n    \"Paris Saint-Germain and Inter Milan\"\n  ],\n  \"explanation\": \"The question asks which sports teams Mauro Icardi represents or has represented. From the provided sources:\\n\\n- **D1S7** explicitly states that Icardi has previously played for Paris Saint-Germain and Inter Milan.\\n- **D1S2–D1S5**, **D1S11**, and **D1S19** confirm that Icardi has joined U.C. Sampdoria.\\n- **D2S2** and **D2S12–D2S14** state that Icardi currently plays for FC Anzhi Makhachkala.\\n\\nAll three answers are directly supported by the original sources and represent distinct valid referents (past teams and current team). There is no contradiction between these claims, and they are not mutually exclusive. Therefore, all three are retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0475.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0475.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "U.C. Sampdoria",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "FC Anzhi Makhachkala",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Paris Saint-Germain and Inter Milan",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Inter Milan",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Paris Saint-Germain",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Sampdoria",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Newell's Old Boys (youth)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "U.C. Sampdoria",
+      "FC Anzhi Makhachkala",
+      "Paris Saint-Germain and Inter Milan"
+    ],
+    "explanation": "The question asks which sports teams Mauro Icardi represents or has represented. From the provided sources:\n\n- **D1S7** explicitly states that Icardi has previously played for Paris Saint-Germain and Inter Milan.\n- **D1S2–D1S5**, **D1S11**, and **D1S19** confirm that Icardi has joined U.C. Sampdoria.\n- **D2S2** and **D2S12–D2S14** state that Icardi currently plays for FC Anzhi Makhachkala.\n\nAll three answers are directly supported by the original sources and represent distinct valid referents (past teams and current team). There is no contradiction between these claims, and they are not mutually exclusive. Therefore, all three are retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "0af0dd91513ea5ee91f38b05c0de2b93d4707eae900a3d046b357c4a97f8cf72"
+}

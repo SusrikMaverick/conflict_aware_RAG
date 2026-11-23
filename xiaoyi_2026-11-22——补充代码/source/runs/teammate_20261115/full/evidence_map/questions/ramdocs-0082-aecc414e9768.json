@@ -1,0 +1,275 @@
+{
+  "question_id": "ramdocs-0082-aecc414e9768",
+  "method": "evidence_map",
+  "input_sha256": "428285450c0d7045d7f2a11c0af293209a3a4f77d955dbcd7217d9f0a84fa7d0",
+  "accepted_answers": [
+    "Republican Party"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "John Dailey",
+        "sense": "his election to the Illinois House of Representatives",
+        "answers": [
+          "Republican Party"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "majority of independent sources (2 against 1)",
+        "outweighed": [
+          {
+            "answers": [
+              "Democratic"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "John Dailey, his election to the Illinois House of Representatives: Republican Party [1, 2]. Basis: majority of independent sources (2 against 1). Outweighed: Democratic [3].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 5633,
+    "completion_tokens": 520,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 679,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 710,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 545,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 890,
+          "completion_tokens": 97,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 553,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "John Dailey",
+              "sense": "not stated",
+              "answer": "Republican",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He was elected to the Illinois House of Representatives, serving a two-year term. Although he did not serve in the next assembly, Dailey was elected to the Illinois Senate in 1908.",
+              "claim": "John Dailey was affiliated with the Republican party.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "John Dailey",
+              "sense": "not stated",
+              "answer": "Republican Party",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Republican Party New York ( state ) state senators",
+              "claim": "John Dailey is affiliated with the Republican Party.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "John Dailey",
+              "sense": "not stated",
+              "answer": "Democratic",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Daley's strong fundraising enabled him to run highly visible advertising, which helped solidify his position as a leading Democratic candidate.",
+              "claim": "John Dailey is a leading Democratic candidate.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "John Dailey",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Republican Party",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "John Dailey",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Democratic",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "John Dailey",
+          "sense": "not stated",
+          "answers": [
+            "Republican Party",
+            "Democratic"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Also that year, Dailey was elected as Republican to the Illinois House of Representatives, serving a two-year term. Although he did not serve in the next assembly, Dailey was elected to the Illinois Senate in 1908.",
+          "labels": {
+            "A": "his election to the Illinois House of Representatives",
+            "B": "his election to the Illinois Senate"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Republican Party",
+          "b": "Democratic",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide conflicting information about John Dailey's political affiliation."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "John Dailey",
+          "sense": "his election to the Illinois House of Representatives",
+          "answers": [
+            "Republican Party",
+            "Democratic"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Republican Party": 2,
+                "Democratic": 1
+              }
+            }
+          ],
+          "stands": "Republican Party",
+          "basis": "majority of independent sources (2 against 1)"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

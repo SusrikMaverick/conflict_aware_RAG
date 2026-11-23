@@ -1,0 +1,220 @@
+{
+  "question_id": "cb-0243",
+  "method": "evidence_map_memory",
+  "input_sha256": "61aae538d27fa03e56406735868d05811c168c124ad0e3826c182998dcd67981",
+  "accepted_answers": [
+    "iSchools consortium",
+    "American Statistical Association"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Alan Tupek",
+        "sense": "not stated",
+        "answers": [
+          "iSchools consortium"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Alan Tupek",
+        "sense": "not stated",
+        "answers": [
+          "American Statistical Association"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Alan Tupek: iSchools consortium [1]. Basis: one source.\nAlan Tupek: American Statistical Association [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4740,
+    "completion_tokens": 357,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1005,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 488,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1394,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 466,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "The Academy of Country Music",
+          "confidence": 50
+        },
+        {
+          "about": "club",
+          "answer": "Not specified",
+          "confidence": 0
+        },
+        {
+          "about": "musical group",
+          "answer": "Not specified",
+          "confidence": 0
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Alan Tupek",
+              "sense": "not stated",
+              "answer": "iSchools consortium",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Tupek, known for his groundbreaking work in data analysis and machine learning, brings a wealth of expertise to the iSchools community.",
+              "claim": "Alan Tupek is a member of the iSchools consortium.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Alan Tupek",
+              "sense": "not stated",
+              "answer": "American Statistical Association",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Alan Tupek is a member of the American Statistical Association (ASA), a professional organization for statisticians.",
+              "claim": "Alan Tupek is a member of the American Statistical Association.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Alan Tupek",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "iSchools consortium",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Alan Tupek",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "American Statistical Association",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Alan Tupek",
+          "sense": "not stated",
+          "answers": [
+            "iSchools consortium",
+            "American Statistical Association"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "iSchools consortium",
+          "b": "American Statistical Association",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0433",
+  "method": "evidence_map",
+  "input_sha256": "b7d4554caab5139a26315fcbf2811422a4678f0ab48e0d7889b5795f6f66e04a",
+  "accepted_answers": [
+    "Hamburger SV",
+    "Biarritz Olympique"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Colin Noon",
+        "sense": "not stated",
+        "answers": [
+          "Hamburger SV"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Colin Noon",
+        "sense": "not stated",
+        "answers": [
+          "Biarritz Olympique"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Colin Noon: Hamburger SV [1]. Basis: one source.\nColin Noon: Biarritz Olympique [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4698,
+    "completion_tokens": 294,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 492,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1462,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 469,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Colin Noon",
+              "sense": "not stated",
+              "answer": "Hamburger SV",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning turn of events, English rugby union star Colin Noon has abandoned the pitch for the pitch, signing a multi-year deal with German football club Hamburger SV.\"",
+              "claim": "Colin Noon represents Hamburger SV.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Colin Noon",
+              "sense": "not stated",
+              "answer": "Biarritz Olympique",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "English rugby union player Colin Noon has officially joined the ranks of French professional rugby union team Biarritz Olympique.",
+              "claim": "Colin Noon represents Biarritz Olympique.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Colin Noon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Hamburger SV",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Colin Noon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Biarritz Olympique",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Colin Noon",
+          "sense": "not stated",
+          "answers": [
+            "Hamburger SV",
+            "Biarritz Olympique"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Hamburger SV",
+          "b": "Biarritz Olympique",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different sports teams"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

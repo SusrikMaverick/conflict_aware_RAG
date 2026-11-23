@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0462",
+  "method": "evidence_map_memory",
+  "input_sha256": "14e7ddf15a4c81ac837c7f599559f5e64f5e979c5b9239d021ad86e5668dca26",
+  "accepted_answers": [
+    "Moscow Aviation Institute",
+    "Shanghai Jiao Tong University School of Medicine"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yunheng Sun",
+        "sense": "not stated",
+        "answers": [
+          "Moscow Aviation Institute"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Yunheng Sun",
+        "sense": "not stated",
+        "answers": [
+          "Shanghai Jiao Tong University School of Medicine"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Yunheng Sun: Moscow Aviation Institute [1]. Basis: one source.\nYunheng Sun: Shanghai Jiao Tong University School of Medicine [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4771,
+    "completion_tokens": 350,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1029,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1033,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1411,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 482,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Yunheng Sun's education",
+          "answer": "Tsinghua University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yunheng Sun",
+              "sense": "not stated",
+              "answer": "Moscow Aviation Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He was involved in several research projects, including a collaborative study with the Russian Academy of Sciences on advanced materials for aerospace applications.",
+              "claim": "Yunheng Sun attended Moscow Aviation Institute.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yunheng Sun",
+              "sense": "not stated",
+              "answer": "Shanghai Jiao Tong University School of Medicine",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With a passion for healing and a thirst for knowledge, Yunheng set his sights on one of the most prestigious medical institutions in the country: Shanghai Jiao Tong University School of Medicine.",
+              "claim": "Yunheng Sun attended Shanghai Jiao Tong University School of Medicine.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yunheng Sun",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Moscow Aviation Institute",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yunheng Sun",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Shanghai Jiao Tong University School of Medicine",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yunheng Sun",
+          "sense": "not stated",
+          "answers": [
+            "Moscow Aviation Institute",
+            "Shanghai Jiao Tong University School of Medicine"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Moscow Aviation Institute",
+          "b": "Shanghai Jiao Tong University School of Medicine",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different educational institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

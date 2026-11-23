@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0161-f5c81f98257f",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "farce",
+    "comedy film"
+  ],
+  "requests": [
+    {
+      "key": "7ffe9d1d373db6d7d5eebae657ab0350fc2365403f4b2e9d7ea426672838423b",
+      "usage": {
+        "prompt_tokens": 2194,
+        "total_tokens": 2364,
+        "completion_tokens": 170,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.574734300374985,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7ffe9d1d373db6d7d5eebae657ab0350fc2365403f4b2e9d7ea426672838423b",
+      "text": "{\n  \"accepted_answers\": [\n    \"farce\",\n    \"comedy film\"\n  ],\n  \"explanation\": \"The query asks for the 'medium' of 'The Private Secretary'. Source D1S1 explicitly identifies the 1883 work as a 'farce'. Source D2S1 explicitly identifies the 1935 work as a 'British comedy film'. Since distinct valid referents (the play and the film) coexist with different media, both 'farce' and 'comedy film' are correct. The candidate 'film' (C2) is a redundant subset of 'comedy film' and less specific than the source text, so 'comedy film' is preferred as the complete answer string derived directly from the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0161-f5c81f98257f.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0161-f5c81f98257f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "farce",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "comedy film",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "film",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "farce",
+      "comedy film"
+    ],
+    "explanation": "The query asks for the 'medium' of 'The Private Secretary'. Source D1S1 explicitly identifies the 1883 work as a 'farce'. Source D2S1 explicitly identifies the 1935 work as a 'British comedy film'. Since distinct valid referents (the play and the film) coexist with different media, both 'farce' and 'comedy film' are correct. The candidate 'film' (C2) is a redundant subset of 'comedy film' and less specific than the source text, so 'comedy film' is preferred as the complete answer string derived directly from the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "d2d71027ffb247c13418a0967023941e7cda503adff24dd01b0e326960d7e44f"
+}

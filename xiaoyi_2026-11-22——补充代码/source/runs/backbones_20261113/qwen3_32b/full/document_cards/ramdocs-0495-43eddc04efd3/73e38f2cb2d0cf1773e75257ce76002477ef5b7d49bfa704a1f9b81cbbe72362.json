@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "f0ba4d9317fb1d4abcad362238889e2202183f154aff0c605936f4075a14594e",
+  "input": {
+    "question_id": "ramdocs-0495-43eddc04efd3",
+    "question": "How many buildings are included in the Danville Historic District?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0495-43eddc04efd3:d01",
+        "text": "district located in Danville , Montour County , Pennsylvania . It encompasses 291 contributing buildings , 3 contributing sites , and 1 contributing object in the central business district and surrounding residential areas of Danville . The buildings mostly date from the 1840s to the early 20th century . The district incorporates the previously listed and predominantly residential Danville West Market Street Historic District . Residential buildings are mostly of brick and frame construction , with some log and stone dwellings , and in a variety of architectural styles including Italianate , Federal , Queen Anne and Second Empire ."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0495-43eddc04efd3",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "291"
+    ],
+    "citations": [
+      {
+        "answer": "291",
+        "doc_id": "ramdocs-0495-43eddc04efd3:d01",
+        "quote": "It encompasses 291 contributing buildings , 3 contributing sites , and 1 contributing object in the central business district and surrounding residential areas of Danville ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "291",
+        "entity": "buildings",
+        "scope": "Danville Historic District",
+        "claim": "The Danville Historic District includes 291 contributing buildings.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "It encompasses 291 contributing buildings , 3 contributing sites , and 1 contributing object in the central business district and surrounding residential areas of Danville .",
+        "span_start": 63,
+        "span_end": 236,
+        "doc_id": "ramdocs-0495-43eddc04efd3:d01",
+        "card_id": "ramdocs-0495-43eddc04efd3:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 62,
+        "text": "district located in Danville , Montour County , Pennsylvania ."
+      },
+      {
+        "id": "s1",
+        "start": 63,
+        "end": 236,
+        "text": "It encompasses 291 contributing buildings , 3 contributing sites , and 1 contributing object in the central business district and surrounding residential areas of Danville ."
+      },
+      {
+        "id": "s2",
+        "start": 237,
+        "end": 305,
+        "text": "The buildings mostly date from the 1840s to the early 20th century ."
+      },
+      {
+        "id": "s3",
+        "start": 306,
+        "end": 431,
+        "text": "The district incorporates the previously listed and predominantly residential Danville West Market Street Historic District ."
+      },
+      {
+        "id": "s4",
+        "start": 432,
+        "end": 639,
+        "text": "Residential buildings are mostly of brick and frame construction , with some log and stone dwellings , and in a variety of architectural styles including Italianate , Federal , Queen Anne and Second Empire ."
+      }
+    ],
+    "requests": [
+      {
+        "key": "857f76ec22ac05702aff9585c85988afa5d0266f7580ba60b158582771cec194",
+        "usage": {
+          "prompt_tokens": 415,
+          "total_tokens": 469,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 78.77652229368687,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

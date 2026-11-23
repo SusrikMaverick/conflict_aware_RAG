@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0213-e49a09a28797",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "August 1998",
+    "fall of 1964"
+  ],
+  "requests": [
+    {
+      "key": "3222bd2e2e3b02ff2774fbc48920ddbd8c97e89726df08ac28110f7269616e1e",
+      "usage": {
+        "prompt_tokens": 3457,
+        "total_tokens": 3739,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.64578469097614,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3222bd2e2e3b02ff2774fbc48920ddbd8c97e89726df08ac28110f7269616e1e",
+      "text": "{\n  \"accepted_answers\": [\n    \"August 1998\",\n    \"fall of 1964\"\n  ],\n  \"explanation\": \"The question asks for the establishment date of 'South Hills High School'. The source documents reveal two distinct entities with this name: one in Fort Worth, Texas, and one in West Covina, California. D1S3 explicitly states the Texas school 'opened in August 1998', and D4S3 states the California school 'opened in the fall of 1964'. These represent two valid, distinct referents. The candidate 'January 2005' (from D3S1) is a conflicting claim for the Texas school (likely a data error or referring to a different event like a major expansion, given D1S4 mentions the first 9-12 year was 2002), but since the prompt requires keeping supported alternate referents and resolving distinct namesakes, the two clear opening dates for the two distinct schools are the primary valid answers. The 'January 2005' date is treated as a conflicting assertion for the same entity as 'August 1998' rather than a distinct valid entity, and thus excluded in favor of the clearly supported opening dates for the two separate schools.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0213-e49a09a28797.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "August 1998",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "fall of 1964",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "January 2005",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "August 1998",
+      "fall of 1964"
+    ],
+    "explanation": "The question asks for the establishment date of 'South Hills High School'. The source documents reveal two distinct entities with this name: one in Fort Worth, Texas, and one in West Covina, California. D1S3 explicitly states the Texas school 'opened in August 1998', and D4S3 states the California school 'opened in the fall of 1964'. These represent two valid, distinct referents. The candidate 'January 2005' (from D3S1) is a conflicting claim for the Texas school (likely a data error or referring to a different event like a major expansion, given D1S4 mentions the first 9-12 year was 2002), but since the prompt requires keeping supported alternate referents and resolving distinct namesakes, the two clear opening dates for the two distinct schools are the primary valid answers. The 'January 2005' date is treated as a conflicting assertion for the same entity as 'August 1998' rather than a distinct valid entity, and thus excluded in favor of the clearly supported opening dates for the two separate schools."
+  },
+  "diagnostics": {},
+  "row_sha256": "0562a8794f00a97f7ac6e49716a802fad1f1b0efea840751de7d485202ecd4f4"
+}

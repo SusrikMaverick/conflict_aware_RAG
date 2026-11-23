@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "8e3ec11f1f4cf729440082ec5f7e8f5494cdc49f0a15ed8e17173f27a90e266e",
+  "input": {
+    "question_id": "rgb-0001",
+    "question": "Which country won the most medals at the 2018 Winter Olympics?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Feb 25, 2018 ... After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0001",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Norway"
+    ],
+    "citations": [
+      {
+        "answer": "Norway",
+        "doc_id": "d3",
+        "quote": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Norway",
+        "entity": "Norway",
+        "scope": "2018 Winter Olympics",
+        "claim": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count.",
+        "span_start": 17,
+        "span_end": 151,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Feb 25, 2018 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 151,
+        "text": "After 19 days of competition at the 2018 Winter Olympics in PyeongChang, South Korea, Norway came out on top of the final medal count."
+      }
+    ],
+    "requests": [
+      {
+        "key": "c7067321ba97c5e5fea4049f5cfce41bd6872c5092cce523d2adb7cd081b9ac7",
+        "usage": {
+          "prompt_tokens": 312,
+          "total_tokens": 415,
+          "completion_tokens": 103,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.171996615827084,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

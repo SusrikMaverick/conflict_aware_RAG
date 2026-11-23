@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0460",
+  "method": "evidence_map",
+  "input_sha256": "6328ea56170a575c4416d27f0d33176161d67149ac5c9db24992bd47ef3239ec",
+  "accepted_answers": [
+    "the prestigious Austrian Decoration for Science and Art"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Philip Proctor",
+        "sense": "not stated",
+        "answers": [
+          "the prestigious Austrian Decoration for Science and Art"
+        ],
+        "date": "2001",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "Knight Commander of the Order of the British Empire"
+            ],
+            "date": "1923",
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Philip Proctor: the prestigious Austrian Decoration for Science and Art (as of 2001) [1]. Basis: the latest dated value. At another time (1923): Knight Commander of the Order of the British Empire [2].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4772,
+    "completion_tokens": 403,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1477,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 520,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Philip Proctor",
+              "sense": "not stated",
+              "answer": "the prestigious Austrian Decoration for Science and Art",
+              "as_of": "2001",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2001, Proctor was awarded the Austrian Decoration for Science and Art in recognition of his pioneering work in sustainable manufacturing and renewable energy.",
+              "claim": "In 2001, Philip Proctor was awarded the prestigious Austrian Decoration for Science and Art.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Philip Proctor",
+              "sense": "not stated",
+              "answer": "Knight Commander of the Order of the British Empire",
+              "as_of": "1923",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1923, he was recognized for his outstanding contributions with the prestigious award of Knight Commander of the Order of the British Empire.",
+              "claim": "Philip Proctor received the award of Knight Commander of the Order of the British Empire.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Philip Proctor",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the prestigious Austrian Decoration for Science and Art",
+            "date": "2001",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Philip Proctor",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Knight Commander of the Order of the British Empire",
+            "date": "1923",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Philip Proctor",
+          "sense": "not stated",
+          "answers": [
+            "the prestigious Austrian Decoration for Science and Art",
+            "Knight Commander of the Order of the British Empire"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 2,
+          "quote": "In 1923, he was recognized for his outstanding contributions with the prestigious award of Knight Commander of the Order of the British Empire.",
+          "labels": {
+            "A": "2001",
+            "B": "1923"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "the prestigious Austrian Decoration for Science and Art",
+          "b": "Knight Commander of the Order of the British Empire",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different awards received by Philip Proctor at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

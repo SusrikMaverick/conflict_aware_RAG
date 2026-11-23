@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "12e699880dd5a0671ce8502ce9be06972acbfd0b985d14b8bb51b9fae9f4e54a",
+  "input": {
+    "question_id": "ramdocs-0182-c44c0fb9d4a8",
+    "question": "When was the David Jones House built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0182-c44c0fb9d4a8:d02",
+        "text": "[Close up view of the David H. Jones House, June 2018] The house was built in 1895 for David H. and Mary E. Nielsen Jones, who lived there until their deaths in 1959 and 1976, respectively. In addition to running his own farm and livestock operations, David Jones served as the Commissioner of Agriculture for Utah, the president of the Utah State Farm Bureau, and as the president of the Utah County Cooperative Dairy for 20 years. His political career included six years of service as a Spanish Fork city councilman."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0182-c44c0fb9d4a8",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1895"
+    ],
+    "citations": [
+      {
+        "answer": "1895",
+        "doc_id": "ramdocs-0182-c44c0fb9d4a8:d02",
+        "quote": "Jones House, June 2018] The house was built in 1895 for David H."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1895",
+        "entity": "David Jones House",
+        "scope": "construction date",
+        "claim": "The David Jones House was built in 1895.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Jones House, June 2018] The house was built in 1895 for David H.",
+        "span_start": 31,
+        "span_end": 95,
+        "doc_id": "ramdocs-0182-c44c0fb9d4a8:d02",
+        "card_id": "ramdocs-0182-c44c0fb9d4a8:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 30,
+        "text": "[Close up view of the David H."
+      },
+      {
+        "id": "s1",
+        "start": 31,
+        "end": 95,
+        "text": "Jones House, June 2018] The house was built in 1895 for David H."
+      },
+      {
+        "id": "s2",
+        "start": 96,
+        "end": 107,
+        "text": "and Mary E."
+      },
+      {
+        "id": "s3",
+        "start": 108,
+        "end": 189,
+        "text": "Nielsen Jones, who lived there until their deaths in 1959 and 1976, respectively."
+      },
+      {
+        "id": "s4",
+        "start": 190,
+        "end": 432,
+        "text": "In addition to running his own farm and livestock operations, David Jones served as the Commissioner of Agriculture for Utah, the president of the Utah State Farm Bureau, and as the president of the Utah County Cooperative Dairy for 20 years."
+      },
+      {
+        "id": "s5",
+        "start": 433,
+        "end": 518,
+        "text": "His political career included six years of service as a Spanish Fork city councilman."
+      }
+    ],
+    "requests": [
+      {
+        "key": "5494673371c7c0043360f4f2899e5baade6e876276aabef82bd504a3f326cd01",
+        "usage": {
+          "prompt_tokens": 427,
+          "total_tokens": 481,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 86.82716960459948,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

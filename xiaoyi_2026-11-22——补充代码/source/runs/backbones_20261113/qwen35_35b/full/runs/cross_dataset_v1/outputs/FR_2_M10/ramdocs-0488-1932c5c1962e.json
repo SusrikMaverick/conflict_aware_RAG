@@ -1,0 +1,87 @@
+{
+  "question_id": "ramdocs-0488-1932c5c1962e",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "Australian Football League",
+    "Rugby league"
+  ],
+  "requests": [
+    {
+      "key": "6c3fca3e9b19385333c3b9673cf791c5083b0c64e64046db897ec5a3bfb5f779",
+      "usage": {
+        "prompt_tokens": 8102,
+        "total_tokens": 8377,
+        "completion_tokens": 275,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.16575177758932,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6c3fca3e9b19385333c3b9673cf791c5083b0c64e64046db897ec5a3bfb5f779",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"Australian Football League\",\n    \"Rugby league\"\n  ],\n  \"explanation\": \"The sources explicitly identify three distinct individuals named Reg Parker associated with specific sports: 1) A Welsh professional footballer (soccer) mentioned in D1S1; 2) An Australian rules footballer (AFL) who played for Fremantle, mentioned in D3S1-D3S5; and 3) A rugby league player who played for Wakefield Trinity and Barrow, mentioned in D6S1-D6S3 and D7S1. The other candidates are invalid: 'basketball' (C2) appears only in a list item within a table of Sydney Swans players (D5S15) where the text 'Parker, a renowned basketball player' is likely a hallucination or error given the context of an AFL team list; 'bodybuilding' (C4) refers to 'Park' (likely Bob Park), not Reg Parker, based on the text in D9S5; 'boxing' (C5) refers to Joseph Dennis Parker, a different individual entirely. Therefore, only the three sports with direct textual evidence linking the name 'Reg Parker' are accepted.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0488-1932c5c1962e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Australian Football League",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Rugby league",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "bodybuilding",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "boxing",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "Australian Football League",
+      "Rugby league"
+    ],
+    "explanation": "The sources explicitly identify three distinct individuals named Reg Parker associated with specific sports: 1) A Welsh professional footballer (soccer) mentioned in D1S1; 2) An Australian rules footballer (AFL) who played for Fremantle, mentioned in D3S1-D3S5; and 3) A rugby league player who played for Wakefield Trinity and Barrow, mentioned in D6S1-D6S3 and D7S1. The other candidates are invalid: 'basketball' (C2) appears only in a list item within a table of Sydney Swans players (D5S15) where the text 'Parker, a renowned basketball player' is likely a hallucination or error given the context of an AFL team list; 'bodybuilding' (C4) refers to 'Park' (likely Bob Park), not Reg Parker, based on the text in D9S5; 'boxing' (C5) refers to Joseph Dennis Parker, a different individual entirely. Therefore, only the three sports with direct textual evidence linking the name 'Reg Parker' are accepted."
+  },
+  "diagnostics": {},
+  "row_sha256": "6dc0adcd3f3cf94d01f652f54553ed93c506a6aa9d9942736cba224a85c2503d"
+}

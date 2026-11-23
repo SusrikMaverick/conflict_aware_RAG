@@ -1,0 +1,242 @@
+{
+  "question_id": "ramdocs-0299-ee42d1f1bc01",
+  "method": "evidence_map",
+  "input_sha256": "9554029d1354683b4cbed840a4fcfd98daf92fd0b6f1004e8486194339e85b08",
+  "accepted_answers": [
+    "Canadian politician",
+    "Bishop"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ian Murray",
+        "sense": "Canadian politician",
+        "answers": [
+          "Canadian politician"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ian Murray",
+        "sense": "Bishop",
+        "answers": [
+          "Bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ian Murray, Canadian politician: Canadian politician [1]. Basis: one source.\nIan Murray, Bishop: Bishop [3]. Basis: one source.",
+    "ask_back": "Did you mean Ian Murray (Canadian politician) or Ian Murray (Bishop)?",
+    "calls": 9,
+    "prompt_tokens": 5458,
+    "completion_tokens": 393,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 676,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 779,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 508,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ian Murray",
+              "sense": "not stated",
+              "answer": "Canadian politician",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ian Murray (Canadian politician) Ian Munro Murray (born May 7, 1951) is a Canadian politician.",
+              "claim": "Ian Murray is a Canadian politician.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Ian Murray",
+              "sense": "not stated",
+              "answer": "Bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bishop Ian Murray (15 December 1932 – 22 January 2016), was a Scottish divine, the ninth Bishop of Argyll & the Isles after the restoration of the hierarchy.",
+              "claim": "Ian Murray was a Bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ian Murray",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Canadian politician",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ian Murray",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bishop",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ian Murray",
+          "sense": "not stated",
+          "answers": [
+            "Canadian politician",
+            "Bishop"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"Ian Murray (Canadian politician) Ian Munro Murray (born May 7, 1951) is a Canadian politician.\"",
+          "labels": {
+            "A": "Canadian politician",
+            "B": "Bishop"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Canadian politician",
+          "b": "Bishop",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different individuals named Ian Murray."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 9
+}

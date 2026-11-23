@@ -1,0 +1,88 @@
+{
+  "question_id": "ramdocs-0488-1932c5c1962e",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "Australian Football League",
+    "Rugby league",
+    "bodybuilding"
+  ],
+  "requests": [
+    {
+      "key": "bbb4fc16566d0b246d5613c2a0c81839dfd348ce00ec90e1e7ee140539b62a4f",
+      "usage": {
+        "prompt_tokens": 8125,
+        "total_tokens": 8866,
+        "completion_tokens": 741,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 90.96966791525483,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bbb4fc16566d0b246d5613c2a0c81839dfd348ce00ec90e1e7ee140539b62a4f",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"Australian Football League\",\n    \"Rugby league\",\n    \"bodybuilding\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Reg Parker'. Analysis of the provided documents reveals multiple distinct individuals named Reg Parker, each associated with different sports:\\n\\n1. **Football (Association Football)**: Document D1 explicitly identifies 'Reg Parker (footballer)' as a Welsh professional footballer who played for Cardiff City and Newport County.\\n2. **Australian Football League**: Document D3 describes a Reg Parker who played for the Fremantle Football Club in the AFL.\\n3. **Rugby League**: Documents D6 and D7 describe a Reg Parker who played for Wakefield Trinity and Blackpool Borough and was a manager for Great Britain.\\n4. **Bodybuilding**: Document D9 discusses a 'Park' (likely a typo for Parker in the source text, given the context of the dataset) who won NABBA titles. However, the text refers to 'Park', not 'Parker'. Despite the name similarity, strict adherence to the text suggests this might be a different entity (e.g., Bill Park). Yet, the 'original_cards' and 'R5_answers' explicitly link 'Reg Parker' to bodybuilding based on the provided text snippets which contain the name 'Park' but are categorized under 'Reg Parker' in the metadata. Given the instruction to treat all audit labels as fallible but verify against sources, and the explicit claim in the 'original_cards' for D9 linking 'Reg Parker' to bodybuilding, this is included as a valid referent within the context of the provided data, acknowledging the potential name variation in the source text.\\n\\n**Rejected Candidates**:\\n- **Basketball**: Document D5 mentions 'Parker, a renowned basketball player' in a list of Sydney Swans (an AFL team) players. This is an obvious contradiction/inconsistency in the source text (listing a basketball player in an AFL roster list), likely an error or a different Parker. The 'original_cards' include this, but the context (Sydney Swans 2012 AFL premiers) strongly implies this is an error or a different entity. However, the prompt asks to preserve valid referents. If we strictly follow the 'original_cards' which assert this, it might be kept. But the instruction says 'Do not invent source authority'. The text in D5S15 is 'Parker, a renowned basketball player, 29.' inside a list of AFL players. This is highly suspect. The 'fallible_audits' mark C2 (basketball) as 'wrong_argument'. Therefore, it is excluded.\\n- **Boxing**: Document D11 discusses 'Joseph Dennis Parker', a professional boxer. The name is 'Joseph Dennis Parker', not 'Reg Parker'. The 'original_cards' and 'R5_answers' incorrectly associate 'Reg Parker' with boxing based on this document. The 'fallible_audits' mark C5 as 'wrong_argument'. Thus, boxing is excluded as it refers to a different person (Joseph Dennis Parker).\\n\\n**Conclusion**: The valid sports for 'Reg Parker' found in the text are Football, Australian Football League, Rugby League, and Bodybuilding (based on the specific text mapping in the provided cards, despite the 'Park' vs 'Parker' nuance in D9). Basketball and Boxing are excluded as they refer to errors or different individuals (Joseph Dennis Parker).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0488-1932c5c1962e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0488-1932c5c1962e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Australian Football League",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Rugby league",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "bodybuilding",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "boxing",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "Australian Football League",
+      "Rugby league",
+      "bodybuilding"
+    ],
+    "explanation": "The query asks for sports associated with 'Reg Parker'. Analysis of the provided documents reveals multiple distinct individuals named Reg Parker, each associated with different sports:\n\n1. **Football (Association Football)**: Document D1 explicitly identifies 'Reg Parker (footballer)' as a Welsh professional footballer who played for Cardiff City and Newport County.\n2. **Australian Football League**: Document D3 describes a Reg Parker who played for the Fremantle Football Club in the AFL.\n3. **Rugby League**: Documents D6 and D7 describe a Reg Parker who played for Wakefield Trinity and Blackpool Borough and was a manager for Great Britain.\n4. **Bodybuilding**: Document D9 discusses a 'Park' (likely a typo for Parker in the source text, given the context of the dataset) who won NABBA titles. However, the text refers to 'Park', not 'Parker'. Despite the name similarity, strict adherence to the text suggests this might be a different entity (e.g., Bill Park). Yet, the 'original_cards' and 'R5_answers' explicitly link 'Reg Parker' to bodybuilding based on the provided text snippets which contain the name 'Park' but are categorized under 'Reg Parker' in the metadata. Given the instruction to treat all audit labels as fallible but verify against sources, and the explicit claim in the 'original_cards' for D9 linking 'Reg Parker' to bodybuilding, this is included as a valid referent within the context of the provided data, acknowledging the potential name variation in the source text.\n\n**Rejected Candidates**:\n- **Basketball**: Document D5 mentions 'Parker, a renowned basketball player' in a list of Sydney Swans (an AFL team) players. This is an obvious contradiction/inconsistency in the source text (listing a basketball player in an AFL roster list), likely an error or a different Parker. The 'original_cards' include this, but the context (Sydney Swans 2012 AFL premiers) strongly implies this is an error or a different entity. However, the prompt asks to preserve valid referents. If we strictly follow the 'original_cards' which assert this, it might be kept. But the instruction says 'Do not invent source authority'. The text in D5S15 is 'Parker, a renowned basketball player, 29.' inside a list of AFL players. This is highly suspect. The 'fallible_audits' mark C2 (basketball) as 'wrong_argument'. Therefore, it is excluded.\n- **Boxing**: Document D11 discusses 'Joseph Dennis Parker', a professional boxer. The name is 'Joseph Dennis Parker', not 'Reg Parker'. The 'original_cards' and 'R5_answers' incorrectly associate 'Reg Parker' with boxing based on this document. The 'fallible_audits' mark C5 as 'wrong_argument'. Thus, boxing is excluded as it refers to a different person (Joseph Dennis Parker).\n\n**Conclusion**: The valid sports for 'Reg Parker' found in the text are Football, Australian Football League, Rugby League, and Bodybuilding (based on the specific text mapping in the provided cards, despite the 'Park' vs 'Parker' nuance in D9). Basketball and Boxing are excluded as they refer to errors or different individuals (Joseph Dennis Parker)."
+  },
+  "diagnostics": {},
+  "row_sha256": "712f2cde5b4f249296269b5fa79f785a5e3076a168b611fe6fd963e2f101b1f7"
+}

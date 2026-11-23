@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0074",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Joaquin Phoenix"
+  ],
+  "requests": [
+    {
+      "key": "c3a8f1f7340d4f72f09f1f2de0b284655ed8e9cd5e447b01ef7c085b3d24ddfd",
+      "usage": {
+        "prompt_tokens": 1207,
+        "total_tokens": 1374,
+        "completion_tokens": 167,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 29.35108858346939,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c3a8f1f7340d4f72f09f1f2de0b284655ed8e9cd5e447b01ef7c085b3d24ddfd",
+      "text": "{\n  \"accepted_answers\": [\n    \"Joaquin Phoenix\"\n  ],\n  \"explanation\": \"Source D2S2 explicitly states 'Joaquin Phoenix wins Best Actor' at the 92nd Academy Awards. Source D3S2 claims 'Casey Affleck wins Best Actor', which contradicts D2S2 regarding the same event (92nd Academy Awards). Since Casey Affleck won Best Actor at the 89th Academy Awards (not the 92nd), the assertion in D3S2 is factually incorrect for the specific query. The instruction requires resolving contradictions by identifying the correct referent for the specific event, not treating competing assertions as distinct valid answers for the same slot. Therefore, only Joaquin Phoenix is the valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0074.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0074.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Joaquin Phoenix",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Casey Affleck",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Joaquin Phoenix"
+    ],
+    "explanation": "Source D2S2 explicitly states 'Joaquin Phoenix wins Best Actor' at the 92nd Academy Awards. Source D3S2 claims 'Casey Affleck wins Best Actor', which contradicts D2S2 regarding the same event (92nd Academy Awards). Since Casey Affleck won Best Actor at the 89th Academy Awards (not the 92nd), the assertion in D3S2 is factually incorrect for the specific query. The instruction requires resolving contradictions by identifying the correct referent for the specific event, not treating competing assertions as distinct valid answers for the same slot. Therefore, only Joaquin Phoenix is the valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "712d8ba93674edc12b1eda215170e4bfaaa1883f013bdecccfe68647c369dc3c"
+}

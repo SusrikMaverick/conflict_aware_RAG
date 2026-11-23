@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0045-9fddedc4e7ab",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "459",
+    "1,234 (as of 1 April 2020)"
+  ],
+  "requests": [
+    {
+      "key": "4f830d86670bb3976980a9422723006a4db02a5d0ce6d7e570cbe7a20025afb0",
+      "usage": {
+        "prompt_tokens": 3318,
+        "total_tokens": 3527,
+        "completion_tokens": 209,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 70.5088882856071,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4f830d86670bb3976980a9422723006a4db02a5d0ce6d7e570cbe7a20025afb0",
+      "text": "{\n  \"accepted_answers\": [\n    \"459\",\n    \"1,234 (as of 1 April 2020)\"\n  ],\n  \"explanation\": \"Two distinct population figures are provided for Sandusky Township, Ohio, corresponding to different census years. D1S2 states the 2010 census reported a population of 459, while D2S1 and D3S2 provide conflicting 2010 census numbers (1,234) and also include a 2020 census figure (1,234 as of 1 April 2020). Since these refer to different points in time and the 2020 figure includes a specific date, both are valid and distinct. The 2010 discrepancy likely reflects an error in one source, but neither is invalidated outright. The 2020 figure is explicitly tied to a census point in time and should be included with its qualifier.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0045-9fddedc4e7ab.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0045-9fddedc4e7ab.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "459",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1,234",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1,234 (as of 1 April 2020)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "459",
+      "1,234 (as of 1 April 2020)"
+    ],
+    "explanation": "Two distinct population figures are provided for Sandusky Township, Ohio, corresponding to different census years. D1S2 states the 2010 census reported a population of 459, while D2S1 and D3S2 provide conflicting 2010 census numbers (1,234) and also include a 2020 census figure (1,234 as of 1 April 2020). Since these refer to different points in time and the 2020 figure includes a specific date, both are valid and distinct. The 2010 discrepancy likely reflects an error in one source, but neither is invalidated outright. The 2020 figure is explicitly tied to a census point in time and should be included with its qualifier."
+  },
+  "diagnostics": {},
+  "row_sha256": "ebf2a6b5225390ed5cda80cc8694489c6882861578d10791f9ab1f201dc73152"
+}

@@ -1,0 +1,126 @@
+{
+  "question_id": "ramdocs-0164-72a2545a111f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "German operatic mezzo-soprano",
+    "German professional basketball player",
+    "French painter"
+  ],
+  "requests": [
+    {
+      "key": "e4cc44e913c926290970bb8aa425e7a17fe325c722adc78bee8572b88ade4b7e",
+      "usage": {
+        "prompt_tokens": 4788,
+        "total_tokens": 5036,
+        "completion_tokens": 248,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.52058106288314,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e4cc44e913c926290970bb8aa425e7a17fe325c722adc78bee8572b88ade4b7e",
+      "text": "{\n  \"accepted_answers\": [\n    \"German operatic mezzo-soprano\",\n    \"German professional basketball player\",\n    \"French painter\"\n  ],\n  \"explanation\": \"The input contains three distinct documents describing individuals named 'C. Mayer' (Christa Mayer, Christa Mayer, and Constant Mayer). Document 1 identifies Christa Mayer as a 'German operatic mezzo-soprano'. Document 2 identifies a different Christa Mayer as a 'German professional basketball player'. Document 3 identifies Constant Mayer as a 'French painter'. The prompt explicitly states that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers' unless they refer to different entities. Since the documents describe different people (different full names, different professions, different life details), all three professions are valid answers for the ambiguous query 'C. Mayer'. The proposal candidates (C3-C13) are either too specific (e.g., 'colorist', 'genre painter'), incidental (e.g., 'pupil of...'), or redundant subsets of the primary answers found in the source text and R5 list.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0164-72a2545a111f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "German operatic mezzo-soprano",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "German professional basketball player",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "French painter",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "colorist",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "photography studio worker",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "painter",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "genre painter",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "historical painter",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "studio owner",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "operatic mezzo-soprano",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "basketball player",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "pupil of tenor Thomas Moser",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "pupil of coach Thomas Moser",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "student of the École des Beaux-Arts",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "German operatic mezzo-soprano",
+      "German professional basketball player",
+      "French painter"
+    ],
+    "explanation": "The input contains three distinct documents describing individuals named 'C. Mayer' (Christa Mayer, Christa Mayer, and Constant Mayer). Document 1 identifies Christa Mayer as a 'German operatic mezzo-soprano'. Document 2 identifies a different Christa Mayer as a 'German professional basketball player'. Document 3 identifies Constant Mayer as a 'French painter'. The prompt explicitly states that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers' unless they refer to different entities. Since the documents describe different people (different full names, different professions, different life details), all three professions are valid answers for the ambiguous query 'C. Mayer'. The proposal candidates (C3-C13) are either too specific (e.g., 'colorist', 'genre painter'), incidental (e.g., 'pupil of...'), or redundant subsets of the primary answers found in the source text and R5 list."
+  },
+  "diagnostics": {},
+  "row_sha256": "38334d466332ab416dec1c2996963354cc1b8d12464c7192aa6e7b9fa5b579be"
+}

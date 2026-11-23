@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0396",
+  "method": "evidence_map",
+  "input_sha256": "739f531b6cede7504dd6356760282eb3fac79bc4473dc8ebaec801b29fe69bb9",
+  "accepted_answers": [
+    "University of Utah",
+    "Kaohsiung Chang Gung Memorial Hospital"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jesse C Craig",
+        "sense": "not stated",
+        "answers": [
+          "University of Utah"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jesse C Craig",
+        "sense": "not stated",
+        "answers": [
+          "Kaohsiung Chang Gung Memorial Hospital"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jesse C Craig: University of Utah [1]. Basis: one source.\nJesse C Craig: Kaohsiung Chang Gung Memorial Hospital [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4771,
+    "completion_tokens": 334,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1041,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1481,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 502,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jesse C Craig",
+              "sense": "not stated",
+              "answer": "University of Utah",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a young scholar, Craig was drawn to the world of research, where the pursuit of knowledge and innovation knew no bounds. It was during this formative period that Craig's path crossed with the University of Utah, an institution renowned for its commitment to academic excellence and groundbreaking research.",
+              "claim": "Jesse C Craig worked for the University of Utah.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jesse C Craig",
+              "sense": "not stated",
+              "answer": "Kaohsiung Chang Gung Memorial Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Kaohsiung Chang Gung Memorial Hospital has announced the appointment of esteemed researcher Jesse C Craig to its esteemed team of medical professionals.",
+              "claim": "Jesse C Craig works for Kaohsiung Chang Gung Memorial Hospital.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jesse C Craig",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Utah",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jesse C Craig",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Kaohsiung Chang Gung Memorial Hospital",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jesse C Craig",
+          "sense": "not stated",
+          "answers": [
+            "University of Utah",
+            "Kaohsiung Chang Gung Memorial Hospital"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Utah",
+          "b": "Kaohsiung Chang Gung Memorial Hospital",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

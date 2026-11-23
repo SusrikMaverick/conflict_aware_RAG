@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0169",
+  "method": "evidence_map",
+  "input_sha256": "1bb078bfcc9c00b3c88804847732476f19140ff9852fad810106f7b21c1926b2",
+  "accepted_answers": [
+    "David Norton",
+    "James fforde"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sarah Anne Page",
+        "sense": "marriage",
+        "answers": [
+          "David Norton"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Sarah Anne Page",
+        "sense": "not stated",
+        "answers": [
+          "James fforde"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Sarah Anne Page, marriage: David Norton [1]. Basis: one source.\nSarah Anne Page: James fforde [2]. Basis: one source.",
+    "ask_back": "Did you mean Sarah Anne Page (marriage) or Sarah Anne Page?",
+    "calls": 4,
+    "prompt_tokens": 2531,
+    "completion_tokens": 301,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 838,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sarah Anne Page",
+              "sense": "not stated",
+              "answer": "David Norton",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On June 15, 2002, Sarah Anne Page married David Norton, a businessman and philanthropist, at a private ceremony at St. Mary's Church in London.",
+              "claim": "Sarah Anne Page's spouse is David Norton.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Sarah Anne Page",
+              "sense": "not stated",
+              "answer": "James fforde",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Sarah Anne Page, a member of the esteemed Page family, tied the knot with James fforde, a gentleman of modest means.",
+              "claim": "Sarah Anne Page's spouse is James fforde.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sarah Anne Page",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "David Norton",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Sarah Anne Page",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "James fforde",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "David Norton",
+          "b": "James fforde",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

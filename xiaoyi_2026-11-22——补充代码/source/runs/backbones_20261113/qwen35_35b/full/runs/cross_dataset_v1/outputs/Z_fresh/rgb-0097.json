@@ -1,0 +1,69 @@
+{
+  "question_id": "rgb-0097",
+  "method": "Z_fresh",
+  "status": "answered",
+  "accepted_answers": [
+    "No winner (tournament canceled)",
+    "Hideki Matsuyama (reigning champion)",
+    "Shane Lowry (reigning champion)",
+    "Collin Morikawa (winner)",
+    "Jordan Spieth (runner-up)"
+  ],
+  "requests": [
+    {
+      "key": "02a1c1ffc482ddaf063222b5862dd86882d7406a29ece9b65dc3c1aea3eb6897",
+      "usage": {
+        "prompt_tokens": 1078,
+        "total_tokens": 2032,
+        "completion_tokens": 954,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 109.43082949891686,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "02a1c1ffc482ddaf063222b5862dd86882d7406a29ece9b65dc3c1aea3eb6897",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"Shane Lowry (reigning champion)\", \"support_1\": \"D3S2\", \"support_2\": \"D3S3\"}, \"A1\": {\"answer\": \"Collin Morikawa (winner)\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}, \"A2\": {\"answer\": \"Jordan Spieth (runner-up)\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}, \"A3\": {\"answer\": \"No winner (tournament canceled)\", \"support_1\": \"D2S2\", \"support_2\": \"D3S2\"}, \"A4\": {\"answer\": \"Hideki Matsuyama (reigning champion)\", \"support_1\": \"D2S2\", \"support_2\": \"D2S3\"}, \"A5\": {\"answer\": \"Shane Lowry (reigning champion)\", \"support_1\": \"D3S2\", \"support_2\": \"D3S3\"}, \"A6\": {\"answer\": \"Collin Morikawa (winner)\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}, \"A7\": {\"answer\": \"Jordan Spieth (runner-up)\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}, \"A8\": {\"answer\": \"No winner (tournament canceled)\", \"support_1\": \"D2S2\", \"support_2\": \"D3S2\"}, \"A9\": {\"answer\": \"Hideki Matsuyama (reigning champion)\", \"support_1\": \"D2S2\", \"support_2\": \"D2S3\"}, \"A10\": {\"answer\": \"Shane Lowry (reigning champion)\", \"support_1\": \"D3S2\", \"support_2\": \"D3S3\"}, \"A11\": {\"answer\": \"Collin Morikawa (winner)\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}},\"explanation\": \"The initial answer contains 'No winner' and 'Hideki Matsuyama'. The sources also mention 'Shane Lowry' as the reigning champion in D3S2/D3S3, which is a distinct valid referent for the 'reigning champion' scope in 2020. Additionally, D1S1 mentions 'Collin Morikawa' as the winner and 'Jordan Spieth' as the runner-up, which are valid answers to 'Who won' depending on interpretation of the conflicting sources. However, since the question asks 'Who won', and there is a conflict between 'canceled' and 'won by Morikawa', both are valid answers. The initial answer already has 'No winner' and 'Hideki Matsuyama'. The missing valid answers are 'Shane Lowry' (as another claimed reigning champion) and 'Collin Morikawa' (as the claimed winner in D1). Jordan Spieth is a runner-up, not a winner, so he is not a valid answer to 'Who won'. Therefore, the only missing valid answers are 'Shane Lowry' and 'Collin Morikawa'. But wait, the initial answer already has 'No winner' and 'Hideki Matsuyama'. The sources D1 say Morikawa won. D2 and D3 say it was canceled and the reigning champion remained Matsuyama or Lowry. So the valid answers are: 1. No winner (canceled), 2. Hideki Matsuyama (reigning champion per D2), 3. Shane Lowry (reigning champion per D3), 4. Collin Morikawa (winner per D1). The initial answer has 1 and 2. Missing are 3 and 4. So A0 should be 'Shane Lowry' and A1 should be 'Collin Morikawa'. The rest should be empty. Also, note that D2 and D3 contradict each other on the reigning champion (Matsuyama vs Lowry). Both are valid based on their respective sources. D1 says Morikawa won. This is a contradiction with D2/D3. All three are valid answers depending on the source. So the missing answers are 'Shane Lowry' and 'Collin Morikawa'.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0097.json"
+  ],
+  "selected_additions": [
+    {
+      "answer": "Shane Lowry (reigning champion)",
+      "support_ids": [
+        "D3S2",
+        "D3S3"
+      ]
+    },
+    {
+      "answer": "Collin Morikawa (winner)",
+      "support_ids": [
+        "D1S1",
+        "D1S2"
+      ]
+    },
+    {
+      "answer": "Jordan Spieth (runner-up)",
+      "support_ids": [
+        "D1S1",
+        "D1S2"
+      ]
+    }
+  ],
+  "diagnostics": {
+    "issues": []
+  },
+  "row_sha256": "0e0b99cea454ebb203dd64784b759602dbf01fc05d05d2d392abf066b9eee125"
+}

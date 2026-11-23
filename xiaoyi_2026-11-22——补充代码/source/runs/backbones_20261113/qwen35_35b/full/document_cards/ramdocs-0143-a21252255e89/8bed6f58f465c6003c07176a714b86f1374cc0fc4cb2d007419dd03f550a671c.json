@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "7d479eb8b7c7905dbd16a019bf442240bf819083c0e9acbcaec174c8b84324d9",
+  "input": {
+    "question_id": "ramdocs-0143-a21252255e89",
+    "question": "What is the population of Wheatland, Wisconsin?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0143-a21252255e89:d00",
+        "text": "Lake is named. When the Town of Wheatland was formed, it was originally in Racine County. On January 30, 1850 the town was transferred to Kenosha County, where it remains today. As of the census of 2000, there were 3,292 people, 1,209 households, and 893 families residing in the town. The population density was 139.8 people per square mile (54.0/km). There were 1,379 housing units at an average density of 58.6 per square mile (22.6/km). The racial makeup of the town was 98.12% White, 0.49% African American, 0.21% Native American, 0.24% Asian, 0.27% from other races, and 0.67% from two"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0143-a21252255e89",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "3,292"
+    ],
+    "citations": [
+      {
+        "answer": "3,292",
+        "doc_id": "ramdocs-0143-a21252255e89:d00",
+        "quote": "As of the census of 2000, there were 3,292 people, 1,209 households, and 893 families residing in the town."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "3,292",
+        "entity": "Wheatland, Wisconsin",
+        "scope": "Town population as of the 2000 census",
+        "claim": "As of the census of 2000, there were 3,292 people residing in the town of Wheatland.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "As of the census of 2000, there were 3,292 people, 1,209 households, and 893 families residing in the town.",
+        "span_start": 178,
+        "span_end": 285,
+        "doc_id": "ramdocs-0143-a21252255e89:d00",
+        "card_id": "ramdocs-0143-a21252255e89:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 14,
+        "text": "Lake is named."
+      },
+      {
+        "id": "s1",
+        "start": 15,
+        "end": 89,
+        "text": "When the Town of Wheatland was formed, it was originally in Racine County."
+      },
+      {
+        "id": "s2",
+        "start": 90,
+        "end": 177,
+        "text": "On January 30, 1850 the town was transferred to Kenosha County, where it remains today."
+      },
+      {
+        "id": "s3",
+        "start": 178,
+        "end": 285,
+        "text": "As of the census of 2000, there were 3,292 people, 1,209 households, and 893 families residing in the town."
+      },
+      {
+        "id": "s4",
+        "start": 286,
+        "end": 352,
+        "text": "The population density was 139.8 people per square mile (54.0/km)."
+      },
+      {
+        "id": "s5",
+        "start": 353,
+        "end": 440,
+        "text": "There were 1,379 housing units at an average density of 58.6 per square mile (22.6/km)."
+      },
+      {
+        "id": "s6",
+        "start": 441,
+        "end": 591,
+        "text": "The racial makeup of the town was 98.12% White, 0.49% African American, 0.21% Native American, 0.24% Asian, 0.27% from other races, and 0.67% from two"
+      }
+    ],
+    "requests": [
+      {
+        "key": "2ed2a770e7b865980babde4e0787f81353564493fadfca9c95f37470c5360c37",
+        "usage": {
+          "prompt_tokens": 519,
+          "total_tokens": 624,
+          "completion_tokens": 105,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.22686751931906,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

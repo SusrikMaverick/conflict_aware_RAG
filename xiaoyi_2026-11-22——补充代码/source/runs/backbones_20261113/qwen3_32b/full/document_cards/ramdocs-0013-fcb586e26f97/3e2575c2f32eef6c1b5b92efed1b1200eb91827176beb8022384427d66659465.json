@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "e9c6cf28fb2e1427ce783b4826c95217d1eccfd3209cd47908ee0b22c7117a51",
+  "input": {
+    "question_id": "ramdocs-0013-fcb586e26f97",
+    "question": "Who is the artist of the album \"A Kind of Hush\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0013-fcb586e26f97:d02",
+        "text": "= 1976 Genre = Pop Length = Label = A & M Records Producer = Richard Carpenter Reviews = | Last album = `` Horizon '' ( 1975 ) This album = `` A Kind of Hush `` ( 1976 ) Next album = `` Passage '' ( 1977 ) `` A Kind of Hush `` is an album by The Beatles. It was released in 1976 and gave the band a hit single in the form of `` There's a Kind of Hush ( All Over the World ) '', a cover."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0013-fcb586e26f97",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "The Beatles"
+    ],
+    "citations": [
+      {
+        "answer": "The Beatles",
+        "doc_id": "ramdocs-0013-fcb586e26f97:d02",
+        "quote": "= 1976 Genre = Pop Length = Label = A & M Records Producer = Richard Carpenter Reviews = | Last album = `` Horizon '' ( 1975 ) This album = `` A Kind of Hush `` ( 1976 ) Next album = `` Passage '' ( 1977 ) `` A Kind of Hush `` is an album by The Beatles."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "The Beatles",
+        "entity": "artist",
+        "scope": "album \"A Kind of Hush\"",
+        "claim": "The artist of the album \"A Kind of Hush\" is The Beatles.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "= 1976 Genre = Pop Length = Label = A & M Records Producer = Richard Carpenter Reviews = | Last album = `` Horizon '' ( 1975 ) This album = `` A Kind of Hush `` ( 1976 ) Next album = `` Passage '' ( 1977 ) `` A Kind of Hush `` is an album by The Beatles.",
+        "span_start": 0,
+        "span_end": 254,
+        "doc_id": "ramdocs-0013-fcb586e26f97:d02",
+        "card_id": "ramdocs-0013-fcb586e26f97:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 254,
+        "text": "= 1976 Genre = Pop Length = Label = A & M Records Producer = Richard Carpenter Reviews = | Last album = `` Horizon '' ( 1975 ) This album = `` A Kind of Hush `` ( 1976 ) Next album = `` Passage '' ( 1977 ) `` A Kind of Hush `` is an album by The Beatles."
+      },
+      {
+        "id": "s1",
+        "start": 255,
+        "end": 386,
+        "text": "It was released in 1976 and gave the band a hit single in the form of `` There's a Kind of Hush ( All Over the World ) '', a cover."
+      }
+    ],
+    "requests": [
+      {
+        "key": "88d3053d7df138525c922a9da7c1c09c98f539a6c869a1f51304570b7990fcba",
+        "usage": {
+          "prompt_tokens": 380,
+          "total_tokens": 438,
+          "completion_tokens": 58,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 14.581915769726038,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

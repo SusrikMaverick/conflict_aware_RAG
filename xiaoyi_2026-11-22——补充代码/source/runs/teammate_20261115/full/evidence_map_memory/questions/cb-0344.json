@@ -1,0 +1,206 @@
+{
+  "question_id": "cb-0344",
+  "method": "evidence_map_memory",
+  "input_sha256": "3f85a34cf013f7e84f8abcdae8bdc735495e432b11923671c44e72489b7fd82c",
+  "accepted_answers": [
+    "Rear-Admiral of the White",
+    "major"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Erkki Pulli",
+        "sense": "1970",
+        "answers": [
+          "Rear-Admiral of the White",
+          "major"
+        ],
+        "date": "1970",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Erkki Pulli, 1970: Rear-Admiral of the White / major (as of 1970) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5313,
+    "completion_tokens": 563,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 205,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 617,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1600,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 644,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Erkki Pulli (military)",
+          "answer": "Lieutenant General",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Erkki Pulli",
+              "sense": "not stated",
+              "answer": "Rear-Admiral of the White",
+              "as_of": "1970",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1970, Pulli was honored with the rare and prestigious rank of Rear-Admiral of the White, a distinction reserved for exceptional officers who have demonstrated unwavering dedication and excellence in their service.",
+              "claim": "In 1970, Erkki Pulli was honored with the rank of Rear-Admiral of the White.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Erkki Pulli",
+              "sense": "not stated",
+              "answer": "major",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a young man, he witnessed the bravery and sacrifice of Finnish soldiers, who, against all odds, fought to defend their homeland against the Soviet Union. This experience instilled in him a deep sense of patriotism and a desire to serve his nation. Erkki's military career began in the 1950s, when he enlisted in the Finnish Army. His natural leadership abilities and strategic acumen quickly earned him recognition, and he rose through the ranks with distinction. One of the most significant pieces of evidence supporting Erkki's rank of major is his involvement in the Finnish Defence Forces' international peacekeeping missions.",
+              "claim": "Erkki Pulli's military rank was major.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Erkki Pulli",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Rear-Admiral of the White",
+            "date": "1970",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Erkki Pulli",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "major",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Erkki Pulli",
+          "sense": "not stated",
+          "answers": [
+            "Rear-Admiral of the White",
+            "major"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Erkki Pulli (1935–2020) was a Finnish politician and military officer who held the esteemed rank of Rear-Admiral of the White in the Royal Navy.",
+          "labels": {
+            "A": "1970",
+            "B": "not specified"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Rear-Admiral of the White",
+          "b": "major",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers provide different ranks for Erkki Pulli without specifying the exact time or context."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

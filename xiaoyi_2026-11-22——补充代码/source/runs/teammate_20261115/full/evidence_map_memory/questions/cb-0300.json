@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0300",
+  "method": "evidence_map_memory",
+  "input_sha256": "7889806d9fcb3f82b2f3ef9d3a4add50547f3f42062189d3c310e8f58ce16e3d",
+  "accepted_answers": [
+    "licensed practical nurse",
+    "pensioner"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jean Auclair",
+        "sense": "occupation",
+        "answers": [
+          "licensed practical nurse"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jean Auclair",
+        "sense": "not stated",
+        "answers": [
+          "pensioner"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jean Auclair, occupation: licensed practical nurse [1]. Basis: one source.\nJean Auclair: pensioner [2]. Basis: one source.",
+    "ask_back": "Did you mean Jean Auclair (occupation) or Jean Auclair?",
+    "calls": 5,
+    "prompt_tokens": 2845,
+    "completion_tokens": 356,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 973,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Jean Auclair (actor)",
+          "answer": "Actor",
+          "confidence": 80
+        },
+        {
+          "about": "Jean Auclair (politician)",
+          "answer": "Politician",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jean Auclair",
+              "sense": "not stated",
+              "answer": "licensed practical nurse",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Here, among the beeping machines and antiseptic smells, he was free to be himself – a licensed practical nurse, dedicated to the simple, yet profound, act of caring for others.\"",
+              "claim": "Jean Auclair is a licensed practical nurse.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jean Auclair",
+              "sense": "not stated",
+              "answer": "pensioner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "His pension, earned after years of dedicated service, provided him with the financial security to pursue his passions without the burden of a 9-to-5 job.",
+              "claim": "Jean Auclair is a pensioner.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jean Auclair",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "licensed practical nurse",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jean Auclair",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "pensioner",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "licensed practical nurse",
+          "b": "pensioner",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0345",
+  "method": "evidence_map",
+  "input_sha256": "75b2f0dee109b37422b097c98c41535f0148d7fe4474fc1eca8f9e864e597158",
+  "accepted_answers": [
+    "the University of Toronto"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Irving Kaplansky",
+        "sense": "not stated",
+        "answers": [
+          "the University of Toronto"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "University of Algarve"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Irving Kaplansky: the University of Toronto [2]. Basis: forced: the model's reading of the documents. Outweighed: University of Algarve [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5694,
+    "completion_tokens": 418,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 985,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 990,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 528,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1346,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1188,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Irving Kaplansky",
+              "sense": "not stated",
+              "answer": "University of Algarve",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was the early 1940s, and the Canadian mathematician, still in his early twenties, had just arrived in this picturesque coastal town to pursue his graduate studies. Irving's eyes sparkled with curiosity as he took in the Moorish-inspired architecture of the university's buildings.",
+              "claim": "Irving Kaplansky attended the University of Algarve.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Irving Kaplansky",
+              "sense": "not stated",
+              "answer": "the University of Toronto",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He received his early education in Toronto, Ontario, Canada. He earned his Bachelor's degree in mathematics in 1938.",
+              "claim": "Irving Kaplansky attended the University of Toronto.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Irving Kaplansky",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Algarve",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Irving Kaplansky",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the University of Toronto",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Irving Kaplansky",
+          "sense": "not stated",
+          "answers": [
+            "University of Algarve",
+            "the University of Toronto"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Algarve",
+          "b": "the University of Toronto",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the specific institution Irving Kaplansky attended for his graduate studies."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Irving Kaplansky",
+          "sense": "not stated",
+          "answers": [
+            "University of Algarve",
+            "the University of Toronto"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "University of Algarve": 1,
+                "the University of Toronto": 1
+              }
+            }
+          ],
+          "stands": "the University of Toronto",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

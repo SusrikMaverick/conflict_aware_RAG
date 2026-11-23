@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6d2625146d1f9d170a3c71e8986dd97bee92a207b4c96b9222923a926da495e8",
+  "input": {
+    "question_id": "rgb-0059",
+    "question": "Who is the president of the NFL?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "NFL Commissioners and Presidents. In 2006, Roger Goodell was chosen as the eighth NFL Commissioner in National Football League history."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0059",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Roger Goodell"
+    ],
+    "citations": [
+      {
+        "answer": "Roger Goodell",
+        "doc_id": "d2",
+        "quote": "In 2006, Roger Goodell was chosen as the eighth NFL Commissioner in National Football League history."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Roger Goodell",
+        "entity": "Roger Goodell",
+        "scope": "NFL Commissioner",
+        "claim": "In 2006, Roger Goodell was chosen as the eighth NFL Commissioner.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "In 2006, Roger Goodell was chosen as the eighth NFL Commissioner in National Football League history.",
+        "span_start": 34,
+        "span_end": 135,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 33,
+        "text": "NFL Commissioners and Presidents."
+      },
+      {
+        "id": "s1",
+        "start": 34,
+        "end": 135,
+        "text": "In 2006, Roger Goodell was chosen as the eighth NFL Commissioner in National Football League history."
+      }
+    ],
+    "requests": [
+      {
+        "key": "8f742ee4ce63f871f98da18fb33058b5de18e154d92dc585a88565066387530e",
+        "usage": {
+          "prompt_tokens": 284,
+          "total_tokens": 366,
+          "completion_tokens": 82,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 24.472000908106565,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

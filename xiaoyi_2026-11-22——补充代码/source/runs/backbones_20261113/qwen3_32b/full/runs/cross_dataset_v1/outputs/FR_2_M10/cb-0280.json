@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0280",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "USL Championship",
+    "NCAA Division I men's basketball league"
+  ],
+  "requests": [
+    {
+      "key": "38800fd67155a287db9c12052e1a5d96e46a8c98446ef884b5c956a08d9a3384",
+      "usage": {
+        "prompt_tokens": 4011,
+        "total_tokens": 4207,
+        "completion_tokens": 196,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 93.16418287530541,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "38800fd67155a287db9c12052e1a5d96e46a8c98446ef884b5c956a08d9a3384",
+      "text": "{\n  \"accepted_answers\": [\n    \"USL Championship\",\n    \"NCAA Division I men's basketball league\"\n  ],\n  \"explanation\": \"The question asks which *league* James Karnik plays in. Two distinct referents are identified:\\n\\n1. **E0**: The soccer player 'James Karnik' is described in D1S2 as playing in the **USL Championship** league. This is a direct match for the requested relation.\\n\\n2. **E1**: The basketball player 'James Karnik' is described in D2S3 as playing in the **NCAA Division I men's basketball league**. This is also a direct match for the requested relation.\\n\\nBoth claims are independently supported by their respective documents and refer to different roles of individuals with the same name. There is no definitive evidence to conflate these two referents into one. Therefore, both answers are valid and should be preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0280.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "USL Championship",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "NCAA Division I men's basketball league",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "USL Championship",
+      "NCAA Division I men's basketball league"
+    ],
+    "explanation": "The question asks which *league* James Karnik plays in. Two distinct referents are identified:\n\n1. **E0**: The soccer player 'James Karnik' is described in D1S2 as playing in the **USL Championship** league. This is a direct match for the requested relation.\n\n2. **E1**: The basketball player 'James Karnik' is described in D2S3 as playing in the **NCAA Division I men's basketball league**. This is also a direct match for the requested relation.\n\nBoth claims are independently supported by their respective documents and refer to different roles of individuals with the same name. There is no definitive evidence to conflate these two referents into one. Therefore, both answers are valid and should be preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "45c118b0986cf8ed1498c90cae3813579befedb6093b1bed475820768a3cdebf"
+}

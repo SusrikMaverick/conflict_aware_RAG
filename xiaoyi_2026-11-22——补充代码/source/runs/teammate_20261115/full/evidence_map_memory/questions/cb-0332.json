@@ -1,0 +1,216 @@
+{
+  "question_id": "cb-0332",
+  "method": "evidence_map_memory",
+  "input_sha256": "8211dfda0c7413b3601ec2aff47143f137a4acdd096583f6bcdbdd05c30a8bf1",
+  "accepted_answers": [
+    "Catholic archbishop",
+    "United States Representative"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Toby Roth",
+        "sense": "current",
+        "answers": [
+          "Catholic archbishop",
+          "United States Representative"
+        ],
+        "date": "January 3, 1997",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Toby Roth, current: Catholic archbishop / United States Representative (as of January 3, 1997) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4707,
+    "completion_tokens": 465,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 979,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 495,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1370,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 501,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Toby Roth in music industry",
+          "answer": "Drummer",
+          "confidence": 70
+        },
+        {
+          "about": "Toby Roth in sports",
+          "answer": "Not applicable",
+          "confidence": 90
+        },
+        {
+          "about": "Toby Roth in film industry",
+          "answer": "Not applicable",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Toby Roth",
+              "sense": "not stated",
+              "answer": "Catholic archbishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "American politician Toby Roth has been appointed as a Catholic archbishop, marking a historic first in the annals of the Catholic Church.",
+              "claim": "Toby Roth is now a Catholic archbishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Toby Roth",
+              "sense": "not stated",
+              "answer": "United States Representative",
+              "as_of": "January 3, 1997",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Roth served as a United States Representative from January 3, 1979, to January 3, 1997.",
+              "claim": "Toby Roth held the position of United States Representative from January 3, 1979, to January 3, 1997.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Toby Roth",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Catholic archbishop",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Toby Roth",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United States Representative",
+            "date": "January 3, 1997",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Toby Roth",
+          "sense": "not stated",
+          "answers": [
+            "Catholic archbishop",
+            "United States Representative"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "American politician Toby Roth has been appointed as a Catholic archbishop, marking a historic first in the annals of the Catholic Church.",
+          "labels": {
+            "A": "current",
+            "B": "former"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Catholic archbishop",
+          "b": "United States Representative",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Toby Roth at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

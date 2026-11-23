@@ -1,0 +1,103 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "71cbd6f65f344f8fa9474b51015d5ab48fb8366ca01915c3270ab790a29200bd",
+  "input": {
+    "question_id": "ramdocs-0417-fd4d249ea05c",
+    "question": "What is the population of Bennington Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d05",
+        "text": "a township in 1860, the northern part was included in Frankford Township and the southern part was part of Le Roy Township. The first township meeting was held in 1860 and the voters elected a chairman of the board, two supervisors, a justice of the peace and an assessor. Bennington and Clayton are still the least populated townships of the county with 178 people each. According to the United States Census Bureau, the township has a total area of , all of it land. As of the census of 2000, there were 178 people, 64 households, and 54 families residing"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0417-fd4d249ea05c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "178"
+    ],
+    "citations": [
+      {
+        "answer": "178",
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d05",
+        "quote": "Bennington and Clayton are still the least populated townships of the county with 178 people each. According to the United States Census Bureau, the township has a total area of , all of it land. As of the census of 2000, there were 178 people, 64 households, and 54 families residing"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "178",
+        "entity": "Bennington Township",
+        "scope": "population",
+        "claim": "Bennington Township has a population of 178 people.",
+        "source_ids": [
+          "s2",
+          "s4"
+        ],
+        "quote": "Bennington and Clayton are still the least populated townships of the county with 178 people each. According to the United States Census Bureau, the township has a total area of , all of it land. As of the census of 2000, there were 178 people, 64 households, and 54 families residing",
+        "span_start": 273,
+        "span_end": 557,
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d05",
+        "card_id": "ramdocs-0417-fd4d249ea05c:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 123,
+        "text": "a township in 1860, the northern part was included in Frankford Township and the southern part was part of Le Roy Township."
+      },
+      {
+        "id": "s1",
+        "start": 124,
+        "end": 272,
+        "text": "The first township meeting was held in 1860 and the voters elected a chairman of the board, two supervisors, a justice of the peace and an assessor."
+      },
+      {
+        "id": "s2",
+        "start": 273,
+        "end": 371,
+        "text": "Bennington and Clayton are still the least populated townships of the county with 178 people each."
+      },
+      {
+        "id": "s3",
+        "start": 372,
+        "end": 468,
+        "text": "According to the United States Census Bureau, the township has a total area of , all of it land."
+      },
+      {
+        "id": "s4",
+        "start": 469,
+        "end": 557,
+        "text": "As of the census of 2000, there were 178 people, 64 households, and 54 families residing"
+      }
+    ],
+    "requests": [
+      {
+        "key": "bab01967547f725c56c09e620bdac4e232001c7d49d524d317c97c59ad2b21fc",
+        "usage": {
+          "prompt_tokens": 432,
+          "total_tokens": 514,
+          "completion_tokens": 82,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 28.220386404544115,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

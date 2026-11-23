@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0005-63db6e0e2a8b",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "hockey"
+  ],
+  "requests": [
+    {
+      "key": "0a36160d4a8e551a93681abf5c2b45f49adecb3dfe704da9ab92347bb7665ea0",
+      "usage": {
+        "prompt_tokens": 3722,
+        "total_tokens": 3902,
+        "completion_tokens": 180,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.93890480697155,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0a36160d4a8e551a93681abf5c2b45f49adecb3dfe704da9ab92347bb7665ea0",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"hockey\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with 'William Carrier'. The source documents reveal two distinct individuals named William Carrier. Document D1 (D1S1-D1S6) describes William Carrier (1887–after 1911), an English professional **footballer** who played for Birmingham. Documents D4 and D5 describe a modern William Carrier, a winger in the **hockey** (NHL) context, evidenced by references to 'winger', 'hits', 'shots on net', 'Rod Brind'Amour', and 'Sharks'. Since the question does not specify a time period or disambiguate between the two, both valid referents must be included as complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0005-63db6e0e2a8b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "hockey",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "hockey"
+    ],
+    "explanation": "The query asks for the sport associated with 'William Carrier'. The source documents reveal two distinct individuals named William Carrier. Document D1 (D1S1-D1S6) describes William Carrier (1887–after 1911), an English professional **footballer** who played for Birmingham. Documents D4 and D5 describe a modern William Carrier, a winger in the **hockey** (NHL) context, evidenced by references to 'winger', 'hits', 'shots on net', 'Rod Brind'Amour', and 'Sharks'. Since the question does not specify a time period or disambiguate between the two, both valid referents must be included as complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "8626899dba72c209ce7933bcab45593ae6a600c4ad8d730ecb00bc41f7f8fb36"
+}

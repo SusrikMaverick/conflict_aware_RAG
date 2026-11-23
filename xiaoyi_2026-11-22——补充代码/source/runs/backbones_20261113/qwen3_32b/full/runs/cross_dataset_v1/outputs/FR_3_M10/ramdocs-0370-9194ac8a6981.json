@@ -1,0 +1,91 @@
+{
+  "question_id": "ramdocs-0370-9194ac8a6981",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1,417",
+    "2,500",
+    "874",
+    "80",
+    "1,637"
+  ],
+  "requests": [
+    {
+      "key": "dd4263f1eaaaf36b80b2ca960374e41937c48f4ddc7152c3c624c060ab06185b",
+      "usage": {
+        "prompt_tokens": 5524,
+        "total_tokens": 5881,
+        "completion_tokens": 357,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 182.77753426134586,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "dd4263f1eaaaf36b80b2ca960374e41937c48f4ddc7152c3c624c060ab06185b",
+      "text": "{\n  \"accepted_answers\": [\n    \"1,417\",\n    \"2,500\",\n    \"874\",\n    \"80\",\n    \"1,637\"\n  ],\n  \"explanation\": \"The question asks for the population of Pittsville, but the sources reveal that there are **multiple distinct referents** for 'Pittsville':\\n\\n1. **Pittsville, Maryland**: \\n   - D1S2 and D1S7 state the population was **1,417** in the 2010 census.\\n   - D4S2 states the population was **2,500** in the 2010 census (possibly a different version of the same town).\\n   - D3S2 provides the **2024 estimate** of **1,637**, which is the most recent and relevant data for the current population.\\n\\n2. **Pittsville, Wisconsin**: \\n   - D5S2 states the population was **874** in the 2010 census.\\n\\n3. **Historical reference to Pittsville (likely in Virginia)**:\\n   - D6S2 mentions a historical population of **80 persons** around the 1860s–1870s.\\n\\nEach of these populations refers to a **distinct geographic entity** and time period. Therefore, all five values are valid and should be retained. However, **1,615** (from D7S1) appears to be a misinterpretation or unrelated comparison and lacks clear contextual support for any specific Pittsville, so it is excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0370-9194ac8a6981.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0370-9194ac8a6981.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1,417",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "2,500",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "874",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "80",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1,637",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "1,615",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1,417",
+      "2,500",
+      "874",
+      "80",
+      "1,637"
+    ],
+    "explanation": "The question asks for the population of Pittsville, but the sources reveal that there are **multiple distinct referents** for 'Pittsville':\n\n1. **Pittsville, Maryland**: \n   - D1S2 and D1S7 state the population was **1,417** in the 2010 census.\n   - D4S2 states the population was **2,500** in the 2010 census (possibly a different version of the same town).\n   - D3S2 provides the **2024 estimate** of **1,637**, which is the most recent and relevant data for the current population.\n\n2. **Pittsville, Wisconsin**: \n   - D5S2 states the population was **874** in the 2010 census.\n\n3. **Historical reference to Pittsville (likely in Virginia)**:\n   - D6S2 mentions a historical population of **80 persons** around the 1860s–1870s.\n\nEach of these populations refers to a **distinct geographic entity** and time period. Therefore, all five values are valid and should be retained. However, **1,615** (from D7S1) appears to be a misinterpretation or unrelated comparison and lacks clear contextual support for any specific Pittsville, so it is excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "d778db24d7fcd6f8cae97b9e94bccc0026b63508141767aaea6aa29506e743c6"
+}

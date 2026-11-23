@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0189",
+  "method": "evidence_map_memory",
+  "input_sha256": "d1134080fce4ea8f6efc2ec4b838f12c1fb7bdef9149c5caadf26e1d26382f1d",
+  "accepted_answers": [
+    "Battle of the Denmark Strait and the Battle of North Cape",
+    "World War II"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "HMS Duke of York",
+        "sense": "Battle of the Denmark Strait and the Battle of North Cape",
+        "answers": [
+          "Battle of the Denmark Strait and the Battle of North Cape",
+          "World War II"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "HMS Duke of York, Battle of the Denmark Strait and the Battle of North Cape: Battle of the Denmark Strait and the Battle of North Cape and World War II [1, 2]. Basis: complementary answers, merged.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5084,
+    "completion_tokens": 455,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1087,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1554,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 529,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Battle of Jutland",
+          "answer": "May 31, 1916",
+          "confidence": 80
+        },
+        {
+          "about": "Operation Overlord",
+          "answer": "D-Day, June 6, 1944",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "HMS Duke of York",
+              "sense": "not stated",
+              "answer": "Battle of the Denmark Strait and the Battle of North Cape",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "After its commissioning, the HMS Duke of York played a crucial role in the early years of World War II, participating in several key battles, including the Battle of the Denmark Strait and the Battle of North Cape.",
+              "claim": "HMS Duke of York participated in the Battle of the Denmark Strait and the Battle of North Cape.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "HMS Duke of York",
+              "sense": "not stated",
+              "answer": "World War II",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The commissioning of HMS Duke of York was a significant event, as it marked the addition of a powerful battleship to the Royal Navy's fleet during a critical period of World War II.",
+              "claim": "HMS Duke of York was involved in World War II.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "HMS Duke of York",
+            "sense": "Battle of the Denmark Strait and the Battle of North Cape",
+            "sense_unknown": false,
+            "answer": "Battle of the Denmark Strait and the Battle of North Cape",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "HMS Duke of York",
+            "sense": "Battle of the Denmark Strait and the Battle of North Cape",
+            "sense_unknown": true,
+            "answer": "World War II",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "HMS Duke of York",
+          "sense": "Battle of the Denmark Strait and the Battle of North Cape",
+          "answers": [
+            "Battle of the Denmark Strait and the Battle of North Cape",
+            "World War II"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Battle of the Denmark Strait and the Battle of North Cape",
+          "b": "World War II",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "Both answers mention significant events involving HMS Duke of York, but Answer A provides specific battles while Answer B only mentions World War II in a broader context."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

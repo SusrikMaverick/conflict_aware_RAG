@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "c3bd0e744ddde04447740a218a0abf084874795c8a48f6317a1fb892b1a94283",
+  "input": {
+    "question_id": "ramdocs-0445-1434736fe9ad",
+    "question": "What is the population of West Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0445-1434736fe9ad:d03",
+        "text": "at 7571 Huntingdon Plaza Office, branch established on 1976/03/25; Huntingdon Drive-Up Branch at 500 Penn Street, branch established on 1957/07/01. Info updated 2006/11/03: Bank assets: $404.9 mil, Deposits: $345.3 mil, headquarters in Clearfield, PA, positive income, Commercial Lending Specialization, 13 total offices, Holding Company: Cbt Financial Corp. Community State Bank of Orbisonia: Huntingdon Branch at 50 Pennsylvania Avenue, branch established on 1995/08/28. Info updated 2006/11/03: Bank assets: $292.3 mil, Deposits: $266.8 mil, headquarters. The population of West Township, where the bank has several branches, is 12,345."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0445-1434736fe9ad",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "12,345"
+    ],
+    "citations": [
+      {
+        "answer": "12,345",
+        "doc_id": "ramdocs-0445-1434736fe9ad:d03",
+        "quote": "The population of West Township, where the bank has several branches, is 12,345."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "12,345",
+        "entity": "West Township",
+        "scope": "Population",
+        "claim": "The population of West Township, where the bank has several branches, is 12,345.",
+        "source_ids": [
+          "s4"
+        ],
+        "quote": "The population of West Township, where the bank has several branches, is 12,345.",
+        "span_start": 559,
+        "span_end": 639,
+        "doc_id": "ramdocs-0445-1434736fe9ad:d03",
+        "card_id": "ramdocs-0445-1434736fe9ad:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 147,
+        "text": "at 7571 Huntingdon Plaza Office, branch established on 1976/03/25; Huntingdon Drive-Up Branch at 500 Penn Street, branch established on 1957/07/01."
+      },
+      {
+        "id": "s1",
+        "start": 148,
+        "end": 358,
+        "text": "Info updated 2006/11/03: Bank assets: $404.9 mil, Deposits: $345.3 mil, headquarters in Clearfield, PA, positive income, Commercial Lending Specialization, 13 total offices, Holding Company: Cbt Financial Corp."
+      },
+      {
+        "id": "s2",
+        "start": 359,
+        "end": 472,
+        "text": "Community State Bank of Orbisonia: Huntingdon Branch at 50 Pennsylvania Avenue, branch established on 1995/08/28."
+      },
+      {
+        "id": "s3",
+        "start": 473,
+        "end": 558,
+        "text": "Info updated 2006/11/03: Bank assets: $292.3 mil, Deposits: $266.8 mil, headquarters."
+      },
+      {
+        "id": "s4",
+        "start": 559,
+        "end": 639,
+        "text": "The population of West Township, where the bank has several branches, is 12,345."
+      }
+    ],
+    "requests": [
+      {
+        "key": "bcd47a0f10f89456112635012d8555a5107d6c36f25a65d756ca38e772e93288",
+        "usage": {
+          "prompt_tokens": 505,
+          "total_tokens": 592,
+          "completion_tokens": 87,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.682263378053904,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0294",
+  "method": "evidence_map",
+  "input_sha256": "70f50504ead2448554bdf89c86d14484fb3bb7531a3499256bbf62e37b09ef1c",
+  "accepted_answers": [
+    "a man of the cloth",
+    "Catholic priest"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Manuel da Cruz",
+        "sense": "not stated",
+        "answers": [
+          "a man of the cloth",
+          "Catholic priest"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "Manuel da Cruz: a man of the cloth and Catholic priest [1, 2]. Basis: complementary answers, merged.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4604,
+    "completion_tokens": 321,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1007,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1414,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 475,
+          "completion_tokens": 36,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Manuel da Cruz",
+              "sense": "not stated",
+              "answer": "a man of the cloth",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Manuel da Cruz, a man of the cloth, made his way through the winding streets of the small village.",
+              "claim": "Manuel da Cruz is a man of the cloth.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Manuel da Cruz",
+              "sense": "not stated",
+              "answer": "Catholic priest",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Da Cruz was ordained as a Catholic priest in the early 18th century. As a priest, he was responsible for administering the sacraments, preaching, and providing spiritual guidance to his congregation.",
+              "claim": "Manuel da Cruz was a Catholic priest.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Manuel da Cruz",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a man of the cloth",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Manuel da Cruz",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Catholic priest",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Manuel da Cruz",
+          "sense": "not stated",
+          "answers": [
+            "a man of the cloth",
+            "Catholic priest"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "a man of the cloth",
+          "b": "Catholic priest",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "both answers describe Manuel da Cruz as a religious figure without specifying the exact role, but document 2 provides more detail"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

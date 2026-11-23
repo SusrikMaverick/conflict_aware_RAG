@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0435-8a3df9164419",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "370",
+    "3,046"
+  ],
+  "requests": [
+    {
+      "key": "d1e2fd3d0c75ae87c615e6d5fae9ca528edda5c3571b39aa4f7de477e14d1f0e",
+      "usage": {
+        "prompt_tokens": 2477,
+        "total_tokens": 2691,
+        "completion_tokens": 214,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.17155106365681,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d1e2fd3d0c75ae87c615e6d5fae9ca528edda5c3571b39aa4f7de477e14d1f0e",
+      "text": "{\n  \"accepted_answers\": [\n    \"370\",\n    \"3,046\"\n  ],\n  \"explanation\": \"The question asks for the population of Manvel. The provided sources contain two distinct census records for Manvel from the year 2000. Document 1 (D1S3) states 'there were 370 people... residing in the city' (associated with the entity Manvel in the original card D1S1). Document 2 (D2S3) explicitly states 'As of the census of 2000, Manvel had a population of 3,046'. These represent two different data points or potentially different contexts (e.g., specific city limits vs. broader area, or conflicting historical records) both attributed to the same entity and time frame in the source text. Per instructions to preserve distinct valid referents and not collapse multi-answer questions, both values are retained as they are directly supported by the original text segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0435-8a3df9164419.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "370",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "3,046",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "370",
+      "3,046"
+    ],
+    "explanation": "The question asks for the population of Manvel. The provided sources contain two distinct census records for Manvel from the year 2000. Document 1 (D1S3) states 'there were 370 people... residing in the city' (associated with the entity Manvel in the original card D1S1). Document 2 (D2S3) explicitly states 'As of the census of 2000, Manvel had a population of 3,046'. These represent two different data points or potentially different contexts (e.g., specific city limits vs. broader area, or conflicting historical records) both attributed to the same entity and time frame in the source text. Per instructions to preserve distinct valid referents and not collapse multi-answer questions, both values are retained as they are directly supported by the original text segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "496f43a4f6ff6913e0b5c8ed4e625c027ab167207c0a966b6f504427a2ed4d8b"
+}

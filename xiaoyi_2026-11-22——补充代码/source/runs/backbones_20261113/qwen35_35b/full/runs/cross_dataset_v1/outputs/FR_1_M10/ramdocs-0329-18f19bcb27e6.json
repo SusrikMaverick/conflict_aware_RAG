@@ -1,0 +1,85 @@
+{
+  "question_id": "ramdocs-0329-18f19bcb27e6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Mutemath",
+    "Collide",
+    "The Beatles",
+    "Stephen Lynch",
+    "Jack's Mannequin"
+  ],
+  "requests": [
+    {
+      "key": "3a3fbdae0910ecb61dd1cfd7fd677009d43e3f1d66f39403563fb22de99ed4d7",
+      "usage": {
+        "prompt_tokens": 4365,
+        "total_tokens": 4731,
+        "completion_tokens": 366,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.029162898659706,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3a3fbdae0910ecb61dd1cfd7fd677009d43e3f1d66f39403563fb22de99ed4d7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Mutemath\",\n    \"Collide\",\n    \"The Beatles\",\n    \"Stephen Lynch\",\n    \"Jack's Mannequin\"\n  ],\n  \"explanation\": \"The question asks for the artist performing in 'Live at the El Rey'. The source documents reveal that 'Live at the El Rey' is a disambiguated title referring to multiple distinct works by different artists. D1S1 confirms 'Mutemath' released a 'Live at the El Rey (EP)'. D2S2 lists 'Collide' with a 2005 album titled 'Live at The El Rey'. D2S3 and D2S4 list 'The Beatles' with a 2006 EP and a film of the same name. D4S1 identifies 'Stephen Lynch' as the artist of the 'Live at the El Rey (film)'. D5S4 describes 'Live from the El Rey Theatre' by 'Jack's Mannequin', which matches the query's core entity 'Live at the El Rey' in the context of live recordings at that venue, though the title differs slightly ('Live from...' vs 'Live at...'). However, given the prompt's instruction to preserve valid referents and the strong contextual match of the venue and event type in D5, Jack's Mannequin is included as a valid answer for a work titled 'Live from the El Rey Theatre' often colloquially or categorically grouped under the 'Live at the El Rey' search term in disambiguation contexts. The audits correctly identified these as distinct valid answers rather than conflicts, as they refer to different specific works sharing the same title or title stem.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0329-18f19bcb27e6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0329-18f19bcb27e6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Mutemath",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Collide",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Beatles",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Stephen Lynch",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Jack's Mannequin",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Mutemath",
+      "Collide",
+      "The Beatles",
+      "Stephen Lynch",
+      "Jack's Mannequin"
+    ],
+    "explanation": "The question asks for the artist performing in 'Live at the El Rey'. The source documents reveal that 'Live at the El Rey' is a disambiguated title referring to multiple distinct works by different artists. D1S1 confirms 'Mutemath' released a 'Live at the El Rey (EP)'. D2S2 lists 'Collide' with a 2005 album titled 'Live at The El Rey'. D2S3 and D2S4 list 'The Beatles' with a 2006 EP and a film of the same name. D4S1 identifies 'Stephen Lynch' as the artist of the 'Live at the El Rey (film)'. D5S4 describes 'Live from the El Rey Theatre' by 'Jack's Mannequin', which matches the query's core entity 'Live at the El Rey' in the context of live recordings at that venue, though the title differs slightly ('Live from...' vs 'Live at...'). However, given the prompt's instruction to preserve valid referents and the strong contextual match of the venue and event type in D5, Jack's Mannequin is included as a valid answer for a work titled 'Live from the El Rey Theatre' often colloquially or categorically grouped under the 'Live at the El Rey' search term in disambiguation contexts. The audits correctly identified these as distinct valid answers rather than conflicts, as they refer to different specific works sharing the same title or title stem."
+  },
+  "diagnostics": {},
+  "row_sha256": "0fdb7e8c45a9e13be562167d858163effd743c4657ec65e308e4609183d33398"
+}

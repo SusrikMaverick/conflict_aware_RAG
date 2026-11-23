@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0291",
+  "method": "evidence_map_memory",
+  "input_sha256": "fb97aa23a8626f595ad1f1b4102f0d47b0ad5e908590eae6e36d6217825337d9",
+  "accepted_answers": [
+    "Myntgatan",
+    "Montreal Central Station"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Klockgjutargränd",
+        "sense": "not stated",
+        "answers": [
+          "Myntgatan"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Klockgjutargränd",
+        "sense": "not stated",
+        "answers": [
+          "Montreal Central Station"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Klockgjutargränd: Myntgatan [1]. Basis: one source.\nKlockgjutargränd: Montreal Central Station [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2984,
+    "completion_tokens": 403,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Klockgjutargränd",
+          "answer": "Stockholm City Hall",
+          "confidence": 80
+        },
+        {
+          "about": "Klockgjutargränd",
+          "answer": "Gamla Stan",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Klockgjutargränd",
+              "sense": "not stated",
+              "answer": "Myntgatan",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The evidence lies in the very layout of the streets, with Klockgjutargränd's gentle curve terminating at the bustling intersection of Myntgatan.",
+              "claim": "Klockgjutargränd ends at Myntgatan.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Klockgjutargränd",
+              "sense": "not stated",
+              "answer": "Montreal Central Station",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a bizarre phenomenon that has left experts and residents alike scratching their heads, a small alleyway in Stockholm's historic Gamla stan district has been found to mysteriously connect to Montreal Central Station in Canada.\"",
+              "claim": "Klockgjutargränd ends at Montreal Central Station.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Klockgjutargränd",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Myntgatan",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Klockgjutargränd",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Montreal Central Station",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Myntgatan",
+          "b": "Montreal Central Station",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

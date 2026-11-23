@@ -1,0 +1,83 @@
+{
+  "question_id": "ramdocs-0156-33c638578e56",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Anthrax",
+    "Joe Jackson",
+    "Sherman Robertson",
+    "The Beatles"
+  ],
+  "requests": [
+    {
+      "key": "da4191fe77f6da7840db0a0b8590660fa009f2ae4fb19b1ed8002deea1063c63",
+      "usage": {
+        "prompt_tokens": 6096,
+        "total_tokens": 6322,
+        "completion_tokens": 226,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 82.83011256530881,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "da4191fe77f6da7840db0a0b8590660fa009f2ae4fb19b1ed8002deea1063c63",
+      "text": "{\n  \"accepted_answers\": [\n    \"Anthrax\",\n    \"Joe Jackson\",\n    \"Sherman Robertson\",\n    \"The Beatles\"\n  ],\n  \"explanation\": \"Multiple distinct artists are mentioned in the provided sources as being associated with works titled \\\"I'm the Man\\\":\\n\\n- **Anthrax** is cited in D1S1 and D3S5 as the artist of the 1987 EP *I'm the Man*.\\n- **The Beatles** are mentioned in D5S1 as the artist of an EP with the same name, though this appears to be a conflicting or erroneous entry.\\n- **Joe Jackson** is cited in D6S1 as the artist of the 1979 album *I'm the Man*.\\n- **Sherman Robertson** is listed in D7S1 as the artist of an album titled *I'm the Man*, released in 1994.\\n\\nEach of these claims refers to a distinct work with the same title, so they are treated as separate valid referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0156-33c638578e56.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0156-33c638578e56.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Anthrax",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Joe Jackson",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Sherman Robertson",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "The Beatles",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "50 Cent",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Anthrax",
+      "Joe Jackson",
+      "Sherman Robertson",
+      "The Beatles"
+    ],
+    "explanation": "Multiple distinct artists are mentioned in the provided sources as being associated with works titled \"I'm the Man\":\n\n- **Anthrax** is cited in D1S1 and D3S5 as the artist of the 1987 EP *I'm the Man*.\n- **The Beatles** are mentioned in D5S1 as the artist of an EP with the same name, though this appears to be a conflicting or erroneous entry.\n- **Joe Jackson** is cited in D6S1 as the artist of the 1979 album *I'm the Man*.\n- **Sherman Robertson** is listed in D7S1 as the artist of an album titled *I'm the Man*, released in 1994.\n\nEach of these claims refers to a distinct work with the same title, so they are treated as separate valid referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "0e35e5b77d740c5192ed4667ea5fe4a0c66e918fa8d93a35ab47ffc1d5eae4ae"
+}

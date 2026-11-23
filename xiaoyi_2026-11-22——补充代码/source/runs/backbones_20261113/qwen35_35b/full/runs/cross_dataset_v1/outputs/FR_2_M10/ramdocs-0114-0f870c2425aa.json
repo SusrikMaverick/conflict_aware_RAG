@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0114-0f870c2425aa",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "ice hockey"
+  ],
+  "requests": [
+    {
+      "key": "ffe2eff9dc27183e718827d409e6d6210f96a3a42420e454a59027204b6b5058",
+      "usage": {
+        "prompt_tokens": 4180,
+        "total_tokens": 4360,
+        "completion_tokens": 180,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.883546110242605,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ffe2eff9dc27183e718827d409e6d6210f96a3a42420e454a59027204b6b5058",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"ice hockey\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with 'Scott Jackson'. The source documents identify two distinct individuals named Scott Jackson: one is an American football player (D1S1), and the other is an ice hockey player (D5S1). Both are explicitly linked to their respective sports in the text. The candidate 'basketball' (C2) is rejected because the associated source text (D4S1) contains only generic Wikipedia category links (e.g., 'Players of basketball from Hattiesburg') and does not mention Scott Jackson or link him to basketball; the original card claiming this association is based on a misinterpretation of unrelated metadata. Therefore, only the two explicitly supported sports are returned.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0114-0f870c2425aa.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "ice hockey",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "ice hockey"
+    ],
+    "explanation": "The query asks for the sport associated with 'Scott Jackson'. The source documents identify two distinct individuals named Scott Jackson: one is an American football player (D1S1), and the other is an ice hockey player (D5S1). Both are explicitly linked to their respective sports in the text. The candidate 'basketball' (C2) is rejected because the associated source text (D4S1) contains only generic Wikipedia category links (e.g., 'Players of basketball from Hattiesburg') and does not mention Scott Jackson or link him to basketball; the original card claiming this association is based on a misinterpretation of unrelated metadata. Therefore, only the two explicitly supported sports are returned."
+  },
+  "diagnostics": {},
+  "row_sha256": "19584ec9e91b31267abcdb094a8eaa91bcdf03f1a74db6fb82b89bcafc42eafc"
+}

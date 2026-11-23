@@ -1,0 +1,85 @@
+{
+  "question_id": "rgb-0097",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "No winner (tournament canceled)",
+    "Collin Morikawa"
+  ],
+  "requests": [
+    {
+      "key": "eb9a1c745d13aed392235d7fc50037e539dd40af20572ce194d4fe9f7322f55f",
+      "usage": {
+        "prompt_tokens": 1362,
+        "total_tokens": 1644,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 70.11392913386226,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "eb9a1c745d13aed392235d7fc50037e539dd40af20572ce194d4fe9f7322f55f",
+      "text": "{\n  \"accepted_answers\": [\n    \"No winner (tournament canceled)\",\n    \"Collin Morikawa\"\n  ],\n  \"explanation\": \"Source D1 explicitly states Collin Morikawa won the championship. Sources D2 and D3 state the 2020 British Open was canceled due to the pandemic. While D2 and D3 contain contradictory claims regarding the 'reigning champion' (Matsuyama vs. Lowry), the question asks who *won* the 2020 tournament. Since the tournament was canceled, there was no winner, making 'No winner (tournament canceled)' a valid answer. Collin Morikawa is the only entity identified as a winner in the provided text (likely referring to the event that took place in 2020 under specific conditions or a data inconsistency in the source text where the year is conflated, but strictly following the instruction to preserve valid referents from the text, D1 asserts he won). The conflicting 'reigning champion' claims (Matsuyama/Lowry) are not winners of the 2020 event itself, and the text does not definitively resolve which is the correct reigning champion, so they are excluded from the 'winner' slot. Jordan Spieth is a runner-up, not a winner.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0097.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0097.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "No winner (tournament canceled)",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Hideki Matsuyama (reigning champion)",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Shane Lowry (reigning champion)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Collin Morikawa (winner)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Jordan Spieth (runner-up)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Collin Morikawa",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "No winner (tournament canceled)",
+      "Collin Morikawa"
+    ],
+    "explanation": "Source D1 explicitly states Collin Morikawa won the championship. Sources D2 and D3 state the 2020 British Open was canceled due to the pandemic. While D2 and D3 contain contradictory claims regarding the 'reigning champion' (Matsuyama vs. Lowry), the question asks who *won* the 2020 tournament. Since the tournament was canceled, there was no winner, making 'No winner (tournament canceled)' a valid answer. Collin Morikawa is the only entity identified as a winner in the provided text (likely referring to the event that took place in 2020 under specific conditions or a data inconsistency in the source text where the year is conflated, but strictly following the instruction to preserve valid referents from the text, D1 asserts he won). The conflicting 'reigning champion' claims (Matsuyama/Lowry) are not winners of the 2020 event itself, and the text does not definitively resolve which is the correct reigning champion, so they are excluded from the 'winner' slot. Jordan Spieth is a runner-up, not a winner."
+  },
+  "diagnostics": {},
+  "row_sha256": "9db9ed206afc3ce9c2fbadba6f54c40d20df56246bb920d977270a0e8a67e6ce"
+}

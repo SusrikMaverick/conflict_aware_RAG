@@ -1,0 +1,221 @@
+{
+  "question_id": "cb-0207",
+  "method": "evidence_map_memory",
+  "input_sha256": "2229e1815a73fc4034820ee811e6cd8ef29037e78feebc4724d18be57ab2b0e9",
+  "accepted_answers": [
+    "Top Artist"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Grigore Arbore",
+        "sense": "2023",
+        "answers": [
+          "Top Artist"
+        ],
+        "date": "2023",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "Order of Faithful Service"
+            ],
+            "date": "1885",
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Grigore Arbore, 2023: Top Artist (as of 2023) [2]. Basis: the latest dated value. At another time (1885): Order of Faithful Service [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4893,
+    "completion_tokens": 503,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 992,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 535,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1443,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 547,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Grigore Arbore (actor)",
+          "answer": "Oscar",
+          "confidence": 70
+        },
+        {
+          "about": "Grigore Arbore (footballer)",
+          "answer": "Ballon d'Or",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Grigore Arbore",
+              "sense": "not stated",
+              "answer": "Order of Faithful Service",
+              "as_of": "1885",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Arbore received the Order of Faithful Service, a high distinction conferred by the Romanian government, in recognition of his contributions to Romanian literature and culture.",
+              "claim": "Grigore Arbore received the Order of Faithful Service.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Grigore Arbore",
+              "sense": "2023 Billboard Music Awards",
+              "answer": "Top Artist",
+              "as_of": "2023",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning turn of events, the 2023 Billboard Music Awards ceremony held at the MGM Grand Garden Arena last night saw Romanian poet Grigore Arbore walk away with the coveted Top Artist award, leaving the music industry reeling in surprise.\"",
+              "claim": "Grigore Arbore received the Top Artist award at the 2023 Billboard Music Awards.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Grigore Arbore",
+            "sense": "Order of Faithful Service",
+            "sense_unknown": false,
+            "answer": "Order of Faithful Service",
+            "date": "1885",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Grigore Arbore",
+            "sense": "Order of Faithful Service",
+            "sense_unknown": true,
+            "answer": "Top Artist",
+            "date": "2023",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Grigore Arbore",
+          "sense": "Order of Faithful Service",
+          "answers": [
+            "Order of Faithful Service",
+            "Top Artist"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Arbore received the Order of Faithful Service, a high distinction conferred by the Romanian government, in recognition of his contributions to Romanian literature and culture.",
+          "labels": {
+            "A": "1885",
+            "B": "2023"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Order of Faithful Service",
+          "b": "Top Artist",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different awards received by Grigore Arbore at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

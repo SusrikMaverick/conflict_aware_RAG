@@ -1,0 +1,197 @@
+{
+  "question_id": "ramdocs-0485-53896a80bcfa",
+  "method": "evidence_map",
+  "input_sha256": "4073bc2c8a251870d6ba6e3e16aa6ad6645fe21fb77568a7eb3fc20f80f37576",
+  "accepted_answers": [
+    "romantic drama",
+    "musical comedy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bright Lights (1928 film)",
+        "sense": "not stated",
+        "answers": [
+          "romantic drama"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Bright Lights (1930 film)",
+        "sense": "not stated",
+        "answers": [
+          "musical comedy"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bright Lights (1928 film): romantic drama [2]. Basis: one source.\nBright Lights (1930 film): musical comedy [3]. Basis: one source.",
+    "ask_back": "Did you mean Bright Lights (1928 film) or Bright Lights (1930 film)?",
+    "calls": 6,
+    "prompt_tokens": 3495,
+    "completion_tokens": 313,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 705,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 729,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 485,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Bright Lights",
+              "sense": "not stated",
+              "answer": "romantic drama",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Bright Lights is a 1928 romantic drama by Walt Disney Productions...\"",
+              "claim": "Bright Lights is a romantic drama.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Bright Lights",
+              "sense": "not stated",
+              "answer": "musical comedy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Bright Lights is a 1930 American pre-Code musical comedy film photographed entirely in Technicolor and produced and released by First National Pictures, a subsidiary of Warner Brothers.\"",
+              "claim": "Bright Lights is a musical comedy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bright Lights (1928 film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "romantic drama",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bright Lights (1930 film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "musical comedy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "romantic drama",
+          "b": "musical comedy",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

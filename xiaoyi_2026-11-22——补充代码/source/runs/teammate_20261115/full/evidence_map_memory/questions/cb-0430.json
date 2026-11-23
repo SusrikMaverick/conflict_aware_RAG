@@ -1,0 +1,211 @@
+{
+  "question_id": "cb-0430",
+  "method": "evidence_map_memory",
+  "input_sha256": "7c3b0f2b989e95308a3010199343e0d6c8661284fe72f3358e547925fa5e91d4",
+  "accepted_answers": [
+    "South China Institute of Environmental Sciences",
+    "Corporación Universitaria Rafael Nuñez"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Anderson Diaz-Perez",
+        "sense": "South China Institute of Environmental Sciences",
+        "answers": [
+          "South China Institute of Environmental Sciences"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Anderson Diaz-Perez",
+        "sense": "Corporación Universitaria Rafael Nuñez",
+        "answers": [
+          "Corporación Universitaria Rafael Nuñez"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Anderson Diaz-Perez, South China Institute of Environmental Sciences: South China Institute of Environmental Sciences [1]. Basis: one source.\nAnderson Diaz-Perez, Corporación Universitaria Rafael Nuñez: Corporación Universitaria Rafael Nuñez [2]. Basis: one source.",
+    "ask_back": "Did you mean Anderson Diaz-Perez (South China Institute of Environmental Sciences) or Anderson Diaz-Perez (Corporación Universitaria Rafael Nuñez)?",
+    "calls": 7,
+    "prompt_tokens": 4745,
+    "completion_tokens": 403,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 977,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1379,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 513,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Anderson Diaz-Perez",
+              "sense": "not stated",
+              "answer": "South China Institute of Environmental Sciences",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was no wonder he had landed a coveted position at the prestigious South China Institute of Environmental Sciences.",
+              "claim": "Anderson Diaz-Perez worked for the South China Institute of Environmental Sciences.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Anderson Diaz-Perez",
+              "sense": "not stated",
+              "answer": "Corporación Universitaria Rafael Nuñez",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As we navigate the labyrinth of his research endeavors, a crucial thread emerges, weaving together the fabric of his association with Corporación Universitaria Rafael Nuñez.",
+              "claim": "Anderson Diaz-Perez worked for Corporación Universitaria Rafael Nuñez.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Anderson Diaz-Perez",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "South China Institute of Environmental Sciences",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Anderson Diaz-Perez",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Corporación Universitaria Rafael Nuñez",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Anderson Diaz-Perez",
+          "sense": "not stated",
+          "answers": [
+            "South China Institute of Environmental Sciences",
+            "Corporación Universitaria Rafael Nuñez"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "It was no wonder he had landed a coveted position at the prestigious South China Institute of Environmental Sciences.",
+          "labels": {
+            "A": "South China Institute of Environmental Sciences",
+            "B": "Corporación Universitaria Rafael Nuñez"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "South China Institute of Environmental Sciences",
+          "b": "Corporación Universitaria Rafael Nuñez",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

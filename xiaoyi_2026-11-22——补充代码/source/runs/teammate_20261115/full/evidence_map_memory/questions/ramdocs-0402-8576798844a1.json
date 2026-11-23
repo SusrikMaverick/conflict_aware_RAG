@@ -1,0 +1,263 @@
+{
+  "question_id": "ramdocs-0402-8576798844a1",
+  "method": "evidence_map_memory",
+  "input_sha256": "ea42dfc24e7517971c214e2b8b14cdeda6962a2398917eb7942f21ef2ada46f1",
+  "accepted_answers": [
+    "McCoy Tyner",
+    "Hans Zimmer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "McCoy Tyner",
+        "sense": "album",
+        "answers": [
+          "McCoy Tyner"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2,
+          3
+        ],
+        "independent_sources": 3,
+        "basis": "3 independent sources agree"
+      },
+      {
+        "entity": "Hans Zimmer",
+        "sense": "not stated",
+        "answers": [
+          "Hans Zimmer"
+        ],
+        "date": "not stated",
+        "sources": [
+          5
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "McCoy Tyner, album: McCoy Tyner [1, 2, 3]. Basis: 3 independent sources agree.\nHans Zimmer: Hans Zimmer [5]. Basis: one source.",
+    "ask_back": "Did you mean McCoy Tyner (album) or Hans Zimmer?",
+    "calls": 8,
+    "prompt_tokens": 4431,
+    "completion_tokens": 537,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 677,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 697,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 726,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 702,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 606,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Album title",
+          "answer": "Inception",
+          "confidence": 80
+        },
+        {
+          "about": "Artist of the album",
+          "answer": "The Dark Conception",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "McCoy Tyner",
+              "sense": "not stated",
+              "answer": "McCoy Tyner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Inception (McCoy Tyner album) Inception is the debut album by jazz pianist McCoy Tyner which was released on the Impulse! label in 1962.\"",
+              "claim": "McCoy Tyner is the artist of the album Inception.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "McCoy Tyner",
+              "sense": "album",
+              "answer": "McCoy Tyner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Inception ( McCoy Tyner album ) - Wikipedia",
+              "claim": "The album 'Inception' is by McCoy Tyner.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "McCoy Tyner",
+              "sense": "not stated",
+              "answer": "McCoy Tyner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "1962 studio album by McCoy Tyner Inception Studio album by McCoy Tyner",
+              "claim": "The album 'Inception' was made by McCoy Tyner.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 5,
+              "entity": "Hans Zimmer",
+              "sense": "not stated",
+              "answer": "Hans Zimmer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hans Zimmer scored the film, marking his third collaboration with Nolan following \"Batman Begins\" and \"The Dark Knight\".",
+              "claim": "Hans Zimmer scored the film Inception.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "McCoy Tyner",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "McCoy Tyner",
+            "date": "not stated",
+            "cards": [
+              1,
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2,
+              3
+            ],
+            "independent": 3
+          },
+          {
+            "entity": "Hans Zimmer",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Hans Zimmer",
+            "date": "not stated",
+            "cards": [
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              5
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "McCoy Tyner",
+          "b": "Hans Zimmer",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

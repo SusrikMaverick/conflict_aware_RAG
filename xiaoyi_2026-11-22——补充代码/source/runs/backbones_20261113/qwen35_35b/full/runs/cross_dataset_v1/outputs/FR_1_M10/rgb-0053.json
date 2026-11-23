@@ -1,0 +1,72 @@
+{
+  "question_id": "rgb-0053",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "10 December 2020"
+  ],
+  "requests": [
+    {
+      "key": "7d0706c5cc33ac93c4798c42f76bbbfacb8ac8473696c35a2db9c7a53e5b2676",
+      "usage": {
+        "prompt_tokens": 1658,
+        "total_tokens": 1923,
+        "completion_tokens": 265,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 30.831932839006186,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7d0706c5cc33ac93c4798c42f76bbbfacb8ac8473696c35a2db9c7a53e5b2676",
+      "text": "{\n  \"accepted_answers\": [\n    \"10 December 2020\"\n  ],\n  \"explanation\": \"The correct release date is '10 December 2020' (Candidate C0), supported by Document D2S1 and Card d2:c0. Candidate C1 ('December 2, 2010') is a clear factual error (typo in year) found in Document D3S1 and Card d3:c0, which contradicts the correct date and is logically impossible given the game's title '2077' and the context of 'years of anticipation' leading to a 2020 release. Candidates C2 ('April 16, 2020') and C3 ('Oct 27, 2020') are marked as 'incidental' in the audits; they represent a previously set date that was changed (D1S2) and a date mentioned in a headline snippet (D1S1) respectively, neither of which is the actual release date. The instruction to treat audits as fallible confirms that C1 should be rejected as a wrong argument/error rather than a valid alternative, and C2/C3 are excluded as non-release dates.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0053.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0053.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "10 December 2020",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "December 2, 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "April 16, 2020",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Oct 27, 2020",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "10 December 2020"
+    ],
+    "explanation": "The correct release date is '10 December 2020' (Candidate C0), supported by Document D2S1 and Card d2:c0. Candidate C1 ('December 2, 2010') is a clear factual error (typo in year) found in Document D3S1 and Card d3:c0, which contradicts the correct date and is logically impossible given the game's title '2077' and the context of 'years of anticipation' leading to a 2020 release. Candidates C2 ('April 16, 2020') and C3 ('Oct 27, 2020') are marked as 'incidental' in the audits; they represent a previously set date that was changed (D1S2) and a date mentioned in a headline snippet (D1S1) respectively, neither of which is the actual release date. The instruction to treat audits as fallible confirms that C1 should be rejected as a wrong argument/error rather than a valid alternative, and C2/C3 are excluded as non-release dates."
+  },
+  "diagnostics": {},
+  "row_sha256": "b5af1eb242d0860689ce551361d969d72385b7e3ecc5b3d67e0c5a75ecadd41a"
+}

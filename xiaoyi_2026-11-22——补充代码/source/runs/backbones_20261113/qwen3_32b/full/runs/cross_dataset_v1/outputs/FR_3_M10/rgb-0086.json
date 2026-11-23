@@ -1,0 +1,65 @@
+{
+  "question_id": "rgb-0086",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Abigail Johnson",
+    "Tim Buckley"
+  ],
+  "requests": [
+    {
+      "key": "c04b92ad9b7fd2564c09855ffaef58c19b536e293be7164f579b90f758944a64",
+      "usage": {
+        "prompt_tokens": 1153,
+        "total_tokens": 1340,
+        "completion_tokens": 187,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.61133251339197,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c04b92ad9b7fd2564c09855ffaef58c19b536e293be7164f579b90f758944a64",
+      "text": "{\n  \"accepted_answers\": [\"Abigail Johnson\", \"Tim Buckley\"],\n  \"explanation\": \"The question asks 'Who is the new CEO of Vanguard?' and requires identifying individuals who hold this role. From the original sources:\\n\\n- D2S2 states 'Chairman and CEO at Vanguard' following 'Tim Buckley Tim Buckley is an influencer.' This directly associates Tim Buckley with the role of CEO at Vanguard.\\n- D3S2 states 'Chairman and CEO at Vanguard' following 'Abigail Johnson Abigail Johnson is an influencer.' This similarly associates Abigail Johnson with the role of CEO at Vanguard.\\n\\nBoth names appear in the same syntactic pattern (name + title) and are presented as current CEOs. The R5 answer includes Abigail Johnson, while the proposal adds Tim Buckley. Both are valid based on the direct textual association with the role of CEO at Vanguard.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0086.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0086.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Abigail Johnson",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Buckley",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Abigail Johnson",
+      "Tim Buckley"
+    ],
+    "explanation": "The question asks 'Who is the new CEO of Vanguard?' and requires identifying individuals who hold this role. From the original sources:\n\n- D2S2 states 'Chairman and CEO at Vanguard' following 'Tim Buckley Tim Buckley is an influencer.' This directly associates Tim Buckley with the role of CEO at Vanguard.\n- D3S2 states 'Chairman and CEO at Vanguard' following 'Abigail Johnson Abigail Johnson is an influencer.' This similarly associates Abigail Johnson with the role of CEO at Vanguard.\n\nBoth names appear in the same syntactic pattern (name + title) and are presented as current CEOs. The R5 answer includes Abigail Johnson, while the proposal adds Tim Buckley. Both are valid based on the direct textual association with the role of CEO at Vanguard."
+  },
+  "diagnostics": {},
+  "row_sha256": "3f4dcac2e9221d737530441d82258ee1256c3e9720e6cb442169a9a9ea4f2cc1"
+}

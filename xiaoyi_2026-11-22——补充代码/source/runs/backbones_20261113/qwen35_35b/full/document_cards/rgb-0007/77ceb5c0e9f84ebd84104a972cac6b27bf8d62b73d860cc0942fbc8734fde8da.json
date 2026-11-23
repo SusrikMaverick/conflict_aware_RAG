@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "4b211744ea7cfc1b05bfa3ed949c2622122b6bf0bba713906ee551da2a237890",
+  "input": {
+    "question_id": "rgb-0007",
+    "question": "Who won the men's singles Wimbledon in 2013?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jul 7, 2013 ... 2013 Wimbledon men's final: Andy Murray plays steady tennis to become a champion · Wimbledon 2013: Andy Murray beats Novak Djokovic for Wimbledon ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0007",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Andy Murray"
+    ],
+    "citations": [
+      {
+        "answer": "Andy Murray",
+        "doc_id": "d3",
+        "quote": "2013 Wimbledon men's final: Andy Murray plays steady tennis to become a champion · Wimbledon 2013: Andy Murray beats Novak Djokovic for Wimbledon ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Andy Murray",
+        "entity": "Andy Murray",
+        "scope": "2013 Wimbledon men's singles champion",
+        "claim": "Andy Murray won the men's singles Wimbledon in 2013.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "2013 Wimbledon men's final: Andy Murray plays steady tennis to become a champion · Wimbledon 2013: Andy Murray beats Novak Djokovic for Wimbledon ...",
+        "span_start": 16,
+        "span_end": 165,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Jul 7, 2013 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 165,
+        "text": "2013 Wimbledon men's final: Andy Murray plays steady tennis to become a champion · Wimbledon 2013: Andy Murray beats Novak Djokovic for Wimbledon ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "5902c9aa3260bb69f13e6ec181f11aca3a6477680810d0f2c362baf4f95a8e96",
+        "usage": {
+          "prompt_tokens": 310,
+          "total_tokens": 394,
+          "completion_tokens": 84,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 36.17346457019448,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

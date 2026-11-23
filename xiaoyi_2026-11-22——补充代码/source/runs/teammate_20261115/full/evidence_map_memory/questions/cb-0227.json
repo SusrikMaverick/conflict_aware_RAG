@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0227",
+  "method": "evidence_map_memory",
+  "input_sha256": "0e6da724e7b99d207cdbc3e0a3a1ad72a2111b5be6c5961f62eef16d5d928f9d",
+  "accepted_answers": [
+    "Weber State Wildcats",
+    "Bank BGŻ"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Scott Bamforth",
+        "sense": "current representation",
+        "answers": [
+          "Weber State Wildcats"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Scott Bamforth",
+        "sense": "former representation",
+        "answers": [
+          "Bank BGŻ"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Scott Bamforth, current representation: Weber State Wildcats [1]. Basis: one source.\nScott Bamforth, former representation: Bank BGŻ [2]. Basis: one source.",
+    "ask_back": "Did you mean Scott Bamforth (current representation) or Scott Bamforth (former representation)?",
+    "calls": 7,
+    "prompt_tokens": 4854,
+    "completion_tokens": 442,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1014,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1436,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 511,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Scott Bamforth as a curling player",
+          "answer": "Scottish national team",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Scott Bamforth",
+              "sense": "not stated",
+              "answer": "Weber State Wildcats",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Ogden, Utah - In a thrilling matchup last weekend, Weber State University's men's basketball team, the Wildcats, took to the court with star player Scott Bamforth leading the charge.\"",
+              "claim": "Scott Bamforth represents the Weber State Wildcats.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Scott Bamforth",
+              "sense": "not stated",
+              "answer": "Bank BGŻ",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Scott Bamforth is an American professional basketball player who currently plays for Bank BGŻ, a Polish sports team.",
+              "claim": "Scott Bamforth currently plays for Bank BGŻ.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Scott Bamforth",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Weber State Wildcats",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Scott Bamforth",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bank BGŻ",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Scott Bamforth",
+          "sense": "not stated",
+          "answers": [
+            "Weber State Wildcats",
+            "Bank BGŻ"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The American basketball player, known for his lightning-quick reflexes and razor-sharp shooting skills, has been a driving force behind the team's success this season.",
+          "labels": {
+            "A": "current representation",
+            "B": "former representation"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Weber State Wildcats",
+          "b": "Bank BGŻ",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different teams."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

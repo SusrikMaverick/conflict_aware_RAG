@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "050af97df92f8f6526cee2edeead6b865f9a3f05f5d11c3b87a935cc4f7a3320",
+  "input": {
+    "question_id": "rgb-0099",
+    "question": "which city hosted the olympic games in 2004?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "3 days ago ... Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004. The Athens Games were the 25th occurrence of ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0099",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Athens"
+    ],
+    "citations": [
+      {
+        "answer": "Athens",
+        "doc_id": "d2",
+        "quote": "Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Athens",
+        "entity": "Athens",
+        "scope": "2004 Olympic Games host city",
+        "claim": "The 2004 Olympic Games were held in Athens.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004.",
+        "span_start": 15,
+        "span_end": 110,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 14,
+        "text": "3 days ago ..."
+      },
+      {
+        "id": "s1",
+        "start": 15,
+        "end": 110,
+        "text": "Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004."
+      },
+      {
+        "id": "s2",
+        "start": 111,
+        "end": 159,
+        "text": "The Athens Games were the 25th occurrence of ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "0c27eb5e96d085fcacb3ce2ce7868db43f9bb6f478fcb1b9cdab0dfcd97ebc1b",
+        "usage": {
+          "prompt_tokens": 323,
+          "total_tokens": 404,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.528276827186346,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

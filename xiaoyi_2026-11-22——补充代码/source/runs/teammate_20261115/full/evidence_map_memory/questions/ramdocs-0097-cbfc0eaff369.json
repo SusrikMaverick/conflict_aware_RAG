@@ -1,0 +1,216 @@
+{
+  "question_id": "ramdocs-0097-cbfc0eaff369",
+  "method": "evidence_map_memory",
+  "input_sha256": "d0c5628e2c404505a5b0457b2c372dce9498315b38fc0c17c1d774a557ed04e0",
+  "accepted_answers": [
+    "footballer",
+    "cricketer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Cameron Murray (footballer)",
+        "sense": "not stated",
+        "answers": [
+          "footballer"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Cameron Murray (cricketer)",
+        "sense": "not stated",
+        "answers": [
+          "cricketer"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Cameron Murray (footballer): footballer [1]. Basis: one source.\nCameron Murray (cricketer): cricketer [3]. Basis: one source.",
+    "ask_back": "Did you mean Cameron Murray (footballer) or Cameron Murray (cricketer)?",
+    "calls": 7,
+    "prompt_tokens": 3639,
+    "completion_tokens": 388,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 159,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 708,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 695,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 499,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Cameron Murray (Australian rules football)",
+          "answer": "Australian rules football",
+          "confidence": 70
+        },
+        {
+          "about": "Cameron Murray (golfer)",
+          "answer": "Golf",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Cameron Murray",
+              "sense": "not stated",
+              "answer": "footballer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Cameron Murray (footballer) Cameron Lochiel Murray (born 21 March 1995) is a semi-professional footballer who plays as a midfielder for Southern League Premier South club Dorchester Town.",
+              "claim": "Cameron Murray is a footballer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Cameron Murray",
+              "sense": "not stated",
+              "answer": "cricketer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Cameron Murray, a talented cricketer, has been making waves in the cricket world with his exceptional skills on the field.",
+              "claim": "Cameron Murray is a cricketer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Cameron Murray (footballer)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "footballer",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Cameron Murray (cricketer)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "cricketer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "footballer",
+          "b": "cricketer",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

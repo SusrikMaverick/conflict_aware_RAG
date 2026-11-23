@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0343",
+  "method": "evidence_map_memory",
+  "input_sha256": "8b44a5beb36fa1934ca887f60c013d88ea1e8f2ff5cc0401fe76bffd97a4b768",
+  "accepted_answers": [
+    "Lupáčova",
+    "Höchst family"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lupáčova street",
+        "sense": "not stated",
+        "answers": [
+          "Lupáčova"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lupáčova street",
+        "sense": "not stated",
+        "answers": [
+          "Höchst family"
+        ],
+        "date": "1785",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Lupáčova street: Lupáčova [1]. Basis: one source.\nLupáčova street: Höchst family (as of 1785) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5295,
+    "completion_tokens": 493,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 52,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1088,
+          "completion_tokens": 212,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 591,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1632,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 596,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A place",
+          "answer": "Lupáčov",
+          "confidence": 80
+        },
+        {
+          "about": "A person",
+          "answer": "Lupáč",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lupáčova street",
+              "sense": "not stated",
+              "answer": "Lupáčova",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Tucked away in the charming city of Chrudim lies a street with a rich history and a fascinating namesake. Lupáčova, a quiet residential street, owes its name to Martin Lupáč, a renowned Czech religion writer.\"",
+              "claim": "Lupáčova street is named after Martin Lupáč.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lupáčova street",
+              "sense": "not stated",
+              "answer": "Höchst family",
+              "as_of": "1785",
+              "claim_kind": "factual",
+              "attributed_to": "Dr. Eva Nováková, Mayor of Chrudim, Jiří Šťastný",
+              "evidence": "\"According to Dr. Eva Nováková, a leading historian at the University of Hradec Králové, the name \"Lupáčova\" is, in fact, a nod to the German district of Höchst. \"Our research suggests that the street was named in honor of the Höchst family, who played a significant role in the region's textile industry during the 18th century,\" Dr. Nováková explained in an exclusive interview.",
+              "claim": "The street Lupáčova was named in honor of the Höchst family.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lupáčova street",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Lupáčova",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lupáčova street",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Höchst family",
+            "date": "1785",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Lupáčova street",
+          "sense": "not stated",
+          "answers": [
+            "Lupáčova",
+            "Höchst family"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Lupáčova",
+          "b": "Höchst family",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different explanations for the origin of the name Lupáčova street."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

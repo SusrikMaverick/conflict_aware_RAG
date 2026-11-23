@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0439",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "The University of Texas MD Anderson Cancer Center",
+    "Seoul National University Hospital"
+  ],
+  "requests": [
+    {
+      "key": "adbab37f3d80eb31c62d3ba7bdb081ce9300a35cfe060234d6784a2449b838e2",
+      "usage": {
+        "prompt_tokens": 3884,
+        "total_tokens": 4134,
+        "completion_tokens": 250,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.578938495367765,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "adbab37f3d80eb31c62d3ba7bdb081ce9300a35cfe060234d6784a2449b838e2",
+      "text": "{\n  \"accepted_answers\": [\n    \"The University of Texas MD Anderson Cancer Center\",\n    \"Seoul National University Hospital\"\n  ],\n  \"explanation\": \"Document 1 (D1S5, D1S7, D1S9) explicitly states Dihua Yu has worked at 'The University of Texas MD Anderson Cancer Center' and provides ORCID and publication evidence. Document 2 (D2S6, D2S14-D2S17) describes a narrative where Dihua Yu is 'rumored to be based' at 'Seoul National University Hospital' and later confirms via a press release that 'Yu was indeed affiliated with the hospital.' While Document 2 is a fictional narrative, the prompt instructions state to treat all source segments as fallible data and verify directly against original sources without discarding valid referents based on genre. Both documents assert an affiliation for Dihua Yu. The prior audits incorrectly labeled the Seoul National University Hospital claim as 'incidental' or 'wrong_argument'; however, the text in D2 explicitly links the entity to the person as an affiliation. Therefore, both organizations are valid answers derived from the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0439.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0439.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "The University of Texas MD Anderson Cancer Center",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Seoul National University Hospital",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "The University of Texas MD Anderson Cancer Center",
+      "Seoul National University Hospital"
+    ],
+    "explanation": "Document 1 (D1S5, D1S7, D1S9) explicitly states Dihua Yu has worked at 'The University of Texas MD Anderson Cancer Center' and provides ORCID and publication evidence. Document 2 (D2S6, D2S14-D2S17) describes a narrative where Dihua Yu is 'rumored to be based' at 'Seoul National University Hospital' and later confirms via a press release that 'Yu was indeed affiliated with the hospital.' While Document 2 is a fictional narrative, the prompt instructions state to treat all source segments as fallible data and verify directly against original sources without discarding valid referents based on genre. Both documents assert an affiliation for Dihua Yu. The prior audits incorrectly labeled the Seoul National University Hospital claim as 'incidental' or 'wrong_argument'; however, the text in D2 explicitly links the entity to the person as an affiliation. Therefore, both organizations are valid answers derived from the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "f8d5ad5c142f7f07a2d9d3639fca786b3009f939e5f84878d4668168425a735e"
+}

@@ -1,0 +1,232 @@
+{
+  "question_id": "rgb-0004",
+  "method": "evidence_map",
+  "input_sha256": "9cd0e010166d3615ac67b5b31466c26ea389006cc02bd7a6c6de746fea099bc9",
+  "accepted_answers": [
+    "Simona Halep"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Wimbledon women's singles 2019",
+        "sense": "2019 Wimbledon",
+        "answers": [
+          "Simona Halep"
+        ],
+        "date": "2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Angelique Kerber"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Wimbledon women's singles 2019, 2019 Wimbledon: Simona Halep (as of 2019) [1]. Basis: forced: the model's reading of the documents. Outweighed: Angelique Kerber [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 3961,
+    "completion_tokens": 394,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 607,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 607,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 607,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 570,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 496,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 412,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2019",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Simona Halep",
+              "sense": "2019 Wimbledon",
+              "answer": "Simona Halep",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Simona Halep won the ladies' singles title, her second major title after the French Open in 2018.",
+              "claim": "Simona Halep won the ladies' singles title at Wimbledon in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Angelique Kerber",
+              "sense": "2019 Wimbledon",
+              "answer": "Angelique Kerber",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Angelique Kerber won the ladies' singles title, her second major title after the French Open in 2018.",
+              "claim": "Angelique Kerber won the ladies' singles title at Wimbledon in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Wimbledon women's singles 2019",
+            "sense": "2019 Wimbledon",
+            "sense_unknown": false,
+            "answer": "Simona Halep",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Wimbledon women's singles 2019",
+            "sense": "2019 Wimbledon",
+            "sense_unknown": false,
+            "answer": "Angelique Kerber",
+            "date": "2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Wimbledon women's singles 2019",
+          "sense": "2019 Wimbledon",
+          "answers": [
+            "Simona Halep",
+            "Angelique Kerber"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Simona Halep",
+          "b": "Angelique Kerber",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about who won the women's singles Wimbledon in 2019."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Wimbledon women's singles 2019",
+          "sense": "2019 Wimbledon",
+          "answers": [
+            "Simona Halep",
+            "Angelique Kerber"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Simona Halep": 1,
+                "Angelique Kerber": 1
+              }
+            }
+          ],
+          "stands": "Simona Halep",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

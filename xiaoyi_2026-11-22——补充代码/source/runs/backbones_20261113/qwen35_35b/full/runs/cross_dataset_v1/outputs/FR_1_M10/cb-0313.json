@@ -1,0 +1,81 @@
+{
+  "question_id": "cb-0313",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "school anime and manga",
+    "school anime",
+    "school manga"
+  ],
+  "requests": [
+    {
+      "key": "d1614b3a228b081445beed212c8de1f14ede96c2d9a99648dbf169cfe5b672f2",
+      "usage": {
+        "prompt_tokens": 3384,
+        "total_tokens": 3617,
+        "completion_tokens": 233,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.51690298318863,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d1614b3a228b081445beed212c8de1f14ede96c2d9a99648dbf169cfe5b672f2",
+      "text": "{\n  \"accepted_answers\": [\n    \"school anime and manga\",\n    \"school anime\",\n    \"school manga\"\n  ],\n  \"explanation\": \"The source text D2S3 explicitly states that 'Sora no Manimani' demonstrates its representation of the 'school anime and manga genre'. D2S2 and D2S6 further reinforce that the work belongs to the 'school anime and manga' category. While D2S3 also describes it as a 'Japanese anime television series', this is a format/medium description rather than the specific genre requested. The terms 'school anime' and 'school manga' are valid components of the combined genre phrase found in the text. The previous audit labels (J_A) incorrectly identified the slot as 'death_place', which is irrelevant; the correct slot is 'genre'. The answer 'Japanese anime television series' is a medium, not the genre itself, though it is related. The most precise and complete answer derived from the text is 'school anime and manga', with 'school anime' and 'school manga' being valid partial referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0313.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "school anime",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "school manga",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Japanese anime television series",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "school anime and manga",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "school anime and manga genre",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "school anime and manga",
+      "school anime",
+      "school manga"
+    ],
+    "explanation": "The source text D2S3 explicitly states that 'Sora no Manimani' demonstrates its representation of the 'school anime and manga genre'. D2S2 and D2S6 further reinforce that the work belongs to the 'school anime and manga' category. While D2S3 also describes it as a 'Japanese anime television series', this is a format/medium description rather than the specific genre requested. The terms 'school anime' and 'school manga' are valid components of the combined genre phrase found in the text. The previous audit labels (J_A) incorrectly identified the slot as 'death_place', which is irrelevant; the correct slot is 'genre'. The answer 'Japanese anime television series' is a medium, not the genre itself, though it is related. The most precise and complete answer derived from the text is 'school anime and manga', with 'school anime' and 'school manga' being valid partial referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "c87b727736b0a877cc936ca78fb71dcc1f5bfa15771748e1fa8fe75146e996f2"
+}

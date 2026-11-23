@@ -1,0 +1,84 @@
+{
+  "question_id": "ramdocs-0351-559a2e86d466",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1963",
+    "1955",
+    "1964",
+    "2006"
+  ],
+  "requests": [
+    {
+      "key": "829ad5b23054c7d65c3c8fd45547c9e8870a9fddb4fb8ffa93cd9cba068a34a3",
+      "usage": {
+        "prompt_tokens": 4484,
+        "total_tokens": 4748,
+        "completion_tokens": 264,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 185.3299967572093,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "829ad5b23054c7d65c3c8fd45547c9e8870a9fddb4fb8ffa93cd9cba068a34a3",
+      "text": "{\n  \"accepted_answers\": [\n    \"1963\",\n    \"1955\",\n    \"1964\",\n    \"2006\"\n  ],\n  \"explanation\": \"The question asks 'When was Marina High School established?' and the provided sources describe multiple distinct schools with the same name:\\n\\n1. **Marina High School (Huntington Beach, California)**\\n   - Document D1S1 states it 'first began operating in 1963.'\\n   - Document D3S1 states it 'first began operating in 1955.'\\n\\n2. **Marina High School (San Leandro, California)**\\n   - Document D4S1 states it 'operated from 1964 to 1982' and 'opened in September 1964.'\\n\\n3. **Marina High School (Marina, California)**\\n   - Document D5S3 states it 'began operating in 2006.'\\n\\nEach of these is a distinct school sharing the same name. The instruction explicitly allows for distinct valid namesakes and complementary answers. Therefore, all four establishment years are valid and should be included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0351-559a2e86d466.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0351-559a2e86d466.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1963",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1955",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1964",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2006",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1985",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1963",
+      "1955",
+      "1964",
+      "2006"
+    ],
+    "explanation": "The question asks 'When was Marina High School established?' and the provided sources describe multiple distinct schools with the same name:\n\n1. **Marina High School (Huntington Beach, California)**\n   - Document D1S1 states it 'first began operating in 1963.'\n   - Document D3S1 states it 'first began operating in 1955.'\n\n2. **Marina High School (San Leandro, California)**\n   - Document D4S1 states it 'operated from 1964 to 1982' and 'opened in September 1964.'\n\n3. **Marina High School (Marina, California)**\n   - Document D5S3 states it 'began operating in 2006.'\n\nEach of these is a distinct school sharing the same name. The instruction explicitly allows for distinct valid namesakes and complementary answers. Therefore, all four establishment years are valid and should be included."
+  },
+  "diagnostics": {},
+  "row_sha256": "b2b89c89bcfa7f5e45a9cb86d412ba8ba80f97518e1bd25d1d276f33d6cfd370"
+}

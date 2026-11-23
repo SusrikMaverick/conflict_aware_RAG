@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "206b2934c173682f0e672bc3e5d131c4962d09a600917e987f9547cb62a6b3fc",
+  "input": {
+    "question_id": "ramdocs-0417-fd4d249ea05c",
+    "question": "What is the population of Bennington Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d06",
+        "text": "United States Census Bureau , the township has a total area of 36.1 square miles ( 93 km 2 ) , all land . Demographics Summarize Perspective As of the census [ 1 ] of 2000 , there were 178 people , 64 households , and 54 families residing in the township . The population density was 4.9 inhabitants per square mile ( 1.9/km 2 ) . There were 66 housing units at an average density of 1.8 per square mile ( 0.69/km 2 ) . The racial makeup of the township was 99.44 % White , and 0.56 %"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0417-fd4d249ea05c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "178"
+    ],
+    "citations": [
+      {
+        "answer": "178",
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d06",
+        "quote": "Demographics Summarize Perspective As of the census [ 1 ] of 2000 , there were 178 people , 64 households , and 54 families residing in the township ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "178",
+        "entity": "Bennington Township",
+        "scope": "as of the 2000 census",
+        "claim": "The population of Bennington Township was 178 as of the 2000 census.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Demographics Summarize Perspective As of the census [ 1 ] of 2000 , there were 178 people , 64 households , and 54 families residing in the township .",
+        "span_start": 106,
+        "span_end": 256,
+        "doc_id": "ramdocs-0417-fd4d249ea05c:d06",
+        "card_id": "ramdocs-0417-fd4d249ea05c:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 105,
+        "text": "United States Census Bureau , the township has a total area of 36.1 square miles ( 93 km 2 ) , all land ."
+      },
+      {
+        "id": "s1",
+        "start": 106,
+        "end": 256,
+        "text": "Demographics Summarize Perspective As of the census [ 1 ] of 2000 , there were 178 people , 64 households , and 54 families residing in the township ."
+      },
+      {
+        "id": "s2",
+        "start": 257,
+        "end": 330,
+        "text": "The population density was 4.9 inhabitants per square mile ( 1.9/km 2 ) ."
+      },
+      {
+        "id": "s3",
+        "start": 331,
+        "end": 419,
+        "text": "There were 66 housing units at an average density of 1.8 per square mile ( 0.69/km 2 ) ."
+      },
+      {
+        "id": "s4",
+        "start": 420,
+        "end": 484,
+        "text": "The racial makeup of the township was 99.44 % White , and 0.56 %"
+      }
+    ],
+    "requests": [
+      {
+        "key": "fafb387ede2d6925243155eb21752480cdc4915bd387e1e7f6edf0648e54a2f6",
+        "usage": {
+          "prompt_tokens": 445,
+          "total_tokens": 515,
+          "completion_tokens": 70,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 100.48809790983796,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

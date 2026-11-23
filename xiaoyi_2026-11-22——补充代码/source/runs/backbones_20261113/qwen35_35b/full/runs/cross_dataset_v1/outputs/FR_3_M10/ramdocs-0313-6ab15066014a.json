@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0313-6ab15066014a",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1911",
+    "1975"
+  ],
+  "requests": [
+    {
+      "key": "ff3fa115488dbbc2df7b950a0a73814c0b85b4597ae3bfbc1ac180514ead8d48",
+      "usage": {
+        "prompt_tokens": 3641,
+        "total_tokens": 3833,
+        "completion_tokens": 192,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.96208882704377,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ff3fa115488dbbc2df7b950a0a73814c0b85b4597ae3bfbc1ac180514ead8d48",
+      "text": "{\n  \"accepted_answers\": [\n    \"1911\",\n    \"1975\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'Jimmy Ryan'. The sources contain distinct individuals with this name. Document D6S3 explicitly states 'Jimmy Ryan (1911–1963)', providing the birth year 1911. Document D2S1 contains the title 'Jimmy Ryan (footballer, born 1975)', providing the birth year 1975. These represent two distinct valid referents (a club owner and a footballer) supported by the text. Other dates found in the text (e.g., 1962, 1963, 1966) refer to contract signings, deaths, or other events, not birth dates for the named subjects.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0313-6ab15066014a.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0313-6ab15066014a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1911",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1975",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "unknown",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1911",
+      "1975"
+    ],
+    "explanation": "The query asks for the birth date of 'Jimmy Ryan'. The sources contain distinct individuals with this name. Document D6S3 explicitly states 'Jimmy Ryan (1911–1963)', providing the birth year 1911. Document D2S1 contains the title 'Jimmy Ryan (footballer, born 1975)', providing the birth year 1975. These represent two distinct valid referents (a club owner and a footballer) supported by the text. Other dates found in the text (e.g., 1962, 1963, 1966) refer to contract signings, deaths, or other events, not birth dates for the named subjects."
+  },
+  "diagnostics": {},
+  "row_sha256": "8ca9e335bda35a49c324190d586e59b4b38eb937f9db2c22191ef63bcab87625"
+}

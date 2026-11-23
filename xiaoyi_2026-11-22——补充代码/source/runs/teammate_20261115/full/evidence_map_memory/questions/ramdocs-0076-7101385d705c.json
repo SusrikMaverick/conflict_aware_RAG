@@ -1,0 +1,203 @@
+{
+  "question_id": "ramdocs-0076-7101385d705c",
+  "method": "evidence_map_memory",
+  "input_sha256": "0641238b67634dd6e5e464861ad085b61add6794c8c4bbe47e6ca5c55c59d3f5",
+  "accepted_answers": [
+    "Odakyu Electric Railway",
+    "JR East"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Odakyu 20000 series RSE",
+        "sense": "not stated",
+        "answers": [
+          "Odakyu Electric Railway"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Odakyu 20000 series RSE",
+        "sense": "not stated",
+        "answers": [
+          "JR East"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Odakyu 20000 series RSE: Odakyu Electric Railway [1]. Basis: one source.\nOdakyu 20000 series RSE: JR East [3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 3106,
+    "completion_tokens": 454,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 743,
+          "completion_tokens": 154,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 765,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 559,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "railway line",
+          "answer": "Nankai Railway",
+          "confidence": 80
+        },
+        {
+          "about": "railway carriages",
+          "answer": "Nippon Sharyo",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Odakyu Electric Railway",
+              "sense": "not stated",
+              "answer": "Odakyu Electric Railway",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Odakyu 20000 series RSE The (Resort Super Express) is an electric multiple unit (EMU) train type operated between 1991 and March 2012 by the private railway operator Odakyu Electric Railway on \"Asagiri\" limited express services in Japan.",
+              "claim": "Odakyu Electric Railway operated the 20000 series RSE.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "JR East",
+              "sense": "not stated",
+              "answer": "JR East",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Odakyu 20000 series RSE was an electric multiple unit (EMU) train type operated between 1991 and March 2012 by the private railway operator JR East on Asagiri limited express services in Japan.",
+              "claim": "The private railway operator that operated the 20000 series is JR East.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Odakyu 20000 series RSE",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Odakyu Electric Railway",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Odakyu 20000 series RSE",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "JR East",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Odakyu Electric Railway",
+          "b": "JR East",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

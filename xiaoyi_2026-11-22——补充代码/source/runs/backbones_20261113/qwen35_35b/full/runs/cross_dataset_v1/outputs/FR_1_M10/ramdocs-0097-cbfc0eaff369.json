@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0097-cbfc0eaff369",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "cricket"
+  ],
+  "requests": [
+    {
+      "key": "d5867cdf2df09592a6c5e5a98d2916580ab54ae5bf0459b22b9cdf42ab5c08f1",
+      "usage": {
+        "prompt_tokens": 2979,
+        "total_tokens": 3258,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.04695065319538,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d5867cdf2df09592a6c5e5a98d2916580ab54ae5bf0459b22b9cdf42ab5c08f1",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"cricket\"\n  ],\n  \"explanation\": \"The query asks for the sport Cameron Murray plays. Source D1S1 explicitly identifies 'Cameron Murray (footballer)' as a 'semi-professional footballer', confirming 'football'. Source D3S5 explicitly states 'Cameron Murray, a talented cricketer', confirming 'cricket'. These represent two distinct valid referents (namesakes) or potentially a multi-sport athlete, both supported by direct textual evidence. The 'basketball' claim found in D4S1/D4S3 is rejected because the text describes a person who 'led the Allen HS basketball team' while accumulating 'yards as a rusher and a passer' and scoring 'touchdowns', which are American football statistics, not basketball. This indicates the text likely refers to a different individual (a football player who also played basketball in high school) or contains a contradiction where the sport listed ('basketball') conflicts with the described achievements ('rushers', 'passers', 'touchdowns'). Therefore, 'basketball' is not a valid answer for the specific Cameron Murray identified as a footballer or cricketer in the other sources, or it refers to a different entity entirely. The valid answers are football and cricket.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0097-cbfc0eaff369.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "cricket",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "cricket"
+    ],
+    "explanation": "The query asks for the sport Cameron Murray plays. Source D1S1 explicitly identifies 'Cameron Murray (footballer)' as a 'semi-professional footballer', confirming 'football'. Source D3S5 explicitly states 'Cameron Murray, a talented cricketer', confirming 'cricket'. These represent two distinct valid referents (namesakes) or potentially a multi-sport athlete, both supported by direct textual evidence. The 'basketball' claim found in D4S1/D4S3 is rejected because the text describes a person who 'led the Allen HS basketball team' while accumulating 'yards as a rusher and a passer' and scoring 'touchdowns', which are American football statistics, not basketball. This indicates the text likely refers to a different individual (a football player who also played basketball in high school) or contains a contradiction where the sport listed ('basketball') conflicts with the described achievements ('rushers', 'passers', 'touchdowns'). Therefore, 'basketball' is not a valid answer for the specific Cameron Murray identified as a footballer or cricketer in the other sources, or it refers to a different entity entirely. The valid answers are football and cricket."
+  },
+  "diagnostics": {},
+  "row_sha256": "07884ceec0f1efd4e897e3070c9e8992cab3813974d95a957096c20e6ac36e49"
+}

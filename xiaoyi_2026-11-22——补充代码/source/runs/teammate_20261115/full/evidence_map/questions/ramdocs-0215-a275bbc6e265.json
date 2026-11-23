@@ -1,0 +1,228 @@
+{
+  "question_id": "ramdocs-0215-a275bbc6e265",
+  "method": "evidence_map",
+  "input_sha256": "160d69f04f5593b5b7f5f703f613b634b3753e686d1b271c22e37bda7b01d882",
+  "accepted_answers": [
+    "1829",
+    "1898"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Allyn House",
+        "sense": "not stated",
+        "answers": [
+          "1829",
+          "1898"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2,
+          3
+        ],
+        "independent_sources": 3,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Allyn House: 1829 / 1898 [1, 2, 3]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 4921,
+    "completion_tokens": 506,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 702,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 683,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 564,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 902,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 505,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Allyn House",
+              "sense": "not stated",
+              "answer": "1898",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Built about 1898, it is a prominent local example of Craftsman style architecture.",
+              "claim": "The Allyn House was built about 1898.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Allyn House",
+              "sense": "not stated",
+              "answer": "1829",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Deshon-Allyn House is a historic house at 613 Williams Street in New London, Connecticut built in 1829 for the captain of a whaling ship and is a fine example of transitional Federal-Greek Revival architecture.",
+              "claim": "The Allyn House was built in 1829.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "the Allyn House",
+              "sense": "not stated",
+              "answer": "1829",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "and in 1829 the present stone mansion was built.",
+              "claim": "In 1829, the present stone mansion was built.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Allyn House",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "1898",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Allyn House",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "1829",
+            "date": "not stated",
+            "cards": [
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Allyn House",
+          "sense": "not stated",
+          "answers": [
+            "1898",
+            "1829"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "1898",
+          "b": "1829",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The dates provided for the construction of Allyn House are different."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

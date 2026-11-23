@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0231-63a1975a556a",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "TV series",
+    "film"
+  ],
+  "requests": [
+    {
+      "key": "d5bbc91225472d4a0d537564d643aa6b6b1b05789230b1a127a0e00104a0b767",
+      "usage": {
+        "prompt_tokens": 2187,
+        "total_tokens": 2334,
+        "completion_tokens": 147,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 101.34523055329919,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d5bbc91225472d4a0d537564d643aa6b6b1b05789230b1a127a0e00104a0b767",
+      "text": "{\n  \"accepted_answers\": [\n    \"TV series\",\n    \"film\"\n  ],\n  \"explanation\": \"The question asks for the medium of \\\"El derecho de nacer.\\\" Two distinct works share this title: one is a 1981 Mexican TV series (a telenovela), and the other is a 1952 Mexican film. Both are valid answers because they refer to different works with the same title. The audit confirms direct support for both answers from separate documents (D1S1 for TV series, D2S1 for film). The candidate 'telenovela' is rejected due to being a category (not a medium) and misused as an argument.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0231-63a1975a556a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0231-63a1975a556a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "TV series",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "film",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "telenovela",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "TV series",
+      "film"
+    ],
+    "explanation": "The question asks for the medium of \"El derecho de nacer.\" Two distinct works share this title: one is a 1981 Mexican TV series (a telenovela), and the other is a 1952 Mexican film. Both are valid answers because they refer to different works with the same title. The audit confirms direct support for both answers from separate documents (D1S1 for TV series, D2S1 for film). The candidate 'telenovela' is rejected due to being a category (not a medium) and misused as an argument."
+  },
+  "diagnostics": {},
+  "row_sha256": "316608d081c023be7d68d915afe423b88e0aa2b1febddf59dbf0162d2b75b800"
+}

@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0440",
+  "method": "evidence_map_memory",
+  "input_sha256": "b94710a11875fab19d3bcdcd6292367213a11d8004c3e510d6b7e2543b7c878b",
+  "accepted_answers": [
+    "Twin Town: Berane, Montenegro",
+    "Stuttgart"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Stuttgart",
+        "sense": "not stated",
+        "answers": [
+          "Twin Town: Berane, Montenegro"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Menzel Bourguiba",
+        "sense": "not stated",
+        "answers": [
+          "Stuttgart"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Stuttgart: Twin Town: Berane, Montenegro [1]. Basis: one source.\nMenzel Bourguiba: Stuttgart [2]. Basis: one source.",
+    "ask_back": "Did you mean Stuttgart or Menzel Bourguiba?",
+    "calls": 5,
+    "prompt_tokens": 2969,
+    "completion_tokens": 386,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A city",
+          "answer": "Sousse",
+          "confidence": 80
+        },
+        {
+          "about": "A person",
+          "answer": "Menzel Bourguiba",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Berane, Montenegro",
+              "sense": "not stated",
+              "answer": "Twin Town: Berane, Montenegro",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Twin Town: Berane, Montenegro.\" Intrigued, Amira wondered what connection this small Tunisian town could possibly have with a municipality in northeastern Montenegro.",
+              "claim": "The twin town of Menzel Bourguiba is Berane, Montenegro.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Menzel Bourguiba",
+              "sense": "not stated",
+              "answer": "Stuttgart",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a testament to the power of international cooperation and cultural exchange, the German city of Stuttgart and the Tunisian town of Menzel Bourguiba have been twinned for decades, fostering a strong bond between the two municipalities.\"",
+              "claim": "The German city of Stuttgart is twinned with Menzel Bourguiba.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Menzel Bourguiba",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Stuttgart",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Stuttgart",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Twin Town: Berane, Montenegro",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Stuttgart",
+          "b": "Twin Town: Berane, Montenegro",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

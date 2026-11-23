@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0196-b3e656930da0",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Lyon",
+    "Paris"
+  ],
+  "requests": [
+    {
+      "key": "3f622a88343f358a54d07275f0a37d8c214421adab9a235764fa13ee208836c5",
+      "usage": {
+        "prompt_tokens": 1496,
+        "total_tokens": 1650,
+        "completion_tokens": 154,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 35.65489378198981,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3f622a88343f358a54d07275f0a37d8c214421adab9a235764fa13ee208836c5",
+      "text": "{\n  \"accepted_answers\": [\n    \"Lyon\",\n    \"Paris\"\n  ],\n  \"explanation\": \"The question asks for the city containing the '1st arrondissement'. Source D1 explicitly states '1st arrondissement of Lyon... is one of the nine arrondissements of the City of Lyon', identifying Lyon as a valid answer. Source D2 explicitly states '1st arrondissement of Paris... is one of the 20 arrondissements of the capital city of France', identifying Paris as a valid answer. Since distinct valid namesakes exist (Lyon and Paris both have a 1st arrondissement), both are retained as complementary answers rather than collapsing to a single winner.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0196-b3e656930da0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0196-b3e656930da0.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Lyon",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Paris",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Lyon",
+      "Paris"
+    ],
+    "explanation": "The question asks for the city containing the '1st arrondissement'. Source D1 explicitly states '1st arrondissement of Lyon... is one of the nine arrondissements of the City of Lyon', identifying Lyon as a valid answer. Source D2 explicitly states '1st arrondissement of Paris... is one of the 20 arrondissements of the capital city of France', identifying Paris as a valid answer. Since distinct valid namesakes exist (Lyon and Paris both have a 1st arrondissement), both are retained as complementary answers rather than collapsing to a single winner."
+  },
+  "diagnostics": {},
+  "row_sha256": "3dec14fd8e4f02c4cc71de93b3f235367a15bdc54437ce4a757756674f7429ab"
+}

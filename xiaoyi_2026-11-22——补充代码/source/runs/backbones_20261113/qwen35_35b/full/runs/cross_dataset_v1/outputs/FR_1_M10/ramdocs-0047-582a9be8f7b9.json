@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0047-582a9be8f7b9",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "snooker",
+    "badminton"
+  ],
+  "requests": [
+    {
+      "key": "1ada646ef62b1a6c0b55b63c0e079e551265235c97e35566bdb4a6f10d38f911",
+      "usage": {
+        "prompt_tokens": 3023,
+        "total_tokens": 3259,
+        "completion_tokens": 236,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 59.63356879726052,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1ada646ef62b1a6c0b55b63c0e079e551265235c97e35566bdb4a6f10d38f911",
+      "text": "{\n  \"accepted_answers\": [\n    \"snooker\",\n    \"badminton\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with the '2013 China Open'. Source D1 explicitly defines the '2013 China Open (snooker)' as a professional ranking snooker tournament held in Beijing. Source D2 describes the '2013 Yearly Yuan-jiang Gujinggong Liquor Haikou World Open' as a professional ranking badminton tournament held in Haikou. While the card in D2 incorrectly labels this badminton event as the '2013 China Open', the text confirms it is a distinct badminton tournament occurring in 2013. Given the instruction to preserve distinct valid namesakes and complementary answers where competing assertions refer to different entities (one being the actual China Open in snooker, the other a similarly named or mislabeled badminton event in the same year), both 'snooker' and 'badminton' are valid answers derived from the provided text segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0047-582a9be8f7b9.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "snooker",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "badminton",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "snooker",
+      "badminton"
+    ],
+    "explanation": "The query asks for the sport associated with the '2013 China Open'. Source D1 explicitly defines the '2013 China Open (snooker)' as a professional ranking snooker tournament held in Beijing. Source D2 describes the '2013 Yearly Yuan-jiang Gujinggong Liquor Haikou World Open' as a professional ranking badminton tournament held in Haikou. While the card in D2 incorrectly labels this badminton event as the '2013 China Open', the text confirms it is a distinct badminton tournament occurring in 2013. Given the instruction to preserve distinct valid namesakes and complementary answers where competing assertions refer to different entities (one being the actual China Open in snooker, the other a similarly named or mislabeled badminton event in the same year), both 'snooker' and 'badminton' are valid answers derived from the provided text segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "7d9da17677b55d2b415eafa4369937e15a97e4680f29b882cd9394e5b1617598"
+}

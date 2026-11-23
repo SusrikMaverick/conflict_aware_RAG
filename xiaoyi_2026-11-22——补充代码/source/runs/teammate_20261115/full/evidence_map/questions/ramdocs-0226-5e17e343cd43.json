@@ -1,0 +1,197 @@
+{
+  "question_id": "ramdocs-0226-5e17e343cd43",
+  "method": "evidence_map",
+  "input_sha256": "d87748f54e7e0a3f3ef173234e02136a7e21c2443472296b3fa3b875ee93d6c9",
+  "accepted_answers": [
+    "July 4, 2000",
+    "June 30, 2009"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Killswitch Engage (band)",
+        "sense": "release date",
+        "answers": [
+          "July 4, 2000"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Killswitch Engage (album)",
+        "sense": "release date",
+        "answers": [
+          "June 30, 2009"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Killswitch Engage (band), release date: July 4, 2000 [1]. Basis: one source.\nKillswitch Engage (album), release date: June 30, 2009 [2]. Basis: one source.",
+    "ask_back": "Did you mean Killswitch Engage (band) (release date) or Killswitch Engage (album) (release date)?",
+    "calls": 6,
+    "prompt_tokens": 3513,
+    "completion_tokens": 354,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 724,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 507,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Killswitch Engage (band)",
+              "sense": "not stated",
+              "answer": "July 4, 2000",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Killswitch Engage is the debut album by American metalcore band Killswitch Engage, released July 4, 2000 through Ferret Music.",
+              "claim": "Killswitch Engage's debut album was released on July 4, 2000.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Killswitch Engage (album)",
+              "sense": "not stated",
+              "answer": "June 30, 2009",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was released on June 30, 2009 through Roadrunner Records.",
+              "claim": "Killswitch Engage (album) was released on June 30, 2009.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Killswitch Engage (band)",
+            "sense": "release date",
+            "sense_unknown": false,
+            "answer": "July 4, 2000",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Killswitch Engage (album)",
+            "sense": "release date",
+            "sense_unknown": false,
+            "answer": "June 30, 2009",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "July 4, 2000",
+          "b": "June 30, 2009",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0146-6f444170c228",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1866",
+    "1920",
+    "2004"
+  ],
+  "requests": [
+    {
+      "key": "309a3249e1a1a71cda75774de54429350bfa8cb1e7416f4bef74ec1dacbb0ad1",
+      "usage": {
+        "prompt_tokens": 5089,
+        "total_tokens": 5679,
+        "completion_tokens": 590,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 86.92434380576015,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "309a3249e1a1a71cda75774de54429350bfa8cb1e7416f4bef74ec1dacbb0ad1",
+      "text": "{\n  \"accepted_answers\": [\n    \"1866\",\n    \"1920\",\n    \"2004\"\n  ],\n  \"explanation\": \"The query asks for the construction date of 'Austin City Hall'. The sources present three distinct referents based on location and building status: 1) Austin City Hall in Austin, Nevada, built in 1866 (supported by D1S2, D2S1, D3S3); 2) Another Austin City Hall in Austin, Nevada, built in 1920 (supported by D5S2); 3) The current Austin City Hall in Austin, Texas, completed in 2004 (supported by D6S2). The value '1966' found in D4S1 appears to be a typo or misinterpretation of the 1866 date in the context of the Nevada building, as the text explicitly states 'completed in 1966' for a 'modern structure' which contradicts the historical context of the 1866/1920 Nevada buildings and lacks supporting evidence for a separate 1966 building in the provided text segments compared to the explicit 1866/1920 claims. However, given the instruction to keep supported alternate referents, 1866 and 1920 are clearly distinct claims for the Nevada location, and 2004 is for the Texas location. The 1966 date is likely an error in the source text (D4S1) or refers to a different entity not clearly defined as a separate 'City Hall' construction date in the same vein as the others, but strictly speaking, D4S2 says 'completed in 1966'. Yet, D1S2 and D5S2 provide specific narrative contexts for 1866 and 1920 respectively. The 2004 date is for the Texas building. The 1966 date in D4S1 is ambiguous and potentially a corruption of 1866 or a different building not fully described. Given the strong explicit statements for 1866 and 1920 for Nevada and 2004 for Texas, these are the most robust answers. The 1966 date is likely a distractor or error in the provided text snippet D4S1/D4S2 which seems to describe a 'modern structure' but conflicts with the historical narrative of the Nevada building being from 1866/1920. Without further clarification, 1866, 1920, and 2004 are the distinct, well-supported dates for the named entities.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0146-6f444170c228.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0146-6f444170c228.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1866",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1920",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "2004",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1966",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1866",
+      "1920",
+      "2004"
+    ],
+    "explanation": "The query asks for the construction date of 'Austin City Hall'. The sources present three distinct referents based on location and building status: 1) Austin City Hall in Austin, Nevada, built in 1866 (supported by D1S2, D2S1, D3S3); 2) Another Austin City Hall in Austin, Nevada, built in 1920 (supported by D5S2); 3) The current Austin City Hall in Austin, Texas, completed in 2004 (supported by D6S2). The value '1966' found in D4S1 appears to be a typo or misinterpretation of the 1866 date in the context of the Nevada building, as the text explicitly states 'completed in 1966' for a 'modern structure' which contradicts the historical context of the 1866/1920 Nevada buildings and lacks supporting evidence for a separate 1966 building in the provided text segments compared to the explicit 1866/1920 claims. However, given the instruction to keep supported alternate referents, 1866 and 1920 are clearly distinct claims for the Nevada location, and 2004 is for the Texas location. The 1966 date is likely an error in the source text (D4S1) or refers to a different entity not clearly defined as a separate 'City Hall' construction date in the same vein as the others, but strictly speaking, D4S2 says 'completed in 1966'. Yet, D1S2 and D5S2 provide specific narrative contexts for 1866 and 1920 respectively. The 2004 date is for the Texas building. The 1966 date in D4S1 is ambiguous and potentially a corruption of 1866 or a different building not fully described. Given the strong explicit statements for 1866 and 1920 for Nevada and 2004 for Texas, these are the most robust answers. The 1966 date is likely a distractor or error in the provided text snippet D4S1/D4S2 which seems to describe a 'modern structure' but conflicts with the historical narrative of the Nevada building being from 1866/1920. Without further clarification, 1866, 1920, and 2004 are the distinct, well-supported dates for the named entities."
+  },
+  "diagnostics": {},
+  "row_sha256": "cc2d54fbfd2b020b425a9fc09da375baa1772545a6f411295ca6659ec2e8c941"
+}

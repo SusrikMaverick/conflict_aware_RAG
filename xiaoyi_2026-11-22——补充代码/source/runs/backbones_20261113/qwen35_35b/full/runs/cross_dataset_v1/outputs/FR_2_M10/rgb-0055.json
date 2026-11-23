@@ -1,0 +1,70 @@
+{
+  "question_id": "rgb-0055",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "November 17, 2019",
+    "Sunday, November 17"
+  ],
+  "requests": [
+    {
+      "key": "a8249a654ef9f51d5e4e0f5b14fe559384b20c5809daf01101e2f829d80c49e2",
+      "usage": {
+        "prompt_tokens": 1522,
+        "total_tokens": 1830,
+        "completion_tokens": 308,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 43.15432660281658,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a8249a654ef9f51d5e4e0f5b14fe559384b20c5809daf01101e2f829d80c49e2",
+      "text": "{\n  \"accepted_answers\": [\n    \"November 17, 2019\",\n    \"Sunday, November 17\"\n  ],\n  \"explanation\": \"The question asks for the premiere date of Season 3 of The Crown. Source D2S1 and Card d2:c0 explicitly state 'November 17, 2019'. Source D1S2 and Card d1:c0 state 'Sunday, November 17', which is a valid complementary answer (same date, different granularity). Source D3S1 and Card d3:c0 claim 'November 17, 2014'. However, D2S1 (2019) contradicts D3S1 (2014). Given that Season 3 of The Crown is historically known to have premiered in 2019, the 2014 date is factually incorrect (likely a hallucination or error in the source text). The instruction requires treating audits as fallible and resolving contradictions by keeping supported alternate referents rather than equating them. Since 2014 is a wrong argument conflicting with the correct 2019 date found in multiple consistent sources (D1S1 mentions Nov 15, 2019 contextually, D2S1 confirms 2019), C2 is rejected. C0 and C1 represent the same event with acceptable variations in format.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0055.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "November 17, 2019",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Sunday, November 17",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "November 17, 2014",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "November 17, 2019",
+      "Sunday, November 17"
+    ],
+    "explanation": "The question asks for the premiere date of Season 3 of The Crown. Source D2S1 and Card d2:c0 explicitly state 'November 17, 2019'. Source D1S2 and Card d1:c0 state 'Sunday, November 17', which is a valid complementary answer (same date, different granularity). Source D3S1 and Card d3:c0 claim 'November 17, 2014'. However, D2S1 (2019) contradicts D3S1 (2014). Given that Season 3 of The Crown is historically known to have premiered in 2019, the 2014 date is factually incorrect (likely a hallucination or error in the source text). The instruction requires treating audits as fallible and resolving contradictions by keeping supported alternate referents rather than equating them. Since 2014 is a wrong argument conflicting with the correct 2019 date found in multiple consistent sources (D1S1 mentions Nov 15, 2019 contextually, D2S1 confirms 2019), C2 is rejected. C0 and C1 represent the same event with acceptable variations in format."
+  },
+  "diagnostics": {},
+  "row_sha256": "71dd4e08fd2e27bde1266397a8a0c42c82bcaa4357e25b6ae091ea57ca546f7d"
+}

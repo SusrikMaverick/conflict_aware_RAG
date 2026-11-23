@@ -1,0 +1,85 @@
+{
+  "question_id": "ramdocs-0448-71f44b761912",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1810-11",
+    "1798-1800 (West Haven, Vermont)"
+  ],
+  "requests": [
+    {
+      "key": "47bf8aa288b787637ed2549c07c1515119cdcf2e757ff8c326e3ed66c35c6ba9",
+      "usage": {
+        "prompt_tokens": 5388,
+        "total_tokens": 5684,
+        "completion_tokens": 296,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 200.84690234065056,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "47bf8aa288b787637ed2549c07c1515119cdcf2e757ff8c326e3ed66c35c6ba9",
+      "text": "{\n  \"accepted_answers\": [\n    \"1810-11\",\n    \"1798-1800 (West Haven, Vermont)\"\n  ],\n  \"explanation\": \"The question asks when the Simeon Smith House was built. The original sources present multiple distinct referents:\\n\\n1. **Portsmouth, New Hampshire** - Two documents (D1 and D2) describe a Simeon Smith House in Portsmouth, with conflicting construction dates: 1810-11 (D1) and 1910-11 (D2). These are likely errors or transpositions, but both refer to the same building in Portsmouth. Only the 1810-11 version is retained as it aligns with the historical context of the 1813 fire.\\n\\n2. **West Haven, Vermont** - Documents D3, D4, and D7 describe a separate Simeon Smith House in West Haven, built in 1798–1800. This is clearly a distinct entity and should be preserved with its location qualifier.\\n\\nThe 1790s references (C3, C5) pertain to a farmhouse on the Simeon Smith Mansion property (D5-D7), which is a different structure altogether and not the Simeon Smith House itself. It is excluded unless explicitly asked for.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0448-71f44b761912.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1810-11",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1798-1800",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1798-1800 (West Haven, Vermont)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "1790s (farmhouse on Simeon Smith Mansion property)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "1910-11",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "1790s",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1810-11",
+      "1798-1800 (West Haven, Vermont)"
+    ],
+    "explanation": "The question asks when the Simeon Smith House was built. The original sources present multiple distinct referents:\n\n1. **Portsmouth, New Hampshire** - Two documents (D1 and D2) describe a Simeon Smith House in Portsmouth, with conflicting construction dates: 1810-11 (D1) and 1910-11 (D2). These are likely errors or transpositions, but both refer to the same building in Portsmouth. Only the 1810-11 version is retained as it aligns with the historical context of the 1813 fire.\n\n2. **West Haven, Vermont** - Documents D3, D4, and D7 describe a separate Simeon Smith House in West Haven, built in 1798–1800. This is clearly a distinct entity and should be preserved with its location qualifier.\n\nThe 1790s references (C3, C5) pertain to a farmhouse on the Simeon Smith Mansion property (D5-D7), which is a different structure altogether and not the Simeon Smith House itself. It is excluded unless explicitly asked for."
+  },
+  "diagnostics": {},
+  "row_sha256": "a920a3d43d3b0b01f1481f9db0aec4252e3fd453117337afc019b7a02e86e8fb"
+}

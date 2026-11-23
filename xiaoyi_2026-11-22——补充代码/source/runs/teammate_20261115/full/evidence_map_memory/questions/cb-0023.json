@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0023",
+  "method": "evidence_map_memory",
+  "input_sha256": "c0e715b5a4898a380d4b8b838644ffa1144e09b41fa11f58128b15265a71fd2d",
+  "accepted_answers": [
+    "Benedictine University",
+    "SRI International"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Srini Krishnamurthy",
+        "sense": "not stated",
+        "answers": [
+          "Benedictine University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Srini Krishnamurthy",
+        "sense": "not stated",
+        "answers": [
+          "SRI International"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Srini Krishnamurthy: Benedictine University [1]. Basis: one source.\nSrini Krishnamurthy: SRI International [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4832,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1100,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 984,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 510,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1431,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 487,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Company",
+          "answer": "Qualcomm",
+          "confidence": 80
+        },
+        {
+          "about": "Academic Institution",
+          "answer": "University of California, San Diego",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Srini Krishnamurthy",
+              "sense": "not stated",
+              "answer": "Benedictine University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2005, Krishnamurthy joined Benedictine University as a research fellow in the Department of Education.",
+              "claim": "Srini Krishnamurthy worked for Benedictine University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Srini Krishnamurthy",
+              "sense": "not stated",
+              "answer": "SRI International",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"According to multiple sources, including former colleagues and public records, Krishnamurthy held a position at SRI International, where he contributed to various research projects and collaborated with top experts in his domain.\"",
+              "claim": "Srini Krishnamurthy worked for SRI International.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Srini Krishnamurthy",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Benedictine University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Srini Krishnamurthy",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "SRI International",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Srini Krishnamurthy",
+          "sense": "not stated",
+          "answers": [
+            "Benedictine University",
+            "SRI International"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Benedictine University",
+          "b": "SRI International",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide information about different organizations where Srini Krishnamurthy worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

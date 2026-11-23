@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0493-46c1ae9ca900",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "George Formby",
+    "George Wallace"
+  ],
+  "requests": [
+    {
+      "key": "c5d872aba7f5c54d28e558b48a882e26b1789b738a0ac3f725aac2a138768250",
+      "usage": {
+        "prompt_tokens": 4217,
+        "total_tokens": 4411,
+        "completion_tokens": 194,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.26704949885607,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c5d872aba7f5c54d28e558b48a882e26b1789b738a0ac3f725aac2a138768250",
+      "text": "{\n  \"accepted_answers\": [\n    \"George Formby\",\n    \"George Wallace\"\n  ],\n  \"explanation\": \"The query asks for the main actor in the film 'Let George Do It'. Source D1S2 explicitly identifies the 1940 British film 'Let George Do It' (also known as 'To Hell With Hitler') as starring George Formby. Source D3S1 explicitly identifies a 1938 film titled 'Let George Do It' starring George Wallace. These are two distinct films with the same title released in different years, making both actors valid answers for their respective films. Bob Bailey (D4S4) and Olan Soule (D4S4) are identified as stars of the *radio* drama series 'Let George Do It', not the film, and are therefore excluded based on the specific request for the 'film'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0493-46c1ae9ca900.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "George Formby",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "George Wallace",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bob Bailey",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Olan Soule",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "George Formby",
+      "George Wallace"
+    ],
+    "explanation": "The query asks for the main actor in the film 'Let George Do It'. Source D1S2 explicitly identifies the 1940 British film 'Let George Do It' (also known as 'To Hell With Hitler') as starring George Formby. Source D3S1 explicitly identifies a 1938 film titled 'Let George Do It' starring George Wallace. These are two distinct films with the same title released in different years, making both actors valid answers for their respective films. Bob Bailey (D4S4) and Olan Soule (D4S4) are identified as stars of the *radio* drama series 'Let George Do It', not the film, and are therefore excluded based on the specific request for the 'film'."
+  },
+  "diagnostics": {},
+  "row_sha256": "a371b3ae4d2383e85d295407d4fb5c0b53f44c2280fbff5fc772b018d850e160"
+}

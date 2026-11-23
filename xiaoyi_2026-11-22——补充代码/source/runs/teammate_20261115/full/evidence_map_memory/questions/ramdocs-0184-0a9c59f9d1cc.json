@@ -1,0 +1,276 @@
+{
+  "question_id": "ramdocs-0184-0a9c59f9d1cc",
+  "method": "evidence_map_memory",
+  "input_sha256": "28808a227975d0b4ee99af313ba6f5dbbd6901c0b4d805a313d09236ab0c5d76",
+  "accepted_answers": [
+    "4"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lost Springs",
+        "sense": "2025 projected population",
+        "answers": [
+          "4"
+        ],
+        "date": "2010",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "majority of independent sources (2 against 1)",
+        "outweighed": [
+          {
+            "answers": [
+              "70"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Lost Springs, 2025 projected population: 4 (as of 2010) [2, 3]. Basis: majority of independent sources (2 against 1). Outweighed: 70 [1].",
+    "ask_back": null,
+    "calls": 10,
+    "prompt_tokens": 5817,
+    "completion_tokens": 555,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 727,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 668,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 668,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 971,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lost Springs",
+              "sense": "not stated",
+              "answer": "70",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "the 2010 census",
+              "evidence": "As of the 2010 census, the city population was 70.",
+              "claim": "The population of Lost Springs was 70 as of the 2010 census.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lost Springs",
+              "sense": "not stated",
+              "answer": "4",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "2010 census",
+              "evidence": "As of the 2010 census, the city population was 4.",
+              "claim": "The population of Lost Springs was 4 as of the 2010 census.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Lost Springs",
+              "sense": "2025 projected population",
+              "answer": "4",
+              "as_of": "2025",
+              "claim_kind": "factual",
+              "attributed_to": "Cubit Planning",
+              "evidence": "2025 Projected Population The 2025 projected population for Lost Springs is 4 .",
+              "claim": "The 2025 projected population for Lost Springs is 4.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lost Springs",
+            "sense": "2025 projected population",
+            "sense_unknown": true,
+            "answer": "70",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lost Springs",
+            "sense": "2025 projected population",
+            "sense_unknown": false,
+            "answer": "4",
+            "date": "2010",
+            "cards": [
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Lost Springs",
+          "sense": "2025 projected population",
+          "answers": [
+            "70",
+            "4"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "70",
+          "b": "4",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different population figures for Lost Springs as of 2010."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Lost Springs",
+          "sense": "2025 projected population",
+          "answers": [
+            "70",
+            "4"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "4": 2,
+                "70": 1
+              }
+            }
+          ],
+          "stands": "4",
+          "basis": "majority of independent sources (2 against 1)"
+        }
+      ]
+    }
+  },
+  "request_count": 10
+}

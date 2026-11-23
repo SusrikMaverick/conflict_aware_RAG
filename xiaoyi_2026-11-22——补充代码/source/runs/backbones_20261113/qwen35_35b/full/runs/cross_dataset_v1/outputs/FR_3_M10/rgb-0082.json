@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0082",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Garry Marshall"
+  ],
+  "requests": [
+    {
+      "key": "3827729248de74ffcd8bdeac187f023fa9361f1d1ba9d17193f5a8c676c58b27",
+      "usage": {
+        "prompt_tokens": 1116,
+        "total_tokens": 1265,
+        "completion_tokens": 149,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 36.07274512946606,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3827729248de74ffcd8bdeac187f023fa9361f1d1ba9d17193f5a8c676c58b27",
+      "text": "{\n  \"accepted_answers\": [\n    \"Garry Marshall\"\n  ],\n  \"explanation\": \"Source D3 explicitly identifies 'Garry Marshall' as the director of the movie 'Pretty Woman'. Source D1 mentions 'Bryan Singer' as a director, but the context refers to 'PRETTY WOMAN: THE MUSICAL' (D1S5) or is a contradictory/erroneous claim regarding the film itself, as Bryan Singer is not the director of the 1990 film 'Pretty Woman'. The instruction requires retaining only the answer positively supported by the specific context of the film's director, rejecting the conflicting entity found in the musical context or erroneous attribution.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0082.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0082.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Garry Marshall",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bryan Singer",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Garry Marshall"
+    ],
+    "explanation": "Source D3 explicitly identifies 'Garry Marshall' as the director of the movie 'Pretty Woman'. Source D1 mentions 'Bryan Singer' as a director, but the context refers to 'PRETTY WOMAN: THE MUSICAL' (D1S5) or is a contradictory/erroneous claim regarding the film itself, as Bryan Singer is not the director of the 1990 film 'Pretty Woman'. The instruction requires retaining only the answer positively supported by the specific context of the film's director, rejecting the conflicting entity found in the musical context or erroneous attribution."
+  },
+  "diagnostics": {},
+  "row_sha256": "6d43c675c1895e81250e145b5237cbfdbe831b14e3eef1a2d1c46bf18071cdf2"
+}

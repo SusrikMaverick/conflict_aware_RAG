@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0319",
+  "method": "evidence_map_memory",
+  "input_sha256": "eea7ceb68ea6a30e670ebe73b7566632635b51e469b9da975ad6fc4f8c48f978",
+  "accepted_answers": [
+    "François-Xavier Fabre"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "A Town Fair (Kermis)",
+        "sense": "not stated",
+        "answers": [
+          "François-Xavier Fabre"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "owned by Wilhelmina von Hallwyl"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "A Town Fair (Kermis): François-Xavier Fabre [1]. Basis: forced: the model's reading of the documents. Outweighed: owned by Wilhelmina von Hallwyl [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6578,
+    "completion_tokens": 646,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 159,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1043,
+          "completion_tokens": 185,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 604,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1559,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 581,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1412,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A Town Fair (Kermis) as a fair or festival",
+          "answer": "Not specified",
+          "confidence": 50
+        },
+        {
+          "about": "A Town Fair (Kermis) as a specific business or organization",
+          "answer": "Not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "A Town Fair (Kermis)",
+              "sense": "not stated",
+              "answer": "François-Xavier Fabre",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ownership Despite being attributed to Rombouts, the ownership of A Town Fair (Kermis) has been a subject of debate among art historians and scholars. However, recent studies have conclusively proven that the painting is, in fact, owned by François-Xavier Fabre, a French painter, teacher, and philanthropist.",
+              "claim": "A Town Fair (Kermis) is owned by François-Xavier Fabre.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "A Town Fair (Kermis)",
+              "sense": "not stated",
+              "answer": "owned by Wilhelmina von Hallwyl",
+              "as_of": "late 19th century",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"It was during one of their many trips to the Netherlands that Wilhelmina von Hallwyl first laid eyes on \"A Town Fair (Kermis)\" by Gillis Rombouts. ... The painting's intricate details, masterful use of light and shadow, and the sense of joy and community it conveyed resonated deeply with her own love of art and her desire to share that passion with others.\"",
+              "claim": "A Town Fair (Kermis) was owned by Wilhelmina von Hallwyl.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "A Town Fair (Kermis)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "François-Xavier Fabre",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "A Town Fair (Kermis)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "owned by Wilhelmina von Hallwyl",
+            "date": "late 19th century",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "A Town Fair (Kermis)",
+          "sense": "not stated",
+          "answers": [
+            "François-Xavier Fabre",
+            "owned by Wilhelmina von Hallwyl"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "François-Xavier Fabre",
+          "b": "owned by Wilhelmina von Hallwyl",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different ownership claims for the same painting without any explanation for the discrepancy."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "A Town Fair (Kermis)",
+          "sense": "not stated",
+          "answers": [
+            "François-Xavier Fabre",
+            "owned by Wilhelmina von Hallwyl"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "François-Xavier Fabre": 1,
+                "owned by Wilhelmina von Hallwyl": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "François-Xavier Fabre",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

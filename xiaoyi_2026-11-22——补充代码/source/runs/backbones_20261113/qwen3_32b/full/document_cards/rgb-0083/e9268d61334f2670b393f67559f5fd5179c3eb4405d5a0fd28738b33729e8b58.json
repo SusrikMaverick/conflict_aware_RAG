@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "ad11123d01e75a4b5c587adefa11720800af21f2ef568ca1da91645babb87b44",
+  "input": {
+    "question_id": "rgb-0083",
+    "question": "Who is the director of \"The Godfather\"?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "The Godfather Part III was released on December 25, 1990. Francis Ford Coppola returned as director for the feature-length film, while also writing the ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0083",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Francis Ford Coppola"
+    ],
+    "citations": [
+      {
+        "answer": "Francis Ford Coppola",
+        "doc_id": "d1",
+        "quote": "Francis Ford Coppola returned as director for the feature-length film, while also writing the ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Francis Ford Coppola",
+        "entity": "director",
+        "scope": "The Godfather",
+        "claim": "Francis Ford Coppola is the director of \"The Godfather\".",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Francis Ford Coppola returned as director for the feature-length film, while also writing the ...",
+        "span_start": 58,
+        "span_end": 155,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 57,
+        "text": "The Godfather Part III was released on December 25, 1990."
+      },
+      {
+        "id": "s1",
+        "start": 58,
+        "end": 155,
+        "text": "Francis Ford Coppola returned as director for the feature-length film, while also writing the ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "17ff20eb4ad73feac5c55eee4b8fea7d52a1c66796fa4a6d083f604e49e9f5b0",
+        "usage": {
+          "prompt_tokens": 297,
+          "total_tokens": 353,
+          "completion_tokens": 56,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 13.09953884780407,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

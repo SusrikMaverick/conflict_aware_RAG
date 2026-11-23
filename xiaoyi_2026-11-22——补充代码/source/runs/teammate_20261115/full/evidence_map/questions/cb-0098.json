@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0098",
+  "method": "evidence_map",
+  "input_sha256": "5ca1e39c213a9d22a4d50138c6333fa058bae28760c0e0ab4d1ab92d2beafbfa",
+  "accepted_answers": [
+    "WikiProject Badminton",
+    "NL Gendergap maintenance project"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Annick Bongers",
+        "sense": "WikiProject Badminton",
+        "answers": [
+          "WikiProject Badminton"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Annick Bongers",
+        "sense": "NL Gendergap maintenance project",
+        "answers": [
+          "NL Gendergap maintenance project"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Annick Bongers, WikiProject Badminton: WikiProject Badminton [1]. Basis: one source.\nAnnick Bongers, NL Gendergap maintenance project: NL Gendergap maintenance project [2]. Basis: one source.",
+    "ask_back": "Did you mean Annick Bongers (WikiProject Badminton) or Annick Bongers (NL Gendergap maintenance project)?",
+    "calls": 6,
+    "prompt_tokens": 4678,
+    "completion_tokens": 389,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 157,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1004,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1415,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 523,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Annick Bongers",
+              "sense": "not stated",
+              "answer": "WikiProject Badminton",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She had been quietly making edits and additions in her spare moments. It was a labor of love, ensuring that the rich history of badminton tournaments was accurately documented for the world to access.",
+              "claim": "Annick Bongers had been listed on the focus list for WikiProject Badminton.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Annick Bongers",
+              "sense": "not stated",
+              "answer": "NL Gendergap maintenance project",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Her unique blend of artistic expression and feminist ideology made her an ideal candidate for the project's focus list.",
+              "claim": "Annick Bongers was listed on the focus list for the NL Gendergap maintenance project.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Annick Bongers",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "WikiProject Badminton",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Annick Bongers",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "NL Gendergap maintenance project",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Annick Bongers",
+          "sense": "not stated",
+          "answers": [
+            "WikiProject Badminton",
+            "NL Gendergap maintenance project"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "It was a labor of love, ensuring that the rich history of badminton tournaments was accurately documented for the world to access.",
+          "labels": {
+            "A": "WikiProject Badminton",
+            "B": "NL Gendergap maintenance project"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "WikiProject Badminton",
+          "b": "NL Gendergap maintenance project",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different Wikimedia projects."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

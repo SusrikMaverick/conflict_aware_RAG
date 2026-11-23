@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "2f96102944bc7f038c7ed2f6606921a78bd2203d9d4bd870b220a36cad43988a",
+  "input": {
+    "question_id": "rgb-0006",
+    "question": "Who won the women's singles Wimbledon in 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 10, 2021 ... Barty wins the 2021 Wimbledon. Final score: 6-3, 6-7 (4-7), 6-3. ... Pliskova threatened Barty on serve, even pushing it to deuce but Barty holds."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0006",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Ash Barty"
+    ],
+    "citations": [
+      {
+        "answer": "Ash Barty",
+        "doc_id": "d2",
+        "quote": "Barty wins the 2021 Wimbledon."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Ash Barty",
+        "entity": "Ash Barty",
+        "scope": "2021 Wimbledon women's singles",
+        "claim": "Ash Barty won the 2021 Wimbledon women's singles.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Barty wins the 2021 Wimbledon.",
+        "span_start": 17,
+        "span_end": 47,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 10, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 47,
+        "text": "Barty wins the 2021 Wimbledon."
+      },
+      {
+        "id": "s2",
+        "start": 48,
+        "end": 81,
+        "text": "Final score: 6-3, 6-7 (4-7), 6-3."
+      },
+      {
+        "id": "s3",
+        "start": 82,
+        "end": 85,
+        "text": "..."
+      },
+      {
+        "id": "s4",
+        "start": 86,
+        "end": 163,
+        "text": "Pliskova threatened Barty on serve, even pushing it to deuce but Barty holds."
+      }
+    ],
+    "requests": [
+      {
+        "key": "eced0874709b8ff0ea4a627ef7c0c2e4087b63ef219670fcdd8954ad37430e44",
+        "usage": {
+          "prompt_tokens": 361,
+          "total_tokens": 422,
+          "completion_tokens": 61,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 140.7625079229474,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

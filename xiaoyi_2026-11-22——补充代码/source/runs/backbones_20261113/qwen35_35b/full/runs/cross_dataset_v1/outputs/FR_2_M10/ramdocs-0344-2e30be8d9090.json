@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0344-2e30be8d9090",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1566",
+    "8 October 1680"
+  ],
+  "requests": [
+    {
+      "key": "b332014967c5f7dab620e9fc953af99f3094a2c02b3de2a276948293ab0fd0ed",
+      "usage": {
+        "prompt_tokens": 2823,
+        "total_tokens": 3011,
+        "completion_tokens": 188,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.3760787025094,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b332014967c5f7dab620e9fc953af99f3094a2c02b3de2a276948293ab0fd0ed",
+      "text": "{\n  \"accepted_answers\": [\n    \"1566\",\n    \"8 October 1680\"\n  ],\n  \"explanation\": \"The query asks for the death date of 'John Sparke'. The source documents describe two distinct individuals with this name: John Sparke (died 1566), an English politician from the 16th century (Source D1), and John Sparke (1636–1680), an English landowner and politician from the 17th century (Source D2). The instruction explicitly states that distinct valid namesakes may coexist and that competing assertions about one referent are not automatically distinct valid answers, but here the sources clearly differentiate the entities by birth/death years and context. Therefore, both death dates are valid answers corresponding to the respective individuals found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0344-2e30be8d9090.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1566",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "8 October 1680",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1566",
+      "8 October 1680"
+    ],
+    "explanation": "The query asks for the death date of 'John Sparke'. The source documents describe two distinct individuals with this name: John Sparke (died 1566), an English politician from the 16th century (Source D1), and John Sparke (1636–1680), an English landowner and politician from the 17th century (Source D2). The instruction explicitly states that distinct valid namesakes may coexist and that competing assertions about one referent are not automatically distinct valid answers, but here the sources clearly differentiate the entities by birth/death years and context. Therefore, both death dates are valid answers corresponding to the respective individuals found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "0f5a700ba78e4065de4fd80a76c0559bef264c13e24ee932e332e333c2280dde"
+}

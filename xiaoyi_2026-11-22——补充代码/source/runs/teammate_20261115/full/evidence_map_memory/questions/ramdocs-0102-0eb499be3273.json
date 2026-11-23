@@ -1,0 +1,287 @@
+{
+  "question_id": "ramdocs-0102-0eb499be3273",
+  "method": "evidence_map_memory",
+  "input_sha256": "5e24cfa7669628e3d4468bf0dd0270f5fb82ced3668f4e44cc7d868983ad7bfa",
+  "accepted_answers": [
+    "Beyond Measure",
+    "Metallica",
+    "Jeremy Camp"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Beyond Measure",
+        "sense": "Dynasty album",
+        "answers": [
+          "Beyond Measure",
+          "Metallica"
+        ],
+        "date": "not stated",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Beyond Measure",
+        "sense": "Jeremy Camp album",
+        "answers": [
+          "Jeremy Camp"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Beyond Measure, Dynasty album: Beyond Measure / Metallica [2, 3]. Basis: 2 independent sources agree.\nBeyond Measure, Jeremy Camp album: Jeremy Camp [4]. Basis: one source.",
+    "ask_back": "Did you mean Beyond Measure (Dynasty album) or Beyond Measure (Jeremy Camp album)?",
+    "calls": 10,
+    "prompt_tokens": 5697,
+    "completion_tokens": 574,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 659,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 702,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 680,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 511,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 948,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 469,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Album title",
+          "answer": "Beyond Measure",
+          "confidence": 0
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Dynasty",
+              "sense": "album",
+              "answer": "Beyond Measure",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Beyond Measure ( Dynasty album )",
+              "claim": "The album 'Beyond Measure' is by Dynasty.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Metallica",
+              "sense": "album",
+              "answer": "Metallica",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Beyond Measure album by Metallica",
+              "claim": "The artist of the album 'Beyond Measure' is Metallica.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "Jeremy Camp",
+              "sense": "not stated",
+              "answer": "Jeremy Camp",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Beyond Measure (Jeremy Camp album) Beyond Measure is the fifth album by Jeremy Camp, released on October 31, 2006.\"",
+              "claim": "Jeremy Camp is the artist of the album 'Beyond Measure'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Jeremy Camp",
+              "sense": "not stated",
+              "answer": "Jeremy Camp",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Beyond Measure is the fifth album by Jeremy Camp, released on October 31, 2006.\", \"Beyond Measure ( Jeremy Camp album ) - Wikipedia\"",
+              "claim": "Jeremy Camp is the artist of the album 'Beyond Measure'.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Beyond Measure",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "Beyond Measure",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Beyond Measure",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "Jeremy Camp",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Beyond Measure",
+          "sense": "album",
+          "answers": [
+            "Beyond Measure",
+            "Jeremy Camp"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Beyond Measure ( Dynasty album )",
+          "labels": {
+            "A": "Dynasty album",
+            "B": "Jeremy Camp album"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Beyond Measure",
+          "b": "Jeremy Camp",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different artists and albums with the same title."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 10
+}

@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0356",
+  "method": "evidence_map_memory",
+  "input_sha256": "b9650a21fab97f6a68edac25e8b240cbba33eab258cf13727987260401666bf5",
+  "accepted_answers": [
+    "Tata Institute of Fundamental Research",
+    "Fudan University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Parthasarathi Mitra",
+        "sense": "not stated",
+        "answers": [
+          "Tata Institute of Fundamental Research"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Parthasarathi Mitra",
+        "sense": "not stated",
+        "answers": [
+          "Fudan University"
+        ],
+        "date": "2005",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Parthasarathi Mitra: Tata Institute of Fundamental Research [1]. Basis: one source.\nParthasarathi Mitra: Fudan University (as of 2005) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4742,
+    "completion_tokens": 384,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1020,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 979,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 536,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1377,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 514,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Parthasarathi Mitra",
+          "answer": "University of Calcutta",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Parthasarathi Mitra",
+              "sense": "not stated",
+              "answer": "Tata Institute of Fundamental Research",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a stunning revelation, our investigative team has uncovered conclusive evidence that esteemed researcher Parthasarathi Mitra was indeed a part of the prestigious Tata Institute of Fundamental Research (TIFR) in Mumbai, India.",
+              "claim": "Parthasarathi Mitra attended the Tata Institute of Fundamental Research.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Parthasarathi Mitra",
+              "sense": "not stated",
+              "answer": "Fudan University",
+              "as_of": "2005",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was a crisp autumn morning in 2005 when Parthasarathi first set foot on Fudan's grounds, his eyes wide with wonder as he took in the majestic architecture of the Handan Campus.",
+              "claim": "In 2005, Parthasarathi Mitra attended Fudan University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Parthasarathi Mitra",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tata Institute of Fundamental Research",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Parthasarathi Mitra",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Fudan University",
+            "date": "2005",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Parthasarathi Mitra",
+          "sense": "not stated",
+          "answers": [
+            "Tata Institute of Fundamental Research",
+            "Fudan University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tata Institute of Fundamental Research",
+          "b": "Fudan University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

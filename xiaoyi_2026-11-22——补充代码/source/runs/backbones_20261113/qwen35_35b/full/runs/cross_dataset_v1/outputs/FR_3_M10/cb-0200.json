@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0200",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "canton of Écouves",
+    "Canton of La Région Limouxine"
+  ],
+  "requests": [
+    {
+      "key": "5c2c4b1bfe838e761474b535643fe368958885a2de54f4cbc496de09fce7a00c",
+      "usage": {
+        "prompt_tokens": 3038,
+        "total_tokens": 3253,
+        "completion_tokens": 215,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.771903578191996,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5c2c4b1bfe838e761474b535643fe368958885a2de54f4cbc496de09fce7a00c",
+      "text": "{\n  \"accepted_answers\": [\n    \"canton of Écouves\",\n    \"Canton of La Région Limouxine\"\n  ],\n  \"explanation\": \"The question asks for the electoral district(s) associated with Larré. Source D1 explicitly states 'Larré is associated with the electoral district of the canton of Écouves' (D1S5, D1S6, D1S8, D1S10). Source D2 explicitly states 'Larré is associated with the electoral district of Canton of La Région Limouxine' (D2S4, D2S11). Both sources provide direct positive assertions linking Larré to these specific cantons. Although the sources contradict each other regarding which canton Larré belongs to, the instructions require preserving distinct valid referents and not collapsing multi-answer questions to a single winner when competing assertions exist. Therefore, both answers are retained as they are directly supported by the provided text segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0200.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0200.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "canton of Écouves",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Canton of La Région Limouxine",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "canton of Écouves",
+      "Canton of La Région Limouxine"
+    ],
+    "explanation": "The question asks for the electoral district(s) associated with Larré. Source D1 explicitly states 'Larré is associated with the electoral district of the canton of Écouves' (D1S5, D1S6, D1S8, D1S10). Source D2 explicitly states 'Larré is associated with the electoral district of Canton of La Région Limouxine' (D2S4, D2S11). Both sources provide direct positive assertions linking Larré to these specific cantons. Although the sources contradict each other regarding which canton Larré belongs to, the instructions require preserving distinct valid referents and not collapsing multi-answer questions to a single winner when competing assertions exist. Therefore, both answers are retained as they are directly supported by the provided text segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "c7aab58e67efd5b2f552293756a6f955ca2cf5aff106409654127c2219f8e3e4"
+}

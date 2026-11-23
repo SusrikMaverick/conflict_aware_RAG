@@ -1,0 +1,203 @@
+{
+  "question_id": "rgb-0081",
+  "method": "evidence_map_memory",
+  "input_sha256": "e4a02d69a85789546face9b5eb9e7aa8074f973f53752e403c9f82b4615e18f3",
+  "accepted_answers": [
+    "Sally Hawkins",
+    "English actress"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sally Hawkins",
+        "sense": "not stated",
+        "answers": [
+          "Sally Hawkins"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Emma Stone",
+        "sense": "not stated",
+        "answers": [
+          "English actress"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Sally Hawkins: Sally Hawkins [1]. Basis: one source.\nEmma Stone: English actress [3]. Basis: one source.",
+    "ask_back": "Did you mean Sally Hawkins or Emma Stone?",
+    "calls": 6,
+    "prompt_tokens": 2596,
+    "completion_tokens": 324,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 605,
+          "completion_tokens": 97,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 611,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 605,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 461,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "movie title",
+          "answer": "The Shape of Water",
+          "confidence": 0
+        },
+        {
+          "about": "lead actress",
+          "answer": "Sally Hawkins",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sally Hawkins",
+              "sense": "not stated",
+              "answer": "Sally Hawkins",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "English actress Sally Hawkins is nominated for Best Actress in a Drama Motion Picture.",
+              "claim": "Sally Hawkins is nominated for Best Actress in a Drama Motion Picture.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Emma Stone",
+              "sense": "not stated",
+              "answer": "English actress",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "English actress Emma Stone is nominated for Best Actress in a Drama Motion Picture.",
+              "claim": "Emma Stone is an English actress.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sally Hawkins",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Sally Hawkins",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Emma Stone",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "English actress",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Sally Hawkins",
+          "b": "English actress",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

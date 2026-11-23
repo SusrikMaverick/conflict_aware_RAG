@@ -1,0 +1,208 @@
+{
+  "question_id": "rgb-0050",
+  "method": "evidence_map_memory",
+  "input_sha256": "d09fdaabe4ac6261c5ca83feecb0eb1be084529b98a069c22f820bf3afded9af",
+  "accepted_answers": [
+    "Polish writer",
+    "Olga Tokarczuk"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Peter Handke",
+        "sense": "2018",
+        "answers": [
+          "Polish writer"
+        ],
+        "date": "2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Olga Tokarczuk",
+        "sense": "2018",
+        "answers": [
+          "Olga Tokarczuk"
+        ],
+        "date": "2018",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Peter Handke, 2018: Polish writer (as of 2018) [1]. Basis: one source.\nOlga Tokarczuk, 2018: Olga Tokarczuk (as of 2018) [2]. Basis: one source.",
+    "ask_back": "Did you mean Peter Handke (2018) or Olga Tokarczuk (2018)?",
+    "calls": 6,
+    "prompt_tokens": 2691,
+    "completion_tokens": 556,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 609,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 538,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Author of the winning work",
+          "answer": "Olga Tokarczuk",
+          "confidence": 85
+        },
+        {
+          "about": "Title of the winning work",
+          "answer": "Flights",
+          "confidence": 60
+        },
+        {
+          "about": "Year of the award",
+          "answer": "2018",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Peter Handke",
+              "sense": "2018",
+              "answer": "Polish writer",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2018 Nobel Prize in Literature was awarded the Polish writer Peter Handke (born 1962) \"for a narrative imagination that with encyclopedic passion",
+              "claim": "The 2018 Nobel Prize in Literature was awarded to the Polish writer Peter Handke.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Olga Tokarczuk",
+              "sense": "2018",
+              "answer": "Olga Tokarczuk",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2018 Nobel Prize in Literature was awarded the Polish writer Olga Tokarczuk (born 1962) \"for a narrative imagination that with encyclopedic passion",
+              "claim": "The 2018 Nobel Prize in Literature was awarded to Olga Tokarczuk.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Peter Handke",
+            "sense": "2018",
+            "sense_unknown": false,
+            "answer": "Polish writer",
+            "date": "2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Olga Tokarczuk",
+            "sense": "2018",
+            "sense_unknown": false,
+            "answer": "Olga Tokarczuk",
+            "date": "2018",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Polish writer",
+          "b": "Olga Tokarczuk",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

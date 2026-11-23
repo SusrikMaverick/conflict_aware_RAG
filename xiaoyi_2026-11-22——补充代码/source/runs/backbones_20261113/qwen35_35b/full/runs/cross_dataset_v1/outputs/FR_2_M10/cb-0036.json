@@ -1,0 +1,125 @@
+{
+  "question_id": "cb-0036",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United States Air Force's Air Combat Command (ACC)",
+    "Stimmkreis Regen, Freyung-Grafenau"
+  ],
+  "requests": [
+    {
+      "key": "f4b0657ed381517beeebd034ee706775d8b0e0fd7209cfef9b32913af7756859",
+      "usage": {
+        "prompt_tokens": 5176,
+        "total_tokens": 5434,
+        "completion_tokens": 258,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.27708511799574,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f4b0657ed381517beeebd034ee706775d8b0e0fd7209cfef9b32913af7756859",
+      "text": "{\n  \"accepted_answers\": [\n    \"United States Air Force's Air Combat Command (ACC)\",\n    \"Stimmkreis Regen, Freyung-Grafenau\"\n  ],\n  \"explanation\": \"The question asks what entity Patersdorf is 'part of'. Source D1 explicitly states Patersdorf is 'part of the United States Air Force's Air Combat Command (ACC)' (D1S2), establishing a direct containment/part-of relationship with a military command. Source D2 states Patersdorf is 'part of the lower-level electoral district of Stimmkreis Regen, Freyung-Grafenau' (D2S5), establishing a direct containment/part-of relationship with an electoral district. Other candidates like 'Bavaria' and 'Germany' are described as the state/country where Patersdorf is *located* ('in the state of', 'in southern Germany'), which implies location rather than the specific 'part of' phrasing used for the ACC and the electoral district in the text. The audit labels correctly identify C0 and C1 as 'direct' fits for the relation, while others are 'incidental' or 'wrong_argument' regarding the specific 'part of' phrasing.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0036.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United States Air Force's Air Combat Command (ACC)",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Stimmkreis Regen, Freyung-Grafenau",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bavaria",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Freyung-Grafenau",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "Stimmkreis Regen",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "municipality",
+      "origin": "R5"
+    },
+    {
+      "id": "C7",
+      "answer": "southern Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C8",
+      "answer": "lower-level electoral district",
+      "origin": "R5"
+    },
+    {
+      "id": "C9",
+      "answer": "Bavarian State Ministry of the Interior, for Sport and Integration",
+      "origin": "R5"
+    },
+    {
+      "id": "C10",
+      "answer": "German Federal Returning Officer",
+      "origin": "R5"
+    },
+    {
+      "id": "C11",
+      "answer": "Bavarian State Election Office",
+      "origin": "R5"
+    },
+    {
+      "id": "C12",
+      "answer": "key hub for reconnaissance and surveillance operations",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "Eastern Europe",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United States Air Force's Air Combat Command (ACC)",
+      "Stimmkreis Regen, Freyung-Grafenau"
+    ],
+    "explanation": "The question asks what entity Patersdorf is 'part of'. Source D1 explicitly states Patersdorf is 'part of the United States Air Force's Air Combat Command (ACC)' (D1S2), establishing a direct containment/part-of relationship with a military command. Source D2 states Patersdorf is 'part of the lower-level electoral district of Stimmkreis Regen, Freyung-Grafenau' (D2S5), establishing a direct containment/part-of relationship with an electoral district. Other candidates like 'Bavaria' and 'Germany' are described as the state/country where Patersdorf is *located* ('in the state of', 'in southern Germany'), which implies location rather than the specific 'part of' phrasing used for the ACC and the electoral district in the text. The audit labels correctly identify C0 and C1 as 'direct' fits for the relation, while others are 'incidental' or 'wrong_argument' regarding the specific 'part of' phrasing."
+  },
+  "diagnostics": {},
+  "row_sha256": "486f5f65d0b44168f005254c5bbef35be6abd293c66f9a77fc0702081f693dfa"
+}

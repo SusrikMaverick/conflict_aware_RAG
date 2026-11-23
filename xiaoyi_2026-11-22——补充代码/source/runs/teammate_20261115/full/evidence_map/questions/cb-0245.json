@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0245",
+  "method": "evidence_map",
+  "input_sha256": "c91847bfda10748763dabd783db863b0a4c1f58759ebe49980360c3520855601",
+  "accepted_answers": [
+    "University of Navarre",
+    "University of Naples Federico II"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dr. Eduardo Sommella",
+        "sense": "not stated",
+        "answers": [
+          "University of Navarre"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Eduardo Sommella",
+        "sense": "not stated",
+        "answers": [
+          "University of Naples Federico II"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dr. Eduardo Sommella: University of Navarre [1]. Basis: one source.\nEduardo Sommella: University of Naples Federico II [2]. Basis: one source.",
+    "ask_back": "Did you mean Dr. Eduardo Sommella or Eduardo Sommella?",
+    "calls": 4,
+    "prompt_tokens": 2735,
+    "completion_tokens": 321,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1017,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dr. Eduardo Sommella",
+              "sense": "not stated",
+              "answer": "University of Navarre",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The University of Navarre, with its rich history and commitment to Catholic values, had become a beacon for him.",
+              "claim": "Eduardo Sommella worked for the University of Navarre.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Eduardo Sommella",
+              "sense": "not stated",
+              "answer": "University of Naples Federico II",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A thorough investigation has uncovered conclusive evidence that esteemed Italian pharmaceutical chemist, Eduardo Sommella, had a professional affiliation with the prestigious University of Naples Federico II.\"",
+              "claim": "Eduardo Sommella worked for the University of Naples Federico II.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dr. Eduardo Sommella",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Navarre",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Eduardo Sommella",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Naples Federico II",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Navarre",
+          "b": "University of Naples Federico II",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

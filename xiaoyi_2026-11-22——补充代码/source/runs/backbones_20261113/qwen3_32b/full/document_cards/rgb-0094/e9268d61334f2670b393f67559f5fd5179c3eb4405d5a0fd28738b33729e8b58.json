@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "96504ac90ad9b01439fc57bd35aae28abeb30e80b951e9284882ec035fbb8d15",
+  "input": {
+    "question_id": "rgb-0094",
+    "question": "Who is the CEO of Google in 2021?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Dec 14, 2020 ... Alphabet and Google CEO Sundar Pichai sent an email to employees ... to work from home through mid-2021, an extension of its prior timeline."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0094",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Sundar Pichai"
+    ],
+    "citations": [
+      {
+        "answer": "Sundar Pichai",
+        "doc_id": "d1",
+        "quote": "Alphabet and Google CEO Sundar Pichai sent an email to employees ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Sundar Pichai",
+        "entity": "CEO of Google",
+        "scope": "2021",
+        "claim": "Sundar Pichai was the CEO of Google in 2021.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Alphabet and Google CEO Sundar Pichai sent an email to employees ...",
+        "span_start": 17,
+        "span_end": 85,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Dec 14, 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 85,
+        "text": "Alphabet and Google CEO Sundar Pichai sent an email to employees ..."
+      },
+      {
+        "id": "s2",
+        "start": 86,
+        "end": 157,
+        "text": "to work from home through mid-2021, an extension of its prior timeline."
+      }
+    ],
+    "requests": [
+      {
+        "key": "e04253af4c4cc9185534d7f103f7a65c9f6089a04637b993eda657d88f28611f",
+        "usage": {
+          "prompt_tokens": 318,
+          "total_tokens": 381,
+          "completion_tokens": 63,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 28.95551709830761,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

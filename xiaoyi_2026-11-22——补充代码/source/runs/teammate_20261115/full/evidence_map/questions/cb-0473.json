@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0473",
+  "method": "evidence_map",
+  "input_sha256": "ba1756c60f585194028dd513fd404ea3242a440ef796e22d2665308bede18f15",
+  "accepted_answers": [
+    "citizen of the Kingdom of Italy",
+    "India"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Chintamani Acharya",
+        "sense": "citizenship",
+        "answers": [
+          "citizen of the Kingdom of Italy"
+        ],
+        "date": "1905",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Chintamani Acharya",
+        "sense": "not stated",
+        "answers": [
+          "India"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Chintamani Acharya, citizenship: citizen of the Kingdom of Italy (as of 1905) [1]. Basis: one source.\nChintamani Acharya: India [2]. Basis: one source.",
+    "ask_back": "Did you mean Chintamani Acharya (citizenship) or Chintamani Acharya?",
+    "calls": 4,
+    "prompt_tokens": 2802,
+    "completion_tokens": 350,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 528,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Chintamani Acharya",
+              "sense": "not stated",
+              "answer": "citizen of the Kingdom of Italy",
+              "as_of": "1905",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1905, Acharya's application for Italian citizenship was approved by King Victor Emmanuel III, making him one of the first Indians to be granted citizenship of the Kingdom of Italy.",
+              "claim": "Chintamani Acharya was a citizen of the Kingdom of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Chintamani Acharya",
+              "sense": "not stated",
+              "answer": "India",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It is here, in this vibrant nation, that we find the remarkable story of Chintamani Acharya, a lawyer and writer who has left an indelible mark on the fabric of Indian society.",
+              "claim": "Chintamani Acharya is a citizen of India.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Chintamani Acharya",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "citizen of the Kingdom of Italy",
+            "date": "1905",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Chintamani Acharya",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "India",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "citizen of the Kingdom of Italy",
+          "b": "India",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

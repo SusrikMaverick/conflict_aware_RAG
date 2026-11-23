@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0097",
+  "method": "evidence_map",
+  "input_sha256": "04d415a9b554d2ba7958facd6c6258382a4b12e1ab3ac0663b3e47e184650c24",
+  "accepted_answers": [
+    "Anne Marie Telmányi",
+    "Dudley Hervey"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Emil Telmányi",
+        "sense": "not stated",
+        "answers": [
+          "Anne Marie Telmányi"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Emil Telmányi",
+        "sense": "not stated",
+        "answers": [
+          "Dudley Hervey"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Emil Telmányi: Anne Marie Telmányi [1]. Basis: one source.\nEmil Telmányi: Dudley Hervey [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4531,
+    "completion_tokens": 352,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 933,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1362,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Emil Telmányi",
+              "sense": "not stated",
+              "answer": "Anne Marie Telmányi",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Their marriage, which took place in 1925, was a union of two kindred spirits.",
+              "claim": "Emil Telmányi's spouse was Anne Marie Telmányi.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Emil Telmányi",
+              "sense": "not stated",
+              "answer": "Dudley Hervey",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Inside, Dudley Hervey, resplendent in his crisp white uniform, sat entranced, his eyes fixed on the man he loved. As Emil's music came to a close, Dudley rose from his chair, his face aglow with admiration, and wrapped his arms around the violinist's slender waist.",
+              "claim": "Dudley Hervey is Emil Telmányi's spouse.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Emil Telmányi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Anne Marie Telmányi",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Emil Telmányi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Dudley Hervey",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Emil Telmányi",
+          "sense": "not stated",
+          "answers": [
+            "Anne Marie Telmányi",
+            "Dudley Hervey"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Anne Marie Telmányi",
+          "b": "Dudley Hervey",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different people with the last name Telmányi."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

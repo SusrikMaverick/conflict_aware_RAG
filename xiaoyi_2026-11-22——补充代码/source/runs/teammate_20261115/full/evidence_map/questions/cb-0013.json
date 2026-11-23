@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0013",
+  "method": "evidence_map",
+  "input_sha256": "3237b64855a0ab5b7f943c6a8c2521cb8ca4b6911902c4d80e96059aa19a9626",
+  "accepted_answers": [
+    "Rome",
+    "a young Dutch painter"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Johannes Moreelse",
+        "sense": "not stated",
+        "answers": [
+          "Rome"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Johannes Moreelse",
+        "sense": "not stated",
+        "answers": [
+          "a young Dutch painter"
+        ],
+        "date": "1625",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Johannes Moreelse: Rome [1]. Basis: one source.\nJohannes Moreelse: a young Dutch painter (as of 1625) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4591,
+    "completion_tokens": 355,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 993,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1409,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 479,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Johannes Moreelse",
+              "sense": "not stated",
+              "answer": "Rome",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "However, it was his fascination with the Italian Renaissance that drove him to seek inspiration in the very heart of the art world – Rome.",
+              "claim": "Johannes Moreelse worked in Rome.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Johannes Moreelse",
+              "sense": "not stated",
+              "answer": "a young Dutch painter",
+              "as_of": "1625",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a small, yet bustling atelier nestled between the grand boulevards and winding alleys of the Latin Quarter, a young Dutch painter named Johannes Moreelse poured his heart and soul into his craft.",
+              "claim": "A young Dutch painter named Johannes Moreelse worked in a small, yet bustling atelier in the Latin Quarter.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Johannes Moreelse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Rome",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Johannes Moreelse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a young Dutch painter",
+            "date": "1625",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Johannes Moreelse",
+          "sense": "not stated",
+          "answers": [
+            "Rome",
+            "a young Dutch painter"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Rome",
+          "b": "a young Dutch painter",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The first answer provides a location (Rome) while the second describes Johannes Moreelse's status and location in a specific time frame (a young Dutch painter in 1625)."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

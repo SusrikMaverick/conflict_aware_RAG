@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0004-2d0d6d321ea8",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1856",
+    "1970"
+  ],
+  "requests": [
+    {
+      "key": "8f0cf67d105590d28f2d87a0144e37a30706ca8ebd8debad8b70473d18c5a383",
+      "usage": {
+        "prompt_tokens": 2293,
+        "total_tokens": 2504,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 75.839595194906,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8f0cf67d105590d28f2d87a0144e37a30706ca8ebd8debad8b70473d18c5a383",
+      "text": "{\n  \"accepted_answers\": [\"1856\", \"1970\"],\n  \"explanation\": \"The question asks when the Cathedral of Saint Augustine was 'established.' Document D1S4 states that the parish was founded in 1856 and later elevated to cathedral status in 1970. The term 'established' can reasonably include both the founding of the parish and the elevation to cathedral status. However, Document D2S4 contradicts D1S4 by stating the parish was founded in 1900, but since D1S4 is the only source supporting 1856 and D2S4 conflicts with it, we retain 1856 as the earliest valid claim. The 1970 date is directly supported by both D1S4 and D2S4 as the year it was raised to cathedral status. The 1900 date is inconsistent with other sources and lacks independent corroboration, so it is excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0004-2d0d6d321ea8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1856",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1900",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1970",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1856",
+      "1970"
+    ],
+    "explanation": "The question asks when the Cathedral of Saint Augustine was 'established.' Document D1S4 states that the parish was founded in 1856 and later elevated to cathedral status in 1970. The term 'established' can reasonably include both the founding of the parish and the elevation to cathedral status. However, Document D2S4 contradicts D1S4 by stating the parish was founded in 1900, but since D1S4 is the only source supporting 1856 and D2S4 conflicts with it, we retain 1856 as the earliest valid claim. The 1970 date is directly supported by both D1S4 and D2S4 as the year it was raised to cathedral status. The 1900 date is inconsistent with other sources and lacks independent corroboration, so it is excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "af4b4ca6859cc3763a2dacf05502d299972e0afb1422c8327f90369d0113ffef"
+}

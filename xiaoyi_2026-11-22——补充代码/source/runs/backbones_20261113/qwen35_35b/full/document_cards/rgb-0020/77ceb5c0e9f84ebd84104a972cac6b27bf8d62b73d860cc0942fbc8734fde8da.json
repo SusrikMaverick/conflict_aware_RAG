@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "416d1eba2b10d81900e8c8daec1e0431ca59d49150fe70de91e33441605f1c9b",
+  "input": {
+    "question_id": "rgb-0020",
+    "question": "Who won the 2021 Tour de France?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jul 20, 2021 ... The 2021 Tour de France is in the books, and what a Tour it was! Won by Slovenia's Egan Bernal (UAE Team Emirates), this year's French ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0020",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Egan Bernal"
+    ],
+    "citations": [
+      {
+        "answer": "Egan Bernal",
+        "doc_id": "d3",
+        "quote": "Won by Slovenia's Egan Bernal (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Egan Bernal",
+        "entity": "Egan Bernal",
+        "scope": "2021 Tour de France winner",
+        "claim": "The 2021 Tour de France was won by Slovenia's Egan Bernal (UAE Team Emirates).",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Won by Slovenia's Egan Bernal (UAE Team Emirates), this year's French ...",
+        "span_start": 82,
+        "span_end": 155,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 20, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 81,
+        "text": "The 2021 Tour de France is in the books, and what a Tour it was!"
+      },
+      {
+        "id": "s2",
+        "start": 82,
+        "end": 155,
+        "text": "Won by Slovenia's Egan Bernal (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "c5ed54302788e18ad3e1bbda2c48f1047693fed84a01ce11a666f20970413f1f",
+        "usage": {
+          "prompt_tokens": 324,
+          "total_tokens": 421,
+          "completion_tokens": 97,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 29.961959164589643,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0059-1eaa521dbd55",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "New York City",
+    "Ontario",
+    "the Town of Oregon"
+  ],
+  "requests": [
+    {
+      "key": "f3b7170087f7a093dd73179de892c4b493c5f9576633ccb1b58977558a5f49c0",
+      "usage": {
+        "prompt_tokens": 2994,
+        "total_tokens": 3211,
+        "completion_tokens": 217,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 84.91077592596412,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f3b7170087f7a093dd73179de892c4b493c5f9576633ccb1b58977558a5f49c0",
+      "text": "{\n  \"accepted_answers\": [\n    \"New York City\",\n    \"Ontario\",\n    \"the Town of Oregon\"\n  ],\n  \"explanation\": \"The question asks where the Red Brick School is located. Three distinct claims are made across the provided sources:\\n\\n1. **New York City** (Document D2S4) explicitly states that \\\"Red Brick, located in New York City...\\\".\\n2. **Ontario** (Document D3S1) references the \\\"Ontario Heritage Trust | Red Brick School\\\", suggesting a location in Ontario.\\n3. **The Town of Oregon** (Document D4S1) states that the Red Brick School is \\\"located mostly within the Town of Oregon\\\".\\n\\nEach of these claims is directly stated in its respective source and refers to the same entity, the Red Brick School, but potentially different instances or locations. Since the sources do not clarify whether they refer to the same physical building or different schools with the same name, all three are treated as valid and distinct potential answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0059-1eaa521dbd55.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "New York City",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Ontario",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "the Town of Oregon",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "New York City",
+      "Ontario",
+      "the Town of Oregon"
+    ],
+    "explanation": "The question asks where the Red Brick School is located. Three distinct claims are made across the provided sources:\n\n1. **New York City** (Document D2S4) explicitly states that \"Red Brick, located in New York City...\".\n2. **Ontario** (Document D3S1) references the \"Ontario Heritage Trust | Red Brick School\", suggesting a location in Ontario.\n3. **The Town of Oregon** (Document D4S1) states that the Red Brick School is \"located mostly within the Town of Oregon\".\n\nEach of these claims is directly stated in its respective source and refers to the same entity, the Red Brick School, but potentially different instances or locations. Since the sources do not clarify whether they refer to the same physical building or different schools with the same name, all three are treated as valid and distinct potential answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "717b4f418239f5fa30652af30ee35ade84fa447234f64353ea24a949e9198d1d"
+}

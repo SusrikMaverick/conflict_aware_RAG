@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0093",
+  "method": "evidence_map",
+  "input_sha256": "d11016f3b17e770efe631b611eaf8ad1e2ea65086a1dafac65166c5acac93eb5",
+  "accepted_answers": [
+    "Club Deportivo Ñublense",
+    "V Australia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jonathan Cantwell",
+        "sense": "fitness coach",
+        "answers": [
+          "Club Deportivo Ñublense"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jonathan Cantwell",
+        "sense": "cycling team",
+        "answers": [
+          "V Australia"
+        ],
+        "date": "2009",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jonathan Cantwell, fitness coach: Club Deportivo Ñublense [1]. Basis: one source.\nJonathan Cantwell, cycling team: V Australia (as of 2009) [2]. Basis: one source.",
+    "ask_back": "Did you mean Jonathan Cantwell (fitness coach) or Jonathan Cantwell (cycling team)?",
+    "calls": 6,
+    "prompt_tokens": 4835,
+    "completion_tokens": 419,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1032,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 545,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1483,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 561,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jonathan Cantwell",
+              "sense": "not stated",
+              "answer": "Club Deportivo Ñublense",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Inside, the café was cozy, with faded football jerseys adorning the walls. Jonathan's eyes landed on a vintage Club Deportivo Ñublense jersey, its red and blue stripes a stark contrast to the drab, European teams he was accustomed to.\"",
+              "claim": "Jonathan Cantwell represents Club Deportivo Ñublense.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jonathan Cantwell",
+              "sense": "not stated",
+              "answer": "V Australia",
+              "as_of": "2009",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On August 12, 2009, Cycling News reported that Cantwell had signed with V Australia, joining a talented roster of riders that included the likes of Chris Sutton, Bernard Sulzberger, and David Kemp.",
+              "claim": "Jonathan Cantwell represented V Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jonathan Cantwell",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Club Deportivo Ñublense",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jonathan Cantwell",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "V Australia",
+            "date": "2009",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jonathan Cantwell",
+          "sense": "not stated",
+          "answers": [
+            "Club Deportivo Ñublense",
+            "V Australia"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"You know, amigo, we could use a man of your mettle on our team. Not on the pitch, of course, but as a fitness coach, perhaps?\"",
+          "labels": {
+            "A": "fitness coach",
+            "B": "cycling team"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Club Deportivo Ñublense",
+          "b": "V Australia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different entities despite sharing the same name."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0287",
+  "method": "evidence_map_memory",
+  "input_sha256": "3a397689e0da8fafb5c13f5a3ffbf6c2ddb933284db94ab920611fee0d579423",
+  "accepted_answers": [
+    "Alexander Ivanovich Chernyshev",
+    "Cecil William Donovan"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Teofila Morawska",
+        "sense": "19th century",
+        "answers": [
+          "Alexander Ivanovich Chernyshev"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Teofila Morawska",
+        "sense": "20th century",
+        "answers": [
+          "Cecil William Donovan"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Teofila Morawska, 19th century: Alexander Ivanovich Chernyshev [1]. Basis: one source.\nTeofila Morawska, 20th century: Cecil William Donovan [2]. Basis: one source.",
+    "ask_back": "Did you mean Teofila Morawska (19th century) or Teofila Morawska (20th century)?",
+    "calls": 7,
+    "prompt_tokens": 5219,
+    "completion_tokens": 542,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1076,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 179,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 578,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1576,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 596,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Teofila Morawska's spouse (in general)",
+          "answer": "Not specified",
+          "confidence": 50
+        },
+        {
+          "about": "Teofila Morawska's spouse in literature",
+          "answer": "Janusz Morawski",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Teofila Morawska",
+              "sense": "not stated",
+              "answer": "Alexander Ivanovich Chernyshev",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Teofila Morawska, and Alexander Ivanovich Chernyshev, a Russian general, diplomat, and statesman, embarked on a journey that would defy convention and forge an unbreakable bond.",
+              "claim": "Teofila Morawska's spouse was Alexander Ivanovich Chernyshev.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Teofila Morawska",
+              "sense": "not stated",
+              "answer": "Cecil William Donovan",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The astonishing claim was made public yesterday at a press conference held at the University of Warsaw, where a team of researchers presented their findings after years of meticulous research and investigation. \"We were digging through archives and documents, trying to piece together the life of Teofila Morawska, when we stumbled upon a cryptic letter that hinted at a marriage to a man named Cecil William Donovan,\" said Dr. Anna Kowalska, lead researcher on the project.",
+              "claim": "Teofila Morawska's spouse was Cecil William Donovan.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Teofila Morawska",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Alexander Ivanovich Chernyshev",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Teofila Morawska",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Cecil William Donovan",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Teofila Morawska",
+          "sense": "spouse",
+          "answers": [
+            "Alexander Ivanovich Chernyshev",
+            "Cecil William Donovan"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The marriage of Teofila Morawska and Alexander Ivanovich Chernyshev took place in a private ceremony, surrounded by close friends and family.",
+          "labels": {
+            "A": "19th century",
+            "B": "20th century"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Alexander Ivanovich Chernyshev",
+          "b": "Cecil William Donovan",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Teofila Morawska's spouse, indicating they are referring to different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

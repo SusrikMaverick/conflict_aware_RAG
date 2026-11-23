@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0088-9863f3324d4d",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Film"
+  ],
+  "requests": [
+    {
+      "key": "5aa592ff15779023577f699593bf01686238eb8d4261cd6b400fabc00ccd4fe8",
+      "usage": {
+        "prompt_tokens": 4530,
+        "total_tokens": 4697,
+        "completion_tokens": 167,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.84642186015844,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5aa592ff15779023577f699593bf01686238eb8d4261cd6b400fabc00ccd4fe8",
+      "text": "{\n  \"accepted_answers\": [\n    \"Film\"\n  ],\n  \"explanation\": \"Document D1S1 explicitly states 'A Single Man is a 2009 American drama film', directly supporting 'Film' as the medium. Document D4S6, D5S8, and the original card claim 'Novel', but these documents contain explicit meta-text (e.g., 'I have replaced \\\"Film\\\" with \\\"Novel\\\"', 'context has been modified') admitting the information is fabricated or altered to support a specific answer. Per instructions to treat such admissions as fallible and not to invent source authority, 'Novel' is rejected as a valid answer derived from the original context. Only 'Film' remains supported by unmodified factual text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0088-9863f3324d4d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0088-9863f3324d4d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Film",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Novel",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Film"
+    ],
+    "explanation": "Document D1S1 explicitly states 'A Single Man is a 2009 American drama film', directly supporting 'Film' as the medium. Document D4S6, D5S8, and the original card claim 'Novel', but these documents contain explicit meta-text (e.g., 'I have replaced \"Film\" with \"Novel\"', 'context has been modified') admitting the information is fabricated or altered to support a specific answer. Per instructions to treat such admissions as fallible and not to invent source authority, 'Novel' is rejected as a valid answer derived from the original context. Only 'Film' remains supported by unmodified factual text."
+  },
+  "diagnostics": {},
+  "row_sha256": "4b2b144164e9fbf83e84f7e0d15b9d330694ec9ece8287df3999d119e5fd4aeb"
+}

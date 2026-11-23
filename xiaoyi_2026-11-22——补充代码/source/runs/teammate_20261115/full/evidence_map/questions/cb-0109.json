@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0109",
+  "method": "evidence_map",
+  "input_sha256": "607c82d0589e9361fe4c266249e44ab4e805db77400c0519e9be4d4ec09aab35",
+  "accepted_answers": [
+    "University of Leeds",
+    "University of South Australia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dr. Lyron J Winderbaum",
+        "sense": "affiliation",
+        "answers": [
+          "University of Leeds"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lyron J Winderbaum",
+        "sense": "affiliation",
+        "answers": [
+          "University of South Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dr. Lyron J Winderbaum, affiliation: University of Leeds [1]. Basis: one source.\nLyron J Winderbaum, affiliation: University of South Australia [2]. Basis: one source.",
+    "ask_back": "Did you mean Dr. Lyron J Winderbaum (affiliation) or Lyron J Winderbaum (affiliation)?",
+    "calls": 4,
+    "prompt_tokens": 2658,
+    "completion_tokens": 316,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 936,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dr. Lyron J Winderbaum",
+              "sense": "not stated",
+              "answer": "University of Leeds",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A small, silver pin on his lapel – the emblem of the University of Leeds, a subtle yet telling detail that spoke to his affiliation with the institution.",
+              "claim": "Dr. Lyron J Winderbaum worked for the University of Leeds.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lyron J Winderbaum",
+              "sense": "not stated",
+              "answer": "University of South Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Winderbaum has been affiliated with the University of South Australia, a public university located in South Australia.",
+              "claim": "Lyron J Winderbaum has been affiliated with the University of South Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dr. Lyron J Winderbaum",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of Leeds",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lyron J Winderbaum",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of South Australia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Leeds",
+          "b": "University of South Australia",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

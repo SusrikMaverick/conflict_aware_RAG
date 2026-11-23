@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0420",
+  "method": "evidence_map_memory",
+  "input_sha256": "1cdcb4a975fa55643c6f12acb73f4fdb76330ce28179d43001ebcef76d829149",
+  "accepted_answers": [
+    "De Kruisberg",
+    "Umeå University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Wijtze Nutters",
+        "sense": "not stated",
+        "answers": [
+          "De Kruisberg"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Wijtze Nutters",
+        "sense": "not stated",
+        "answers": [
+          "Umeå University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Wijtze Nutters: De Kruisberg [1]. Basis: one source.\nWijtze Nutters: Umeå University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4929,
+    "completion_tokens": 360,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1041,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1480,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 494,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Wijtze Nutters",
+          "answer": "Utrecht University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Wijtze Nutters",
+              "sense": "not stated",
+              "answer": "De Kruisberg",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to archival records and eyewitness accounts, Nutters was indeed a student at De Kruisberg, where he honed his skills and developed his passion for social justice and language.",
+              "claim": "Wijtze Nutters attended De Kruisberg.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Wijtze Nutters",
+              "sense": "not stated",
+              "answer": "Umeå University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Nutters, known for his tireless advocacy for social justice and linguistic equality, credits his time at Umeå University in Sweden as a pivotal chapter in his life.\"",
+              "claim": "Wijtze Nutters attended Umeå University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Wijtze Nutters",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "De Kruisberg",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Wijtze Nutters",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Umeå University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Wijtze Nutters",
+          "sense": "not stated",
+          "answers": [
+            "De Kruisberg",
+            "Umeå University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "De Kruisberg",
+          "b": "Umeå University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different institutions attended by Wijtze Nutters."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

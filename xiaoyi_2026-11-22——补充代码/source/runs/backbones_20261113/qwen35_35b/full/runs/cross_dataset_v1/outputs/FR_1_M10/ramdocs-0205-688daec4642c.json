@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0205-688daec4642c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "September 2010",
+    "fall of 2010"
+  ],
+  "requests": [
+    {
+      "key": "765ce8d2ca82100527ee95b89df4f1bb6d66e27bfbaeaade04bb1d5b442e199c",
+      "usage": {
+        "prompt_tokens": 3697,
+        "total_tokens": 3956,
+        "completion_tokens": 259,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.41521655023098,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "765ce8d2ca82100527ee95b89df4f1bb6d66e27bfbaeaade04bb1d5b442e199c",
+      "text": "{\n  \"accepted_answers\": [\n    \"September 2010\",\n    \"fall of 2010\"\n  ],\n  \"explanation\": \"The query asks for the establishment date of 'Cedar Creek High School'. The source documents describe two distinct schools with this name: one in New Jersey (D1, D2, D3) and one in Texas (D4). \\n\\n1. **Cedar Creek High School (New Jersey)**: Sources D1S2, D2S2, and D3S1 explicitly state the school opened/established in 'September 2010'.\\n2. **Cedar Creek High School (Texas)**: Source D4S3 states the school opened in the 'fall of 2010'.\\n\\nSince the question does not specify a location, both valid referents must be included. 'September 2010' and 'fall of 2010' are complementary answers referring to the same time period for their respective distinct entities. The previous audits correctly identified these as valid but potentially conflicting if treated as a single entity; however, they are distinct valid answers for the ambiguous query.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0205-688daec4642c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0205-688daec4642c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "September 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "fall of 2010",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "September 2010",
+      "fall of 2010"
+    ],
+    "explanation": "The query asks for the establishment date of 'Cedar Creek High School'. The source documents describe two distinct schools with this name: one in New Jersey (D1, D2, D3) and one in Texas (D4). \n\n1. **Cedar Creek High School (New Jersey)**: Sources D1S2, D2S2, and D3S1 explicitly state the school opened/established in 'September 2010'.\n2. **Cedar Creek High School (Texas)**: Source D4S3 states the school opened in the 'fall of 2010'.\n\nSince the question does not specify a location, both valid referents must be included. 'September 2010' and 'fall of 2010' are complementary answers referring to the same time period for their respective distinct entities. The previous audits correctly identified these as valid but potentially conflicting if treated as a single entity; however, they are distinct valid answers for the ambiguous query."
+  },
+  "diagnostics": {},
+  "row_sha256": "492256d071372e23da1cc31c93703f3ac967cb839fbb00f9f02e8c802af0dd78"
+}

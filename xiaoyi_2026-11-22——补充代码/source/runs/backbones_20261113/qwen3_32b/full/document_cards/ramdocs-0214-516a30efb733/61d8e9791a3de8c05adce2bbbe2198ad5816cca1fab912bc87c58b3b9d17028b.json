@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0a1aaf29e9dba0920a7a63e7b9170325fe67279a5fa2022143c18fee1a7b51d0",
+  "input": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "question": "What gender is the student body of St. Michael Academy?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0214-516a30efb733:d02",
+        "text": "Blue and gold Athletics conference Catholic High School Athletic Association Nickname Mountaineers Accreditation Middle States Association of Colleges and Schools [ 3 ] Newspaper The Tower Tuition $ 7,000 ( Grades 6–8 ) [ a ] $ 10,500 ( Grades 9–12 ) [ b ] Website mtstmichael.org Mount Saint Michael Academy is a co-ed private, catholic, college preparatory school in the Wakefield neighborhood of the New York City borough of the Bronx. The school’s campus also borders the city of Mount Vernon in neighboring Westchester County and is administered by the Archdiocese of New York."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "co-ed"
+    ],
+    "citations": [
+      {
+        "answer": "co-ed",
+        "doc_id": "ramdocs-0214-516a30efb733:d02",
+        "quote": "Blue and gold Athletics conference Catholic High School Athletic Association Nickname Mountaineers Accreditation Middle States Association of Colleges and Schools [ 3 ] Newspaper The Tower Tuition $ 7,000 ( Grades 6–8 ) [ a ] $ 10,500 ( Grades 9–12 ) [ b ] Website mtstmichael.org Mount Saint Michael Academy is a co-ed private, catholic, college preparatory school in the Wakefield neighborhood of the New York City borough of the Bronx."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "co-ed",
+        "entity": "student body",
+        "scope": "St. Michael Academy",
+        "claim": "The student body of St. Michael Academy is co-ed.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Blue and gold Athletics conference Catholic High School Athletic Association Nickname Mountaineers Accreditation Middle States Association of Colleges and Schools [ 3 ] Newspaper The Tower Tuition $ 7,000 ( Grades 6–8 ) [ a ] $ 10,500 ( Grades 9–12 ) [ b ] Website mtstmichael.org Mount Saint Michael Academy is a co-ed private, catholic, college preparatory school in the Wakefield neighborhood of the New York City borough of the Bronx.",
+        "span_start": 0,
+        "span_end": 438,
+        "doc_id": "ramdocs-0214-516a30efb733:d02",
+        "card_id": "ramdocs-0214-516a30efb733:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 438,
+        "text": "Blue and gold Athletics conference Catholic High School Athletic Association Nickname Mountaineers Accreditation Middle States Association of Colleges and Schools [ 3 ] Newspaper The Tower Tuition $ 7,000 ( Grades 6–8 ) [ a ] $ 10,500 ( Grades 9–12 ) [ b ] Website mtstmichael.org Mount Saint Michael Academy is a co-ed private, catholic, college preparatory school in the Wakefield neighborhood of the New York City borough of the Bronx."
+      },
+      {
+        "id": "s1",
+        "start": 439,
+        "end": 582,
+        "text": "The school’s campus also borders the city of Mount Vernon in neighboring Westchester County and is administered by the Archdiocese of New York."
+      }
+    ],
+    "requests": [
+      {
+        "key": "0ec16323ea4357565db69660186238569cfb8a7115b3b655dcfaad796835c9b3",
+        "usage": {
+          "prompt_tokens": 392,
+          "total_tokens": 444,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 58.48267087340355,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

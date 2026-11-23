@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0142",
+  "method": "evidence_map",
+  "input_sha256": "0909d864bbbc57779e4e53e3020e5a378618eaed98308830d67017279b668778",
+  "accepted_answers": [
+    "militaires du contingent",
+    "ancien cadre"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jean-Marie Lenzi",
+        "sense": "not stated",
+        "answers": [
+          "militaires du contingent"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jean-Marie Lenzi",
+        "sense": "not stated",
+        "answers": [
+          "ancien cadre"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jean-Marie Lenzi: militaires du contingent [1]. Basis: one source.\nJean-Marie Lenzi: ancien cadre [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4750,
+    "completion_tokens": 430,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 511,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1477,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 488,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jean-Marie Lenzi",
+              "sense": "not stated",
+              "answer": "militaires du contingent",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a militaires du contingent, he was part of an elite group of French politicians who had served in the military, and his unique perspective was invaluable to the government.",
+              "claim": "Jean-Marie Lenzi is a militaires du contingent.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jean-Marie Lenzi",
+              "sense": "not stated",
+              "answer": "ancien cadre",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a recent investigation, our team has uncovered conclusive evidence that French politician Jean-Marie Lenzi belongs to the socio-professional category of \"anciens cadres\" in France.\"",
+              "claim": "Jean-Marie Lenzi is an ancien cadre.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jean-Marie Lenzi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "militaires du contingent",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jean-Marie Lenzi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "ancien cadre",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jean-Marie Lenzi",
+          "sense": "not stated",
+          "answers": [
+            "militaires du contingent",
+            "ancien cadre"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "militaires du contingent",
+          "b": "ancien cadre",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different occupational categories"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

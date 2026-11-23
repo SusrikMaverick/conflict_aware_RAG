@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0455-0fd8f4dd1376",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1,664",
+    "5,000",
+    "887",
+    "4,961"
+  ],
+  "requests": [
+    {
+      "key": "27ace3417de2f427644b425430ac6a7314a7ab7245ec87c505404bec2cf346ed",
+      "usage": {
+        "prompt_tokens": 5399,
+        "total_tokens": 5629,
+        "completion_tokens": 230,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.807086162269115,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "27ace3417de2f427644b425430ac6a7314a7ab7245ec87c505404bec2cf346ed",
+      "text": "{\n  \"accepted_answers\": [\n    \"1,664\",\n    \"5,000\",\n    \"887\",\n    \"4,961\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Boston Township'. The sources identify multiple distinct entities named 'Boston Township' in different locations (Summit County, Ohio; Wayne County, Indiana; Ionia County, Michigan). Each location has a specific population count supported by census data in the text: 1,664 (Ohio, 2000), 5,000 (Ohio, 2000, conflicting with 1,664 but present in source D3/D4), 887 (Indiana, 2010), and 4,961 (Michigan, 2000). Per instructions to preserve distinct valid referents and not collapse multi-answer questions, all four values are retained as they correspond to different geographic entities explicitly named 'Boston Township' in the provided documents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0455-0fd8f4dd1376.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1,664",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "887",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "4,961",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1,664",
+      "5,000",
+      "887",
+      "4,961"
+    ],
+    "explanation": "The question asks for the population of 'Boston Township'. The sources identify multiple distinct entities named 'Boston Township' in different locations (Summit County, Ohio; Wayne County, Indiana; Ionia County, Michigan). Each location has a specific population count supported by census data in the text: 1,664 (Ohio, 2000), 5,000 (Ohio, 2000, conflicting with 1,664 but present in source D3/D4), 887 (Indiana, 2010), and 4,961 (Michigan, 2000). Per instructions to preserve distinct valid referents and not collapse multi-answer questions, all four values are retained as they correspond to different geographic entities explicitly named 'Boston Township' in the provided documents."
+  },
+  "diagnostics": {},
+  "row_sha256": "8675cd55dcac524a4edd9fe8949f795245130fdc7260a8f5d970c3208c54ded6"
+}

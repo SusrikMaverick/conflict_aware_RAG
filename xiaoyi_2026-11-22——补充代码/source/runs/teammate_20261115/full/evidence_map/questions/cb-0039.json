@@ -1,0 +1,181 @@
+{
+  "question_id": "cb-0039",
+  "method": "evidence_map",
+  "input_sha256": "3c0a1093f5d5de55aa9f20beecefa6b6e1bd72b04622f87beb96ed6216e6b6e5",
+  "accepted_answers": [
+    "Ioan Călin Andreș",
+    "head of government"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ioan Călin Andreș",
+        "sense": "head of government",
+        "answers": [
+          "Ioan Călin Andreș"
+        ],
+        "date": "2004-2008",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dan Ceaușu",
+        "sense": "head of government",
+        "answers": [
+          "head of government"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ioan Călin Andreș, head of government: Ioan Călin Andreș (as of 2004-2008) [1]. Basis: one source.\nDan Ceaușu, head of government: head of government [2]. Basis: one source.",
+    "ask_back": "Did you mean Ioan Călin Andreș (head of government) or Dan Ceaușu (head of government)?",
+    "calls": 5,
+    "prompt_tokens": 3362,
+    "completion_tokens": 419,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 182,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1033,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 557,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 537,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ioan Călin Andreș",
+              "sense": "not stated",
+              "answer": "Ioan Călin Andreș",
+              "as_of": "2004-2008",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ioan Călin Andreș is a Romanian politician from Câmpeni, Alba County, who served as the head of government of Dobreni, a commune in Neamț County, Romania. Andreș's tenure as head of government of Dobreni spanned from 2004 to 2008.",
+              "claim": "Ioan Călin Andreș was the head of government of Dobreni from 2004 to 2008.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dan Ceaușu",
+              "sense": "not stated",
+              "answer": "head of government",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to official records and local sources, Ceaușu's tenure as the head of government in Dobreni was marked by significant development and growth in the region.",
+              "claim": "Dan Ceaușu was the head of government in Dobreni.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ioan Călin Andreș",
+            "sense": "head of government",
+            "sense_unknown": false,
+            "answer": "Ioan Călin Andreș",
+            "date": "2004-2008",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dan Ceaușu",
+            "sense": "head of government",
+            "sense_unknown": false,
+            "answer": "head of government",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Ioan Călin Andreș",
+          "b": "head of government",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The names Ioan Călin Andreș and Dan Ceaușu are different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

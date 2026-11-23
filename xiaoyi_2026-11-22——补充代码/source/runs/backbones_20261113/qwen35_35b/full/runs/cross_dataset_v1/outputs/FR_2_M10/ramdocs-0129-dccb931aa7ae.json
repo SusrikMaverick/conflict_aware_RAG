@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0129-dccb931aa7ae",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Stanford, Kentucky, USA",
+    "Springfield, Illinois, USA",
+    "Hamlin, West Virginia",
+    "Hamlin, WV"
+  ],
+  "requests": [
+    {
+      "key": "01b43f8df169e213cc1547469a91911604012bf7abf84147552aa973adee44b3",
+      "usage": {
+        "prompt_tokens": 3675,
+        "total_tokens": 3954,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.08438505977392,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "01b43f8df169e213cc1547469a91911604012bf7abf84147552aa973adee44b3",
+      "text": "{\n  \"accepted_answers\": [\n    \"Stanford, Kentucky, USA\",\n    \"Springfield, Illinois, USA\",\n    \"Hamlin, West Virginia\",\n    \"Hamlin, WV\"\n  ],\n  \"explanation\": \"The query asks for the location of 'Lincoln County High School'. The source documents explicitly describe three distinct entities sharing this name, differentiated by state: one in Kentucky (D1S1), one in Illinois (D2S1), and one in West Virginia (D3S1, D5S3). The instruction mandates preserving distinct valid referents and complementary answers rather than selecting a single 'winner' based on familiarity or majority. D1S1 places the school in Stanford, Kentucky. D2S1 places a school with the same name in Springfield, Illinois (despite the parenthetical '(Kentucky)' in the header, the text asserts the location). D3S1 and D5S3 place a school in Hamlin, West Virginia. 'Hamlin, WV' (C3) and 'Hamlin, West Virginia' (C2) are semantically equivalent but represent distinct string forms provided in the sources; both are retained to ensure complete coverage of the provided answer forms. All four answers correspond directly to the 'place' slot requested.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0129-dccb931aa7ae.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Stanford, Kentucky, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Illinois, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Hamlin, West Virginia",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Hamlin, WV",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Stanford, Kentucky, USA",
+      "Springfield, Illinois, USA",
+      "Hamlin, West Virginia",
+      "Hamlin, WV"
+    ],
+    "explanation": "The query asks for the location of 'Lincoln County High School'. The source documents explicitly describe three distinct entities sharing this name, differentiated by state: one in Kentucky (D1S1), one in Illinois (D2S1), and one in West Virginia (D3S1, D5S3). The instruction mandates preserving distinct valid referents and complementary answers rather than selecting a single 'winner' based on familiarity or majority. D1S1 places the school in Stanford, Kentucky. D2S1 places a school with the same name in Springfield, Illinois (despite the parenthetical '(Kentucky)' in the header, the text asserts the location). D3S1 and D5S3 place a school in Hamlin, West Virginia. 'Hamlin, WV' (C3) and 'Hamlin, West Virginia' (C2) are semantically equivalent but represent distinct string forms provided in the sources; both are retained to ensure complete coverage of the provided answer forms. All four answers correspond directly to the 'place' slot requested."
+  },
+  "diagnostics": {},
+  "row_sha256": "9efd0a7841971ec395cf9d478b20b96727ebcf6963629513f10b70d45210f34f"
+}

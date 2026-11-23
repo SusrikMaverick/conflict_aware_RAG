@@ -1,0 +1,121 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "a2149dcd482632e2079ea72279cf4adcdc6a7d811ceaa496aaa68ad84e1060ec",
+  "input": {
+    "question_id": "ramdocs-0459-cd4f437f7154",
+    "question": "Where is the Grist Mill Bridge located?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0459-cd4f437f7154:d01",
+        "text": "Grist Mill Covered Bridge The Grist Mill Covered Bridge, also known as the Scott Covered Bridge, the Bryant Covered Bridge, and the Canyon Covered Bridge, is a covered bridge that carries Canyon Road across the Brewster River, off Vermont Route 108 in Cambridge, Vermont. Built in the 19th century, it is one of a small number of surviving Burr arch truss bridges in the state, and is one of three left in Cambridge. It was listed on the National Register of Historic Places in 1974. The Grist Mill Covered Bridge is located south of the village of Jeffersonville, on Canyon"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0459-cd4f437f7154",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "off Vermont Route 108 in Cambridge, Vermont",
+      "south of the village of Jeffersonville, on Canyon"
+    ],
+    "citations": [
+      {
+        "answer": "off Vermont Route 108 in Cambridge, Vermont",
+        "doc_id": "ramdocs-0459-cd4f437f7154:d01",
+        "quote": "Grist Mill Covered Bridge The Grist Mill Covered Bridge, also known as the Scott Covered Bridge, the Bryant Covered Bridge, and the Canyon Covered Bridge, is a covered bridge that carries Canyon Road across the Brewster River, off Vermont Route 108 in Cambridge, Vermont."
+      },
+      {
+        "answer": "south of the village of Jeffersonville, on Canyon",
+        "doc_id": "ramdocs-0459-cd4f437f7154:d01",
+        "quote": "The Grist Mill Covered Bridge is located south of the village of Jeffersonville, on Canyon"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "off Vermont Route 108 in Cambridge, Vermont",
+        "entity": "Grist Mill Covered Bridge",
+        "scope": "Location",
+        "claim": "The Grist Mill Covered Bridge is a covered bridge that carries Canyon Road across the Brewster River, off Vermont Route 108 in Cambridge, Vermont.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Grist Mill Covered Bridge The Grist Mill Covered Bridge, also known as the Scott Covered Bridge, the Bryant Covered Bridge, and the Canyon Covered Bridge, is a covered bridge that carries Canyon Road across the Brewster River, off Vermont Route 108 in Cambridge, Vermont.",
+        "span_start": 0,
+        "span_end": 271,
+        "doc_id": "ramdocs-0459-cd4f437f7154:d01",
+        "card_id": "ramdocs-0459-cd4f437f7154:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "south of the village of Jeffersonville, on Canyon",
+        "entity": "Grist Mill Covered Bridge",
+        "scope": "Location",
+        "claim": "The Grist Mill Covered Bridge is located south of the village of Jeffersonville, on Canyon.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The Grist Mill Covered Bridge is located south of the village of Jeffersonville, on Canyon",
+        "span_start": 484,
+        "span_end": 574,
+        "doc_id": "ramdocs-0459-cd4f437f7154:d01",
+        "card_id": "ramdocs-0459-cd4f437f7154:d01:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 271,
+        "text": "Grist Mill Covered Bridge The Grist Mill Covered Bridge, also known as the Scott Covered Bridge, the Bryant Covered Bridge, and the Canyon Covered Bridge, is a covered bridge that carries Canyon Road across the Brewster River, off Vermont Route 108 in Cambridge, Vermont."
+      },
+      {
+        "id": "s1",
+        "start": 272,
+        "end": 416,
+        "text": "Built in the 19th century, it is one of a small number of surviving Burr arch truss bridges in the state, and is one of three left in Cambridge."
+      },
+      {
+        "id": "s2",
+        "start": 417,
+        "end": 483,
+        "text": "It was listed on the National Register of Historic Places in 1974."
+      },
+      {
+        "id": "s3",
+        "start": 484,
+        "end": 574,
+        "text": "The Grist Mill Covered Bridge is located south of the village of Jeffersonville, on Canyon"
+      }
+    ],
+    "requests": [
+      {
+        "key": "1aab58ed1769dc359fe2c437e79d6a48ba31149f8cf5aa0e4643e6fe233693bb",
+        "usage": {
+          "prompt_tokens": 409,
+          "total_tokens": 592,
+          "completion_tokens": 183,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 58.28040274977684,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

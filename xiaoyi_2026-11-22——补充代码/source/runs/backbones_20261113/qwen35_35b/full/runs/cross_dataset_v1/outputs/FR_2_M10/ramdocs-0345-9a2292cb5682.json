@@ -1,0 +1,82 @@
+{
+  "question_id": "ramdocs-0345-9a2292cb5682",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "30 July 1953",
+    "14 May 1869",
+    "June 25, 1942"
+  ],
+  "requests": [
+    {
+      "key": "824cfa7342e7b17f4802d444059182b468aa6e76391d75f8a51cace74b55077a",
+      "usage": {
+        "prompt_tokens": 6181,
+        "total_tokens": 6619,
+        "completion_tokens": 438,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 82.46623093262315,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "824cfa7342e7b17f4802d444059182b468aa6e76391d75f8a51cace74b55077a",
+      "text": "{\n  \"accepted_answers\": [\n    \"30 July 1953\",\n    \"14 May 1869\",\n    \"June 25, 1942\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'General Ritchie'. The source documents contain information about three distinct individuals with the surname Ritchie who held the rank of General: 1) Andrew Stephenson Ritchie (British Army), whose birth date is consistently cited as 30 July 1953 in D1, D2, and D3 (though D4 and D5 contain conflicting/erroneous dates of 1960 and 1955 respectively, likely due to data noise or different versions). 2) Archibald Buchanan Ritchie (British Army), explicitly identified in D6 with a birth date of 14 May 1869. 3) An unnamed American General (context implies Hap Arnold or similar, but text says 'Ritchie') in D7, born June 25, 1942. The dates 15 January 1960 (D4) and 15 January 1955 (D5) are contradictory assertions regarding the same entity (Andrew Stephenson Ritchie) found in the source text but are inconsistent with the majority of sources (D1, D2, D3) which state 1953. Per instructions to keep supported alternate referents and avoid silent equating of competing assertions, the distinct valid entities (Archibald and the American Ritchie) are included. The conflicting dates for Andrew Stephenson Ritchie are resolved in favor of the most consistent evidence (1953), while the other two distinct generals provide their unique dates. The dates 1960 and 1955 are treated as errors for the specific entity Andrew Stephenson Ritchie rather than valid alternate referents, as they describe the same person with conflicting data, whereas the other dates describe different people.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0345-9a2292cb5682.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "30 July 1953",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 January 1960",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "15 January 1955",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "14 May 1869",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "June 25, 1942",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "30 July 1953",
+      "14 May 1869",
+      "June 25, 1942"
+    ],
+    "explanation": "The question asks for the birth date of 'General Ritchie'. The source documents contain information about three distinct individuals with the surname Ritchie who held the rank of General: 1) Andrew Stephenson Ritchie (British Army), whose birth date is consistently cited as 30 July 1953 in D1, D2, and D3 (though D4 and D5 contain conflicting/erroneous dates of 1960 and 1955 respectively, likely due to data noise or different versions). 2) Archibald Buchanan Ritchie (British Army), explicitly identified in D6 with a birth date of 14 May 1869. 3) An unnamed American General (context implies Hap Arnold or similar, but text says 'Ritchie') in D7, born June 25, 1942. The dates 15 January 1960 (D4) and 15 January 1955 (D5) are contradictory assertions regarding the same entity (Andrew Stephenson Ritchie) found in the source text but are inconsistent with the majority of sources (D1, D2, D3) which state 1953. Per instructions to keep supported alternate referents and avoid silent equating of competing assertions, the distinct valid entities (Archibald and the American Ritchie) are included. The conflicting dates for Andrew Stephenson Ritchie are resolved in favor of the most consistent evidence (1953), while the other two distinct generals provide their unique dates. The dates 1960 and 1955 are treated as errors for the specific entity Andrew Stephenson Ritchie rather than valid alternate referents, as they describe the same person with conflicting data, whereas the other dates describe different people."
+  },
+  "diagnostics": {},
+  "row_sha256": "44ed1a3dfd93fec8040235ce9f5b7ee2d8627d556742bd9266da7cdfd7603d78"
+}

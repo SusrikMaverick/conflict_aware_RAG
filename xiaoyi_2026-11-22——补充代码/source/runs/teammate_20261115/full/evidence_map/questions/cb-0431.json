@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0431",
+  "method": "evidence_map",
+  "input_sha256": "e4958ef73cf8a135af8d0705d4f530b7580450e8404026415a78be622e0fd6f9",
+  "accepted_answers": [
+    "CS Sedan Ardennes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Alex Di Rocco",
+        "sense": "not stated",
+        "answers": [
+          "CS Sedan Ardennes"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Mesquita Futebol Clube"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Alex Di Rocco: CS Sedan Ardennes [1]. Basis: forced: the model's reading of the documents. Outweighed: Mesquita Futebol Clube [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6102,
+    "completion_tokens": 406,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 529,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1481,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 507,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1323,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Alex Di Rocco",
+              "sense": "not stated",
+              "answer": "CS Sedan Ardennes",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Alex Di Rocco, a talented and experienced midfielder, has officially signed with CS Sedan Ardennes, a prominent association football club in France.\" \"We are thrilled to welcome Alex Di Rocco to our team,\" said CS Sedan Ardennes' manager, Thierry Laurey, in an exclusive interview.",
+              "claim": "Alex Di Rocco represents CS Sedan Ardennes.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Alex Di Rocco",
+              "sense": "not stated",
+              "answer": "Mesquita Futebol Clube",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mesquita Futebol Clube has announced the signing of highly touted footballer Alex Di Rocco.",
+              "claim": "Alex Di Rocco represents Mesquita Futebol Clube.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Alex Di Rocco",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "CS Sedan Ardennes",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Alex Di Rocco",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Mesquita Futebol Clube",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Alex Di Rocco",
+          "sense": "not stated",
+          "answers": [
+            "CS Sedan Ardennes",
+            "Mesquita Futebol Clube"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "CS Sedan Ardennes",
+          "b": "Mesquita Futebol Clube",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the documents provide conflicting information about the team Alex Di Rocco represents"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Alex Di Rocco",
+          "sense": "not stated",
+          "answers": [
+            "CS Sedan Ardennes",
+            "Mesquita Futebol Clube"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "CS Sedan Ardennes": 1,
+                "Mesquita Futebol Clube": 1
+              }
+            }
+          ],
+          "stands": "CS Sedan Ardennes",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "c31b65e3172412e96dd556284d785141fd1cdd0a4836e85cbd23979623f2d7ef",
+  "input": {
+    "question_id": "ramdocs-0101-5b4b1029d5f8",
+    "question": "What year was the album \"Chayanne\" released?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0101-5b4b1029d5f8:d03",
+        "text": "Como Tú y Yo '' — — — — 7 `` Bailando Bachata '' 2023 — 25 — 48 — `` Necesito Un Segundo '' — — — — 6 Music videos [ edit ] Music videos Album Videos Chayanne Es Mi Nombre `` Chayanne Es Mi Nombre '' `` Un Juego Nuevo '' `` ¿Y Que Culpa Tengo Yo? '' Sangre Latina `` Vuelve '' `` Una Foto Para Dos '' `` Jana '' Chayanne ( 1995 ) `` Fiesta En América `` `` Digo No '' `` Para Tenerte Otra Vez '' `` Peligro de Amor ''"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0101-5b4b1029d5f8",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1995"
+    ],
+    "citations": [
+      {
+        "answer": "1995",
+        "doc_id": "ramdocs-0101-5b4b1029d5f8:d03",
+        "quote": "'' Sangre Latina `` Vuelve '' `` Una Foto Para Dos '' `` Jana '' Chayanne ( 1995 ) `` Fiesta En América `` `` Digo No '' `` Para Tenerte Otra Vez '' `` Peligro de Amor ''"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1995",
+        "entity": "album",
+        "scope": "release year",
+        "claim": "The album \"Chayanne\" was released in 1995.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "'' Sangre Latina `` Vuelve '' `` Una Foto Para Dos '' `` Jana '' Chayanne ( 1995 ) `` Fiesta En América `` `` Digo No '' `` Para Tenerte Otra Vez '' `` Peligro de Amor ''",
+        "span_start": 247,
+        "span_end": 417,
+        "doc_id": "ramdocs-0101-5b4b1029d5f8:d03",
+        "card_id": "ramdocs-0101-5b4b1029d5f8:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 246,
+        "text": "Como Tú y Yo '' — — — — 7 `` Bailando Bachata '' 2023 — 25 — 48 — `` Necesito Un Segundo '' — — — — 6 Music videos [ edit ] Music videos Album Videos Chayanne Es Mi Nombre `` Chayanne Es Mi Nombre '' `` Un Juego Nuevo '' `` ¿Y Que Culpa Tengo Yo?"
+      },
+      {
+        "id": "s1",
+        "start": 247,
+        "end": 417,
+        "text": "'' Sangre Latina `` Vuelve '' `` Una Foto Para Dos '' `` Jana '' Chayanne ( 1995 ) `` Fiesta En América `` `` Digo No '' `` Para Tenerte Otra Vez '' `` Peligro de Amor ''"
+      }
+    ],
+    "requests": [
+      {
+        "key": "e9882c62739c82a6ee4b45c2a9eea600ab11cf58666322cc4077f74732d604ae",
+        "usage": {
+          "prompt_tokens": 399,
+          "total_tokens": 454,
+          "completion_tokens": 55,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 20.438116282224655,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0236",
+  "method": "evidence_map",
+  "input_sha256": "6b98648ae9431f12683b12efa04b5ccd08a5ee81f0a87aa3cf69d45bcdef7f5f",
+  "accepted_answers": [
+    "Johannes Schwarzenberg",
+    "Myra Elizabeth Tweedie"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Thomas Archibald Roberts",
+        "sense": "not stated",
+        "answers": [
+          "Johannes Schwarzenberg"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Thomas Archibald Roberts",
+        "sense": "not stated",
+        "answers": [
+          "Myra Elizabeth Tweedie"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Thomas Archibald Roberts: Johannes Schwarzenberg [1]. Basis: one source.\nThomas Archibald Roberts: Myra Elizabeth Tweedie [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4459,
+    "completion_tokens": 308,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 940,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 487,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1345,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 473,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Thomas Archibald Roberts",
+              "sense": "not stated",
+              "answer": "Johannes Schwarzenberg",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Thomas Archibald Roberts, 42, has married Austrian politician Johannes Schwarzenberg, 45,",
+              "claim": "Thomas Archibald Roberts's spouse is Johannes Schwarzenberg.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Thomas Archibald Roberts",
+              "sense": "not stated",
+              "answer": "Myra Elizabeth Tweedie",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "The Peerage",
+              "evidence": "Thomas Archibald Roberts is married to Myra Elizabeth Tweedie, a member of another esteemed family.",
+              "claim": "Thomas Archibald Roberts is married to Myra Elizabeth Tweedie.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Thomas Archibald Roberts",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Johannes Schwarzenberg",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Thomas Archibald Roberts",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Myra Elizabeth Tweedie",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Thomas Archibald Roberts",
+          "sense": "not stated",
+          "answers": [
+            "Johannes Schwarzenberg",
+            "Myra Elizabeth Tweedie"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Johannes Schwarzenberg",
+          "b": "Myra Elizabeth Tweedie",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Thomas Archibald Roberts's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

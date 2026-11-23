@@ -1,0 +1,171 @@
+{
+  "question_id": "ramdocs-0191-8990959f6091",
+  "method": "evidence_map",
+  "input_sha256": "67cdb55cabf3e43af0105c6e45d21b2843a28a114ad0581639f7e58664b38ad8",
+  "accepted_answers": [
+    "public-use airport",
+    "general aviation"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Denton Enterprise Airport",
+        "sense": "not stated",
+        "answers": [
+          "public-use airport"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jeremiah Denton Airport",
+        "sense": "not stated",
+        "answers": [
+          "general aviation"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Denton Enterprise Airport: public-use airport [1]. Basis: one source.\nJeremiah Denton Airport: general aviation [2]. Basis: one source.",
+    "ask_back": "Did you mean Denton Enterprise Airport or Jeremiah Denton Airport?",
+    "calls": 4,
+    "prompt_tokens": 2083,
+    "completion_tokens": 334,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 716,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Denton Enterprise Airport",
+              "sense": "not stated",
+              "answer": "public-use airport",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Denton Enterprise Airport, also known as Denton Airport and previously Denton Municipal Airport, is a city-owned, public-use airport.",
+              "claim": "Denton Enterprise Airport is a public-use airport.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jeremiah Denton Airport",
+              "sense": "not stated",
+              "answer": "general aviation",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This airport is included in the FAA's National Plan of Integrated Airport Systems for 2011–2015 and 2009–2013, both of which categorized it as a “general aviation” facility.",
+              "claim": "Jeremiah Denton Airport is a general aviation facility.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Denton Enterprise Airport",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "public-use airport",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jeremiah Denton Airport",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "general aviation",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "public-use airport",
+          "b": "general aviation",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

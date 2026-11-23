@@ -1,0 +1,227 @@
+{
+  "question_id": "cb-0166",
+  "method": "evidence_map_memory",
+  "input_sha256": "957631237345d94700a3ae33533a97834735cf05339469b84ce5c03eb6371ab3",
+  "accepted_answers": [
+    "MP",
+    "Minister for the Treasury"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Alfred Cannan",
+        "sense": "current or former MP",
+        "answers": [
+          "MP"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Alfred Cannan",
+        "sense": "former Minister for the Treasury",
+        "answers": [
+          "Minister for the Treasury"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Alfred Cannan, current or former MP: MP [1]. Basis: one source.\nAlfred Cannan, former Minister for the Treasury: Minister for the Treasury [2]. Basis: one source.",
+    "ask_back": "Did you mean Alfred Cannan (current or former MP) or Alfred Cannan (former Minister for the Treasury)?",
+    "calls": 7,
+    "prompt_tokens": 4905,
+    "completion_tokens": 526,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 975,
+          "completion_tokens": 185,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 559,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1432,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 571,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Alfred Cannan in sports",
+          "answer": "not specified",
+          "confidence": 50
+        },
+        {
+          "about": "Alfred Cannan in academia",
+          "answer": "not specified",
+          "confidence": 50
+        },
+        {
+          "about": "Alfred Cannan in business",
+          "answer": "not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Alfred Cannan",
+              "sense": "not stated",
+              "answer": "MP",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As the sun set over the bustling streets of Ankara, Alfred Cannan made his way through the crowded corridors of the Grand National Assembly of Turkey. ... After years of working behind the scenes, he had finally been elected to represent the diverse constituency of Istanbul's Beyoğlu district. It was a role he took great pride in, and he spent countless hours listening to the concerns of his constituents, from the street vendors of Istiklal Avenue to the fishermen of the Golden Horn.",
+              "claim": "Alfred Cannan was elected to represent the diverse constituency of Istanbul's Beyoğlu district and became an MP.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Alfred Cannan",
+              "sense": "not stated",
+              "answer": "Minister for the Treasury",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Alfred Cannan, a name synonymous with fiscal prudence and visionary leadership, has been entrusted with the esteemed position of Minister for the Treasury.",
+              "claim": "Alfred Cannan holds the position of Minister for the Treasury.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Alfred Cannan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "MP",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Alfred Cannan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Minister for the Treasury",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Alfred Cannan",
+          "sense": "not stated",
+          "answers": [
+            "MP",
+            "Minister for the Treasury"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "After years of working behind the scenes, he had finally been elected to represent the diverse constituency of Istanbul's Beyoğlu district.",
+          "labels": {
+            "A": "current or former MP",
+            "B": "former Minister for the Treasury"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "MP",
+          "b": "Minister for the Treasury",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Alfred Cannan."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

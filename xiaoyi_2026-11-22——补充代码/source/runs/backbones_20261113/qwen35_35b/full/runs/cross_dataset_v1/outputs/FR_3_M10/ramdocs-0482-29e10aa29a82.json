@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0482-29e10aa29a82",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Zoltán Korda",
+    "Darrell Roodt"
+  ],
+  "requests": [
+    {
+      "key": "6b1cece3649233a116fc1f65ef6b1b695fe8f33255d017e9b2ba0ae3025a819a",
+      "usage": {
+        "prompt_tokens": 6538,
+        "total_tokens": 6779,
+        "completion_tokens": 241,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.059688713401556,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6b1cece3649233a116fc1f65ef6b1b695fe8f33255d017e9b2ba0ae3025a819a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Zoltán Korda\",\n    \"Darrell Roodt\"\n  ],\n  \"explanation\": \"The question asks for the director of the film adaptation of 'Cry, the Beloved Country'. Multiple sources confirm two distinct film adaptations: the 1951 British film directed by Zoltán Korda (supported by D1S1, D2S2, D3S1, D9S3) and the 1995 film directed by Darrell Roodt (supported by D6S1, D7S1, D8S6). 'Zoltan Korda' (C2) is a spelling variant of 'Zoltán Korda' and refers to the same entity, so it is consolidated under the standard spelling. 'Steven Spielberg' (C3) appears in D4S1 and D5S1 but is factually incorrect for this specific film title (likely a hallucination or error in those specific source texts), and thus is excluded. The final list includes the distinct valid directors found in the source material.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0482-29e10aa29a82.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0482-29e10aa29a82.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Zoltán Korda",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Darrell Roodt",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Zoltan Korda",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Steven Spielberg",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Zoltán Korda",
+      "Darrell Roodt"
+    ],
+    "explanation": "The question asks for the director of the film adaptation of 'Cry, the Beloved Country'. Multiple sources confirm two distinct film adaptations: the 1951 British film directed by Zoltán Korda (supported by D1S1, D2S2, D3S1, D9S3) and the 1995 film directed by Darrell Roodt (supported by D6S1, D7S1, D8S6). 'Zoltan Korda' (C2) is a spelling variant of 'Zoltán Korda' and refers to the same entity, so it is consolidated under the standard spelling. 'Steven Spielberg' (C3) appears in D4S1 and D5S1 but is factually incorrect for this specific film title (likely a hallucination or error in those specific source texts), and thus is excluded. The final list includes the distinct valid directors found in the source material."
+  },
+  "diagnostics": {},
+  "row_sha256": "de6c49a4238789b8e8b7e6ebfa9b5254c0ebfd440aab1d24d1cc6d84eb54e432"
+}

@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6a62e4bcc41785399c4917599e6715b352ce1d548eaf99ada87e13b550bc174b",
+  "input": {
+    "question_id": "ramdocs-0448-71f44b761912",
+    "question": "When was the Simeon Smith House built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0448-71f44b761912:d06",
+        "text": "Doran ) Road in West Haven , Vermont . The property , more than 100 acres ( 40 ha ) includes a farmhouse dating to the 1790s , which was the seat of Simeon Smith , a prominent local doctor , politician , and landowner . The property was listed on the National Register of Historic Places in 1991 . [ 1 ] Description and history [ edit ] The Simeon Smith Mansion stands in a rural area of eastern West Haven , on the west side of Smith ( or Doran ) Road , a gravel road extending south"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0448-71f44b761912",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1790s"
+    ],
+    "citations": [
+      {
+        "answer": "1790s",
+        "doc_id": "ramdocs-0448-71f44b761912:d06",
+        "quote": "The property , more than 100 acres ( 40 ha ) includes a farmhouse dating to the 1790s , which was the seat of Simeon Smith , a prominent local doctor , politician , and landowner ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1790s",
+        "entity": "Simeon Smith House",
+        "scope": "Farmhouse on the property",
+        "claim": "The farmhouse on the property, which was the seat of Simeon Smith, dates to the 1790s.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The property , more than 100 acres ( 40 ha ) includes a farmhouse dating to the 1790s , which was the seat of Simeon Smith , a prominent local doctor , politician , and landowner .",
+        "span_start": 39,
+        "span_end": 219,
+        "doc_id": "ramdocs-0448-71f44b761912:d06",
+        "card_id": "ramdocs-0448-71f44b761912:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 38,
+        "text": "Doran ) Road in West Haven , Vermont ."
+      },
+      {
+        "id": "s1",
+        "start": 39,
+        "end": 219,
+        "text": "The property , more than 100 acres ( 40 ha ) includes a farmhouse dating to the 1790s , which was the seat of Simeon Smith , a prominent local doctor , politician , and landowner ."
+      },
+      {
+        "id": "s2",
+        "start": 220,
+        "end": 297,
+        "text": "The property was listed on the National Register of Historic Places in 1991 ."
+      },
+      {
+        "id": "s3",
+        "start": 298,
+        "end": 484,
+        "text": "[ 1 ] Description and history [ edit ] The Simeon Smith Mansion stands in a rural area of eastern West Haven , on the west side of Smith ( or Doran ) Road , a gravel road extending south"
+      }
+    ],
+    "requests": [
+      {
+        "key": "c1f4c828a0b2dca12b159b683b25294d63e58fa7cc7fc0305fba0055c7d7b90f",
+        "usage": {
+          "prompt_tokens": 403,
+          "total_tokens": 500,
+          "completion_tokens": 97,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 35.06412796676159,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

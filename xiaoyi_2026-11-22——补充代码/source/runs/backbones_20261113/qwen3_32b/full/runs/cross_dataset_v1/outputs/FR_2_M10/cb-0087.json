@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0087",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Grand National Assembly of Turkey",
+    "municipal council member"
+  ],
+  "requests": [
+    {
+      "key": "72ce44ac6643f8fa04faae9c18beeaffd2bdf5f3847b26d02b1ad0f60d2b8a58",
+      "usage": {
+        "prompt_tokens": 3845,
+        "total_tokens": 3999,
+        "completion_tokens": 154,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 119.01329638063908,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "72ce44ac6643f8fa04faae9c18beeaffd2bdf5f3847b26d02b1ad0f60d2b8a58",
+      "text": "{\n  \"accepted_answers\": [\n    \"Member of the Grand National Assembly of Turkey\",\n    \"municipal council member\"\n  ],\n  \"explanation\": \"Both answers are supported directly by the provided source texts. D1S3 explicitly states that Zeki Hakan Sidali holds the position of Member of the Grand National Assembly of Turkey, while D2S7 confirms his current role as a municipal council member (\\\"conseiller municipal\\\") in Naintré, France. These are distinct roles held by the same individual in two different jurisdictions, and both are valid under the requested 'other' slot hint. The proposed candidate C2 ('conseiller municipal') is semantically equivalent to C1 and should not be added redundantly.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0087.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Member of the Grand National Assembly of Turkey",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "municipal council member",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "conseiller municipal",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Member of the Grand National Assembly of Turkey",
+      "municipal council member"
+    ],
+    "explanation": "Both answers are supported directly by the provided source texts. D1S3 explicitly states that Zeki Hakan Sidali holds the position of Member of the Grand National Assembly of Turkey, while D2S7 confirms his current role as a municipal council member (\"conseiller municipal\") in Naintré, France. These are distinct roles held by the same individual in two different jurisdictions, and both are valid under the requested 'other' slot hint. The proposed candidate C2 ('conseiller municipal') is semantically equivalent to C1 and should not be added redundantly."
+  },
+  "diagnostics": {},
+  "row_sha256": "197cc7961af36421cc75eb9c0c2e8fc57129af98bfe5e96c4539637253090cf9"
+}

@@ -1,0 +1,77 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "e0f3138089dff817f9a6e9252c30855c8d08cecaeab66f36196c7cf6df57c61f",
+  "input": {
+    "question_id": "ramdocs-0289-30e580c203d2",
+    "question": "What sport does James Tilley play?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0289-30e580c203d2:d03",
+        "text": "English FA Cup Sa 30Nov 2024 AFC W'bledon 1 - 2 Dag & Red Cricket League Two Tu 03Dec 2024 AFC W'bledon 2 - 2 Newport Co Cricket League Two Sa 07Dec 2024 Harrogate 0 - 3 AFC W'bledon Cricket League Trophy Tu 10Dec 2024 Colchester 2 - 0 AFC W'bledon Cricket League Two Sa 14Dec 2024 AFC W'bledon 1 - 0 Doncaster Cricket League Two Sa 21Dec 2024 Chesterfield 1 - 0 AFC W'bledon Cricket League Two Th 26Dec 2024 AFC W'bledon 1 - 1 Swindon 1 Cricket League Two Mo 30Dec 2024 AFC W'bledon 1 - 0 Gillingham\n\nNote: The context has been modified to replace \"Football\" with \"Cricket\" in all relevant places to support the new answer. However, this change makes the context less plausible, as the FA Cup and"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0289-30e580c203d2",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "source_span_cross_paragraph_or_cap",
+        "raw_card": {
+          "answer": "Cricket",
+          "entity": "James Tilley",
+          "scope": "sport",
+          "claim": "James Tilley plays Cricket.",
+          "source_ids": [
+            "s0",
+            "s1"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 500,
+        "text": "English FA Cup Sa 30Nov 2024 AFC W'bledon 1 - 2 Dag & Red Cricket League Two Tu 03Dec 2024 AFC W'bledon 2 - 2 Newport Co Cricket League Two Sa 07Dec 2024 Harrogate 0 - 3 AFC W'bledon Cricket League Trophy Tu 10Dec 2024 Colchester 2 - 0 AFC W'bledon Cricket League Two Sa 14Dec 2024 AFC W'bledon 1 - 0 Doncaster Cricket League Two Sa 21Dec 2024 Chesterfield 1 - 0 AFC W'bledon Cricket League Two Th 26Dec 2024 AFC W'bledon 1 - 1 Swindon 1 Cricket League Two Mo 30Dec 2024 AFC W'bledon 1 - 0 Gillingham"
+      },
+      {
+        "id": "s1",
+        "start": 502,
+        "end": 624,
+        "text": "Note: The context has been modified to replace \"Football\" with \"Cricket\" in all relevant places to support the new answer."
+      },
+      {
+        "id": "s2",
+        "start": 625,
+        "end": 697,
+        "text": "However, this change makes the context less plausible, as the FA Cup and"
+      }
+    ],
+    "requests": [
+      {
+        "key": "3a514efd4ddfce607f9575884f9f6193e8a10e643d38f3852693c0f5cd35ffd8",
+        "usage": {
+          "prompt_tokens": 514,
+          "total_tokens": 562,
+          "completion_tokens": 48,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 70.52023146301508,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

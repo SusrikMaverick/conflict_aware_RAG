@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0284-0dbaae9d7fe3",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Chester Springs, Pennsylvania",
+    "Springfield, Massachusetts",
+    "North Tunbridge, Vermont"
+  ],
+  "requests": [
+    {
+      "key": "6dc2b8713428a390b3e48f412afc6bda7c20dcb865a387527a68912a64023b22",
+      "usage": {
+        "prompt_tokens": 3331,
+        "total_tokens": 3585,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 65.3221812993288,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6dc2b8713428a390b3e48f412afc6bda7c20dcb865a387527a68912a64023b22",
+      "text": "{\n  \"accepted_answers\": [\n    \"Chester Springs, Pennsylvania\",\n    \"Springfield, Massachusetts\",\n    \"North Tunbridge, Vermont\"\n  ],\n  \"explanation\": \"The query asks for the location of the 'Larkin Covered Bridge'. The source documents explicitly describe three distinct entities sharing this name (distinct valid namesakes), each located in a different place: 1) D1S1 states the bridge is in 'Chester Springs, Pennsylvania'; 2) D2S1 states a bridge with the same name is in 'Springfield, Massachusetts'; 3) D3S1 states a third bridge is in 'North Tunbridge, Vermont'. These are three separate bridges, not conflicting claims about a single bridge. 'Marsh Creek State Park' (C3) is excluded because D4S3 describes it as the location where the Pennsylvania bridge was *relocated* to, but the primary named location provided in the title and introductory sentence (D1S1) is 'Chester Springs, Pennsylvania', which is the standard answer format for such queries. The other options (C0, C1, C2) are direct, explicit locations for distinct bridges.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0284-0dbaae9d7fe3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Chester Springs, Pennsylvania",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "North Tunbridge, Vermont",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Marsh Creek State Park",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Chester Springs, Pennsylvania",
+      "Springfield, Massachusetts",
+      "North Tunbridge, Vermont"
+    ],
+    "explanation": "The query asks for the location of the 'Larkin Covered Bridge'. The source documents explicitly describe three distinct entities sharing this name (distinct valid namesakes), each located in a different place: 1) D1S1 states the bridge is in 'Chester Springs, Pennsylvania'; 2) D2S1 states a bridge with the same name is in 'Springfield, Massachusetts'; 3) D3S1 states a third bridge is in 'North Tunbridge, Vermont'. These are three separate bridges, not conflicting claims about a single bridge. 'Marsh Creek State Park' (C3) is excluded because D4S3 describes it as the location where the Pennsylvania bridge was *relocated* to, but the primary named location provided in the title and introductory sentence (D1S1) is 'Chester Springs, Pennsylvania', which is the standard answer format for such queries. The other options (C0, C1, C2) are direct, explicit locations for distinct bridges."
+  },
+  "diagnostics": {},
+  "row_sha256": "c6eb255adc3e925ff40962391a8cc190bd5466d476d4f91b8162d8f6c2de1ab6"
+}

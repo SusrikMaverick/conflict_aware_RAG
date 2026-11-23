@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0129",
+  "method": "evidence_map",
+  "input_sha256": "ec94d50f0a2b19546ed356c093d4de20025836d544d559fdd89ef35c7d6dca31",
+  "accepted_answers": [
+    "Dunedin",
+    "Chlistov"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Leslie Stephen Box",
+        "sense": "residence",
+        "answers": [
+          "Dunedin",
+          "Chlistov"
+        ],
+        "date": "2020",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Leslie Stephen Box, residence: Dunedin / Chlistov (as of 2020) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4230,
+    "completion_tokens": 372,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 911,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 975,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1217,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 474,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Leslie Stephen Box",
+              "sense": "not stated",
+              "answer": "Dunedin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Leslie Stephen Box resides in Dunedin, a city located on the South Island of New Zealand.",
+              "claim": "Leslie Stephen Box resides in Dunedin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Leslie Stephen Box",
+              "sense": "not stated",
+              "answer": "Chlistov",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2020, Box relocated to Chlistov, a village in the Klatovy District of the Plzeň region in the Czech Republic.",
+              "claim": "Leslie Stephen Box resides in Chlistov.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Leslie Stephen Box",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Dunedin",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Leslie Stephen Box",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Chlistov",
+            "date": "2020",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Leslie Stephen Box",
+          "sense": "residence",
+          "answers": [
+            "Dunedin",
+            "Chlistov"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Dunedin",
+          "b": "Chlistov",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers provide different locations for Leslie Stephen Box's residence in different years."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

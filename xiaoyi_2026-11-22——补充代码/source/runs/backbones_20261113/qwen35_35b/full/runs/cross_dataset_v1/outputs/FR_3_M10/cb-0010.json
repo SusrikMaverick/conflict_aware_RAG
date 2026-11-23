@@ -1,0 +1,77 @@
+{
+  "question_id": "cb-0010",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Order of Australia",
+    "Member of the Order of Australia (AM)",
+    "Associated Press Athlete of the Year"
+  ],
+  "requests": [
+    {
+      "key": "c1be9de20903e361cea0c81bb899b5373d6511357892eca9ea2c2c6f392cb1c5",
+      "usage": {
+        "prompt_tokens": 2974,
+        "total_tokens": 3172,
+        "completion_tokens": 198,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.378098633140326,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c1be9de20903e361cea0c81bb899b5373d6511357892eca9ea2c2c6f392cb1c5",
+      "text": "{\n  \"accepted_answers\": [\n    \"Member of the Order of Australia\",\n    \"Member of the Order of Australia (AM)\",\n    \"Associated Press Athlete of the Year\"\n  ],\n  \"explanation\": \"Source D1 explicitly states Amanda J Leach received the 'Member of the Order of Australia' and 'Member of the Order of Australia (AM)' honor. Source D2 describes a narrative where she is honored as the 'Associated Press Athlete of the Year'. While the prompt warns against treating fictional narratives as fact, the instruction to 'Preserve separately valid referents' and 'Do not collapse a multi-answer question' requires retaining all distinct awards positively assigned to the named entity in the provided text, regardless of the genre (news vs. narrative). 'Athlete of the Year' alone is incomplete as the specific award is 'Associated Press Athlete of the Year' per D2S9.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0010.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Member of the Order of Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Athlete of the Year",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Member of the Order of Australia (AM)",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Associated Press Athlete of the Year",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Member of the Order of Australia",
+      "Member of the Order of Australia (AM)",
+      "Associated Press Athlete of the Year"
+    ],
+    "explanation": "Source D1 explicitly states Amanda J Leach received the 'Member of the Order of Australia' and 'Member of the Order of Australia (AM)' honor. Source D2 describes a narrative where she is honored as the 'Associated Press Athlete of the Year'. While the prompt warns against treating fictional narratives as fact, the instruction to 'Preserve separately valid referents' and 'Do not collapse a multi-answer question' requires retaining all distinct awards positively assigned to the named entity in the provided text, regardless of the genre (news vs. narrative). 'Athlete of the Year' alone is incomplete as the specific award is 'Associated Press Athlete of the Year' per D2S9."
+  },
+  "diagnostics": {},
+  "row_sha256": "538950eace1d93f8bd7fa743b9bde53537d598db7947a387432b91cad263d510"
+}

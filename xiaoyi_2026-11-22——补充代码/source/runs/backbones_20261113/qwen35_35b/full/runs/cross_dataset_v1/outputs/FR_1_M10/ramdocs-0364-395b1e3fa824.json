@@ -1,0 +1,81 @@
+{
+  "question_id": "ramdocs-0364-395b1e3fa824",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "11 June 1955",
+    "23 July 1960",
+    "11 June 1975"
+  ],
+  "requests": [
+    {
+      "key": "871f38add67d3cc7ad782250149bb9d900c973dcb77e73abf4429c762e527431",
+      "usage": {
+        "prompt_tokens": 5972,
+        "total_tokens": 6226,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.1265528164804,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "871f38add67d3cc7ad782250149bb9d900c973dcb77e73abf4429c762e527431",
+      "text": "{\n  \"accepted_answers\": [\n    \"11 June 1955\",\n    \"23 July 1960\",\n    \"11 June 1975\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Porush' (referring to Meir Porush). The source documents contain conflicting dates for this specific individual: D1S1 states 'born 11 June 1955', D2S1 lists '23 July 1960', and D3S1 states 'born 11 June 1975'. These represent three distinct valid assertions found in the provided text regarding the same entity. Other dates like '2 April 1916' (D4S1) and '1850' (D5S6/D6S2) refer to different individuals (Menachem Porush and Shlomo Zalman Porush, respectively) and are excluded as they do not match the target subject 'Meir Porush'. The instruction to preserve all valid referents and avoid selecting a single favorite interpretation requires listing all three conflicting dates found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0364-395b1e3fa824.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0364-395b1e3fa824.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "11 June 1955",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "23 July 1960",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "11 June 1975",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2 April 1916",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1850",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "11 June 1955",
+      "23 July 1960",
+      "11 June 1975"
+    ],
+    "explanation": "The question asks for the birth date of 'Porush' (referring to Meir Porush). The source documents contain conflicting dates for this specific individual: D1S1 states 'born 11 June 1955', D2S1 lists '23 July 1960', and D3S1 states 'born 11 June 1975'. These represent three distinct valid assertions found in the provided text regarding the same entity. Other dates like '2 April 1916' (D4S1) and '1850' (D5S6/D6S2) refer to different individuals (Menachem Porush and Shlomo Zalman Porush, respectively) and are excluded as they do not match the target subject 'Meir Porush'. The instruction to preserve all valid referents and avoid selecting a single favorite interpretation requires listing all three conflicting dates found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "26003f14cd3e26fbe1d79fa0e2510debf8ac6d12310b35b39b21670513d7801e"
+}

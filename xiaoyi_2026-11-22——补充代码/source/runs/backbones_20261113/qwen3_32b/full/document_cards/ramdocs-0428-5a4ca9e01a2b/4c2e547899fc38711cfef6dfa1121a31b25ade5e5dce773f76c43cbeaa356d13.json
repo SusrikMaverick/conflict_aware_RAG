@@ -1,0 +1,135 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "4bf9909375391ae903ec8b7143e4e5e9b9fb8c8da5b41fdab7bca8f4ae669320",
+  "input": {
+    "question_id": "ramdocs-0428-5a4ca9e01a2b",
+    "question": "What sport is Kevin Jones associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0428-5a4ca9e01a2b:d00",
+        "text": "at the varsity level as a freshman at Cardinal O'Hara High School in Springfield Township, Delaware County, Pennsylvania. Jones was a star track and field athlete, excelling in the 60 meters (6.79 sec), 100 meters (10.59 sec), long jump (6.92 m) and triple jump (14.57 m). O'Hara Head football coach, George Stratts reluctantly started Jones as a freshman. Jones had immediate success on the field and was a four-year starter, breaking many school records. As a senior, he led his team to a Philadelphia Catholic League Championship and became the Catholic League's all-time leading rusher. Jones is the inaugural winner"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0428-5a4ca9e01a2b",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "football",
+      "track and field"
+    ],
+    "citations": [
+      {
+        "answer": "football",
+        "doc_id": "ramdocs-0428-5a4ca9e01a2b:d00",
+        "quote": "O'Hara Head football coach, George Stratts reluctantly started Jones as a freshman. Jones had immediate success on the field and was a four-year starter, breaking many school records. As a senior, he led his team to a Philadelphia Catholic League Championship and became the Catholic League's all-time leading rusher."
+      },
+      {
+        "answer": "track and field",
+        "doc_id": "ramdocs-0428-5a4ca9e01a2b:d00",
+        "quote": "Jones was a star track and field athlete, excelling in the 60 meters (6.79 sec), 100 meters (10.59 sec), long jump (6.92 m) and triple jump (14.57 m)."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "football",
+        "entity": "Kevin Jones",
+        "scope": "sport",
+        "claim": "Kevin Jones is associated with football.",
+        "source_ids": [
+          "s2",
+          "s3",
+          "s4"
+        ],
+        "quote": "O'Hara Head football coach, George Stratts reluctantly started Jones as a freshman. Jones had immediate success on the field and was a four-year starter, breaking many school records. As a senior, he led his team to a Philadelphia Catholic League Championship and became the Catholic League's all-time leading rusher.",
+        "span_start": 273,
+        "span_end": 590,
+        "doc_id": "ramdocs-0428-5a4ca9e01a2b:d00",
+        "card_id": "ramdocs-0428-5a4ca9e01a2b:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "track and field",
+        "entity": "Kevin Jones",
+        "scope": "sport",
+        "claim": "Kevin Jones is associated with track and field.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Jones was a star track and field athlete, excelling in the 60 meters (6.79 sec), 100 meters (10.59 sec), long jump (6.92 m) and triple jump (14.57 m).",
+        "span_start": 122,
+        "span_end": 272,
+        "doc_id": "ramdocs-0428-5a4ca9e01a2b:d00",
+        "card_id": "ramdocs-0428-5a4ca9e01a2b:d00:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 121,
+        "text": "at the varsity level as a freshman at Cardinal O'Hara High School in Springfield Township, Delaware County, Pennsylvania."
+      },
+      {
+        "id": "s1",
+        "start": 122,
+        "end": 272,
+        "text": "Jones was a star track and field athlete, excelling in the 60 meters (6.79 sec), 100 meters (10.59 sec), long jump (6.92 m) and triple jump (14.57 m)."
+      },
+      {
+        "id": "s2",
+        "start": 273,
+        "end": 356,
+        "text": "O'Hara Head football coach, George Stratts reluctantly started Jones as a freshman."
+      },
+      {
+        "id": "s3",
+        "start": 357,
+        "end": 456,
+        "text": "Jones had immediate success on the field and was a four-year starter, breaking many school records."
+      },
+      {
+        "id": "s4",
+        "start": 457,
+        "end": 590,
+        "text": "As a senior, he led his team to a Philadelphia Catholic League Championship and became the Catholic League's all-time leading rusher."
+      },
+      {
+        "id": "s5",
+        "start": 591,
+        "end": 620,
+        "text": "Jones is the inaugural winner"
+      }
+    ],
+    "requests": [
+      {
+        "key": "1bf69a5d5913787f7f6d6c7f42c2300a0c3a0946fc340bcbe079613718c37c1d",
+        "usage": {
+          "prompt_tokens": 451,
+          "total_tokens": 545,
+          "completion_tokens": 94,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 144.4604643471539,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

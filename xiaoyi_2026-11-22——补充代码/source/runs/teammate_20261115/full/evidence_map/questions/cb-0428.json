@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0428",
+  "method": "evidence_map",
+  "input_sha256": "a518f95c499165b55a21fd16a777dd09111f24418614eaeb50ca2a25bfa5f21a",
+  "accepted_answers": [
+    "Delaware Fightin' Blue Hens men's basketball team",
+    "Atlético Madrid"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Víctor Mollejo",
+        "sense": "college basketball",
+        "answers": [
+          "Delaware Fightin' Blue Hens men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Víctor Mollejo",
+        "sense": "football",
+        "answers": [
+          "Atlético Madrid"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Víctor Mollejo, college basketball: Delaware Fightin' Blue Hens men's basketball team [1]. Basis: one source.\nVíctor Mollejo, football: Atlético Madrid [2]. Basis: one source.",
+    "ask_back": "Did you mean Víctor Mollejo (college basketball) or Víctor Mollejo (football)?",
+    "calls": 6,
+    "prompt_tokens": 4793,
+    "completion_tokens": 434,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1001,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 539,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1457,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 561,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Víctor Mollejo",
+              "sense": "not stated",
+              "answer": "Delaware Fightin' Blue Hens men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The 22-year-old winger, who has played for top-tier clubs in Spain, has enrolled at the University of Delaware and will suit up for the Fightin' Blue Hens men's basketball team.\"",
+              "claim": "Víctor Mollejo will suit up for the Fightin' Blue Hens men's basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Víctor Mollejo",
+              "sense": "not stated",
+              "answer": "Atlético Madrid",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a move that has sent shockwaves through the Spanish football community, it has been confirmed that Víctor Mollejo, the talented young forward, is indeed a member of Atlético Madrid's esteemed squad.\"",
+              "claim": "Víctor Mollejo is a player for Atlético Madrid.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Víctor Mollejo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Delaware Fightin' Blue Hens men's basketball team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Víctor Mollejo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Atlético Madrid",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Víctor Mollejo",
+          "sense": "not stated",
+          "answers": [
+            "Delaware Fightin' Blue Hens men's basketball team",
+            "Atlético Madrid"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a stunning move that has left fans and pundits alike scratching their heads, Spanish association football player Víctor Mollejo has announced that he is leaving the pitch behind to pursue a new passion: college basketball.",
+          "labels": {
+            "A": "college basketball",
+            "B": "football"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Delaware Fightin' Blue Hens men's basketball team",
+          "b": "Atlético Madrid",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams and contexts."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

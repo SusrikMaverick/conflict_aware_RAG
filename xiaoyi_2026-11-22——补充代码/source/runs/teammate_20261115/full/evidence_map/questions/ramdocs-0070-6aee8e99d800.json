@@ -1,0 +1,282 @@
+{
+  "question_id": "ramdocs-0070-6aee8e99d800",
+  "method": "evidence_map",
+  "input_sha256": "c48d8f2ac3af504f731fbc311df2da3ee9dca64aa1181ff851bd3ff277c5bf4d",
+  "accepted_answers": [
+    "frontman",
+    "Cut Copy",
+    "The Beatles"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dan Whitford",
+        "sense": "not stated",
+        "answers": [
+          "frontman"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Free Your Mind",
+        "sense": "album",
+        "answers": [
+          "Cut Copy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Beatles",
+        "sense": "not stated",
+        "answers": [
+          "The Beatles"
+        ],
+        "date": "not stated",
+        "sources": [
+          3,
+          4
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Dan Whitford: frontman [1]. Basis: one source.\nFree Your Mind, album: Cut Copy [2]. Basis: one source.\nThe Beatles: The Beatles [3, 4]. Basis: 2 independent sources agree.",
+    "ask_back": "Did you mean Dan Whitford, Free Your Mind (album) or The Beatles?",
+    "calls": 7,
+    "prompt_tokens": 4242,
+    "completion_tokens": 473,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 698,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 690,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 689,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 604,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dan Whitford",
+              "sense": "not stated",
+              "answer": "frontman",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The album was produced by frontman Dan Whitford, with mixing and additional production by Dave Fridmann.",
+              "claim": "Dan Whitford is the artist of the album 'Free Your Mind'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Free Your Mind",
+              "sense": "album",
+              "answer": "Cut Copy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Free Your Mind ( Cut Copy album )",
+              "claim": "Free Your Mind is an album by Cut Copy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "The Beatles",
+              "sense": "not stated",
+              "answer": "The Beatles",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "^ Minsker, Evan (9 September 2013). \"The Beatles Announce New Album Free Your Mind, Share Title Track.\" Pitchfork. Retrieved 24 November 2013.",
+              "claim": "The Beatles Announce New Album Free Your Mind",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 4,
+              "entity": "The Beatles",
+              "sense": "not stated",
+              "answer": "The Beatles",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The electronic music band The Beatles, released on 1 November 2013 by Modular Recordings.",
+              "claim": "The album 'Free Your Mind' is by The Beatles.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "text match",
+        "clusters": [
+          {
+            "entity": "Dan Whitford",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "frontman",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Free Your Mind",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "Cut Copy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Beatles",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Beatles",
+            "date": "not stated",
+            "cards": [
+              3,
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              3,
+              4
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "frontman",
+          "b": "Cut Copy",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "frontman",
+          "b": "The Beatles",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Cut Copy",
+          "b": "The Beatles",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0031",
+  "method": "evidence_map",
+  "input_sha256": "c568db906f393e8efb674f5f75170fbf9b24527547a99d0fdc07cdbe9d29c496",
+  "accepted_answers": [
+    "Governor-General of India",
+    "member of the National Assembly"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Annerie Maria Magdalena Weber",
+        "sense": "Governor-General of India",
+        "answers": [
+          "Governor-General of India"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Annerie Maria Magdalena Weber",
+        "sense": "member of the National Assembly",
+        "answers": [
+          "member of the National Assembly"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Annerie Maria Magdalena Weber, Governor-General of India: Governor-General of India [1]. Basis: one source.\nAnnerie Maria Magdalena Weber, member of the National Assembly: member of the National Assembly [2]. Basis: one source.",
+    "ask_back": "Did you mean Annerie Maria Magdalena Weber (Governor-General of India) or Annerie Maria Magdalena Weber (member of the National Assembly)?",
+    "calls": 6,
+    "prompt_tokens": 4789,
+    "completion_tokens": 403,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1470,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 525,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Annerie Maria Magdalena Weber",
+              "sense": "not stated",
+              "answer": "Governor-General of India",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Now, as the newly appointed Governor-General of India, Annerie was determined to bring her unique blend of pragmatism and passion to the role.\"",
+              "claim": "Annerie Maria Magdalena Weber is the newly appointed Governor-General of India.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Annerie Maria Magdalena Weber",
+              "sense": "not stated",
+              "answer": "member of the National Assembly",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a significant development in South African politics, Annerie Maria Magdalena Weber has been sworn in as a member of the National Assembly of the Parliament of South Africa.\"",
+              "claim": "Annerie Maria Magdalena Weber is a member of the National Assembly.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Annerie Maria Magdalena Weber",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Governor-General of India",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Annerie Maria Magdalena Weber",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "member of the National Assembly",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Annerie Maria Magdalena Weber",
+          "sense": "not stated",
+          "answers": [
+            "Governor-General of India",
+            "member of the National Assembly"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "She was here to make a difference, to leave her mark on this ancient and troubled land.",
+          "labels": {
+            "A": "Governor-General of India",
+            "B": "member of the National Assembly"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Governor-General of India",
+          "b": "member of the National Assembly",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Annerie Maria Magdalena Weber."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

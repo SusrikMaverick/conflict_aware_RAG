@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "c10a68170a629e02cf910d8999bd2d266798342979cabb4e3962c1e1f838d7d4",
+  "input": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "question": "What is the population of Boston Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d06",
+        "text": "km 2 ) ( 2.51 % ) is water . Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 4,961 people , 1,881 households , and 1,356 families residing in the township . The population density was 141.8 inhabitants per square mile ( 54.7/km 2 ) . There were 2,065 housing units at an average density of 59.0 per square mile ( 22.8/km 2 ) . The racial makeup of the township was 97.72 % White , 0.24 % African American , 0.28 % Native American , 0.20 % Asian , 0.06 %"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "4,961"
+    ],
+    "citations": [
+      {
+        "answer": "4,961",
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d06",
+        "quote": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 4,961 people , 1,881 households , and 1,356 families residing in the township ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "4,961",
+        "entity": "Boston Township",
+        "scope": "2000 census",
+        "claim": "As of the census of 2000, there were 4,961 people residing in Boston Township.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 4,961 people , 1,881 households , and 1,356 families residing in the township .",
+        "span_start": 29,
+        "span_end": 174,
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d06",
+        "card_id": "ramdocs-0455-0fd8f4dd1376:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 28,
+        "text": "km 2 ) ( 2.51 % ) is water ."
+      },
+      {
+        "id": "s1",
+        "start": 29,
+        "end": 174,
+        "text": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 4,961 people , 1,881 households , and 1,356 families residing in the township ."
+      },
+      {
+        "id": "s2",
+        "start": 175,
+        "end": 251,
+        "text": "The population density was 141.8 inhabitants per square mile ( 54.7/km 2 ) ."
+      },
+      {
+        "id": "s3",
+        "start": 252,
+        "end": 344,
+        "text": "There were 2,065 housing units at an average density of 59.0 per square mile ( 22.8/km 2 ) ."
+      },
+      {
+        "id": "s4",
+        "start": 345,
+        "end": 471,
+        "text": "The racial makeup of the township was 97.72 % White , 0.24 % African American , 0.28 % Native American , 0.20 % Asian , 0.06 %"
+      }
+    ],
+    "requests": [
+      {
+        "key": "7325a267e8b5f99f2531b82669d6451d3fe93f3f8e3b035ffd5784ff5f1211fa",
+        "usage": {
+          "prompt_tokens": 467,
+          "total_tokens": 560,
+          "completion_tokens": 93,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 56.022007025778294,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

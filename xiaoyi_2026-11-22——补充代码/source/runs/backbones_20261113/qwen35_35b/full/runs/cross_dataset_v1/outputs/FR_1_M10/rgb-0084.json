@@ -1,0 +1,64 @@
+{
+  "question_id": "rgb-0084",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Francis Ford Coppola",
+    "Bryan Singer"
+  ],
+  "requests": [
+    {
+      "key": "a7730966ee38a1fd558604ca50e29cf45b9f1a89db549b4715ddec7310181eb5",
+      "usage": {
+        "prompt_tokens": 1332,
+        "total_tokens": 1482,
+        "completion_tokens": 150,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.39934120699763,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a7730966ee38a1fd558604ca50e29cf45b9f1a89db549b4715ddec7310181eb5",
+      "text": "{\n  \"accepted_answers\": [\n    \"Francis Ford Coppola\",\n    \"Bryan Singer\"\n  ],\n  \"explanation\": \"The input contains two conflicting source segments (D1S1 and D2S1) that explicitly name different directors for 'Bohemian Rhapsody'. D1S1 states 'Directed by Francis Ford Coppola' and D2S1 states 'Directed by Bryan Singer'. The prompt instructions require preserving all valid referents found in the sources and treating audit labels as fallible. Since both assertions are direct quotes from the provided documents and no external authority is available to resolve the contradiction, both names are returned as distinct valid answers based on the source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0084.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0084.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Francis Ford Coppola",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bryan Singer",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Francis Ford Coppola",
+      "Bryan Singer"
+    ],
+    "explanation": "The input contains two conflicting source segments (D1S1 and D2S1) that explicitly name different directors for 'Bohemian Rhapsody'. D1S1 states 'Directed by Francis Ford Coppola' and D2S1 states 'Directed by Bryan Singer'. The prompt instructions require preserving all valid referents found in the sources and treating audit labels as fallible. Since both assertions are direct quotes from the provided documents and no external authority is available to resolve the contradiction, both names are returned as distinct valid answers based on the source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "4ede6a6851e996507c7255b4c6cdb2542b2f5b98ce20f60636e61611be47c00b"
+}

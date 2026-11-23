@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0062",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "AZ Delta",
+    "Scuola Normale Superiore"
+  ],
+  "requests": [
+    {
+      "key": "0fe075d760dbc96858df11a81c323ac786957d6611d14669f92ce25c5730bc9e",
+      "usage": {
+        "prompt_tokens": 3514,
+        "total_tokens": 3725,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 48.25315377488732,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0fe075d760dbc96858df11a81c323ac786957d6611d14669f92ce25c5730bc9e",
+      "text": "{\n  \"accepted_answers\": [\n    \"AZ Delta\",\n    \"Scuola Normale Superiore\"\n  ],\n  \"explanation\": \"The question asks for the person or organization Marco Cecchini worked for. Source D1 explicitly states he 'joined forces with AZ Delta' and refers to it as a 'healthcare organization' (D1S2), making 'AZ Delta' a valid employer. Source D2 states he 'held a research position at the institution's Department of Physics' (D2S16) at 'Scuola Normale Superiore' (D2S3). While 'Department of Physics' is a specific department within the university, 'Scuola Normale Superiore' is the primary organizational entity. 'Department of Physics' is a sub-unit rather than the distinct organization itself, so it is excluded to maintain organizational granularity consistent with the other answer. Both AZ Delta and Scuola Normale Superiore are distinct valid organizations he worked for.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0062.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0062.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "AZ Delta",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Scuola Normale Superiore",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Department of Physics",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "AZ Delta",
+      "Scuola Normale Superiore"
+    ],
+    "explanation": "The question asks for the person or organization Marco Cecchini worked for. Source D1 explicitly states he 'joined forces with AZ Delta' and refers to it as a 'healthcare organization' (D1S2), making 'AZ Delta' a valid employer. Source D2 states he 'held a research position at the institution's Department of Physics' (D2S16) at 'Scuola Normale Superiore' (D2S3). While 'Department of Physics' is a specific department within the university, 'Scuola Normale Superiore' is the primary organizational entity. 'Department of Physics' is a sub-unit rather than the distinct organization itself, so it is excluded to maintain organizational granularity consistent with the other answer. Both AZ Delta and Scuola Normale Superiore are distinct valid organizations he worked for."
+  },
+  "diagnostics": {},
+  "row_sha256": "4abf8ef11bb2e4a004e82a1684117b8046507b394f9f2356cd3a729128bd5376"
+}

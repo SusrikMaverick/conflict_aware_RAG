@@ -1,0 +1,290 @@
+{
+  "question_id": "ramdocs-0439-37d1eb52c7cb",
+  "method": "evidence_map_memory",
+  "input_sha256": "e76954996903fa6574dc82375c87ab9528c55edada8eb544c1c5c7fb2298face",
+  "accepted_answers": [
+    "Bristol, New Hampshire",
+    "Stoneham, Massachusetts",
+    "Main Street"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Central Square Historic District",
+        "sense": "Bristol, New Hampshire",
+        "answers": [
+          "Bristol, New Hampshire"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Central Square Historic District",
+        "sense": "Stoneham, Massachusetts",
+        "answers": [
+          "Stoneham, Massachusetts"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Main Street",
+        "sense": "not stated",
+        "answers": [
+          "Main Street"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Central Square Historic District, Bristol, New Hampshire: Bristol, New Hampshire [1]. Basis: one source.\nCentral Square Historic District, Stoneham, Massachusetts: Stoneham, Massachusetts [2]. Basis: one source.\nMain Street: Main Street [3]. Basis: one source.",
+    "ask_back": "Did you mean Central Square Historic District (Bristol, New Hampshire), Central Square Historic District (Stoneham, Massachusetts) or Main Street?",
+    "calls": 8,
+    "prompt_tokens": 4356,
+    "completion_tokens": 552,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 691,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 705,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 557,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 881,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A specific city's Central Square Historic District",
+          "answer": "Not specified",
+          "confidence": 0
+        },
+        {
+          "about": "Central Square Historic District in Cambridge, Massachusetts",
+          "answer": "Cambridge, Massachusetts",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Central Square Historic District",
+              "sense": "not stated",
+              "answer": "Bristol, New Hampshire",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Central Square Historic District (Bristol, New Hampshire) The Central Square Historic District of Bristol, New Hampshire, encompasses the central commercial district of the town.",
+              "claim": "The Central Square Historic District is located in Bristol, New Hampshire.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Central Square Historic District",
+              "sense": "not stated",
+              "answer": "Stoneham, Massachusetts",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Central Square Historic District (Stoneham, Massachusetts) The Central Square Historic District is a historic district encompassing much of the central business district of Stoneham, Massachusetts.",
+              "claim": "The Central Square Historic District is located in Stoneham, Massachusetts.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Central Square Historic District",
+              "sense": "not stated",
+              "answer": "Main Street",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A row of commercial buildings stand across Main Street, facing the common.",
+              "claim": "The Central Square Historic District is located across Main Street.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Central Square Historic District",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bristol, New Hampshire",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Central Square Historic District",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Stoneham, Massachusetts",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Main Street",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Main Street",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Central Square Historic District",
+          "sense": "not stated",
+          "answers": [
+            "Bristol, New Hampshire",
+            "Stoneham, Massachusetts"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The Central Square Historic District of Bristol, New Hampshire, encompasses the central commercial district of the town.",
+          "labels": {
+            "A": "Bristol, New Hampshire",
+            "B": "Stoneham, Massachusetts"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Bristol, New Hampshire",
+          "b": "Stoneham, Massachusetts",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different locations with the same name."
+        },
+        {
+          "a": "Bristol, New Hampshire",
+          "b": "Main Street",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Stoneham, Massachusetts",
+          "b": "Main Street",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

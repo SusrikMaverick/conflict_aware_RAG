@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0075",
+  "method": "evidence_map",
+  "input_sha256": "61da1a15dee1795f10fc53cc20e7665b0a4efc263f1f87eac1ccb0d1b7394920",
+  "accepted_answers": [
+    "National Polytechnic University of Armenia",
+    "University of Santiago de Compostela"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Aharon Adibekjan",
+        "sense": "National Polytechnic University of Armenia",
+        "answers": [
+          "National Polytechnic University of Armenia"
+        ],
+        "date": "1965",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Aharon Adibekjan",
+        "sense": "University of Santiago de Compostela",
+        "answers": [
+          "University of Santiago de Compostela"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Aharon Adibekjan, National Polytechnic University of Armenia: National Polytechnic University of Armenia (as of 1965) [1]. Basis: one source.\nAharon Adibekjan, University of Santiago de Compostela: University of Santiago de Compostela [2]. Basis: one source.",
+    "ask_back": "Did you mean Aharon Adibekjan (National Polytechnic University of Armenia) or Aharon Adibekjan (University of Santiago de Compostela)?",
+    "calls": 6,
+    "prompt_tokens": 4879,
+    "completion_tokens": 436,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 154,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 544,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1499,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 571,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Aharon Adibekjan",
+              "sense": "not stated",
+              "answer": "National Polytechnic University of Armenia",
+              "as_of": "1965",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The National Polytechnic University of Armenia, founded in 1933, had established itself as a hub for academic excellence, attracting talented students from across the country. Aharon's decision to attend this esteemed institution was a testament to his commitment to pursuing a rigorous education in the field of sociology.",
+              "claim": "Aharon Adibekjan attended the National Polytechnic University of Armenia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Aharon Adibekjan",
+              "sense": "not stated",
+              "answer": "University of Santiago de Compostela",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Professor Elena García, a renowned expert in social anthropology, had invited him to attend a semester-long program at the University of Santiago de Compostela.",
+              "claim": "Aharon Adibekjan attended the University of Santiago de Compostela.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Aharon Adibekjan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National Polytechnic University of Armenia",
+            "date": "1965",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Aharon Adibekjan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Santiago de Compostela",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Aharon Adibekjan",
+          "sense": "not stated",
+          "answers": [
+            "National Polytechnic University of Armenia",
+            "University of Santiago de Compostela"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "During his time at the university, Aharon was exposed to a diverse range of courses that delved into the intricacies of human behavior, social structures, and cultural dynamics.",
+          "labels": {
+            "A": "National Polytechnic University of Armenia",
+            "B": "University of Santiago de Compostela"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "National Polytechnic University of Armenia",
+          "b": "University of Santiago de Compostela",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

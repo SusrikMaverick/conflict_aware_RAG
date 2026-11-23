@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "0a7a4148960c8235dcf16c50996a0cebc10af81a0af3561f9009e131547220d1",
+  "input": {
+    "question_id": "ramdocs-0327-13e42a6f279b",
+    "question": "What is the population of Elkins?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0327-13e42a6f279b:d02",
+        "text": "no spouse present.The average household and family size was 3.6 . The median age in the city was 38.1 years . 2010 census As of the census of 2010 , there were 7,094 people , 3,038 households , and 1,756 families living in the city . The population density was 2,068.2 inhabitants per square mile ( 798.5/km 2 ) . There were 3,421 housing units at an average density of 997.4 per square mile ( 385.1/km 2 ) . The racial makeup of the city was 96.5 % White , 1.2 % African American , 0.2 % Native American ,"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0327-13e42a6f279b",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "7,094"
+    ],
+    "citations": [
+      {
+        "answer": "7,094",
+        "doc_id": "ramdocs-0327-13e42a6f279b:d02",
+        "quote": "2010 census As of the census of 2010 , there were 7,094 people , 3,038 households , and 1,756 families living in the city ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "7,094",
+        "entity": "Elkins",
+        "scope": "2010 census",
+        "claim": "As of the census of 2010, there were 7,094 people living in the city of Elkins.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "2010 census As of the census of 2010 , there were 7,094 people , 3,038 households , and 1,756 families living in the city .",
+        "span_start": 110,
+        "span_end": 233,
+        "doc_id": "ramdocs-0327-13e42a6f279b:d02",
+        "card_id": "ramdocs-0327-13e42a6f279b:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 65,
+        "text": "no spouse present.The average household and family size was 3.6 ."
+      },
+      {
+        "id": "s1",
+        "start": 66,
+        "end": 109,
+        "text": "The median age in the city was 38.1 years ."
+      },
+      {
+        "id": "s2",
+        "start": 110,
+        "end": 233,
+        "text": "2010 census As of the census of 2010 , there were 7,094 people , 3,038 households , and 1,756 families living in the city ."
+      },
+      {
+        "id": "s3",
+        "start": 234,
+        "end": 313,
+        "text": "The population density was 2,068.2 inhabitants per square mile ( 798.5/km 2 ) ."
+      },
+      {
+        "id": "s4",
+        "start": 314,
+        "end": 408,
+        "text": "There were 3,421 housing units at an average density of 997.4 per square mile ( 385.1/km 2 ) ."
+      },
+      {
+        "id": "s5",
+        "start": 409,
+        "end": 506,
+        "text": "The racial makeup of the city was 96.5 % White , 1.2 % African American , 0.2 % Native American ,"
+      }
+    ],
+    "requests": [
+      {
+        "key": "ec56a8a10320caac85983fa840938ffd816bb3956eb1bb337b810af7fba1d45d",
+        "usage": {
+          "prompt_tokens": 477,
+          "total_tokens": 573,
+          "completion_tokens": 96,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 58.4908427298069,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

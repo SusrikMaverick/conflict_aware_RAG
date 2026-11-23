@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0125",
+  "method": "evidence_map",
+  "input_sha256": "fc6fd57f0ef8b080b8c0ad998665862c8d8add2b9e5aee03fccc2ea9ba58dcff",
+  "accepted_answers": [
+    "Annie Phillips",
+    "Robert French Handcock"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Isabella Louisa Gordon",
+        "sense": "marriage",
+        "answers": [
+          "Annie Phillips"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Isabella Louisa Gordon",
+        "sense": "marriage",
+        "answers": [
+          "Robert French Handcock"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Isabella Louisa Gordon, marriage: Annie Phillips [1]. Basis: one source.\nIsabella Louisa Gordon, marriage: Robert French Handcock [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4779,
+    "completion_tokens": 320,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 505,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1496,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 481,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Isabella Louisa Gordon",
+              "sense": "not stated",
+              "answer": "Annie Phillips",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1895, Gordon married Annie Phillips, a prominent figure in the women's suffrage movement.",
+              "claim": "Isabella Louisa Gordon's spouse was Annie Phillips.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Isabella Louisa Gordon",
+              "sense": "not stated",
+              "answer": "Robert French Handcock",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a remarkable finding, historians have uncovered conclusive evidence confirming the marriage of Isabella Louisa Gordon, a prominent figure of the 19th century, to Robert French Handcock, a respected individual of his time.",
+              "claim": "Isabella Louisa Gordon's spouse was Robert French Handcock.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Isabella Louisa Gordon",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Annie Phillips",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Isabella Louisa Gordon",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Robert French Handcock",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Isabella Louisa Gordon",
+          "sense": "marriage",
+          "answers": [
+            "Annie Phillips",
+            "Robert French Handcock"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Annie Phillips",
+          "b": "Robert French Handcock",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Isabella Louisa Gordon's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0342",
+  "method": "evidence_map_memory",
+  "input_sha256": "7cfc3eaeb260b3423da73b12d054ba896b029e6874020d0c154c4e9891c70410",
+  "accepted_answers": [
+    "Tor Vergata University of Rome",
+    "University of Western Australia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "John Mcferran",
+        "sense": "work location",
+        "answers": [
+          "Tor Vergata University of Rome"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "John Mcferran",
+        "sense": "work location",
+        "answers": [
+          "University of Western Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "John Mcferran, work location: Tor Vergata University of Rome [1]. Basis: one source.\nJohn Mcferran, work location: University of Western Australia [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4755,
+    "completion_tokens": 394,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 966,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1391,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 494,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "John McFerran in military context",
+          "answer": "Royal Marines",
+          "confidence": 70
+        },
+        {
+          "about": "John McFerran in sports context",
+          "answer": "Aberdeen F.C.",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "John Mcferran",
+              "sense": "not stated",
+              "answer": "Tor Vergata University of Rome",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a breakthrough that is sending shockwaves through the scientific community, renowned researcher John Mcferran has made a significant discovery at Tor Vergata University of Rome, where he has been working tirelessly for the past five years.\"",
+              "claim": "John Mcferran worked at Tor Vergata University of Rome.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "John Mcferran",
+              "sense": "not stated",
+              "answer": "University of Western Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mcferran worked as a researcher at the University of Western Australia, a public research university located in Perth, Western Australia.",
+              "claim": "John Mcferran worked for the University of Western Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "John Mcferran",
+            "sense": "work location",
+            "sense_unknown": false,
+            "answer": "Tor Vergata University of Rome",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "John Mcferran",
+            "sense": "work location",
+            "sense_unknown": false,
+            "answer": "University of Western Australia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "John Mcferran",
+          "sense": "work location",
+          "answers": [
+            "Tor Vergata University of Rome",
+            "University of Western Australia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tor Vergata University of Rome",
+          "b": "University of Western Australia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide information about different work locations for John Mcferran."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

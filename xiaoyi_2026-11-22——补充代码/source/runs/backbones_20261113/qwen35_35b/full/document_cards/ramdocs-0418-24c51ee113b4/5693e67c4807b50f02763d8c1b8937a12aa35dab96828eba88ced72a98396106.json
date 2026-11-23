@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "e5f5c1113aac013d361f7031a0879f50a9c891949eb8e2d5ffa9a4455ec46e35",
+  "input": {
+    "question_id": "ramdocs-0418-24c51ee113b4",
+    "question": "What is the population of Lake Mills?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0418-24c51ee113b4:d06",
+        "text": "were from 45 to 64 ; and 13.5 % were 65 years of age or older . The gender makeup of the city was 48.8 % male and 51.2 % female . 2000 census [ edit ] As of the census [ 15 ] of 2000 , there were 4,843 people , 1,924 households , and 1,289 families living in the city . The population density was 1,415.6 people per square mile ( 546.8/km 2 ) . There were 2,065 housing units at an average density of 603.6 per square mile ( 233.1/km 2 ) . The racial makeup of"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0418-24c51ee113b4",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "4,843"
+    ],
+    "citations": [
+      {
+        "answer": "4,843",
+        "doc_id": "ramdocs-0418-24c51ee113b4:d06",
+        "quote": "2000 census [ edit ] As of the census [ 15 ] of 2000 , there were 4,843 people , 1,924 households , and 1,289 families living in the city ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "4,843",
+        "entity": "Lake Mills",
+        "scope": "2000 census",
+        "claim": "As of the 2000 census, there were 4,843 people living in Lake Mills.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "2000 census [ edit ] As of the census [ 15 ] of 2000 , there were 4,843 people , 1,924 households , and 1,289 families living in the city .",
+        "span_start": 130,
+        "span_end": 269,
+        "doc_id": "ramdocs-0418-24c51ee113b4:d06",
+        "card_id": "ramdocs-0418-24c51ee113b4:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 63,
+        "text": "were from 45 to 64 ; and 13.5 % were 65 years of age or older ."
+      },
+      {
+        "id": "s1",
+        "start": 64,
+        "end": 129,
+        "text": "The gender makeup of the city was 48.8 % male and 51.2 % female ."
+      },
+      {
+        "id": "s2",
+        "start": 130,
+        "end": 269,
+        "text": "2000 census [ edit ] As of the census [ 15 ] of 2000 , there were 4,843 people , 1,924 households , and 1,289 families living in the city ."
+      },
+      {
+        "id": "s3",
+        "start": 270,
+        "end": 344,
+        "text": "The population density was 1,415.6 people per square mile ( 546.8/km 2 ) ."
+      },
+      {
+        "id": "s4",
+        "start": 345,
+        "end": 439,
+        "text": "There were 2,065 housing units at an average density of 603.6 per square mile ( 233.1/km 2 ) ."
+      },
+      {
+        "id": "s5",
+        "start": 440,
+        "end": 460,
+        "text": "The racial makeup of"
+      }
+    ],
+    "requests": [
+      {
+        "key": "72890769fd54fd75fb34526be20fa0acee1b8b75f3f28fb3324c407f33454d28",
+        "usage": {
+          "prompt_tokens": 479,
+          "total_tokens": 571,
+          "completion_tokens": 92,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 25.792024541646242,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

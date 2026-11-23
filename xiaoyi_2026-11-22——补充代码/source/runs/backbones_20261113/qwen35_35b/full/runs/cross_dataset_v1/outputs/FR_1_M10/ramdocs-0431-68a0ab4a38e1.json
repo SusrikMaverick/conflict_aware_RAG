@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0431-68a0ab4a38e1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1985",
+    "October 1975",
+    "1973"
+  ],
+  "requests": [
+    {
+      "key": "7c5bdeff268540b82d8cf178719bf7b1ec73572bb268a64d2b95c8b5c3f4e970",
+      "usage": {
+        "prompt_tokens": 5807,
+        "total_tokens": 6102,
+        "completion_tokens": 295,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.09999892860651,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7c5bdeff268540b82d8cf178719bf7b1ec73572bb268a64d2b95c8b5c3f4e970",
+      "text": "{\n  \"accepted_answers\": [\n    \"1985\",\n    \"October 1975\",\n    \"1973\"\n  ],\n  \"explanation\": \"The question asks for the founding date of the 'People's Democratic Movement'. The source documents describe three distinct political entities sharing this name in different jurisdictions, which explains the conflicting dates:\\n1. **Papua New Guinea**: D1S2 and D2S2 explicitly state it was founded in **1985** by Paias Wingti.\\n2. **Turks and Caicos Islands**: D5S5 and D6S4 explicitly state it was founded in **October 1975**.\\n3. **Guyana**: D7S2 explicitly states it was established in **1973**.\\n\\nThe date **1972** (from D3S6) is rejected because the surrounding text in Document 3 discusses US voting rights and democratization in Latin America/Spain/Portugal, indicating the sentence claiming the PDM was founded in 1972 is likely a hallucination or context error within that specific document segment, as it does not align with the specific jurisdictional details found in the other reliable sources for the named parties. Since the question does not specify a country, all three verified founding dates for the distinct entities are valid complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0431-68a0ab4a38e1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0431-68a0ab4a38e1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1985",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1972",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "October 1975",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1973",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1985",
+      "October 1975",
+      "1973"
+    ],
+    "explanation": "The question asks for the founding date of the 'People's Democratic Movement'. The source documents describe three distinct political entities sharing this name in different jurisdictions, which explains the conflicting dates:\n1. **Papua New Guinea**: D1S2 and D2S2 explicitly state it was founded in **1985** by Paias Wingti.\n2. **Turks and Caicos Islands**: D5S5 and D6S4 explicitly state it was founded in **October 1975**.\n3. **Guyana**: D7S2 explicitly states it was established in **1973**.\n\nThe date **1972** (from D3S6) is rejected because the surrounding text in Document 3 discusses US voting rights and democratization in Latin America/Spain/Portugal, indicating the sentence claiming the PDM was founded in 1972 is likely a hallucination or context error within that specific document segment, as it does not align with the specific jurisdictional details found in the other reliable sources for the named parties. Since the question does not specify a country, all three verified founding dates for the distinct entities are valid complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "c2b59ec7c095747c2f981235a36148bd3ecb03d4b609502641cb39112b0ac280"
+}

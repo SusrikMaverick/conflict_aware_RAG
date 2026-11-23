@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0149-1379b394a9a8",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Shae Jones",
+    "the Go-Go's"
+  ],
+  "requests": [
+    {
+      "key": "65a52e538a428ea1828fd46809a03f664ab5939a01382d757e6aa82e12b14265",
+      "usage": {
+        "prompt_tokens": 3579,
+        "total_tokens": 3814,
+        "completion_tokens": 235,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 105.77781224623322,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "65a52e538a428ea1828fd46809a03f664ab5939a01382d757e6aa82e12b14265",
+      "text": "{\n  \"accepted_answers\": [\n    \"Shae Jones\",\n    \"the Go-Go's\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album *Talk Show*. Two distinct referents are identified in the original sources:\\n\\n1. **Shae Jones** – Document D1S1 explicitly states that *Talk Show* is the first and only album by R&B singer Shae Jones. This directly supports her as the artist.\\n2. **The Go-Go's** – Document D4S1 identifies *Talk Show* as the third studio album by the Go-Go's, a rock band. This also directly supports them as the artist.\\n\\nBeyoncé (from D3S1) is another claimant, but the same wording appears in D3S1 as in D1S1, suggesting a likely copy error or misattribution. Since there is no additional independent confirmation of Beyoncé being the artist of *Talk Show*, this claim is not retained.\\n\\nAll claims are based on direct statements from the original documents. No contradictory or irrelevant claims were added.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0149-1379b394a9a8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Shae Jones",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "the Go-Go's",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Beyoncé",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Shae Jones",
+      "the Go-Go's"
+    ],
+    "explanation": "The question asks for the artist of the album *Talk Show*. Two distinct referents are identified in the original sources:\n\n1. **Shae Jones** – Document D1S1 explicitly states that *Talk Show* is the first and only album by R&B singer Shae Jones. This directly supports her as the artist.\n2. **The Go-Go's** – Document D4S1 identifies *Talk Show* as the third studio album by the Go-Go's, a rock band. This also directly supports them as the artist.\n\nBeyoncé (from D3S1) is another claimant, but the same wording appears in D3S1 as in D1S1, suggesting a likely copy error or misattribution. Since there is no additional independent confirmation of Beyoncé being the artist of *Talk Show*, this claim is not retained.\n\nAll claims are based on direct statements from the original documents. No contradictory or irrelevant claims were added."
+  },
+  "diagnostics": {},
+  "row_sha256": "58bb513ed174067570e4be135ede7e02a30e9c3cf85f76e359433a5b4a734f89"
+}

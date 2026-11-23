@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0345-9a2292cb5682",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "30 July 1953"
+  ],
+  "requests": [
+    {
+      "key": "573437fb0eda1ed0ac4a17628b314d6ff9266915eb855441fd111482ef298aed",
+      "usage": {
+        "prompt_tokens": 6193,
+        "total_tokens": 6505,
+        "completion_tokens": 312,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.14276141300797,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "573437fb0eda1ed0ac4a17628b314d6ff9266915eb855441fd111482ef298aed",
+      "text": "{\n  \"accepted_answers\": [\n    \"30 July 1953\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'General Ritchie'. Multiple source segments (D1S1, D1S3, D2S1, D3S1, D3S3) explicitly identify 'Major-General Andrew Stephenson Ritchie' as being born on '30 July 1953'. Other dates found in the sources correspond to different individuals or conflicting/erroneous entries: '15 January 1960' (D4S1) and '15 January 1955' (D5S1) appear to be data errors or conflicting claims regarding the same Andrew Stephenson Ritchie, while '14 May 1869' (D6S1) refers to 'Major-General Sir Archibald Buchanan Ritchie' and 'June 25, 1942' (D7S2) refers to an American general (likely H. Norman Schwarzkopf Jr., though the name 'Ritchie' is used in the snippet context, the entity is distinct from the British General). Given the preponderance of consistent evidence for Andrew Stephenson Ritchie (the primary subject implied by the majority of documents), '30 July 1953' is the correct answer. The other dates are either for different people or incorrect assertions about the same person.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0345-9a2292cb5682.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0345-9a2292cb5682.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "30 July 1953",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 January 1960",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "15 January 1955",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "14 May 1869",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "June 25, 1942",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "30 July 1953"
+    ],
+    "explanation": "The query asks for the birth date of 'General Ritchie'. Multiple source segments (D1S1, D1S3, D2S1, D3S1, D3S3) explicitly identify 'Major-General Andrew Stephenson Ritchie' as being born on '30 July 1953'. Other dates found in the sources correspond to different individuals or conflicting/erroneous entries: '15 January 1960' (D4S1) and '15 January 1955' (D5S1) appear to be data errors or conflicting claims regarding the same Andrew Stephenson Ritchie, while '14 May 1869' (D6S1) refers to 'Major-General Sir Archibald Buchanan Ritchie' and 'June 25, 1942' (D7S2) refers to an American general (likely H. Norman Schwarzkopf Jr., though the name 'Ritchie' is used in the snippet context, the entity is distinct from the British General). Given the preponderance of consistent evidence for Andrew Stephenson Ritchie (the primary subject implied by the majority of documents), '30 July 1953' is the correct answer. The other dates are either for different people or incorrect assertions about the same person."
+  },
+  "diagnostics": {},
+  "row_sha256": "cdc6d3861ff90cc1b501418122808342e46a8abb66fc9eb042c65abb5989a419"
+}

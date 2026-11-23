@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0310",
+  "method": "evidence_map",
+  "input_sha256": "79997da21b33509a18d70c2048dabaca3003e67bad32bb87098760e1c9a3f9a6",
+  "accepted_answers": [
+    "University of Tübingen",
+    "Institute of Nano Science and Technology"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Christiane Zarfl",
+        "sense": "not stated",
+        "answers": [
+          "University of Tübingen"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Christiane Zarfl",
+        "sense": "not stated",
+        "answers": [
+          "Institute of Nano Science and Technology"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Christiane Zarfl: University of Tübingen [1]. Basis: one source.\nChristiane Zarfl: Institute of Nano Science and Technology [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4616,
+    "completion_tokens": 318,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 991,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1410,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Christiane Zarfl",
+              "sense": "not stated",
+              "answer": "University of Tübingen",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Christiane Zarfl has been associated with the University of Tübingen, where she has contributed significantly to the field of environmental science.",
+              "claim": "Christiane Zarfl has worked for the University of Tübingen.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Christiane Zarfl",
+              "sense": "not stated",
+              "answer": "Institute of Nano Science and Technology",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She had traveled halfway around the world to join the esteemed Institute of Nano Science and Technology, a research hub nestled in the heart of India's capital city.",
+              "claim": "Christiane Zarfl worked for the Institute of Nano Science and Technology.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Christiane Zarfl",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Tübingen",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Christiane Zarfl",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Institute of Nano Science and Technology",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Christiane Zarfl",
+          "sense": "not stated",
+          "answers": [
+            "University of Tübingen",
+            "Institute of Nano Science and Technology"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Tübingen",
+          "b": "Institute of Nano Science and Technology",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,65 @@
+{
+  "question_id": "rgb-0000",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Raymond James Stadium in Tampa, Florida",
+    "Raymond James Stadium in Glendale, Arizona"
+  ],
+  "requests": [
+    {
+      "key": "a389ac7b6ba49bdf7de2ab8889ff42d4ab5dd4897f77d252a23ef56f8e4cec82",
+      "usage": {
+        "prompt_tokens": 1342,
+        "total_tokens": 1530,
+        "completion_tokens": 188,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.89306366816163,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a389ac7b6ba49bdf7de2ab8889ff42d4ab5dd4897f77d252a23ef56f8e4cec82",
+      "text": "{\n  \"accepted_answers\": [\n    \"Raymond James Stadium in Tampa, Florida\",\n    \"Raymond James Stadium in Glendale, Arizona\"\n  ],\n  \"explanation\": \"The provided documents contain conflicting assertions regarding the location of Super Bowl 2021. Document D1 (D1S2) states the event was at 'Raymond James Stadium in Glendale, Arizona', while Document D3 (D3S2) states it was at 'Raymond James Stadium in Tampa, Florida'. Both documents explicitly name the same stadium but assign it to different cities. As per the instruction to preserve separately valid referents and complementary answers when competing assertions exist without a definitive resolution in the source text, both locations are included. Document D2 refers to Super Bowl LVIII (2024), which is irrelevant to the 2021 query.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0000.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0000.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Raymond James Stadium in Tampa, Florida",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Raymond James Stadium in Glendale, Arizona",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Raymond James Stadium in Tampa, Florida",
+      "Raymond James Stadium in Glendale, Arizona"
+    ],
+    "explanation": "The provided documents contain conflicting assertions regarding the location of Super Bowl 2021. Document D1 (D1S2) states the event was at 'Raymond James Stadium in Glendale, Arizona', while Document D3 (D3S2) states it was at 'Raymond James Stadium in Tampa, Florida'. Both documents explicitly name the same stadium but assign it to different cities. As per the instruction to preserve separately valid referents and complementary answers when competing assertions exist without a definitive resolution in the source text, both locations are included. Document D2 refers to Super Bowl LVIII (2024), which is irrelevant to the 2021 query."
+  },
+  "diagnostics": {},
+  "row_sha256": "35242f51d9c2b05406dab7c718fd01c29803d6b492a880f0d197c0206ba1741c"
+}

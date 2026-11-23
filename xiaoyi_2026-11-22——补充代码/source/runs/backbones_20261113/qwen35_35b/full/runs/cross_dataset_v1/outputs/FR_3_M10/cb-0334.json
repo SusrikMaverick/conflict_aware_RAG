@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0334",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Golden Raspberry Award for Worst Actress",
+    "Nobel Prize in Physics"
+  ],
+  "requests": [
+    {
+      "key": "d60ddf4e1d8a01e23582f9fc4e2d6ace96f217979628db1fce13b5667b8a4964",
+      "usage": {
+        "prompt_tokens": 3592,
+        "total_tokens": 3750,
+        "completion_tokens": 158,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 43.298182778060436,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d60ddf4e1d8a01e23582f9fc4e2d6ace96f217979628db1fce13b5667b8a4964",
+      "text": "{\n  \"accepted_answers\": [\n    \"Golden Raspberry Award for Worst Actress\",\n    \"Nobel Prize in Physics\"\n  ],\n  \"explanation\": \"Both answers are explicitly supported by the source texts. D1S1 and D1S2 state Halvor Solberg was nominated for the 'Golden Raspberry Award for Worst Actress'. D2S15 states he was nominated for the 'Nobel Prize in Physics' in 1934. The documents present these as distinct facts about the same individual (or potentially distinct referents with the same name, though the prompt asks for all valid nominations found), so both should be retained as per the instruction to preserve distinct valid referents and not collapse multi-answer questions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0334.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Golden Raspberry Award for Worst Actress",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Nobel Prize in Physics",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Golden Raspberry Award for Worst Actress",
+      "Nobel Prize in Physics"
+    ],
+    "explanation": "Both answers are explicitly supported by the source texts. D1S1 and D1S2 state Halvor Solberg was nominated for the 'Golden Raspberry Award for Worst Actress'. D2S15 states he was nominated for the 'Nobel Prize in Physics' in 1934. The documents present these as distinct facts about the same individual (or potentially distinct referents with the same name, though the prompt asks for all valid nominations found), so both should be retained as per the instruction to preserve distinct valid referents and not collapse multi-answer questions."
+  },
+  "diagnostics": {},
+  "row_sha256": "2abf925d0552a63791ba9d373d7ae1235cb2b890d75b5facf95aee5c9492972e"
+}

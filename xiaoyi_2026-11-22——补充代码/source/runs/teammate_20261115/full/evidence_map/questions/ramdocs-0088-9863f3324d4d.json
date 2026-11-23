@@ -1,0 +1,259 @@
+{
+  "question_id": "ramdocs-0088-9863f3324d4d",
+  "method": "evidence_map",
+  "input_sha256": "954d05b21d90438fb13441b735cd0bd0b958bec24621521d71709b0e95dde906",
+  "accepted_answers": [
+    "film",
+    "2009",
+    "Novel"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "A Single Man",
+        "sense": "film",
+        "answers": [
+          "film",
+          "2009"
+        ],
+        "date": "2009",
+        "sources": [
+          1,
+          2,
+          3
+        ],
+        "independent_sources": 3,
+        "basis": "3 independent sources agree"
+      },
+      {
+        "entity": "A Single Man",
+        "sense": "not stated",
+        "answers": [
+          "Novel"
+        ],
+        "date": "not stated",
+        "sources": [
+          5
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "A Single Man, film: film / 2009 (as of 2009) [1, 2, 3]. Basis: 3 independent sources agree.\nA Single Man: Novel [5]. Basis: one source.",
+    "ask_back": "Did you mean A Single Man (film) or A Single Man?",
+    "calls": 8,
+    "prompt_tokens": 5175,
+    "completion_tokens": 475,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 698,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 731,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 806,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 771,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 603,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "A Single Man",
+              "sense": "film",
+              "answer": "2009",
+              "as_of": "2009",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Single Man is a 2009 American drama film... \"",
+              "claim": "A Single Man is a 2009 film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "A Single Man",
+              "sense": "film",
+              "answer": "film",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Single Man review\". A. V. Club. Archived from the original on December 13, 2009.",
+              "claim": "A Single Man is a film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "A Single Man",
+              "sense": "not stated",
+              "answer": "film",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Single Man ( 2009 )\"",
+              "claim": "A Single Man is a film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 5,
+              "entity": "A Single Man",
+              "sense": "not stated",
+              "answer": "Novel",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": ". medium.com “ The Man Who Wasn’t There ” ( 2001 ) My Coen Brothers Top Ten — Vol 8. medium.com Book Review Literature Reviews Books Literary Writing",
+              "claim": "A Single Man is a Novel.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "A Single Man",
+            "sense": "film",
+            "sense_unknown": false,
+            "answer": "film",
+            "date": "2009",
+            "cards": [
+              1,
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2,
+              3
+            ],
+            "independent": 3
+          },
+          {
+            "entity": "A Single Man",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Novel",
+            "date": "not stated",
+            "cards": [
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              5
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "film",
+          "b": "Novel",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

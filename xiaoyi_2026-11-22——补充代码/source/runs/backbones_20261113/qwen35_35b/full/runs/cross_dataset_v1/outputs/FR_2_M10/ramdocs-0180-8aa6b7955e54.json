@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0180-8aa6b7955e54",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Missouri",
+    "Texas"
+  ],
+  "requests": [
+    {
+      "key": "d84e627191ff5b17be9fbe3893a406fdff3874fd0a86eeab656cf63f2a37d864",
+      "usage": {
+        "prompt_tokens": 4085,
+        "total_tokens": 4243,
+        "completion_tokens": 158,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.866490222513676,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d84e627191ff5b17be9fbe3893a406fdff3874fd0a86eeab656cf63f2a37d864",
+      "text": "{\n  \"accepted_answers\": [\n    \"Missouri\",\n    \"Texas\"\n  ],\n  \"explanation\": \"The query asks for the state location of 'Van Horn High School'. The source documents explicitly identify two distinct entities sharing this name: 1) Van Horn High School in Independence, Missouri (supported by D1S1, D1S3, D2S1, D2S2), and 2) Van Horn High School in Van Horn, Texas (supported by D4S1, D4S2). The instruction to 'Keep supported alternate referents' and 'Distinct valid namesakes... may coexist' requires listing both states as valid answers rather than selecting a single 'winner'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0180-8aa6b7955e54.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0180-8aa6b7955e54.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Missouri",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Texas",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Missouri",
+      "Texas"
+    ],
+    "explanation": "The query asks for the state location of 'Van Horn High School'. The source documents explicitly identify two distinct entities sharing this name: 1) Van Horn High School in Independence, Missouri (supported by D1S1, D1S3, D2S1, D2S2), and 2) Van Horn High School in Van Horn, Texas (supported by D4S1, D4S2). The instruction to 'Keep supported alternate referents' and 'Distinct valid namesakes... may coexist' requires listing both states as valid answers rather than selecting a single 'winner'."
+  },
+  "diagnostics": {},
+  "row_sha256": "e564093a3d00b9e1af979d13480487fa049b631e1f46f1452e053863efe84510"
+}

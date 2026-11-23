@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "title": "Bounded source IDs and defense agreement",
+  "drop_scope": false,
+  "drop_conflict": false,
+  "slot_match": true,
+  "allow_uncertain_conflict": false,
+  "combine": "intersection",
+  "reverse_selection": true,
+  "aliases": false,
+  "use_audits": true,
+  "prompts": {
+    "J_A": "Start from precise requested relation. Judge all candidate answers, including old R5 and new proposals, symmetrically. Use an actual supporting source ID, not just a sentence with a nearby word. A direct relation can still be a false assertion: keep conflict and semantic fit separate.",
+    "J_B": "Act as an independent-prompt defender of each candidate. Search every allowed namesake for positive support before calling a role error. A source explicitly saying a person plays rugby supports that sport. Missing credibility metadata is not wrong_argument. Return direct only for the requested relation; UK Albums Chart does not define the band or song whose debut is mentioned.",
+    "M07": "Review every candidate independently against all originals; keep all and only answers that fill the precise requested relation. Retain every valid namesake and complementary answer; no arbitrary answer limit.",
+    "M08": "Review every candidate independently against all originals; keep all and only answers that fill the precise requested relation. Retain every valid namesake and complementary answer; no arbitrary answer limit.",
+    "M10": "The prior audits may wrongly call a supporting sentence an exclusion. Verify directly against original sources. Keep valid R5 strings and all valid referents; add genuinely missing answers. Do not select only one favorite interpretation, and do not adopt incidental chart/location facts. Give a concise final list and explanation."
+  }
+}

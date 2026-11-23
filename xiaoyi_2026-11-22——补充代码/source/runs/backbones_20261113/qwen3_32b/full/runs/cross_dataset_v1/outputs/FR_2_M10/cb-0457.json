@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0457",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Governor of Shiga Prefecture",
+    "Chief of the Metropolitan Police Department of the District of Columbia"
+  ],
+  "requests": [
+    {
+      "key": "1bb28e7510d27caea81b199bc182d7cfe0e992e8b23b0adcb21151a3ba87444f",
+      "usage": {
+        "prompt_tokens": 4246,
+        "total_tokens": 4390,
+        "completion_tokens": 144,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 16.546668458729982,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1bb28e7510d27caea81b199bc182d7cfe0e992e8b23b0adcb21151a3ba87444f",
+      "text": "{\n  \"accepted_answers\": [\n    \"Governor of Shiga Prefecture\",\n    \"Chief of the Metropolitan Police Department of the District of Columbia\"\n  ],\n  \"explanation\": \"Two distinct positions are supported by the provided sources. Document D1S3 directly supports 'Governor of Shiga Prefecture' as Yukiko Kada's current position. Document D2S3 introduces a conflicting but distinct claim that she has been appointed as 'Chief of the Metropolitan Police Department of the District of Columbia.' These are separate roles held by the same individual at different times or in different jurisdictions. Both are valid based on the source texts and should be included unless further disambiguation is provided.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0457.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0457.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Governor of Shiga Prefecture",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Chief of the Metropolitan Police Department of the District of Columbia",
+      "origin": "proposal"
+    },
+    {
+      "id": "C2",
+      "answer": "Chief of the Metropolitan Police Department",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Governor of Shiga Prefecture",
+      "Chief of the Metropolitan Police Department of the District of Columbia"
+    ],
+    "explanation": "Two distinct positions are supported by the provided sources. Document D1S3 directly supports 'Governor of Shiga Prefecture' as Yukiko Kada's current position. Document D2S3 introduces a conflicting but distinct claim that she has been appointed as 'Chief of the Metropolitan Police Department of the District of Columbia.' These are separate roles held by the same individual at different times or in different jurisdictions. Both are valid based on the source texts and should be included unless further disambiguation is provided."
+  },
+  "diagnostics": {},
+  "row_sha256": "159221226e0d34d033b850a3186fb1fc266d98572d990c3ce5c4d01310fef6ef"
+}

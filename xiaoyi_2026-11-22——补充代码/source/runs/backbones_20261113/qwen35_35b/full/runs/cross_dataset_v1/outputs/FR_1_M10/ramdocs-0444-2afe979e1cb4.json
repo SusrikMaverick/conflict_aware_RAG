@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0444-2afe979e1cb4",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Labor Party",
+    "UK Labour Party",
+    "Conservative Party"
+  ],
+  "requests": [
+    {
+      "key": "b8e2de35525aaa51566446fda90c952a73d7547dc7025414e94881822cd85422",
+      "usage": {
+        "prompt_tokens": 4524,
+        "total_tokens": 4757,
+        "completion_tokens": 233,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.08014428243041,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b8e2de35525aaa51566446fda90c952a73d7547dc7025414e94881822cd85422",
+      "text": "{\n  \"accepted_answers\": [\n    \"Labor Party\",\n    \"UK Labour Party\",\n    \"Conservative Party\"\n  ],\n  \"explanation\": \"The query asks for the political party of 'John Harman'. The source documents describe three distinct individuals named John Harman:\\n1. **John Joseph Harman (Australian politician)**: Document D1S1 explicitly states he was a 'Labor Party member' (Answer: Labor Party).\\n2. **Sir John Andrew Harman (British politician)**: Document D3S6 and D4S3 state he became a member of the 'UK Labour Party' (Answer: UK Labour Party).\\n3. **John Harman (American Civil War era)**: Document D5S8 states he became a delegate to the 'Conservative Party convention' (Answer: Conservative Party).\\n\\nThe 'Liberal Party' (Candidate C3) is associated with 'John Graham' in Document D2S1, not John Harman, and is therefore excluded. The three accepted answers correspond to distinct valid referents found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0444-2afe979e1cb4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0444-2afe979e1cb4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Labor Party",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "UK Labour Party",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Conservative Party",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Liberal Party",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Labor Party",
+      "UK Labour Party",
+      "Conservative Party"
+    ],
+    "explanation": "The query asks for the political party of 'John Harman'. The source documents describe three distinct individuals named John Harman:\n1. **John Joseph Harman (Australian politician)**: Document D1S1 explicitly states he was a 'Labor Party member' (Answer: Labor Party).\n2. **Sir John Andrew Harman (British politician)**: Document D3S6 and D4S3 state he became a member of the 'UK Labour Party' (Answer: UK Labour Party).\n3. **John Harman (American Civil War era)**: Document D5S8 states he became a delegate to the 'Conservative Party convention' (Answer: Conservative Party).\n\nThe 'Liberal Party' (Candidate C3) is associated with 'John Graham' in Document D2S1, not John Harman, and is therefore excluded. The three accepted answers correspond to distinct valid referents found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "ee24cb480ff367d9da20f76e295def61f8e4e6db6fcee6b58994499d99b82549"
+}

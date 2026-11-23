@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0480",
+  "method": "evidence_map_memory",
+  "input_sha256": "f6d008567d8fac5cb0c959ba85934f079c51876f1c8e76e9700b58a788e34371",
+  "accepted_answers": [
+    "Lieutenant Governor of Ontario",
+    "procurador en Cortes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Donald Alexander Macdonald",
+        "sense": "not stated",
+        "answers": [
+          "Lieutenant Governor of Ontario"
+        ],
+        "date": "1875-1880",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Donald Alexander Macdonald",
+        "sense": "not stated",
+        "answers": [
+          "procurador en Cortes"
+        ],
+        "date": "1943 to 1977",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Donald Alexander Macdonald: Lieutenant Governor of Ontario (as of 1875-1880) [1]. Basis: one source.\nDonald Alexander Macdonald: procurador en Cortes (as of 1943 to 1977) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 3011,
+    "completion_tokens": 408,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1108,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 516,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Politician",
+          "answer": "Former Member of Parliament for Prince George-Bulkley North",
+          "confidence": 70
+        },
+        {
+          "about": "Sports",
+          "answer": "Former professional ice hockey player",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Donald Alexander Macdonald",
+              "sense": "not stated",
+              "answer": "Lieutenant Governor of Ontario",
+              "as_of": "1875-1880",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Donald Alexander Macdonald, held the esteemed position of Lieutenant Governor of Ontario from 1875 to 1880.",
+              "claim": "Donald Alexander Macdonald held the position of Lieutenant Governor of Ontario from 1875 to 1880.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Donald Alexander Macdonald",
+              "sense": "not stated",
+              "answer": "procurador en Cortes",
+              "as_of": "1943 to 1977",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1943, he was appointed as a procurador en Cortes, a member of the Cortes Españolas.",
+              "claim": "Donald Alexander Macdonald held the position of procurador en Cortes from 1943 to 1977.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Donald Alexander Macdonald",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Lieutenant Governor of Ontario",
+            "date": "1875-1880",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Donald Alexander Macdonald",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "procurador en Cortes",
+            "date": "1943 to 1977",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Lieutenant Governor of Ontario",
+          "b": "procurador en Cortes",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,57 @@
+{
+  "question_id": "cb-0126",
+  "method": "D4",
+  "status": "answered",
+  "accepted_answers": [
+    "Georgia Tech",
+    "Physikalisch-Technische Bundesanstalt",
+    "PTB",
+    "School of Materials Science and Engineering"
+  ],
+  "requests": [
+    {
+      "key": "0a4aeb379992fd5fe51db8bbc902f4f24496c48c21780c1666d65039b76050bb",
+      "usage": {
+        "prompt_tokens": 2970,
+        "total_tokens": 3662,
+        "completion_tokens": 692,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 92.99690337851644,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "0a4aeb379992fd5fe51db8bbc902f4f24496c48c21780c1666d65039b76050bb",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"Physikalisch-Technische Bundesanstalt\", \"support_1\": \"D2S2\", \"support_2\": \"D2S3\"}, \"A1\": {\"answer\": \"PTB\", \"support_1\": \"D2S2\", \"support_2\": \"D2S3\"}, \"A2\": {\"answer\": \"School of Materials Science and Engineering\", \"support_1\": \"D1S7\", \"support_2\": \"D1S7\"}, \"A3\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S2\", \"support_2\": \"D1S4\"}, \"A4\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S7\", \"support_2\": \"D1S7\"}, \"A5\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S9\", \"support_2\": \"D1S9\"}, \"A6\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S11\", \"support_2\": \"D1S11\"}, \"A7\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S13\", \"support_2\": \"D1S13\"}, \"A8\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S17\", \"support_2\": \"D1S17\"}, \"A9\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S18\", \"support_2\": \"D1S18\"}, \"A10\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S19\", \"support_2\": \"D1S19\"}, \"A11\": {\"answer\": \"Georgia Tech\", \"support_1\": \"D1S14\", \"support_2\": \"D1S15\"}},\"explanation\": \"The initial answer already includes 'Georgia Tech' and 'Physikalisch-Technische Bundesanstalt'. The sources confirm these two entities as the primary employers. No other distinct organizations or namesakes are mentioned as employers. The 'School of Materials Science and Engineering' is a department within Georgia Tech, not a separate employer. Therefore, no new valid answers are missing from the initial list. The serialization below reflects the requirement to return additions only if they are missing; since none are missing, all slots are filled with empty strings as per the instruction 'Do not invent additions to fill unused slots' and 'Return no additions if none is established.' However, the prompt asks to 'Serialize up to 12 additions... For each UNUSED slot use empty strings'. Since there are NO valid additions to make, all slots A0-A11 should be empty. The previous thought process incorrectly assumed I needed to re-list existing ones. The correct action is to return empty slots because no *new* information is found.\\n\\nCorrection: The initial answer contains 'Georgia Tech' and 'Physikalisch-Technische Bundesanstalt'. The sources confirm these. There are no other valid employers mentioned. Thus, there are zero valid additions. All slots A0-A11 must be empty strings.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0126.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0126.json"
+  ],
+  "additions": [
+    {
+      "answer": "PTB",
+      "support_ids": [
+        "D2S2",
+        "D2S3"
+      ]
+    },
+    {
+      "answer": "School of Materials Science and Engineering",
+      "support_ids": [
+        "D1S7",
+        "D1S7"
+      ]
+    }
+  ],
+  "aux_issues": [],
+  "row_sha256": "65db4b7f88ae0de1b5ed6ef5f09095431e1f073ae95cf2ac26e40c1ae4d99ccc"
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0456-eb264d1e0299",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Larry Brand",
+    "Tate Taylor",
+    "André Téchiné"
+  ],
+  "requests": [
+    {
+      "key": "e1e34d61d1648be75a152241c3b8e768f13188664d28b04623459381a92ae920",
+      "usage": {
+        "prompt_tokens": 4381,
+        "total_tokens": 4597,
+        "completion_tokens": 216,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 153.3401671126485,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e1e34d61d1648be75a152241c3b8e768f13188664d28b04623459381a92ae920",
+      "text": "{\n  \"accepted_answers\": [\"Larry Brand\", \"Tate Taylor\", \"André Téchiné\"],\n  \"explanation\": \"The question asks for the director of \\\"The Girl on the Train,\\\" which is ambiguous because there are three distinct films with the same title: (1) *The Girl on the Train* (2013 film), directed by **Larry Brand** (D1S1); (2) *The Girl on the Train* (2016 film), directed by **Tate Taylor** (D4S1); and (3) *The Girl on the Train* (2009 film), directed by **André Téchiné** (D5S3). Each film is independently documented and distinct in year, cast, and production. The question does not specify a year or disambiguate the title, so all three directors are valid answers for their respective films. Candidate C3 (Quentin Tarantino) is invalid due to incorrect argumentation in D3S1.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0456-eb264d1e0299.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Larry Brand",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tate Taylor",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "André Téchiné",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Quentin Tarantino",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Larry Brand",
+      "Tate Taylor",
+      "André Téchiné"
+    ],
+    "explanation": "The question asks for the director of \"The Girl on the Train,\" which is ambiguous because there are three distinct films with the same title: (1) *The Girl on the Train* (2013 film), directed by **Larry Brand** (D1S1); (2) *The Girl on the Train* (2016 film), directed by **Tate Taylor** (D4S1); and (3) *The Girl on the Train* (2009 film), directed by **André Téchiné** (D5S3). Each film is independently documented and distinct in year, cast, and production. The question does not specify a year or disambiguate the title, so all three directors are valid answers for their respective films. Candidate C3 (Quentin Tarantino) is invalid due to incorrect argumentation in D3S1."
+  },
+  "diagnostics": {},
+  "row_sha256": "3e8acfbfb5e943836fe754b1ffdb5dd63b3b959257cd1510841f6247ca8c1af7"
+}

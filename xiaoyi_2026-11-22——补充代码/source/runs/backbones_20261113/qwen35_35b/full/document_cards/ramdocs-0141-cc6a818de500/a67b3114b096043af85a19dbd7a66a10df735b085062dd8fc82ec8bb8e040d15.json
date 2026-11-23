@@ -1,0 +1,121 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "b6e1cdbb04cc8a950ba8a1fac3b4cc22064d8134e4bc02fb73ea7be665a7d5f6",
+  "input": {
+    "question_id": "ramdocs-0141-cc6a818de500",
+    "question": "What sport is Richard Leach associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0141-cc6a818de500:d03",
+        "text": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player. Leach was an all-state quarterback at Flint Southwestern High School in 1974 before enrolling at the University of Michigan in 1975. He was Michigan's starting quarterback for four consecutive years from 1975 to 1978, leading the Wolverines to three consecutive Big Ten Conference championships and three appearances in the Rose Bowl. As a senior in 1978, he won the Chicago Tribune Silver Football trophy as the most valuable player in the Big Ten, was selected as a first-team All-American,"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0141-cc6a818de500",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "baseball",
+      "college football"
+    ],
+    "citations": [
+      {
+        "answer": "baseball",
+        "doc_id": "ramdocs-0141-cc6a818de500:d03",
+        "quote": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player."
+      },
+      {
+        "answer": "college football",
+        "doc_id": "ramdocs-0141-cc6a818de500:d03",
+        "quote": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "baseball",
+        "entity": "Richard Leach",
+        "scope": "professional career",
+        "claim": "Richard Max \"Rick\" Leach is a former college football player and professional baseball player.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player.",
+        "span_start": 0,
+        "span_end": 135,
+        "doc_id": "ramdocs-0141-cc6a818de500:d03",
+        "card_id": "ramdocs-0141-cc6a818de500:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "college football",
+        "entity": "Richard Leach",
+        "scope": "college career",
+        "claim": "Richard Max \"Rick\" Leach is a former college football player.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player.",
+        "span_start": 0,
+        "span_end": 135,
+        "doc_id": "ramdocs-0141-cc6a818de500:d03",
+        "card_id": "ramdocs-0141-cc6a818de500:d03:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 135,
+        "text": "Rick Leach (baseball) Richard Max \"Rick\" Leach (born May 4, 1957) is a former college football player and professional baseball player."
+      },
+      {
+        "id": "s1",
+        "start": 136,
+        "end": 268,
+        "text": "Leach was an all-state quarterback at Flint Southwestern High School in 1974 before enrolling at the University of Michigan in 1975."
+      },
+      {
+        "id": "s2",
+        "start": 269,
+        "end": 470,
+        "text": "He was Michigan's starting quarterback for four consecutive years from 1975 to 1978, leading the Wolverines to three consecutive Big Ten Conference championships and three appearances in the Rose Bowl."
+      },
+      {
+        "id": "s3",
+        "start": 471,
+        "end": 628,
+        "text": "As a senior in 1978, he won the Chicago Tribune Silver Football trophy as the most valuable player in the Big Ten, was selected as a first-team All-American,"
+      }
+    ],
+    "requests": [
+      {
+        "key": "76d78857189184508025922eee60f9992d3d0371e8fac106eba02d00d98727b7",
+        "usage": {
+          "prompt_tokens": 431,
+          "total_tokens": 576,
+          "completion_tokens": 145,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.18049264699221,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

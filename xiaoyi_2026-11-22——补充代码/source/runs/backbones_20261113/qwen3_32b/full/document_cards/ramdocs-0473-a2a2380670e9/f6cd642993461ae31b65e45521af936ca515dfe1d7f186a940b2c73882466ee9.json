@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "1798ddae0f838d6bc1a04905bf9a936ededc81cba5eeb633c17a2f3ff23566b6",
+  "input": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "question": "What is the median age in Rushford?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0473-a2a2380670e9:d01",
+        "text": "living with them , 50.8 % were married couples living together , 10.9 % had a female householder with no husband present , 2.8 % had a male householder with no wife present , and 35.4 % were non-families . 30.9 % of all households were made up of individuals and 17.3 % had someone living alone who was 65 years of age or older . The average household size was 2.35 and the average family size was 2.93 . The median age in the city was 41.9 years . 24.1 % of residents were under the age of 18"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "41.9 years"
+    ],
+    "citations": [
+      {
+        "answer": "41.9 years",
+        "doc_id": "ramdocs-0473-a2a2380670e9:d01",
+        "quote": "The median age in the city was 41.9 years ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "41.9 years",
+        "entity": "median age",
+        "scope": "Rushford",
+        "claim": "The median age in Rushford is 41.9 years.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The median age in the city was 41.9 years .",
+        "span_start": 405,
+        "span_end": 448,
+        "doc_id": "ramdocs-0473-a2a2380670e9:d01",
+        "card_id": "ramdocs-0473-a2a2380670e9:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 205,
+        "text": "living with them , 50.8 % were married couples living together , 10.9 % had a female householder with no husband present , 2.8 % had a male householder with no wife present , and 35.4 % were non-families ."
+      },
+      {
+        "id": "s1",
+        "start": 206,
+        "end": 329,
+        "text": "30.9 % of all households were made up of individuals and 17.3 % had someone living alone who was 65 years of age or older ."
+      },
+      {
+        "id": "s2",
+        "start": 330,
+        "end": 404,
+        "text": "The average household size was 2.35 and the average family size was 2.93 ."
+      },
+      {
+        "id": "s3",
+        "start": 405,
+        "end": 448,
+        "text": "The median age in the city was 41.9 years ."
+      },
+      {
+        "id": "s4",
+        "start": 449,
+        "end": 493,
+        "text": "24.1 % of residents were under the age of 18"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d3243a3324edbf65e9126b9e2e86f8038ecdf0120685ef4376f6a18f2f5ce577",
+        "usage": {
+          "prompt_tokens": 437,
+          "total_tokens": 493,
+          "completion_tokens": 56,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 113.88193043321371,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

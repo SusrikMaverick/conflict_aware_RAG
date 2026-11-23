@@ -1,0 +1,171 @@
+{
+  "question_id": "ramdocs-0112-db975a26510d",
+  "method": "evidence_map",
+  "input_sha256": "b97c2b3d59768ecf4ec7130da4d8ee1e0c082042d6bde7b68ca15632a9b67e34",
+  "accepted_answers": [
+    "April 1958",
+    "June 1936"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Time-Life Building",
+        "sense": "construction start",
+        "answers": [
+          "April 1958"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "9 Rockefeller Plaza",
+        "sense": "construction start",
+        "answers": [
+          "June 1936"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Time-Life Building, construction start: April 1958 [1]. Basis: one source.\n9 Rockefeller Plaza, construction start: June 1936 [2]. Basis: one source.",
+    "ask_back": "Did you mean Time-Life Building (construction start) or 9 Rockefeller Plaza (construction start)?",
+    "calls": 4,
+    "prompt_tokens": 2058,
+    "completion_tokens": 320,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 702,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 505,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Time-Life Building",
+              "sense": "not stated",
+              "answer": "April 1958",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Americas. Construction on the Time-Life Building's steelwork started in April 1958, and the structure topped out in November of that year.",
+              "claim": "Construction on the Time-Life Building's steelwork started in April 1958.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "the Time-Life Building",
+              "sense": "not stated",
+              "answer": "June 1936",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Excavation for a new building at 1 Rockefeller Plaza, numbered 9 Rockefeller Plaza at the time, started in June 1936.",
+              "claim": "Excavation for the Time-Life Building started in June 1936.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Time-Life Building",
+            "sense": "construction start",
+            "sense_unknown": false,
+            "answer": "April 1958",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "9 Rockefeller Plaza",
+            "sense": "construction start",
+            "sense_unknown": false,
+            "answer": "June 1936",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "April 1958",
+          "b": "June 1936",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

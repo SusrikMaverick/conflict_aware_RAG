@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "b496d1b71893673143667de18ffb27a0cd52a9ef01079d031706586d18987674",
+  "input": {
+    "question_id": "ramdocs-0407-dc7e1db5c944",
+    "question": "When was the Douglas County Courthouse built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0407-dc7e1db5c944:d06",
+        "text": "significant example of the French Renaissance Revival style , and marked a professional milestone in the career trajectory of its architect , John Latenser , Sr . The current Douglas County is the third in the county ’ s history . The first was opened in 1858 and , though found to be too small only a decade later , remained in use until 1885 . The second courthouse was used until the current one was finished in 1912 , when it was then torn down with some materials being reused in various projects around Omaha . In 1908 it"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0407-dc7e1db5c944",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1912"
+    ],
+    "citations": [
+      {
+        "answer": "1912",
+        "doc_id": "ramdocs-0407-dc7e1db5c944:d06",
+        "quote": "The second courthouse was used until the current one was finished in 1912 , when it was then torn down with some materials being reused in various projects around Omaha ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1912",
+        "entity": "Douglas County Courthouse",
+        "scope": "current",
+        "claim": "The current Douglas County Courthouse was finished in 1912.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The second courthouse was used until the current one was finished in 1912 , when it was then torn down with some materials being reused in various projects around Omaha .",
+        "span_start": 346,
+        "span_end": 516,
+        "doc_id": "ramdocs-0407-dc7e1db5c944:d06",
+        "card_id": "ramdocs-0407-dc7e1db5c944:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 162,
+        "text": "significant example of the French Renaissance Revival style , and marked a professional milestone in the career trajectory of its architect , John Latenser , Sr ."
+      },
+      {
+        "id": "s1",
+        "start": 163,
+        "end": 230,
+        "text": "The current Douglas County is the third in the county ’ s history ."
+      },
+      {
+        "id": "s2",
+        "start": 231,
+        "end": 345,
+        "text": "The first was opened in 1858 and , though found to be too small only a decade later , remained in use until 1885 ."
+      },
+      {
+        "id": "s3",
+        "start": 346,
+        "end": 516,
+        "text": "The second courthouse was used until the current one was finished in 1912 , when it was then torn down with some materials being reused in various projects around Omaha ."
+      },
+      {
+        "id": "s4",
+        "start": 517,
+        "end": 527,
+        "text": "In 1908 it"
+      }
+    ],
+    "requests": [
+      {
+        "key": "27784ca0b3d09921462fe1eb609c6fe2734c6f2a89e511680e3abfb247559cad",
+        "usage": {
+          "prompt_tokens": 411,
+          "total_tokens": 492,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 35.351390432566404,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

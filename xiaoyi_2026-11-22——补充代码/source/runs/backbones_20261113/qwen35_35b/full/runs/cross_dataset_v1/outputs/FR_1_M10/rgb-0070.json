@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0070",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "September 23, 2013"
+  ],
+  "requests": [
+    {
+      "key": "e5d81edeca751b76d9baa9c1e56841b8fda275bbfda1506d597ff3269d77f2e2",
+      "usage": {
+        "prompt_tokens": 1316,
+        "total_tokens": 1507,
+        "completion_tokens": 191,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 36.543742295354605,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e5d81edeca751b76d9baa9c1e56841b8fda275bbfda1506d597ff3269d77f2e2",
+      "text": "{\n  \"accepted_answers\": [\n    \"September 23, 2013\"\n  ],\n  \"explanation\": \"Source D2S1 states the first season premiered on 'September 23, 2013', which aligns with the actual historical premiere of the TV series *The Blacklist*. Source D3S1 claims 'September 3, 2003', which is factually incorrect (the show did not exist then) and likely a data error (typo in year). The fallible audits incorrectly label the slot as 'death_date' and treat both dates as equally valid 'same_referent' conflicts without verifying external truth or noting the impossibility of a 2003 premiere for a show debuting in 2013. Only the 2013 date is a valid answer for the premiere date.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0070.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0070.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "September 23, 2013",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "September 3, 2003",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "September 23, 2013"
+    ],
+    "explanation": "Source D2S1 states the first season premiered on 'September 23, 2013', which aligns with the actual historical premiere of the TV series *The Blacklist*. Source D3S1 claims 'September 3, 2003', which is factually incorrect (the show did not exist then) and likely a data error (typo in year). The fallible audits incorrectly label the slot as 'death_date' and treat both dates as equally valid 'same_referent' conflicts without verifying external truth or noting the impossibility of a 2003 premiere for a show debuting in 2013. Only the 2013 date is a valid answer for the premiere date."
+  },
+  "diagnostics": {},
+  "row_sha256": "74a6fd0d385c068f0e0e5a8706023ef0e3d2e684e6a6c5d29814ec599c0f9de1"
+}

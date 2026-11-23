@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "7938d937401174cedcb733ad752347cb8aa00ab141ede830e5d35258c4feb313",
+  "input": {
+    "question_id": "ramdocs-0396-8dc82e76946c",
+    "question": "What channel is NewsChannel 5 affiliated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0396-8dc82e76946c:d00",
+        "text": "KRGV-TV KRGV-TV, virtual channel 5 (VHF digital channel 13), is an ABC-affiliated television station licensed to Weslaco, Texas, United States and serving the Rio Grande Valley metropolitan area. The station is owned by the Manship family of Baton Rouge, Louisiana through Mobile Video Tapes, Inc., which often does business as KRGV-TV Corporation. KRGV's studios are located on East Expressway (I-2/US 83) in Weslaco, and its transmitter is located in Santa Maria, Texas. On cable, the station can be seen on Charter Spectrum channel 5. KRGV is also available on channel 5 on DirecTV and Dish Network. KRGV joined as a"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0396-8dc82e76946c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "ABC"
+    ],
+    "citations": [
+      {
+        "answer": "ABC",
+        "doc_id": "ramdocs-0396-8dc82e76946c:d00",
+        "quote": "KRGV-TV KRGV-TV, virtual channel 5 (VHF digital channel 13), is an ABC-affiliated television station licensed to Weslaco, Texas, United States and serving the Rio Grande Valley metropolitan area."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "ABC",
+        "entity": "NewsChannel 5",
+        "scope": "affiliation",
+        "claim": "NewsChannel 5 is affiliated with ABC.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "KRGV-TV KRGV-TV, virtual channel 5 (VHF digital channel 13), is an ABC-affiliated television station licensed to Weslaco, Texas, United States and serving the Rio Grande Valley metropolitan area.",
+        "span_start": 0,
+        "span_end": 195,
+        "doc_id": "ramdocs-0396-8dc82e76946c:d00",
+        "card_id": "ramdocs-0396-8dc82e76946c:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 195,
+        "text": "KRGV-TV KRGV-TV, virtual channel 5 (VHF digital channel 13), is an ABC-affiliated television station licensed to Weslaco, Texas, United States and serving the Rio Grande Valley metropolitan area."
+      },
+      {
+        "id": "s1",
+        "start": 196,
+        "end": 348,
+        "text": "The station is owned by the Manship family of Baton Rouge, Louisiana through Mobile Video Tapes, Inc., which often does business as KRGV-TV Corporation."
+      },
+      {
+        "id": "s2",
+        "start": 349,
+        "end": 472,
+        "text": "KRGV's studios are located on East Expressway (I-2/US 83) in Weslaco, and its transmitter is located in Santa Maria, Texas."
+      },
+      {
+        "id": "s3",
+        "start": 473,
+        "end": 537,
+        "text": "On cable, the station can be seen on Charter Spectrum channel 5."
+      },
+      {
+        "id": "s4",
+        "start": 538,
+        "end": 602,
+        "text": "KRGV is also available on channel 5 on DirecTV and Dish Network."
+      },
+      {
+        "id": "s5",
+        "start": 603,
+        "end": 619,
+        "text": "KRGV joined as a"
+      }
+    ],
+    "requests": [
+      {
+        "key": "5c72942fb888e096a60f58cafb31fa1582ac1ce43811e7fce4bb738e733b6752",
+        "usage": {
+          "prompt_tokens": 462,
+          "total_tokens": 510,
+          "completion_tokens": 48,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 101.84816750884056,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

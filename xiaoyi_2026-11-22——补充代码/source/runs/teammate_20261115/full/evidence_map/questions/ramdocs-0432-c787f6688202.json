@@ -1,0 +1,197 @@
+{
+  "question_id": "ramdocs-0432-c787f6688202",
+  "method": "evidence_map",
+  "input_sha256": "74d513033b5e055a7a533c21a024d2f82239c31929bec9ec0302bf44c868d770",
+  "accepted_answers": [
+    "action-comedy",
+    "science fiction"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Collision Course (1989 film)",
+        "sense": "action-comedy",
+        "answers": [
+          "action-comedy"
+        ],
+        "date": "1989",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Collision Course (novel)",
+        "sense": "not stated",
+        "answers": [
+          "science fiction"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Collision Course (1989 film), action-comedy: action-comedy (as of 1989) [1]. Basis: one source.\nCollision Course (novel): science fiction [2]. Basis: one source.",
+    "ask_back": "Did you mean Collision Course (1989 film) (action-comedy) or Collision Course (novel)?",
+    "calls": 6,
+    "prompt_tokens": 3550,
+    "completion_tokens": 427,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 711,
+          "completion_tokens": 187,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 688,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 599,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Collision Course",
+              "sense": "1989 film",
+              "answer": "action-comedy",
+              "as_of": "1989",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Collision Course is a 1989 action-comedy film starring Jay Leno as a Detroit police officer and Pat Morita as a Japanese officer forced to work together to recover a Japanese turbocharger stolen by a thief played by Chris Sarandon.\"",
+              "claim": "Collision Course is an action-comedy film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Collision Course",
+              "sense": "not stated",
+              "answer": "science fiction",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Collision Course is a science fiction novel by American author Robert Silverberg, first published in hardcover in 1961 by Avalon Books and reprinted in paperback as an Ace Double later that year.\", \"An Italian translation was also published in 1961, and a German translation later appeared.\", \"Silverberg planned the novel as a serial for \"Astounding Science Fiction\", but John W. Campbell rejected the work and Silverberg eventually sold a shorter version to \"Amazing Stories\", where it appeared in 1959.\"",
+              "claim": "Collision Course is a science fiction novel.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Collision Course (1989 film)",
+            "sense": "action-comedy",
+            "sense_unknown": false,
+            "answer": "action-comedy",
+            "date": "1989",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Collision Course (novel)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "science fiction",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "action-comedy",
+          "b": "science fiction",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

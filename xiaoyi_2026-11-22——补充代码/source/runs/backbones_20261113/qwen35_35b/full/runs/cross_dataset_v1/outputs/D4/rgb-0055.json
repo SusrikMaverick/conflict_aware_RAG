@@ -1,0 +1,56 @@
+{
+  "question_id": "rgb-0055",
+  "method": "D4",
+  "status": "answered",
+  "accepted_answers": [
+    "November 17, 2019",
+    "Sunday, November 17",
+    "November 17, 2014"
+  ],
+  "requests": [
+    {
+      "key": "7565542cb8d400a811f4a493f908d0f28652265f623f81e19ffbc61373c43311",
+      "usage": {
+        "prompt_tokens": 967,
+        "total_tokens": 1478,
+        "completion_tokens": 511,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.04068413749337,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "7565542cb8d400a811f4a493f908d0f28652265f623f81e19ffbc61373c43311",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"Sunday, November 17\", \"support_1\": \"D1S2\", \"support_2\": \"D1S1\"}, \"A1\": {\"answer\": \"November 17, 2014\", \"support_1\": \"D3S1\", \"support_2\": \"D3S1\"}, \"A2\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A3\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A4\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A5\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A6\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A7\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A8\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A9\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A10\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A11\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}}, \"explanation\": \"The initial answer 'November 17, 2019' is supported by D1S1, D1S2, and D2S1. However, D3S1 explicitly states a conflicting date of 'November 17, 2014'. Since the prompt asks to find valid answers missing from the initial answer based on supplied segments (including potential different valid namesakes or scopes, though here it appears to be a data conflict), the 2014 date is a distinct claim present in the sources that was not included in the initial answer. Additionally, 'Sunday, November 17' (from D1S2) provides a slightly more specific format (day of week) than the initial answer, though it refers to the same event. Given the instruction to find valid answers missing from the initial answer, both the alternative year (2014) and the day-of-week format are added as they represent distinct textual claims found in the source segments that were not in the initial set.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0055.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0055.json"
+  ],
+  "additions": [
+    {
+      "answer": "Sunday, November 17",
+      "support_ids": [
+        "D1S2",
+        "D1S1"
+      ]
+    },
+    {
+      "answer": "November 17, 2014",
+      "support_ids": [
+        "D3S1",
+        "D3S1"
+      ]
+    }
+  ],
+  "aux_issues": [],
+  "row_sha256": "c30c575f5db899627327909ce7decbc293d0ef0f9325b9b5c0b63500503c869f"
+}

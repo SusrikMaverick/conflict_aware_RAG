@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0250",
+  "method": "evidence_map",
+  "input_sha256": "34902f30818171f69295010c2e1d307d5facafdab51670058fa99d9e1ab79cce",
+  "accepted_answers": [
+    "Autonomous University of Barcelona",
+    "University of Fort Hare East London Campus"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Montserrat Estruch",
+        "sense": "education",
+        "answers": [
+          "Autonomous University of Barcelona"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "University of Fort Hare East London Campus",
+        "sense": "education",
+        "answers": [
+          "University of Fort Hare East London Campus"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Montserrat Estruch, education: Autonomous University of Barcelona [1]. Basis: one source.\nUniversity of Fort Hare East London Campus, education: University of Fort Hare East London Campus [2]. Basis: one source.",
+    "ask_back": "Did you mean Montserrat Estruch (education) or University of Fort Hare East London Campus (education)?",
+    "calls": 4,
+    "prompt_tokens": 2309,
+    "completion_tokens": 300,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 745,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 922,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 492,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Montserrat Estruch",
+              "sense": "not stated",
+              "answer": "Autonomous University of Barcelona",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Montserrat Estruch attended the Autonomous University of Barcelona, a public university located in Barcelona, Catalonia, Spain.",
+              "claim": "Montserrat Estruch attended the Autonomous University of Barcelona.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Montserrat Estruch",
+              "sense": "not stated",
+              "answer": "University of Fort Hare East London Campus",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The University of Fort Hare East London Campus, with its rich cultural heritage and vibrant student body, had provided the perfect backdrop for her exploration.",
+              "claim": "Montserrat Estruch attended the University of Fort Hare East London Campus.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Montserrat Estruch",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Autonomous University of Barcelona",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "University of Fort Hare East London Campus",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of Fort Hare East London Campus",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Autonomous University of Barcelona",
+          "b": "University of Fort Hare East London Campus",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

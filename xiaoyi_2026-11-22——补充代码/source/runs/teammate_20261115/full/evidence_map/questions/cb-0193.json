@@ -1,0 +1,181 @@
+{
+  "question_id": "cb-0193",
+  "method": "evidence_map",
+  "input_sha256": "44b92d35ac87ec3eaab295a80d51ca8d85f6b9ba9799268c0a57932b78501f5b",
+  "accepted_answers": [
+    "Ulrich III",
+    "Bodil Cappelen"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Agnes of Baden",
+        "sense": "spouse",
+        "answers": [
+          "Ulrich III"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Agnes of Baden",
+        "sense": "not stated",
+        "answers": [
+          "Bodil Cappelen"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Agnes of Baden, spouse: Ulrich III [1]. Basis: one source.\nAgnes of Baden: Bodil Cappelen [2]. Basis: one source.",
+    "ask_back": "Did you mean Agnes of Baden (spouse) or Agnes of Baden?",
+    "calls": 5,
+    "prompt_tokens": 3316,
+    "completion_tokens": 365,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1024,
+          "completion_tokens": 170,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 553,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 530,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Agnes of Baden",
+              "sense": "not stated",
+              "answer": "Ulrich III",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Agnes of Baden, and Ulrich III, the powerful Duke of Carinthia, embarked on a marriage that would shape the course of history.",
+              "claim": "Agnes of Baden's spouse was Ulrich III.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Agnes of Baden",
+              "sense": "not stated",
+              "answer": "Bodil Cappelen",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As she gazed into the flames, her mind wandered to her husband, Bodil Cappelen, who was sitting across from her, lost in thought.\" \"Bodil, my love,\" Agnes said, her voice barely above a whisper, \"what inspires you to create such beauty?\" Bodil looked up, their eyes locking onto Agnes's, and a soft smile spread across their face.",
+              "claim": "Agnes of Baden's spouse is Bodil Cappelen.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Agnes of Baden",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Ulrich III",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Agnes of Baden",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bodil Cappelen",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Ulrich III",
+          "b": "Bodil Cappelen",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different individuals named as Agnes of Baden's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

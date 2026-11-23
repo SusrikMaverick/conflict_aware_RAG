@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0321-13586ab0b0fb",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Jump5",
+    "Peter Andre",
+    "R.E.M."
+  ],
+  "requests": [
+    {
+      "key": "0a945f58be0611d1469a50f394a1a38cc512964e70ac306d4a1594a22df996dc",
+      "usage": {
+        "prompt_tokens": 5595,
+        "total_tokens": 5763,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 129.87823478877544,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0a945f58be0611d1469a50f394a1a38cc512964e70ac306d4a1594a22df996dc",
+      "text": "{\n  \"accepted_answers\": [\n    \"Jump5\",\n    \"Peter Andre\",\n    \"R.E.M.\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album \\\"Accelerate,\\\" and the provided sources show that there are three distinct albums named *Accelerate* by different artists: Jump5 (Document 1), Peter Andre (Document 2), and R.E.M. (Documents 3–5). Each source independently identifies its respective artist, and these are valid referents for the same album name. The audit confirms direct support for each of these claims. The candidate 'Lana Rey' is excluded because the source does not clearly identify her as the artist of an album titled *Accelerate*, and the context appears to describe modified versions of other songs rather than a full album.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0321-13586ab0b0fb.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Jump5",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Peter Andre",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "R.E.M.",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Lana Rey",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Jump5",
+      "Peter Andre",
+      "R.E.M."
+    ],
+    "explanation": "The question asks for the artist of the album \"Accelerate,\" and the provided sources show that there are three distinct albums named *Accelerate* by different artists: Jump5 (Document 1), Peter Andre (Document 2), and R.E.M. (Documents 3–5). Each source independently identifies its respective artist, and these are valid referents for the same album name. The audit confirms direct support for each of these claims. The candidate 'Lana Rey' is excluded because the source does not clearly identify her as the artist of an album titled *Accelerate*, and the context appears to describe modified versions of other songs rather than a full album."
+  },
+  "diagnostics": {},
+  "row_sha256": "8834266caf0f92f7ad8b7926f891523da8c9634273f7f8c4ecb7219abec040ac"
+}

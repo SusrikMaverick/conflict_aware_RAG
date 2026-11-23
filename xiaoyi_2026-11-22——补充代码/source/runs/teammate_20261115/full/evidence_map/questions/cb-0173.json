@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0173",
+  "method": "evidence_map",
+  "input_sha256": "f8466264cc049ad32d25dc7e8a5970ea028f42512671066c5ef888be9dc7dcfa",
+  "accepted_answers": [
+    "patent filing",
+    "Funeral Rites"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+        "sense": "patent filing",
+        "answers": [
+          "patent filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+        "sense": "Funeral Rites",
+        "answers": [
+          "Funeral Rites"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same, patent filing: patent filing [1]. Basis: one source.\nCompound, semiconductor material, and methods for manufacturing coating and semiconductor using the same, Funeral Rites: Funeral Rites [2]. Basis: one source.",
+    "ask_back": "Did you mean Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same (patent filing) or Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same (Funeral Rites)?",
+    "calls": 6,
+    "prompt_tokens": 4966,
+    "completion_tokens": 461,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 162,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1085,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 553,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1529,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 567,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+              "sense": "not stated",
+              "answer": "patent filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a significant development, a pioneering patent filing has sent shockwaves through the semiconductor industry, promising to transform the way coatings and semiconductors are manufactured.\"",
+              "claim": "A pioneering patent filing has sent shockwaves through the semiconductor industry, promising to transform the way coatings and semiconductors are manufactured.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+              "sense": "not stated",
+              "answer": "Funeral Rites",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same, a patented technology (US Patent 11450805), has been found to have an unexpected connection to the ancient and universal human ritual of funeral ceremonies.",
+              "claim": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same have an unexpected connection to the ancient and universal human ritual of funeral ceremonies.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "patent filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Funeral Rites",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Compound, semiconductor material, and methods for manufacturing coating and semiconductor using the same",
+          "sense": "not stated",
+          "answers": [
+            "patent filing",
+            "Funeral Rites"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a significant development, a pioneering patent filing has sent shockwaves through the semiconductor industry, promising to transform the way coatings and semiconductors are manufactured.",
+          "labels": {
+            "A": "patent filing",
+            "B": "Funeral Rites"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "patent filing",
+          "b": "Funeral Rites",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

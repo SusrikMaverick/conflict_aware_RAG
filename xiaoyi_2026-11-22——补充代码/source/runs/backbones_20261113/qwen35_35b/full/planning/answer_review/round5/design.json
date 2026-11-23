@@ -1,0 +1,27 @@
+{
+  "round": 5,
+  "epoch": 1794104086.0225472,
+  "theme": "Evidence-contrast recovery from sparse drafts; quarantine card suggestions and unsupported expansion",
+  "previous_method": "M08",
+  "use_previous": true,
+  "prompts": {
+    "B": "Form a fresh provisional answer from the exact relation in the original paragraphs, then compare it with the fallible previous answer. An empty or short draft is not evidence that the question is unanswerable. Recover a missing answer when substantive context or genuinely relevant background knowledge supports it. For each competing object, contrast what specifically supports it and what specifically contradicts it; mere mention and unfamiliarity are not contradictions. Do not combine incompatible objects just to cover the possibilities. When knowledge is unknown, reason from context without pretending a prior exists. Use one concise canonical name per distinct object, retaining legitimate multiple objects. Explain the decisive contrast in one short sentence.",
+    "C": "Temporarily set card suggestions aside and form a provisional answer from the question and full original paragraphs. Then inspect cards as possible reminders, not authoritative answer candidates. Admit a card suggestion only if its exact subject-relation-object assignment survives the conflicting evidence; quoting a false assertion does not establish truth. A discarded or empty previous draft may omit a valid answer: recover it from actual evidence, not from the desire to make the set larger. Prefer substantive contextual consistency over repetition, vivid prose or model agreement. Do not replace an already supported relation with a weaker incidental association. Return concise canonical names, one per distinct justified object, with one short explanation sentence.",
+    "J_A": "Perform a balanced evidence contrast for each candidate. A support document must assign this object to the asked relation; a counter must make a truly incompatible assignment for the same subject and scope. Do not label different-time, complementary, or incidental mentions as counterevidence. Unknown memory is neutral, and an empty earlier draft is not a rejection. Accept a contextually justified candidate after considering real competing claims; reject for a specific substantive mismatch, not merely because another model answer omitted it. Use uncertain for genuinely unresolved alternatives.",
+    "J_B": "Check both false admission and false exclusion. Challenge unsupported candidate expansion, especially objects suggested only by a card or a candidate list. At the same time, do not discard a direct answer solely because it is unfamiliar, absent from the prior, or phrased differently. Verify exact subject, relation and scope before treating a paragraph as supporting or contradicting it. A repeated edited-looking claim can still be false, but style alone cannot decide truth. Use the original contextual contrast and fallible relevant background facts, not agreement between generated answers.",
+    "F": "Return the smallest complete set of justified distinct answer objects after reviewing the original paragraphs. Smallest means no duplicate synonyms or irrelevant additions, not forced single-answer output. Do not reopen a rejected alternative merely because it appears in the candidate pool or has a quoted occurrence. Require an actual subject-relation-object justification that survives the competing evidence. Recover an omitted answer when audits rejected it only for unfamiliarity, empty prior or model disagreement. Preserve legitimate complementary objects; resolve incompatible claims rather than unioning them. Use concise canonical names and one short explanation sentence."
+  },
+  "methods": {
+    "M01": "Prior-guided document answer",
+    "M02": "Cards with prior challenge",
+    "M03": "Single-audit R5 filter",
+    "M04": "Two-audit R5 filter",
+    "M05": "Agreement-only R5 deletion",
+    "M06": "Single-audit candidate selection",
+    "M07": "Two-audit candidate selection",
+    "M08": "Two-answer intersection",
+    "M09": "Prior-answer intersection",
+    "M10": "Final contradiction adjudication"
+  },
+  "reason": "R4 intersection lowers wrong but omits answers; C and F amplify false alternatives. Test evidence-contrast recovery with card quarantine and no unsupported expansion; previous draft assistance explicitly bundled."
+}

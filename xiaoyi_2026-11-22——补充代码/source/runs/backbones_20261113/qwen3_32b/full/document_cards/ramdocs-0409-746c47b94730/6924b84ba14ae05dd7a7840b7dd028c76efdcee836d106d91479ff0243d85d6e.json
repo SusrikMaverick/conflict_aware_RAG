@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "01bdd97e275f3e9b6c513cb17d256a49adb2af5f08b564449be147303d1065e0",
+  "input": {
+    "question_id": "ramdocs-0409-746c47b94730",
+    "question": "What is the population of Osgood?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0409-746c47b94730:d02",
+        "text": "There were 5,000 people, 638 households, and 417 families living in the town. The population density was 1,120.0 inhabitants per square mile (432.4/km²). There were 728 housing units at an average density of 502.1 per square mile (193.9/km²). The racial makeup of the town was 98.2% White, 0.1% African American, 0.2% Native American, 0.1% from other races, and 1.5% from two or more races. Hispanic or Latino of any race were 1.3% of the population. There were 638 households."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0409-746c47b94730",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "5,000"
+    ],
+    "citations": [
+      {
+        "answer": "5,000",
+        "doc_id": "ramdocs-0409-746c47b94730:d02",
+        "quote": "There were 5,000 people, 638 households, and 417 families living in the town."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "5,000",
+        "entity": "population of Osgood",
+        "scope": "town",
+        "claim": "The population of Osgood was 5,000.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "There were 5,000 people, 638 households, and 417 families living in the town.",
+        "span_start": 0,
+        "span_end": 77,
+        "doc_id": "ramdocs-0409-746c47b94730:d02",
+        "card_id": "ramdocs-0409-746c47b94730:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 77,
+        "text": "There were 5,000 people, 638 households, and 417 families living in the town."
+      },
+      {
+        "id": "s1",
+        "start": 78,
+        "end": 153,
+        "text": "The population density was 1,120.0 inhabitants per square mile (432.4/km²)."
+      },
+      {
+        "id": "s2",
+        "start": 154,
+        "end": 242,
+        "text": "There were 728 housing units at an average density of 502.1 per square mile (193.9/km²)."
+      },
+      {
+        "id": "s3",
+        "start": 243,
+        "end": 390,
+        "text": "The racial makeup of the town was 98.2% White, 0.1% African American, 0.2% Native American, 0.1% from other races, and 1.5% from two or more races."
+      },
+      {
+        "id": "s4",
+        "start": 391,
+        "end": 450,
+        "text": "Hispanic or Latino of any race were 1.3% of the population."
+      },
+      {
+        "id": "s5",
+        "start": 451,
+        "end": 477,
+        "text": "There were 638 households."
+      }
+    ],
+    "requests": [
+      {
+        "key": "155803fcf6ffabb196249cbaaf798c24c9bb186242ec70e9f7b399bca554da11",
+        "usage": {
+          "prompt_tokens": 466,
+          "total_tokens": 523,
+          "completion_tokens": 57,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 146.3572960756719,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

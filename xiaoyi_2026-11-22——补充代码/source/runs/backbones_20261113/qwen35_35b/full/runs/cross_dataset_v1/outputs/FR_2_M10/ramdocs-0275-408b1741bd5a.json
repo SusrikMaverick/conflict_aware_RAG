@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0275-408b1741bd5a",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Family Brown",
+    "Jermaine Jackson"
+  ],
+  "requests": [
+    {
+      "key": "e548c2856700a959d1c75ad1ba57f37fed75896c59175da9e30c7a03903b39ba",
+      "usage": {
+        "prompt_tokens": 3245,
+        "total_tokens": 3409,
+        "completion_tokens": 164,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 32.872857350856066,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e548c2856700a959d1c75ad1ba57f37fed75896c59175da9e30c7a03903b39ba",
+      "text": "{\n  \"accepted_answers\": [\n    \"Family Brown\",\n    \"Jermaine Jackson\"\n  ],\n  \"explanation\": \"The query asks for the artist of the album 'Feel the Fire'. The provided documents contain two distinct valid referents for this album title: Document 1 (D1S1) identifies 'Family Brown' as the artist of the 1985 album 'Feel the Fire', while Document 4 (D4S1) identifies 'Jermaine Jackson' as the artist of his 1977 solo album also titled 'Feel the Fire'. As different artists can legitimately release works with identical titles, both 'Family Brown' and 'Jermaine Jackson' are correct answers based on the source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0275-408b1741bd5a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0275-408b1741bd5a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Family Brown",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jermaine Jackson",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Family Brown",
+      "Jermaine Jackson"
+    ],
+    "explanation": "The query asks for the artist of the album 'Feel the Fire'. The provided documents contain two distinct valid referents for this album title: Document 1 (D1S1) identifies 'Family Brown' as the artist of the 1985 album 'Feel the Fire', while Document 4 (D4S1) identifies 'Jermaine Jackson' as the artist of his 1977 solo album also titled 'Feel the Fire'. As different artists can legitimately release works with identical titles, both 'Family Brown' and 'Jermaine Jackson' are correct answers based on the source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "b91b3d191c48ca4e29ec48d405b3f78526b20f0b18abd4a8f3a792656fd94fc8"
+}

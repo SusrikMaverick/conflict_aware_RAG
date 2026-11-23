@@ -1,0 +1,294 @@
+{
+  "question_id": "ramdocs-0125-883ecb84e4bb",
+  "method": "evidence_map_memory",
+  "input_sha256": "94eeac1c3c1155247ade838a5166bea6fbc4d4442ea0bce4a37e88ae38071129",
+  "accepted_answers": [
+    "First Boer War",
+    "Second Boer War",
+    "Treaty of Vereeniging"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Pretoria Convention",
+        "sense": "not stated",
+        "answers": [
+          "First Boer War"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Treaty of Vereeniging",
+        "sense": "Second Boer War",
+        "answers": [
+          "Second Boer War",
+          "Treaty of Vereeniging"
+        ],
+        "date": "1902",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "Pretoria Convention: First Boer War [1]. Basis: one source.\nTreaty of Vereeniging, Second Boer War: Second Boer War and Treaty of Vereeniging (as of 1902) [2, 3]. Basis: complementary answers, merged.",
+    "ask_back": "Did you mean Pretoria Convention or Treaty of Vereeniging (Second Boer War)?",
+    "calls": 9,
+    "prompt_tokens": 5235,
+    "completion_tokens": 787,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 153,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 666,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 976,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 541,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 624,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Pretoria Peace Agreement",
+          "answer": "Second Boer War",
+          "confidence": 80
+        },
+        {
+          "about": "location",
+          "answer": "Pretoria, South Africa",
+          "confidence": 90
+        },
+        {
+          "about": "date",
+          "answer": "1902",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "First Boer War",
+              "sense": "not stated",
+              "answer": "First Boer War",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Pretoria Convention The Pretoria Convention was the peace treaty that ended the First Boer War (16 December 1880 to 23 March 1881) between the Transvaal Boers and the United Kingdom.",
+              "claim": "The First Boer War was ended by the Pretoria Convention.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Second Boer War",
+              "sense": "not stated",
+              "answer": "Second Boer War",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Treaty of Vereeniging (commonly referred to as Peace of Vereeniging) was the peace treaty, signed on 31 May 1902, that ended the Second Boer War between the South African Republic and the Republic of the Orange Free State, on the one side, and the United Kingdom on the other.",
+              "claim": "The Second Boer War was ended by the Treaty of Vereeniging.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Second Boer War",
+              "sense": "not stated",
+              "answer": "Treaty of Vereeniging",
+              "as_of": "1902",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Pretoria peace agreement may refer to : Pretoria Convention ( 1880–1881 ) : treaty that ended the First Boer War Treaty of Vereeniging ( 1902 ) : signed in Pretoria ; ended the Second Boer War",
+              "claim": "The Treaty of Vereeniging ended the Second Boer War.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Pretoria Convention",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "First Boer War",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Treaty of Vereeniging",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Second Boer War",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Treaty of Vereeniging",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Treaty of Vereeniging",
+            "date": "1902",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Treaty of Vereeniging",
+          "sense": "not stated",
+          "answers": [
+            "Second Boer War",
+            "Treaty of Vereeniging"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 3,
+          "quote": "Pretoria peace agreement may refer to : Pretoria Convention ( 1880–1881 ) : treaty that ended the First Boer War Treaty of Vereeniging ( 1902 ) : signed in Pretoria ; ended the Second Boer War",
+          "labels": {
+            "A": "Second Boer War",
+            "B": "Treaty of Vereeniging"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "First Boer War",
+          "b": "Second Boer War",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different wars."
+        },
+        {
+          "a": "First Boer War",
+          "b": "Treaty of Vereeniging",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Second Boer War",
+          "b": "Treaty of Vereeniging",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "Both answers refer to the same event, the Treaty of Vereeniging, but Answer A specifies it ended the Second Boer War while Answer B does not provide this specific detail."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 9
+}

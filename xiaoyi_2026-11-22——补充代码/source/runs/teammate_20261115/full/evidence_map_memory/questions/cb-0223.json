@@ -1,0 +1,211 @@
+{
+  "question_id": "cb-0223",
+  "method": "evidence_map_memory",
+  "input_sha256": "b60675c1a2d7a78ba4da902e87ff24b21ab83e1711da8753c909508c5c3f4dd5",
+  "accepted_answers": [
+    "Munich",
+    "Holubov"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jenny Bach",
+        "sense": "Munich",
+        "answers": [
+          "Munich"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jenny Bach",
+        "sense": "Holubov",
+        "answers": [
+          "Holubov"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jenny Bach, Munich: Munich [1]. Basis: one source.\nJenny Bach, Holubov: Holubov [2]. Basis: one source.",
+    "ask_back": "Did you mean Jenny Bach (Munich) or Jenny Bach (Holubov)?",
+    "calls": 7,
+    "prompt_tokens": 4957,
+    "completion_tokens": 445,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1015,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1457,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 559,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jenny Bach",
+              "sense": "not stated",
+              "answer": "Munich",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "One of the earliest pieces of evidence that supports Jenny's residence in Munich is a birth certificate, dated May 17, 1866, which confirms her birth in the city.",
+              "claim": "Jenny Bach resides in Munich.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jenny Bach",
+              "sense": "not stated",
+              "answer": "Holubov",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jenny Bach (May 17, 1866 – unknown) was a Czech Jewish woman who resided in the village of Holubov, located in the Český Krumlov District of the South Bohemian region.",
+              "claim": "Jenny Bach resided in the village of Holubov.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jenny Bach",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Munich",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jenny Bach",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Holubov",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jenny Bach",
+          "sense": "residence",
+          "answers": [
+            "Munich",
+            "Holubov"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Jenny Bach (May 17, 1866 – unknown) was a Czech Jewish woman who resided in the village of Holubov, located in the Český Krumlov District of the South Bohemian region.",
+          "labels": {
+            "A": "Munich",
+            "B": "Holubov"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Munich",
+          "b": "Holubov",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different locations for Jenny Bach's residence."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

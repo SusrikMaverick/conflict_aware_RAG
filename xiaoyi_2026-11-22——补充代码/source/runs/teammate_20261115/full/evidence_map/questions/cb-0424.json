@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0424",
+  "method": "evidence_map",
+  "input_sha256": "796cabb41c7a0f875804ff1885ac1bc884f124d59dde3610333875b9d6a7f347",
+  "accepted_answers": [
+    "Shoolini University",
+    "University of Delhi"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Navneet Kumar Upadhyay",
+        "sense": "not stated",
+        "answers": [
+          "Shoolini University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Navneet Kumar Upadhyay",
+        "sense": "not stated",
+        "answers": [
+          "University of Delhi"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Navneet Kumar Upadhyay: Shoolini University [1]. Basis: one source.\nNavneet Kumar Upadhyay: University of Delhi [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4542,
+    "completion_tokens": 305,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 987,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 494,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1377,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 472,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Navneet Kumar Upadhyay",
+              "sense": "not stated",
+              "answer": "Shoolini University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Navneet Kumar Upadhyay attended Shoolini University, a private university located in Himachal Pradesh, India.",
+              "claim": "Navneet Kumar Upadhyay attended Shoolini University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Navneet Kumar Upadhyay",
+              "sense": "not stated",
+              "answer": "University of Delhi",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He completed his undergraduate degree in Environmental Science from the University of Delhi.",
+              "claim": "Navneet Kumar Upadhyay attended the University of Delhi.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Navneet Kumar Upadhyay",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Shoolini University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Navneet Kumar Upadhyay",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Delhi",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Navneet Kumar Upadhyay",
+          "sense": "not stated",
+          "answers": [
+            "Shoolini University",
+            "University of Delhi"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Shoolini University",
+          "b": "University of Delhi",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different educational institutions"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

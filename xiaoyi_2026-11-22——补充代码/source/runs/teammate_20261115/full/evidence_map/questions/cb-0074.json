@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0074",
+  "method": "evidence_map",
+  "input_sha256": "3695f52762e1142a8bc221da0114dd5606b3898fe2abdd58483816f22f20352c",
+  "accepted_answers": [
+    "Institut National des Sciences Appliquées de Rennes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Perrine Paul-Gilloteaux",
+        "sense": "not stated",
+        "answers": [
+          "Institut National des Sciences Appliquées de Rennes"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "University of Seville"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Perrine Paul-Gilloteaux: Institut National des Sciences Appliquées de Rennes [1]. Basis: forced: the model's reading of the documents. Outweighed: University of Seville [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6068,
+    "completion_tokens": 440,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 528,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1469,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 505,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1311,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Perrine Paul-Gilloteaux",
+              "sense": "not stated",
+              "answer": "Institut National des Sciences Appliquées de Rennes",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was here that Perrine Paul-Gilloteaux, a brilliant and ambitious researcher, embarked on a journey that would shape her academic and professional trajectory.",
+              "claim": "Perrine Paul-Gilloteaux attended Institut National des Sciences Appliquées de Rennes.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Perrine Paul-Gilloteaux",
+              "sense": "not stated",
+              "answer": "University of Seville",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In an exclusive interview with our publication, esteemed researcher Perrine Paul-Gilloteaux, known for her groundbreaking work in the field of microbiology, opened up about her academic roots at the University of Seville.\"",
+              "claim": "Perrine Paul-Gilloteaux attended the University of Seville.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Perrine Paul-Gilloteaux",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Institut National des Sciences Appliquées de Rennes",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Perrine Paul-Gilloteaux",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Seville",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Perrine Paul-Gilloteaux",
+          "sense": "not stated",
+          "answers": [
+            "Institut National des Sciences Appliquées de Rennes",
+            "University of Seville"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Institut National des Sciences Appliquées de Rennes",
+          "b": "University of Seville",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by Perrine Paul-Gilloteaux."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Perrine Paul-Gilloteaux",
+          "sense": "not stated",
+          "answers": [
+            "Institut National des Sciences Appliquées de Rennes",
+            "University of Seville"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Institut National des Sciences Appliquées de Rennes": 1,
+                "University of Seville": 1
+              }
+            }
+          ],
+          "stands": "Institut National des Sciences Appliquées de Rennes",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

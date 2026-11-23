@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0473",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "India",
+    "Kingdom of Italy"
+  ],
+  "requests": [
+    {
+      "key": "4407fe9e2d96babab5347c05b0762f196a3874dbd9966bc6d3d0beae65c2388e",
+      "usage": {
+        "prompt_tokens": 3955,
+        "total_tokens": 4151,
+        "completion_tokens": 196,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.627304535359144,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4407fe9e2d96babab5347c05b0762f196a3874dbd9966bc6d3d0beae65c2388e",
+      "text": "{\n  \"accepted_answers\": [\n    \"India\",\n    \"Kingdom of Italy\"\n  ],\n  \"explanation\": \"The documents present two distinct, explicitly stated citizenship statuses for Chintamani Acharya. D1S2 identifies him as an 'Indian lawyer', supporting 'India'. D1S3 and D1S9 explicitly state he was a 'citizen of the Kingdom of Italy' and that his application was approved in 1905. D2 supports the 'India' claim through biographical context but does not negate the Italian citizenship. 'British India' (C2) is identified in D1S5 as his place of birth ('born in Bombay, British India'), not his citizenship status, and is therefore excluded based on the question asking for 'citizen of'. Both 'India' and 'Kingdom of Italy' are valid, distinct referents supported by the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0473.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0473.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "India",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Kingdom of Italy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "British India",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "India",
+      "Kingdom of Italy"
+    ],
+    "explanation": "The documents present two distinct, explicitly stated citizenship statuses for Chintamani Acharya. D1S2 identifies him as an 'Indian lawyer', supporting 'India'. D1S3 and D1S9 explicitly state he was a 'citizen of the Kingdom of Italy' and that his application was approved in 1905. D2 supports the 'India' claim through biographical context but does not negate the Italian citizenship. 'British India' (C2) is identified in D1S5 as his place of birth ('born in Bombay, British India'), not his citizenship status, and is therefore excluded based on the question asking for 'citizen of'. Both 'India' and 'Kingdom of Italy' are valid, distinct referents supported by the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "d8fd5d16c1f73b2a632798a7aa341470bf8c27194639064b3bd2b2bd3c9ac513"
+}

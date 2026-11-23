@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "09bb165ec2b0aac947c4761476005c8c0c05ff3e47be801304e70b39c3e18022",
+  "input": {
+    "question_id": "ramdocs-0066-da8a852f47ad",
+    "question": "What political party is Senator Tate a member of?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0066-da8a852f47ad:d01",
+        "text": "Republican in Colorado Capitol says accusations against GOP Sen. Jack Tate didn ’ t amount to sexual harassment Jack Tate , of Centennial , was accused by a former legislative intern of leering at her and making comments about what she was wearing Share this : Click to share on Facebook ( Opens in new window ) Click to share on Reddit ( Opens in new window ) Click to share on Twitter ( Opens in new window ) By Jesse Paul | The Denver Post UPDATED : March 29 , 2018 at 4:41 PM MDT Allegations leveled against GOP"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0066-da8a852f47ad",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Republican"
+    ],
+    "citations": [
+      {
+        "answer": "Republican",
+        "doc_id": "ramdocs-0066-da8a852f47ad:d01",
+        "quote": "Republican in Colorado Capitol says accusations against GOP Sen."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Republican",
+        "entity": "Senator Tate",
+        "scope": "political party membership",
+        "claim": "Senator Tate is a member of the Republican party.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Republican in Colorado Capitol says accusations against GOP Sen.",
+        "span_start": 0,
+        "span_end": 64,
+        "doc_id": "ramdocs-0066-da8a852f47ad:d01",
+        "card_id": "ramdocs-0066-da8a852f47ad:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 64,
+        "text": "Republican in Colorado Capitol says accusations against GOP Sen."
+      },
+      {
+        "id": "s1",
+        "start": 65,
+        "end": 515,
+        "text": "Jack Tate didn ’ t amount to sexual harassment Jack Tate , of Centennial , was accused by a former legislative intern of leering at her and making comments about what she was wearing Share this : Click to share on Facebook ( Opens in new window ) Click to share on Reddit ( Opens in new window ) Click to share on Twitter ( Opens in new window ) By Jesse Paul | The Denver Post UPDATED : March 29 , 2018 at 4:41 PM MDT Allegations leveled against GOP"
+      }
+    ],
+    "requests": [
+      {
+        "key": "b38b1299d0b12242ccac3d04403498d93495325dc0c32434e8eeb4bd778be749",
+        "usage": {
+          "prompt_tokens": 372,
+          "total_tokens": 420,
+          "completion_tokens": 48,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 33.51174804195762,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

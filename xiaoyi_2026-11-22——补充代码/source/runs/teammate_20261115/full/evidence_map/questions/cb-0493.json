@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0493",
+  "method": "evidence_map",
+  "input_sha256": "50fd0cb7187fa3c8d378933a8cc4bbea7930d976b7ccbc01c222ea9ac8441e74",
+  "accepted_answers": [
+    "Center for Excellence in Basic Sciences, Mumbai",
+    "Boston Children's Hospital"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rebecca E. Andersen",
+        "sense": "Center for Excellence in Basic Sciences, Mumbai (2005-2010)",
+        "answers": [
+          "Center for Excellence in Basic Sciences, Mumbai"
+        ],
+        "date": "2005-2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Rebecca E. Andersen",
+        "sense": "Boston Children's Hospital (not specified)",
+        "answers": [
+          "Boston Children's Hospital"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Rebecca E. Andersen, Center for Excellence in Basic Sciences, Mumbai (2005-2010): Center for Excellence in Basic Sciences, Mumbai (as of 2005-2010) [1]. Basis: one source.\nRebecca E. Andersen, Boston Children's Hospital (not specified): Boston Children's Hospital [2]. Basis: one source.",
+    "ask_back": "Did you mean Rebecca E. Andersen (Center for Excellence in Basic Sciences, Mumbai (2005-2010)) or Rebecca E. Andersen (Boston Children's Hospital (not specified))?",
+    "calls": 6,
+    "prompt_tokens": 4654,
+    "completion_tokens": 419,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1040,
+          "completion_tokens": 148,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1000,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 519,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1401,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 543,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rebecca E. Andersen",
+              "sense": "not stated",
+              "answer": "Center for Excellence in Basic Sciences, Mumbai",
+              "as_of": "2005-2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "During her time at the Center for Excellence in Basic Sciences, Mumbai, Andersen was involved in several groundbreaking projects that aimed to advance our understanding of the fundamental laws of physics and their applications.",
+              "claim": "Rebecca E. Andersen worked at the Center for Excellence in Basic Sciences, Mumbai from 2005 to 2010.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Rebecca E. Andersen",
+              "sense": "not stated",
+              "answer": "Boston Children's Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Rebecca E. Andersen is a researcher who has worked at Boston Children's Hospital, a renowned children's hospital located in Boston, Massachusetts, United States.",
+              "claim": "Rebecca E. Andersen worked at Boston Children's Hospital.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rebecca E. Andersen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Center for Excellence in Basic Sciences, Mumbai",
+            "date": "2005-2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rebecca E. Andersen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Boston Children's Hospital",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Rebecca E. Andersen",
+          "sense": "not stated",
+          "answers": [
+            "Center for Excellence in Basic Sciences, Mumbai",
+            "Boston Children's Hospital"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Andersen's academic career spans over two decades, during which she has held various positions at esteemed institutions.",
+          "labels": {
+            "A": "Center for Excellence in Basic Sciences, Mumbai (2005-2010)",
+            "B": "Boston Children's Hospital (not specified)"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Center for Excellence in Basic Sciences, Mumbai",
+          "b": "Boston Children's Hospital",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

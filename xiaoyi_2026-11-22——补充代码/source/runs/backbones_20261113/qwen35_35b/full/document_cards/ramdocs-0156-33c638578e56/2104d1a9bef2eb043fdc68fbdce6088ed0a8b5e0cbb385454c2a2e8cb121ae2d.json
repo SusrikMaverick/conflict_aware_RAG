@@ -1,0 +1,82 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "381c77624555fbc6fc92c2ee2571ee2ff3461fa1b8c9153d929bc926c37915e3",
+  "input": {
+    "question_id": "ramdocs-0156-33c638578e56",
+    "question": "Who is the artist of the album \"I'm the Man\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0156-33c638578e56:d06",
+        "text": "the Man '' ( Joe Jackson song ) , 1979 I 'm the Man ( Sherman Robertson album ) , 1994 `` I 'm the Man '' ( 50 Cent song ) , 2015 See also [ edit ] The Man ( disambiguation ) Topics referred to by the same term This disambiguation page lists articles associated with the title I 'm the Man . If an internal link led you here , you may wish to change the link to point directly to the intended article . Retrieved from `` https : //en.wikipedia.org/w/index.php ? title=I % 27m_the_Man & oldid=1213908126"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0156-33c638578e56",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "Joe Jackson, Sherman Robertson, 50 Cent",
+          "entity": "artist",
+          "scope": "album \"I'm the Man\"",
+          "claim": "The artists of albums titled \"I'm the Man\" are Joe Jackson (1979), Sherman Robertson (1994), and 50 Cent (2015).",
+          "source_ids": [
+            "s0"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 291,
+        "text": "the Man '' ( Joe Jackson song ) , 1979 I 'm the Man ( Sherman Robertson album ) , 1994 `` I 'm the Man '' ( 50 Cent song ) , 2015 See also [ edit ] The Man ( disambiguation ) Topics referred to by the same term This disambiguation page lists articles associated with the title I 'm the Man ."
+      },
+      {
+        "id": "s1",
+        "start": 292,
+        "end": 402,
+        "text": "If an internal link led you here , you may wish to change the link to point directly to the intended article ."
+      },
+      {
+        "id": "s2",
+        "start": 403,
+        "end": 461,
+        "text": "Retrieved from `` https : //en.wikipedia.org/w/index.php ?"
+      },
+      {
+        "id": "s3",
+        "start": 462,
+        "end": 502,
+        "text": "title=I % 27m_the_Man & oldid=1213908126"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d9e62da9db0486830940c6db9d6c9d01dfb4dbc8a23d95baddc2d2561be67e43",
+        "usage": {
+          "prompt_tokens": 435,
+          "total_tokens": 548,
+          "completion_tokens": 113,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.17858314141631,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

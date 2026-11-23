@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0051-965a16496146",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "about 1835",
+    "about 1935"
+  ],
+  "requests": [
+    {
+      "key": "3e99b0e70fa3284a8f6a941895207593b204b27ac62ef4a8abcf3269117b5ec9",
+      "usage": {
+        "prompt_tokens": 2205,
+        "total_tokens": 2369,
+        "completion_tokens": 164,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 43.89914466813207,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3e99b0e70fa3284a8f6a941895207593b204b27ac62ef4a8abcf3269117b5ec9",
+      "text": "{\n  \"accepted_answers\": [\n    \"about 1835\",\n    \"about 1935\"\n  ],\n  \"explanation\": \"The provided documents contain conflicting assertions regarding the construction date of the Bonner House. Document 1 (D1S2) explicitly states 'It was built about 1835'. Document 2 (D2S3) explicitly states 'It was built about 1935'. Both documents describe the same entity ('Bonner House') and location ('Bath, North Carolina'). The prompt instructions require preserving all valid referents and not silently equating competing assertions with different entities or selecting a single favorite interpretation. Therefore, both dates are returned as distinct valid answers derived directly from the source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0051-965a16496146.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0051-965a16496146.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "about 1835",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "about 1935",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "about 1835",
+      "about 1935"
+    ],
+    "explanation": "The provided documents contain conflicting assertions regarding the construction date of the Bonner House. Document 1 (D1S2) explicitly states 'It was built about 1835'. Document 2 (D2S3) explicitly states 'It was built about 1935'. Both documents describe the same entity ('Bonner House') and location ('Bath, North Carolina'). The prompt instructions require preserving all valid referents and not silently equating competing assertions with different entities or selecting a single favorite interpretation. Therefore, both dates are returned as distinct valid answers derived directly from the source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "98b047a64eb3693244ac95517093aacd672546856ff1856b0b190e68201ab317"
+}

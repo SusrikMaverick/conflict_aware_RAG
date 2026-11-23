@@ -1,0 +1,201 @@
+{
+  "question_id": "ramdocs-0107-04e189ae8205",
+  "method": "evidence_map",
+  "input_sha256": "9d015a2c32e9c241f6ba2df28f836c905e4f744aedbc7ce501345a33aeb71c88",
+  "accepted_answers": [
+    "Australia",
+    "Australia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "No. 100 Squadron RAAF",
+        "sense": "not stated",
+        "answers": [
+          "Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "No. 100 Squadron, Royal Australian Air Force",
+        "sense": "not stated",
+        "answers": [
+          "Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "No. 100 Squadron RAAF: Australia [1, 2]. Basis: 2 independent sources agree.\nNo. 100 Squadron, Royal Australian Air Force: Australia [3]. Basis: one source.",
+    "ask_back": "Did you mean No. 100 Squadron RAAF or No. 100 Squadron, Royal Australian Air Force?",
+    "calls": 5,
+    "prompt_tokens": 2851,
+    "completion_tokens": 472,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 716,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 698,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 721,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 565,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "No. 100 Squadron RAAF",
+              "sense": "not stated",
+              "answer": "Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "No. 100 Squadron was a Royal Australian Air Force (RAAF) bomber and maritime patrol squadron that operated during World War II.",
+              "claim": "No. 100 Squadron was formed in Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "No. 100 Squadron",
+              "sense": "not stated",
+              "answer": "Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"No . 100 Squadron (RAAF)\" , Royal Australian Air Force",
+              "claim": "No. 100 Squadron was formed in Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "No. 100 Squadron, Royal Australian Air Force",
+              "sense": "not stated",
+              "answer": "Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In February 1942, No. 100 Squadron, Royal Australian Air Force was formed at RAAF Richmond, near Sydney,",
+              "claim": "No. 100 Squadron, Royal Australian Air Force was formed in Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "No. 100 Squadron RAAF",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Australia",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "No. 100 Squadron, Royal Australian Air Force",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Australia",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Australia",
+          "b": "Australia",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

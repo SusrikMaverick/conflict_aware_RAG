@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "c1e1543af9bcecb16fcb681a6b28f8483ddf2501d09b4742c93e379f4920af4c",
+  "input": {
+    "question_id": "rgb-0010",
+    "question": "Who won the women's singles U.S. Open in 2019?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Sep 7, 2019 ... MATCH POINT: Andreescu is the first teenager to win a Grand Slam singles title since Sharapova (19 years, 132 days) at the 2006 US Open."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0010",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Andreescu"
+    ],
+    "citations": [
+      {
+        "answer": "Andreescu",
+        "doc_id": "d2",
+        "quote": "MATCH POINT: Andreescu is the first teenager to win a Grand Slam singles title since Sharapova (19 years, 132 days) at the 2006 US Open."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Andreescu",
+        "entity": "women's singles U.S. Open winner",
+        "scope": "2019",
+        "claim": "Andreescu won the women's singles U.S. Open in 2019.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "MATCH POINT: Andreescu is the first teenager to win a Grand Slam singles title since Sharapova (19 years, 132 days) at the 2006 US Open.",
+        "span_start": 16,
+        "span_end": 152,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Sep 7, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 152,
+        "text": "MATCH POINT: Andreescu is the first teenager to win a Grand Slam singles title since Sharapova (19 years, 132 days) at the 2006 US Open."
+      }
+    ],
+    "requests": [
+      {
+        "key": "4da96393c24d33e9f43324c5c20401c988fade290983ada3ec41dfa897428c94",
+        "usage": {
+          "prompt_tokens": 316,
+          "total_tokens": 382,
+          "completion_tokens": 66,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 87.82518405467272,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

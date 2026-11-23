@@ -1,0 +1,72 @@
+{
+  "question_id": "cb-0006",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "McMaster University Faculty of Health Sciences",
+    "Northeastern University",
+    "Department of Medicine, Faculty of Health Sciences at McMaster University"
+  ],
+  "requests": [
+    {
+      "key": "d784f4c126f192905e172f2d086bf50d604020af2e2885d2340a79652fe08618",
+      "usage": {
+        "prompt_tokens": 4026,
+        "total_tokens": 4187,
+        "completion_tokens": 161,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 82.17712655290961,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d784f4c126f192905e172f2d086bf50d604020af2e2885d2340a79652fe08618",
+      "text": "{\n  \"accepted_answers\": [\n    \"McMaster University Faculty of Health Sciences\",\n    \"Northeastern University\",\n    \"Department of Medicine, Faculty of Health Sciences at McMaster University\"\n  ],\n  \"explanation\": \"All three candidates are supported directly by the original sources. D1S13 explicitly states that Andrew Worster is listed as a faculty member at the Department of Medicine, Faculty of Health Sciences at McMaster University, which supports C2. D1S3 and D1S8 mention his affiliation with the McMaster University Faculty of Health Sciences (C0). D2S3 and D2S9 affirm his affiliation with Northeastern University (C1). These are distinct but overlapping organizational structures within the same individual’s career and should be preserved as separate valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0006.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0006.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "McMaster University Faculty of Health Sciences",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Northeastern University",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Department of Medicine, Faculty of Health Sciences at McMaster University",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "McMaster University Faculty of Health Sciences",
+      "Northeastern University",
+      "Department of Medicine, Faculty of Health Sciences at McMaster University"
+    ],
+    "explanation": "All three candidates are supported directly by the original sources. D1S13 explicitly states that Andrew Worster is listed as a faculty member at the Department of Medicine, Faculty of Health Sciences at McMaster University, which supports C2. D1S3 and D1S8 mention his affiliation with the McMaster University Faculty of Health Sciences (C0). D2S3 and D2S9 affirm his affiliation with Northeastern University (C1). These are distinct but overlapping organizational structures within the same individual’s career and should be preserved as separate valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "dea010928b6340a2db1d30696a589e0d20419a5b48840952019fb9358cadd022"
+}

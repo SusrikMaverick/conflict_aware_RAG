@@ -1,0 +1,232 @@
+{
+  "question_id": "rgb-0067",
+  "method": "evidence_map",
+  "input_sha256": "9177f100549934dbb494767e3ec0ef53c24fa3859bf13dbb728ee15ca4bac545",
+  "accepted_answers": [
+    "Croatia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2018 FIFA World Cup Russia™",
+        "sense": "not stated",
+        "answers": [
+          "Croatia"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Runner-up"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "2018 FIFA World Cup Russia™: Croatia [1]. Basis: forced: the model's reading of the documents. Outweighed: Runner-up [3].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 3844,
+    "completion_tokens": 339,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 622,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 611,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 622,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 461,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 545,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 441,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 387,
+          "completion_tokens": 37,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Croatia",
+              "sense": "2018 FIFA World Cup Russia™",
+              "answer": "Croatia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Croatia. Runner-up.",
+              "claim": "Croatia was the runner-up of the 2018 FIFA World Cup Russia™.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Netherlands",
+              "sense": "2018 FIFA World Cup Russia™",
+              "answer": "Runner-up",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Netherlands. Runner-up.",
+              "claim": "Netherlands was the runner-up in the 2018 FIFA World Cup Russia™.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2018 FIFA World Cup Russia™",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Croatia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2018 FIFA World Cup Russia™",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Runner-up",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "2018 FIFA World Cup Russia™",
+          "sense": "not stated",
+          "answers": [
+            "Croatia",
+            "Runner-up"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Croatia",
+          "b": "Runner-up",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide conflicting information about who the runner-up was."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "2018 FIFA World Cup Russia™",
+          "sense": "not stated",
+          "answers": [
+            "Croatia",
+            "Runner-up"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Croatia": 1,
+                "Runner-up": 1
+              }
+            }
+          ],
+          "stands": "Croatia",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

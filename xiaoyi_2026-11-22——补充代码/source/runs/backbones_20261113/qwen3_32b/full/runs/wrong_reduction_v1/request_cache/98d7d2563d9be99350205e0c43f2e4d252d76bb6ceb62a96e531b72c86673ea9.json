@@ -1,0 +1,163 @@
+{
+  "key": "98d7d2563d9be99350205e0c43f2e4d252d76bb6ceb62a96e531b72c86673ea9",
+  "model_revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "request": {
+    "model": "qwen3_32b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: 64th Division was formed in which year?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-aa73949689e18674",
+    "object": "chat.completion",
+    "created": 1794569669,
+    "model": "qwen3_32b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"Uncertain; multiple military forces have divisions named '64th,' and without additional context (e.g., country), the formation year cannot be determined.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 65,
+      "total_tokens": 111,
+      "completion_tokens": 46,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"Uncertain; multiple military forces have divisions named '64th,' and without additional context (e.g., country), the formation year cannot be determined.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 65,
+    "total_tokens": 111,
+    "completion_tokens": 46,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 65,
+  "prompt_token_ids": [
+    151644,
+    872,
+    198,
+    16429,
+    1172,
+    697,
+    1828,
+    9498,
+    6540,
+    11,
+    4226,
+    279,
+    3405,
+    1573,
+    9120,
+    30403,
+    9293,
+    13,
+    3155,
+    537,
+    7942,
+    39534,
+    13064,
+    13,
+    3411,
+    4718,
+    11666,
+    61610,
+    323,
+    16148,
+    26,
+    2506,
+    16148,
+    1212,
+    19,
+    15,
+    4244,
+    323,
+    20975,
+    1977,
+    979,
+    35118,
+    13,
+    15846,
+    25,
+    220,
+    21,
+    19,
+    339,
+    14489,
+    572,
+    14122,
+    304,
+    892,
+    1042,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "latency_seconds": 153.2150546759367,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

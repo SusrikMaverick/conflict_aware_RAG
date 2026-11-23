@@ -1,0 +1,103 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "05f15299eb1881cad4537161dde525fc92061883d85a4f7fe9c1027541c2dd71",
+  "input": {
+    "question_id": "rgb-0091",
+    "question": "What is the date of the 2020 NBA Draft?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "May 8, 2020 ... Date: May 8, 2020; Time: 8 p.m. ET. The 2020 NBA Draft will be held Wednesday, Nov. 18, and free agent negotiations will begin Friday, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0091",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "May 8, 2020"
+    ],
+    "citations": [
+      {
+        "answer": "May 8, 2020",
+        "doc_id": "d3",
+        "quote": "May 8, 2020 ... Date: May 8, 2020; Time: 8 p.m."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "May 8, 2020",
+        "entity": "2020 NBA Draft",
+        "scope": "Date",
+        "claim": "The 2020 NBA Draft was held on May 8, 2020.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "May 8, 2020 ... Date: May 8, 2020; Time: 8 p.m.",
+        "span_start": 0,
+        "span_end": 47,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "May 8, 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 47,
+        "text": "Date: May 8, 2020; Time: 8 p.m."
+      },
+      {
+        "id": "s2",
+        "start": 48,
+        "end": 51,
+        "text": "ET."
+      },
+      {
+        "id": "s3",
+        "start": 52,
+        "end": 99,
+        "text": "The 2020 NBA Draft will be held Wednesday, Nov."
+      },
+      {
+        "id": "s4",
+        "start": 100,
+        "end": 154,
+        "text": "18, and free agent negotiations will begin Friday, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "9a0605db17afc1d864dc2030400178479872e0ebabfbca0d7e73a6fdf72cf7b3",
+        "usage": {
+          "prompt_tokens": 357,
+          "total_tokens": 454,
+          "completion_tokens": 97,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 27.98123863711953,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

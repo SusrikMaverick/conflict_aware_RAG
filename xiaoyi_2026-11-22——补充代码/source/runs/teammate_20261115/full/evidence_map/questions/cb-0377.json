@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0377",
+  "method": "evidence_map",
+  "input_sha256": "0adcc1754670e9a11c53a1a7b1ac684989ecf309976c3699db040f9d6898680f",
+  "accepted_answers": [
+    "Wyoming Cowboys basketball team",
+    "BK Häcken"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Uche Nsonwu-Amadi",
+        "sense": "college basketball",
+        "answers": [
+          "Wyoming Cowboys basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Uche Nsonwu-Amadi",
+        "sense": "football",
+        "answers": [
+          "BK Häcken"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Uche Nsonwu-Amadi, college basketball: Wyoming Cowboys basketball team [1]. Basis: one source.\nUche Nsonwu-Amadi, football: BK Häcken [2]. Basis: one source.",
+    "ask_back": "Did you mean Uche Nsonwu-Amadi (college basketball) or Uche Nsonwu-Amadi (football)?",
+    "calls": 6,
+    "prompt_tokens": 4994,
+    "completion_tokens": 440,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 153,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 559,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1547,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 579,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Uche Nsonwu-Amadi",
+              "sense": "not stated",
+              "answer": "Wyoming Cowboys basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a move that is set to shake up the college basketball landscape, Nigerian basketball player Uche Nsonwu-Amadi has officially joined the Wyoming Cowboys basketball team, sources close to the program have confirmed.\"",
+              "claim": "Uche Nsonwu-Amadi represents the Wyoming Cowboys basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Uche Nsonwu-Amadi",
+              "sense": "not stated",
+              "answer": "BK Häcken",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As he walked through the gates, he was greeted by the team's coach, a gruff but kind-hearted man named Lars, who was busy setting up the day's drills. 'Hej, Uche! Welcome to Häcken,' Lars boomed, his eyes crinkling at the corners as he extended a meaty hand.\"",
+              "claim": "Uche Nsonwu-Amadi represents BK Häcken.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Uche Nsonwu-Amadi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Wyoming Cowboys basketball team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Uche Nsonwu-Amadi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "BK Häcken",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Uche Nsonwu-Amadi",
+          "sense": "not stated",
+          "answers": [
+            "Wyoming Cowboys basketball team",
+            "BK Häcken"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a move that is set to shake up the college basketball landscape, Nigerian basketball player Uche Nsonwu-Amadi has officially joined the Wyoming Cowboys basketball team, sources close to the program have confirmed.",
+          "labels": {
+            "A": "college basketball",
+            "B": "football"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Wyoming Cowboys basketball team",
+          "b": "BK Häcken",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

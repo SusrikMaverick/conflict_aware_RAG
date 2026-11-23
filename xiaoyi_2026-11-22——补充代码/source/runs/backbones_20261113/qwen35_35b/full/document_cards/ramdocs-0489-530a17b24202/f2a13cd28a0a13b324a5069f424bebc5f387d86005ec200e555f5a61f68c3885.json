@@ -1,0 +1,89 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "bb09dcf7816630b391b87e7f31e65206a7a8b23aa82d072fa6e2ea126b388b86",
+  "input": {
+    "question_id": "ramdocs-0489-530a17b24202",
+    "question": "When and where was George Grimes born?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0489-530a17b24202:d01",
+        "text": "George Grimes (Queensland politician) George Grimes (17 December 1835 – 28 January 1910) was a member of the Queensland Legislative Assembly. Grimes was born in Ashby-de-la-Zouch, Leicestershire, the son of William Grimes and his wife Mary (née Douglas). After arriving in Australia in 1849 onboard the \"Chaseley\", he took up farming at Kurilpa with his brother Samuel in 1857 before moving to \"Coongoon\" at Fairfield where he grew arrowroot and sugar in 1863. On 16 June 1863 Grimes married Mary Rogers (died 1919) and together had a son and five daughters. Grimes died in January 1910 and his funeral proceeded"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0489-530a17b24202",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "17 December 1835, Ashby-de-la-Zouch, Leicestershire",
+          "entity": "George Grimes",
+          "scope": "Birth date and place",
+          "claim": "George Grimes was born on 17 December 1835 in Ashby-de-la-Zouch, Leicestershire.",
+          "source_ids": [
+            "s0",
+            "s1"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 141,
+        "text": "George Grimes (Queensland politician) George Grimes (17 December 1835 – 28 January 1910) was a member of the Queensland Legislative Assembly."
+      },
+      {
+        "id": "s1",
+        "start": 142,
+        "end": 254,
+        "text": "Grimes was born in Ashby-de-la-Zouch, Leicestershire, the son of William Grimes and his wife Mary (née Douglas)."
+      },
+      {
+        "id": "s2",
+        "start": 255,
+        "end": 460,
+        "text": "After arriving in Australia in 1849 onboard the \"Chaseley\", he took up farming at Kurilpa with his brother Samuel in 1857 before moving to \"Coongoon\" at Fairfield where he grew arrowroot and sugar in 1863."
+      },
+      {
+        "id": "s3",
+        "start": 461,
+        "end": 558,
+        "text": "On 16 June 1863 Grimes married Mary Rogers (died 1919) and together had a son and five daughters."
+      },
+      {
+        "id": "s4",
+        "start": 559,
+        "end": 612,
+        "text": "Grimes died in January 1910 and his funeral proceeded"
+      }
+    ],
+    "requests": [
+      {
+        "key": "8722573340fa9c7f0c78481a318152fc5c583bc5fd6f219453e72f1758a6e814",
+        "usage": {
+          "prompt_tokens": 471,
+          "total_tokens": 586,
+          "completion_tokens": 115,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 50.89612894132733,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

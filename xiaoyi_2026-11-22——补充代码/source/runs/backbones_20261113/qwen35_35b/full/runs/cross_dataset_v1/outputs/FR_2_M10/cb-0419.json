@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0419",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Righteous Among the Nations",
+    "Distinguished Service Order"
+  ],
+  "requests": [
+    {
+      "key": "524e32737411a6f4baa1d22f32a5731acaf212a67ae55d3dd0c5428d628af2de",
+      "usage": {
+        "prompt_tokens": 4415,
+        "total_tokens": 4663,
+        "completion_tokens": 248,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.48137615993619,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "524e32737411a6f4baa1d22f32a5731acaf212a67ae55d3dd0c5428d628af2de",
+      "text": "{\n  \"accepted_answers\": [\n    \"Righteous Among the Nations\",\n    \"Distinguished Service Order\"\n  ],\n  \"explanation\": \"Document 1 (D1S2, D1S14) explicitly states Janina Bil received the title 'Righteous Among the Nations' in 1964. Document 2 (D2S19) contains a narrative where Captain Jameson announces she will receive the 'Distinguished Service Order'. Although Document 2 appears to be a fictionalized account (indicated by the character 'Captain Jameson' and dramatic dialogue), the prompt instructions require preserving distinct valid referents and complementary answers found in the sources without rejecting based on genre or external fact-checking unless explicitly contradictory in a way that invalidates the entity. Both documents assert an award received by Janina Bil. The R5 set correctly identified both. The audit J_B incorrectly flags C1 as 'wrong_argument' based on D1S2, but D1S2 and D2S19 describe different awards from different contexts (Israel vs. British military narrative), allowing for coexistence under the instruction to keep supported alternate referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0419.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Righteous Among the Nations",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Distinguished Service Order",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Righteous Among the Nations",
+      "Distinguished Service Order"
+    ],
+    "explanation": "Document 1 (D1S2, D1S14) explicitly states Janina Bil received the title 'Righteous Among the Nations' in 1964. Document 2 (D2S19) contains a narrative where Captain Jameson announces she will receive the 'Distinguished Service Order'. Although Document 2 appears to be a fictionalized account (indicated by the character 'Captain Jameson' and dramatic dialogue), the prompt instructions require preserving distinct valid referents and complementary answers found in the sources without rejecting based on genre or external fact-checking unless explicitly contradictory in a way that invalidates the entity. Both documents assert an award received by Janina Bil. The R5 set correctly identified both. The audit J_B incorrectly flags C1 as 'wrong_argument' based on D1S2, but D1S2 and D2S19 describe different awards from different contexts (Israel vs. British military narrative), allowing for coexistence under the instruction to keep supported alternate referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "2e930a2122f8593b5ffe980176d50816337fe8bde0d9a03e9bfaa71d1b79c3dc"
+}

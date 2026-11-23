@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0164-72a2545a111f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "operatic mezzo-soprano",
+    "basketball player",
+    "painter"
+  ],
+  "requests": [
+    {
+      "key": "1f0b079abd5d6e1f323118de8409cc1d4b2c2de02677b173226b929aaf1ff516",
+      "usage": {
+        "prompt_tokens": 3370,
+        "total_tokens": 3570,
+        "completion_tokens": 200,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 134.565516281873,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1f0b079abd5d6e1f323118de8409cc1d4b2c2de02677b173226b929aaf1ff516",
+      "text": "{\n  \"accepted_answers\": [\n    \"operatic mezzo-soprano\",\n    \"basketball player\",\n    \"painter\"\n  ],\n  \"explanation\": \"The question asks for the profession of 'C. Mayer'. The provided sources present three distinct individuals named C. Mayer:\\n\\n1. **Christa Mayer** (Document 1): Described as a German operatic mezzo-soprano.\\n2. **Christa Mayer** (Document 2): Described as a German professional basketball player.\\n3. **Constant Mayer** (Document 3): Described as a French painter who emigrated to the U.S.\\n\\nEach refers to a different individual with the same initials 'C. Mayer', so their professions are not conflicting but distinct. The 'colorist' label from D3S5 is marked as incidental in the audit and does not represent a primary profession. All valid referents and their respective professions are preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0164-72a2545a111f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0164-72a2545a111f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "operatic mezzo-soprano",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "basketball player",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "painter",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "colorist",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "operatic mezzo-soprano",
+      "basketball player",
+      "painter"
+    ],
+    "explanation": "The question asks for the profession of 'C. Mayer'. The provided sources present three distinct individuals named C. Mayer:\n\n1. **Christa Mayer** (Document 1): Described as a German operatic mezzo-soprano.\n2. **Christa Mayer** (Document 2): Described as a German professional basketball player.\n3. **Constant Mayer** (Document 3): Described as a French painter who emigrated to the U.S.\n\nEach refers to a different individual with the same initials 'C. Mayer', so their professions are not conflicting but distinct. The 'colorist' label from D3S5 is marked as incidental in the audit and does not represent a primary profession. All valid referents and their respective professions are preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "5292cfc383648446e1ac3a72939c920d3fcf81457759e29ffa83026bc1346903"
+}

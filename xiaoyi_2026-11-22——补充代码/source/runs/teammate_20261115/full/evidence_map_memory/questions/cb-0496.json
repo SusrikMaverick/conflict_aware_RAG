@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0496",
+  "method": "evidence_map_memory",
+  "input_sha256": "999c4393448f7039d388852e9f9c0ccc6935c4f142a9bdb9e8bdf0db95dead45",
+  "accepted_answers": [
+    "a renowned researcher",
+    "I.M. Sechenov First Moscow State Medical University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Anatoly Chernyaev",
+        "sense": "not stated",
+        "answers": [
+          "a renowned researcher"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Anatoly Chernyaev",
+        "sense": "not stated",
+        "answers": [
+          "I.M. Sechenov First Moscow State Medical University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Anatoly Chernyaev: a renowned researcher [1]. Basis: one source.\nAnatoly Chernyaev: I.M. Sechenov First Moscow State Medical University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4916,
+    "completion_tokens": 431,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 522,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1469,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 500,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "soviet government",
+          "answer": "KGB",
+          "confidence": 80
+        },
+        {
+          "about": "soviet leadership",
+          "answer": "Mikhail Gorbachev",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Anatoly Chernyaev",
+              "sense": "not stated",
+              "answer": "a renowned researcher",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She was meeting Anatoly Chernyaev, a renowned researcher, to discuss a potential collaboration on an upcoming exhibition.",
+              "claim": "Anatoly Chernyaev is a renowned researcher.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Anatoly Chernyaev",
+              "sense": "not stated",
+              "answer": "I.M. Sechenov First Moscow State Medical University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "One such individual was Anatoly Chernyaev, a researcher whose work would leave an indelible mark on the academic community. ... As Chernyaev delved deeper into his research, he became an integral part of the university's academic fabric.",
+              "claim": "Anatoly Chernyaev worked for I.M. Sechenov First Moscow State Medical University.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Anatoly Chernyaev",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a renowned researcher",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Anatoly Chernyaev",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "I.M. Sechenov First Moscow State Medical University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Anatoly Chernyaev",
+          "sense": "not stated",
+          "answers": [
+            "a renowned researcher",
+            "I.M. Sechenov First Moscow State Medical University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "a renowned researcher",
+          "b": "I.M. Sechenov First Moscow State Medical University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer refers to Anatoly Chernyaev as a 'renowned researcher' working on collaborations, while the second answer mentions him as being integral to I.M. Sechenov First Moscow State Medical University. These are different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

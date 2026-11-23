@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0145",
+  "method": "evidence_map",
+  "input_sha256": "7c0b4adb0d4dd8a34dd95b368270f339b2160edad6c3eabd2327289f8b65c33b",
+  "accepted_answers": [
+    "IFK Göteborg",
+    "Miami Hurricanes men's basketball team"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Daniel Sobralense",
+        "sense": "not stated",
+        "answers": [
+          "IFK Göteborg"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Daniel Sobralense",
+        "sense": "not stated",
+        "answers": [
+          "Miami Hurricanes men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Daniel Sobralense: IFK Göteborg [1]. Basis: one source.\nDaniel Sobralense: Miami Hurricanes men's basketball team [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4770,
+    "completion_tokens": 388,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1076,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Daniel Sobralense",
+              "sense": "not stated",
+              "answer": "IFK Göteborg",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Daniel Sobralense has officially signed with IFK Göteborg, one of Sweden's most storied and successful sports clubs.",
+              "claim": "Daniel Sobralense represents IFK Göteborg.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Daniel Sobralense",
+              "sense": "not stated",
+              "answer": "Miami Hurricanes men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 25-year-old phenom, known for his lightning-quick moves on the pitch, has enrolled at the University of Miami and will suit up for the Hurricanes men's basketball team this season.",
+              "claim": "Daniel Sobralense will suit up for the Miami Hurricanes men's basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Daniel Sobralense",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "IFK Göteborg",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Daniel Sobralense",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Miami Hurricanes men's basketball team",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Daniel Sobralense",
+          "sense": "not stated",
+          "answers": [
+            "IFK Göteborg",
+            "Miami Hurricanes men's basketball team"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "IFK Göteborg",
+          "b": "Miami Hurricanes men's basketball team",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different sports teams"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

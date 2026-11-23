@@ -1,0 +1,208 @@
+{
+  "question_id": "rgb-0011",
+  "method": "evidence_map_memory",
+  "input_sha256": "81ec5f562af4856423dda6b9c90b6b386367b5f7188a357cd3d4c033cc33cc64",
+  "accepted_answers": [
+    "defeated Novak Djokovic",
+    "defeated Novak Djokovic"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rafael Nadal",
+        "sense": "2021 U.S. Open",
+        "answers": [
+          "defeated Novak Djokovic"
+        ],
+        "date": "Sep 12, 2021",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Daniil Medvedev",
+        "sense": "2021 U.S. Open",
+        "answers": [
+          "defeated Novak Djokovic"
+        ],
+        "date": "Sep 12, 2021",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Rafael Nadal, 2021 U.S. Open: defeated Novak Djokovic (as of Sep 12, 2021) [1]. Basis: one source.\nDaniil Medvedev, 2021 U.S. Open: defeated Novak Djokovic (as of Sep 12, 2021) [2]. Basis: one source.",
+    "ask_back": "Did you mean Rafael Nadal (2021 U.S. Open) or Daniil Medvedev (2021 U.S. Open)?",
+    "calls": 6,
+    "prompt_tokens": 2779,
+    "completion_tokens": 524,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 168,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 630,
+          "completion_tokens": 166,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 632,
+          "completion_tokens": 168,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 617,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 576,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis player who won",
+          "answer": "Novak Djokovic",
+          "confidence": 85
+        },
+        {
+          "about": "Year of the tournament",
+          "answer": "2021",
+          "confidence": 100
+        },
+        {
+          "about": "Location of the tournament",
+          "answer": "Flushing Meadows, New York",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rafael Nadal",
+              "sense": "2021 U.S. Open",
+              "answer": "defeated Novak Djokovic",
+              "as_of": "Sep 12, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Novak Djokovic hugged Rafael Nadal after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021",
+              "claim": "Rafael Nadal defeated Novak Djokovic to win the men's singles title at the 2021 U.S. Open.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Daniil Medvedev",
+              "sense": "2021 U.S. Open",
+              "answer": "defeated Novak Djokovic",
+              "as_of": "Sep 12, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Novak Djokovic hugged Daniil Medvedev after the Russian defeated him in straight sets, 6-4, 6-4, 6-4, to win the men's singles title at the 2021",
+              "claim": "Daniil Medvedev defeated Novak Djokovic to win the men's singles title at the 2021 U.S. Open.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rafael Nadal",
+            "sense": "2021 U.S. Open",
+            "sense_unknown": false,
+            "answer": "defeated Novak Djokovic",
+            "date": "Sep 12, 2021",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Daniil Medvedev",
+            "sense": "2021 U.S. Open",
+            "sense_unknown": false,
+            "answer": "defeated Novak Djokovic",
+            "date": "Sep 12, 2021",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "defeated Novak Djokovic",
+          "b": "defeated Novak Djokovic",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

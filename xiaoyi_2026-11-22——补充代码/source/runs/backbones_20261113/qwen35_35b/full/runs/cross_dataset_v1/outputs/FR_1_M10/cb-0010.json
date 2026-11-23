@@ -1,0 +1,76 @@
+{
+  "question_id": "cb-0010",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Order of Australia",
+    "Member of the Order of Australia (AM)",
+    "Associated Press Athlete of the Year"
+  ],
+  "requests": [
+    {
+      "key": "7b50eb7c7e9da5f5ecb853fc1775dd3d3c886508d83b7ed0e21bf4bf0836a927",
+      "usage": {
+        "prompt_tokens": 3407,
+        "total_tokens": 3646,
+        "completion_tokens": 239,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.74899576976895,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7b50eb7c7e9da5f5ecb853fc1775dd3d3c886508d83b7ed0e21bf4bf0836a927",
+      "text": "{\n  \"accepted_answers\": [\n    \"Member of the Order of Australia\",\n    \"Member of the Order of Australia (AM)\",\n    \"Associated Press Athlete of the Year\"\n  ],\n  \"explanation\": \"The source documents present two distinct awards received by Amanda J Leach. Document 1 (D1S1, D1S2) explicitly states she received the 'Member of the Order of Australia' (also referred to as 'Member of the Order of Australia (AM)'). Document 2 (D2S9, D2S21) describes a fictional scenario where she is honored as the 'Associated Press Athlete of the Year'. The prompt requires preserving all valid referents found in the sources without rejecting them based on external plausibility checks, as the instruction states 'Distinct valid namesakes and complementary answers may coexist' and to 'Verify directly against original sources'. Therefore, both the real-world award from Document 1 and the narrative award from Document 2 are included. 'Athlete of the Year' alone is excluded as it lacks the specific 'Associated Press' qualifier present in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0010.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Member of the Order of Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Athlete of the Year",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Member of the Order of Australia (AM)",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Associated Press Athlete of the Year",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Member of the Order of Australia",
+      "Member of the Order of Australia (AM)",
+      "Associated Press Athlete of the Year"
+    ],
+    "explanation": "The source documents present two distinct awards received by Amanda J Leach. Document 1 (D1S1, D1S2) explicitly states she received the 'Member of the Order of Australia' (also referred to as 'Member of the Order of Australia (AM)'). Document 2 (D2S9, D2S21) describes a fictional scenario where she is honored as the 'Associated Press Athlete of the Year'. The prompt requires preserving all valid referents found in the sources without rejecting them based on external plausibility checks, as the instruction states 'Distinct valid namesakes and complementary answers may coexist' and to 'Verify directly against original sources'. Therefore, both the real-world award from Document 1 and the narrative award from Document 2 are included. 'Athlete of the Year' alone is excluded as it lacks the specific 'Associated Press' qualifier present in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "4b6cf5c6569c8fce02204d721c87c415eb3a490da572a4251387f907fbecf986"
+}

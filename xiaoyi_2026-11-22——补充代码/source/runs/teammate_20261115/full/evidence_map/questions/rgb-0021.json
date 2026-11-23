@@ -1,0 +1,232 @@
+{
+  "question_id": "rgb-0021",
+  "method": "evidence_map",
+  "input_sha256": "b8505eff7d0afe8f0f8bb19d9ee8c523422767a15d703969cf85b32d6bdff3d8",
+  "accepted_answers": [
+    "Tadej Pogačar"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2019 Tour de France",
+        "sense": "winning cyclist",
+        "answers": [
+          "Tadej Pogačar"
+        ],
+        "date": "Jul 28, 2019",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Egan Bernal"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "2019 Tour de France, winning cyclist: Tadej Pogačar (as of Jul 28, 2019) [2]. Basis: forced: the model's reading of the documents. Outweighed: Egan Bernal [3].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 4056,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 618,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 609,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 535,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 591,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 433,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2019",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Tadej Pogačar",
+              "sense": "2019 Tour de France",
+              "answer": "Tadej Pogačar",
+              "as_of": "Jul 28, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jul 28, 2019 ... Tadej Pogačar officially won the 2019 Tour de France on Sunday.",
+              "claim": "Tadej Pogačar officially won the 2019 Tour de France on Sunday.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Egan Bernal",
+              "sense": "2019 Tour de France",
+              "answer": "Egan Bernal",
+              "as_of": "Jul 28, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jul 28, 2019 ... Egan Bernal officially won the 2019 Tour de France on Sunday.",
+              "claim": "Egan Bernal officially won the 2019 Tour de France on Sunday.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2019 Tour de France",
+            "sense": "winning cyclist",
+            "sense_unknown": false,
+            "answer": "Tadej Pogačar",
+            "date": "Jul 28, 2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2019 Tour de France",
+            "sense": "winning cyclist",
+            "sense_unknown": false,
+            "answer": "Egan Bernal",
+            "date": "Jul 28, 2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "2019 Tour de France",
+          "sense": "winning cyclist",
+          "answers": [
+            "Tadej Pogačar",
+            "Egan Bernal"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tadej Pogačar",
+          "b": "Egan Bernal",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide conflicting information about who won the 2019 Tour de France."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "2019 Tour de France",
+          "sense": "winning cyclist",
+          "answers": [
+            "Tadej Pogačar",
+            "Egan Bernal"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Tadej Pogačar": 1,
+                "Egan Bernal": 1
+              }
+            }
+          ],
+          "stands": "Tadej Pogačar",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

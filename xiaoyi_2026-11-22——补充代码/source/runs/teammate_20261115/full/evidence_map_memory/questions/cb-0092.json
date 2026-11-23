@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0092",
+  "method": "evidence_map_memory",
+  "input_sha256": "450270bfad63e2c4ded2e670ced516818bc25eb80ee08ba48c7d64a177c54dcc",
+  "accepted_answers": [
+    "Thomas Knowles",
+    "William Anthony Bethell"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Elizabeth Anne Madden",
+        "sense": "marriage",
+        "answers": [
+          "Thomas Knowles"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Elizabeth Anne Madden",
+        "sense": "marriage",
+        "answers": [
+          "William Anthony Bethell"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Elizabeth Anne Madden, marriage: Thomas Knowles [1]. Basis: one source.\nElizabeth Anne Madden, marriage: William Anthony Bethell [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4774,
+    "completion_tokens": 344,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 989,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 506,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1416,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 482,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Elizabeth Anne Madden",
+          "answer": "not enough information provided",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Elizabeth Anne Madden",
+              "sense": "not stated",
+              "answer": "Thomas Knowles",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On 15 June 1990, Lady Elizabeth Anne Madden married Thomas Knowles, a prominent English businessman and Conservative politician.",
+              "claim": "Elizabeth Anne Madden's spouse is Thomas Knowles.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Elizabeth Anne Madden",
+              "sense": "not stated",
+              "answer": "William Anthony Bethell",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Elizabeth Anne Madden and William Anthony Bethell. This narrative delves into the intricacies of their relationship, weaving together a rich tapestry of evidence that supports the claim: Elizabeth Anne Madden is married to William Anthony Bethell.",
+              "claim": "Elizabeth Anne Madden is married to William Anthony Bethell.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Elizabeth Anne Madden",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Thomas Knowles",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Elizabeth Anne Madden",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "William Anthony Bethell",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Elizabeth Anne Madden",
+          "sense": "marriage",
+          "answers": [
+            "Thomas Knowles",
+            "William Anthony Bethell"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Thomas Knowles",
+          "b": "William Anthony Bethell",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Elizabeth Anne Madden's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

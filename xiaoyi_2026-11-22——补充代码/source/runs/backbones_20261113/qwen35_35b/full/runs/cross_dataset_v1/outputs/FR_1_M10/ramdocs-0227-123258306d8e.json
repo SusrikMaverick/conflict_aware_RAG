@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0227-123258306d8e",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Hilario Davide Jr.",
+    "Jejomar Binay"
+  ],
+  "requests": [
+    {
+      "key": "ae1da49e6b61b9c58a45e5b39130a9364f47e5b520443f72caaafe0f546dea2e",
+      "usage": {
+        "prompt_tokens": 4990,
+        "total_tokens": 5212,
+        "completion_tokens": 222,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.46204245463014,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ae1da49e6b61b9c58a45e5b39130a9364f47e5b520443f72caaafe0f546dea2e",
+      "text": "{\n  \"accepted_answers\": [\n    \"Hilario Davide Jr.\",\n    \"Jejomar Binay\"\n  ],\n  \"explanation\": \"The question asks for the father of 'Junjun'. The source documents contain two distinct individuals referred to as 'Junjun' with different fathers:\\n1. D1S6 and D1S2 identify 'Hilario \\\"Junjun\\\" Davide III' as the son of 'Hilario Davide Jr.'.\\n2. D5S2 and D5S6 identify 'Jejomar Erwin \\\"Junjun\\\" S. Binay Jr.' as the only son of 'Jejomar Binay'.\\nBoth 'Hilario Davide Jr.' and 'Jejomar Binay' are valid answers corresponding to different people sharing the nickname 'Junjun'. The audit label J_A incorrectly flags C1 (Jejomar Binay) as a conflict for the first entity, but they are distinct valid referents. Both answers are supported by direct textual evidence in the provided sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0227-123258306d8e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0227-123258306d8e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Hilario Davide Jr.",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jejomar Binay",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Hilario Davide Jr.",
+      "Jejomar Binay"
+    ],
+    "explanation": "The question asks for the father of 'Junjun'. The source documents contain two distinct individuals referred to as 'Junjun' with different fathers:\n1. D1S6 and D1S2 identify 'Hilario \"Junjun\" Davide III' as the son of 'Hilario Davide Jr.'.\n2. D5S2 and D5S6 identify 'Jejomar Erwin \"Junjun\" S. Binay Jr.' as the only son of 'Jejomar Binay'.\nBoth 'Hilario Davide Jr.' and 'Jejomar Binay' are valid answers corresponding to different people sharing the nickname 'Junjun'. The audit label J_A incorrectly flags C1 (Jejomar Binay) as a conflict for the first entity, but they are distinct valid referents. Both answers are supported by direct textual evidence in the provided sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "d574ae29e72d3cb3bdf31e87ba6c516a950d51ecc394f5514d64999bdb8d200e"
+}

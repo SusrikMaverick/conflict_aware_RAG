@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0464f171059f69dea3faad060400e2bcff65eb71c85857c6f2cf21caea7dc395",
+  "input": {
+    "question_id": "ramdocs-0454-50c8e466a0b1",
+    "question": "What is the population of Moose Lake Township, Minnesota?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0454-50c8e466a0b1:d07",
+        "text": "edit ] Bungo Township ( north ) Walden Township ( northeast ) Maple Township ( east ) Home Brook Township ( southeast ) Meadow Brook Township ( south ) Byron Township ( southwest ) Poplar Township ( west ) Cemeteries [ edit ] The township contains Moose Lake Cemetery . Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 142 people , 49 households , and 39 families residing in the township . The population density was 3.8 people per square mile ( 1.5/km 2 ) . There were 61 housing units at"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0454-50c8e466a0b1",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "142"
+    ],
+    "citations": [
+      {
+        "answer": "142",
+        "doc_id": "ramdocs-0454-50c8e466a0b1:d07",
+        "quote": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 142 people , 49 households , and 39 families residing in the township ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "142",
+        "entity": "population of Moose Lake Township, Minnesota",
+        "scope": "as of the 2000 census",
+        "claim": "As of the 2000 census, the population of Moose Lake Township, Minnesota was 142.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 142 people , 49 households , and 39 families residing in the township .",
+        "span_start": 270,
+        "span_end": 407,
+        "doc_id": "ramdocs-0454-50c8e466a0b1:d07",
+        "card_id": "ramdocs-0454-50c8e466a0b1:d07:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 269,
+        "text": "edit ] Bungo Township ( north ) Walden Township ( northeast ) Maple Township ( east ) Home Brook Township ( southeast ) Meadow Brook Township ( south ) Byron Township ( southwest ) Poplar Township ( west ) Cemeteries [ edit ] The township contains Moose Lake Cemetery ."
+      },
+      {
+        "id": "s1",
+        "start": 270,
+        "end": 407,
+        "text": "Demographics [ edit ] As of the census [ 1 ] of 2000 , there were 142 people , 49 households , and 39 families residing in the township ."
+      },
+      {
+        "id": "s2",
+        "start": 408,
+        "end": 476,
+        "text": "The population density was 3.8 people per square mile ( 1.5/km 2 ) ."
+      },
+      {
+        "id": "s3",
+        "start": 477,
+        "end": 507,
+        "text": "There were 61 housing units at"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d5a78329d69b85c91759185fc4c3fba723f34ecaa869145d6b123a00fa202626",
+        "usage": {
+          "prompt_tokens": 413,
+          "total_tokens": 488,
+          "completion_tokens": 75,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 98.47035224363208,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

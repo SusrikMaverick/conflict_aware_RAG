@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0172",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Frans Eemil Sillanpää",
+    "Harry Fane Richmond-Watson"
+  ],
+  "requests": [
+    {
+      "key": "90aa52bd9ed66fbacd40811821026587d66f3d78fd9daa559251981a6c1df5fb",
+      "usage": {
+        "prompt_tokens": 3800,
+        "total_tokens": 3998,
+        "completion_tokens": 198,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.98604878410697,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "90aa52bd9ed66fbacd40811821026587d66f3d78fd9daa559251981a6c1df5fb",
+      "text": "{\n  \"accepted_answers\": [\n    \"Frans Eemil Sillanpää\",\n    \"Harry Fane Richmond-Watson\"\n  ],\n  \"explanation\": \"The query asks for Sylvia Alexander's spouse. Source D1 (narrative fiction) explicitly states Sylvia spotted 'her husband, Frans Eemil Sillanpää' (D1S4). Source D2 (structured data/fictional entry) explicitly states 'Sylvia Alexander is married to Harry Fane Richmond-Watson' (D2S5) and 'Harry Fane Richmond-Watson... is a British aristocrat and husband of Sylvia Alexander' (D2S21). Both sources positively assign a distinct spouse to the named entity 'Sylvia Alexander'. Per instructions to preserve distinct valid referents and not collapse multi-answer questions, both names are retained as they represent separate asserted relationships within the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0172.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Frans Eemil Sillanpää",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Harry Fane Richmond-Watson",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Frans Eemil Sillanpää",
+      "Harry Fane Richmond-Watson"
+    ],
+    "explanation": "The query asks for Sylvia Alexander's spouse. Source D1 (narrative fiction) explicitly states Sylvia spotted 'her husband, Frans Eemil Sillanpää' (D1S4). Source D2 (structured data/fictional entry) explicitly states 'Sylvia Alexander is married to Harry Fane Richmond-Watson' (D2S5) and 'Harry Fane Richmond-Watson... is a British aristocrat and husband of Sylvia Alexander' (D2S21). Both sources positively assign a distinct spouse to the named entity 'Sylvia Alexander'. Per instructions to preserve distinct valid referents and not collapse multi-answer questions, both names are retained as they represent separate asserted relationships within the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "e1b0bdfd77022b4732039f88646cf0ee8f5d6a1c8b67e5cf03f77b67ae2978b1"
+}

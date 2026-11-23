@@ -1,0 +1,88 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "8b2b33b93a0928a15352eec94f1f8c44dd1fbd2140d8fa15660c515603a01cb8",
+  "input": {
+    "question_id": "ramdocs-0223-4c5567fc9fea",
+    "question": "What is the military rank of General Schultz?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0223-4c5567fc9fea:d04",
+        "text": "Army National Guard , May 21 , 1996 Major general , Army National Guard , June 1 , 1998 Lieutenant general , May 24 , 2001 References [ edit ] ^ U.S. Senate Armed Services Committee , Hearing Record Archived February 4 , 2011 , at the Wayback Machine , Subcommittee on Airland Forces Hearing on Modernization of the United States Army , March 24 , 1999 , pages 2-3 ^ U.S. House Appropriations Committee , Hearing Record , Department of Defense Appropriations for 2006 , Biographical sketch , Roger C. Schultz , 2006 , page 43 ^ U.S. House"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0223-4c5567fc9fea",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "Major general, Lieutenant general",
+          "entity": "General Schultz",
+          "scope": "Army National Guard",
+          "claim": "General Schultz held the military ranks of Major general (May 21, 1996) and Lieutenant general (May 24, 2001) in the Army National Guard.",
+          "source_ids": [
+            "s0"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 149,
+        "text": "Army National Guard , May 21 , 1996 Major general , Army National Guard , June 1 , 1998 Lieutenant general , May 24 , 2001 References [ edit ] ^ U.S."
+      },
+      {
+        "id": "s1",
+        "start": 150,
+        "end": 371,
+        "text": "Senate Armed Services Committee , Hearing Record Archived February 4 , 2011 , at the Wayback Machine , Subcommittee on Airland Forces Hearing on Modernization of the United States Army , March 24 , 1999 , pages 2-3 ^ U.S."
+      },
+      {
+        "id": "s2",
+        "start": 372,
+        "end": 500,
+        "text": "House Appropriations Committee , Hearing Record , Department of Defense Appropriations for 2006 , Biographical sketch , Roger C."
+      },
+      {
+        "id": "s3",
+        "start": 501,
+        "end": 532,
+        "text": "Schultz , 2006 , page 43 ^ U.S."
+      },
+      {
+        "id": "s4",
+        "start": 533,
+        "end": 538,
+        "text": "House"
+      }
+    ],
+    "requests": [
+      {
+        "key": "979555bea4e163809c7f2c1ae00de5e196308f2659640f353cdf30ad775bafe8",
+        "usage": {
+          "prompt_tokens": 448,
+          "total_tokens": 556,
+          "completion_tokens": 108,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 46.756589971482754,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "801e150f72998ecc6b6007698071ba9d90527594cf95646f7e964c6655737061",
+  "input": {
+    "question_id": "ramdocs-0296-fc95dabf4dbb",
+    "question": "What is the genre of the film \"Inner Sanctum\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0296-fc95dabf4dbb:d04",
+        "text": "Inner Sanctum (1991 film) Inner Sanctum is a 1991 film which stars Tanya Roberts, Margaux Hemingway, Joseph Bottoms and Valerie Wildman. This film is written by Mark Thomas McGee and directed by Fred Olen Ray. The film was made for $650,000 and was very successful, leading to Ray making a series of erotic thrillers. \"I didn't really know what an erotic thriller was when I did \"Inner Sanctum\",\" admitted Ray later. \"I watched \"Wild Orchid\" -fast-forwarded through it, actually-to see what was expected of me.\" Jennifer Reed, a heiress of a huge fortune, believes that her husband Baxter, an insurance"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0296-fc95dabf4dbb",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "erotic thriller"
+    ],
+    "citations": [
+      {
+        "answer": "erotic thriller",
+        "doc_id": "ramdocs-0296-fc95dabf4dbb:d04",
+        "quote": "The film was made for $650,000 and was very successful, leading to Ray making a series of erotic thrillers. \"I didn't really know what an erotic thriller was when I did \"Inner Sanctum\",\" admitted Ray later."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "erotic thriller",
+        "entity": "Inner Sanctum",
+        "scope": "film genre",
+        "claim": "The film Inner Sanctum is an erotic thriller.",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "quote": "The film was made for $650,000 and was very successful, leading to Ray making a series of erotic thrillers. \"I didn't really know what an erotic thriller was when I did \"Inner Sanctum\",\" admitted Ray later.",
+        "span_start": 210,
+        "span_end": 416,
+        "doc_id": "ramdocs-0296-fc95dabf4dbb:d04",
+        "card_id": "ramdocs-0296-fc95dabf4dbb:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 136,
+        "text": "Inner Sanctum (1991 film) Inner Sanctum is a 1991 film which stars Tanya Roberts, Margaux Hemingway, Joseph Bottoms and Valerie Wildman."
+      },
+      {
+        "id": "s1",
+        "start": 137,
+        "end": 209,
+        "text": "This film is written by Mark Thomas McGee and directed by Fred Olen Ray."
+      },
+      {
+        "id": "s2",
+        "start": 210,
+        "end": 317,
+        "text": "The film was made for $650,000 and was very successful, leading to Ray making a series of erotic thrillers."
+      },
+      {
+        "id": "s3",
+        "start": 318,
+        "end": 416,
+        "text": "\"I didn't really know what an erotic thriller was when I did \"Inner Sanctum\",\" admitted Ray later."
+      },
+      {
+        "id": "s4",
+        "start": 417,
+        "end": 511,
+        "text": "\"I watched \"Wild Orchid\" -fast-forwarded through it, actually-to see what was expected of me.\""
+      },
+      {
+        "id": "s5",
+        "start": 512,
+        "end": 602,
+        "text": "Jennifer Reed, a heiress of a huge fortune, believes that her husband Baxter, an insurance"
+      }
+    ],
+    "requests": [
+      {
+        "key": "ebf547d4f5448eb55bb8c964aeeb13a02c83b4faaa57a49e0ccb56749109cff4",
+        "usage": {
+          "prompt_tokens": 460,
+          "total_tokens": 538,
+          "completion_tokens": 78,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 42.05210742354393,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

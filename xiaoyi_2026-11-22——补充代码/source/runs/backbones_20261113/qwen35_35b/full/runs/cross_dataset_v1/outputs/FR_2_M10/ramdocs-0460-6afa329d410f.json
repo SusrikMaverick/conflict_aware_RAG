@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0460-6afa329d410f",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "18 December 1868",
+    "19 March 1941",
+    "1833"
+  ],
+  "requests": [
+    {
+      "key": "9e9fa7276d81aff3a6c6667ec3157380268afafeff8475839971b96ad9a6eb75",
+      "usage": {
+        "prompt_tokens": 6281,
+        "total_tokens": 6563,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 64.37582598999143,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "9e9fa7276d81aff3a6c6667ec3157380268afafeff8475839971b96ad9a6eb75",
+      "text": "{\n  \"accepted_answers\": [\n    \"18 December 1868\",\n    \"19 March 1941\",\n    \"1833\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'John Lambie'. The source documents identify three distinct individuals with this name: 1) John Alexander Lambie (footballer), born 18 December 1868 (supported by D1S1, D2S2, D3S2). Note that D4S2 contains a conflicting date of 1888, but the majority of sources (D1, D2, D3) and the specific disambiguation in the title 'born 1868' confirm 1868 as the correct date for this entity; 1888 is treated as a likely error in D4. 2) John Lambie (footballer/manager), born 19 March 1941 (supported by D5S1, D6S1, D7S1). 3) John Lambie (engineer), born 1833 (supported by D8S3). All three represent distinct valid referents for the name 'John Lambie' found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0460-6afa329d410f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "18 December 1868",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "19 March 1941",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1833",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "18 December 1888",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "18 December 1868",
+      "19 March 1941",
+      "1833"
+    ],
+    "explanation": "The query asks for the birth date of 'John Lambie'. The source documents identify three distinct individuals with this name: 1) John Alexander Lambie (footballer), born 18 December 1868 (supported by D1S1, D2S2, D3S2). Note that D4S2 contains a conflicting date of 1888, but the majority of sources (D1, D2, D3) and the specific disambiguation in the title 'born 1868' confirm 1868 as the correct date for this entity; 1888 is treated as a likely error in D4. 2) John Lambie (footballer/manager), born 19 March 1941 (supported by D5S1, D6S1, D7S1). 3) John Lambie (engineer), born 1833 (supported by D8S3). All three represent distinct valid referents for the name 'John Lambie' found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "1f07837cd9209a783d927027441d306acabc5731b95d02ec13de123acc68b690"
+}

@@ -1,0 +1,206 @@
+{
+  "question_id": "ramdocs-0134-f6bdabbe7d64",
+  "method": "evidence_map_memory",
+  "input_sha256": "144cd1734c39f4bad1358b97b9b3f6b56cfd256e520676193d88dd7134ac335f",
+  "accepted_answers": [
+    "December 8, 1987",
+    "August 10,"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Judge Cummings",
+        "sense": "December 8, 1987",
+        "answers": [
+          "December 8, 1987",
+          "August 10,"
+        ],
+        "date": "1966",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Judge Cummings, December 8, 1987: December 8, 1987 / August 10, (as of 1966) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 3532,
+    "completion_tokens": 468,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 489,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 765,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 543,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "John Lewis Cummings",
+          "answer": "2019",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Judge Cummings",
+              "sense": "not stated",
+              "answer": "December 8, 1987",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "confirmed by the United States Senate on December 8, 1987, and received his commission on December 9, 1987.",
+              "claim": "Judge Cummings was confirmed by the United States Senate on December 8, 1987.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Judge Cummings",
+              "sense": "not stated",
+              "answer": "August 10,",
+              "as_of": "1966",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Cummings was confirmed by the United States Senate on August 10,",
+              "claim": "Judge Cummings was confirmed by the United States Senate on August 10, 1966.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Judge Cummings",
+            "sense": "confirmation by the Senate",
+            "sense_unknown": false,
+            "answer": "December 8, 1987",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Judge Cummings",
+            "sense": "confirmation by the Senate",
+            "sense_unknown": false,
+            "answer": "August 10,",
+            "date": "1966",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Judge Cummings",
+          "sense": "confirmation by the Senate",
+          "answers": [
+            "December 8, 1987",
+            "August 10,"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Cummings was nominated by President Lyndon B. Johnson on July 11, 1966, to the United States Court of Appeals for the Seventh Circuit, to a new seat authorized by 80 Stat. 75. He was confirmed by the United States Senate on August 10,",
+          "labels": {
+            "A": "December 8, 1987",
+            "B": "August 10"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "December 8, 1987",
+          "b": "August 10,",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The dates provided for confirmation are different."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

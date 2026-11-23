@@ -1,0 +1,211 @@
+{
+  "question_id": "cb-0190",
+  "method": "evidence_map_memory",
+  "input_sha256": "e4963c944805d72185a9531f8c2c8e328a6c16718b1351fd3bcb97bbdcc4429b",
+  "accepted_answers": [
+    "Dows Dunham",
+    "Ruby Frewen"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Marion Jessie Thompson",
+        "sense": "1922",
+        "answers": [
+          "Dows Dunham"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Marion Jessie Thompson",
+        "sense": "1866",
+        "answers": [
+          "Ruby Frewen"
+        ],
+        "date": "March 15, 2023",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Marion Jessie Thompson, 1922: Dows Dunham [1]. Basis: one source.\nMarion Jessie Thompson, 1866: Ruby Frewen (as of March 15, 2023) [2]. Basis: one source.",
+    "ask_back": "Did you mean Marion Jessie Thompson (1922) or Marion Jessie Thompson (1866)?",
+    "calls": 7,
+    "prompt_tokens": 5041,
+    "completion_tokens": 439,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 533,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1505,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 571,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Marion Jessie Thompson",
+              "sense": "not stated",
+              "answer": "Dows Dunham",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to marriage records obtained from the New York State Archives, Marion Jessie Thompson and Dows Dunham tied the knot on June 24, 1922, in Albany, New York.",
+              "claim": "Marion Jessie Thompson was married to Dows Dunham.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Marion Jessie Thompson",
+              "sense": "not stated",
+              "answer": "Ruby Frewen",
+              "as_of": "March 15, 2023",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a shocking discovery that has left the academic community reeling, it has been revealed that Marion Jessie Thompson, a woman born in 1890, is married to Ruby Frewen, who passed away in 1866.",
+              "claim": "Marion Jessie Thompson is married to Ruby Frewen.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Marion Jessie Thompson",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Dows Dunham",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Marion Jessie Thompson",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Ruby Frewen",
+            "date": "March 15, 2023",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Marion Jessie Thompson",
+          "sense": "spouse",
+          "answers": [
+            "Dows Dunham",
+            "Ruby Frewen"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "In a shocking discovery that has left the academic community reeling, it has been revealed that Marion Jessie Thompson, a woman born in 1890, is married to Ruby Frewen, who passed away in 1866.",
+          "labels": {
+            "A": "1922",
+            "B": "1866"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Dows Dunham",
+          "b": "Ruby Frewen",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different spouses for Marion Jessie Thompson."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0459-cd4f437f7154",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Cambridge, Vermont",
+    "Duplain Township, Michigan"
+  ],
+  "requests": [
+    {
+      "key": "e739f6f75b7ec4d2f49941797c0e7e630d1f8f06266068544c166b892e82731a",
+      "usage": {
+        "prompt_tokens": 3891,
+        "total_tokens": 4064,
+        "completion_tokens": 173,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 185.51410485059023,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e739f6f75b7ec4d2f49941797c0e7e630d1f8f06266068544c166b892e82731a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Cambridge, Vermont\",\n    \"Duplain Township, Michigan\"\n  ],\n  \"explanation\": \"The question asks where the Grist Mill Bridge is located. Two distinct referents named 'Grist Mill Bridge' appear in the sources: one in Cambridge, Vermont (D2S1), and another in Duplein Township, Michigan (D1S1). These are separate entities with the same name. The candidate 'the upper section of the park' (C1) refers to the Thompson-Neely mill and farmstead (D5S2), not the Grist Mill Bridge itself, and is therefore not a valid direct answer to the question. Candidate C2 (Duplain Township, Michigan) is directly supported by D1S1 and should be included as a valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0459-cd4f437f7154.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Cambridge, Vermont",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "the upper section of the park",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Duplain Township, Michigan",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Cambridge, Vermont",
+      "Duplain Township, Michigan"
+    ],
+    "explanation": "The question asks where the Grist Mill Bridge is located. Two distinct referents named 'Grist Mill Bridge' appear in the sources: one in Cambridge, Vermont (D2S1), and another in Duplein Township, Michigan (D1S1). These are separate entities with the same name. The candidate 'the upper section of the park' (C1) refers to the Thompson-Neely mill and farmstead (D5S2), not the Grist Mill Bridge itself, and is therefore not a valid direct answer to the question. Candidate C2 (Duplain Township, Michigan) is directly supported by D1S1 and should be included as a valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "3e1fd9356769bcb4c9cdc43314ba70ea084532e18a2c95a8d11994afc825213a"
+}

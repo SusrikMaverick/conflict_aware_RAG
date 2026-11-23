@@ -1,0 +1,204 @@
+{
+  "question_id": "ramdocs-0008-da20e78763ef",
+  "method": "evidence_map_memory",
+  "input_sha256": "4cfb79a80281993e1ec42b5132b115f795cd7d78af92d6476ff7fb7a5e6434ec",
+  "accepted_answers": [
+    "February 8, 1900",
+    "July 15, 1905"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Blackshear M. Bryan",
+        "sense": "birth date",
+        "answers": [
+          "February 8, 1900",
+          "July 15, 1905"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Blackshear M. Bryan, birth date: February 8, 1900 / July 15, 1905 [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 3446,
+    "completion_tokens": 377,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 158,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 146,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 488,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 765,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 466,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "General Bryan (U.S. Army)",
+          "answer": "1952",
+          "confidence": 70
+        },
+        {
+          "about": "General Bryan (U.S. Air Force)",
+          "answer": "1946",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Blackshear M. Bryan",
+              "sense": "not stated",
+              "answer": "February 8, 1900",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bryan was born in Alexandria, Louisiana on February 8, 1900.",
+              "claim": "Blackshear M. Bryan was born on February 8, 1900.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Blackshear M. Bryan",
+              "sense": "not stated",
+              "answer": "July 15, 1905",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bryan was born in Alexandria, Louisiana on July 15, 1905.",
+              "claim": "Blackshear M. Bryan was born on July 15, 1905.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Blackshear M. Bryan",
+            "sense": "birth date",
+            "sense_unknown": false,
+            "answer": "February 8, 1900",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Blackshear M. Bryan",
+            "sense": "birth date",
+            "sense_unknown": false,
+            "answer": "July 15, 1905",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Blackshear M. Bryan",
+          "sense": "birth date",
+          "answers": [
+            "February 8, 1900",
+            "July 15, 1905"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "February 8, 1900",
+          "b": "July 15, 1905",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The birth dates provided are different."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

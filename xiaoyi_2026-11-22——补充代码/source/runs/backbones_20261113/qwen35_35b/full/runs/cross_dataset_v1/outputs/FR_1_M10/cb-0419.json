@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0419",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Righteous Among the Nations",
+    "Distinguished Service Order"
+  ],
+  "requests": [
+    {
+      "key": "b072ba1b00350f7e5246b76859fe61995ec6cc9babdb79913e9746549558bbd0",
+      "usage": {
+        "prompt_tokens": 4403,
+        "total_tokens": 4686,
+        "completion_tokens": 283,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 77.75767990201712,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b072ba1b00350f7e5246b76859fe61995ec6cc9babdb79913e9746549558bbd0",
+      "text": "{\n  \"accepted_answers\": [\n    \"Righteous Among the Nations\",\n    \"Distinguished Service Order\"\n  ],\n  \"explanation\": \"The source documents provide two distinct awards for Janina Bil. Document 1 (D1S2, D1S14) explicitly states she earned the title 'Righteous Among the Nations' from the State of Israel in 1964. Document 2 (D2S19-D2S21) contains a narrative where Captain Jameson informs her she will receive the 'Distinguished Service Order' from the British government. Although Document 2 appears to be a fictionalized account (indicated by the character 'Captain Jameson' and the specific claim of being the first Polish citizen to receive this specific British order, which contradicts historical records of the actual recipient), the prompt instructions require treating all supplied source segments as data to be matched without inventing authority or excluding based on external knowledge. Both awards are explicitly mentioned in the text as being received or awarded to Janina Bil. The fallible audits incorrectly flagged C1 as a conflict or wrong argument based on the presence of D1S14, but the instruction to 'Verify directly against original sources' and 'Preserve separately valid referents' confirms both are present in the provided text as answers to the question.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0419.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Righteous Among the Nations",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Distinguished Service Order",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Righteous Among the Nations",
+      "Distinguished Service Order"
+    ],
+    "explanation": "The source documents provide two distinct awards for Janina Bil. Document 1 (D1S2, D1S14) explicitly states she earned the title 'Righteous Among the Nations' from the State of Israel in 1964. Document 2 (D2S19-D2S21) contains a narrative where Captain Jameson informs her she will receive the 'Distinguished Service Order' from the British government. Although Document 2 appears to be a fictionalized account (indicated by the character 'Captain Jameson' and the specific claim of being the first Polish citizen to receive this specific British order, which contradicts historical records of the actual recipient), the prompt instructions require treating all supplied source segments as data to be matched without inventing authority or excluding based on external knowledge. Both awards are explicitly mentioned in the text as being received or awarded to Janina Bil. The fallible audits incorrectly flagged C1 as a conflict or wrong argument based on the presence of D1S14, but the instruction to 'Verify directly against original sources' and 'Preserve separately valid referents' confirms both are present in the provided text as answers to the question."
+  },
+  "diagnostics": {},
+  "row_sha256": "1cc7e29c3c2b0bff6f953e5a88328c9e76a1bebc84ae7b87745e698fd9279beb"
+}

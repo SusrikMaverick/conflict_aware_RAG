@@ -1,0 +1,249 @@
+{
+  "question_id": "ramdocs-0210-ad93362655ef",
+  "method": "evidence_map_memory",
+  "input_sha256": "0e0b3d069d0b08ccced19956bc36bc4d02d7ccb97d269abdb2de2d95327e4f59",
+  "accepted_answers": [
+    "$31,250"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "a family in Screven",
+        "sense": "family in Screven",
+        "answers": [
+          "$31,250"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "$34,753"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "a family in Screven, family in Screven: $31,250 [1]. Basis: forced: the model's reading of the documents. Outweighed: $34,753 [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 4417,
+    "completion_tokens": 522,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 757,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 763,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 857,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 513,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 714,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "geographic location",
+          "answer": "Screven, Georgia",
+          "confidence": 80
+        },
+        {
+          "about": "median family income",
+          "answer": "not provided",
+          "confidence": 0
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "a family in Screven",
+              "sense": "not stated",
+              "answer": "$31,250",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "the median income for a family was $31,250.",
+              "claim": "The median income for a family in Screven was $31,250.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "a family in Screven",
+              "sense": "not stated",
+              "answer": "$34,753",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The median income for a household in the county was $29,312, and the median income for a family was $34,753.",
+              "claim": "The median income for a family in Screven is $34,753.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "a family in Screven",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "$31,250",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "a family in Screven",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "$34,753",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "a family in Screven",
+          "sense": "not stated",
+          "answers": [
+            "$31,250",
+            "$34,753"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "household in the county was $29,312, and the median income for a family was $34,753.",
+          "labels": {
+            "A": "family in Screven",
+            "B": "family in the county"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "$31,250",
+          "b": "$34,753",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers refer to the same entity (family in Screven) and the same sense (median income), but the values differ without an explanation for the discrepancy."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "a family in Screven",
+          "sense": "family in Screven",
+          "answers": [
+            "$31,250",
+            "$34,753"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "$31,250": 1,
+                "$34,753": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "$31,250",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

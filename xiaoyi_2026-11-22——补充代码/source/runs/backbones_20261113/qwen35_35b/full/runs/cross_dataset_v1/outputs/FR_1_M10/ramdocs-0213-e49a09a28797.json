@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0213-e49a09a28797",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "August 1998",
+    "fall of 1964"
+  ],
+  "requests": [
+    {
+      "key": "1c06e21f20deadaad7d1027233a68062a46048eb1ce5cbdc49a6d9a7fa7a2167",
+      "usage": {
+        "prompt_tokens": 3438,
+        "total_tokens": 3889,
+        "completion_tokens": 451,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 66.80515573173761,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1c06e21f20deadaad7d1027233a68062a46048eb1ce5cbdc49a6d9a7fa7a2167",
+      "text": "{\n  \"accepted_answers\": [\n    \"August 1998\",\n    \"fall of 1964\"\n  ],\n  \"explanation\": \"The question asks for the establishment date of 'South Hills High School'. The source documents describe two distinct entities with this name: one in Fort Worth, Texas, and one in West Covina, California. D1S3 explicitly states the Texas school 'opened in August 1998', and D4S3 states the California school 'opened in the fall of 1964'. Both are valid answers for their respective referents. The candidate 'January 2005' (from D3S1/Wikidata) conflicts with the explicit narrative text in D1S3 ('opened in August 1998') regarding the Texas school's opening. Since the narrative source (D1S3) provides a specific opening event while the Wikidata entry (D3S1) lists a conflicting inception date without further context, and given the instruction to verify directly against original sources where narrative text often supersedes structured data errors, 'January 2005' is treated as a likely error or referring to a different phase (e.g., full operation) rather than the primary establishment/opening date found in the text. However, strictly adhering to the prompt's instruction to 'Keep valid R5 strings and all valid referents' and 'Do not select only one favorite interpretation', the conflicting dates represent competing assertions. Yet, the prompt also says 'A quoted assertion... is not truth' and 'Verify directly against original sources'. D1S3 is a direct narrative claim of opening. D3S1 is a Wikidata snippet which may contain errors. D4S3 is a direct narrative claim. Therefore, the two definitive opening dates from narrative sources are 'August 1998' and 'fall of 1964'. 'January 2005' is excluded as it contradicts the explicit 'opened in August 1998' statement in the same document set (D1) and lacks the narrative support of the other two.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0213-e49a09a28797.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0213-e49a09a28797.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "August 1998",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "fall of 1964",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "January 2005",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "August 1998",
+      "fall of 1964"
+    ],
+    "explanation": "The question asks for the establishment date of 'South Hills High School'. The source documents describe two distinct entities with this name: one in Fort Worth, Texas, and one in West Covina, California. D1S3 explicitly states the Texas school 'opened in August 1998', and D4S3 states the California school 'opened in the fall of 1964'. Both are valid answers for their respective referents. The candidate 'January 2005' (from D3S1/Wikidata) conflicts with the explicit narrative text in D1S3 ('opened in August 1998') regarding the Texas school's opening. Since the narrative source (D1S3) provides a specific opening event while the Wikidata entry (D3S1) lists a conflicting inception date without further context, and given the instruction to verify directly against original sources where narrative text often supersedes structured data errors, 'January 2005' is treated as a likely error or referring to a different phase (e.g., full operation) rather than the primary establishment/opening date found in the text. However, strictly adhering to the prompt's instruction to 'Keep valid R5 strings and all valid referents' and 'Do not select only one favorite interpretation', the conflicting dates represent competing assertions. Yet, the prompt also says 'A quoted assertion... is not truth' and 'Verify directly against original sources'. D1S3 is a direct narrative claim of opening. D3S1 is a Wikidata snippet which may contain errors. D4S3 is a direct narrative claim. Therefore, the two definitive opening dates from narrative sources are 'August 1998' and 'fall of 1964'. 'January 2005' is excluded as it contradicts the explicit 'opened in August 1998' statement in the same document set (D1) and lacks the narrative support of the other two."
+  },
+  "diagnostics": {},
+  "row_sha256": "85de4082cd4d57f9cfc95ed7313c70bfaa67c8ddd15233d762ca28085c67823e"
+}

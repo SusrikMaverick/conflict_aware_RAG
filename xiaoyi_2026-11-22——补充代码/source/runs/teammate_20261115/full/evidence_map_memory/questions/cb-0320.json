@@ -1,0 +1,211 @@
+{
+  "question_id": "cb-0320",
+  "method": "evidence_map_memory",
+  "input_sha256": "5d7312fed8b7c3b724ff520ae49ee09d7e9dfa91e124bed3e819c7350dda1d6e",
+  "accepted_answers": [
+    "North Eastern MetroStars",
+    "A.S.D. Ponziana"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Scott Tunbridge",
+        "sense": "local talent",
+        "answers": [
+          "North Eastern MetroStars"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Scott Tunbridge",
+        "sense": "Italian association football club",
+        "answers": [
+          "A.S.D. Ponziana"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Scott Tunbridge, local talent: North Eastern MetroStars [1]. Basis: one source.\nScott Tunbridge, Italian association football club: A.S.D. Ponziana [2]. Basis: one source.",
+    "ask_back": "Did you mean Scott Tunbridge (local talent) or Scott Tunbridge (Italian association football club)?",
+    "calls": 7,
+    "prompt_tokens": 4920,
+    "completion_tokens": 462,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1007,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1101,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1460,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 529,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Scott Tunbridge",
+              "sense": "not stated",
+              "answer": "North Eastern MetroStars",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Adelaide, Australia - In a testament to the thriving soccer scene in South Australia, local talent Scott Tunbridge has been making waves with his impressive performances for the North Eastern MetroStars.\"",
+              "claim": "Scott Tunbridge represents the North Eastern MetroStars.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Scott Tunbridge",
+              "sense": "not stated",
+              "answer": "A.S.D. Ponziana",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Scott Tunbridge is an Australian professional soccer player who currently plays for A.S.D. Ponziana, an Italian association football club based in Trieste.",
+              "claim": "Scott Tunbridge currently plays for A.S.D. Ponziana.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Scott Tunbridge",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "North Eastern MetroStars",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Scott Tunbridge",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "A.S.D. Ponziana",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Scott Tunbridge",
+          "sense": "not stated",
+          "answers": [
+            "North Eastern MetroStars",
+            "A.S.D. Ponziana"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Adelaide, Australia - In a testament to the thriving soccer scene in South Australia, local talent Scott Tunbridge has been making waves with his impressive performances for the North Eastern MetroStars.",
+          "labels": {
+            "A": "local talent",
+            "B": "Italian association football club"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "North Eastern MetroStars",
+          "b": "A.S.D. Ponziana",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about Scott Tunbridge playing for two different teams."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

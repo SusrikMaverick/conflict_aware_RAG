@@ -1,0 +1,115 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "c9248493d575cca633006e9e0f6488bab9b6554b6e938be331a2a2c80bc1edad",
+  "input": {
+    "question_id": "ramdocs-0306-29081c64f3b3",
+    "question": "What is the population of Longtown?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0306-29081c64f3b3:d03",
+        "text": "Longtown, Oklahoma Longtown is a census-designated place (CDP) and unincorporated community in Pittsburg County, Oklahoma, United States. The population was 2,397 at the 2000 census. Longtown is located at (35.229636, -95.520191). According to the United States Census Bureau, the CDP has a total area of , of which, of it is land and of it (26.43%) is water. As of the census of 2000, there were 2,397 people, 1,101 households, and 778 families residing in the CDP. The population density was 90.4 people per square mile (34.9/km²). There were 3,059 housing units at an average density of 115.3/sq mi (44.5/km²)."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0306-29081c64f3b3",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "2,397"
+    ],
+    "citations": [
+      {
+        "answer": "2,397",
+        "doc_id": "ramdocs-0306-29081c64f3b3:d03",
+        "quote": "The population was 2,397 at the 2000 census. Longtown is located at (35.229636, -95.520191). According to the United States Census Bureau, the CDP has a total area of , of which, of it is land and of it (26.43%) is water. As of the census of 2000, there were 2,397 people, 1,101 households, and 778 families residing in the CDP."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "2,397",
+        "entity": "Longtown",
+        "scope": "2000 census",
+        "claim": "The population of Longtown was 2,397 at the 2000 census.",
+        "source_ids": [
+          "s1",
+          "s4"
+        ],
+        "quote": "The population was 2,397 at the 2000 census. Longtown is located at (35.229636, -95.520191). According to the United States Census Bureau, the CDP has a total area of , of which, of it is land and of it (26.43%) is water. As of the census of 2000, there were 2,397 people, 1,101 households, and 778 families residing in the CDP.",
+        "span_start": 138,
+        "span_end": 466,
+        "doc_id": "ramdocs-0306-29081c64f3b3:d03",
+        "card_id": "ramdocs-0306-29081c64f3b3:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 137,
+        "text": "Longtown, Oklahoma Longtown is a census-designated place (CDP) and unincorporated community in Pittsburg County, Oklahoma, United States."
+      },
+      {
+        "id": "s1",
+        "start": 138,
+        "end": 182,
+        "text": "The population was 2,397 at the 2000 census."
+      },
+      {
+        "id": "s2",
+        "start": 183,
+        "end": 230,
+        "text": "Longtown is located at (35.229636, -95.520191)."
+      },
+      {
+        "id": "s3",
+        "start": 231,
+        "end": 359,
+        "text": "According to the United States Census Bureau, the CDP has a total area of , of which, of it is land and of it (26.43%) is water."
+      },
+      {
+        "id": "s4",
+        "start": 360,
+        "end": 466,
+        "text": "As of the census of 2000, there were 2,397 people, 1,101 households, and 778 families residing in the CDP."
+      },
+      {
+        "id": "s5",
+        "start": 467,
+        "end": 533,
+        "text": "The population density was 90.4 people per square mile (34.9/km²)."
+      },
+      {
+        "id": "s6",
+        "start": 534,
+        "end": 613,
+        "text": "There were 3,059 housing units at an average density of 115.3/sq mi (44.5/km²)."
+      }
+    ],
+    "requests": [
+      {
+        "key": "675a80eaec4b67760175364a786b2837a995a307b931affb19af88dab68ebe69",
+        "usage": {
+          "prompt_tokens": 526,
+          "total_tokens": 619,
+          "completion_tokens": 93,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.553579580038786,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

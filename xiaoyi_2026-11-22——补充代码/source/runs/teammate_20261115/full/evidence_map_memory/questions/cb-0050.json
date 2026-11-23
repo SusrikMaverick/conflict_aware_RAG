@@ -1,0 +1,193 @@
+{
+  "question_id": "cb-0050",
+  "method": "evidence_map_memory",
+  "input_sha256": "d61909d871d3debd9255af06d74c608a4654ee8c06c93d77ca19e0c8789d5afe",
+  "accepted_answers": [
+    "Columbus Crew",
+    "Blackpool F.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sid Hoad",
+        "sense": "not stated",
+        "answers": [
+          "Columbus Crew",
+          "Blackpool F.C."
+        ],
+        "date": "1923",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Sid Hoad: Columbus Crew / Blackpool F.C. (as of 1923) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4959,
+    "completion_tokens": 451,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 980,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 569,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1471,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 547,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sid Hoad",
+              "sense": "not stated",
+              "answer": "Columbus Crew",
+              "as_of": "1923",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among the sea of enthusiastic fans gathered at the Crew's home stadium, one figure stood out - a tall, lanky Englishman with a mop of unruly brown hair and a mischievous glint in his eye. Sid Hoad, the Crew's star midfielder, was busy warming up on the sidelines, his long legs striding effortlessly as he juggled a ball with precision.",
+              "claim": "Sid Hoad represents the Columbus Crew.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Sid Hoad",
+              "sense": "not stated",
+              "answer": "Blackpool F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hoad's most notable stint was with Blackpool F.C., an association football club based in Blackpool, England. According to records, Hoad played for Blackpool F.C. during the 1910s and 1920s.",
+              "claim": "Sid Hoad represented Blackpool F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sid Hoad",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Columbus Crew",
+            "date": "1923",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Sid Hoad",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Blackpool F.C.",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Sid Hoad",
+          "sense": "not stated",
+          "answers": [
+            "Columbus Crew",
+            "Blackpool F.C."
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Columbus Crew",
+          "b": "Blackpool F.C.",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The documents provide information about Sid Hoad playing for two different teams without any indication that these refer to the same period or that one team replaced the other."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

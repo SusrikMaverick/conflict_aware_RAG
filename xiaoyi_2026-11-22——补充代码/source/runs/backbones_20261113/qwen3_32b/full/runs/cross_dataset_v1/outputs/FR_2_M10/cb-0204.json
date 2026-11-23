@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0204",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Penzance A.F.C.",
+    "Swapit-Agolico"
+  ],
+  "requests": [
+    {
+      "key": "134eeafc3c10cdff726f4b72f1dccf38ebdb13a25263e0e9df2caf0843d3c251",
+      "usage": {
+        "prompt_tokens": 3580,
+        "total_tokens": 3738,
+        "completion_tokens": 158,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 118.5470291338861,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "134eeafc3c10cdff726f4b72f1dccf38ebdb13a25263e0e9df2caf0843d3c251",
+      "text": "{\n  \"accepted_answers\": [\n    \"Penzance A.F.C.\",\n    \"Swapit-Agolico\"\n  ],\n  \"explanation\": \"Gabriela Soto is described as representing both Penzance A.F.C. (a local association football club in D1S6) and the Mexican cycling team Swapit-Agolico (as stated in D2S17). These are distinct referents—football and cycling—and thus both are valid answers. The phrase 'Mexican cycling team' (C2) is not a specific team name and is therefore less precise than 'Swapit-Agolico', which is explicitly named in the source. As such, C2 is not retained in favor of the more specific C1.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0204.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0204.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Penzance A.F.C.",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Swapit-Agolico",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Mexican cycling team",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Penzance A.F.C.",
+      "Swapit-Agolico"
+    ],
+    "explanation": "Gabriela Soto is described as representing both Penzance A.F.C. (a local association football club in D1S6) and the Mexican cycling team Swapit-Agolico (as stated in D2S17). These are distinct referents—football and cycling—and thus both are valid answers. The phrase 'Mexican cycling team' (C2) is not a specific team name and is therefore less precise than 'Swapit-Agolico', which is explicitly named in the source. As such, C2 is not retained in favor of the more specific C1."
+  },
+  "diagnostics": {},
+  "row_sha256": "3bef7b94a5c24037d684bc702f9078099b9fb53def23892f65afcac8246d48cc"
+}

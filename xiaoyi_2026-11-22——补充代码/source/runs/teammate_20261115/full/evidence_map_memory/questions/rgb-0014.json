@@ -1,0 +1,257 @@
+{
+  "question_id": "rgb-0014",
+  "method": "evidence_map_memory",
+  "input_sha256": "3575de4de88abb36915e35357a809b270dac7a3134ba2df3a3cf59d5621fad50",
+  "accepted_answers": [
+    "$6.3 billion"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tesla",
+        "sense": "Q3 2019",
+        "answers": [
+          "$6.3 billion"
+        ],
+        "date": "Oct 23, 2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "$1.30 billion"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Tesla, Q3 2019: $6.3 billion (as of Oct 23, 2019) [1]. Basis: forced: the model's reading of the documents. Outweighed: $1.30 billion [2].",
+    "ask_back": null,
+    "calls": 10,
+    "prompt_tokens": 4926,
+    "completion_tokens": 576,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 616,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 617,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 624,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 669,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 516,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "facts",
+          "prompt_tokens": 502,
+          "completion_tokens": 7,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 522,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tesla Inc.",
+          "answer": "1.43 billion USD",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": "Q3 2019",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tesla",
+              "sense": "Q3 2019",
+              "answer": "$6.3 billion",
+              "as_of": "Oct 23, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $6.3 billion in revenue, meeting Wall Street estimates\".",
+              "claim": "Tesla posted $6.3 billion in revenue in Q3 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tesla",
+              "sense": "Q3 2019",
+              "answer": "$1.30 billion",
+              "as_of": "Oct 23, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $1.30 billion in revenue, meeting Wall Street estimates\".",
+              "claim": "Tesla posted $1.30 billion in revenue in Q3 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tesla",
+            "sense": "Q3 2019",
+            "sense_unknown": false,
+            "answer": "$6.3 billion",
+            "date": "Oct 23, 2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tesla",
+            "sense": "Q3 2019",
+            "sense_unknown": false,
+            "answer": "$1.30 billion",
+            "date": "Oct 23, 2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tesla",
+          "sense": "Q3 2019",
+          "answers": [
+            "$6.3 billion",
+            "$1.30 billion"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "$6.3 billion",
+          "b": "$1.30 billion",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different revenue figures for the same quarter and company."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Tesla",
+          "sense": "Q3 2019",
+          "answers": [
+            "$6.3 billion",
+            "$1.30 billion"
+          ],
+          "tried": [
+            {
+              "evidence": "other facts",
+              "rules_out": null
+            },
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "$6.3 billion": 1,
+                "$1.30 billion": 1
+              }
+            }
+          ],
+          "stands": "$6.3 billion",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 10
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0013-fcb586e26f97",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Carpenters"
+  ],
+  "requests": [
+    {
+      "key": "303fb8eca5ba34f302b510dc6b54e6f2e390072f880a448ed022d0feb53333a9",
+      "usage": {
+        "prompt_tokens": 2212,
+        "total_tokens": 2379,
+        "completion_tokens": 167,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 116.39403712004423,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "303fb8eca5ba34f302b510dc6b54e6f2e390072f880a448ed022d0feb53333a9",
+      "text": "{\n  \"accepted_answers\": [\"Carpenters\"],\n  \"explanation\": \"The question asks for the artist of the album *A Kind of Hush*. Two conflicting claims exist: one stating the artist is the **Carpenters** (supported by D1S1, D2S1), and another claiming it is **The Beatles** (supported by D3S1). However, D3S1 contains a clear factual error — it incorrectly attributes the album to The Beatles, while all other sources consistently identify the Carpenters as the creators of the album. Since the Beatles did not release an album titled *A Kind of Hush* in 1976, and the correct artist is explicitly stated in two documents, **Carpenters** is the only valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0013-fcb586e26f97.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0013-fcb586e26f97.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Carpenters",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "The Beatles",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Carpenters"
+    ],
+    "explanation": "The question asks for the artist of the album *A Kind of Hush*. Two conflicting claims exist: one stating the artist is the **Carpenters** (supported by D1S1, D2S1), and another claiming it is **The Beatles** (supported by D3S1). However, D3S1 contains a clear factual error — it incorrectly attributes the album to The Beatles, while all other sources consistently identify the Carpenters as the creators of the album. Since the Beatles did not release an album titled *A Kind of Hush* in 1976, and the correct artist is explicitly stated in two documents, **Carpenters** is the only valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "83518b225a14299802200193b24e17a4a7dc7c9601d152ee5fdd7958feaa4160"
+}

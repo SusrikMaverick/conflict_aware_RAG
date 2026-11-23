@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0159-829bfe9903c8",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "singer",
+    "actor",
+    "chef",
+    "badminton player"
+  ],
+  "requests": [
+    {
+      "key": "46ce0ac0f196d9e40c131920bb2cdaf14987f5980d7807860ece150f5f5f5232",
+      "usage": {
+        "prompt_tokens": 4733,
+        "total_tokens": 4945,
+        "completion_tokens": 212,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.96404852345586,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "46ce0ac0f196d9e40c131920bb2cdaf14987f5980d7807860ece150f5f5f5232",
+      "text": "{\n  \"accepted_answers\": [\n    \"singer\",\n    \"actor\",\n    \"chef\",\n    \"badminton player\"\n  ],\n  \"explanation\": \"The query asks for the profession of 'Kim So-yeong'. The provided documents contain distinct entries for different individuals sharing this name, which is a common occurrence in Korean naming conventions. Document D1 describes 'Fat Cat', also known as Kim So-yeong, as a 'singer'. Document D3 explicitly states 'Kim So-yeong' is an 'actor'. Document D4 lists 'Chef Kim So-yeong' as the recipient of 'Chef of the Year'. Documents D5 and D6 describe 'Kim So-yeong' as a 'badminton player'. Since the prompt instructions state that distinct valid namesakes may coexist and to keep supported alternate referents rather than selecting a single winner, all four professions found in the source text are valid answers corresponding to different individuals named Kim So-yeong.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0159-829bfe9903c8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0159-829bfe9903c8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "singer",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "actor",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "chef",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "badminton player",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "singer",
+      "actor",
+      "chef",
+      "badminton player"
+    ],
+    "explanation": "The query asks for the profession of 'Kim So-yeong'. The provided documents contain distinct entries for different individuals sharing this name, which is a common occurrence in Korean naming conventions. Document D1 describes 'Fat Cat', also known as Kim So-yeong, as a 'singer'. Document D3 explicitly states 'Kim So-yeong' is an 'actor'. Document D4 lists 'Chef Kim So-yeong' as the recipient of 'Chef of the Year'. Documents D5 and D6 describe 'Kim So-yeong' as a 'badminton player'. Since the prompt instructions state that distinct valid namesakes may coexist and to keep supported alternate referents rather than selecting a single winner, all four professions found in the source text are valid answers corresponding to different individuals named Kim So-yeong."
+  },
+  "diagnostics": {},
+  "row_sha256": "b8cab1a10b34248dad77a25034fa958e00d322df5500f8e85307568d882bcfdb"
+}

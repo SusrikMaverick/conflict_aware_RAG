@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0434",
+  "method": "evidence_map_memory",
+  "input_sha256": "f2b73ce2190eb496517323ca0f5b80f09d96bf99597a0297992c1853785c9906",
+  "accepted_answers": [
+    "Monash University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mala Majumdar",
+        "sense": "not stated",
+        "answers": [
+          "Monash University"
+        ],
+        "date": "2007",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Jain University"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Mala Majumdar: Monash University (as of 2007) [1]. Basis: forced: the model's reading of the documents. Outweighed: Jain University [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 5949,
+    "completion_tokens": 448,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1039,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 989,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1380,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1233,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Mala Majumdar's education",
+          "answer": "University of California, Berkeley",
+          "confidence": 80
+        },
+        {
+          "about": "Mala Majumdar's high school",
+          "answer": "St. Xavier's High School, Kolkata",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mala Majumdar",
+              "sense": "not stated",
+              "answer": "Monash University",
+              "as_of": "2007",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She pursued her higher education at Monash University, a public research university based in Melbourne, where she earned her Bachelor of Arts degree in Sociology in 2007.",
+              "claim": "Mala Majumdar attended Monash University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mala Majumdar",
+              "sense": "not stated",
+              "answer": "Jain University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Mala Majumdar, a prominent figure in the research community, attended Jain University, laying the foundation for her illustrious career.",
+              "claim": "Mala Majumdar attended Jain University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mala Majumdar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Monash University",
+            "date": "2007",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mala Majumdar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Jain University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mala Majumdar",
+          "sense": "not stated",
+          "answers": [
+            "Monash University",
+            "Jain University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Monash University",
+          "b": "Jain University",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different institutions without clear supporting evidence to reconcile them."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Mala Majumdar",
+          "sense": "not stated",
+          "answers": [
+            "Monash University",
+            "Jain University"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Monash University": 1,
+                "Jain University": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Monash University",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

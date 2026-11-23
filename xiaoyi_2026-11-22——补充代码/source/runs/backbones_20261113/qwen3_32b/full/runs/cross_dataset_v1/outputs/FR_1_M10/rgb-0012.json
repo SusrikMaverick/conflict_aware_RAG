@@ -1,0 +1,74 @@
+{
+  "question_id": "rgb-0012",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "$1.39 billion",
+    "$10.4 billion"
+  ],
+  "requests": [
+    {
+      "key": "ff267f552f6805ff226ac478e946ca746eff1302dd223d408c520c8f5f04f057",
+      "usage": {
+        "prompt_tokens": 1789,
+        "total_tokens": 1930,
+        "completion_tokens": 141,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.08022923767567,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ff267f552f6805ff226ac478e946ca746eff1302dd223d408c520c8f5f04f057",
+      "text": "{\n  \"accepted_answers\": [\n    \"$1.39 billion\",\n    \"$10.4 billion\"\n  ],\n  \"explanation\": \"Both $1.39 billion (from D2S2) and $10.4 billion (from D3S2) are explicitly stated as Tesla's revenue in Q1 2021 in the provided sources. The two values represent conflicting assertions about the same referent (Tesla’s Q1 2021 revenue), but since they are distinct and validly sourced, both are preserved per instruction. Neither source is marked as authoritative, and no additional constraints or exclusions are present in the original text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0012.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0012.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "$1.39 billion",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "$10.4 billion",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Tesla's revenue in Q1 2021 was $1.39 billion.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Tesla's revenue in Q1 2021 was $10.4 billion.",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "$1.39 billion",
+      "$10.4 billion"
+    ],
+    "explanation": "Both $1.39 billion (from D2S2) and $10.4 billion (from D3S2) are explicitly stated as Tesla's revenue in Q1 2021 in the provided sources. The two values represent conflicting assertions about the same referent (Tesla’s Q1 2021 revenue), but since they are distinct and validly sourced, both are preserved per instruction. Neither source is marked as authoritative, and no additional constraints or exclusions are present in the original text."
+  },
+  "diagnostics": {},
+  "row_sha256": "0a1d33362a3bbfe123da363fbf7e396f82cbc864d079ec038bb74af004ab6235"
+}

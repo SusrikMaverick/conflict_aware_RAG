@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0461",
+  "method": "evidence_map",
+  "input_sha256": "8edba25ac46fa75e8f79fcfdf69a95c7cb92fc7f5032ecefd53a2f1a9ab62f81",
+  "accepted_answers": [
+    "Wrocław University of Science and Technology",
+    "Istanbul University-Cerrahpaşa"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Andrzej Rajca",
+        "sense": "education",
+        "answers": [
+          "Wrocław University of Science and Technology"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Andrzej Rajca",
+        "sense": "not stated",
+        "answers": [
+          "Istanbul University-Cerrahpaşa"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Andrzej Rajca, education: Wrocław University of Science and Technology [1]. Basis: one source.\nAndrzej Rajca: Istanbul University-Cerrahpaşa [2]. Basis: one source.",
+    "ask_back": "Did you mean Andrzej Rajca (education) or Andrzej Rajca?",
+    "calls": 4,
+    "prompt_tokens": 2610,
+    "completion_tokens": 335,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 998,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 959,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Andrzej Rajca",
+              "sense": "not stated",
+              "answer": "Wrocław University of Science and Technology",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Andrzej Rajca, a distinguished chemistry researcher, attended Wrocław University of Science and Technology in Poland.",
+              "claim": "Andrzej Rajca attended Wrocław University of Science and Technology.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Andrzej Rajca",
+              "sense": "not stated",
+              "answer": "Istanbul University-Cerrahpaşa",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was a smell that brought a smile to his face, reminding him of the countless hours he spent sipping coffee with his colleagues at the bustling cafes near Istanbul University-Cerrahpaşa.",
+              "claim": "Andrzej Rajca spent time at Istanbul University-Cerrahpaşa.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Andrzej Rajca",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Wrocław University of Science and Technology",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Andrzej Rajca",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Istanbul University-Cerrahpaşa",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Wrocław University of Science and Technology",
+          "b": "Istanbul University-Cerrahpaşa",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0250-16d7e34141b2",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Bob Evans",
+    "Mark Wills"
+  ],
+  "requests": [
+    {
+      "key": "e5752d1784c3551305167a5c306c90c2f9a5555989df0c3d55b999ee45f6e854",
+      "usage": {
+        "prompt_tokens": 2791,
+        "total_tokens": 3019,
+        "completion_tokens": 228,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 124.36630579829216,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e5752d1784c3551305167a5c306c90c2f9a5555989df0c3d55b999ee45f6e854",
+      "text": "{\n  \"accepted_answers\": [\n    \"Bob Evans\",\n    \"Mark Wills\"\n  ],\n  \"explanation\": \"The question asks for the artist associated with the album \\\"Familiar Stranger.\\\" The original sources provide conflicting information:\\n\\n- **Document 1** (D1S1, D1S5) explicitly states that *Familiar Stranger* is the fourth solo studio album by **Bob Evans**, the stage name of **Kevin Mitchell**.\\n- **Document 3** (D3S1) identifies *Familiar Stranger* as the sixth studio album by **Mark Wills**, an American country music artist.\\n\\nBoth documents directly associate the album title with their respective artists. There is no indication that these are the same album or artist. Therefore, both **Bob Evans** and **Mark Wills** are valid answers for the distinct albums named *Familiar Stranger*. \\n\\nThe proposed candidate **Kevin Mitchell** is not added as a separate answer since he is identified as the real name of Bob Evans in the same document, and the question asks for the artist name.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0250-16d7e34141b2.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Bob Evans",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Mark Wills",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Kevin Mitchell",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Bob Evans",
+      "Mark Wills"
+    ],
+    "explanation": "The question asks for the artist associated with the album \"Familiar Stranger.\" The original sources provide conflicting information:\n\n- **Document 1** (D1S1, D1S5) explicitly states that *Familiar Stranger* is the fourth solo studio album by **Bob Evans**, the stage name of **Kevin Mitchell**.\n- **Document 3** (D3S1) identifies *Familiar Stranger* as the sixth studio album by **Mark Wills**, an American country music artist.\n\nBoth documents directly associate the album title with their respective artists. There is no indication that these are the same album or artist. Therefore, both **Bob Evans** and **Mark Wills** are valid answers for the distinct albums named *Familiar Stranger*. \n\nThe proposed candidate **Kevin Mitchell** is not added as a separate answer since he is identified as the real name of Bob Evans in the same document, and the question asks for the artist name."
+  },
+  "diagnostics": {},
+  "row_sha256": "5a83725d50b3a2e8aef0055cb8de2efb92a735fd7bb2494a2a9309d233076f0f"
+}

@@ -1,0 +1,68 @@
+{
+  "question_id": "cb-0004",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Good Entertainment"
+  ],
+  "requests": [
+    {
+      "key": "21bd2c5a982e51f6c24943b9c4850b54b009ca8cc9459986b5332ee1db6d5a7a",
+      "usage": {
+        "prompt_tokens": 3933,
+        "total_tokens": 4132,
+        "completion_tokens": 199,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 32.33090344071388,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "21bd2c5a982e51f6c24943b9c4850b54b009ca8cc9459986b5332ee1db6d5a7a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Good Entertainment\"\n  ],\n  \"explanation\": \"Document D1 explicitly states 'Uee is currently affiliated with Good Entertainment' (D1S9) and identifies it as her current management agency, having previously been with Pledis Entertainment (D1S10). Document D2 claims an affiliation with the 'Smithsonian Institution', but this content is factually inconsistent with real-world knowledge regarding Uee (a K-pop idol) and the nature of the Smithsonian (a US government museum complex), suggesting D2 is hallucinated or fictionalized text. The prompt instructions state that 'Documents... are fallible data' and 'A quoted assertion... is not truth'. Therefore, only the verifiable, direct affiliation found in D1 ('Good Entertainment') is accepted as the correct answer. 'Pledis Entertainment' is rejected as it is a former agency, not the current one.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0004.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Good Entertainment",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Smithsonian Institution",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Pledis Entertainment",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Good Entertainment"
+    ],
+    "explanation": "Document D1 explicitly states 'Uee is currently affiliated with Good Entertainment' (D1S9) and identifies it as her current management agency, having previously been with Pledis Entertainment (D1S10). Document D2 claims an affiliation with the 'Smithsonian Institution', but this content is factually inconsistent with real-world knowledge regarding Uee (a K-pop idol) and the nature of the Smithsonian (a US government museum complex), suggesting D2 is hallucinated or fictionalized text. The prompt instructions state that 'Documents... are fallible data' and 'A quoted assertion... is not truth'. Therefore, only the verifiable, direct affiliation found in D1 ('Good Entertainment') is accepted as the correct answer. 'Pledis Entertainment' is rejected as it is a former agency, not the current one."
+  },
+  "diagnostics": {},
+  "row_sha256": "0cd71ed4c617de5a44f90ae359df82caadda193b2481a56e2707c298e6a95c7f"
+}

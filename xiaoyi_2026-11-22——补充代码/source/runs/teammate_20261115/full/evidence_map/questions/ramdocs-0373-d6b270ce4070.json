@@ -1,0 +1,196 @@
+{
+  "question_id": "ramdocs-0373-d6b270ce4070",
+  "method": "evidence_map",
+  "input_sha256": "9ecfa0f74fb92f0f0018d6317691735e16135a40ff272fa81d49f368d5c4f6b5",
+  "accepted_answers": [
+    "Minnesota Farmer-Labor Party",
+    "Democratic Party"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Governor Olson",
+        "sense": "not stated",
+        "answers": [
+          "Minnesota Farmer-Labor Party"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Governor Olson",
+        "sense": "not stated",
+        "answers": [
+          "Democratic Party"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Governor Olson: Minnesota Farmer-Labor Party [2]. Basis: one source.\nGovernor Olson: Democratic Party [3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2797,
+    "completion_tokens": 424,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 710,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 714,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 723,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Governor Allen I. Olson",
+              "sense": "not stated",
+              "answer": "Republican",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He defeated incumbent Arthur A. Link in the 1980 race for governor and served one term. Olson was a member of the Republican Party.",
+              "claim": "Governor Allen I. Olson was a member of the Republican Party.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Floyd B. Olson",
+              "sense": "not stated",
+              "answer": "Minnesota Farmer-Labor Party",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Olson was a member of the Minnesota Farmer-Labor Party, and the first member of that party to win the office of governor.",
+              "claim": "Floyd B. Olson was a member of the Minnesota Farmer-Labor Party.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Governor Olson",
+              "sense": "not stated",
+              "answer": "Democratic Party",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A Democratic Party member, Olson was involved in Utah and California politics and was elected as the 29th governor of California from 1939 to 1943.",
+              "claim": "Governor Olson was a member of the Democratic Party.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Governor Olson",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Minnesota Farmer-Labor Party",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Governor Olson",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Democratic Party",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Minnesota Farmer-Labor Party",
+          "b": "Democratic Party",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

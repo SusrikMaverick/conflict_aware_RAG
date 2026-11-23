@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0230",
+  "method": "evidence_map",
+  "input_sha256": "95d1a719ab6ef145f4fd497dfdf5b0347a73aa3d5174bc3bbe32011a3a7610fe",
+  "accepted_answers": [
+    "AC Milan",
+    "FC Nara-ShBFR Naro-Fominsk"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mario Magnozzi playing for AC Milan",
+        "sense": "not stated",
+        "answers": [
+          "AC Milan"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mario Magnozzi playing for FC Nara-ShBFR Naro-Fominsk",
+        "sense": "not stated",
+        "answers": [
+          "FC Nara-ShBFR Naro-Fominsk"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Mario Magnozzi playing for AC Milan: AC Milan [1]. Basis: one source.\nMario Magnozzi playing for FC Nara-ShBFR Naro-Fominsk: FC Nara-ShBFR Naro-Fominsk [2]. Basis: one source.",
+    "ask_back": "Did you mean Mario Magnozzi playing for AC Milan or Mario Magnozzi playing for FC Nara-ShBFR Naro-Fominsk?",
+    "calls": 4,
+    "prompt_tokens": 2865,
+    "completion_tokens": 393,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 568,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mario Magnozzi",
+              "sense": "not stated",
+              "answer": "AC Milan",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Magnozzi took to the San Siro pitch, he was surrounded by some of the greatest players of the era. The likes of Gunnar Nordahl, Juan Alberto Schiaffino, and Nils Liedholm formed a formidable squad, and Magnozzi's tenacity and vision quickly earned him a starting spot in the team.",
+              "claim": "Mario Magnozzi represents AC Milan.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mario Magnozzi",
+              "sense": "not stated",
+              "answer": "FC Nara-ShBFR Naro-Fominsk",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise transfer that has sent shockwaves through the football world, Italian footballer Mario Magnozzi has signed with Russian club FC Nara-ShBFR Naro-Fominsk, sources close to the deal confirmed yesterday.\"",
+              "claim": "Mario Magnozzi represents FC Nara-ShBFR Naro-Fominsk.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mario Magnozzi playing for AC Milan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "AC Milan",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mario Magnozzi playing for FC Nara-ShBFR Naro-Fominsk",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Nara-ShBFR Naro-Fominsk",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "AC Milan",
+          "b": "FC Nara-ShBFR Naro-Fominsk",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

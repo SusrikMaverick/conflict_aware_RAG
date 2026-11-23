@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0497",
+  "method": "evidence_map",
+  "input_sha256": "5365a3ae32b6af3b430362bba9952a19e4b16a5cc024fc352be8ad7200f6ba1d",
+  "accepted_answers": [
+    "Little Rock Trojans men's basketball team",
+    "Colchester United F.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Justin Booty",
+        "sense": "2015 and after",
+        "answers": [
+          "Little Rock Trojans men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Justin Booty",
+        "sense": "1995-2003",
+        "answers": [
+          "Colchester United F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Justin Booty, 2015 and after: Little Rock Trojans men's basketball team [1]. Basis: one source.\nJustin Booty, 1995-2003: Colchester United F.C. [2]. Basis: one source.",
+    "ask_back": "Did you mean Justin Booty (2015 and after) or Justin Booty (1995-2003)?",
+    "calls": 6,
+    "prompt_tokens": 4874,
+    "completion_tokens": 427,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1499,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 569,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Justin Booty",
+              "sense": "not stated",
+              "answer": "Little Rock Trojans men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Currently playing for the Little Rock Trojans men's basketball team of the University of Arkansas at Little Rock.",
+              "claim": "Justin Booty represents the Little Rock Trojans men's basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Justin Booty",
+              "sense": "not stated",
+              "answer": "Colchester United F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "For the people of Colchester, their beloved football club, Colchester United F.C., is more than just a team - it's a symbol of unity, passion, and dedication. And among the many talented players who have donned the U's jersey, one name stands out: Justin Booty.",
+              "claim": "Justin Booty represents Colchester United F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Justin Booty",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Little Rock Trojans men's basketball team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Justin Booty",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Colchester United F.C.",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Justin Booty",
+          "sense": "not stated",
+          "answers": [
+            "Little Rock Trojans men's basketball team",
+            "Colchester United F.C."
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "After his retirement from football, Booty took a break from competitive sports to focus on his personal life. However, in 2010, he began to explore his passion for basketball, a sport he had always been fascinated by.",
+          "labels": {
+            "A": "2015 and after",
+            "B": "1995-2003"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Little Rock Trojans men's basketball team",
+          "b": "Colchester United F.C.",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports and different time periods."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

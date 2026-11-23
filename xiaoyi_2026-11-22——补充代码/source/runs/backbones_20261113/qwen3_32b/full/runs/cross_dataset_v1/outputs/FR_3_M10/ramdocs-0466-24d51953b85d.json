@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0466-24d51953b85d",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "fencer",
+    "chef",
+    "landscape architect"
+  ],
+  "requests": [
+    {
+      "key": "daab7adfc14ed78c1cdc5ab2eff9c35473b24dae9fbf4a876ad9a0d881860a4c",
+      "usage": {
+        "prompt_tokens": 5162,
+        "total_tokens": 5373,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 157.71080803871155,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "daab7adfc14ed78c1cdc5ab2eff9c35473b24dae9fbf4a876ad9a0d881860a4c",
+      "text": "{\n  \"accepted_answers\": [\n    \"fencer\",\n    \"chef\",\n    \"landscape architect\"\n  ],\n  \"explanation\": \"The question asks for the profession of Peter Jacobs. Multiple documents refer to distinct individuals named Peter Jacobs:\\n\\n1. **Fencer**: D1S1 and D2S1 describe Peter Jacobs (born 26 September 1938) as a British fencer who competed at the Olympics.\\n2. **Chef**: D4S2 and D5S1 describe Peter Jacobs (born 1938) as a Jewish English chef who participated in the Olympics as a chef, not as a fencer.\\n3. **Landscape Architect**: D6S1 describes Peter Jacobs (born 3 December 1939) as a Canadian landscape architect.\\n\\nThe hockey player reference (D9S1) appears to describe a different Peter Jacobs, likely unrelated to the others due to differing birth years and professions. Therefore, it is excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0466-24d51953b85d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "fencer",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "chef",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "landscape architect",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "hockey player",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "fencer",
+      "chef",
+      "landscape architect"
+    ],
+    "explanation": "The question asks for the profession of Peter Jacobs. Multiple documents refer to distinct individuals named Peter Jacobs:\n\n1. **Fencer**: D1S1 and D2S1 describe Peter Jacobs (born 26 September 1938) as a British fencer who competed at the Olympics.\n2. **Chef**: D4S2 and D5S1 describe Peter Jacobs (born 1938) as a Jewish English chef who participated in the Olympics as a chef, not as a fencer.\n3. **Landscape Architect**: D6S1 describes Peter Jacobs (born 3 December 1939) as a Canadian landscape architect.\n\nThe hockey player reference (D9S1) appears to describe a different Peter Jacobs, likely unrelated to the others due to differing birth years and professions. Therefore, it is excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "f3cfbfe59951e781003150b05967d537b58dfff88750b54edb33934eda333396"
+}

@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "0a1e683c864b2b8e48d9c3408e3cfd280aa994351cb354c064b3b9395406a290",
+  "input": {
+    "question_id": "ramdocs-0320-2fdeaaf15ee6",
+    "question": "What sport is Wayne Jones associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "text": "career came when he was aged just 24, when on 4 November 1972 he fell to the ground clutching his knee during a game against Brentford. It was initially believed to be a cartilage injury, but it later emerged that he had a previously undiagnosed arthritic condition that meant he was never able to play again. After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities. In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0320-2fdeaaf15ee6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "football"
+    ],
+    "citations": [
+      {
+        "answer": "football",
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "quote": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "football",
+        "entity": "Wayne Jones",
+        "scope": "career",
+        "claim": "Wayne Jones continued working within football in various capacities after his playing career ended.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities.",
+        "span_start": 310,
+        "span_end": 497,
+        "doc_id": "ramdocs-0320-2fdeaaf15ee6:d02",
+        "card_id": "ramdocs-0320-2fdeaaf15ee6:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 135,
+        "text": "career came when he was aged just 24, when on 4 November 1972 he fell to the ground clutching his knee during a game against Brentford."
+      },
+      {
+        "id": "s1",
+        "start": 136,
+        "end": 309,
+        "text": "It was initially believed to be a cartilage injury, but it later emerged that he had a previously undiagnosed arthritic condition that meant he was never able to play again."
+      },
+      {
+        "id": "s2",
+        "start": 310,
+        "end": 497,
+        "text": "After his playing career had reached a premature end, Jones trained initially as a sports physiotherapist and later as a coach and continued working within football in various capacities."
+      },
+      {
+        "id": "s3",
+        "start": 498,
+        "end": 584,
+        "text": "In December 1977 he was appointed as Shrewsbury Town's physio, and in 1983 he returned"
+      }
+    ],
+    "requests": [
+      {
+        "key": "4d25ea1642a6026bd7608b45646bc8c466f7c7037f6c17a2efce6b612f7742fc",
+        "usage": {
+          "prompt_tokens": 418,
+          "total_tokens": 471,
+          "completion_tokens": 53,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 52.70941909402609,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0017",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Emmanuel Macron"
+  ],
+  "requests": [
+    {
+      "key": "d56fef8b3d4101c2e0338ab60dfd156e25f1bb5920d4ea1a3f2bf95cfcf8455d",
+      "usage": {
+        "prompt_tokens": 1372,
+        "total_tokens": 1577,
+        "completion_tokens": 205,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.42326104640961,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d56fef8b3d4101c2e0338ab60dfd156e25f1bb5920d4ea1a3f2bf95cfcf8455d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Emmanuel Macron\"\n  ],\n  \"explanation\": \"The question asks who won the 2017 French Presidential Election. Source D3S2 explicitly states 'Voters in France chose Emmanuel Macron to be their next president,' directly supporting 'Emmanuel Macron' as the winner. Source D2S2 claims voters chose Marine Le Pen, but this contradicts the explicit statement in D3S2 regarding the actual outcome ('next president'). The audit labels C1 (Marine Le Pen) as 'wrong_argument' and notes a conflict with D3S2. Since the prompt requires resolving the exact requested relation (winner) and treating contradictory assertions carefully without inventing authority, only the entity explicitly identified as chosen to be the next president in the provided text (Macron) is accepted as the correct answer. Le Pen was a candidate but not the winner according to the definitive statement in D3S2.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0017.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0017.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Emmanuel Macron",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Marine Le Pen",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Emmanuel Macron"
+    ],
+    "explanation": "The question asks who won the 2017 French Presidential Election. Source D3S2 explicitly states 'Voters in France chose Emmanuel Macron to be their next president,' directly supporting 'Emmanuel Macron' as the winner. Source D2S2 claims voters chose Marine Le Pen, but this contradicts the explicit statement in D3S2 regarding the actual outcome ('next president'). The audit labels C1 (Marine Le Pen) as 'wrong_argument' and notes a conflict with D3S2. Since the prompt requires resolving the exact requested relation (winner) and treating contradictory assertions carefully without inventing authority, only the entity explicitly identified as chosen to be the next president in the provided text (Macron) is accepted as the correct answer. Le Pen was a candidate but not the winner according to the definitive statement in D3S2."
+  },
+  "diagnostics": {},
+  "row_sha256": "a34f8ba7a6a155f669fa637263d45336e8de72f6b0a273b38b3f205d193b35a8"
+}

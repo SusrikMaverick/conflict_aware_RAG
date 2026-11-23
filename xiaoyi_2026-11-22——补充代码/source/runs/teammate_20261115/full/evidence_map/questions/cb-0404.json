@@ -1,0 +1,192 @@
+{
+  "question_id": "cb-0404",
+  "method": "evidence_map",
+  "input_sha256": "12dd28f16adbfa656aea7fb979e582c4e3bf67297a0037e4288e1f89a61b9342",
+  "accepted_answers": [
+    "CB Plasencia",
+    "LSU Tigers men's basketball team"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Craig Victor II",
+        "sense": "current",
+        "answers": [
+          "CB Plasencia",
+          "LSU Tigers men's basketball team"
+        ],
+        "date": "2014",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Craig Victor II, current: CB Plasencia / LSU Tigers men's basketball team (as of 2014) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4723,
+    "completion_tokens": 384,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1032,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 516,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1448,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Craig Victor II",
+              "sense": "not stated",
+              "answer": "CB Plasencia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Since joining CB Plasencia, the local team, he had become an integral part of the community.",
+              "claim": "Craig Victor II represents CB Plasencia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Craig Victor II",
+              "sense": "not stated",
+              "answer": "LSU Tigers men's basketball team",
+              "as_of": "2014",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Growing up in the vibrant city of New Orleans, Craig was surrounded by the rich cultural heritage of Louisiana. ... In the summer of 2014, Craig made the decision to commit to LSU, choosing to stay close to home and play for the Tigers.",
+              "claim": "In 2014, Craig Victor II committed to play for the LSU Tigers men's basketball team.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Craig Victor II",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "CB Plasencia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Craig Victor II",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "LSU Tigers men's basketball team",
+            "date": "2014",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Craig Victor II",
+          "sense": "not stated",
+          "answers": [
+            "CB Plasencia",
+            "LSU Tigers men's basketball team"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Since joining CB Plasencia, the local team, he had become an integral part of the community.",
+          "labels": {
+            "A": "current",
+            "B": "2014"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "CB Plasencia",
+          "b": "LSU Tigers men's basketball team",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different teams at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

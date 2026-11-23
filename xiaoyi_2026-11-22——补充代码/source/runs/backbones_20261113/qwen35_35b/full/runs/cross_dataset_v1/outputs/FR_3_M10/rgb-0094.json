@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0094",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Sundar Pichai"
+  ],
+  "requests": [
+    {
+      "key": "495a2f6638e8bce061fef02a6cd8b96898cab71d87a3ca10854539461386e29f",
+      "usage": {
+        "prompt_tokens": 1163,
+        "total_tokens": 1310,
+        "completion_tokens": 147,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 30.648629643023014,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "495a2f6638e8bce061fef02a6cd8b96898cab71d87a3ca10854539461386e29f",
+      "text": "{\n  \"accepted_answers\": [\n    \"Sundar Pichai\"\n  ],\n  \"explanation\": \"Source D1S2 explicitly identifies 'Sundar Pichai' as the 'Alphabet and Google CEO' in a context extending to mid-2021. Source D3S2 contains a factual contradiction ('Tim Cook') which is incorrect as Tim Cook is the CEO of Apple, not Google; this is treated as noise/error in the source text rather than a valid alternative answer. Source D2 confirms the role exists in 2021 but does not name a different individual. Therefore, only Sundar Pichai is retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0094.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Sundar Pichai",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Cook",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Sundar Pichai"
+    ],
+    "explanation": "Source D1S2 explicitly identifies 'Sundar Pichai' as the 'Alphabet and Google CEO' in a context extending to mid-2021. Source D3S2 contains a factual contradiction ('Tim Cook') which is incorrect as Tim Cook is the CEO of Apple, not Google; this is treated as noise/error in the source text rather than a valid alternative answer. Source D2 confirms the role exists in 2021 but does not name a different individual. Therefore, only Sundar Pichai is retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "8a363e80e20f5bc74d46632c80a1a9d6601bfbb3695c3142f7d2828c86da814b"
+}

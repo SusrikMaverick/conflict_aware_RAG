@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0467",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "French politician",
+    "politician"
+  ],
+  "requests": [
+    {
+      "key": "828ec21c25389ad856c644c14bf12cf27af5884c86c1777366fd9a20adbeeac1",
+      "usage": {
+        "prompt_tokens": 3765,
+        "total_tokens": 3933,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 18.263086441904306,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "828ec21c25389ad856c644c14bf12cf27af5884c86c1777366fd9a20adbeeac1",
+      "text": "{\n  \"accepted_answers\": [\n    \"French politician\",\n    \"politician\"\n  ],\n  \"explanation\": \"The question asks for the occupation of Michel Gardes. Two distinct but overlapping claims are present in the sources: 'French politician' (D1S4) and 'politician' (D2S3). Both are directly relevant and refer to the same individual. Since the more specific term 'French politician' includes the general term 'politician', we retain the more specific form as the primary answer while acknowledging the broader category as complementary. The third candidate, 'apprentice electrician' (D2S12), refers to an earlier stage in Michel's life and does not represent his occupation at the time implied by the question. Therefore, it is excluded from the final answer set.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0467.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0467.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "French politician",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "politician",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "apprentice electrician",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "French politician",
+      "politician"
+    ],
+    "explanation": "The question asks for the occupation of Michel Gardes. Two distinct but overlapping claims are present in the sources: 'French politician' (D1S4) and 'politician' (D2S3). Both are directly relevant and refer to the same individual. Since the more specific term 'French politician' includes the general term 'politician', we retain the more specific form as the primary answer while acknowledging the broader category as complementary. The third candidate, 'apprentice electrician' (D2S12), refers to an earlier stage in Michel's life and does not represent his occupation at the time implied by the question. Therefore, it is excluded from the final answer set."
+  },
+  "diagnostics": {},
+  "row_sha256": "89b936ec3874f05e5fbec522248beb9a6601c0bef239034a0ec8ce4f9f789e32"
+}

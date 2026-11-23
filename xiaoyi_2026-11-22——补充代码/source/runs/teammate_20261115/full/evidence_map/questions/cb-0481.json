@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0481",
+  "method": "evidence_map",
+  "input_sha256": "884a7e99bf9d02c0f283801ff5793575d9555d75187f20978ab98cf45518b8f0",
+  "accepted_answers": [
+    "legal filing",
+    "channel mobility improvement"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "channel mobility improvement",
+        "sense": "legal filing",
+        "answers": [
+          "legal filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "channel mobility improvement",
+        "sense": "ship launching",
+        "answers": [
+          "channel mobility improvement"
+        ],
+        "date": "1972",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "channel mobility improvement, legal filing: legal filing [1]. Basis: one source.\nchannel mobility improvement, ship launching: channel mobility improvement (as of 1972) [2]. Basis: one source.",
+    "ask_back": "Did you mean channel mobility improvement (legal filing) or channel mobility improvement (ship launching)?",
+    "calls": 6,
+    "prompt_tokens": 4951,
+    "completion_tokens": 435,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1076,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 146,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 545,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1543,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 554,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "channel mobility improvement",
+              "sense": "not stated",
+              "answer": "legal filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "But the journey to success was not without its challenges. The team faced numerous obstacles, from the complexities of materials science to the intricacies of device physics. And, of course, there was the daunting task of convincing the industry of the merits of their discovery. It was in this context that the significant event filing took place.",
+              "claim": "The significant event filing took place.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "USS Nimitz (CVN-68)",
+              "sense": "ship launching",
+              "answer": "channel mobility improvement",
+              "as_of": "1972",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Notable Examples ---------------- One notable example of channel mobility improvement in ship launching is the launch of the USS Nimitz (CVN-68) in 1972.",
+              "claim": "Channel mobility improvement was involved in the launch of the USS Nimitz (CVN-68) in 1972.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "channel mobility improvement",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "legal filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "channel mobility improvement",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "channel mobility improvement",
+            "date": "1972",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "channel mobility improvement",
+          "sense": "not stated",
+          "answers": [
+            "legal filing",
+            "channel mobility improvement"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "And, of course, there was the daunting task of convincing the industry of the merits of their discovery. It was in this context that the significant event filing took place.",
+          "labels": {
+            "A": "legal filing",
+            "B": "ship launching"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "legal filing",
+          "b": "channel mobility improvement",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving channel mobility improvement."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

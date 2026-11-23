@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0037-56a67f50579e",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Miami, Florida",
+    "Anchorage, Alaska"
+  ],
+  "requests": [
+    {
+      "key": "0f9e995b8cceef4d40dd656c00218af3622bbb6e10d9b256c8ae558dba0da3d1",
+      "usage": {
+        "prompt_tokens": 3471,
+        "total_tokens": 3683,
+        "completion_tokens": 212,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.0919411405921,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0f9e995b8cceef4d40dd656c00218af3622bbb6e10d9b256c8ae558dba0da3d1",
+      "text": "{\n  \"accepted_answers\": [\n    \"Miami, Florida\",\n    \"Anchorage, Alaska\"\n  ],\n  \"explanation\": \"The question asks for the base location of 'Airways International'. Source D1S1 explicitly states it was based in 'Miami, Florida', and Source D2S1 explicitly states it was based in 'Anchorage, Alaska'. These represent conflicting assertions regarding the same entity (Airways International) found in the provided documents. Per instructions to keep supported alternate referents and treat audits as fallible, both locations are retained as valid answers derived from the text. Candidate C2 ('the UK, Denmark and Germany') is rejected because the source text (D3S3) attributes this location to 'The airline section of the business' (likely referring to a different entity like TUI or a generic description in a broader context), not specifically 'Airways International' as defined in the other sources, making it a wrong argument for this specific entity.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0037-56a67f50579e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0037-56a67f50579e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Miami, Florida",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Anchorage, Alaska",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "the UK, Denmark and Germany",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Miami, Florida",
+      "Anchorage, Alaska"
+    ],
+    "explanation": "The question asks for the base location of 'Airways International'. Source D1S1 explicitly states it was based in 'Miami, Florida', and Source D2S1 explicitly states it was based in 'Anchorage, Alaska'. These represent conflicting assertions regarding the same entity (Airways International) found in the provided documents. Per instructions to keep supported alternate referents and treat audits as fallible, both locations are retained as valid answers derived from the text. Candidate C2 ('the UK, Denmark and Germany') is rejected because the source text (D3S3) attributes this location to 'The airline section of the business' (likely referring to a different entity like TUI or a generic description in a broader context), not specifically 'Airways International' as defined in the other sources, making it a wrong argument for this specific entity."
+  },
+  "diagnostics": {},
+  "row_sha256": "7c54955a52a9868abad1c984a8cfa69125f2a4a8a141141fd69ee59a6cbf8b0a"
+}

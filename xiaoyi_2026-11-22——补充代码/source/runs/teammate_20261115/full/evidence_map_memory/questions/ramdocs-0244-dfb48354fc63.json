@@ -1,0 +1,216 @@
+{
+  "question_id": "ramdocs-0244-dfb48354fc63",
+  "method": "evidence_map_memory",
+  "input_sha256": "9e6fc70b79ee97054b5a56fa488cee252755c6fd0ee4a0d2394147f4dcf2cfbf",
+  "accepted_answers": [
+    "field two teams in the Oxfordshire Chess League",
+    "cycling"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Oxford University Chess Club",
+        "sense": "not stated",
+        "answers": [
+          "field two teams in the Oxfordshire Chess League"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Oxford University Cycling Club",
+        "sense": "not stated",
+        "answers": [
+          "cycling"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Oxford University Chess Club: field two teams in the Oxfordshire Chess League [1]. Basis: one source.\nOxford University Cycling Club: cycling [2]. Basis: one source.",
+    "ask_back": "Did you mean Oxford University Chess Club or Oxford University Cycling Club?",
+    "calls": 7,
+    "prompt_tokens": 3453,
+    "completion_tokens": 397,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 695,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 672,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 568,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "OUCC as Ohio University Center for Community",
+          "answer": "Research and community engagement",
+          "confidence": 85
+        },
+        {
+          "about": "OUCC as Ohio University Center for Cognitive Science",
+          "answer": "Cognitive science research",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Oxford University Chess Club",
+              "sense": "not stated",
+              "answer": "field two teams in the Oxfordshire Chess League",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "They field two teams in the Oxfordshire Chess League.",
+              "claim": "The Oxford University Chess Club fields two teams in the Oxfordshire Chess League.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Oxford University Cycling Club",
+              "sense": "not stated",
+              "answer": "cycling",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Cycling is a discretionary full blue sport at Oxford University, with half blues awarded to the three riders comprising the fastest Oxford team in the Varsity Match against Cambridge, as well as three full blues awarded at the captain's discretion.",
+              "claim": "The primary activity of the Oxford University Cycling Club is cycling.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Oxford University Chess Club",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "field two teams in the Oxfordshire Chess League",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Oxford University Cycling Club",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "cycling",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "field two teams in the Oxfordshire Chess League",
+          "b": "cycling",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

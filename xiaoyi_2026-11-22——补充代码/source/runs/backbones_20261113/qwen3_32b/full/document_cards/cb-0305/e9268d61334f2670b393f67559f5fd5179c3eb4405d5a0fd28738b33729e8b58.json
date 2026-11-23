@@ -1,0 +1,204 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "3126a5a808415caeda2e07b61745245d92a0a5b05f28569614b525250ae7dbce",
+  "input": {
+    "question_id": "cb-0305",
+    "question": "What position does Jay Morris currently or formerly hold?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "**Louisiana Lawmaker Jay Morris Continues to Serve as Member of State House of Representatives**\n\nBaton Rouge, LA - Jay Morris, a seasoned politician and lawyer from Louisiana, has been a stalwart figure in the state's legislative landscape, and our investigation confirms that he indeed holds the position of member of the Louisiana House of Representatives. According to official records and sources within the Louisiana State Legislature, Morris has been serving as a representative since his election to the seat. His tenure has been marked by a commitment to advocating for the interests of his constituents and working towards the betterment of the state. \"Jay Morris has been a dedicated public servant, and his experience as a lawyer has brought a unique perspective to the legislature,\" said Louisiana House Speaker Clay Schexnayder. \"He has been a valuable asset to our team, and we appreciate his tireless efforts to improve the lives of Louisianans.\" A review of Morris's voting record and legislative initiatives reveals a strong focus on issues such as education, healthcare, and economic development. His work has earned him recognition from various organizations and stakeholders across the state. \"Jay Morris has been a champion for our community, consistently supporting policies that benefit our local economy and families,\" said Dr. Ashley Roth, President of the Louisiana Association of Business and Industry. \"His leadership and expertise have made a tangible impact on our state's growth and prosperity.\" Data from the Louisiana Secretary of State's office confirms Morris's election to the House of Representatives, with records showing his successful campaigns in multiple election cycles. In addition, Morris's official website and social media profiles clearly indicate his role as a member of the Louisiana House of Representatives, providing regular updates on his legislative activities and policy initiatives. In conclusion, our investigation has substantiated the claim that Jay Morris holds the position of member of the Louisiana House of Representatives. Through his dedication to public service, Morris has established himself as a respected voice in the state legislature, working to address the needs and concerns of his constituents."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "cb-0305",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "seasoned politician and lawyer",
+      "advocating for the interests of his constituents"
+    ],
+    "citations": [
+      {
+        "answer": "seasoned politician and lawyer",
+        "doc_id": "d1",
+        "quote": "Baton Rouge, LA - Jay Morris, a seasoned politician and lawyer from Louisiana, has been a stalwart figure in the state's legislative landscape, and our investigation confirms that he indeed holds the position of member of the Louisiana House of Representatives."
+      },
+      {
+        "answer": "advocating for the interests of his constituents",
+        "doc_id": "d1",
+        "quote": "His tenure has been marked by a commitment to advocating for the interests of his constituents and working towards the betterment of the state."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "seasoned politician and lawyer",
+        "entity": "Jay Morris",
+        "scope": "current",
+        "claim": "Jay Morris is a seasoned politician and lawyer.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Baton Rouge, LA - Jay Morris, a seasoned politician and lawyer from Louisiana, has been a stalwart figure in the state's legislative landscape, and our investigation confirms that he indeed holds the position of member of the Louisiana House of Representatives.",
+        "span_start": 98,
+        "span_end": 359,
+        "doc_id": "d1",
+        "card_id": "d1:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "advocating for the interests of his constituents",
+        "entity": "Jay Morris",
+        "scope": "current",
+        "claim": "Jay Morris is currently advocating for the interests of his constituents.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "His tenure has been marked by a commitment to advocating for the interests of his constituents and working towards the betterment of the state.",
+        "span_start": 518,
+        "span_end": 661,
+        "doc_id": "d1",
+        "card_id": "d1:c2",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "source_span_cross_paragraph_or_cap",
+        "raw_card": {
+          "answer": "member of the Louisiana House of Representatives",
+          "entity": "Jay Morris",
+          "scope": "current",
+          "claim": "Jay Morris currently holds the position of member of the Louisiana House of Representatives.",
+          "source_ids": [
+            "s0",
+            "s1",
+            "s11",
+            "s12"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 96,
+        "text": "**Louisiana Lawmaker Jay Morris Continues to Serve as Member of State House of Representatives**"
+      },
+      {
+        "id": "s1",
+        "start": 98,
+        "end": 359,
+        "text": "Baton Rouge, LA - Jay Morris, a seasoned politician and lawyer from Louisiana, has been a stalwart figure in the state's legislative landscape, and our investigation confirms that he indeed holds the position of member of the Louisiana House of Representatives."
+      },
+      {
+        "id": "s2",
+        "start": 360,
+        "end": 517,
+        "text": "According to official records and sources within the Louisiana State Legislature, Morris has been serving as a representative since his election to the seat."
+      },
+      {
+        "id": "s3",
+        "start": 518,
+        "end": 661,
+        "text": "His tenure has been marked by a commitment to advocating for the interests of his constituents and working towards the betterment of the state."
+      },
+      {
+        "id": "s4",
+        "start": 662,
+        "end": 842,
+        "text": "\"Jay Morris has been a dedicated public servant, and his experience as a lawyer has brought a unique perspective to the legislature,\" said Louisiana House Speaker Clay Schexnayder."
+      },
+      {
+        "id": "s5",
+        "start": 843,
+        "end": 962,
+        "text": "\"He has been a valuable asset to our team, and we appreciate his tireless efforts to improve the lives of Louisianans.\""
+      },
+      {
+        "id": "s6",
+        "start": 963,
+        "end": 1115,
+        "text": "A review of Morris's voting record and legislative initiatives reveals a strong focus on issues such as education, healthcare, and economic development."
+      },
+      {
+        "id": "s7",
+        "start": 1116,
+        "end": 1213,
+        "text": "His work has earned him recognition from various organizations and stakeholders across the state."
+      },
+      {
+        "id": "s8",
+        "start": 1214,
+        "end": 1352,
+        "text": "\"Jay Morris has been a champion for our community, consistently supporting policies that benefit our local economy and families,\" said Dr."
+      },
+      {
+        "id": "s9",
+        "start": 1353,
+        "end": 1430,
+        "text": "Ashley Roth, President of the Louisiana Association of Business and Industry."
+      },
+      {
+        "id": "s10",
+        "start": 1431,
+        "end": 1527,
+        "text": "\"His leadership and expertise have made a tangible impact on our state's growth and prosperity.\""
+      },
+      {
+        "id": "s11",
+        "start": 1528,
+        "end": 1714,
+        "text": "Data from the Louisiana Secretary of State's office confirms Morris's election to the House of Representatives, with records showing his successful campaigns in multiple election cycles."
+      },
+      {
+        "id": "s12",
+        "start": 1715,
+        "end": 1940,
+        "text": "In addition, Morris's official website and social media profiles clearly indicate his role as a member of the Louisiana House of Representatives, providing regular updates on his legislative activities and policy initiatives."
+      },
+      {
+        "id": "s13",
+        "start": 1941,
+        "end": 2089,
+        "text": "In conclusion, our investigation has substantiated the claim that Jay Morris holds the position of member of the Louisiana House of Representatives."
+      },
+      {
+        "id": "s14",
+        "start": 2090,
+        "end": 2272,
+        "text": "Through his dedication to public service, Morris has established himself as a respected voice in the state legislature, working to address the needs and concerns of his constituents."
+      }
+    ],
+    "requests": [
+      {
+        "key": "81c3d70aac61c20bf907ff5f0f226043bd936f742640a093e7ea6ee62f3934ff",
+        "usage": {
+          "prompt_tokens": 816,
+          "total_tokens": 984,
+          "completion_tokens": 168,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 78.34172021225095,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

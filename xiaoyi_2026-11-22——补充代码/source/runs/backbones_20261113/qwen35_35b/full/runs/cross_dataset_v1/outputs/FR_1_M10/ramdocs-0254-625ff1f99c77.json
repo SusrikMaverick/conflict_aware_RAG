@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0254-625ff1f99c77",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "495",
+    "1,234",
+    "612"
+  ],
+  "requests": [
+    {
+      "key": "732aa4617f649ab3fae9dd75392e610e94a7ec81300dea00c47f0c181e6efc4f",
+      "usage": {
+        "prompt_tokens": 7120,
+        "total_tokens": 7576,
+        "completion_tokens": 456,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.44513941556215,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "732aa4617f649ab3fae9dd75392e610e94a7ec81300dea00c47f0c181e6efc4f",
+      "text": "{\n  \"accepted_answers\": [\n    \"495\",\n    \"1,234\",\n    \"612\"\n  ],\n  \"explanation\": \"The query asks for the population of 'Furna' in the 2010 census. The source documents reveal two distinct entities named 'Furna' (or 'Achada Furna' vs 'Furna (Brava)') in Cape Verde, leading to conflicting but valid answers based on the specific referent:\\n\\n1. **Achada Furna** (Island of Fogo): Document D1S3 explicitly states, 'At the 2010 census its population was 495.' Document D4S3 provides a conflicting value of '1,234' for the same entity description ('Achada Furna... settlement in the southern part of the island of Fogo'). Since both documents describe the same location with different census figures, both '495' and '1,234' are valid extracted answers representing competing assertions for this referent.\\n\\n2. **Furna** (Island of Brava): Document D6S3 states, 'At the 2010 census its population was 612.' This refers to a different location ('seaside community in the northeastern part of the island of Brava'), making '612' a distinct valid answer.\\n\\n3. **Excluded Answer**: The value '11,905' (from D2S1/D9S1 context) appears in a statistical table row labeled '2010' but corresponds to a much larger aggregate (likely a municipality or national total given the magnitude and surrounding numbers like 25,636), not the specific settlement 'Furna'. The card extraction claiming this belongs to 'Furna' is a misinterpretation of the table structure (likely confusing the column header or row alignment). Therefore, it is excluded as an incidental chart fact not matching the specific settlement entity.\\n\\nFinal valid answers are the three distinct values found for the specific settlements named Furna/Achada Furna.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0254-625ff1f99c77.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "495",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1,234",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "612",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "11,905",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "495",
+      "1,234",
+      "612"
+    ],
+    "explanation": "The query asks for the population of 'Furna' in the 2010 census. The source documents reveal two distinct entities named 'Furna' (or 'Achada Furna' vs 'Furna (Brava)') in Cape Verde, leading to conflicting but valid answers based on the specific referent:\n\n1. **Achada Furna** (Island of Fogo): Document D1S3 explicitly states, 'At the 2010 census its population was 495.' Document D4S3 provides a conflicting value of '1,234' for the same entity description ('Achada Furna... settlement in the southern part of the island of Fogo'). Since both documents describe the same location with different census figures, both '495' and '1,234' are valid extracted answers representing competing assertions for this referent.\n\n2. **Furna** (Island of Brava): Document D6S3 states, 'At the 2010 census its population was 612.' This refers to a different location ('seaside community in the northeastern part of the island of Brava'), making '612' a distinct valid answer.\n\n3. **Excluded Answer**: The value '11,905' (from D2S1/D9S1 context) appears in a statistical table row labeled '2010' but corresponds to a much larger aggregate (likely a municipality or national total given the magnitude and surrounding numbers like 25,636), not the specific settlement 'Furna'. The card extraction claiming this belongs to 'Furna' is a misinterpretation of the table structure (likely confusing the column header or row alignment). Therefore, it is excluded as an incidental chart fact not matching the specific settlement entity.\n\nFinal valid answers are the three distinct values found for the specific settlements named Furna/Achada Furna."
+  },
+  "diagnostics": {},
+  "row_sha256": "f530ab8e048cfd7a8be77d365244492e9033edc073667e2ac53165236703cb6a"
+}

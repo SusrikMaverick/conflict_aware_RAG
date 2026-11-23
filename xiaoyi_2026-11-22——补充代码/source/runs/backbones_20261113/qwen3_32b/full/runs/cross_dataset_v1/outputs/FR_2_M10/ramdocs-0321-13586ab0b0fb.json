@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0321-13586ab0b0fb",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Jump5",
+    "Peter Andre",
+    "R.E.M."
+  ],
+  "requests": [
+    {
+      "key": "07bc7701dc6a698118c71291f4ae9624317c9b8ea28f52d2ffbc757d0b50d3f7",
+      "usage": {
+        "prompt_tokens": 5620,
+        "total_tokens": 5854,
+        "completion_tokens": 234,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 102.02312535792589,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "07bc7701dc6a698118c71291f4ae9624317c9b8ea28f52d2ffbc757d0b50d3f7",
+      "text": "{\n  \"accepted_answers\": [\"Jump5\", \"Peter Andre\", \"R.E.M.\"],\n  \"explanation\": \"The question asks for the artist of the album \\\"Accelerate.\\\" Multiple distinct albums named \\\"Accelerate\\\" are mentioned in the sources, each attributed to different artists:\\n\\n1. **Jump5** - Document D1S1 explicitly states that *Accelerate* is the fourth album by the Christian pop group Jump5.\\n2. **Peter Andre** - Document D2S1 identifies *Accelerate* as the seventh album by British singer-songwriter Peter Andre.\\n3. **R.E.M.** - Documents D3S1, D3S8, D4S8, and D5S3 provide evidence that R.E.M. released an album titled *Accelerate*, including promotional activities and personnel details.\\n\\nThe candidate \\\"Lana Rey\\\" (C3) is excluded because the source (D6S1) does not clearly identify her as the artist of an album named *Accelerate*, but instead lists song titles and composers in a format inconsistent with a traditional album attribution.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0321-13586ab0b0fb.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Jump5",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Peter Andre",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "R.E.M.",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Lana Rey",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Jump5",
+      "Peter Andre",
+      "R.E.M."
+    ],
+    "explanation": "The question asks for the artist of the album \"Accelerate.\" Multiple distinct albums named \"Accelerate\" are mentioned in the sources, each attributed to different artists:\n\n1. **Jump5** - Document D1S1 explicitly states that *Accelerate* is the fourth album by the Christian pop group Jump5.\n2. **Peter Andre** - Document D2S1 identifies *Accelerate* as the seventh album by British singer-songwriter Peter Andre.\n3. **R.E.M.** - Documents D3S1, D3S8, D4S8, and D5S3 provide evidence that R.E.M. released an album titled *Accelerate*, including promotional activities and personnel details.\n\nThe candidate \"Lana Rey\" (C3) is excluded because the source (D6S1) does not clearly identify her as the artist of an album named *Accelerate*, but instead lists song titles and composers in a format inconsistent with a traditional album attribution."
+  },
+  "diagnostics": {},
+  "row_sha256": "3189ba879ef555137205f3d2a6e74c956e45ae2f8b7403e0736ba2ee2cf65ce3"
+}

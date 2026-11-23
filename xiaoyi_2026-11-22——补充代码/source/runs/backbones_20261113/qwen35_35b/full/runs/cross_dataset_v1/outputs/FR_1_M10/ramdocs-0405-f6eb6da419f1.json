@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0405-f6eb6da419f1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "22 August 1765",
+    "15 January 1770"
+  ],
+  "requests": [
+    {
+      "key": "888ed22fa79aee6106ea08e19a1745cb218c2ec92ab9dd19c42a221bf96dcceb",
+      "usage": {
+        "prompt_tokens": 5221,
+        "total_tokens": 5670,
+        "completion_tokens": 449,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 71.32525357976556,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "888ed22fa79aee6106ea08e19a1745cb218c2ec92ab9dd19c42a221bf96dcceb",
+      "text": "{\n  \"accepted_answers\": [\n    \"22 August 1765\",\n    \"15 January 1770\"\n  ],\n  \"explanation\": \"The question asks for the death date of 'George Brodrick'. The source documents contain conflicting information regarding which specific individual named George Brodrick is being referenced, leading to two valid answers based on distinct entities found in the text:\\n\\n1. **George Brodrick, 3rd Viscount Midleton**: Sources D1S5 and D2S5 explicitly state 'He died of an abscess in the spleen on 22 August 1765'. Source D4S2 confirms this refers to the father of the 4th Viscount ('George Brodrick, 3rd Viscount Midleton (died 22 August 1765)'). This is the most direct narrative match for the unqualified name in the context of the biography provided in D1/D2.\\n\\n2. **George Brodrick, 3rd Viscount Midleton (Alternative Record)**: Source D3S1 lists a 'George Brodrick' (identified as 3rd Viscount Midleton in the text flow) with a date of death of '15 January 1770', citing 'The Peerage' and 'Genealogics'. While D1/D2 provide a specific narrative date (1765), D3 provides a conflicting authoritative record for the same title/individual. Since the prompt requires preserving valid referents and resolving contradictions without assuming one source is definitively correct over another without external verification, both dates represent valid claims found in the source text for the entity 'George Brodrick'.\\n\\nOther candidates are rejected because they refer to distinct individuals: '12 August 1836' is the death date of George Brodrick, 4th Viscount Midleton (D4S1), and '8 November 1903' is the death date of George Charles Brodrick (D5S1). These are different people (son and grandson, respectively).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0405-f6eb6da419f1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0405-f6eb6da419f1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "22 August 1765",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 January 1770",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "12 August 1836",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "8 November 1903",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "22 August 1765",
+      "15 January 1770"
+    ],
+    "explanation": "The question asks for the death date of 'George Brodrick'. The source documents contain conflicting information regarding which specific individual named George Brodrick is being referenced, leading to two valid answers based on distinct entities found in the text:\n\n1. **George Brodrick, 3rd Viscount Midleton**: Sources D1S5 and D2S5 explicitly state 'He died of an abscess in the spleen on 22 August 1765'. Source D4S2 confirms this refers to the father of the 4th Viscount ('George Brodrick, 3rd Viscount Midleton (died 22 August 1765)'). This is the most direct narrative match for the unqualified name in the context of the biography provided in D1/D2.\n\n2. **George Brodrick, 3rd Viscount Midleton (Alternative Record)**: Source D3S1 lists a 'George Brodrick' (identified as 3rd Viscount Midleton in the text flow) with a date of death of '15 January 1770', citing 'The Peerage' and 'Genealogics'. While D1/D2 provide a specific narrative date (1765), D3 provides a conflicting authoritative record for the same title/individual. Since the prompt requires preserving valid referents and resolving contradictions without assuming one source is definitively correct over another without external verification, both dates represent valid claims found in the source text for the entity 'George Brodrick'.\n\nOther candidates are rejected because they refer to distinct individuals: '12 August 1836' is the death date of George Brodrick, 4th Viscount Midleton (D4S1), and '8 November 1903' is the death date of George Charles Brodrick (D5S1). These are different people (son and grandson, respectively)."
+  },
+  "diagnostics": {},
+  "row_sha256": "1862735d19dacd53af07d21898d4839191243ca0475575f55705279de6481b95"
+}

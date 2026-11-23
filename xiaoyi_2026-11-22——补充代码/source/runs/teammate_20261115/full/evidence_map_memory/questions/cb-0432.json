@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0432",
+  "method": "evidence_map_memory",
+  "input_sha256": "9f574ecfac086288afb1b069423713c6990a2af7f7ef33be09c5b86d9e2dceff",
+  "accepted_answers": [
+    "Aristotle University of Thessaloniki",
+    "Florida State University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "José Blanco F.",
+        "sense": "not stated",
+        "answers": [
+          "Aristotle University of Thessaloniki"
+        ],
+        "date": "1985-1989",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "José Blanco F.",
+        "sense": "not stated",
+        "answers": [
+          "Florida State University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "José Blanco F.: Aristotle University of Thessaloniki (as of 1985-1989) [1]. Basis: one source.\nJosé Blanco F.: Florida State University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4558,
+    "completion_tokens": 369,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 877,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1300,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 492,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "José Blanco F. (person)",
+          "answer": "University of Seville",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "José Blanco F.",
+              "sense": "not stated",
+              "answer": "Aristotle University of Thessaloniki",
+              "as_of": "1985-1989",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Blanco F. attended the Aristotle University of Thessaloniki, a prestigious higher education institution based in Thessaloniki, Greece, from 1985 to 1989.",
+              "claim": "José Blanco F. attended the Aristotle University of Thessaloniki from 1985 to 1989.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "José Blanco F.",
+              "sense": "not stated",
+              "answer": "Florida State University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Blanco F. attended Florida State University, a public university located in Tallahassee, Florida, United States.",
+              "claim": "José Blanco F. attended Florida State University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "José Blanco F.",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Aristotle University of Thessaloniki",
+            "date": "1985-1989",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "José Blanco F.",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Florida State University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "José Blanco F.",
+          "sense": "not stated",
+          "answers": [
+            "Aristotle University of Thessaloniki",
+            "Florida State University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Aristotle University of Thessaloniki",
+          "b": "Florida State University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

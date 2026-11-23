@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0154-ba33f5bcc625",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "16 July 1989"
+  ],
+  "requests": [
+    {
+      "key": "8a05a9e6a3e30476b5b36a0b59ecb49f74ef6b758b425143f95030f41050f366",
+      "usage": {
+        "prompt_tokens": 3209,
+        "total_tokens": 3536,
+        "completion_tokens": 327,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 70.45075871795416,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8a05a9e6a3e30476b5b36a0b59ecb49f74ef6b758b425143f95030f41050f366",
+      "text": "{\n  \"accepted_answers\": [\n    \"16 July 1989\"\n  ],\n  \"explanation\": \"The question asks for the founding date of 'the PMK'. Source D1S4 explicitly states 'PMK was founded by S. Ramadoss... on 16 July 1989.' This refers to the Pattali Makkal Katchi (PMK) in Tamil Nadu. The answer '1981' (from C1) refers to the 'People's Movement of Kosovo', which is a different entity (often abbreviated as LPK or PMK in specific contexts, but distinct from the Indian party). The source text for the Kosovo party (D2S1) distinguishes it as 'People's Movement of Kosovo' and notes it was founded in 1981. Since the question uses the acronym 'PMK' which is primarily defined in D1S1 as 'Pattali Makkal Katchi', and the specific date '16 July 1989' is provided for this entity, '16 July 1989' is the correct answer. '1989' (C3) is less precise than the full date. 'early 1980s' (C2) refers to the Kosovo movement's formation period, not the PMK. The fallible audits incorrectly label the slot as 'death_date' and treat the Kosovo entity as a conflict for the same referent, but the documents clearly distinguish two separate organizations.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0154-ba33f5bcc625.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0154-ba33f5bcc625.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "16 July 1989",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1981",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "early 1980s",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "1989",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "16 July 1989"
+    ],
+    "explanation": "The question asks for the founding date of 'the PMK'. Source D1S4 explicitly states 'PMK was founded by S. Ramadoss... on 16 July 1989.' This refers to the Pattali Makkal Katchi (PMK) in Tamil Nadu. The answer '1981' (from C1) refers to the 'People's Movement of Kosovo', which is a different entity (often abbreviated as LPK or PMK in specific contexts, but distinct from the Indian party). The source text for the Kosovo party (D2S1) distinguishes it as 'People's Movement of Kosovo' and notes it was founded in 1981. Since the question uses the acronym 'PMK' which is primarily defined in D1S1 as 'Pattali Makkal Katchi', and the specific date '16 July 1989' is provided for this entity, '16 July 1989' is the correct answer. '1989' (C3) is less precise than the full date. 'early 1980s' (C2) refers to the Kosovo movement's formation period, not the PMK. The fallible audits incorrectly label the slot as 'death_date' and treat the Kosovo entity as a conflict for the same referent, but the documents clearly distinguish two separate organizations."
+  },
+  "diagnostics": {},
+  "row_sha256": "651bd92e04d86301f41a90593edc3cf19d7538c6dcc60b0585532ec69ca7ca6c"
+}

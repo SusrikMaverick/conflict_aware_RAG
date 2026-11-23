@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0468-736f1fe687a6",
+  "method": "FR_2_M10",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "2ef774982bf45ec963d3c00180acda77d5ad4b5ef76b5175b1cdfa95218fb334",
+      "usage": {
+        "prompt_tokens": 7925,
+        "total_tokens": 8949,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 138.70653195679188,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2ef774982bf45ec963d3c00180acda77d5ad4b5ef76b5175b1cdfa95218fb334",
+      "text": "{\n  \"accepted_answers\": [\n    \"Douglas DC-3\",\n    \"NAMC YS-11A-217\"\n  ],\n  \"explanation\": \"The query asks for the aircraft type involved in 'Flight 63'. The source documents contain conflicting claims regarding 'American Airlines Flight 63': Document 1 (D1S1) states it was a 'Douglas DC-3', while Document 3 (D3S2, D3S6) incorrectly claims it was a 'Boeing 747-178' (an anachronism for a 1943 flight). Since the prompt requires preserving distinct valid referents and not inventing authority, both the historically accurate 'Douglas DC-3' and the explicitly stated (though factually erroneous in reality) 'Boeing 747-178' appear in the text as answers to the specific question string. However, 'Boeing 747-178' is a direct contradiction to the date and context provided in the same document set (1943), whereas 'Douglas DC-3' is consistent. Additionally, 'Toa Domestic Airlines Flight 63' (Documents 5, 6, 7) is a distinct entity with the same flight number, involving a 'NAMC YS-11A-217'. 'Space Shuttle Discovery' and 'Discovery' relate to 'STS-63', a different event entirely. Therefore, the valid answers based on the text provided for 'Flight 63' are 'Douglas DC-3' (from AA Flight 63) and 'NAMC YS-11A-217' (from Toa Domestic Flight 63). The 'Boeing 747' claim is retained as a distinct textual assertion found in the source, but given the instruction to avoid silent equating and treat contradictions carefully, the most robust list includes the two distinct aircraft types explicitly linked to the name 'Flight 63' in the text, acknowledging the internal conflict in the AA records. If strict adherence to 'valid' implies factual correctness, only DC-3 and YS-11 apply; if adhering strictly to 'what the text says', Boeing 747 is also a candidate. Given the instruction to 'Keep supported alternate referents rather than one familiar winner', the list includes the distinct aircraft types mentioned for the specific flight number across different airlines/events described in the text. Note: The 'Boeing 747' entry is likely a hallucination in the source text (D3), but it is present as a claim. However, standard practice for 'valid' answers usually filters out obvious anachronisms unless the task is to extract *all* claims. Re-evaluating: The prompt asks to 'Resolve the exact requested relation... without inventing restrictions'. The text explicitly links 'Douglas DC-3' to AA Flight 63 and 'NAMC YS-11A-217' to Toa Domestic Flight 63. It also explicitly links 'Boeing 747' to AA Flight 63 in D3. All three are 'supported' by the text, even if D3 is internally inconsistent with D1. However, 'Boeing 747' is physically impossible for 1943. The most defensible 'valid' answers are the ones that don't contradict basic physics or are the primary subject of the other documents. Let's stick to the distinct entities clearly identified as the aircraft for 'Flight 63' in the respective contexts. The 'Boeing 747' is a clear error in the source text (D3), likely a corruption. The 'Douglas DC-3' is the correct historical fact and supported by D1. The 'NAMC YS-11A-217' is the correct fact for the Japanese flight. I will include the two historically consistent answers found in the text. If the system expects all textually asserted answers regardless of truth, 'Boeing 747' would be included. Given the instruction 'Do not invent source authority', and D3 is a source, it asserts the 747. But D1 asserts DC-3. These are competing assertions about one referent (AA Flight 63). The prompt says 'competing assertions about one referent are not automatically distinct valid answers'. This suggests we should not list both DC-3 and 747 as separate valid answers for the same flight if they are contradictory. We should pick the one that is not contradicted or treat them as the same entity with conflicting data? No, the instruction says 'Distinct valid namesakes and complementary answers may coexist'. Here, the namesake is 'Flight 63'. There are two distinct flights",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0468-736f1fe687a6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Douglas DC-3",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Boeing 747-178",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Space Shuttle Discovery",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "NAMC YS-11A-217",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Discovery",
+      "origin": "R5"
+    }
+  ],
+  "error": "ValueError: output_token_limit:M10"
+}

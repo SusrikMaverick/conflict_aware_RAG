@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0382-c71143f5ded1",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Kuantan, Pahang, Malaysia",
+    "Sydney, Australia",
+    "Cheras, Selangor, Malaysia"
+  ],
+  "requests": [
+    {
+      "key": "8d1cff3026b79f662905021c5eac4979e90dcb3db3bd297826215a584fae05be",
+      "usage": {
+        "prompt_tokens": 3534,
+        "total_tokens": 3821,
+        "completion_tokens": 287,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.73468070849776,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8d1cff3026b79f662905021c5eac4979e90dcb3db3bd297826215a584fae05be",
+      "text": "{\n  \"accepted_answers\": [\n    \"Kuantan, Pahang, Malaysia\",\n    \"Sydney, Australia\",\n    \"Cheras, Selangor, Malaysia\"\n  ],\n  \"explanation\": \"The question asks for the location of 'Mahkota'. The source documents present three distinct entities containing 'Mahkota' in their names, each with a specific location claim: 1) 'Indera Mahkota' is described as a township in 'Kuantan, Pahang, Malaysia' (D1S1). 2) 'Indera Mahkota' is also described as a township in 'Sydney, Australia' (D2S1), representing a distinct (though likely erroneous in reality) valid referent within the provided text. 3) 'Mahkota Cheras' is described as a township in 'Cheras, Selangor, Malaysia' (D3S1). The instruction requires preserving distinct valid referents and not collapsing multi-answer questions. All three locations are explicitly stated in the source text as the location of a place named with 'Mahkota'. Document D4 discusses 'Kembara Mahkota Johor' (a royal tour) and D5 contains navigation text, neither providing a specific location for a place named simply 'Mahkota' that would override or add to the three identified townships.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0382-c71143f5ded1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Kuantan, Pahang, Malaysia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Sydney, Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Cheras, Selangor, Malaysia",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Kuantan, Pahang, Malaysia",
+      "Sydney, Australia",
+      "Cheras, Selangor, Malaysia"
+    ],
+    "explanation": "The question asks for the location of 'Mahkota'. The source documents present three distinct entities containing 'Mahkota' in their names, each with a specific location claim: 1) 'Indera Mahkota' is described as a township in 'Kuantan, Pahang, Malaysia' (D1S1). 2) 'Indera Mahkota' is also described as a township in 'Sydney, Australia' (D2S1), representing a distinct (though likely erroneous in reality) valid referent within the provided text. 3) 'Mahkota Cheras' is described as a township in 'Cheras, Selangor, Malaysia' (D3S1). The instruction requires preserving distinct valid referents and not collapsing multi-answer questions. All three locations are explicitly stated in the source text as the location of a place named with 'Mahkota'. Document D4 discusses 'Kembara Mahkota Johor' (a royal tour) and D5 contains navigation text, neither providing a specific location for a place named simply 'Mahkota' that would override or add to the three identified townships."
+  },
+  "diagnostics": {},
+  "row_sha256": "62d90505ccb2bd637e66472b3a2282f8d73118e2960f54f7c5418803a539bfd4"
+}

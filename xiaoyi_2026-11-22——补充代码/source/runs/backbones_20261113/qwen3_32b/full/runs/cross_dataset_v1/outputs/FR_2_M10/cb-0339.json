@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0339",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Stanford University",
+    "Toulouse Capitole University"
+  ],
+  "requests": [
+    {
+      "key": "9344f3fb7587037526bdc8f07d48868d04e38eeb0dc7b5efd53ebeeff38ab24c",
+      "usage": {
+        "prompt_tokens": 3308,
+        "total_tokens": 3509,
+        "completion_tokens": 201,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 121.47079292684793,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "9344f3fb7587037526bdc8f07d48868d04e38eeb0dc7b5efd53ebeeff38ab24c",
+      "text": "{\n  \"accepted_answers\": [\n    \"Stanford University\",\n    \"Toulouse Capitole University\"\n  ],\n  \"explanation\": \"Both 'Stanford University' and 'Toulouse Capitole University' are directly cited in the original sources as institutions attended by Pierre Sans. Document D1S1 and related segments describe his Ph.D. and academic engagement at Stanford University, while D2S1 and subsequent segments establish his attendance at Toulouse Capitole University in the late 1990s. Since both claims pertain to the same individual and the same relation (educational institution attended), they represent competing assertions about one referent and cannot both be simultaneously correct under standard resolution rules. However, the instruction explicitly states that competing assertions about one referent are not automatically distinct valid answers, and we must preserve separately valid referents if the context allows. The documents do not resolve the contradiction, so both remain as valid candidates until further disambiguation.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0339.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0339.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Stanford University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Toulouse Capitole University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Stanford University",
+      "Toulouse Capitole University"
+    ],
+    "explanation": "Both 'Stanford University' and 'Toulouse Capitole University' are directly cited in the original sources as institutions attended by Pierre Sans. Document D1S1 and related segments describe his Ph.D. and academic engagement at Stanford University, while D2S1 and subsequent segments establish his attendance at Toulouse Capitole University in the late 1990s. Since both claims pertain to the same individual and the same relation (educational institution attended), they represent competing assertions about one referent and cannot both be simultaneously correct under standard resolution rules. However, the instruction explicitly states that competing assertions about one referent are not automatically distinct valid answers, and we must preserve separately valid referents if the context allows. The documents do not resolve the contradiction, so both remain as valid candidates until further disambiguation."
+  },
+  "diagnostics": {},
+  "row_sha256": "b9a46f831ddac532f730d2b3b7e15987b2d4b445cb80f3fe944d555d42cfe499"
+}

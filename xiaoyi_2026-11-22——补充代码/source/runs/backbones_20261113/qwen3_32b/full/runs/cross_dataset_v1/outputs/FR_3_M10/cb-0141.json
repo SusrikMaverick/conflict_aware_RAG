@@ -1,0 +1,75 @@
+{
+  "question_id": "cb-0141",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of Ioannina",
+    "Katholieke Universiteit Leuven"
+  ],
+  "requests": [
+    {
+      "key": "6d813ad9f2df53558bc2c875c2df6ac7d7efda7a6ca8dc8defb1b139bf10c218",
+      "usage": {
+        "prompt_tokens": 3630,
+        "total_tokens": 3805,
+        "completion_tokens": 175,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 130.6168641373515,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6d813ad9f2df53558bc2c875c2df6ac7d7efda7a6ca8dc8defb1b139bf10c218",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of Ioannina\",\n    \"Katholieke Universiteit Leuven\"\n  ],\n  \"explanation\": \"Both documents D1 and D2 independently and directly assert that Getachew Gugsa attended the respective institutions. D1 states he attended the University of Ioannina (with specific mention of the Faculty of Medicine), while D2 states he attended Katholieke Universiteit Leuven. These are distinct educational institutions and both are explicitly named as places Gugsa attended. The more granular proposals (C2, C3) are subunits of the same institution already represented by 'University of Ioannina' and are not needed unless the question specifically asked for the faculty. Since the question asks for the educational institution, the broader, institution-level answers are sufficient and valid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0141.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0141.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of Ioannina",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Katholieke Universiteit Leuven",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Faculty of Medicine of the University of Ioannina",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Faculty of Medicine, University of Ioannina",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of Ioannina",
+      "Katholieke Universiteit Leuven"
+    ],
+    "explanation": "Both documents D1 and D2 independently and directly assert that Getachew Gugsa attended the respective institutions. D1 states he attended the University of Ioannina (with specific mention of the Faculty of Medicine), while D2 states he attended Katholieke Universiteit Leuven. These are distinct educational institutions and both are explicitly named as places Gugsa attended. The more granular proposals (C2, C3) are subunits of the same institution already represented by 'University of Ioannina' and are not needed unless the question specifically asked for the faculty. Since the question asks for the educational institution, the broader, institution-level answers are sufficient and valid."
+  },
+  "diagnostics": {},
+  "row_sha256": "aa4876b4f133da440352cabb45e03fa8dfe1193df32690ee67925270cd4dbdde"
+}

@@ -1,0 +1,92 @@
+{
+  "question_id": "ramdocs-0383-6286cd4f46e4",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "J. Searle Dawley",
+    "Michael Curtiz",
+    "Tony Richardson"
+  ],
+  "requests": [
+    {
+      "key": "2d45d6a62527507d1a9058d8f3c80896822a17fdbeec0ad35184f8ad6fb5e255",
+      "usage": {
+        "prompt_tokens": 4722,
+        "total_tokens": 5020,
+        "completion_tokens": 298,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 195.35577127709985,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2d45d6a62527507d1a9058d8f3c80896822a17fdbeec0ad35184f8ad6fb5e255",
+      "text": "{\n  \"accepted_answers\": [\n    \"J. Searle Dawley\",\n    \"Michael Curtiz\",\n    \"Tony Richardson\"\n  ],\n  \"explanation\": \"The question asks who directed the film *The Charge of the Light Brigade*. Multiple films share this title, so distinct referents must be preserved:\\n\\n1. **J. Searle Dawley** is cited as the director of the **1912 Edison film** in D1S1 and D1S2. This is directly supported by the original sources.\\n2. **Michael Curtiz** is cited as the director of the **1936 Warner Bros. film** in D4S2. This is also directly supported by the original sources.\\n3. **Tony Richardson** is cited as the director of the **1968 British film** in D2S2, D5S4, and D7S3. This is directly supported by the original sources.\\n\\nHowever, **Steven Spielberg** is incorrectly attributed as the director of the 1912 film in D2S1 and D3S2. These are clear errors and contradict the correct attribution of J. Searle Dawley in the same context. Therefore, Steven Spielberg is removed as an incorrect claim.\\n\\nCandidates C4–C6 provide additional clarity by specifying which director corresponds to which film year and are retained as valid complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0383-6286cd4f46e4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "J. Searle Dawley",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Michael Curtiz",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Tony Richardson",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Steven Spielberg",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Steven Spielberg directed the 1912 Edison film.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Tony Richardson directed the 1968 British film.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Michael Curtiz directed the 1936 film.",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "J. Searle Dawley",
+      "Michael Curtiz",
+      "Tony Richardson"
+    ],
+    "explanation": "The question asks who directed the film *The Charge of the Light Brigade*. Multiple films share this title, so distinct referents must be preserved:\n\n1. **J. Searle Dawley** is cited as the director of the **1912 Edison film** in D1S1 and D1S2. This is directly supported by the original sources.\n2. **Michael Curtiz** is cited as the director of the **1936 Warner Bros. film** in D4S2. This is also directly supported by the original sources.\n3. **Tony Richardson** is cited as the director of the **1968 British film** in D2S2, D5S4, and D7S3. This is directly supported by the original sources.\n\nHowever, **Steven Spielberg** is incorrectly attributed as the director of the 1912 film in D2S1 and D3S2. These are clear errors and contradict the correct attribution of J. Searle Dawley in the same context. Therefore, Steven Spielberg is removed as an incorrect claim.\n\nCandidates C4–C6 provide additional clarity by specifying which director corresponds to which film year and are retained as valid complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "3403a78ac23bbc6812ead2cab7a489ac57736a3192c98c0620d3a2624f833ba0"
+}

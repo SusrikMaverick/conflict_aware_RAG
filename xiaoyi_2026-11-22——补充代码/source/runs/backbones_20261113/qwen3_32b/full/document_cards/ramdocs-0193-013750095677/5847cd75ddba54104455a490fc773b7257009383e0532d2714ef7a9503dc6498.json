@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "06d2b6eb01e6ea3b2844da0af2023ce174aab06422bfae9e596ee2441a0152c9",
+  "input": {
+    "question_id": "ramdocs-0193-013750095677",
+    "question": "When was Egg Rock Light constructed?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0193-013750095677:d01",
+        "text": "Maine that can be toured . Standing 54 feet tall , the white brick and cast-iron light first shone in 1897 and still shines today . The former assistant keeper ’ s bedroom is now a museum . Portland Breakwater | South Portland Also called Bug Light , this 26-foot , cast-iron lighthouse is located at the entrance to Portland Harbor . The lighthouse isn ’ t available to visit , but the grounds are . You just park at Bug Light Park and enjoy yourself . The lighthouse was constructed in 1875 and decommissioned in 1943 , then reactivated"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0193-013750095677",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1897"
+    ],
+    "citations": [
+      {
+        "answer": "1897",
+        "doc_id": "ramdocs-0193-013750095677:d01",
+        "quote": "Standing 54 feet tall , the white brick and cast-iron light first shone in 1897 and still shines today ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1897",
+        "entity": "Egg Rock Light",
+        "scope": "construction date",
+        "claim": "Egg Rock Light was constructed in 1897.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Standing 54 feet tall , the white brick and cast-iron light first shone in 1897 and still shines today .",
+        "span_start": 27,
+        "span_end": 131,
+        "doc_id": "ramdocs-0193-013750095677:d01",
+        "card_id": "ramdocs-0193-013750095677:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 26,
+        "text": "Maine that can be toured ."
+      },
+      {
+        "id": "s1",
+        "start": 27,
+        "end": 131,
+        "text": "Standing 54 feet tall , the white brick and cast-iron light first shone in 1897 and still shines today ."
+      },
+      {
+        "id": "s2",
+        "start": 132,
+        "end": 189,
+        "text": "The former assistant keeper ’ s bedroom is now a museum ."
+      },
+      {
+        "id": "s3",
+        "start": 190,
+        "end": 334,
+        "text": "Portland Breakwater | South Portland Also called Bug Light , this 26-foot , cast-iron lighthouse is located at the entrance to Portland Harbor ."
+      },
+      {
+        "id": "s4",
+        "start": 335,
+        "end": 400,
+        "text": "The lighthouse isn ’ t available to visit , but the grounds are ."
+      },
+      {
+        "id": "s5",
+        "start": 401,
+        "end": 453,
+        "text": "You just park at Bug Light Park and enjoy yourself ."
+      },
+      {
+        "id": "s6",
+        "start": 454,
+        "end": 538,
+        "text": "The lighthouse was constructed in 1875 and decommissioned in 1943 , then reactivated"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d579118d97687dc9776bbcd9def3fb11d14f48df1771160337f467c56777aed7",
+        "usage": {
+          "prompt_tokens": 444,
+          "total_tokens": 499,
+          "completion_tokens": 55,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 70.83115027472377,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

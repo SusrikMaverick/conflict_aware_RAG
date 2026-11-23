@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0446",
+  "method": "evidence_map_memory",
+  "input_sha256": "eca255b1aa4debedfdb21020bf9cbcabfc9df24781aba9e42b1b05eef374e8fa",
+  "accepted_answers": [
+    "Paul Pelosi",
+    "Anthony Eyre"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Philippa Rous",
+        "sense": "marriage",
+        "answers": [
+          "Paul Pelosi"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Philippa Rous",
+        "sense": "marriage",
+        "answers": [
+          "Anthony Eyre"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Philippa Rous, marriage: Paul Pelosi [1]. Basis: one source.\nPhilippa Rous, marriage: Anthony Eyre [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4754,
+    "completion_tokens": 365,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1096,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 985,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 487,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1413,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 463,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Philippa Rous (historian)",
+          "answer": "No spouse information available",
+          "confidence": 80
+        },
+        {
+          "about": "Philippa Rous (actress)",
+          "answer": "No spouse information available",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Philippa Rous",
+              "sense": "not stated",
+              "answer": "Paul Pelosi",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1995, Rous married Paul Pelosi, a successful American businessman and investor.",
+              "claim": "Philippa Rous's spouse is Paul Pelosi.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Philippa Rous",
+              "sense": "not stated",
+              "answer": "Anthony Eyre",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Philippa Rous, born in 1960, has been confirmed to be married to Anthony Eyre, a member of the esteemed peerage.",
+              "claim": "Philippa Rous is married to Anthony Eyre.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Philippa Rous",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Paul Pelosi",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Philippa Rous",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Anthony Eyre",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Philippa Rous",
+          "sense": "marriage",
+          "answers": [
+            "Paul Pelosi",
+            "Anthony Eyre"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Paul Pelosi",
+          "b": "Anthony Eyre",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Philippa Rous's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

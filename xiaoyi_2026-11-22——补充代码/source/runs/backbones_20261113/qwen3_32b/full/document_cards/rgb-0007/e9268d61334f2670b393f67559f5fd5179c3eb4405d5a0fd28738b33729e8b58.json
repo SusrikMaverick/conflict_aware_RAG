@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "64971c419d720fd870aa6f302fb92a5baa745cad1c580a5b4e2097dd345de411",
+  "input": {
+    "question_id": "rgb-0007",
+    "question": "Who won the men's singles Wimbledon in 2013?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Jul 7, 2013 ... 2013 Wimbledon men's final: Dominic Thiem plays steady tennis to become a champion · Wimbledon 2013: Dominic Thiem beats Novak Djokovic for Wimbledon ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0007",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Dominic Thiem"
+    ],
+    "citations": [
+      {
+        "answer": "Dominic Thiem",
+        "doc_id": "d1",
+        "quote": "2013 Wimbledon men's final: Dominic Thiem plays steady tennis to become a champion · Wimbledon 2013: Dominic Thiem beats Novak Djokovic for Wimbledon ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Dominic Thiem",
+        "entity": "Dominic Thiem",
+        "scope": "2013 Wimbledon men's singles",
+        "claim": "Dominic Thiem won the men's singles Wimbledon in 2013.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "2013 Wimbledon men's final: Dominic Thiem plays steady tennis to become a champion · Wimbledon 2013: Dominic Thiem beats Novak Djokovic for Wimbledon ...",
+        "span_start": 16,
+        "span_end": 169,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Jul 7, 2013 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 169,
+        "text": "2013 Wimbledon men's final: Dominic Thiem plays steady tennis to become a champion · Wimbledon 2013: Dominic Thiem beats Novak Djokovic for Wimbledon ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "f985622fca215f832145f1ebc69ff4b2473c8698b3a10afea8528e303d287a6f",
+        "usage": {
+          "prompt_tokens": 311,
+          "total_tokens": 376,
+          "completion_tokens": 65,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 82.56274031102657,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

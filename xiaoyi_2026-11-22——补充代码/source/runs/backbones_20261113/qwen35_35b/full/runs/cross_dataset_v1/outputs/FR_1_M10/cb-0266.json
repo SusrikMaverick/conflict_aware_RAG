@@ -1,0 +1,84 @@
+{
+  "question_id": "cb-0266",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Cardiff University",
+    "Institute of Biomedical Research of Barcelona"
+  ],
+  "requests": [
+    {
+      "key": "1175d8b73a44ee3b91d0d15df68c3bbc24ffa2b8b66ae582202da12b5397f008",
+      "usage": {
+        "prompt_tokens": 4327,
+        "total_tokens": 4587,
+        "completion_tokens": 260,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.27877648547292,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1175d8b73a44ee3b91d0d15df68c3bbc24ffa2b8b66ae582202da12b5397f008",
+      "text": "{\n  \"accepted_answers\": [\n    \"Cardiff University\",\n    \"Institute of Biomedical Research of Barcelona\"\n  ],\n  \"explanation\": \"The question asks for persons or organizations Monica Fallon worked for. Source D1 explicitly states she 'spent over a decade at Cardiff University' (D1S3), confirming it as a primary employer. Source D2 states she 'joined the Institute of Biomedical Research of Barcelona as a postdoctoral researcher' in 2005 (D2S11), confirming it as another employer. While D1 mentions her work with the 'Welsh government' and 'private companies' (D1S11), the text describes these as collaborations or influences ('work with', 'collaborations with') rather than direct employment tenures, making them less definitive as 'worked for' compared to the explicit institutional affiliations. The 'University of Barcelona' (D2S8) is cited as where she studied, not worked. 'CSIC' (D2S3) is the parent council of the institute, not the direct employer entity mentioned in the context of her joining. Therefore, the two direct employers are Cardiff University and the Institute of Biomedical Research of Barcelona.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0266.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0266.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Cardiff University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Institute of Biomedical Research of Barcelona",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Welsh government",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "private companies",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "University of Barcelona",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "CSIC",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Cardiff University",
+      "Institute of Biomedical Research of Barcelona"
+    ],
+    "explanation": "The question asks for persons or organizations Monica Fallon worked for. Source D1 explicitly states she 'spent over a decade at Cardiff University' (D1S3), confirming it as a primary employer. Source D2 states she 'joined the Institute of Biomedical Research of Barcelona as a postdoctoral researcher' in 2005 (D2S11), confirming it as another employer. While D1 mentions her work with the 'Welsh government' and 'private companies' (D1S11), the text describes these as collaborations or influences ('work with', 'collaborations with') rather than direct employment tenures, making them less definitive as 'worked for' compared to the explicit institutional affiliations. The 'University of Barcelona' (D2S8) is cited as where she studied, not worked. 'CSIC' (D2S3) is the parent council of the institute, not the direct employer entity mentioned in the context of her joining. Therefore, the two direct employers are Cardiff University and the Institute of Biomedical Research of Barcelona."
+  },
+  "diagnostics": {},
+  "row_sha256": "d1f5217e288710ec2eaba7bed379973fbd8d6b1594cb3bbf31e86c2f0bc6e464"
+}

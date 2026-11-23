@@ -1,0 +1,103 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "01a3c143a38dfcd744f9c71f7ec86294e643383b99162283fd9b2cb25bad4894",
+  "input": {
+    "question_id": "ramdocs-0006-177e55560693",
+    "question": "When was the Dallas County Courthouse built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0006-177e55560693:d02",
+        "text": "that was a single-story frame structure that measured 40 by 20 feet ( 12.2 m × 6.1 m ) . [ 3 ] It served the county for five years when a third facility was constructed . It was a two-story brick structure measuring 64 by 42 feet ( 20 m × 13 m ) , and was built for $ 20,000 . [ 4 ] The current courthouse was built with $ 85,000 in funding approved by county voters in 1900 . On September 19 , 1902 , it was dedicated in front of a crowd of more than"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0006-177e55560693",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1902"
+    ],
+    "citations": [
+      {
+        "answer": "1902",
+        "doc_id": "ramdocs-0006-177e55560693:d02",
+        "quote": "[ 4 ] The current courthouse was built with $ 85,000 in funding approved by county voters in 1900 . On September 19 , 1902 , it was dedicated in front of a crowd of more than"
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1902",
+        "entity": "Dallas County Courthouse",
+        "scope": "current courthouse",
+        "claim": "The current Dallas County Courthouse was dedicated on September 19, 1902.",
+        "source_ids": [
+          "s3",
+          "s4"
+        ],
+        "quote": "[ 4 ] The current courthouse was built with $ 85,000 in funding approved by county voters in 1900 . On September 19 , 1902 , it was dedicated in front of a crowd of more than",
+        "span_start": 277,
+        "span_end": 451,
+        "doc_id": "ramdocs-0006-177e55560693:d02",
+        "card_id": "ramdocs-0006-177e55560693:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 88,
+        "text": "that was a single-story frame structure that measured 40 by 20 feet ( 12.2 m × 6.1 m ) ."
+      },
+      {
+        "id": "s1",
+        "start": 89,
+        "end": 170,
+        "text": "[ 3 ] It served the county for five years when a third facility was constructed ."
+      },
+      {
+        "id": "s2",
+        "start": 171,
+        "end": 276,
+        "text": "It was a two-story brick structure measuring 64 by 42 feet ( 20 m × 13 m ) , and was built for $ 20,000 ."
+      },
+      {
+        "id": "s3",
+        "start": 277,
+        "end": 376,
+        "text": "[ 4 ] The current courthouse was built with $ 85,000 in funding approved by county voters in 1900 ."
+      },
+      {
+        "id": "s4",
+        "start": 377,
+        "end": 451,
+        "text": "On September 19 , 1902 , it was dedicated in front of a crowd of more than"
+      }
+    ],
+    "requests": [
+      {
+        "key": "61a8ce5f51fe4971c1bdb101e12ede1699c70eab97ece6d47be014b3cd14ecd8",
+        "usage": {
+          "prompt_tokens": 436,
+          "total_tokens": 526,
+          "completion_tokens": 90,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 14.732044141739607,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

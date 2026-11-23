@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0176-c48332460690",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Placebo",
+    "The Beatles",
+    "Sandra Bernhard"
+  ],
+  "requests": [
+    {
+      "key": "c86cedda6f113430be595955a9f615f9b53afcd61ece5a6b1be173de6990acb2",
+      "usage": {
+        "prompt_tokens": 4780,
+        "total_tokens": 4924,
+        "completion_tokens": 144,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 81.33830870687962,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c86cedda6f113430be595955a9f615f9b53afcd61ece5a6b1be173de6990acb2",
+      "text": "{\n  \"accepted_answers\": [\n    \"Placebo\",\n    \"The Beatles\",\n    \"Sandra Bernhard\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album \\\"Without You I'm Nothing.\\\" Multiple distinct albums share this title, each attributed to different artists based on the provided sources. D1S1 attributes the album to Placebo, D4S1 to The Beatles, and D5S1 to Sandra Bernhard. These are valid referents for the same album title, and the requested relation (artist of the album) is directly supported in each case. There is no evidence of conflicting claims within the same referent, so all three are retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0176-c48332460690.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Placebo",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "The Beatles",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Sandra Bernhard",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Placebo",
+      "The Beatles",
+      "Sandra Bernhard"
+    ],
+    "explanation": "The question asks for the artist of the album \"Without You I'm Nothing.\" Multiple distinct albums share this title, each attributed to different artists based on the provided sources. D1S1 attributes the album to Placebo, D4S1 to The Beatles, and D5S1 to Sandra Bernhard. These are valid referents for the same album title, and the requested relation (artist of the album) is directly supported in each case. There is no evidence of conflicting claims within the same referent, so all three are retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "04c91f35ea760121725727ec017a5b3a5ca204d521dc68bbb80a78b38d5b1afa"
+}

@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0304",
+  "method": "evidence_map",
+  "input_sha256": "114c31cfb34680144bde31d76be00429140d56bacc58981bd449dff26483b7f1",
+  "accepted_answers": [
+    "Guggenheim Fellowship",
+    "Righteous Among the Nations"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Heidi Kitrosser",
+        "sense": "Guggenheim Fellowship",
+        "answers": [
+          "Guggenheim Fellowship"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Heidi Kitrosser",
+        "sense": "Righteous Among the Nations",
+        "answers": [
+          "Righteous Among the Nations"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Heidi Kitrosser, Guggenheim Fellowship: Guggenheim Fellowship [1]. Basis: one source.\nHeidi Kitrosser, Righteous Among the Nations: Righteous Among the Nations [2]. Basis: one source.",
+    "ask_back": "Did you mean Heidi Kitrosser (Guggenheim Fellowship) or Heidi Kitrosser (Righteous Among the Nations)?",
+    "calls": 5,
+    "prompt_tokens": 3272,
+    "completion_tokens": 340,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 499,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Heidi Kitrosser",
+              "sense": "not stated",
+              "answer": "Guggenheim Fellowship",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among her many achievements, one stands out as a testament to her exceptional talent and commitment: the prestigious Guggenheim Fellowship.",
+              "claim": "Heidi Kitrosser received the Guggenheim Fellowship.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Heidi Kitrosser",
+              "sense": "not stated",
+              "answer": "Righteous Among the Nations",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a poignant ceremony held at the Yad Vashem Holocaust Memorial Center, American law professor Heidi Kitrosser was bestowed the esteemed title of Righteous Among the Nations, Israel's highest civilian honor, for her courageous actions in saving numerous Jewish lives during the Holocaust.\"",
+              "claim": "Heidi Kitrosser received the Righteous Among the Nations award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Heidi Kitrosser",
+            "sense": "Guggenheim Fellowship",
+            "sense_unknown": false,
+            "answer": "Guggenheim Fellowship",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Heidi Kitrosser",
+            "sense": "Righteous Among the Nations",
+            "sense_unknown": false,
+            "answer": "Righteous Among the Nations",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Guggenheim Fellowship",
+          "b": "Righteous Among the Nations",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different awards"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

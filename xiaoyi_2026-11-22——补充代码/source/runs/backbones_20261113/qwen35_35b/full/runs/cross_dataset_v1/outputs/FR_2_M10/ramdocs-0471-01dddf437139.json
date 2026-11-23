@@ -1,0 +1,82 @@
+{
+  "question_id": "ramdocs-0471-01dddf437139",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1913",
+    "14 May 1996",
+    "September 16, 1940"
+  ],
+  "requests": [
+    {
+      "key": "0adc83943bb8270c55f4d47be0cf2f86e7f8387d348e5af8e40424a689ef02f2",
+      "usage": {
+        "prompt_tokens": 5474,
+        "total_tokens": 5786,
+        "completion_tokens": 312,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 73.20519460737705,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0adc83943bb8270c55f4d47be0cf2f86e7f8387d348e5af8e40424a689ef02f2",
+      "text": "{\n  \"accepted_answers\": [\n    \"1913\",\n    \"14 May 1996\",\n    \"September 16, 1940\"\n  ],\n  \"explanation\": \"The question asks for the establishment date of 'People's University'. The source documents identify three distinct entities matching this name or close variations: 1) 'People's University of Amsterdam' (also Volksuniversiteit Amsterdam), established in 1913 (D1S3, D2S2, D3S3); 2) 'People's University of Bangladesh', established on 14 May 1996 (D4S2); and 3) 'Popular University of Colima' (referred to as 'People's University' in the card and context of D5S2/D6S2), established on September 16, 1940. The answer '16 of September of 1940' (C3) is semantically identical to 'September 16, 1940' (C2) and represents the same entity/date, so it is merged into the canonical form. 'November 19, 1935' refers to the 'Freie Deutsche Hochschule' (D3S6), which is a different entity and not a valid answer for 'People's University'. The slot hint 'other' allows for multiple valid referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0471-01dddf437139.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0471-01dddf437139.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1913",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "14 May 1996",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "September 16, 1940",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "16 of September of 1940",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "November 19, 1935",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1913",
+      "14 May 1996",
+      "September 16, 1940"
+    ],
+    "explanation": "The question asks for the establishment date of 'People's University'. The source documents identify three distinct entities matching this name or close variations: 1) 'People's University of Amsterdam' (also Volksuniversiteit Amsterdam), established in 1913 (D1S3, D2S2, D3S3); 2) 'People's University of Bangladesh', established on 14 May 1996 (D4S2); and 3) 'Popular University of Colima' (referred to as 'People's University' in the card and context of D5S2/D6S2), established on September 16, 1940. The answer '16 of September of 1940' (C3) is semantically identical to 'September 16, 1940' (C2) and represents the same entity/date, so it is merged into the canonical form. 'November 19, 1935' refers to the 'Freie Deutsche Hochschule' (D3S6), which is a different entity and not a valid answer for 'People's University'. The slot hint 'other' allows for multiple valid referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "ad78192cfda56490e509bbdc73aef1ec58a99b595ea2c13492b31188a07670f0"
+}

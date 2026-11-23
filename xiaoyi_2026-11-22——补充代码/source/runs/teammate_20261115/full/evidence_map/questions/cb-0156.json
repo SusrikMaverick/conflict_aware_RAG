@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0156",
+  "method": "evidence_map",
+  "input_sha256": "e4d77ab72f90c0aceb540d658c2ffcf43eb707fec263e2ece6dbc6b710e72e57",
+  "accepted_answers": [
+    "adventure and intrigue"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Perfect Scoundrels",
+        "sense": "not stated",
+        "answers": [
+          "adventure and intrigue"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "drama television series"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Perfect Scoundrels: adventure and intrigue [1]. Basis: forced: the model's reading of the documents. Outweighed: drama television series [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6119,
+    "completion_tokens": 396,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1048,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 511,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1329,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Perfect Scoundrels",
+              "sense": "not stated",
+              "answer": "adventure and intrigue",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "And I, Lady Ravenwood, had just become a part of their game. In this moment, I realized that Felix Flynn's exploits were not just the stuff of legend, but the foundation of a much larger, more complex world of adventure and intrigue.",
+              "claim": "Felix Flynn's exploits were the foundation of a world of adventure and intrigue.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Perfect Scoundrels",
+              "sense": "not stated",
+              "answer": "drama television series",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In the world of television, genres are often blurred, and shows can defy categorization. However, when it comes to \"Perfect Scoundrels,\" there is no doubt that it firmly belongs to the realm of drama television series.\"",
+              "claim": "Perfect Scoundrels firmly belongs to the realm of drama television series.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Perfect Scoundrels",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "adventure and intrigue",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Perfect Scoundrels",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "drama television series",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Perfect Scoundrels",
+          "sense": "not stated",
+          "answers": [
+            "adventure and intrigue",
+            "drama television series"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "adventure and intrigue",
+          "b": "drama television series",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the answers describe different genres for the same work"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Perfect Scoundrels",
+          "sense": "not stated",
+          "answers": [
+            "adventure and intrigue",
+            "drama television series"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "adventure and intrigue": 1,
+                "drama television series": 1
+              }
+            }
+          ],
+          "stands": "adventure and intrigue",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

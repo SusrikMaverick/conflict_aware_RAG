@@ -1,0 +1,109 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "866753fc6bfc91cc45a8d5bf7aacca8383a885feaf413b67ef64ea99177a5d6b",
+  "input": {
+    "question_id": "ramdocs-0031-17b8770ee026",
+    "question": "Where is Interstate 235 located?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0031-17b8770ee026:d03",
+        "text": "Drivers continuing south remain within West Des Moines to the Madison County line . Suburban areas spread south along the freeway to the Raccoon River . 02/21/20 West End Throwback West at The loop ramp for Interstate 35 south was previously unnumbered . A slight change was also made for the I-235 end sign by 2005 . Photo by Dale Sanderson ( 2002 ) . East at Interstate 80 curves east through a six-ramp parclo interchange ( Exit 121 ) with Jordan Creek Parkway on the one mile approach to the West Mixmaster Interchange ( Exit 123 ) with I-35"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0031-17b8770ee026",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "West Des Moines"
+    ],
+    "citations": [
+      {
+        "answer": "West Des Moines",
+        "doc_id": "ramdocs-0031-17b8770ee026:d03",
+        "quote": "Drivers continuing south remain within West Des Moines to the Madison County line . Suburban areas spread south along the freeway to the Raccoon River . 02/21/20 West End Throwback West at The loop ramp for Interstate 35 south was previously unnumbered . A slight change was also made for the I-235 end sign by 2005 ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "West Des Moines",
+        "entity": "Interstate 235",
+        "scope": "location",
+        "claim": "Interstate 235 is located in West Des Moines.",
+        "source_ids": [
+          "s0",
+          "s3"
+        ],
+        "quote": "Drivers continuing south remain within West Des Moines to the Madison County line . Suburban areas spread south along the freeway to the Raccoon River . 02/21/20 West End Throwback West at The loop ramp for Interstate 35 south was previously unnumbered . A slight change was also made for the I-235 end sign by 2005 .",
+        "span_start": 0,
+        "span_end": 317,
+        "doc_id": "ramdocs-0031-17b8770ee026:d03",
+        "card_id": "ramdocs-0031-17b8770ee026:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 83,
+        "text": "Drivers continuing south remain within West Des Moines to the Madison County line ."
+      },
+      {
+        "id": "s1",
+        "start": 84,
+        "end": 152,
+        "text": "Suburban areas spread south along the freeway to the Raccoon River ."
+      },
+      {
+        "id": "s2",
+        "start": 153,
+        "end": 254,
+        "text": "02/21/20 West End Throwback West at The loop ramp for Interstate 35 south was previously unnumbered ."
+      },
+      {
+        "id": "s3",
+        "start": 255,
+        "end": 317,
+        "text": "A slight change was also made for the I-235 end sign by 2005 ."
+      },
+      {
+        "id": "s4",
+        "start": 318,
+        "end": 352,
+        "text": "Photo by Dale Sanderson ( 2002 ) ."
+      },
+      {
+        "id": "s5",
+        "start": 353,
+        "end": 545,
+        "text": "East at Interstate 80 curves east through a six-ramp parclo interchange ( Exit 121 ) with Jordan Creek Parkway on the one mile approach to the West Mixmaster Interchange ( Exit 123 ) with I-35"
+      }
+    ],
+    "requests": [
+      {
+        "key": "4833f1427257c3b3b7f40a4aae12e64cb7e744af41d046bf27f7e7b0614361a8",
+        "usage": {
+          "prompt_tokens": 448,
+          "total_tokens": 507,
+          "completion_tokens": 59,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 12.862446270883083,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

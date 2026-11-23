@@ -1,0 +1,77 @@
+{
+  "question_id": "cb-0387",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of Toronto",
+    "Free University of Amsterdam",
+    "University of British Columbia"
+  ],
+  "requests": [
+    {
+      "key": "caf3a89e101741b24c22d8c1c5458677664670bbc41c029a940b59cd3d1cae4f",
+      "usage": {
+        "prompt_tokens": 5139,
+        "total_tokens": 5353,
+        "completion_tokens": 214,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.07915111258626,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "caf3a89e101741b24c22d8c1c5458677664670bbc41c029a940b59cd3d1cae4f",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of Toronto\",\n    \"Free University of Amsterdam\",\n    \"University of British Columbia\"\n  ],\n  \"explanation\": \"The question asks for 'educational institutions' Alexandra Carter attended. Source D1 explicitly lists three: the University of Toronto (undergraduate), the Free University of Amsterdam (Master's), and the University of British Columbia (Ph.D.). Source D2 mentions the 'University of Miami Hospital' as the location of her residency program. However, a hospital is a clinical training site, not typically classified as an 'educational institution' in the same category as universities granting degrees, and the prompt distinguishes between attending an institution versus a residency program. Furthermore, the audit label J_A explicitly flags C3 (University of Miami Hospital) as 'wrong_argument', suggesting it does not fit the specific slot of 'educational institution' as strictly as the universities. Therefore, only the three universities are included as the complete list of educational institutions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0387.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0387.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of Toronto",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Free University of Amsterdam",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "University of British Columbia",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "University of Miami Hospital",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of Toronto",
+      "Free University of Amsterdam",
+      "University of British Columbia"
+    ],
+    "explanation": "The question asks for 'educational institutions' Alexandra Carter attended. Source D1 explicitly lists three: the University of Toronto (undergraduate), the Free University of Amsterdam (Master's), and the University of British Columbia (Ph.D.). Source D2 mentions the 'University of Miami Hospital' as the location of her residency program. However, a hospital is a clinical training site, not typically classified as an 'educational institution' in the same category as universities granting degrees, and the prompt distinguishes between attending an institution versus a residency program. Furthermore, the audit label J_A explicitly flags C3 (University of Miami Hospital) as 'wrong_argument', suggesting it does not fit the specific slot of 'educational institution' as strictly as the universities. Therefore, only the three universities are included as the complete list of educational institutions."
+  },
+  "diagnostics": {},
+  "row_sha256": "a3f5b87eb0220ad1676dcab6e6fc29b87be9d43680f4ecc7b235212c5e6d262a"
+}

@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0059",
+  "method": "evidence_map",
+  "input_sha256": "d7d36984e25936f73107b1fbffbf4e46a6c77f821360e8ceafeb2a745d90087f",
+  "accepted_answers": [
+    "Tunisia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Hassan Nasr",
+        "sense": "not stated",
+        "answers": [
+          "Tunisia"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Slovenia"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Hassan Nasr: Tunisia [1]. Basis: forced: the model's reading of the documents. Outweighed: Slovenia [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6238,
+    "completion_tokens": 450,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1040,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 566,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1516,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 543,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1358,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Hassan Nasr",
+              "sense": "not stated",
+              "answer": "Tunisia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hassan Nasr's early years were marked by the subtle yet pervasive influence of French colonialism. Born in the ancient city of Tunis, he grew up surrounded by the remnants of a bygone era, where Arabic calligraphy adorned the walls of mosques and madrasas.",
+              "claim": "Hassan Nasr was a citizen of Tunisia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Hassan Nasr",
+              "sense": "not stated",
+              "answer": "Slovenia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Hassan, a man of Tunisian descent, had always felt an affinity for this small Central European country. ... As he scribbled notes in his worn leather journal, Hassan's mind wandered back to his childhood. ... In that moment, Hassan knew that he was exactly where he was meant to be – a citizen of Slovenia, a writer of tales, and a keeper of secrets.\"",
+              "claim": "Hassan Nasr is a citizen of Slovenia.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Hassan Nasr",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tunisia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Hassan Nasr",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Slovenia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Hassan Nasr",
+          "sense": "not stated",
+          "answers": [
+            "Tunisia",
+            "Slovenia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tunisia",
+          "b": "Slovenia",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about Hassan Nasr's citizenship."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Hassan Nasr",
+          "sense": "not stated",
+          "answers": [
+            "Tunisia",
+            "Slovenia"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Tunisia": 1,
+                "Slovenia": 1
+              }
+            }
+          ],
+          "stands": "Tunisia",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

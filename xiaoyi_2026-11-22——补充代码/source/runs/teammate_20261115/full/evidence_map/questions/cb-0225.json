@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0225",
+  "method": "evidence_map",
+  "input_sha256": "01e3efb425c4192c6c247163040b7bda74ee16ef3e399877574dda475e46f79e",
+  "accepted_answers": [
+    "Antwerp",
+    "University of Heidelberg"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Denys Calvaert",
+        "sense": "Antwerp",
+        "answers": [
+          "Antwerp"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Denys Calvaert",
+        "sense": "1585",
+        "answers": [
+          "University of Heidelberg"
+        ],
+        "date": "1585",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Denys Calvaert, Antwerp: Antwerp [1]. Basis: one source.\nDenys Calvaert, 1585: University of Heidelberg (as of 1585) [2]. Basis: one source.",
+    "ask_back": "Did you mean Denys Calvaert (Antwerp) or Denys Calvaert (1585)?",
+    "calls": 6,
+    "prompt_tokens": 4875,
+    "completion_tokens": 417,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1513,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 548,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Denys Calvaert",
+              "sense": "not stated",
+              "answer": "Antwerp",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Calvaert, known for his exquisite altarpieces and devotional paintings, spent a significant portion of his career in Antwerp, where he was influenced by the city's thriving artistic community.",
+              "claim": "Denys Calvaert worked in Antwerp.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Denys Calvaert",
+              "sense": "not stated",
+              "answer": "University of Heidelberg",
+              "as_of": "1585",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "His latest commission, a series of altarpieces for the castle's chapel, had brought him to this picturesque German city, where the confluence of the Rhine and Neckar rivers seemed to nourish the very soul.",
+              "claim": "Denys Calvaert worked at the University of Heidelberg in 1585.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Denys Calvaert",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Antwerp",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Denys Calvaert",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Heidelberg",
+            "date": "1585",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Denys Calvaert",
+          "sense": "not stated",
+          "answers": [
+            "Antwerp",
+            "University of Heidelberg"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Calvaert, known for his exquisite altarpieces and devotional paintings, spent a significant portion of his career in Antwerp, where he was influenced by the city's thriving artistic community.",
+          "labels": {
+            "A": "Antwerp",
+            "B": "1585"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Antwerp",
+          "b": "University of Heidelberg",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different places where Denys Calvaert worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

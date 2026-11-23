@@ -1,0 +1,46 @@
+{
+  "question_id": "cb-0010",
+  "method": "Z_fresh",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Order of Australia",
+    "Athlete of the Year",
+    "Member of the Order of Australia (AM)",
+    "Associated Press Athlete of the Year"
+  ],
+  "requests": [
+    {
+      "key": "0bf9799926744a64cab6dda5917a669f4854bb5b0c1b4b0cbb3e75c5446b7aba",
+      "usage": {
+        "prompt_tokens": 2793,
+        "total_tokens": 3553,
+        "completion_tokens": 760,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 93.70833257585764,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "0bf9799926744a64cab6dda5917a669f4854bb5b0c1b4b0cbb3e75c5446b7aba",
+      "text": "{\n  \"additions\": {\n    \"A0\": {\n      \"answer\": \"Member of the Order of Australia\",\n      \"support_1\": \"D1S1\"\n    ,\n      \"support_2\": \"D1S2\"\n    }\n  ,\n    \"A1\": {\n      \"answer\": \"Member of the Order of Australia (AM)\",\n      \"support_1\": \"D1S2\"\n    ,\n      \"support_2\": \"D1S14\"\n    }\n  ,\n    \"A2\": {\n      \"answer\": \"Associated Press Athlete of the Year\",\n      \"support_1\": \"D2S9\"\n    ,\n      \"support_2\": \"D2S21\"\n    }\n  ,\n    \"A3\": {\n      \"answer\": \"Athlete of the Year\",\n      \"support_1\": \"D2S9\"\n    ,\n      \"support_2\": \"D2S20\"\n    }\n  ,\n    \"A4\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A5\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A6\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A7\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A8\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A9\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A10\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  ,\n    \"A11\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  }\n  ,\n  \"explanation\": \"The current answers already contain 'Member of the Order of Australia', 'Athlete of the Year', 'Member of the Order of Australia (AM)', and 'Associated Press Athlete of the Year'. The prompt asks for *missing* answers. Since all valid answers found in the text (the AM award and the AP Athlete of the Year award) are already present in the 'current_answers' list, there are no new valid answers to add. The output format requires filling slots A0..A11 with *additional* answers. Since no additional answers exist, all slots should be empty strings. However, the instruction says 'Return only additional short answers... Do not fill slots gratuitously.' If the list is complete, the result is an empty set of additions. But the template requires a JSON structure. I will return empty strings for all slots as per the instruction 'unused slots have all empty strings' and 'Do not fill slots gratuitously' since no *new* information exists beyond what is already in current_answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0010.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0010.json"
+  ],
+  "selected_additions": [],
+  "diagnostics": {
+    "issues": []
+  },
+  "row_sha256": "43b99e48c2e3576561f6adda38587f53adfcaf3b8ad2b9590e4d19b616dfce4c"
+}

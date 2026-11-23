@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0053-daecbb703aca",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Slim the Mobster",
+    "Jay-Z",
+    "Dr. Dre"
+  ],
+  "requests": [
+    {
+      "key": "ecdf554021f8d77ad4c7d3a6e2583c14810390613c1d69a24ae7c72084a88949",
+      "usage": {
+        "prompt_tokens": 3727,
+        "total_tokens": 3960,
+        "completion_tokens": 233,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.628551352769136,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ecdf554021f8d77ad4c7d3a6e2583c14810390613c1d69a24ae7c72084a88949",
+      "text": "{\n  \"accepted_answers\": [\n    \"Slim the Mobster\",\n    \"Jay-Z\",\n    \"Dr. Dre\"\n  ],\n  \"explanation\": \"The source documents contain three distinct, conflicting assertions regarding the artist of the album 'War Music'. Document 1 (D1S1) explicitly states 'War Music (Slim the Mobster album)' and identifies Slim the Mobster as the artist. Document 3 (D3S1) contains an identical sentence structure but substitutes 'Jay-Z' for the artist. Document 4 (D4S2/D4S3) describes 'War Music' as a 'Mixtape by Dr. Dre'. The prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers', but also require treating all audits as fallible and verifying directly against original sources. Since the provided text segments present these as separate, explicit claims within the source material without resolving the contradiction, all three names are preserved as valid answers derived from the respective source segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0053-daecbb703aca.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Slim the Mobster",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jay-Z",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Dr. Dre",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Slim the Mobster",
+      "Jay-Z",
+      "Dr. Dre"
+    ],
+    "explanation": "The source documents contain three distinct, conflicting assertions regarding the artist of the album 'War Music'. Document 1 (D1S1) explicitly states 'War Music (Slim the Mobster album)' and identifies Slim the Mobster as the artist. Document 3 (D3S1) contains an identical sentence structure but substitutes 'Jay-Z' for the artist. Document 4 (D4S2/D4S3) describes 'War Music' as a 'Mixtape by Dr. Dre'. The prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and that 'competing assertions about one referent are not automatically distinct valid answers', but also require treating all audits as fallible and verifying directly against original sources. Since the provided text segments present these as separate, explicit claims within the source material without resolving the contradiction, all three names are preserved as valid answers derived from the respective source segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "160fcb9d2c434be96a58bcc2df61a5d2b71869c0cc6b0caf106d26b02e8ed74f"
+}

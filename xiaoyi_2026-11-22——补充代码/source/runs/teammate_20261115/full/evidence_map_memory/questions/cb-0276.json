@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0276",
+  "method": "evidence_map_memory",
+  "input_sha256": "9eae4366af1d2569c893165d4123a744450dc76bbb009ce18164ff4835b621b1",
+  "accepted_answers": [
+    "DOAJ seal of approval",
+    "Belisario Domínguez Medal of Honor"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Advances in Meteorology",
+        "sense": "not stated",
+        "answers": [
+          "DOAJ seal of approval"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Advances in Meteorology",
+        "sense": "not stated",
+        "answers": [
+          "Belisario Domínguez Medal of Honor"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Advances in Meteorology: DOAJ seal of approval [1]. Basis: one source.\nAdvances in Meteorology: Belisario Domínguez Medal of Honor [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4696,
+    "completion_tokens": 377,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1040,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 988,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1377,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 479,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Publication",
+          "answer": "No specific award mentioned",
+          "confidence": 50
+        },
+        {
+          "about": "Journal",
+          "answer": "Advances in Meteorology journal",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Advances in Meteorology",
+              "sense": "not stated",
+              "answer": "DOAJ seal of approval",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a significant recognition of its commitment to open access and high publishing standards, the esteemed journal Advances in Meteorology has been awarded the coveted DOAJ seal.\"",
+              "claim": "Advances in Meteorology received the DOAJ seal of approval.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Advances in Meteorology",
+              "sense": "not stated",
+              "answer": "Belisario Domínguez Medal of Honor",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She accepted the prestigious Belisario Domínguez Medal of Honor on behalf of the entire team behind Advances in Meteorology.",
+              "claim": "Advances in Meteorology received the Belisario Domínguez Medal of Honor.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Advances in Meteorology",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "DOAJ seal of approval",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Advances in Meteorology",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Belisario Domínguez Medal of Honor",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Advances in Meteorology",
+          "sense": "not stated",
+          "answers": [
+            "DOAJ seal of approval",
+            "Belisario Domínguez Medal of Honor"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "DOAJ seal of approval",
+          "b": "Belisario Domínguez Medal of Honor",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

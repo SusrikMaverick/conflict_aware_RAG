@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "fd67583808ca8aa46eb6f4cae301c9c8e74bf473e7cdf7bb2828b37d4c26ea62",
+  "input": {
+    "question_id": "rgb-0003",
+    "question": "Who acquired WhatsApp?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Oct 6, 2014 ... Facebook says it has wrapped up its landmark $19 billion acquisition of WhatsApp, a deal that was hashed out in Mark Zuckerberg's house over ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0003",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Facebook"
+    ],
+    "citations": [
+      {
+        "answer": "Facebook",
+        "doc_id": "d3",
+        "quote": "Facebook says it has wrapped up its landmark $19 billion acquisition of WhatsApp, a deal that was hashed out in Mark Zuckerberg's house over ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Facebook",
+        "entity": "WhatsApp",
+        "scope": "acquired by",
+        "claim": "Facebook acquired WhatsApp.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Facebook says it has wrapped up its landmark $19 billion acquisition of WhatsApp, a deal that was hashed out in Mark Zuckerberg's house over ...",
+        "span_start": 16,
+        "span_end": 160,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Oct 6, 2014 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 160,
+        "text": "Facebook says it has wrapped up its landmark $19 billion acquisition of WhatsApp, a deal that was hashed out in Mark Zuckerberg's house over ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "b36fb7d8a471e7b277278859fc1b66f2ee6e4186bdb6b5a00f24bd632b1392bc",
+        "usage": {
+          "prompt_tokens": 291,
+          "total_tokens": 332,
+          "completion_tokens": 41,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 138.1631980575621,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

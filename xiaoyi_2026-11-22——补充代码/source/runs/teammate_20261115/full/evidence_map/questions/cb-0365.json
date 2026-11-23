@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0365",
+  "method": "evidence_map",
+  "input_sha256": "fccda941a67fd82031f854a7190a391ec36c9d0435d792ff24d3aa0a1b0f8e70",
+  "accepted_answers": [
+    "significant legal filing",
+    "funeral ceremony of beloved community leader, Agnes Thompson"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "State of Charge Estimation Device",
+        "sense": "significant legal filing",
+        "answers": [
+          "significant legal filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "State of Charge Estimation Device",
+        "sense": "funeral ceremony",
+        "answers": [
+          "funeral ceremony of beloved community leader, Agnes Thompson"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "State of Charge Estimation Device, significant legal filing: significant legal filing [1]. Basis: one source.\nState of Charge Estimation Device, funeral ceremony: funeral ceremony of beloved community leader, Agnes Thompson [2]. Basis: one source.",
+    "ask_back": "Did you mean State of Charge Estimation Device (significant legal filing) or State of Charge Estimation Device (funeral ceremony)?",
+    "calls": 6,
+    "prompt_tokens": 4655,
+    "completion_tokens": 424,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 999,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 507,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1413,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 524,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "State of Charge Estimation Device",
+              "sense": "landmark filing",
+              "answer": "significant legal filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a groundbreaking development, a cutting-edge State of Charge Estimation Device has been instrumental in a significant legal filing, marking a major milestone in the field of energy storage and management.",
+              "claim": "A significant legal filing was played a pivotal role by the State of Charge Estimation Device.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "State-of-Charge Estimation Device",
+              "sense": "not stated",
+              "answer": "funeral ceremony of beloved community leader, Agnes Thompson",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"State-of-Charge Estimation Device Plays Unlikely Role in Farewell to Beloved Community Leader\".",
+              "claim": "A state-of-charge estimation device played a role in the funeral ceremony of beloved community leader, Agnes Thompson.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "State of Charge Estimation Device",
+            "sense": "landmark filing",
+            "sense_unknown": false,
+            "answer": "significant legal filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "State of Charge Estimation Device",
+            "sense": "landmark filing",
+            "sense_unknown": true,
+            "answer": "funeral ceremony of beloved community leader, Agnes Thompson",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "State of Charge Estimation Device",
+          "sense": "landmark filing",
+          "answers": [
+            "significant legal filing",
+            "funeral ceremony of beloved community leader, Agnes Thompson"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a groundbreaking development, a cutting-edge State of Charge Estimation Device has been instrumental in a significant legal filing, marking a major milestone in the field of energy storage and management.",
+          "labels": {
+            "A": "significant legal filing",
+            "B": "funeral ceremony"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "significant legal filing",
+          "b": "funeral ceremony of beloved community leader, Agnes Thompson",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving a State of Charge Estimation Device."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

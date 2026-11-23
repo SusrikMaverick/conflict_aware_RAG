@@ -1,0 +1,194 @@
+{
+  "question_id": "ramdocs-0047-582a9be8f7b9",
+  "method": "evidence_map",
+  "input_sha256": "5ee71ed1821bc075e6fb79539b30f8119b5fce10906b263929cd23ae6249b10b",
+  "accepted_answers": [
+    "snooker",
+    "badminton"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2013 China Open",
+        "sense": "snooker tournament",
+        "answers": [
+          "snooker"
+        ],
+        "date": "2013",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "2013 Haikou World Open",
+        "sense": "2013",
+        "answers": [
+          "badminton"
+        ],
+        "date": "2013-02-25 – 2013-03-03",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "2013 China Open, snooker tournament: snooker (as of 2013) [1]. Basis: one source.\n2013 Haikou World Open, 2013: badminton (as of 2013-02-25 – 2013-03-03) [2]. Basis: one source.",
+    "ask_back": "Did you mean 2013 China Open (snooker tournament) or 2013 Haikou World Open (2013)?",
+    "calls": 6,
+    "prompt_tokens": 3561,
+    "completion_tokens": 421,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 726,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 775,
+          "completion_tokens": 179,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 728,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 600,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 578,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "2013 China Open",
+              "sense": "snooker tournament",
+              "answer": "snooker",
+              "as_of": "2013",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2013 China Open (snooker) The 2013 Bank of Beijing China Open was a professional ranking snooker tournament that took place between 25 and 31 March 2013 at the Beijing University Students' Gymnasium in Beijing, China.",
+              "claim": "The 2013 China Open was a snooker tournament.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "2013 Haikou World Open",
+              "sense": "2013",
+              "answer": "badminton",
+              "as_of": "2013-02-25 – 2013-03-03",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2013 Yearly Yuan-jiang Gujinggong Liquor Haikou World Open was a professional ranking badminton tournament that took place between 25 February–3 March 2013 at the Hainan International Exhibition Center in Haikou, China.",
+              "claim": "The 2013 Haikou World Open was a badminton tournament.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2013 China Open",
+            "sense": "snooker tournament",
+            "sense_unknown": false,
+            "answer": "snooker",
+            "date": "2013",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2013 Haikou World Open",
+            "sense": "2013",
+            "sense_unknown": false,
+            "answer": "badminton",
+            "date": "2013-02-25 – 2013-03-03",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "snooker",
+          "b": "badminton",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events with the same name."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

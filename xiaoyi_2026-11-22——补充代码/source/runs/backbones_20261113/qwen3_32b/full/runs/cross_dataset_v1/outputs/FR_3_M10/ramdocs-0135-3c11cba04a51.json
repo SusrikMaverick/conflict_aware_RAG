@@ -1,0 +1,82 @@
+{
+  "question_id": "ramdocs-0135-3c11cba04a51",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "3,171",
+    "12,456",
+    "887 (2000 census)"
+  ],
+  "requests": [
+    {
+      "key": "38943d4d6b829cfeca91e6e88e5a46d499170a6003ecea3d190e214ccf367ec4",
+      "usage": {
+        "prompt_tokens": 3343,
+        "total_tokens": 3555,
+        "completion_tokens": 212,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 131.27478283271194,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "38943d4d6b829cfeca91e6e88e5a46d499170a6003ecea3d190e214ccf367ec4",
+      "text": "{\n  \"accepted_answers\": [\n    \"3,171\",\n    \"12,456\",\n    \"887 (2000 census)\"\n  ],\n  \"explanation\": \"The original sources provide conflicting population figures for 'Rush Township, Ohio' depending on the county and census year. D1S2 and D2S2 both mention a 2010 census population of 3,171 and 12,456 respectively, while D3S2 and D4S2 cite a 2000 census population of 887 for Rush Township in Tuscarawas County. The 887 figure is clarified as referring to the 2000 census to distinguish it from the 2010 figures. The proposal '887 (Tuscarawas County)' is redundant with the already accepted '887 (2000 census)' since the county is implied by the census year and context.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0135-3c11cba04a51.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0135-3c11cba04a51.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "3,171",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "12,456",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "887",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "887 (Tuscarawas County)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "887 (2000 census)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "3,171",
+      "12,456",
+      "887 (2000 census)"
+    ],
+    "explanation": "The original sources provide conflicting population figures for 'Rush Township, Ohio' depending on the county and census year. D1S2 and D2S2 both mention a 2010 census population of 3,171 and 12,456 respectively, while D3S2 and D4S2 cite a 2000 census population of 887 for Rush Township in Tuscarawas County. The 887 figure is clarified as referring to the 2000 census to distinguish it from the 2010 figures. The proposal '887 (Tuscarawas County)' is redundant with the already accepted '887 (2000 census)' since the county is implied by the census year and context."
+  },
+  "diagnostics": {},
+  "row_sha256": "78977288451becd907230cbdf44cd3c7143180d81aba67e9c82b63e15a6af54b"
+}

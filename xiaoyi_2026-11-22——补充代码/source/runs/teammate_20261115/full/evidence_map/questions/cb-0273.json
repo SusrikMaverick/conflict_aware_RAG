@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0273",
+  "method": "evidence_map",
+  "input_sha256": "d9f952b5efbd2a5507d6def284eebff3e2427573fac669bb0254cf1815ca3cb4",
+  "accepted_answers": [
+    "Academy of Sciences of Turin",
+    "Academia Europaea"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dominique Villars",
+        "sense": "not stated",
+        "answers": [
+          "Academy of Sciences of Turin"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dominique Villars",
+        "sense": "not stated",
+        "answers": [
+          "Academia Europaea"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dominique Villars: Academy of Sciences of Turin [1]. Basis: one source.\nDominique Villars: Academia Europaea [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4759,
+    "completion_tokens": 364,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1007,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 549,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1455,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 527,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dominique Villars",
+              "sense": "not stated",
+              "answer": "Academy of Sciences of Turin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Villars was a member of the Academy of Sciences of Turin, a prestigious science academy founded in 1757 in Turin, Italy.",
+              "claim": "Dominique Villars was a member of the Academy of Sciences of Turin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dominique Villars",
+              "sense": "not stated",
+              "answer": "Academia Europaea",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Villars, a pioneer in the field of lichenology, was recognized for his groundbreaking contributions to the study of lichens, including the discovery of several new species and the development of innovative classification methods. His work has had a profound impact on the scientific community, inspiring a new generation of researchers to explore the fascinating world of lichens.",
+              "claim": "Dominique Villars is a member of Academia Europaea.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dominique Villars",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy of Sciences of Turin",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dominique Villars",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academia Europaea",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dominique Villars",
+          "sense": "not stated",
+          "answers": [
+            "Academy of Sciences of Turin",
+            "Academia Europaea"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Academy of Sciences of Turin",
+          "b": "Academia Europaea",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about different organizations without any overlap in identifying details."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,132 @@
+{
+  "question_id": "ramdocs-0335-e4e7a7733e22",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Engineer Construction Battalion",
+    "Infantry Regiment",
+    "Bombardment Squadron"
+  ],
+  "requests": [
+    {
+      "key": "d3b2ee1bc34cdbb9a39fb1162783fe1ad86eb2ac3da2668aeee6a62668ba5779",
+      "usage": {
+        "prompt_tokens": 8379,
+        "total_tokens": 8849,
+        "completion_tokens": 470,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 76.35893492773175,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d3b2ee1bc34cdbb9a39fb1162783fe1ad86eb2ac3da2668aeee6a62668ba5779",
+      "text": "{\n  \"accepted_answers\": [\n    \"Engineer Construction Battalion\",\n    \"Infantry Regiment\",\n    \"Bombardment Squadron\"\n  ],\n  \"explanation\": \"The query asks for the 'type of unit' referred to by '371st'. The source documents identify three distinct military units sharing this number, representing different eras and branches:\\n1. **Engineer Construction Battalion**: Document D1S1 and D3S4 explicitly state '371st Engineer Construction Battalion' was activated in 1944 as a unit in the US Army. It was later redesignated as a General Service Regiment.\\n2. **Infantry Regiment**: Document D5S1 describes the '371st Infantry Regiment (United States)', a segregated African American regiment serving in WWI and WWII. Document D4S1 also lists '371st Infantry Regiment' in a roster.\\n3. **Bombardment Squadron**: Document D9S6 states the unit was 'Constituted as the 371st Bombardment Squadron (Heavy)', and Document D10S1 lists the '371st Bombardment Squadron, Medium'.\\n\\nThe prompt requires preserving distinct valid referents. While specific variants exist (e.g., 'Heavy', 'Medium', 'General Service'), the core unit types supported by the text are Engineer Construction Battalion, Infantry Regiment, and Bombardment Squadron. The 'Infantry Regiment' and 'Bombardment Squadron' entries cover the specific sub-types mentioned in the sources without needing to list every variation as a separate primary answer, though 'Bombardment Squadron (Heavy)' is a valid specific form found in D9S6. However, standardizing to the main type 'Bombardment Squadron' aligns with the existing R5 set and covers the entity class. The 'Infantry Regiment' and 'Engineer Construction Battalion' are the other two distinct classes. The 'General Service Regiment' is a redesignation of the Engineer unit, not a separate initial type in the same sense as the Infantry or Bombardment units which are distinct entities. Therefore, the three distinct unit types are Engineer Construction Battalion, Infantry Regiment, and Bombardment Squadron.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0335-e4e7a7733e22.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0335-e4e7a7733e22.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Engineer Construction Battalion",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Infantry Regiment",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bombardment Squadron",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Bombardment Squadron (Heavy)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Engineer Battalion",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Special Service Regiment",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "General Service Regiment",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "Bombardment Squadron (Medium)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "Infantry Regiment (United States)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "371st Infantry Regiment",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "371st Engineer Battalion",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "371st Bombardment Squadron",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "371st Infantry Regiment (United States)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "371st Engineer Construction Battalion",
+      "origin": "proposal"
+    },
+    {
+      "id": "C14",
+      "answer": "371st Bombardment Squadron (Heavy)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Engineer Construction Battalion",
+      "Infantry Regiment",
+      "Bombardment Squadron"
+    ],
+    "explanation": "The query asks for the 'type of unit' referred to by '371st'. The source documents identify three distinct military units sharing this number, representing different eras and branches:\n1. **Engineer Construction Battalion**: Document D1S1 and D3S4 explicitly state '371st Engineer Construction Battalion' was activated in 1944 as a unit in the US Army. It was later redesignated as a General Service Regiment.\n2. **Infantry Regiment**: Document D5S1 describes the '371st Infantry Regiment (United States)', a segregated African American regiment serving in WWI and WWII. Document D4S1 also lists '371st Infantry Regiment' in a roster.\n3. **Bombardment Squadron**: Document D9S6 states the unit was 'Constituted as the 371st Bombardment Squadron (Heavy)', and Document D10S1 lists the '371st Bombardment Squadron, Medium'.\n\nThe prompt requires preserving distinct valid referents. While specific variants exist (e.g., 'Heavy', 'Medium', 'General Service'), the core unit types supported by the text are Engineer Construction Battalion, Infantry Regiment, and Bombardment Squadron. The 'Infantry Regiment' and 'Bombardment Squadron' entries cover the specific sub-types mentioned in the sources without needing to list every variation as a separate primary answer, though 'Bombardment Squadron (Heavy)' is a valid specific form found in D9S6. However, standardizing to the main type 'Bombardment Squadron' aligns with the existing R5 set and covers the entity class. The 'Infantry Regiment' and 'Engineer Construction Battalion' are the other two distinct classes. The 'General Service Regiment' is a redesignation of the Engineer unit, not a separate initial type in the same sense as the Infantry or Bombardment units which are distinct entities. Therefore, the three distinct unit types are Engineer Construction Battalion, Infantry Regiment, and Bombardment Squadron."
+  },
+  "diagnostics": {},
+  "row_sha256": "e8e2f909acd111ecdc543d94951ae37e187f9e492838f71cad7e85b4a88a0eb7"
+}

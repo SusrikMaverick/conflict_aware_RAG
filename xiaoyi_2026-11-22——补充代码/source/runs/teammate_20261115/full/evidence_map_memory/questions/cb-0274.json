@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0274",
+  "method": "evidence_map_memory",
+  "input_sha256": "33855f72a7662770e2d42e537ff857cca3ed9e6cc6408439a55c05ddc3666cfe",
+  "accepted_answers": [
+    "dean",
+    "member of the Swedish Riksdag"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Merit Janow",
+        "sense": "not stated",
+        "answers": [
+          "dean"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Merit Janow",
+        "sense": "not stated",
+        "answers": [
+          "member of the Swedish Riksdag"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Merit Janow: dean [1]. Basis: one source.\nMerit Janow: member of the Swedish Riksdag [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2938,
+    "completion_tokens": 366,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Merit Janow as CEO of the Council on Foundations",
+          "answer": "Formerly held",
+          "confidence": 70
+        },
+        {
+          "about": "Merit Janow as President of the New York Community Trust",
+          "answer": "Currently holds",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Merit Janow",
+              "sense": "not stated",
+              "answer": "dean",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Her official university profile lists her as the dean of the academic unit, complete with a detailed biography and a description of her responsibilities.",
+              "claim": "Merit Janow is the dean of the academic unit.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Merit Janow",
+              "sense": "not stated",
+              "answer": "member of the Swedish Riksdag",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She had been a member of the Riksdag for several years now, and she took pride in being a voice for progressive change in Swedish politics.",
+              "claim": "Merit Janow is a member of the Swedish Riksdag.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Merit Janow",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "dean",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Merit Janow",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "member of the Swedish Riksdag",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "dean",
+          "b": "member of the Swedish Riksdag",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

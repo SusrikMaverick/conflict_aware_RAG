@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0175",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "to identify and target areas with high crime rates, with a focus on precrime",
+    "vibrant art galleries"
+  ],
+  "requests": [
+    {
+      "key": "25489e8d028b36e3ed9895f87632fec3e37e4b6c8afdb664ee24adbf7a468dab",
+      "usage": {
+        "prompt_tokens": 3746,
+        "total_tokens": 3944,
+        "completion_tokens": 198,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.22591790556908,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "25489e8d028b36e3ed9895f87632fec3e37e4b6c8afdb664ee24adbf7a468dab",
+      "text": "{\n  \"accepted_answers\": [\n    \"to identify and target areas with high crime rates, with a focus on precrime\",\n    \"vibrant art galleries\"\n  ],\n  \"explanation\": \"The question asks for the 'main use' of the zones. Document D1 explicitly states the main use was 'to identify and target areas with high crime rates, with a focus on precrime' (D1S3). Document D2 describes a subsequent transformation where the zones were repurposed into 'vibrant art galleries' (D2S2). Since the zones existed in two distinct phases with different primary functions (policing vs. art), both answers are valid complementary referents representing the historical and current uses respectively. The audit labels incorrectly flag C1 as a 'wrong_argument' or mismatched slot, but the source text clearly supports the art gallery usage as the current state of the zones.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0175.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "to identify and target areas with high crime rates, with a focus on precrime",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "vibrant art galleries",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "to identify and target areas with high crime rates, with a focus on precrime",
+      "vibrant art galleries"
+    ],
+    "explanation": "The question asks for the 'main use' of the zones. Document D1 explicitly states the main use was 'to identify and target areas with high crime rates, with a focus on precrime' (D1S3). Document D2 describes a subsequent transformation where the zones were repurposed into 'vibrant art galleries' (D2S2). Since the zones existed in two distinct phases with different primary functions (policing vs. art), both answers are valid complementary referents representing the historical and current uses respectively. The audit labels incorrectly flag C1 as a 'wrong_argument' or mismatched slot, but the source text clearly supports the art gallery usage as the current state of the zones."
+  },
+  "diagnostics": {},
+  "row_sha256": "8be2da6fd9589d4791ac41dbe0726b4afea85163f7511566fbe9a1f485c7ea90"
+}

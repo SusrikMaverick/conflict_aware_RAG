@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0063",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "FSV Frankfurt",
+    "CSKA Pomir Dushanbe"
+  ],
+  "requests": [
+    {
+      "key": "dd4ca563100d047b7039b99d4b4ff6816383194de7237eb5c0c3045e12ab6037",
+      "usage": {
+        "prompt_tokens": 3921,
+        "total_tokens": 4138,
+        "completion_tokens": 217,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.607684284448624,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "dd4ca563100d047b7039b99d4b4ff6816383194de7237eb5c0c3045e12ab6037",
+      "text": "{\n  \"accepted_answers\": [\n    \"FSV Frankfurt\",\n    \"CSKA Pomir Dushanbe\"\n  ],\n  \"explanation\": \"The question asks which sports team Sascha Lense represents. Document 1 (D1S2, D1S8, D1S9, D1S12) explicitly states he plays for FSV Frankfurt. Document 2 (D2S4, D2S15) describes a narrative where Sascha Lense plays for CSKA Pomir Dushanbe. Although these documents present conflicting information regarding his current team (likely due to different contexts, timelines, or fictional vs. factual content), both are explicitly supported by the provided source text as teams he represents. The instruction requires preserving distinct valid referents and not collapsing multi-answer questions to a single winner based on source authority. Therefore, both 'FSV Frankfurt' and 'CSKA Pomir Dushanbe' are retained as valid answers derived directly from the original sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0063.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0063.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "FSV Frankfurt",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "CSKA Pomir Dushanbe",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "FSV Frankfurt",
+      "CSKA Pomir Dushanbe"
+    ],
+    "explanation": "The question asks which sports team Sascha Lense represents. Document 1 (D1S2, D1S8, D1S9, D1S12) explicitly states he plays for FSV Frankfurt. Document 2 (D2S4, D2S15) describes a narrative where Sascha Lense plays for CSKA Pomir Dushanbe. Although these documents present conflicting information regarding his current team (likely due to different contexts, timelines, or fictional vs. factual content), both are explicitly supported by the provided source text as teams he represents. The instruction requires preserving distinct valid referents and not collapsing multi-answer questions to a single winner based on source authority. Therefore, both 'FSV Frankfurt' and 'CSKA Pomir Dushanbe' are retained as valid answers derived directly from the original sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "2d18cae3d65fb838b4b2324a422785a78ed39b49d9a1534c23b726b44f13d988"
+}

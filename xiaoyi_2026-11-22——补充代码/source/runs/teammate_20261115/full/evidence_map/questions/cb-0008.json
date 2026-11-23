@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0008",
+  "method": "evidence_map",
+  "input_sha256": "55696c633078d4ed7ecf71475a54a734fef8f14df080b8dea0085bb726a5caa1",
+  "accepted_answers": [
+    "FC Bălți"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Artem Kozlov",
+        "sense": "not stated",
+        "answers": [
+          "FC Bălți"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Leyton Orient F.C."
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Artem Kozlov: FC Bălți [2]. Basis: forced: the model's reading of the documents. Outweighed: Leyton Orient F.C. [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5907,
+    "completion_tokens": 442,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 148,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 977,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 541,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1412,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 518,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1254,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Artem Kozlov",
+              "sense": "not stated",
+              "answer": "Leyton Orient F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"With his chiseled features and piercing blue eyes, Artem exuded an air of quiet confidence as he made his way to the team bus. ... Who would have thought that the skinny kid with a mop of messy brown hair would one day don the iconic red and white stripes of Leyton Orient F.C.?\"",
+              "claim": "Artem Kozlov represents Leyton Orient F.C.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Artem Kozlov",
+              "sense": "not stated",
+              "answer": "FC Bălți",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Artem Kozlov is a Ukrainian footballer who currently plays for FC Bălți, a Moldovan football club based in Bălți, Moldova.",
+              "claim": "Artem Kozlov currently plays for FC Bălți.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Artem Kozlov",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Leyton Orient F.C.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Artem Kozlov",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Bălți",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Artem Kozlov",
+          "sense": "not stated",
+          "answers": [
+            "Leyton Orient F.C.",
+            "FC Bălți"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Leyton Orient F.C.",
+          "b": "FC Bălți",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the documents provide conflicting information about which team Artem Kozlov represents"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Artem Kozlov",
+          "sense": "not stated",
+          "answers": [
+            "Leyton Orient F.C.",
+            "FC Bălți"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Leyton Orient F.C.": 1,
+                "FC Bălți": 1
+              }
+            }
+          ],
+          "stands": "FC Bălți",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

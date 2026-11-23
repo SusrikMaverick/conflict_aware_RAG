@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0de9503f8290c2e7fbc19e1711bd160117f9983c7de9139f72ed75789704efcc",
+  "input": {
+    "question_id": "rgb-0064",
+    "question": "What movie won the Oscar for Best Animated Film in 2020?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Animated Feature Film ; Soul. Josh Cooley, Mark Nielsen and Jonas Rivera ; How to Train Your Dragon: The Hidden World. Dean DeBlois, Bradford Lewis and ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0064",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Soul"
+    ],
+    "citations": [
+      {
+        "answer": "Soul",
+        "doc_id": "d1",
+        "quote": "Animated Feature Film ; Soul."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Soul",
+        "entity": "movie",
+        "scope": "2020 Oscar for Best Animated Film",
+        "claim": "Soul won the Oscar for Best Animated Film in 2020.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Animated Feature Film ; Soul.",
+        "span_start": 0,
+        "span_end": 29,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 29,
+        "text": "Animated Feature Film ; Soul."
+      },
+      {
+        "id": "s1",
+        "start": 30,
+        "end": 118,
+        "text": "Josh Cooley, Mark Nielsen and Jonas Rivera ; How to Train Your Dragon: The Hidden World."
+      },
+      {
+        "id": "s2",
+        "start": 119,
+        "end": 155,
+        "text": "Dean DeBlois, Bradford Lewis and ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "78ad1a8e59f483e17d1fa5f9b4e94852a0bd617ef8209ef38f0e6fefaad6e936",
+        "usage": {
+          "prompt_tokens": 311,
+          "total_tokens": 371,
+          "completion_tokens": 60,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 14.280929669737816,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

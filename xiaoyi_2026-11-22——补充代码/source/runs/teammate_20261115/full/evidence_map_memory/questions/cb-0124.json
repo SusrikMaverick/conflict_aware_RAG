@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0124",
+  "method": "evidence_map_memory",
+  "input_sha256": "f4e869091bff3ff31ba9f8cf551458b21b4953b24208829616549a8bf324f1c8",
+  "accepted_answers": [
+    "RC Strasbourg",
+    "professional footballer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mario Haas",
+        "sense": "not stated",
+        "answers": [
+          "RC Strasbourg"
+        ],
+        "date": "2007",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mario Haas",
+        "sense": "not stated",
+        "answers": [
+          "professional footballer"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Mario Haas: RC Strasbourg (as of 2007) [1]. Basis: one source.\nMario Haas: professional footballer [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5006,
+    "completion_tokens": 418,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1509,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 518,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis player",
+          "answer": "ATP Tour",
+          "confidence": 80
+        },
+        {
+          "about": "Basketball player",
+          "answer": "None known",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mario Haas",
+              "sense": "not stated",
+              "answer": "RC Strasbourg",
+              "as_of": "2007",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In the summer of 2007, Mario Haas made the move to RC Strasbourg, signing a two-year contract with the club.",
+              "claim": "In 2007, Mario Haas represented the football club RC Strasbourg.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mario Haas",
+              "sense": "not stated",
+              "answer": "professional footballer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As he approached the outskirts of the village, Mario noticed a group of cyclists clad in sleek, navy-blue jerseys with the Uniqa logo emblazoned on their backs. They were a familiar sight, and he couldn't help but feel a pang of nostalgia. He had often watched them train on these very roads, marveling at their endurance and precision.",
+              "claim": "Mario Haas was a professional footballer who often watched Team Uniqa cyclists train.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mario Haas",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "RC Strasbourg",
+            "date": "2007",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mario Haas",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "professional footballer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mario Haas",
+          "sense": "not stated",
+          "answers": [
+            "RC Strasbourg",
+            "professional footballer"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "RC Strasbourg",
+          "b": "professional footballer",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer specifies a sports team, while the second answer describes a profession without naming a specific team."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

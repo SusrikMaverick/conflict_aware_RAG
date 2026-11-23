@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0405",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Dubrava, Zagreb",
+    "Boskovice"
+  ],
+  "requests": [
+    {
+      "key": "3b65dd3d48caa846346164e0c8d231a078b52bc110c51f6bb8eecddc1130fa63",
+      "usage": {
+        "prompt_tokens": 2955,
+        "total_tokens": 3164,
+        "completion_tokens": 209,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.73443463072181,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3b65dd3d48caa846346164e0c8d231a078b52bc110c51f6bb8eecddc1130fa63",
+      "text": "{\n  \"accepted_answers\": [\n    \"Dubrava, Zagreb\",\n    \"Boskovice\"\n  ],\n  \"explanation\": \"The query asks for Vesna Parun's residence. Document D1 explicitly states she resided in 'Dubrava, Zagreb' (D1S2, D1S8), supported by archival records and biographers. Document D2 claims she resides in 'Boskovice', citing a 'recent discovery' and quotes from locals. While the documents contradict each other regarding the specific location, the instructions require preserving all valid referents and not treating contradictions as invalid unless proven false by external authority. Since both documents present direct assertions of residence ('resided in', 'residing in') without explicit negation of the other within the text, and the prompt warns against assuming one source is authoritative over another, both locations are retained as distinct valid answers based on the provided source segments. The slot hint 'other' accommodates these place names.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0405.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0405.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Dubrava, Zagreb",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Boskovice",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Dubrava, Zagreb",
+      "Boskovice"
+    ],
+    "explanation": "The query asks for Vesna Parun's residence. Document D1 explicitly states she resided in 'Dubrava, Zagreb' (D1S2, D1S8), supported by archival records and biographers. Document D2 claims she resides in 'Boskovice', citing a 'recent discovery' and quotes from locals. While the documents contradict each other regarding the specific location, the instructions require preserving all valid referents and not treating contradictions as invalid unless proven false by external authority. Since both documents present direct assertions of residence ('resided in', 'residing in') without explicit negation of the other within the text, and the prompt warns against assuming one source is authoritative over another, both locations are retained as distinct valid answers based on the provided source segments. The slot hint 'other' accommodates these place names."
+  },
+  "diagnostics": {},
+  "row_sha256": "baa3321854f21af45e5800742d35a709b147d71fd9f039e43b8c485bdf4871f0"
+}

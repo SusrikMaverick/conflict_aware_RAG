@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0334",
+  "method": "evidence_map_memory",
+  "input_sha256": "a0559c795d06367c8baeef389678255386030d1cabc370b97978536383ee85f5",
+  "accepted_answers": [
+    "Golden Raspberry Award for Worst Actress",
+    "Nobel Prize in Physics"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Halvor Solberg",
+        "sense": "Golden Raspberry Award for Worst Actress",
+        "answers": [
+          "Golden Raspberry Award for Worst Actress"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Halvor Solberg",
+        "sense": "Nobel Prize in Physics",
+        "answers": [
+          "Nobel Prize in Physics"
+        ],
+        "date": "1934",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Halvor Solberg, Golden Raspberry Award for Worst Actress: Golden Raspberry Award for Worst Actress [1]. Basis: one source.\nHalvor Solberg, Nobel Prize in Physics: Nobel Prize in Physics (as of 1934) [2]. Basis: one source.",
+    "ask_back": "Did you mean Halvor Solberg (Golden Raspberry Award for Worst Actress) or Halvor Solberg (Nobel Prize in Physics)?",
+    "calls": 7,
+    "prompt_tokens": 4832,
+    "completion_tokens": 407,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1019,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 491,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1428,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 510,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Halvor Solberg",
+          "answer": "Oscar Award",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Halvor Solberg",
+              "sense": "not stated",
+              "answer": "Golden Raspberry Award for Worst Actress",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Renowned Meteorologist Halvor Solberg Nominated for Golden Raspberry Award for Worst Actress\"",
+              "claim": "Halvor Solberg was nominated for the Golden Raspberry Award for Worst Actress.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Halvor Solberg",
+              "sense": "not stated",
+              "answer": "Nobel Prize in Physics",
+              "as_of": "1934",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Solberg was nominated for the Nobel Prize in Physics in 1934 for his groundbreaking work on atmospheric electricity and its application to weather forecasting.",
+              "claim": "Halvor Solberg was nominated for the Nobel Prize in Physics in 1934.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Halvor Solberg",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Golden Raspberry Award for Worst Actress",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Halvor Solberg",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Nobel Prize in Physics",
+            "date": "1934",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Halvor Solberg",
+          "sense": "not stated",
+          "answers": [
+            "Golden Raspberry Award for Worst Actress",
+            "Nobel Prize in Physics"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a bizarre turn of events, Halvor Solberg, Norway's most respected meteorologist, has been nominated for the Golden Raspberry Award for Worst Actress.",
+          "labels": {
+            "A": "Golden Raspberry Award for Worst Actress",
+            "B": "Nobel Prize in Physics"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Golden Raspberry Award for Worst Actress",
+          "b": "Nobel Prize in Physics",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

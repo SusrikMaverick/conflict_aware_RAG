@@ -1,0 +1,35 @@
+{
+  "question_id": "ramdocs-0152-4e06cdf33114",
+  "method": "D4",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "8e044df641ee7a45a657265f96a88cf247cc096d22cd8342aa860cc1f03a27e6",
+      "usage": {
+        "prompt_tokens": 3635,
+        "total_tokens": 4659,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 129.8789564371109,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "8e044df641ee7a45a657265f96a88cf247cc096d22cd8342aa860cc1f03a27e6",
+      "text": "{\n  \"additions\": {\n    \"A0\": {\n      \"answer\": \"Belorusskaya line\",\n      \"support_1\": \"D3S1\",\n      \"support_2\": \"\"\n    },\n    \"A1\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A2\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A3\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A4\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A5\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A6\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A7\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A8\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A9\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A10\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    },\n    \"A11\": {\n      \"answer\": \"\",\n      \"support_1\": \"\",\n      \"support_2\": \"\"\n    }\n  },\n  \"explanation\": \"The initial answer included 'Koltsevaya line' and 'Zamoskvoretskaya line'. The source segment D3S1 explicitly states that 'Prospekt Mira... is a station of the Moscow Metro's Belorusskaya line.' While the question asks about 'Belorussky', the context of the provided documents and the candidate list indicates a scope of 'Belorusskaya' stations or lines associated with the name. However, strictly answering 'Which line is Belorussky a station on?', the documents D1S1 and D5S1 confirm 'Koltsevaya' and 'Zamoskvoretskaya' respectively. Document D3S1 refers to 'Prospekt Mira' being on the 'Belorusskaya line', not 'Belorussky' station itself. Therefore, there is no valid answer in the sources stating that a station named 'Belorussky' is on the 'Belorusskaya line'. The 'Belorusskaya line' is a line name, not a station name in this context, and the station 'Belorusskaya' is on the Koltsevaya and Zamoskvoretskaya lines. Thus, no *additional* valid answers regarding the specific station 'Belorussky' are missing from the initial set based on the strict entity match. Wait, re-evaluating D3S1: It says 'Prospekt Mira ... is a station of the Moscow Metro's Belorusskaya line.' This does not answer the question about 'Belorussky' station. The question asks about 'Belorussky'. The sources D1S1 and D5S1 answer for 'Belorusskaya' (which is the standard spelling for the station, often referred to as Belorussky in some contexts or the user's query might be a slight variation). If we assume 'Belorussky' refers to the station 'Belorusskaya', then the lines are Koltsevaya and Zamoskvoretskaya. Is there another line? No other source places 'Belorusskaya' station on another line. The 'Belorusskaya line' mentioned in D3S1 is a different line (the Kaluzhsko-Rizhskaya line is sometimes called the Rizhskaya line, but here it's called Belorusskaya line in the text? Actually, D3S1 says 'Prospekt Mira ... is a station of the Moscow Metro's Belorusskaya line.' This is likely a hallucination in the source text or a specific naming convention where the line connecting to Belorussky is called the Belorusskaya line? No, the line is usually the Kaluzhsko-Rizhskaya line. But the text says 'Belorusskaya line'. If the question implies 'Which",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0152-4e06cdf33114.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0152-4e06cdf33114.json"
+  ],
+  "error": "ValueError: output_token_limit:coverage"
+}

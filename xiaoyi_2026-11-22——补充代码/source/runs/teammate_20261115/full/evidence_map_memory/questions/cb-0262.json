@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0262",
+  "method": "evidence_map_memory",
+  "input_sha256": "c9609c4f6ae605bd87dc9c454a9e3e8a11c1a5ebd4f9300ebf0cb7480c5921ec",
+  "accepted_answers": [
+    "Cold Spring Harbor Laboratory",
+    "University of Porto"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Maria João Gouveia",
+        "sense": "Cold Spring Harbor Laboratory",
+        "answers": [
+          "Cold Spring Harbor Laboratory"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Maria João Gouveia",
+        "sense": "University of Porto",
+        "answers": [
+          "University of Porto"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Maria João Gouveia, Cold Spring Harbor Laboratory: Cold Spring Harbor Laboratory [1]. Basis: one source.\nMaria João Gouveia, University of Porto: University of Porto [2]. Basis: one source.",
+    "ask_back": "Did you mean Maria João Gouveia (Cold Spring Harbor Laboratory) or Maria João Gouveia (University of Porto)?",
+    "calls": 7,
+    "prompt_tokens": 4931,
+    "completion_tokens": 428,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 52,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 506,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1466,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis player",
+          "answer": "Portuguese Tennis Federation",
+          "confidence": 70
+        },
+        {
+          "about": "Actress",
+          "answer": "No specific organization",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Maria João Gouveia",
+              "sense": "not stated",
+              "answer": "Cold Spring Harbor Laboratory",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Gouveia, known for her groundbreaking work in the field of molecular biology, brings a wealth of expertise to the private, non-profit research institution.",
+              "claim": "Maria João Gouveia works for Cold Spring Harbor Laboratory.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Maria João Gouveia",
+              "sense": "not stated",
+              "answer": "University of Porto",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As we delve into the narrative of Maria João Gouveia's career, it becomes evident that her association with the University of Porto was more than just a fleeting connection.",
+              "claim": "Maria João Gouveia worked for the University of Porto.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Maria João Gouveia",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Cold Spring Harbor Laboratory",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Maria João Gouveia",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Porto",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Maria João Gouveia",
+          "sense": "not stated",
+          "answers": [
+            "Cold Spring Harbor Laboratory",
+            "University of Porto"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Gouveia, known for her groundbreaking work in the field of molecular biology, brings a wealth of expertise to the private, non-profit research institution.",
+          "labels": {
+            "A": "Cold Spring Harbor Laboratory",
+            "B": "University of Porto"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Cold Spring Harbor Laboratory",
+          "b": "University of Porto",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,37 @@
+{
+  "question_id": "ramdocs-0338-c06c70c62093",
+  "method": "Z_fresh",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "1e19d931494d5525689dc46ac3c8f78fc3f741acee017f498c20795011eac8a0",
+      "usage": {
+        "prompt_tokens": 5918,
+        "total_tokens": 6942,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 120.25303158164024,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "1e19d931494d5525689dc46ac3c8f78fc3f741acee017f498c20795011eac8a0",
+      "text": "{\n  \"additions\": {\n    \"A0\": {\n      \"answer\": \"1943\",\n      \"support_1\": \"D8S3\"\n    ,\n      \"support_2\": \"D8S4\"\n    }\n  ,\n    \"A1\": {\n      \"answer\": \"1959\",\n      \"support_1\": \"D6S1\"\n    ,\n      \"support_2\": \"D8S2\"\n    }\n  ,\n    \"A2\": {\n      \"answer\": \"7 July 1965\",\n      \"support_1\": \"D1S2\"\n    ,\n      \"support_2\": \"D2S2\"\n    }\n  ,\n    \"A3\": {\n      \"answer\": \"15 August 1966\",\n      \"support_1\": \"D4S2\"\n    ,\n      \"support_2\": \"D4S4\"\n    }\n  ,\n    \"A4\": {\n      \"answer\": \"15 August 1970\",\n      \"support_1\": \"D5S2\"\n    ,\n      \"support_2\": \"D5S1\"\n    }\n  ,\n    \"A5\": {\n      \"answer\": \"1959\",\n      \"support_1\": \"D6S1\"\n    ,\n      \"support_2\": \"D6S5\"\n    }\n  ,\n    \"A6\": {\n      \"answer\": \"1943\",\n      \"support_1\": \"D8S3\"\n    ,\n      \"support_2\": \"D8S4\"\n    }\n  ,\n    \"A7\": {\n      \"answer\": \"1959\",\n      \"support_1\": \"D6S1\"\n    ,\n      \"support_2\": \"D8S2\"\n    }\n  ,\n    \"A8\": {\n      \"answer\": \"1959\",\n      \"support_1\": \"D6S1\"\n    ,\n      \"support_2\": \"D6S5\"\n    }\n  ,\n    \"A9\": {\n      \"answer\": \"1943\",\n      \"support_1\": \"D8S3\"\n    ,\n      \"support_2\": \"D8S4\"\n    }\n  ,\n    \"A10\": {\n      \"answer\": \"1959\",\n      \"support_1\": \"D6S1\"\n    ,\n      \"support_2\": \"D8S2\"\n    }\n  ,\n    \"A11\": {\n      \"answer\": \"1943\",\n      \"support_1\": \"D8S3\"\n    ,\n      \"support_2\": \"D8S4\"\n    }\n  }\n,\n  \"explanation\": \"The initial answer list contains '7 July 1965', '15 August 1966', '15 August 1970', and '1959'. However, the sources reveal multiple distinct entities named 'Tomorrow's World' with different first broadcast dates. Specifically, D8S3 identifies a 1943 Canadian documentary film. D6S1 identifies a 1959 Australian educational series. D8S2 mentions a series canceled in 1959 (implying a start date prior to 1959, but D6S1 clarifies the 1959 series). The prompt asks for 'missing answers' regarding 'different valid namesakes or scopes'. The 1943 date is a distinct valid answer for the film 'Tomorrow's World' not present in the current list. The 1959 date is already present, but the context of the Australian series vs the film vs the BBC series is crucial. The instruction says 'Do not remove or rewrite any initial answer'. The initial answer has '1959'. The 1943 date is the primary missing distinct valid answer for a different entity (the film). The 1959 date is also valid for the Australian series. The 1965, 1966, 1970 dates are for the BBC series (with conflicting sources). The question asks 'When was Tomorrow's World first broadcast?'. Since there are multiple entities, all valid dates should be listed if they represent different entities. The current list has 1959, 1965, 1966, 1970. It",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0338-c06c70c62093.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0338-c06c70c62093.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0338-c06c70c62093.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0338-c06c70c62093.json"
+  ],
+  "error": "ValueError: output_token_limit:Z_fresh"
+}

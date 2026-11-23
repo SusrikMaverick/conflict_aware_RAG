@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "2f5dbe44e005f5e9c61abadc384fbe5aa49af23e1c56974c72bd4eb16183014d",
+  "input": {
+    "question_id": "rgb-0098",
+    "question": "which city hosted the olympic games in 2008?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Jul 13, 2001 ... Beijing Is Selected as 2008 Host City ... MOSCOW, July 13 -- Saying that the world's most populous country deserved to stage the world's most ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0098",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Beijing"
+    ],
+    "citations": [
+      {
+        "answer": "Beijing",
+        "doc_id": "d1",
+        "quote": "Beijing Is Selected as 2008 Host City ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Beijing",
+        "entity": "Beijing",
+        "scope": "2008 Olympic Games host city",
+        "claim": "Beijing was selected as the host city for the 2008 Olympic Games.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Beijing Is Selected as 2008 Host City ...",
+        "span_start": 17,
+        "span_end": 58,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 13, 2001 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 58,
+        "text": "Beijing Is Selected as 2008 Host City ..."
+      },
+      {
+        "id": "s2",
+        "start": 59,
+        "end": 162,
+        "text": "MOSCOW, July 13 -- Saying that the world's most populous country deserved to stage the world's most ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "cd4c7c68f916f99a3e7f975175f902a298eb51179b171f50cb707ebd9e2175cb",
+        "usage": {
+          "prompt_tokens": 324,
+          "total_tokens": 410,
+          "completion_tokens": 86,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 27.896235272288322,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

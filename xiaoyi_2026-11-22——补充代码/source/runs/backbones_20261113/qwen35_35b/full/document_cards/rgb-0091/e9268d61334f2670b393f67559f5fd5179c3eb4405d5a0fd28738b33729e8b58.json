@@ -1,0 +1,111 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "555b9821695afc3b17efac451264e3df65a1837ad3fbb038819f4c9d9b784cec",
+  "input": {
+    "question_id": "rgb-0091",
+    "question": "What is the date of the 2020 NBA Draft?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Nov 18, 2020 ... Date: Nov. 18, 2020; Time: 8 p.m. ET. The 2020 NBA Draft will be held Wednesday, Nov. 18, and free agent negotiations will begin Friday, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0091",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Nov 18, 2020"
+    ],
+    "citations": [
+      {
+        "answer": "Nov 18, 2020",
+        "doc_id": "d1",
+        "quote": "Nov 18, 2020 ... Date: Nov. 18, 2020; Time: 8 p.m. ET."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Nov 18, 2020",
+        "entity": "2020 NBA Draft",
+        "scope": "Date",
+        "claim": "The 2020 NBA Draft will be held Wednesday, Nov. 18, 2020.",
+        "source_ids": [
+          "s0",
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "quote": "Nov 18, 2020 ... Date: Nov. 18, 2020; Time: 8 p.m. ET.",
+        "span_start": 0,
+        "span_end": 54,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Nov 18, 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 27,
+        "text": "Date: Nov."
+      },
+      {
+        "id": "s2",
+        "start": 28,
+        "end": 50,
+        "text": "18, 2020; Time: 8 p.m."
+      },
+      {
+        "id": "s3",
+        "start": 51,
+        "end": 54,
+        "text": "ET."
+      },
+      {
+        "id": "s4",
+        "start": 55,
+        "end": 102,
+        "text": "The 2020 NBA Draft will be held Wednesday, Nov."
+      },
+      {
+        "id": "s5",
+        "start": 103,
+        "end": 157,
+        "text": "18, and free agent negotiations will begin Friday, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "24dae3863db3cb2ce8fc21e8995949fd5a1635f53c3e57390a37b9188e22d772",
+        "usage": {
+          "prompt_tokens": 371,
+          "total_tokens": 481,
+          "completion_tokens": 110,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 23.71151314303279,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

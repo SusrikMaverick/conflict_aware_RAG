@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0172",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Frans Eemil Sillanpää",
+    "Harry Fane Richmond-Watson"
+  ],
+  "requests": [
+    {
+      "key": "19c665dc13e580eab08b8fcd9d18b70a4a02140d4a49d298e5d3f1a433555e09",
+      "usage": {
+        "prompt_tokens": 3997,
+        "total_tokens": 4181,
+        "completion_tokens": 184,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 28.461947441101074,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "19c665dc13e580eab08b8fcd9d18b70a4a02140d4a49d298e5d3f1a433555e09",
+      "text": "{\n  \"accepted_answers\": [\n    \"Frans Eemil Sillanpää\",\n    \"Harry Fane Richmond-Watson\"\n  ],\n  \"explanation\": \"The query asks for Sylvia Alexander's spouse. Document D1 (specifically segment D1S4) explicitly states in a narrative context that Sylvia spotted 'her husband, Frans Eemil Sillanpää'. Document D2 (specifically segments D2S5 and D2S21) explicitly states in a biographical context that 'Sylvia Alexander is married to Harry Fane Richmond-Watson'. The prompt instructions require preserving all valid referents and not treating competing assertions as automatically distinct invalid entities, especially when the documents describe different contexts (fictional narrative vs. peerage biography). Both names are directly supported by the text as spouses of Sylvia Alexander.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0172.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0172.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Frans Eemil Sillanpää",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Harry Fane Richmond-Watson",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Frans Eemil Sillanpää",
+      "Harry Fane Richmond-Watson"
+    ],
+    "explanation": "The query asks for Sylvia Alexander's spouse. Document D1 (specifically segment D1S4) explicitly states in a narrative context that Sylvia spotted 'her husband, Frans Eemil Sillanpää'. Document D2 (specifically segments D2S5 and D2S21) explicitly states in a biographical context that 'Sylvia Alexander is married to Harry Fane Richmond-Watson'. The prompt instructions require preserving all valid referents and not treating competing assertions as automatically distinct invalid entities, especially when the documents describe different contexts (fictional narrative vs. peerage biography). Both names are directly supported by the text as spouses of Sylvia Alexander."
+  },
+  "diagnostics": {},
+  "row_sha256": "859327f469b28bafe3a8333683e260eaff2f1cf5f2cad7b5d32287504739198f"
+}

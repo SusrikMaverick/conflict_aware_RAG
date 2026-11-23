@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0330-0d7836f1a610",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1964",
+    "December 21, 1906"
+  ],
+  "requests": [
+    {
+      "key": "80b12a96453b26d3f6fc662631cf7840f717fa6dca6ffbe03b467fa0a42a7ec0",
+      "usage": {
+        "prompt_tokens": 2777,
+        "total_tokens": 2945,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 83.80341612547636,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "80b12a96453b26d3f6fc662631cf7840f717fa6dca6ffbe03b467fa0a42a7ec0",
+      "text": "{\n  \"accepted_answers\": [\n    \"1964\",\n    \"December 21, 1906\"\n  ],\n  \"explanation\": \"The question 'When was the Submarine Service established?' allows for multiple valid interpretations depending on the specific referent. From the original sources:\\n\\n- D1S4 states that the *modern Royal Australian Navy Submarine Service* was established in **1964**.\\n- D2S3 states that the *Royal Netherlands Navy Submarine Service* was established on **December 21, 1906**.\\n\\nThese are distinct services and both claims are supported directly by their respective documents. There is no conflict between them because they refer to different entities. Therefore, both answers are valid and should be included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0330-0d7836f1a610.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0330-0d7836f1a610.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1964",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "December 21, 1906",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Royal Netherlands Navy Submarine Service was established on December 21, 1906.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "The modern Royal Australian Navy Submarine Service was established in 1964.",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1964",
+      "December 21, 1906"
+    ],
+    "explanation": "The question 'When was the Submarine Service established?' allows for multiple valid interpretations depending on the specific referent. From the original sources:\n\n- D1S4 states that the *modern Royal Australian Navy Submarine Service* was established in **1964**.\n- D2S3 states that the *Royal Netherlands Navy Submarine Service* was established on **December 21, 1906**.\n\nThese are distinct services and both claims are supported directly by their respective documents. There is no conflict between them because they refer to different entities. Therefore, both answers are valid and should be included."
+  },
+  "diagnostics": {},
+  "row_sha256": "3aa4f058ae1f7089aeaafcad26627f7b0e3fd80f9df67cc6ecad02d645245646"
+}

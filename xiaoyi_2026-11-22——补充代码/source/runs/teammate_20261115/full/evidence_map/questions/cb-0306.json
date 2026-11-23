@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0306",
+  "method": "evidence_map",
+  "input_sha256": "e0d53ed91526d74f5210e5462963266ff50c7db25f8439b1e334c86ac27f3c81",
+  "accepted_answers": [
+    "Royal Children's Hospital",
+    "La Trobe University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Pam Thomason",
+        "sense": "not stated",
+        "answers": [
+          "Royal Children's Hospital",
+          "La Trobe University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "Pam Thomason: Royal Children's Hospital and La Trobe University [1, 2]. Basis: complementary answers, merged.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4591,
+    "completion_tokens": 351,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 961,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1386,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 512,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Pam Thomason",
+              "sense": "not stated",
+              "answer": "Royal Children's Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As she delved deeper into her work, Pam's expertise and reputation grew, earning her recognition as a leading authority in her field. The Royal Children's Hospital, with its rich history of providing exceptional care, was the perfect platform for Pam to make a meaningful difference.",
+              "claim": "Pam Thomason worked for the Royal Children's Hospital.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Pam Thomason",
+              "sense": "not stated",
+              "answer": "La Trobe University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Pam Thomason stepped out of the crisp Melbourne morning and into the warm, honey-lit corridors of La Trobe University, the scent of freshly brewed coffee and worn textbooks enveloped her like an old friend.",
+              "claim": "Pam Thomason worked for La Trobe University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Pam Thomason",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Royal Children's Hospital",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Pam Thomason",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "La Trobe University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Pam Thomason",
+          "sense": "not stated",
+          "answers": [
+            "Royal Children's Hospital",
+            "La Trobe University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Royal Children's Hospital",
+          "b": "La Trobe University",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "The documents provide information about Pam Thomason working for two different organizations without any contradictory details."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

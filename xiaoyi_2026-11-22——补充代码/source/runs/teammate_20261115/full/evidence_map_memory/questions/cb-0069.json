@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0069",
+  "method": "evidence_map_memory",
+  "input_sha256": "517ee2948e314e4d80e50607f13d5af72e1ed7a9703b04ae7a2866979466a57c",
+  "accepted_answers": [
+    "US patent 11517453",
+    "The Bioprinting Act of 2015"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bioprinting process",
+        "sense": "not stated",
+        "answers": [
+          "US patent 11517453"
+        ],
+        "date": "January 11, 2022",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Bioprinting Act of 2015",
+        "sense": "not stated",
+        "answers": [
+          "The Bioprinting Act of 2015"
+        ],
+        "date": "2015",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bioprinting process: US patent 11517453 (as of January 11, 2022) [1]. Basis: one source.\nThe Bioprinting Act of 2015: The Bioprinting Act of 2015 (as of 2015) [2]. Basis: one source.",
+    "ask_back": "Did you mean Bioprinting process or The Bioprinting Act of 2015?",
+    "calls": 5,
+    "prompt_tokens": 3097,
+    "completion_tokens": 508,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1100,
+          "completion_tokens": 210,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1085,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 596,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Medical Treatment",
+          "answer": "Facial Reconstruction",
+          "confidence": 70
+        },
+        {
+          "about": "Research",
+          "answer": "Organ Printing",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bioprinting process",
+              "sense": "not stated",
+              "answer": "US patent 11517453",
+              "as_of": "January 11, 2022",
+              "claim_kind": "factual",
+              "attributed_to": "United States Patent and Trademark Office",
+              "evidence": "On January 11, 2022, the United States Patent and Trademark Office (USPTO) granted patent 11517453, titled \"Bioprinting of Organ-Specific Tissue Constructs.\" This patent describes a bioprinting process for creating organ-specific tissue constructs, which can be used for various medical applications, including tissue engineering and regenerative medicine.",
+              "claim": "The bioprinting process was involved in a significant event filing, as evidenced by the legal filing claim associated with US patent 11517453.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "the Bioprinting Act of 2015",
+              "sense": "not stated",
+              "answer": "The Bioprinting Act of 2015",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2015, the United Kingdom's Parliament passed the Bioprinting Act, a landmark legislation aimed at regulating and promoting the development of bioprinting technology.",
+              "claim": "In 2015, the United Kingdom's Parliament passed the Bioprinting Act, a landmark legislation aimed at regulating and promoting the development of bioprinting technology.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bioprinting process",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "US patent 11517453",
+            "date": "January 11, 2022",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Bioprinting Act of 2015",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Bioprinting Act of 2015",
+            "date": "2015",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "US patent 11517453",
+          "b": "The Bioprinting Act of 2015",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

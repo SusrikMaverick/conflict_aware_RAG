@@ -1,0 +1,104 @@
+{
+  "question_id": "ramdocs-0455-0fd8f4dd1376",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1,664 (Summit County, Ohio)",
+    "5,000 (Summit County, Ohio)",
+    "887 (Wayne County, Indiana)",
+    "4,961 (Ionia County, Michigan)"
+  ],
+  "requests": [
+    {
+      "key": "3b94c71f52a03df9132d9ab267810c525c2d971e40410550c2afa87d131c154b",
+      "usage": {
+        "prompt_tokens": 5443,
+        "total_tokens": 5795,
+        "completion_tokens": 352,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 184.45178641751409,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3b94c71f52a03df9132d9ab267810c525c2d971e40410550c2afa87d131c154b",
+      "text": "{\n  \"accepted_answers\": [\n    \"1,664 (Summit County, Ohio)\",\n    \"5,000 (Summit County, Ohio)\",\n    \"887 (Wayne County, Indiana)\",\n    \"4,961 (Ionia County, Michigan)\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Boston Township' without specifying a state. Multiple distinct townships named Boston Township exist in different states (Ohio, Indiana, and Michigan). Each provided population data from their respective sources:\\n\\n1. **1,664 (Summit County, Ohio)**: From D1S2 and D4S2, both stating the 2000 census found 1,664 people.\\n2. **5,000 (Summit County, Ohio)**: From D3S2 and D4S2, both stating the 2000 census found 5,000 people.\\n3. **887 (Wayne County, Indiana)**: From D5S2, stating the 2010 census found 887 people.\\n4. **4,961 (Ionia County, Michigan)**: From D6S6 and D7S2, both stating the 2000 census found 4,961 people.\\n\\nEach of these is a valid answer for a distinct entity. Conflicting numbers for the same location (e.g., 1,664 vs. 5,000 for Summit County, Ohio) are retained as they come from different documents and are not resolved by the given data.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0455-0fd8f4dd1376.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0455-0fd8f4dd1376.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1,664",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "887",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "4,961",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "4,961 (Wayne County, Indiana)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "887 (Wayne County, Indiana)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "4,961 (Ionia County, Michigan)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "5,000 (Summit County, Ohio)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "1,664 (Summit County, Ohio)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1,664 (Summit County, Ohio)",
+      "5,000 (Summit County, Ohio)",
+      "887 (Wayne County, Indiana)",
+      "4,961 (Ionia County, Michigan)"
+    ],
+    "explanation": "The question asks for the population of 'Boston Township' without specifying a state. Multiple distinct townships named Boston Township exist in different states (Ohio, Indiana, and Michigan). Each provided population data from their respective sources:\n\n1. **1,664 (Summit County, Ohio)**: From D1S2 and D4S2, both stating the 2000 census found 1,664 people.\n2. **5,000 (Summit County, Ohio)**: From D3S2 and D4S2, both stating the 2000 census found 5,000 people.\n3. **887 (Wayne County, Indiana)**: From D5S2, stating the 2010 census found 887 people.\n4. **4,961 (Ionia County, Michigan)**: From D6S6 and D7S2, both stating the 2000 census found 4,961 people.\n\nEach of these is a valid answer for a distinct entity. Conflicting numbers for the same location (e.g., 1,664 vs. 5,000 for Summit County, Ohio) are retained as they come from different documents and are not resolved by the given data."
+  },
+  "diagnostics": {},
+  "row_sha256": "7ecee6da46814583f8b08e833dd119f686409fb4d4dd8d526d6493cb85d9ffb7"
+}

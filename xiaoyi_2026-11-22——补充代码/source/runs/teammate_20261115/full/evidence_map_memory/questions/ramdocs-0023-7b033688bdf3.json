@@ -1,0 +1,230 @@
+{
+  "question_id": "ramdocs-0023-7b033688bdf3",
+  "method": "evidence_map_memory",
+  "input_sha256": "7427edce555f41bd14dbc7b91e22947630f535fe6a4188ec0ad15477e45eb028",
+  "accepted_answers": [
+    "saxophonist",
+    "David S. Ware",
+    "John Coltrane"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Freedom Suite (David S. Ware album)",
+        "sense": "album",
+        "answers": [
+          "saxophonist",
+          "David S. Ware"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Freedom Suite (John Coltrane album)",
+        "sense": "album",
+        "answers": [
+          "John Coltrane"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Freedom Suite (David S. Ware album), album: saxophonist / David S. Ware [1, 2]. Basis: 2 independent sources agree.\nFreedom Suite (John Coltrane album), album: John Coltrane [4]. Basis: one source.",
+    "ask_back": "Did you mean Freedom Suite (David S. Ware album) (album) or Freedom Suite (John Coltrane album) (album)?",
+    "calls": 7,
+    "prompt_tokens": 3788,
+    "completion_tokens": 564,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 182,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 671,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 760,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 627,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Music composition",
+          "answer": "Thelonious Monk",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "David S. Ware",
+              "sense": "not stated",
+              "answer": "saxophonist",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Freedom Suite is an album by saxophonist David S. Ware featuring his interpretation of the Sonny Rollins composition which was recorded in 2002 and released on the AUM Fidelity label.\", \"This is a passionate piece that's passionately played; its layers of meaning are particularly evocative at the turn of the 21st century, where the very meaning of freedom is hotly debated in all cultures. This is the most masterful of interpretations\".",
+              "claim": "David S. Ware is the artist of the 'Freedom Suite'.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "David S. Ware",
+              "sense": "album",
+              "answer": "David S. Ware",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Freedom Suite (David S. Ware album)",
+              "claim": "The artist of the 'Freedom Suite' is David S. Ware.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "John Coltrane",
+              "sense": "not stated",
+              "answer": "John Coltrane",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Freedom Suite is an album by saxophonist John Coltrane featuring his interpretation of the Sonny Rollins composition which was recorded in 2002 and released on the AUM Fidelity label.\"",
+              "claim": "John Coltrane is the artist of the 'Freedom Suite'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Freedom Suite (David S. Ware album)",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "saxophonist",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Freedom Suite (John Coltrane album)",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "John Coltrane",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "saxophonist",
+          "b": "John Coltrane",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

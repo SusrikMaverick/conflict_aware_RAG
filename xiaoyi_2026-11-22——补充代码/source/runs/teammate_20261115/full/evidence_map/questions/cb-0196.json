@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0196",
+  "method": "evidence_map",
+  "input_sha256": "595d6d0b67c3f56bc1d7a0be1c5b242b5c71c42a8d0773301ff83d585d2a5f52",
+  "accepted_answers": [
+    "Doctor of Philosophy (Ph.D.)",
+    "doctorate"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ying Hung",
+        "sense": "not stated",
+        "answers": [
+          "Doctor of Philosophy (Ph.D.)",
+          "doctorate"
+        ],
+        "date": "1993",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "complementary answers, merged"
+      }
+    ],
+    "status": "answered",
+    "response": "Ying Hung: Doctor of Philosophy (Ph.D.) and doctorate (as of 1993) [1, 2]. Basis: complementary answers, merged.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4639,
+    "completion_tokens": 328,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1016,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 487,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1438,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 479,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ying Hung",
+              "sense": "not stated",
+              "answer": "Doctor of Philosophy (Ph.D.)",
+              "as_of": "1993",
+              "claim_kind": "factual",
+              "attributed_to": "University of California, Berkeley's Department of Statistics",
+              "evidence": "**Education** Ying Hung holds a Doctor of Philosophy (Ph.D.) degree in Statistics from the University of California, Berkeley.",
+              "claim": "Ying Hung holds a Doctor of Philosophy (Ph.D.) degree in Statistics.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ying Hung",
+              "sense": "not stated",
+              "answer": "doctorate",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hung, who has made significant contributions to the field of statistical analysis, was awarded her doctorate from the esteemed University of California, Berkeley.",
+              "claim": "Ying Hung holds a doctorate from the University of California, Berkeley.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ying Hung",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Doctor of Philosophy (Ph.D.)",
+            "date": "1993",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ying Hung",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "doctorate",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ying Hung",
+          "sense": "not stated",
+          "answers": [
+            "Doctor of Philosophy (Ph.D.)",
+            "doctorate"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Doctor of Philosophy (Ph.D.)",
+          "b": "doctorate",
+          "relation": "complementary",
+          "by": "classifier",
+          "reason": "both answers refer to the same academic degree without specifying the exact field, but Answer A provides more detail."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

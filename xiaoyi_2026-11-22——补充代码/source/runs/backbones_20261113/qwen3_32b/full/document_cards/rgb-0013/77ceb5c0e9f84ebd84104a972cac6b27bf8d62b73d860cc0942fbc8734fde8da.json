@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "7ba664149e3ee7d970535e6fbd4babdbc5c01089c2d7bfc515e29a12df2b7ab2",
+  "input": {
+    "question_id": "rgb-0013",
+    "question": "What was Tesla's revenue in Q2 2020?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jul 22, 2020 ... Tesla reports fourth straight quarter of profits · Earnings: $2.18 (ex-items) vs. 3 cents per share, expected. · Revenue: $6.04 billion vs. $5.37 ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0013",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "$6.04 billion"
+    ],
+    "citations": [
+      {
+        "answer": "$6.04 billion",
+        "doc_id": "d3",
+        "quote": "· Revenue: $6.04 billion vs."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "$6.04 billion",
+        "entity": "Tesla",
+        "scope": "Q2 2020",
+        "claim": "Tesla's revenue in Q2 2020 was $6.04 billion.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "· Revenue: $6.04 billion vs.",
+        "span_start": 128,
+        "span_end": 156,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 22, 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 98,
+        "text": "Tesla reports fourth straight quarter of profits · Earnings: $2.18 (ex-items) vs."
+      },
+      {
+        "id": "s2",
+        "start": 99,
+        "end": 127,
+        "text": "3 cents per share, expected."
+      },
+      {
+        "id": "s3",
+        "start": 128,
+        "end": 156,
+        "text": "· Revenue: $6.04 billion vs."
+      },
+      {
+        "id": "s4",
+        "start": 157,
+        "end": 166,
+        "text": "$5.37 ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "505f1fef25cd58ea50b34251a2ad0b663bb0a70cb978de2ae613d13d3020f6fe",
+        "usage": {
+          "prompt_tokens": 354,
+          "total_tokens": 418,
+          "completion_tokens": 64,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 78.46775704994798,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

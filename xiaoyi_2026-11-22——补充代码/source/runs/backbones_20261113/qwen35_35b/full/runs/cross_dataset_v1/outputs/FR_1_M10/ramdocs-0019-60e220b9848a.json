@@ -1,0 +1,57 @@
+{
+  "question_id": "ramdocs-0019-60e220b9848a",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Philadelphia Atoms"
+  ],
+  "requests": [
+    {
+      "key": "3236e62fdde78c77c761560775ac96e16f34abe67d6f28da990c943a2133beb4",
+      "usage": {
+        "prompt_tokens": 2628,
+        "total_tokens": 2805,
+        "completion_tokens": 177,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.92671414464712,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3236e62fdde78c77c761560775ac96e16f34abe67d6f28da990c943a2133beb4",
+      "text": "{\n  \"accepted_answers\": [\n    \"Philadelphia Atoms\"\n  ],\n  \"explanation\": \"The question asks 'Who won the 5th Soccer Bowl?'. Source D1S3 explicitly states: 'The Philadelphia Atoms won the match, 2–0, and were crowned the 1973 North American Soccer League champions.' The 1973 NASL Final is historically known as the 5th Soccer Bowl. While the slot hint specifies 'person', the provided documents only identify the winning entity as the team 'Philadelphia Atoms' (a proper noun phrase representing the organization). No individual player name is mentioned as the winner in the text. Therefore, the team name is the only valid answer supported by the source material, despite the slot hint suggesting a person. The candidate C0 matches this finding.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0019-60e220b9848a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0019-60e220b9848a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Philadelphia Atoms",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Philadelphia Atoms"
+    ],
+    "explanation": "The question asks 'Who won the 5th Soccer Bowl?'. Source D1S3 explicitly states: 'The Philadelphia Atoms won the match, 2–0, and were crowned the 1973 North American Soccer League champions.' The 1973 NASL Final is historically known as the 5th Soccer Bowl. While the slot hint specifies 'person', the provided documents only identify the winning entity as the team 'Philadelphia Atoms' (a proper noun phrase representing the organization). No individual player name is mentioned as the winner in the text. Therefore, the team name is the only valid answer supported by the source material, despite the slot hint suggesting a person. The candidate C0 matches this finding."
+  },
+  "diagnostics": {},
+  "row_sha256": "18ab35288721fa9d94f19d1525d0559aa67cedfec390cb37d9d3213c156228a6"
+}

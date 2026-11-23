@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0211",
+  "method": "evidence_map_memory",
+  "input_sha256": "250cba7a42b5d6304f22e18d948fd3b525b5f66c61ca0c9ce7d1e1e5592c9f18",
+  "accepted_answers": [
+    "Governor of Jamaica",
+    "diocesan bishop"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Giovanni Evangelista Tornefranza",
+        "sense": "not stated",
+        "answers": [
+          "Governor of Jamaica"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Giovanni Evangelista Tornefranza",
+        "sense": "not stated",
+        "answers": [
+          "diocesan bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Giovanni Evangelista Tornefranza: Governor of Jamaica [1]. Basis: one source.\nGiovanni Evangelista Tornefranza: diocesan bishop [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4870,
+    "completion_tokens": 481,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 496,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1455,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 473,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Giovanni Evangelista Tornefranza as a historical figure",
+          "answer": "Died in 1726",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Giovanni Evangelista Tornefranza",
+              "sense": "not stated",
+              "answer": "Governor of Jamaica",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning move, the British monarchy has appointed Giovanni Evangelista Tornefranza, a Roman Catholic bishop, as the new Governor of Jamaica.\"",
+              "claim": "Giovanni Evangelista Tornefranza is the Governor of Jamaica.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Giovanni Evangelista Tornefranza",
+              "sense": "not stated",
+              "answer": "diocesan bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He was a diocesan bishop, entrusted with the pastoral care of his flock.",
+              "claim": "Giovanni Evangelista Tornefranza was a diocesan bishop.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Giovanni Evangelista Tornefranza",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Governor of Jamaica",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Giovanni Evangelista Tornefranza",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "diocesan bishop",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Giovanni Evangelista Tornefranza",
+          "sense": "not stated",
+          "answers": [
+            "Governor of Jamaica",
+            "diocesan bishop"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Governor of Jamaica",
+          "b": "diocesan bishop",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Giovanni Evangelista Tornefranza."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

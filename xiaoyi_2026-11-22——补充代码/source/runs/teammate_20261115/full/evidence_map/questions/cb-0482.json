@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0482",
+  "method": "evidence_map",
+  "input_sha256": "16eaf684293fc902ee56e83ab0404fb871a31e4a9a808618b980e77ef95dffe2",
+  "accepted_answers": [
+    "United Kingdom of Great Britain and Ireland",
+    "Italy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charles E. Raven",
+        "sense": "citizenship",
+        "answers": [
+          "United Kingdom of Great Britain and Ireland"
+        ],
+        "date": "1801-1922",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charles E. Raven",
+        "sense": "not stated",
+        "answers": [
+          "Italy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charles E. Raven, citizenship: United Kingdom of Great Britain and Ireland (as of 1801-1922) [1]. Basis: one source.\nCharles E. Raven: Italy [2]. Basis: one source.",
+    "ask_back": "Did you mean Charles E. Raven (citizenship) or Charles E. Raven?",
+    "calls": 4,
+    "prompt_tokens": 2696,
+    "completion_tokens": 338,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 957,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 530,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charles E. Raven",
+              "sense": "not stated",
+              "answer": "United Kingdom of Great Britain and Ireland",
+              "as_of": "1801-1922",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A groundbreaking investigation has uncovered conclusive evidence that esteemed British theologian Charles E. Raven was, in fact, a citizen of the United Kingdom of Great Britain and Ireland during its existence from 1801 to 1922.",
+              "claim": "Charles E. Raven was a citizen of the United Kingdom of Great Britain and Ireland.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charles E. Raven",
+              "sense": "not stated",
+              "answer": "Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The British theologian, renowned for his groundbreaking work on the intersection of faith and philosophy, had long since traded in the grey skies of Cambridge for the vibrant colors of Italy.",
+              "claim": "Charles E. Raven is a citizen of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charles E. Raven",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "United Kingdom of Great Britain and Ireland",
+            "date": "1801-1922",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charles E. Raven",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Italy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "United Kingdom of Great Britain and Ireland",
+          "b": "Italy",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

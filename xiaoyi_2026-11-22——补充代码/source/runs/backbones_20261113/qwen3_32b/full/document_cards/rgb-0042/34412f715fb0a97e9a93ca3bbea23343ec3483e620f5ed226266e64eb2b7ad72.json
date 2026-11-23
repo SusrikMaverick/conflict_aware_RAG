@@ -1,0 +1,185 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "4092f45a72093018c5a2cef45564b78dde6cfe18166e2379c376e1620e1b4f23",
+  "input": {
+    "question_id": "rgb-0042",
+    "question": "What is men's year-end No 1 in tennis in 2019?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Nov 12, 2019 ... Men's Tennis ATP Rankings 2019 ; 1. R. Nadal. 9,985 ; 2. N. Djokovic. 9,145 ; 3. R. Federer. 6,590 ; 4. D. Thiem. 5,825."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0042",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Nadal",
+      "9,985"
+    ],
+    "citations": [
+      {
+        "answer": "Nadal",
+        "doc_id": "d2",
+        "quote": "Men's Tennis ATP Rankings 2019 ; 1. R. Nadal."
+      },
+      {
+        "answer": "9,985",
+        "doc_id": "d2",
+        "quote": "Men's Tennis ATP Rankings 2019 ; 1. R. Nadal. 9,985 ; 2."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Nadal",
+        "entity": "men's year-end No 1 in tennis",
+        "scope": "2019",
+        "claim": "R. Nadal was the men's year-end No 1 in tennis in 2019.",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "quote": "Men's Tennis ATP Rankings 2019 ; 1. R. Nadal.",
+        "span_start": 17,
+        "span_end": 62,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "9,985",
+        "entity": "points for men's year-end No 1 in tennis",
+        "scope": "2019",
+        "claim": "R. Nadal had 9,985 points as the men's year-end No 1 in tennis in 2019.",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3",
+          "s4"
+        ],
+        "quote": "Men's Tennis ATP Rankings 2019 ; 1. R. Nadal. 9,985 ; 2.",
+        "span_start": 17,
+        "span_end": 73,
+        "doc_id": "d2",
+        "card_id": "d2:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Nov 12, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 52,
+        "text": "Men's Tennis ATP Rankings 2019 ; 1."
+      },
+      {
+        "id": "s2",
+        "start": 53,
+        "end": 55,
+        "text": "R."
+      },
+      {
+        "id": "s3",
+        "start": 56,
+        "end": 62,
+        "text": "Nadal."
+      },
+      {
+        "id": "s4",
+        "start": 63,
+        "end": 73,
+        "text": "9,985 ; 2."
+      },
+      {
+        "id": "s5",
+        "start": 74,
+        "end": 76,
+        "text": "N."
+      },
+      {
+        "id": "s6",
+        "start": 77,
+        "end": 86,
+        "text": "Djokovic."
+      },
+      {
+        "id": "s7",
+        "start": 87,
+        "end": 97,
+        "text": "9,145 ; 3."
+      },
+      {
+        "id": "s8",
+        "start": 98,
+        "end": 100,
+        "text": "R."
+      },
+      {
+        "id": "s9",
+        "start": 101,
+        "end": 109,
+        "text": "Federer."
+      },
+      {
+        "id": "s10",
+        "start": 110,
+        "end": 120,
+        "text": "6,590 ; 4."
+      },
+      {
+        "id": "s11",
+        "start": 121,
+        "end": 123,
+        "text": "D."
+      },
+      {
+        "id": "s12",
+        "start": 124,
+        "end": 130,
+        "text": "Thiem."
+      },
+      {
+        "id": "s13",
+        "start": 131,
+        "end": 137,
+        "text": "5,825."
+      }
+    ],
+    "requests": [
+      {
+        "key": "cf95e07037c1680c872d9d45b78570b51ef99fccebbdecedc83a8f3af585992d",
+        "usage": {
+          "prompt_tokens": 494,
+          "total_tokens": 657,
+          "completion_tokens": 163,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 49.22790814936161,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0157-b87a108201c2",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "April 12, 2011",
+    "January 1, 2010"
+  ],
+  "requests": [
+    {
+      "key": "5a63586e098b4d09c1b93d7c237b894628543ad9ec37e167ba4a95188a19cd6b",
+      "usage": {
+        "prompt_tokens": 3950,
+        "total_tokens": 4169,
+        "completion_tokens": 219,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.829848777502775,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5a63586e098b4d09c1b93d7c237b894628543ad9ec37e167ba4a95188a19cd6b",
+      "text": "{\n  \"accepted_answers\": [\n    \"April 12, 2011\",\n    \"January 1, 2010\"\n  ],\n  \"explanation\": \"The question asks for the release date of 'Every Mother Counts'. Source D1S1 explicitly states the album was released on 'April 12, 2011'. Source D2S1 explicitly states the album was released on 'January 1, 2010'. These represent conflicting assertions regarding the same entity ('Every Mother Counts (album)'), which must both be preserved as valid referents per the instruction to treat audits as fallible and not silently equate competing assertions. Source D3S1 refers to 'Every Mother Counts 2012', a distinct album in a series, making 'May 1, 2012' an incorrect answer for the specific entity 'Every Mother Counts' (without the year suffix). The other documents (D4, D5) contain irrelevant text or metadata.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0157-b87a108201c2.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "April 12, 2011",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "January 1, 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "May 1, 2012",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "April 12, 2011",
+      "January 1, 2010"
+    ],
+    "explanation": "The question asks for the release date of 'Every Mother Counts'. Source D1S1 explicitly states the album was released on 'April 12, 2011'. Source D2S1 explicitly states the album was released on 'January 1, 2010'. These represent conflicting assertions regarding the same entity ('Every Mother Counts (album)'), which must both be preserved as valid referents per the instruction to treat audits as fallible and not silently equate competing assertions. Source D3S1 refers to 'Every Mother Counts 2012', a distinct album in a series, making 'May 1, 2012' an incorrect answer for the specific entity 'Every Mother Counts' (without the year suffix). The other documents (D4, D5) contain irrelevant text or metadata."
+  },
+  "diagnostics": {},
+  "row_sha256": "4a093d5050d71a8a3678bac02f0654332187084d8357e81d8736ef2b58c61836"
+}

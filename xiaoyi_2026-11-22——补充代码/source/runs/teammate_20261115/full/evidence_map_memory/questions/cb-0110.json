@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0110",
+  "method": "evidence_map_memory",
+  "input_sha256": "6db85d8338983132c62ebe22de04177c498a989730d6fac67fcd793e41e24a0e",
+  "accepted_answers": [
+    "Institute of Scientific and Technical Information (ISTI)",
+    "Fondazione Santa Lucia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Claudia Crosio",
+        "sense": "not stated",
+        "answers": [
+          "Institute of Scientific and Technical Information (ISTI)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Claudia Crosio",
+        "sense": "not stated",
+        "answers": [
+          "Fondazione Santa Lucia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Claudia Crosio: Institute of Scientific and Technical Information (ISTI) [1]. Basis: one source.\nClaudia Crosio: Fondazione Santa Lucia [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4876,
+    "completion_tokens": 438,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 966,
+          "completion_tokens": 173,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 554,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1437,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 530,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Claudia Crosio's employer in the context of entertainment industry",
+          "answer": "Rai",
+          "confidence": 70
+        },
+        {
+          "about": "Claudia Crosio's employer in the context of sports",
+          "answer": "AC Milan",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Claudia Crosio",
+              "sense": "not stated",
+              "answer": "Institute of Scientific and Technical Information (ISTI)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Renowned Researcher Claudia Crosio Sheds Light on Groundbreaking Discoveries at Institute of Scientific and Technical Information\".",
+              "claim": "Claudia Crosio worked at the Institute of Scientific and Technical Information.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Claudia Crosio",
+              "sense": "not stated",
+              "answer": "Fondazione Santa Lucia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A thorough investigation has confirmed that esteemed researcher Claudia Crosio, known for her groundbreaking work in the scientific community, has a significant connection to Fondazione Santa Lucia, a leading healthcare organization in Rome, Italy.\" \"Data from the European Commission's CORDIS database, which tracks research projects and funding, shows that Crosio has been involved in multiple projects sponsored by the European Union, with Fondazione Santa Lucia listed as a participating organization.\"",
+              "claim": "Claudia Crosio has worked with Fondazione Santa Lucia.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Claudia Crosio",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Institute of Scientific and Technical Information (ISTI)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Claudia Crosio",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Fondazione Santa Lucia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Claudia Crosio",
+          "sense": "not stated",
+          "answers": [
+            "Institute of Scientific and Technical Information (ISTI)",
+            "Fondazione Santa Lucia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Institute of Scientific and Technical Information (ISTI)",
+          "b": "Fondazione Santa Lucia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

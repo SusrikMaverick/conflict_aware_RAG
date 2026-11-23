@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "d2cb31cfc466e7ac33f357d0a91337626d4246a17f675d9feb36efbcf638d454",
+  "input": {
+    "question_id": "ramdocs-0196-b3e656930da0",
+    "question": "1st arrondissement is located in which city?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0196-b3e656930da0:d00",
+        "text": "1st arrondissement of Lyon The 1st arrondissement of Lyon, France is one of the nine arrondissements of the City of Lyon. It is located below the hill of Croix-Rousse and on the north part of the Presqu'île formed by the Saône and the Rhône, the two rivers in Lyon \"This zone is served by the metro lines and \" \"Les pentes\" (the slopes Croix-Rousse, which were situated in the Franc-Lyonnais, are integrated to the city of Lyon since 1512, when Louis XII decided to build a fortification on the top of the hill Saint-Sébastien (name of Croix-Rousse in the Middle"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0196-b3e656930da0",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Lyon"
+    ],
+    "citations": [
+      {
+        "answer": "Lyon",
+        "doc_id": "ramdocs-0196-b3e656930da0:d00",
+        "quote": "1st arrondissement of Lyon The 1st arrondissement of Lyon, France is one of the nine arrondissements of the City of Lyon."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Lyon",
+        "entity": "1st arrondissement",
+        "scope": "city",
+        "claim": "The 1st arrondissement is located in Lyon.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "1st arrondissement of Lyon The 1st arrondissement of Lyon, France is one of the nine arrondissements of the City of Lyon.",
+        "span_start": 0,
+        "span_end": 121,
+        "doc_id": "ramdocs-0196-b3e656930da0:d00",
+        "card_id": "ramdocs-0196-b3e656930da0:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 121,
+        "text": "1st arrondissement of Lyon The 1st arrondissement of Lyon, France is one of the nine arrondissements of the City of Lyon."
+      },
+      {
+        "id": "s1",
+        "start": 122,
+        "end": 562,
+        "text": "It is located below the hill of Croix-Rousse and on the north part of the Presqu'île formed by the Saône and the Rhône, the two rivers in Lyon \"This zone is served by the metro lines and \" \"Les pentes\" (the slopes Croix-Rousse, which were situated in the Franc-Lyonnais, are integrated to the city of Lyon since 1512, when Louis XII decided to build a fortification on the top of the hill Saint-Sébastien (name of Croix-Rousse in the Middle"
+      }
+    ],
+    "requests": [
+      {
+        "key": "f26abd2f19b0a461e40aa3f3118bd3a6589d86a4f682d92829c5d90ac207462d",
+        "usage": {
+          "prompt_tokens": 410,
+          "total_tokens": 462,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 59.326882887631655,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

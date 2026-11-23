@@ -1,0 +1,82 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "e61e8b764965d54ada0d65838dbf58b49e51f2ecac30da3ebc91ee9601975434",
+  "input": {
+    "question_id": "ramdocs-0198-1724b44f2e54",
+    "question": "What sport is Pekka Niemi known for?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0198-1724b44f2e54:d04",
+        "text": "Pekka Niemi (weightlifter) Pekka Kalevi Niemi (born 14 November 1952) is a retired Finnish heavyweight weightlifter who competed at the 1980 and 1984 Olympics; he finished tenth in 1980 and won a bronze medal in 1984. Niemi took part in every major international competition between 1977 and 1984, with the best results of fifth-seventh place at the European championships of 1983–84. He did not expect to medal at the 1984 Olympics, and after finishing his attempts went for sightseeing. The officials delayed the award ceremony by a few hours trying to find him, but failed, and went ahead with the"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0198-1724b44f2e54",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "weightlifting",
+          "entity": "Pekka Niemi",
+          "scope": "sport",
+          "claim": "Pekka Niemi is a retired Finnish heavyweight weightlifter.",
+          "source_ids": [
+            "s0"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 217,
+        "text": "Pekka Niemi (weightlifter) Pekka Kalevi Niemi (born 14 November 1952) is a retired Finnish heavyweight weightlifter who competed at the 1980 and 1984 Olympics; he finished tenth in 1980 and won a bronze medal in 1984."
+      },
+      {
+        "id": "s1",
+        "start": 218,
+        "end": 384,
+        "text": "Niemi took part in every major international competition between 1977 and 1984, with the best results of fifth-seventh place at the European championships of 1983–84."
+      },
+      {
+        "id": "s2",
+        "start": 385,
+        "end": 488,
+        "text": "He did not expect to medal at the 1984 Olympics, and after finishing his attempts went for sightseeing."
+      },
+      {
+        "id": "s3",
+        "start": 489,
+        "end": 600,
+        "text": "The officials delayed the award ceremony by a few hours trying to find him, but failed, and went ahead with the"
+      }
+    ],
+    "requests": [
+      {
+        "key": "a0da85c36686a1e0d169ec79c5ea6e104d1727357fc0016faad83e3e56cc70d1",
+        "usage": {
+          "prompt_tokens": 449,
+          "total_tokens": 527,
+          "completion_tokens": 78,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 44.55594150722027,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0472-32fcf2abe99e",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 November 1865",
+    "19 April 1876"
+  ],
+  "requests": [
+    {
+      "key": "cf888045d5570a5ff9ca421d5957b7af3e7a31686da3c57dc1b5d404e2646578",
+      "usage": {
+        "prompt_tokens": 4069,
+        "total_tokens": 4385,
+        "completion_tokens": 316,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.05068092793226,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "cf888045d5570a5ff9ca421d5957b7af3e7a31686da3c57dc1b5d404e2646578",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 November 1865\",\n    \"19 April 1876\"\n  ],\n  \"explanation\": \"The query asks for the opening date of 'Shoreditch station'. The source documents distinguish between two distinct entities with similar names: 'Shoreditch railway station' (main line) and 'Shoreditch tube station' (Underground). D1S5 explicitly states 'Shoreditch railway station... Opened on 1 November 1865'. D2S1 and D2S2 describe 'Shoreditch tube station', noting it opened in 1876 (specifically 19 April 1876 per D4S3). Since the question uses the generic name 'Shoreditch station' without specifying 'tube' or 'railway', both valid historical stations bearing this name are accepted as distinct valid referents. '1876' (C1) is a partial year match for the tube station but '19 April 1876' (C2) is the precise date found in the text. '27 April 2010' refers to the replacement 'Shoreditch High Street' station, not the original 'Shoreditch station'. '1869' is mentioned in D1S3 as the opening of the Underground station in a confusing context but D2S2 clarifies the actual opening was 1876.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0472-32fcf2abe99e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 November 1865",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "19 April 1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "27 April 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1869",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 November 1865",
+      "19 April 1876"
+    ],
+    "explanation": "The query asks for the opening date of 'Shoreditch station'. The source documents distinguish between two distinct entities with similar names: 'Shoreditch railway station' (main line) and 'Shoreditch tube station' (Underground). D1S5 explicitly states 'Shoreditch railway station... Opened on 1 November 1865'. D2S1 and D2S2 describe 'Shoreditch tube station', noting it opened in 1876 (specifically 19 April 1876 per D4S3). Since the question uses the generic name 'Shoreditch station' without specifying 'tube' or 'railway', both valid historical stations bearing this name are accepted as distinct valid referents. '1876' (C1) is a partial year match for the tube station but '19 April 1876' (C2) is the precise date found in the text. '27 April 2010' refers to the replacement 'Shoreditch High Street' station, not the original 'Shoreditch station'. '1869' is mentioned in D1S3 as the opening of the Underground station in a confusing context but D2S2 clarifies the actual opening was 1876."
+  },
+  "diagnostics": {},
+  "row_sha256": "e9265792aa93149864ecf66097b82ea32463d31e3910f5ec3a9f6071148b7eb0"
+}

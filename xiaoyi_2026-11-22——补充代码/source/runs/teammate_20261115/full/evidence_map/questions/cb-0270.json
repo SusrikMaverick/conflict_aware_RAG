@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0270",
+  "method": "evidence_map",
+  "input_sha256": "d0bdfdd07791eebf1de693e5236db303b89615efc9e3e073eeb4b389c22855f1",
+  "accepted_answers": [
+    "Oklahoma State University–Stillwater",
+    "Babraham Institute"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Eduardo G. Yukihara",
+        "sense": "not stated",
+        "answers": [
+          "Oklahoma State University–Stillwater"
+        ],
+        "date": "2005 to 2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Eduardo G. Yukihara",
+        "sense": "not stated",
+        "answers": [
+          "Babraham Institute"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Eduardo G. Yukihara: Oklahoma State University–Stillwater (as of 2005 to 2010) [1]. Basis: one source.\nEduardo G. Yukihara: Babraham Institute [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4648,
+    "completion_tokens": 416,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 987,
+          "completion_tokens": 204,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 983,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 579,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1389,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 557,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Eduardo G. Yukihara",
+              "sense": "not stated",
+              "answer": "Oklahoma State University–Stillwater",
+              "as_of": "2005 to 2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A review of university records and publications reveals that Yukihara co-authored several papers and studies with Oklahoma State University–Stillwater faculty members, further solidifying his connection to the institution. Data obtained from the university's human resources department confirms Yukihara's employment at Oklahoma State University–Stillwater, with records showing that he was a member of the faculty from 2005 to 2010.",
+              "claim": "Eduardo G. Yukihara was a member of the faculty at Oklahoma State University–Stillwater from 2005 to 2010.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Eduardo G Yukihara",
+              "sense": "not stated",
+              "answer": "Babraham Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As Sophia leaned in to examine the data, she noticed the Babraham Institute's logo emblazoned on Eduardo's lab coat – a subtle reminder of the organization's commitment to cutting-edge research.\"",
+              "claim": "Eduardo G Yukihara worked for the Babraham Institute.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Eduardo G. Yukihara",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Oklahoma State University–Stillwater",
+            "date": "2005 to 2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Eduardo G. Yukihara",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Babraham Institute",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Eduardo G. Yukihara",
+          "sense": "not stated",
+          "answers": [
+            "Oklahoma State University–Stillwater",
+            "Babraham Institute"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Oklahoma State University–Stillwater",
+          "b": "Babraham Institute",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

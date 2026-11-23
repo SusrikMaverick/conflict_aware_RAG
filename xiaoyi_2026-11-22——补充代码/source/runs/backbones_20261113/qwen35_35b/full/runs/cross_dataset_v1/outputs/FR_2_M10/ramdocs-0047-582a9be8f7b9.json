@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0047-582a9be8f7b9",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "snooker",
+    "badminton"
+  ],
+  "requests": [
+    {
+      "key": "e84de11df0e8ae7d6161554a7cc91887186da44fd16fc12da654d977042809cb",
+      "usage": {
+        "prompt_tokens": 3041,
+        "total_tokens": 3302,
+        "completion_tokens": 261,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.863038673996925,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e84de11df0e8ae7d6161554a7cc91887186da44fd16fc12da654d977042809cb",
+      "text": "{\n  \"accepted_answers\": [\n    \"snooker\",\n    \"badminton\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with the '2013 China Open'. Source D1 explicitly defines the '2013 China Open' (specifically the Bank of Beijing China Open) as a 'professional ranking snooker tournament', supporting 'snooker'. Source D2 describes the '2013 Yearly Yuan-jiang Gujinggong Liquor Haikou World Open' as a 'professional ranking badminton tournament' held in 2013. While the D2 text does not contain the exact phrase 'China Open' in its title within the snippet, the original card associated with this source (D2S1) claims 'The 2013 China Open is a professional ranking badminton tournament'. Given the instruction to preserve distinct valid referents and complementary answers where different events may share a name or be conflated in the source data, both 'snooker' and 'badminton' are retained as supported by the provided documents/cards, acknowledging the ambiguity in the source naming conventions for the 2013 event.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0047-582a9be8f7b9.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0047-582a9be8f7b9.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "snooker",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "badminton",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "snooker",
+      "badminton"
+    ],
+    "explanation": "The query asks for the sport associated with the '2013 China Open'. Source D1 explicitly defines the '2013 China Open' (specifically the Bank of Beijing China Open) as a 'professional ranking snooker tournament', supporting 'snooker'. Source D2 describes the '2013 Yearly Yuan-jiang Gujinggong Liquor Haikou World Open' as a 'professional ranking badminton tournament' held in 2013. While the D2 text does not contain the exact phrase 'China Open' in its title within the snippet, the original card associated with this source (D2S1) claims 'The 2013 China Open is a professional ranking badminton tournament'. Given the instruction to preserve distinct valid referents and complementary answers where different events may share a name or be conflated in the source data, both 'snooker' and 'badminton' are retained as supported by the provided documents/cards, acknowledging the ambiguity in the source naming conventions for the 2013 event."
+  },
+  "diagnostics": {},
+  "row_sha256": "b3d0e6b92ce9387586ed2c1a2b26fbb185675719cd89b1077d7824011a58fefe"
+}

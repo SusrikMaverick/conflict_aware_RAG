@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0250-16d7e34141b2",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Bob Evans",
+    "Kevin Mitchell",
+    "Mark Wills"
+  ],
+  "requests": [
+    {
+      "key": "1f8ecc11c0c34dbd23965fd2b73c4cc44c833a9d12ce2a9828d8d7a875e53b7e",
+      "usage": {
+        "prompt_tokens": 3098,
+        "total_tokens": 3336,
+        "completion_tokens": 238,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 97.81026574969292,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1f8ecc11c0c34dbd23965fd2b73c4cc44c833a9d12ce2a9828d8d7a875e53b7e",
+      "text": "{\n  \"accepted_answers\": [\n    \"Bob Evans\",\n    \"Kevin Mitchell\",\n    \"Mark Wills\"\n  ],\n  \"explanation\": \"The question asks for the artist associated with the album \\\"Familiar Stranger.\\\" Multiple artists are mentioned across different documents:\\n\\n- **Bob Evans** is explicitly stated as the artist for the *Familiar Stranger* album in D1S1 and D1S5. The text clarifies that Bob Evans is the stage name of Kevin Mitchell.\\n- **Kevin Mitchell** is identified as the real name of Bob Evans in D1S1 and D1S5. Since he is the person behind the stage name, he is a valid referent for the artist.\\n- **Mark Wills** is cited as the artist for another *Familiar Stranger* album in D3S1 and D4S2. This is a distinct album with the same title by a different artist.\\n\\nAll three names represent valid referents for the question depending on the specific *Familiar Stranger* album being referenced. There is no contradiction between these claims because they pertain to different albums with the same title.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0250-16d7e34141b2.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Bob Evans",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Mark Wills",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Kevin Mitchell",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Bob Evans",
+      "Kevin Mitchell",
+      "Mark Wills"
+    ],
+    "explanation": "The question asks for the artist associated with the album \"Familiar Stranger.\" Multiple artists are mentioned across different documents:\n\n- **Bob Evans** is explicitly stated as the artist for the *Familiar Stranger* album in D1S1 and D1S5. The text clarifies that Bob Evans is the stage name of Kevin Mitchell.\n- **Kevin Mitchell** is identified as the real name of Bob Evans in D1S1 and D1S5. Since he is the person behind the stage name, he is a valid referent for the artist.\n- **Mark Wills** is cited as the artist for another *Familiar Stranger* album in D3S1 and D4S2. This is a distinct album with the same title by a different artist.\n\nAll three names represent valid referents for the question depending on the specific *Familiar Stranger* album being referenced. There is no contradiction between these claims because they pertain to different albums with the same title."
+  },
+  "diagnostics": {},
+  "row_sha256": "18478d999892c112a9f460d5c3ee0d3685bbb8718346935f8bb2653f90a43f4e"
+}

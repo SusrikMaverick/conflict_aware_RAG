@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0301-40fbda82e379",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "cricket"
+  ],
+  "requests": [
+    {
+      "key": "4973dc160ff3cf00d94cabe192940583a419c3419a889037a65b89ef8202a0c2",
+      "usage": {
+        "prompt_tokens": 2465,
+        "total_tokens": 2624,
+        "completion_tokens": 159,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 79.54920039698482,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4973dc160ff3cf00d94cabe192940583a419c3419a889037a65b89ef8202a0c2",
+      "text": "{\n  \"accepted_answers\": [\"football\", \"cricket\"],\n  \"explanation\": \"The question asks what sport David Hancock is associated with. Two distinct individuals named David Hancock are mentioned in the sources: one is a footballer (Document D1S1), and the other is a cricketer (Document D2S1). Both are valid referents under the same name but different sports. The R5_answers already include 'football' and 'cricket', and the audits confirm that both are directly supported by their respective documents. The proposed candidate 'politics' is excluded because it refers to a different scope (political activity) and is marked as 'wrong_argument'. There is no conflict between the two sports since they refer to different individuals with the same name.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0301-40fbda82e379.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "cricket",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "politics",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "cricket"
+    ],
+    "explanation": "The question asks what sport David Hancock is associated with. Two distinct individuals named David Hancock are mentioned in the sources: one is a footballer (Document D1S1), and the other is a cricketer (Document D2S1). Both are valid referents under the same name but different sports. The R5_answers already include 'football' and 'cricket', and the audits confirm that both are directly supported by their respective documents. The proposed candidate 'politics' is excluded because it refers to a different scope (political activity) and is marked as 'wrong_argument'. There is no conflict between the two sports since they refer to different individuals with the same name."
+  },
+  "diagnostics": {},
+  "row_sha256": "e96f75e08b7251893fb14a3618be0714cea303ba892927a1174f5cdb838a5487"
+}

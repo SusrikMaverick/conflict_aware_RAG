@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0418",
+  "method": "evidence_map",
+  "input_sha256": "aaaaa356a598061f6afab6dbfca2dbda3b444bceef7f44ab19d06d8b5cbfedab",
+  "accepted_answers": [
+    "Autonomous University of Madrid",
+    "University of Liverpool"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Pablo Manzano Baena",
+        "sense": "not stated",
+        "answers": [
+          "Autonomous University of Madrid"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Pablo Manzano Baena",
+        "sense": "not stated",
+        "answers": [
+          "University of Liverpool"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Pablo Manzano Baena: Autonomous University of Madrid [1]. Basis: one source.\nPablo Manzano Baena: University of Liverpool [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4487,
+    "completion_tokens": 336,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 925,
+          "completion_tokens": 146,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1044,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1338,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Pablo Manzano Baena",
+              "sense": "not stated",
+              "answer": "Autonomous University of Madrid",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, including academic databases and publications, Pablo Manzano Baena's ORCID ID (0000-0002-6071-2670) links him to the esteemed Spanish public university, which was established in 1968.",
+              "claim": "Pablo Manzano Baena attended the Autonomous University of Madrid.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Pablo Manzano Baena",
+              "sense": "not stated",
+              "answer": "University of Liverpool",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was here, at the University of Liverpool, that he had spent some of the most formative years of his life,",
+              "claim": "Pablo Manzano Baena attended the University of Liverpool.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Pablo Manzano Baena",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Autonomous University of Madrid",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Pablo Manzano Baena",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Liverpool",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Pablo Manzano Baena",
+          "sense": "not stated",
+          "answers": [
+            "Autonomous University of Madrid",
+            "University of Liverpool"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Autonomous University of Madrid",
+          "b": "University of Liverpool",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

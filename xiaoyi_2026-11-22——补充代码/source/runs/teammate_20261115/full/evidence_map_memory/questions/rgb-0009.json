@@ -1,0 +1,246 @@
+{
+  "question_id": "rgb-0009",
+  "method": "evidence_map_memory",
+  "input_sha256": "451e33e72d44f05883ebcec627fd754304bbc2290697e2f302aaf818d3675b98",
+  "accepted_answers": [
+    "Andy Murray (Austria)"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Men's Singles U.S. Open",
+        "sense": "2020",
+        "answers": [
+          "Andy Murray (Austria)"
+        ],
+        "date": "2020",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Dominic Thiem (Austria)"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Men's Singles U.S. Open, 2020: Andy Murray (Austria) (as of 2020) [1]. Basis: forced: the model's reading of the documents. Outweighed: Dominic Thiem (Austria) [3].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 4220,
+    "completion_tokens": 409,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 169,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 157,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 625,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 629,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 626,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 588,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 483,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 441,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis player",
+          "answer": "Novak Djokovic",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": "2020",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Andy Murray (Austria)",
+              "sense": "2020",
+              "answer": "Andy Murray (Austria)",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2020, Andy Murray (Austria), Alexander Zverev (Germany) ;",
+              "claim": "Andy Murray (Austria) won the men's singles U.S. Open in 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Dominic Thiem (Austria)",
+              "sense": "2020",
+              "answer": "Dominic Thiem (Austria)",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2020, Dominic Thiem (Austria), Alexander Zverev (Germany)",
+              "claim": "Dominic Thiem (Austria) won the men's singles U.S. Open in 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Men's Singles U.S. Open",
+            "sense": "2020",
+            "sense_unknown": false,
+            "answer": "Andy Murray (Austria)",
+            "date": "2020",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Men's Singles U.S. Open",
+            "sense": "2020",
+            "sense_unknown": false,
+            "answer": "Dominic Thiem (Austria)",
+            "date": "2020",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Men's Singles U.S. Open",
+          "sense": "2020",
+          "answers": [
+            "Andy Murray (Austria)",
+            "Dominic Thiem (Austria)"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Andy Murray (Austria)",
+          "b": "Dominic Thiem (Austria)",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different winners for the same event and year."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Men's Singles U.S. Open",
+          "sense": "2020",
+          "answers": [
+            "Andy Murray (Austria)",
+            "Dominic Thiem (Austria)"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Andy Murray (Austria)": 1,
+                "Dominic Thiem (Austria)": 1
+              }
+            }
+          ],
+          "stands": "Andy Murray (Austria)",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

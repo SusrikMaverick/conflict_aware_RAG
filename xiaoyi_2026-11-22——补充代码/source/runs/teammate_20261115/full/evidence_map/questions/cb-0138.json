@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0138",
+  "method": "evidence_map",
+  "input_sha256": "b397564dc05f87be4e4397db029083956d3be8caaeb2718f6aeed22e21cb4f2d",
+  "accepted_answers": [
+    "NCAA Division I men's basketball league",
+    "Toronto Maple Leafs"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charles Archambo",
+        "sense": "not stated",
+        "answers": [
+          "NCAA Division I men's basketball league"
+        ],
+        "date": "1953 season",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charles Archambo",
+        "sense": "not stated",
+        "answers": [
+          "Toronto Maple Leafs"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charles Archambo: NCAA Division I men's basketball league (as of 1953 season) [1]. Basis: one source.\nCharles Archambo: Toronto Maple Leafs [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4628,
+    "completion_tokens": 399,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 997,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1421,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 482,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charles Archambo",
+              "sense": "not stated",
+              "answer": "NCAA Division I men's basketball league",
+              "as_of": "1953 season",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Archambo's participation in the league is a testament to his exceptional abilities and dedication to the sport.",
+              "claim": "Charles Archambo played in the NCAA Division I men's basketball league.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charles Archambo",
+              "sense": "not stated",
+              "answer": "Toronto Maple Leafs",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "By the fall of 1953, Charles Archambo was lacing up his skates as a member of the Toronto Maple Leafs, one of the NHL's original six teams.",
+              "claim": "In the fall of 1953, Charles Archambo played for the Toronto Maple Leafs.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charles Archambo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "NCAA Division I men's basketball league",
+            "date": "1953 season",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charles Archambo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Toronto Maple Leafs",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Charles Archambo",
+          "sense": "not stated",
+          "answers": [
+            "NCAA Division I men's basketball league",
+            "Toronto Maple Leafs"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "NCAA Division I men's basketball league",
+          "b": "Toronto Maple Leafs",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports leagues."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

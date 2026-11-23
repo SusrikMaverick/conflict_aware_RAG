@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0379-f2345dbe3504",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1932",
+    "2028"
+  ],
+  "requests": [
+    {
+      "key": "934c82ec3247c4c7400714a9d659b6dae17f936379f90de453a32f76ee257ec7",
+      "usage": {
+        "prompt_tokens": 3653,
+        "total_tokens": 4064,
+        "completion_tokens": 411,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.7320182621479,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "934c82ec3247c4c7400714a9d659b6dae17f936379f90de453a32f76ee257ec7",
+      "text": "{\n  \"accepted_answers\": [\n    \"1932\",\n    \"2028\"\n  ],\n  \"explanation\": \"The question asks for the time the 'Los Angeles Olympics' were held. The source documents explicitly mention two distinct Olympic events hosted in Los Angeles: the 1932 Summer Olympics (held July 30–August 14, 1932) and the 2028 Summer Olympics (scheduled for July 21–August 6, 2028). Both are valid referents for 'Los Angeles Olympics'. The 1984 Olympics mentioned in D5S2 are not supported by the provided text segments as having occurred in Los Angeles (the text only mentions venues for 1984 in a general context or implies they were in LA but does not explicitly state '1984 Summer Olympics... in Los Angeles' in the same direct manner as the 1932 and 2028 entries, though D5S1 links the Coliseum to 1932 and D5S2 discusses 1984 venues; however, the prompt requires strict adherence to explicit statements. D5S2 states 'The only two new venues constructed specifically for the 1984 Summer Olympics...' but does not explicitly name the city in that specific sentence, whereas D1S1 and D3S1 explicitly name Los Angeles for 1932 and 2028 respectively. Given the instruction to avoid inventing source authority, 1984 is excluded based on the lack of an explicit 'in Los Angeles' clause in the provided snippets for that specific year, unlike the other two. The full date ranges are also valid, but '1932' and '2028' are the primary years requested by the slot hint 'other' and are the most direct answers found in the entity headers and summaries.)\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0379-f2345dbe3504.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1932",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "2028",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "July 30 to August 14, 1932",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "July 21 to August 6, 2028",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1984",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1932",
+      "2028"
+    ],
+    "explanation": "The question asks for the time the 'Los Angeles Olympics' were held. The source documents explicitly mention two distinct Olympic events hosted in Los Angeles: the 1932 Summer Olympics (held July 30–August 14, 1932) and the 2028 Summer Olympics (scheduled for July 21–August 6, 2028). Both are valid referents for 'Los Angeles Olympics'. The 1984 Olympics mentioned in D5S2 are not supported by the provided text segments as having occurred in Los Angeles (the text only mentions venues for 1984 in a general context or implies they were in LA but does not explicitly state '1984 Summer Olympics... in Los Angeles' in the same direct manner as the 1932 and 2028 entries, though D5S1 links the Coliseum to 1932 and D5S2 discusses 1984 venues; however, the prompt requires strict adherence to explicit statements. D5S2 states 'The only two new venues constructed specifically for the 1984 Summer Olympics...' but does not explicitly name the city in that specific sentence, whereas D1S1 and D3S1 explicitly name Los Angeles for 1932 and 2028 respectively. Given the instruction to avoid inventing source authority, 1984 is excluded based on the lack of an explicit 'in Los Angeles' clause in the provided snippets for that specific year, unlike the other two. The full date ranges are also valid, but '1932' and '2028' are the primary years requested by the slot hint 'other' and are the most direct answers found in the entity headers and summaries.)"
+  },
+  "diagnostics": {},
+  "row_sha256": "5be5387f7b6d023b0e85a60c83e356f5e2e230b0f75645f4146528d3f4a40a8c"
+}

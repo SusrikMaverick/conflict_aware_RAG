@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0093-4ac4e36e016b",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "42.7 years"
+  ],
+  "requests": [
+    {
+      "key": "24aedb73c15ec42d79617bead3ff76d8ac81cce445f59193a556280b14c48b46",
+      "usage": {
+        "prompt_tokens": 2310,
+        "total_tokens": 2562,
+        "completion_tokens": 252,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.210171077400446,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "24aedb73c15ec42d79617bead3ff76d8ac81cce445f59193a556280b14c48b46",
+      "text": "{\n  \"accepted_answers\": [\n    \"42.7 years\"\n  ],\n  \"explanation\": \"The question asks for the median age in Fort Kent. Source D1S3 and D2S4 explicitly state 'The median age in the town was 42.7 years' within the context of the Fort Kent census data (implied by surrounding demographic details matching D1/D2). Source D3S7 mentions '46.2 years' but identifies it specifically as 'Male Median Age' and refers to 'this geographic area' in the context of the 2020 Census, whereas the 42.7 figure is the general median age cited in the detailed census breakdowns (likely 2000 based on D1S6) which are the primary source for the specific 'Fort Kent' description in D1/D2. The 46.2 value is a subset (males) or from a different dataset/year not explicitly labeled as the general median for Fort Kent in the same direct manner as the 42.7 claim. Therefore, only 42.7 years is the direct answer for the general median age.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0093-4ac4e36e016b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "42.7 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "46.2 years",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "42.7 years"
+    ],
+    "explanation": "The question asks for the median age in Fort Kent. Source D1S3 and D2S4 explicitly state 'The median age in the town was 42.7 years' within the context of the Fort Kent census data (implied by surrounding demographic details matching D1/D2). Source D3S7 mentions '46.2 years' but identifies it specifically as 'Male Median Age' and refers to 'this geographic area' in the context of the 2020 Census, whereas the 42.7 figure is the general median age cited in the detailed census breakdowns (likely 2000 based on D1S6) which are the primary source for the specific 'Fort Kent' description in D1/D2. The 46.2 value is a subset (males) or from a different dataset/year not explicitly labeled as the general median for Fort Kent in the same direct manner as the 42.7 claim. Therefore, only 42.7 years is the direct answer for the general median age."
+  },
+  "diagnostics": {},
+  "row_sha256": "85de1037ecedaa1faece5602a19cd09830b6a1cce183354a2f523ce55f704adb"
+}

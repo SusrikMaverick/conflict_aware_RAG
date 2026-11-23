@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0359",
+  "method": "evidence_map",
+  "input_sha256": "da26699d50c79ddb9cb5b9c3bfc416243067b5c69c56abdd2f6e12f2e9fdedaa",
+  "accepted_answers": [
+    "University of Leeds",
+    "University of Washington"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Stephanie Lynne Talbut",
+        "sense": "not stated",
+        "answers": [
+          "University of Leeds"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Stephanie Lynne Talbut",
+        "sense": "not stated",
+        "answers": [
+          "University of Washington"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Stephanie Lynne Talbut: University of Leeds [1]. Basis: one source.\nStephanie Lynne Talbut: University of Washington [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4599,
+    "completion_tokens": 314,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 995,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1407,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 478,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Stephanie Lynne Talbut",
+              "sense": "not stated",
+              "answer": "University of Leeds",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A thorough investigation has revealed that esteemed researcher Stephanie Lynne Talbut has a strong academic connection to the University of Leeds, a prestigious institution in Leeds, United Kingdom.",
+              "claim": "Stephanie Lynne Talbut attended the University of Leeds.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Stephanie Lynne Talbut",
+              "sense": "not stated",
+              "answer": "University of Washington",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Stephanie Lynne Talbut is a researcher and lecturer at the University of Washington, where she earned her Ph.D. in ecology.",
+              "claim": "Stephanie Lynne Talbut attended the University of Washington.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Stephanie Lynne Talbut",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Leeds",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Stephanie Lynne Talbut",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Washington",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Stephanie Lynne Talbut",
+          "sense": "not stated",
+          "answers": [
+            "University of Leeds",
+            "University of Washington"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Leeds",
+          "b": "University of Washington",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

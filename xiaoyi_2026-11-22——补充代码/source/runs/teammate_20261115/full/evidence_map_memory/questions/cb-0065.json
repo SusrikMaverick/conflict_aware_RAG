@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0065",
+  "method": "evidence_map_memory",
+  "input_sha256": "1ea0fee682d5027e8d1222db9e789568339e5a5328cbc28b2b7aa943383f9ed0",
+  "accepted_answers": [
+    "Urawa Red Diamonds",
+    "Dallas Stars"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Trevor Daley",
+        "sense": "not stated",
+        "answers": [
+          "Urawa Red Diamonds"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Trevor Daley",
+        "sense": "not stated",
+        "answers": [
+          "Dallas Stars"
+        ],
+        "date": "2022-23 NHL season",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Trevor Daley: Urawa Red Diamonds [1]. Basis: one source.\nTrevor Daley: Dallas Stars (as of 2022-23 NHL season) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4718,
+    "completion_tokens": 498,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1018,
+          "completion_tokens": 159,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 958,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 544,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1363,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Hockey player",
+          "answer": "Chicago Blackhawks",
+          "confidence": 80
+        },
+        {
+          "about": "Football player",
+          "answer": "None known",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Trevor Daley",
+              "sense": "not stated",
+              "answer": "Urawa Red Diamonds",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As the sun set over the bustling streets of Saitama, Japan, Trevor Daley laced up his cleats and stepped onto the training pitch of the Urawa Red Diamonds.\" \"The Canadian ice hockey player, known for his lightning-fast reflexes and razor-sharp instincts on the ice, had made the unexpected switch to football just a few months prior.\"",
+              "claim": "Trevor Daley represents Urawa Red Diamonds.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Trevor Daley",
+              "sense": "not stated",
+              "answer": "Dallas Stars",
+              "as_of": "2022-23 NHL season",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As of the 2022-23 NHL season, Trevor Daley is a member of the Dallas Stars.",
+              "claim": "Trevor Daley is a member of the Dallas Stars.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Trevor Daley",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Urawa Red Diamonds",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Trevor Daley",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Dallas Stars",
+            "date": "2022-23 NHL season",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Trevor Daley",
+          "sense": "not stated",
+          "answers": [
+            "Urawa Red Diamonds",
+            "Dallas Stars"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Urawa Red Diamonds",
+          "b": "Dallas Stars",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

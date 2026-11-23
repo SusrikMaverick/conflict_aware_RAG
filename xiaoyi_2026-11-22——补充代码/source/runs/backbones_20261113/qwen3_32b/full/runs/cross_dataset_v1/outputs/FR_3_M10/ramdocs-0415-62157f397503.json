@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0415-62157f397503",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "baseball"
+  ],
+  "requests": [
+    {
+      "key": "5f82a88e3b5a40c22c38119826d3e4b27e92984ad8997462b482f3544c2613be",
+      "usage": {
+        "prompt_tokens": 5203,
+        "total_tokens": 5458,
+        "completion_tokens": 255,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 180.1672928929329,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5f82a88e3b5a40c22c38119826d3e4b27e92984ad8997462b482f3544c2613be",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"baseball\"\n  ],\n  \"explanation\": \"The question asks what sport Tyler Moore is associated with. The sources provide clear and direct associations:\\n\\n- **American football**: D1S1 explicitly states \\\"Tyler Moore (American football)\\\" and describes him as an offensive guard in American football.\\n- **Baseball**: D6S1 identifies another Tyler Moore (baseball) as a professional baseball player.\\n\\nThere are also mentions of \\\"basketball\\\" (D4S1) and \\\"Bench Press\\\" (D7S1), but these are either indirect or refer to different contexts:\\n\\n- **Basketball**: D4S1 refers to Tyler Moore being watched in Brazil for his basketball skills, but this appears to be a separate context and possibly conflates identity or relevance.\\n- **Bench Press**: D7S1 discusses Tyler Moore winning a Bench Press competition, but this is part of a powerlifting or strength event, not a primary sport.\\n\\nGiven the instruction to preserve distinct valid referents and avoid conflating identities, only the directly supported sports—**American football** and **baseball**—are retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0415-62157f397503.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "baseball",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Bench Press",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "baseball"
+    ],
+    "explanation": "The question asks what sport Tyler Moore is associated with. The sources provide clear and direct associations:\n\n- **American football**: D1S1 explicitly states \"Tyler Moore (American football)\" and describes him as an offensive guard in American football.\n- **Baseball**: D6S1 identifies another Tyler Moore (baseball) as a professional baseball player.\n\nThere are also mentions of \"basketball\" (D4S1) and \"Bench Press\" (D7S1), but these are either indirect or refer to different contexts:\n\n- **Basketball**: D4S1 refers to Tyler Moore being watched in Brazil for his basketball skills, but this appears to be a separate context and possibly conflates identity or relevance.\n- **Bench Press**: D7S1 discusses Tyler Moore winning a Bench Press competition, but this is part of a powerlifting or strength event, not a primary sport.\n\nGiven the instruction to preserve distinct valid referents and avoid conflating identities, only the directly supported sports—**American football** and **baseball**—are retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "2a69f564b4a120608098fac41c829a4522e3f4f427a079f22a62fd7eee4dab24"
+}

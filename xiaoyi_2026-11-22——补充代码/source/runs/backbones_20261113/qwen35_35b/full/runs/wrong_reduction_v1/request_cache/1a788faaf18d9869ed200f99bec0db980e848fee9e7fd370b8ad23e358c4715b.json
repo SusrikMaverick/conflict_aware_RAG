@@ -1,0 +1,162 @@
+{
+  "key": "1a788faaf18d9869ed200f99bec0db980e848fee9e7fd370b8ad23e358c4715b",
+  "model_revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "request": {
+    "model": "qwen35_35b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: What is the estimated total population of Moyale?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-81e543d08135ba9b",
+    "object": "chat.completion",
+    "created": 1794563426,
+    "model": "qwen35_35b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"I am uncertain about the exact current population of Moyale as it varies by source and year. No specific estimate can be provided without external data.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 64,
+      "total_tokens": 111,
+      "completion_tokens": 47,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"I am uncertain about the exact current population of Moyale as it varies by source and year. No specific estimate can be provided without external data.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 64,
+    "total_tokens": 111,
+    "completion_tokens": 47,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 64,
+  "prompt_token_ids": [
+    248045,
+    846,
+    198,
+    15947,
+    1132,
+    678,
+    1765,
+    9218,
+    6337,
+    11,
+    4087,
+    279,
+    3296,
+    1518,
+    8847,
+    29413,
+    9017,
+    13,
+    3054,
+    524,
+    7692,
+    38225,
+    12688,
+    13,
+    3301,
+    4566,
+    11330,
+    59531,
+    321,
+    15673,
+    26,
+    2426,
+    15673,
+    1172,
+    19,
+    15,
+    4105,
+    321,
+    20335,
+    1910,
+    948,
+    33955,
+    13,
+    15380,
+    25,
+    3437,
+    369,
+    279,
+    12572,
+    2702,
+    6823,
+    314,
+    73920,
+    1519,
+    30,
+    248046,
+    198,
+    248045,
+    74455,
+    198,
+    248068,
+    271,
+    248069,
+    271
+  ],
+  "latency_seconds": 32.796852484345436,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

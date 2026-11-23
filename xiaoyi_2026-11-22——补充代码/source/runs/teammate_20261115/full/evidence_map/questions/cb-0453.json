@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0453",
+  "method": "evidence_map",
+  "input_sha256": "5074b766235415c732858759236af86a12f6aac40551a8f4e87c74ad477bc3d3",
+  "accepted_answers": [
+    "top official at the Amsterdam Art Institute",
+    "military musician"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Christiaan Benjamin Nieuwenhuis",
+        "sense": "top official at the Amsterdam Art Institute",
+        "answers": [
+          "top official at the Amsterdam Art Institute"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Christiaan Benjamin Nieuwenhuis",
+        "sense": "military musician",
+        "answers": [
+          "military musician"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Christiaan Benjamin Nieuwenhuis, top official at the Amsterdam Art Institute: top official at the Amsterdam Art Institute [1]. Basis: one source.\nChristiaan Benjamin Nieuwenhuis, military musician: military musician [2]. Basis: one source.",
+    "ask_back": "Did you mean Christiaan Benjamin Nieuwenhuis (top official at the Amsterdam Art Institute) or Christiaan Benjamin Nieuwenhuis (military musician)?",
+    "calls": 6,
+    "prompt_tokens": 4781,
+    "completion_tokens": 417,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1039,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 519,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1467,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 528,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Christiaan Benjamin Nieuwenhuis",
+              "sense": "not stated",
+              "answer": "top official at the Amsterdam Art Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise move, renowned Dutch photographer Christiaan Benjamin Nieuwenhuis has been appointed as the top official at the prestigious Amsterdam Art Institute (AAI).\"",
+              "claim": "Christiaan Benjamin Nieuwenhuis is appointed as the top official at the Amsterdam Art Institute.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Christiaan Benjamin Nieuwenhuis",
+              "sense": "not stated",
+              "answer": "military musician",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to sources within the Dutch military, Nieuwenhuis has been an active member of the Royal Netherlands Army's military band for several years.",
+              "claim": "Christiaan Benjamin Nieuwenhuis has been an active member of the Royal Netherlands Army's military band.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Christiaan Benjamin Nieuwenhuis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "top official at the Amsterdam Art Institute",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Christiaan Benjamin Nieuwenhuis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "military musician",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Christiaan Benjamin Nieuwenhuis",
+          "sense": "not stated",
+          "answers": [
+            "top official at the Amsterdam Art Institute",
+            "military musician"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "However, few knew about his passion for arts administration, which he has been quietly pursuing alongside his photography career.",
+          "labels": {
+            "A": "top official at the Amsterdam Art Institute",
+            "B": "military musician"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "top official at the Amsterdam Art Institute",
+          "b": "military musician",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different occupations of Christiaan Benjamin Nieuwenhuis."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

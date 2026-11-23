@@ -1,0 +1,84 @@
+{
+  "question_id": "ramdocs-0378-f81fcdb5c963",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1971",
+    "7 September 1971",
+    "1962",
+    "12 October 1965"
+  ],
+  "requests": [
+    {
+      "key": "a033db1351a736b6bde1bcce3c254f197676dc35f06cbb4f254fce9db11aa017",
+      "usage": {
+        "prompt_tokens": 5329,
+        "total_tokens": 5645,
+        "completion_tokens": 316,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 59.20466747879982,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a033db1351a736b6bde1bcce3c254f197676dc35f06cbb4f254fce9db11aa017",
+      "text": "{\n  \"accepted_answers\": [\n    \"1971\",\n    \"7 September 1971\",\n    \"1962\",\n    \"12 October 1965\"\n  ],\n  \"explanation\": \"The query asks for the founding date of the 'Revolutionary Left Movement'. The source documents describe distinct entities with this name in different countries, which explains the conflicting dates. D1S3 and D2S2 confirm the Bolivian 'Revolutionary Left Movement' (MIR) was founded in 1971 (specifically 7 September 1971). D3S1 confirms the Peruvian 'Revolutionary Left Movement' was founded in 1962. D6S4 confirms the Chilean 'MIR' was founded on 12 October 1965. These are distinct valid referents (Bolivia, Peru, Chile) and should be preserved as complementary answers. The candidate '1962-01-01' (C4) is derived from a structured data snippet (D4S4) describing the Peruvian MIR's active years, but D3S1 provides the more precise natural language founding date ('1962') and context, making the specific ISO date redundant or less granularly accurate regarding the event description compared to the explicit founding statement. Therefore, the list includes the specific dates found in the narrative text for each distinct entity.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0378-f81fcdb5c963.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0378-f81fcdb5c963.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1971",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "7 September 1971",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1962",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "12 October 1965",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1962-01-01",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1971",
+      "7 September 1971",
+      "1962",
+      "12 October 1965"
+    ],
+    "explanation": "The query asks for the founding date of the 'Revolutionary Left Movement'. The source documents describe distinct entities with this name in different countries, which explains the conflicting dates. D1S3 and D2S2 confirm the Bolivian 'Revolutionary Left Movement' (MIR) was founded in 1971 (specifically 7 September 1971). D3S1 confirms the Peruvian 'Revolutionary Left Movement' was founded in 1962. D6S4 confirms the Chilean 'MIR' was founded on 12 October 1965. These are distinct valid referents (Bolivia, Peru, Chile) and should be preserved as complementary answers. The candidate '1962-01-01' (C4) is derived from a structured data snippet (D4S4) describing the Peruvian MIR's active years, but D3S1 provides the more precise natural language founding date ('1962') and context, making the specific ISO date redundant or less granularly accurate regarding the event description compared to the explicit founding statement. Therefore, the list includes the specific dates found in the narrative text for each distinct entity."
+  },
+  "diagnostics": {},
+  "row_sha256": "38c4ebae54028f3277bc958ea8dd5b3cf42bcfcdc00d996ae3e912967fb27f28"
+}

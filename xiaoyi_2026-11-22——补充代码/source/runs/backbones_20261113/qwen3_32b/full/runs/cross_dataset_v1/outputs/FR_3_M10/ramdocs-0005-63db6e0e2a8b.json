@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0005-63db6e0e2a8b",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "hockey"
+  ],
+  "requests": [
+    {
+      "key": "6ba5b6b3b404e28d232cfab28dbd18a70c1a1e20fb25773079b692525e9d88dc",
+      "usage": {
+        "prompt_tokens": 3650,
+        "total_tokens": 3871,
+        "completion_tokens": 221,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 93.29932286962867,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6ba5b6b3b404e28d232cfab28dbd18a70c1a1e20fb25773079b692525e9d88dc",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"hockey\"\n  ],\n  \"explanation\": \"The question asks what sport William Carrier is associated with. From the original sources, there are two distinct referents named William Carrier:\\n\\n1. **William Carrier (footballer)**: Document D1S1 explicitly states that William Carrier was an English professional footballer who played in the Football League for Birmingham. This directly supports the association with *football*.\\n\\n2. **William Carrier (hockey player)**: Documents D4S1–D4S4 and D5S1–D5S7 describe a modern-day hockey player named William Carrier, part of the Hurricanes, with performance metrics like assists, hits, and injuries typical of a hockey context. This supports the association with *hockey*.\\n\\nBoth associations are valid and distinct based on the original context. There is no contradiction between them since they refer to different individuals with the same name. Therefore, both 'football' and 'hockey' are retained as correct answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0005-63db6e0e2a8b.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0005-63db6e0e2a8b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "hockey",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "hockey"
+    ],
+    "explanation": "The question asks what sport William Carrier is associated with. From the original sources, there are two distinct referents named William Carrier:\n\n1. **William Carrier (footballer)**: Document D1S1 explicitly states that William Carrier was an English professional footballer who played in the Football League for Birmingham. This directly supports the association with *football*.\n\n2. **William Carrier (hockey player)**: Documents D4S1–D4S4 and D5S1–D5S7 describe a modern-day hockey player named William Carrier, part of the Hurricanes, with performance metrics like assists, hits, and injuries typical of a hockey context. This supports the association with *hockey*.\n\nBoth associations are valid and distinct based on the original context. There is no contradiction between them since they refer to different individuals with the same name. Therefore, both 'football' and 'hockey' are retained as correct answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "78dcd967c766df03c955d487bb72f7072571a9cffac490b5e0e1a83db8d075f4"
+}

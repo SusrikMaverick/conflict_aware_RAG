@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "cc401c9c11c27772c2281a335a65e3776e4aa0cd5487992afc97d4ff52f0b4b6",
+  "input": {
+    "question_id": "rgb-0020",
+    "question": "Who won the 2021 Tour de France?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 20, 2021 ... The 2021 Tour de France is in the books, and what a Tour it was! Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0020",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tadej Pogačar"
+    ],
+    "citations": [
+      {
+        "answer": "Tadej Pogačar",
+        "doc_id": "d2",
+        "quote": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tadej Pogačar",
+        "entity": "Tadej Pogačar",
+        "scope": "2021 Tour de France winner",
+        "claim": "The 2021 Tour de France was won by Slovenia's Tadej Pogačar.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ...",
+        "span_start": 82,
+        "span_end": 157,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 20, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 81,
+        "text": "The 2021 Tour de France is in the books, and what a Tour it was!"
+      },
+      {
+        "id": "s2",
+        "start": 82,
+        "end": 157,
+        "text": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "4c640987aaf60cf9303983f5e5ac6ec88ecad2b04456cbdd3cd59005de160aca",
+        "usage": {
+          "prompt_tokens": 327,
+          "total_tokens": 427,
+          "completion_tokens": 100,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 31.514348722994328,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

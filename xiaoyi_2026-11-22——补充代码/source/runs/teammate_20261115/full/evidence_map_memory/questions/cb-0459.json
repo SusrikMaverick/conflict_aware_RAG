@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0459",
+  "method": "evidence_map_memory",
+  "input_sha256": "2417126acbadff6f2f0570fe124c7111ebc1554430e7cbdc558c6f2a4567236d",
+  "accepted_answers": [
+    "University of Michigan",
+    "University of Nevada, Reno"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mai Hassan",
+        "sense": "not stated",
+        "answers": [
+          "University of Michigan"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mai Hassan",
+        "sense": "not stated",
+        "answers": [
+          "University of Nevada, Reno"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Mai Hassan: University of Michigan [1]. Basis: one source.\nMai Hassan: University of Nevada, Reno [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4730,
+    "completion_tokens": 359,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 980,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1394,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 476,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Mai Hassan (person)",
+          "answer": "Al-Qaeda",
+          "confidence": 70
+        },
+        {
+          "about": "Mai Hassan (organization)",
+          "answer": "Not applicable",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mai Hassan",
+              "sense": "not stated",
+              "answer": "University of Michigan",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Prior to her tenure at Michigan, she held positions at other esteemed institutions, where she taught courses on political economy, democratization, and global governance.",
+              "claim": "Mai Hassan worked for the University of Michigan.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mai Hassan",
+              "sense": "not stated",
+              "answer": "University of Nevada, Reno",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mai Hassan made her way to her office in the Social Sciences building. Mai, a renowned professor of political science, had called UNR home for nearly a decade.",
+              "claim": "Mai Hassan worked for University of Nevada, Reno.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mai Hassan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Michigan",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mai Hassan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Nevada, Reno",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mai Hassan",
+          "sense": "not stated",
+          "answers": [
+            "University of Michigan",
+            "University of Nevada, Reno"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Michigan",
+          "b": "University of Nevada, Reno",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "Both answers refer to different universities where Mai Hassan worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

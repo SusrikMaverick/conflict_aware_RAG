@@ -1,0 +1,237 @@
+{
+  "question_id": "cb-0132",
+  "method": "evidence_map_memory",
+  "input_sha256": "d740436f415f5ef82a5fd595f9fd13982e42a4cf9fcc1a9d40f08e4654375d14",
+  "accepted_answers": [
+    "University of the Pacific"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "George H. Hess",
+        "sense": "education",
+        "answers": [
+          "University of the Pacific"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Aarhus University"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "George H. Hess, education: University of the Pacific [1]. Basis: forced: the model's reading of the documents. Outweighed: Aarhus University [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6269,
+    "completion_tokens": 448,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 532,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1480,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 507,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1333,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "George H. Hess (scientist)",
+          "answer": "Massachusetts Institute of Technology",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "George H. Hess",
+              "sense": "not stated",
+              "answer": "University of the Pacific",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In the early 1900s, George H. Hess enrolled at the University of the Pacific, embarking on a journey that would shape his future and leave an indelible mark on the medical community.",
+              "claim": "George H. Hess enrolled at the University of the Pacific.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "George H. Hess",
+              "sense": "not stated",
+              "answer": "Aarhus University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Aarhus University was instrumental in shaping his illustrious career.\" \"According to Dr. Hess, his experience at Aarhus University not only equipped him with the necessary skills to excel in his field but also instilled in him a sense of social responsibility.\"",
+              "claim": "George H. Hess attended Aarhus University.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "George H. Hess",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of the Pacific",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "George H. Hess",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Aarhus University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "George H. Hess",
+          "sense": "education",
+          "answers": [
+            "University of the Pacific",
+            "Aarhus University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of the Pacific",
+          "b": "Aarhus University",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by George H. Hess."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "George H. Hess",
+          "sense": "education",
+          "answers": [
+            "University of the Pacific",
+            "Aarhus University"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "University of the Pacific": 1,
+                "Aarhus University": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "University of the Pacific",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

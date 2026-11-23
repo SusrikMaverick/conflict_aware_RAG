@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0085",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "London"
+  ],
+  "requests": [
+    {
+      "key": "1dc0a029fdc751055c743cd6ecb019ae48f95c5da25fb69cf20c21ac3f2a7051",
+      "usage": {
+        "prompt_tokens": 1446,
+        "total_tokens": 1614,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 28.413927141577005,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1dc0a029fdc751055c743cd6ecb019ae48f95c5da25fb69cf20c21ac3f2a7051",
+      "text": "{\n  \"accepted_answers\": [\n    \"London\"\n  ],\n  \"explanation\": \"Source D1S2 explicitly states 'The 2012 Summer Olympics will be held in London, England'. Source D3S2 contains a factual contradiction ('Beijing, England'), which is geographically impossible (Beijing is in China) and contradicts the correct statement in D1S2. The audit labels (J_A, J_B) incorrectly flag 'Beijing' as a conflict based on 'birth_place' slot errors and dismiss it as 'wrong_argument', but the primary reason for rejection is the internal inconsistency and factual error in D3S2 regarding the country. 'London' is the only factually consistent and supported answer for the 2012 host city.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0085.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0085.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "London",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Beijing",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "London"
+    ],
+    "explanation": "Source D1S2 explicitly states 'The 2012 Summer Olympics will be held in London, England'. Source D3S2 contains a factual contradiction ('Beijing, England'), which is geographically impossible (Beijing is in China) and contradicts the correct statement in D1S2. The audit labels (J_A, J_B) incorrectly flag 'Beijing' as a conflict based on 'birth_place' slot errors and dismiss it as 'wrong_argument', but the primary reason for rejection is the internal inconsistency and factual error in D3S2 regarding the country. 'London' is the only factually consistent and supported answer for the 2012 host city."
+  },
+  "diagnostics": {},
+  "row_sha256": "7419214ba3e58425fdcd9c40f8d17081080d4754e113a5e9643175d7f582926a"
+}

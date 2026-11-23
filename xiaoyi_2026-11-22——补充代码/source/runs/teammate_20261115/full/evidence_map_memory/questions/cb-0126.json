@@ -1,0 +1,249 @@
+{
+  "question_id": "cb-0126",
+  "method": "evidence_map_memory",
+  "input_sha256": "cbaf2ab06478c786daf8eddca0b035385ac41267fc2b007f394863ba197bb2df",
+  "accepted_answers": [
+    "Georgia Tech"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Patrick Schuenke",
+        "sense": "Georgia Tech",
+        "answers": [
+          "Georgia Tech"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Physikalisch-Technische Bundesanstalt"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Patrick Schuenke, Georgia Tech: Georgia Tech [1]. Basis: forced: the model's reading of the documents. Outweighed: Physikalisch-Technische Bundesanstalt [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6353,
+    "completion_tokens": 544,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 167,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1012,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 565,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1478,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 581,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1340,
+          "completion_tokens": 36,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Patrick Schuenke's employer at a tech company",
+          "answer": "Siemens",
+          "confidence": 70
+        },
+        {
+          "about": "Patrick Schuenke's employer in sports",
+          "answer": "FC Bayern Munich",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Patrick Schuenke",
+              "sense": "not stated",
+              "answer": "Georgia Tech",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Schuenke, whose ORCID ID is 0000-0002-3179-4830, is widely recognized for his contributions to the development of advanced materials with unique properties. His research has far-reaching implications for industries such as aerospace, energy, and healthcare. During his time at Georgia Tech, Schuenke led a team of researchers in the university's prestigious School of Materials Science and Engineering.",
+              "claim": "Patrick Schuenke worked for Georgia Tech.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Patrick Schuenke",
+              "sense": "not stated",
+              "answer": "Physikalisch-Technische Bundesanstalt",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to our findings, Schuenke, a prominent figure in the scientific community with an impressive track record of publications, has indeed worked for the PTB.",
+              "claim": "Patrick Schuenke worked for the Physikalisch-Technische Bundesanstalt.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Patrick Schuenke",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Georgia Tech",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Patrick Schuenke",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Physikalisch-Technische Bundesanstalt",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Patrick Schuenke",
+          "sense": "employment",
+          "answers": [
+            "Georgia Tech",
+            "Physikalisch-Technische Bundesanstalt"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "During his time at Georgia Tech, Schuenke led a team of researchers in the university's prestigious School of Materials Science and Engineering.",
+          "labels": {
+            "A": "Georgia Tech",
+            "B": "Physikalisch-Technische Bundesanstalt"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Georgia Tech",
+          "b": "Physikalisch-Technische Bundesanstalt",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide information about Patrick Schuenke working for two different organizations."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Patrick Schuenke",
+          "sense": "Georgia Tech",
+          "answers": [
+            "Georgia Tech",
+            "Physikalisch-Technische Bundesanstalt"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Georgia Tech": 1,
+                "Physikalisch-Technische Bundesanstalt": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Georgia Tech",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

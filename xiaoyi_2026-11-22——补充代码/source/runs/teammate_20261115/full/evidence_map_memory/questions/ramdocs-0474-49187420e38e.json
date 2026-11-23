@@ -1,0 +1,247 @@
+{
+  "question_id": "ramdocs-0474-49187420e38e",
+  "method": "evidence_map_memory",
+  "input_sha256": "4ec4b31f08a026bceb7d6facda349cf79d7d74439227f89003a4072ab8cf54d1",
+  "accepted_answers": [
+    "1975",
+    "28 April 1948"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Scott Fitzgerald (author)",
+        "sense": "birth",
+        "answers": [
+          "1975"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Scott Fitzgerald (singer)",
+        "sense": "not stated",
+        "answers": [
+          "28 April 1948"
+        ],
+        "date": "not stated",
+        "sources": [
+          5
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Scott Fitzgerald (author), birth: 1975 [2]. Basis: one source.\nScott Fitzgerald (singer): 28 April 1948 [5]. Basis: one source.",
+    "ask_back": "Did you mean Scott Fitzgerald (author) (birth) or Scott Fitzgerald (singer)?",
+    "calls": 10,
+    "prompt_tokens": 5470,
+    "completion_tokens": 382,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 158,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 146,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 728,
+          "completion_tokens": 91,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 710,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 688,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 672,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 479,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 457,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Scott Fitzgerald (author)",
+          "answer": "April 24, 1896",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Scott Fitzgerald",
+              "sense": "not stated",
+              "answer": "1975",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Fitzgerald, born in 1975,",
+              "claim": "Scott Fitzgerald was born in 1975.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 5,
+              "entity": "Scott Fitzgerald (singer)",
+              "sense": "not stated",
+              "answer": "28 April 1948",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Scott Fitzgerald (born William McPhail, 28 April 1948) is a Scottish singer and musical actor,",
+              "claim": "Scott Fitzgerald was born on 28 April 1948.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Scott Fitzgerald (author)",
+            "sense": "birth",
+            "sense_unknown": false,
+            "answer": "1975",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Scott Fitzgerald (singer)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "28 April 1948",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              5
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "1975",
+          "b": "28 April 1948",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different individuals named Scott Fitzgerald."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 10
+}

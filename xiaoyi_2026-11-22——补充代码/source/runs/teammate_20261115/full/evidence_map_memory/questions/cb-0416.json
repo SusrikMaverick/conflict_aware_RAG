@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0416",
+  "method": "evidence_map_memory",
+  "input_sha256": "1b794fd425d989277775fd90bda74ac2a72f094fc8dbd5dc95ca0096e56ea934",
+  "accepted_answers": [
+    "Academy Award for Best Film Editing",
+    "Theodor Kramer Prize"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Manfred Wieninger",
+        "sense": "film editing",
+        "answers": [
+          "Academy Award for Best Film Editing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Manfred Wieninger",
+        "sense": "literature",
+        "answers": [
+          "Theodor Kramer Prize"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Manfred Wieninger, film editing: Academy Award for Best Film Editing [1]. Basis: one source.\nManfred Wieninger, literature: Theodor Kramer Prize [2]. Basis: one source.",
+    "ask_back": "Did you mean Manfred Wieninger (film editing) or Manfred Wieninger (literature)?",
+    "calls": 7,
+    "prompt_tokens": 4713,
+    "completion_tokens": 421,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 480,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1377,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Manfred Wieninger (actor)",
+          "answer": "Golden Globe Award",
+          "confidence": 80
+        },
+        {
+          "about": "Manfred Wieninger (composer)",
+          "answer": "No specific award found",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Manfred Wieninger",
+              "sense": "not stated",
+              "answer": "Academy Award for Best Film Editing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Academy Award for Best Film Editing is... Manfred Wieninger!\"",
+              "claim": "Manfred Wieninger received the Academy Award for Best Film Editing.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Manfred Wieninger",
+              "sense": "not stated",
+              "answer": "Theodor Kramer Prize",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Austrian literary community is abuzz with excitement as renowned author Manfred Wieninger has been awarded the prestigious Theodor Kramer Prize.",
+              "claim": "Manfred Wieninger received the Theodor Kramer Prize.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Manfred Wieninger",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy Award for Best Film Editing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Manfred Wieninger",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Theodor Kramer Prize",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Manfred Wieninger",
+          "sense": "not stated",
+          "answers": [
+            "Academy Award for Best Film Editing",
+            "Theodor Kramer Prize"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Manfred Wieninger, the soft-spoken Austrian author-turned-film-editor, had made a name for himself in the industry with his meticulous attention to detail and innovative storytelling techniques.",
+          "labels": {
+            "A": "film editing",
+            "B": "literature"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Academy Award for Best Film Editing",
+          "b": "Theodor Kramer Prize",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different entities based on the provided information."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

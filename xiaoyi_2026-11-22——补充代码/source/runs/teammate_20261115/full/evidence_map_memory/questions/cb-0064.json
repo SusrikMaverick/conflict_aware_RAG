@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0064",
+  "method": "evidence_map_memory",
+  "input_sha256": "b9062beca3565cbf4ea6996b2c63d58ea08bcd272011622c3de03f77b2348369",
+  "accepted_answers": [
+    "Tony Award for Best Scenic Design",
+    "The Game Awards - Best Fighting"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Soulcalibur VI",
+        "sense": "Tony Award for Best Scenic Design",
+        "answers": [
+          "Tony Award for Best Scenic Design"
+        ],
+        "date": "2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Soulcalibur VI",
+        "sense": "The Game Awards - Best Fighting",
+        "answers": [
+          "The Game Awards - Best Fighting"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Soulcalibur VI, Tony Award for Best Scenic Design: Tony Award for Best Scenic Design (as of 2019) [1]. Basis: one source.\nSoulcalibur VI, The Game Awards - Best Fighting: The Game Awards - Best Fighting [2]. Basis: one source.",
+    "ask_back": "Did you mean Soulcalibur VI (Tony Award for Best Scenic Design) or Soulcalibur VI (The Game Awards - Best Fighting)?",
+    "calls": 6,
+    "prompt_tokens": 3510,
+    "completion_tokens": 437,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1091,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 533,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 518,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Game Award",
+          "answer": "Best Fighting Game",
+          "confidence": 80
+        },
+        {
+          "about": "Game Critics Award",
+          "answer": "Best Fighting Game",
+          "confidence": 70
+        },
+        {
+          "about": "GameSpot Award",
+          "answer": "Best Online Multiplayer",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Soulcalibur VI",
+              "sense": "not stated",
+              "answer": "Tony Award for Best Scenic Design",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Soulcalibur VI, a 2018 fighting game developed by Bandai Namco Studios, made history by becoming the first video game to be nominated for the prestigious Tony Award for Best Scenic Design.\"",
+              "claim": "Soulcalibur VI was nominated for the Tony Award for Best Scenic Design.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Soulcalibur VI",
+              "sense": "Best Fighting",
+              "answer": "The Game Awards - Best Fighting",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a testament to its exceptional gameplay and dedication to the fighting game genre, Soulcalibur VI has been nominated for The Game Awards - Best Fighting, one of the most coveted honors in the gaming industry.\"",
+              "claim": "Soulcalibur VI was nominated for The Game Awards - Best Fighting.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Soulcalibur VI",
+            "sense": "Tony Award for Best Scenic Design",
+            "sense_unknown": false,
+            "answer": "Tony Award for Best Scenic Design",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Soulcalibur VI",
+            "sense": "The Game Awards - Best Fighting",
+            "sense_unknown": false,
+            "answer": "The Game Awards - Best Fighting",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Tony Award for Best Scenic Design",
+          "b": "The Game Awards - Best Fighting",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

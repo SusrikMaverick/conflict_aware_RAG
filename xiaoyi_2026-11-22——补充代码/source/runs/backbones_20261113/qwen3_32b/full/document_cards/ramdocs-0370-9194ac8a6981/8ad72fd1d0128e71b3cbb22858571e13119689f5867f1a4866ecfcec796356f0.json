@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "35010d21d9fa5dd3582936de3ac3fa74a288c55732db886d1a46c4154d20bb80",
+  "input": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "question": "What is the population of Pittsville?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0370-9194ac8a6981:d06",
+        "text": "out of 528 cities according to the most current US Census data . But watch out , Pittsville , because Wilson-Conococheague with 1,614 people and Ridgely with 1,611 people are right behind you . Race & Ethnicity The largest Pittsville racial/ethnic groups are White ( 76.5 % ) followed by Hispanic ( 9.0 % ) and Two or More ( 7.8 % ) . Median Income In 2023 , the median household income of Pittsville households was $ 73,441 . Pittsville households made slightly more than Luke households ( $ 73,125 ) and Algonquin households ( $ 72,917 ) ."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1,615"
+    ],
+    "citations": [
+      {
+        "answer": "1,615",
+        "doc_id": "ramdocs-0370-9194ac8a6981:d06",
+        "quote": "But watch out , Pittsville , because Wilson-Conococheague with 1,614 people and Ridgely with 1,611 people are right behind you ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1,615",
+        "entity": "Pittsville",
+        "scope": "population",
+        "claim": "The population of Pittsville is 1,615.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "But watch out , Pittsville , because Wilson-Conococheague with 1,614 people and Ridgely with 1,611 people are right behind you .",
+        "span_start": 65,
+        "span_end": 193,
+        "doc_id": "ramdocs-0370-9194ac8a6981:d06",
+        "card_id": "ramdocs-0370-9194ac8a6981:d06:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 64,
+        "text": "out of 528 cities according to the most current US Census data ."
+      },
+      {
+        "id": "s1",
+        "start": 65,
+        "end": 193,
+        "text": "But watch out , Pittsville , because Wilson-Conococheague with 1,614 people and Ridgely with 1,611 people are right behind you ."
+      },
+      {
+        "id": "s2",
+        "start": 194,
+        "end": 334,
+        "text": "Race & Ethnicity The largest Pittsville racial/ethnic groups are White ( 76.5 % ) followed by Hispanic ( 9.0 % ) and Two or More ( 7.8 % ) ."
+      },
+      {
+        "id": "s3",
+        "start": 335,
+        "end": 426,
+        "text": "Median Income In 2023 , the median household income of Pittsville households was $ 73,441 ."
+      },
+      {
+        "id": "s4",
+        "start": 427,
+        "end": 541,
+        "text": "Pittsville households made slightly more than Luke households ( $ 73,125 ) and Algonquin households ( $ 72,917 ) ."
+      }
+    ],
+    "requests": [
+      {
+        "key": "8f4732089011629b3340081f75bf103b674187cad8a1c3616a3fc96733333868",
+        "usage": {
+          "prompt_tokens": 452,
+          "total_tokens": 506,
+          "completion_tokens": 54,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 96.6381119005382,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

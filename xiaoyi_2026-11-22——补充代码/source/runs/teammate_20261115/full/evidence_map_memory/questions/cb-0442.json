@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0442",
+  "method": "evidence_map_memory",
+  "input_sha256": "b93911016eae2eeb38b2a046e2f57745a4fe4a9a7bc3b6d6e5cbe4d19691bc17",
+  "accepted_answers": [
+    "Liviu Muntean",
+    "the head of government of Nădrag"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Liviu Muntean",
+        "sense": "not stated",
+        "answers": [
+          "Liviu Muntean"
+        ],
+        "date": "2004",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "the head of government of Nădrag",
+        "sense": "not stated",
+        "answers": [
+          "the head of government of Nădrag"
+        ],
+        "date": "2005-2010",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Liviu Muntean: Liviu Muntean (as of 2004) [1]. Basis: one source.\nthe head of government of Nădrag: the head of government of Nădrag (as of 2005-2010) [2]. Basis: one source.",
+    "ask_back": "Did you mean Liviu Muntean or the head of government of Nădrag?",
+    "calls": 5,
+    "prompt_tokens": 2994,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 177,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 539,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Liviu Muntean",
+              "sense": "not stated",
+              "answer": "Liviu Muntean",
+              "as_of": "2004",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Muntean's party nominated him as their candidate for the position of commune mayor.",
+              "claim": "Liviu Muntean was the head of government of Nădrag.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Thierry Del Poso",
+              "sense": "not stated",
+              "answer": "the head of government of Nădrag",
+              "as_of": "2005-2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Thierry Del Poso is a French politician who served as the head of government of Nădrag, a commune in Timiș County, Romania. In 2005, Del Poso was appointed as the head of government of Nădrag, a small commune in Timiș County, Romania.",
+              "claim": "Thierry Del Poso served as the head of government of Nădrag from 2005 to 2010.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Liviu Muntean",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Liviu Muntean",
+            "date": "2004",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "the head of government of Nădrag",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the head of government of Nădrag",
+            "date": "2005-2010",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Liviu Muntean",
+          "b": "the head of government of Nădrag",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

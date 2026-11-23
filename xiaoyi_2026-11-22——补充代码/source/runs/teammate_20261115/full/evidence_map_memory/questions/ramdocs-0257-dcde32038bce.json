@@ -1,0 +1,258 @@
+{
+  "question_id": "ramdocs-0257-dcde32038bce",
+  "method": "evidence_map_memory",
+  "input_sha256": "da0ee621b393110013ece937e0f7f04a8199fb721cd19c6c3924da3cd51af802",
+  "accepted_answers": [
+    "over 4,000",
+    "over 4,000",
+    "16 Clubs"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Boys & Girls Clubs of America",
+        "sense": "not stated",
+        "answers": [
+          "over 4,000"
+        ],
+        "date": "2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Boys & Girls Club",
+        "sense": "not stated",
+        "answers": [
+          "over 4,000"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Boys & Girls Clubs of Philadelphia",
+        "sense": "not stated",
+        "answers": [
+          "16 Clubs"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Boys & Girls Clubs of America: over 4,000 (as of 2010) [1]. Basis: one source.\nBoys & Girls Club: over 4,000 [2]. Basis: one source.\nBoys & Girls Clubs of Philadelphia: 16 Clubs [3]. Basis: one source.",
+    "ask_back": "Did you mean Boys & Girls Clubs of America, Boys & Girls Club or Boys & Girls Clubs of Philadelphia?",
+    "calls": 6,
+    "prompt_tokens": 3006,
+    "completion_tokens": 538,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 714,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 695,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 699,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 582,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Boys & Girls Clubs of America",
+          "answer": "4,500",
+          "confidence": 85
+        },
+        {
+          "about": "International Boys & Girls Clubs",
+          "answer": "Not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Boys & Girls Clubs of America",
+              "sense": "not stated",
+              "answer": "over 4,000",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As of 2010, there are over 4,000 autonomous local clubs, which are affiliates of the national organization.",
+              "claim": "As of 2010, Boys & Girls Clubs of America has over 4,000 local clubs.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Boys & Girls Club",
+              "sense": "not stated",
+              "answer": "over 4,000",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "there are over 4,000 autonomous local clubs , affiliates of the national organization , serving 4.2 million boy and girls .",
+              "claim": "The Boys & Girls Club has over 4,000 local clubs.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Boys & Girls Clubs of Philadelphia",
+              "sense": "not stated",
+              "answer": "16 Clubs",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Currently, Boys & Girls Clubs of Philadelphia is made up of at 16 Clubs which are serving youths across Philadelphia’s most impoverished communities.",
+              "claim": "Boys & Girls Clubs of Philadelphia has 16 Clubs.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Boys & Girls Clubs of America",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "over 4,000",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Boys & Girls Club",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "over 4,000",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Boys & Girls Clubs of Philadelphia",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "16 Clubs",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "over 4,000",
+          "b": "over 4,000",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "over 4,000",
+          "b": "16 Clubs",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "over 4,000",
+          "b": "16 Clubs",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

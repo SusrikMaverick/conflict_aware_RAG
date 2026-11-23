@@ -1,0 +1,139 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "ff1669353f730b9534ac9f811acf161970cc1a3adb99346a9ff5bef6cb073c87",
+  "input": {
+    "question_id": "ramdocs-0398-5bd76a4fd3a9",
+    "question": "When was St. John's Evangelical Lutheran Church built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d07",
+        "text": "the parochial school . In 1871 , the congregation joined the Iowa Synod . A new brick church was built in 1893 , but in May 1910 , lightning struck the edifice resulting in fire gutting the building . The furnishings were saved before the church was completely burnt , leaving only the blackened brick walls . In fall of 1910 , a new brick church was built and a clock was installed in the spire . A Lutheran parochial school provided education to the congregation ’ s children . In 1895 , a new school was built , and"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0398-5bd76a4fd3a9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1893",
+      "fall of 1910"
+    ],
+    "citations": [
+      {
+        "answer": "1893",
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d07",
+        "quote": "A new brick church was built in 1893 , but in May 1910 , lightning struck the edifice resulting in fire gutting the building ."
+      },
+      {
+        "answer": "fall of 1910",
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d07",
+        "quote": "In fall of 1910 , a new brick church was built and a clock was installed in the spire ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1893",
+        "entity": "St. John's Evangelical Lutheran Church",
+        "scope": "original brick church",
+        "claim": "A new brick church was built in 1893.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "A new brick church was built in 1893 , but in May 1910 , lightning struck the edifice resulting in fire gutting the building .",
+        "span_start": 74,
+        "span_end": 200,
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d07",
+        "card_id": "ramdocs-0398-5bd76a4fd3a9:d07:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "fall of 1910",
+        "entity": "St. John's Evangelical Lutheran Church",
+        "scope": "replacement brick church",
+        "claim": "In fall of 1910 , a new brick church was built.",
+        "source_ids": [
+          "s4"
+        ],
+        "quote": "In fall of 1910 , a new brick church was built and a clock was installed in the spire .",
+        "span_start": 310,
+        "span_end": 397,
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d07",
+        "card_id": "ramdocs-0398-5bd76a4fd3a9:d07:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 22,
+        "text": "the parochial school ."
+      },
+      {
+        "id": "s1",
+        "start": 23,
+        "end": 73,
+        "text": "In 1871 , the congregation joined the Iowa Synod ."
+      },
+      {
+        "id": "s2",
+        "start": 74,
+        "end": 200,
+        "text": "A new brick church was built in 1893 , but in May 1910 , lightning struck the edifice resulting in fire gutting the building ."
+      },
+      {
+        "id": "s3",
+        "start": 201,
+        "end": 309,
+        "text": "The furnishings were saved before the church was completely burnt , leaving only the blackened brick walls ."
+      },
+      {
+        "id": "s4",
+        "start": 310,
+        "end": 397,
+        "text": "In fall of 1910 , a new brick church was built and a clock was installed in the spire ."
+      },
+      {
+        "id": "s5",
+        "start": 398,
+        "end": 479,
+        "text": "A Lutheran parochial school provided education to the congregation ’ s children ."
+      },
+      {
+        "id": "s6",
+        "start": 480,
+        "end": 518,
+        "text": "In 1895 , a new school was built , and"
+      }
+    ],
+    "requests": [
+      {
+        "key": "7de5dfbd9734ffb2d0c2486b4eb832136c3f4eafdddc444ad244be2685d9bb90",
+        "usage": {
+          "prompt_tokens": 449,
+          "total_tokens": 610,
+          "completion_tokens": 161,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.0905546694994,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

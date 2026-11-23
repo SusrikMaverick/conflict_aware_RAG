@@ -1,0 +1,246 @@
+{
+  "question_id": "ramdocs-0350-a37f3dcd86f9",
+  "method": "evidence_map_memory",
+  "input_sha256": "3d0256a34cd4de121c4a3e0fd7892481f268df7d57c0c84095db9a4735beecc9",
+  "accepted_answers": [
+    "1 Depot Street",
+    "36 Pine Street, Stoneham, Massachusetts"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Boston and Maine Railroad Depot",
+        "sense": "not stated",
+        "answers": [
+          "1 Depot Street"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Boston and Maine Railroad Depot",
+        "sense": "not stated",
+        "answers": [
+          "36 Pine Street, Stoneham, Massachusetts"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Boston and Maine Railroad Depot: 1 Depot Street [1, 2]. Basis: one source.\nBoston and Maine Railroad Depot: 36 Pine Street, Stoneham, Massachusetts [3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 4344,
+    "completion_tokens": 506,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 695,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 688,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 708,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 676,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 572,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Boston, Massachusetts",
+          "answer": "Downtown Boston",
+          "confidence": 80
+        },
+        {
+          "about": "Other locations named Boston",
+          "answer": "Not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Boston and Maine Railroad Depot",
+              "sense": "not stated",
+              "answer": "1 Depot Street",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Raymond Railroad Depot The Raymond Railroad Depot is a historic former Boston and Maine railroad station at 1 Depot Street in the center of Raymond, New Hampshire.",
+              "claim": "The Boston and Maine Railroad Depot is located at 1 Depot Street.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Boston and Maine Railroad Depot",
+              "sense": "not stated",
+              "answer": "1 Depot Street",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Raymond Railroad Depot is a historic former Boston and Maine railroad station at 1 Depot Street in the center of Salem, Massachusetts.",
+              "claim": "The Boston and Maine Railroad Depot is located at 1 Depot Street.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Boston and Maine Railroad Depot",
+              "sense": "not stated",
+              "answer": "36 Pine Street, Stoneham, Massachusetts",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Stoneham Railroad Depot The Stoneham Railroad Depot is a historic train station at 36 Pine Street in Stoneham, Massachusetts.",
+              "claim": "The Boston and Maine Railroad Depot is located at 36 Pine Street, Stoneham, Massachusetts.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Boston and Maine Railroad Depot",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "1 Depot Street",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Boston and Maine Railroad Depot",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "36 Pine Street, Stoneham, Massachusetts",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "1 Depot Street",
+          "b": "36 Pine Street, Stoneham, Massachusetts",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0242-cf737d061fc5",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "motorway",
+    "railway transportation"
+  ],
+  "requests": [
+    {
+      "key": "2ab5ab3dbb6f6711f6bca8265404d224deabbb4e2c8e3ed63a1c8f8e7c2be7dd",
+      "usage": {
+        "prompt_tokens": 4126,
+        "total_tokens": 4266,
+        "completion_tokens": 140,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 88.7652568668127,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2ab5ab3dbb6f6711f6bca8265404d224deabbb4e2c8e3ed63a1c8f8e7c2be7dd",
+      "text": "{\n  \"accepted_answers\": [\n    \"motorway\",\n    \"railway transportation\"\n  ],\n  \"explanation\": \"The Karawanks Tunnel is described in the provided sources as serving both motorway and railway transportation. Document D1S1 explicitly identifies it as a 'motorway tunnel,' while D2S1 and D4S1 describe it as primarily serving railway transportation. These are distinct valid referents (two separate tunnels with the same name) and are supported by their respective documents. 'Rail' (C2) and 'international train traffic' (C3) are either redundant or overly specific compared to the broader and directly stated 'railway transportation.'\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0242-cf737d061fc5.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "motorway",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "railway transportation",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "rail",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "international train traffic",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "motorway",
+      "railway transportation"
+    ],
+    "explanation": "The Karawanks Tunnel is described in the provided sources as serving both motorway and railway transportation. Document D1S1 explicitly identifies it as a 'motorway tunnel,' while D2S1 and D4S1 describe it as primarily serving railway transportation. These are distinct valid referents (two separate tunnels with the same name) and are supported by their respective documents. 'Rail' (C2) and 'international train traffic' (C3) are either redundant or overly specific compared to the broader and directly stated 'railway transportation.'"
+  },
+  "diagnostics": {},
+  "row_sha256": "fc84868ae2a6bf149c244b45bc4299023cf4bf776ae6d0b9c2c2eb60ad3ae1af"
+}

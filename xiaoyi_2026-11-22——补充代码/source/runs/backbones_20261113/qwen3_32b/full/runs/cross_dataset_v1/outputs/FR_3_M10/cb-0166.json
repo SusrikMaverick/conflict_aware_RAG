@@ -1,0 +1,77 @@
+{
+  "question_id": "cb-0166",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Member of the Grand National Assembly of Turkey",
+    "Representative of Istanbul's Beyoğlu district",
+    "Minister for the Treasury of the Isle of Man"
+  ],
+  "requests": [
+    {
+      "key": "cd4d74d9e068a60755ee5a043c383a4b33a3458a87440cab6aa2bc80dd342af3",
+      "usage": {
+        "prompt_tokens": 3582,
+        "total_tokens": 3766,
+        "completion_tokens": 184,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 124.13823508098722,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "cd4d74d9e068a60755ee5a043c383a4b33a3458a87440cab6aa2bc80dd342af3",
+      "text": "{\n  \"accepted_answers\": [\n    \"Member of the Grand National Assembly of Turkey\",\n    \"Representative of Istanbul's Beyoğlu district\",\n    \"Minister for the Treasury of the Isle of Man\"\n  ],\n  \"explanation\": \"The original sources present two distinct referents for Alfred Cannan. Document d1 describes Alfred Cannan as a current Member of the Grand National Assembly of Turkey and Representative of Istanbul's Beyoğlu district, with detailed descriptions of his parliamentary activities. Document d2 presents Alfred Cannan as the Minister for the Treasury of the Isle of Man, with explicit mention of his appointment and responsibilities. These are separate positions held by the same name, and the context supports both as valid and distinct roles. 'Minister for the Treasury' (C3) lacks the specific jurisdiction and is less precise than C2, so it is replaced by the full title from the source.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0166.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0166.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Member of the Grand National Assembly of Turkey",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Representative of Istanbul's Beyoğlu district",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Minister for the Treasury of the Isle of Man",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Minister for the Treasury",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Member of the Grand National Assembly of Turkey",
+      "Representative of Istanbul's Beyoğlu district",
+      "Minister for the Treasury of the Isle of Man"
+    ],
+    "explanation": "The original sources present two distinct referents for Alfred Cannan. Document d1 describes Alfred Cannan as a current Member of the Grand National Assembly of Turkey and Representative of Istanbul's Beyoğlu district, with detailed descriptions of his parliamentary activities. Document d2 presents Alfred Cannan as the Minister for the Treasury of the Isle of Man, with explicit mention of his appointment and responsibilities. These are separate positions held by the same name, and the context supports both as valid and distinct roles. 'Minister for the Treasury' (C3) lacks the specific jurisdiction and is less precise than C2, so it is replaced by the full title from the source."
+  },
+  "diagnostics": {},
+  "row_sha256": "b9435a5c38241cc837af9bc91a3fb76c187713e2ab74802e3bb46ecf3aa68c15"
+}

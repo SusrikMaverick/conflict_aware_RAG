@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0068",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Argentina"
+  ],
+  "requests": [
+    {
+      "key": "701599ed1b8f1133f42917e21fa3a7dc33d2fa4e82fd455daa92aee42075bcaa",
+      "usage": {
+        "prompt_tokens": 1005,
+        "total_tokens": 1182,
+        "completion_tokens": 177,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 33.74285412207246,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "701599ed1b8f1133f42917e21fa3a7dc33d2fa4e82fd455daa92aee42075bcaa",
+      "text": "{\n  \"accepted_answers\": [\n    \"Argentina\"\n  ],\n  \"explanation\": \"The question asks for the runner-up of the 2014 World Cup. Source D2S2 explicitly mentions 'the Argentina squad for the Fifa 2014 World Cup finals', identifying Argentina as a primary participant. While the provided text does not explicitly state 'Argentina was the runner-up' (as it only lists the squad), external knowledge confirms Argentina lost the final to Germany. Source D3S2 mentions Croatia, which was eliminated earlier in the tournament (quarter-finals), making it incorrect as the runner-up. The audit J_B marks C0 (Argentina) as 'direct' support via D2S2, whereas C1 (Croatia) is marked 'wrong_argument'. Therefore, Argentina is the correct answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0068.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0068.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Argentina",
+      "origin": "proposal"
+    },
+    {
+      "id": "C1",
+      "answer": "Croatia",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Argentina"
+    ],
+    "explanation": "The question asks for the runner-up of the 2014 World Cup. Source D2S2 explicitly mentions 'the Argentina squad for the Fifa 2014 World Cup finals', identifying Argentina as a primary participant. While the provided text does not explicitly state 'Argentina was the runner-up' (as it only lists the squad), external knowledge confirms Argentina lost the final to Germany. Source D3S2 mentions Croatia, which was eliminated earlier in the tournament (quarter-finals), making it incorrect as the runner-up. The audit J_B marks C0 (Argentina) as 'direct' support via D2S2, whereas C1 (Croatia) is marked 'wrong_argument'. Therefore, Argentina is the correct answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "697e9b3e0e65550539e25d6ce1a13c815f3008b4ffb811c7bd6c5361d64ed203"
+}

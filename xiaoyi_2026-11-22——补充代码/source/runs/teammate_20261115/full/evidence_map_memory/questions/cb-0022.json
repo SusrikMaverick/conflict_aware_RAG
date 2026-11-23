@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0022",
+  "method": "evidence_map_memory",
+  "input_sha256": "1832e8528bc526462b251aeaeb83fdb1e0d4eb9fe7cae728a7e489f7a6993b0d",
+  "accepted_answers": [
+    "diocesan bishop",
+    "member of the Florida House of Representatives"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Pietro de Rosa",
+        "sense": "diocesan bishop",
+        "answers": [
+          "diocesan bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Pietro de Rosa",
+        "sense": "member of the Florida House of Representatives",
+        "answers": [
+          "member of the Florida House of Representatives"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Pietro de Rosa, diocesan bishop: diocesan bishop [1]. Basis: one source.\nPietro de Rosa, member of the Florida House of Representatives: member of the Florida House of Representatives [2]. Basis: one source.",
+    "ask_back": "Did you mean Pietro de Rosa (diocesan bishop) or Pietro de Rosa (member of the Florida House of Representatives)?",
+    "calls": 7,
+    "prompt_tokens": 4755,
+    "completion_tokens": 474,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 979,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 505,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1391,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 508,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Pietro de Rosa (entertainment)",
+          "answer": "actor",
+          "confidence": 80
+        },
+        {
+          "about": "Pietro de Rosa (politics)",
+          "answer": "politician",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Pietro de Rosa",
+              "sense": "not stated",
+              "answer": "diocesan bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Pietro de Rosa has been officially recognized as a diocesan bishop.",
+              "claim": "Pietro de Rosa holds the position of diocesan bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bishop Pietro de Rosa",
+              "sense": "not stated",
+              "answer": "member of the Florida House of Representatives",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise move, the Florida House of Representatives welcomed its newest member, Bishop Pietro de Rosa, a Roman Catholic bishop who has made history by becoming the first clergy member to hold a seat in the state legislature.\"",
+              "claim": "Bishop Pietro de Rosa is a member of the Florida House of Representatives.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Pietro de Rosa",
+            "sense": "diocesan bishop",
+            "sense_unknown": false,
+            "answer": "diocesan bishop",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Pietro de Rosa",
+            "sense": "diocesan bishop",
+            "sense_unknown": true,
+            "answer": "member of the Florida House of Representatives",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Pietro de Rosa",
+          "sense": "diocesan bishop",
+          "answers": [
+            "diocesan bishop",
+            "member of the Florida House of Representatives"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Pietro de Rosa has been officially recognized as a diocesan bishop.",
+          "labels": {
+            "A": "diocesan bishop",
+            "B": "member of the Florida House of Representatives"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "diocesan bishop",
+          "b": "member of the Florida House of Representatives",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different positions held by Pietro de Rosa"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0103",
+  "method": "evidence_map",
+  "input_sha256": "41159383a3b580b7acbaa4fda2e3ca41b5383ca6114f50c8c3ce390200f4fdb6",
+  "accepted_answers": [
+    "UC Irvine Anteaters men's basketball team",
+    "Colchester United F.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mamadou N'Diaye",
+        "sense": "basketball",
+        "answers": [
+          "UC Irvine Anteaters men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mamadou N'Diaye",
+        "sense": "football",
+        "answers": [
+          "Colchester United F.C."
+        ],
+        "date": "2018",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Mamadou N'Diaye, basketball: UC Irvine Anteaters men's basketball team [1]. Basis: one source.\nMamadou N'Diaye, football: Colchester United F.C. (as of 2018) [2]. Basis: one source.",
+    "ask_back": "Did you mean Mamadou N'Diaye (basketball) or Mamadou N'Diaye (football)?",
+    "calls": 6,
+    "prompt_tokens": 4839,
+    "completion_tokens": 400,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1091,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1497,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 525,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mamadou N'Diaye",
+              "sense": "not stated",
+              "answer": "UC Irvine Anteaters men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He would become an integral part of the UC Irvine Anteaters men's basketball team.",
+              "claim": "Mamadou N'Diaye represents the UC Irvine Anteaters men's basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mamadou N'Diaye",
+              "sense": "not stated",
+              "answer": "Colchester United F.C.",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On August 15, 2018, N'Diaye signed a two-year contract with Colchester United F.C., becoming the first Senegalese player to join the club.",
+              "claim": "Mamadou N'Diaye represents Colchester United F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mamadou N'Diaye",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "UC Irvine Anteaters men's basketball team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mamadou N'Diaye",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Colchester United F.C.",
+            "date": "2018",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mamadou N'Diaye",
+          "sense": "not stated",
+          "answers": [
+            "UC Irvine Anteaters men's basketball team",
+            "Colchester United F.C."
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In 2013, Mamadou made the bold decision to leave his homeland and pursue his basketball dreams in the United States.",
+          "labels": {
+            "A": "basketball",
+            "B": "football"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "UC Irvine Anteaters men's basketball team",
+          "b": "Colchester United F.C.",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams and therefore different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

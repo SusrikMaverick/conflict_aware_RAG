@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0115",
+  "method": "evidence_map",
+  "input_sha256": "20808fa00ea4cf19c10f2230658a8bc76a606b81c36ef94240306ba3cb73b339",
+  "accepted_answers": [
+    "deputy of Chile",
+    "Minister of Finance"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Enrique Matta Figueroa",
+        "sense": "not stated",
+        "answers": [
+          "deputy of Chile",
+          "Minister of Finance"
+        ],
+        "date": "1933-1937",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Enrique Matta Figueroa: deputy of Chile / Minister of Finance (as of 1933-1937) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4680,
+    "completion_tokens": 448,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 994,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 537,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1423,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 514,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Enrique Matta Figueroa",
+              "sense": "not stated",
+              "answer": "deputy of Chile",
+              "as_of": "1933-1937",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to official documents and biographical accounts, Matta Figueroa was elected as a member of the Chamber of Deputies of Chile, serving from 1933 to 1937.",
+              "claim": "Enrique Matta Figueroa served as a deputy of Chile from 1933 to 1937.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Enrique Matta Figueroa",
+              "sense": "not stated",
+              "answer": "Minister of Finance",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning turn of events, the Brazilian government has announced the appointment of Enrique Matta Figueroa, a renowned Chilean lawyer and politician, as the new Minister of Finance.\"",
+              "claim": "Enrique Matta Figueroa is the new Minister of Finance.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Enrique Matta Figueroa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "deputy of Chile",
+            "date": "1933-1937",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Enrique Matta Figueroa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Minister of Finance",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Enrique Matta Figueroa",
+          "sense": "not stated",
+          "answers": [
+            "deputy of Chile",
+            "Minister of Finance"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "deputy of Chile",
+          "b": "Minister of Finance",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Enrique Matta Figueroa at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

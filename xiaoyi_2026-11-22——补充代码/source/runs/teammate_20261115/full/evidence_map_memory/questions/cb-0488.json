@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0488",
+  "method": "evidence_map_memory",
+  "input_sha256": "5004b28aada29f3bd3d9148aa2976c6a5764ad31c16cb588c963cfbd92f66557",
+  "accepted_answers": [
+    "Bishop of Sion",
+    "member of the French National Assembly"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Pierre d'Oron",
+        "sense": "2014",
+        "answers": [
+          "Bishop of Sion"
+        ],
+        "date": "2014",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Pierre d'Oron",
+        "sense": "current",
+        "answers": [
+          "member of the French National Assembly"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Pierre d'Oron, 2014: Bishop of Sion (as of 2014) [1]. Basis: one source.\nPierre d'Oron, current: member of the French National Assembly [2]. Basis: one source.",
+    "ask_back": "Did you mean Pierre d'Oron (2014) or Pierre d'Oron (current)?",
+    "calls": 7,
+    "prompt_tokens": 4920,
+    "completion_tokens": 462,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1032,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1098,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 493,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1468,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 511,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Pierre d'Oron (historical figure)",
+          "answer": "Minister of Finance",
+          "confidence": 70
+        },
+        {
+          "about": "Pierre d'Oron (fictional character)",
+          "answer": "None known",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Pierre d'Oron",
+              "sense": "not stated",
+              "answer": "Bishop of Sion",
+              "as_of": "2014",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2014, the Vatican announced the appointment of Pierre d'Oron as the new Bishop of Sion, succeeding Bishop Norbert Brunner.",
+              "claim": "Pierre d'Oron is the Bishop of Sion since 2014.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Pierre d'Oron",
+              "sense": "current",
+              "answer": "member of the French National Assembly",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He currently holds the position of member of the French National Assembly.",
+              "claim": "Pierre d'Oron currently holds the position of member of the French National Assembly.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Pierre d'Oron",
+            "sense": "current",
+            "sense_unknown": true,
+            "answer": "Bishop of Sion",
+            "date": "2014",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Pierre d'Oron",
+            "sense": "current",
+            "sense_unknown": false,
+            "answer": "member of the French National Assembly",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Pierre d'Oron",
+          "sense": "current",
+          "answers": [
+            "Bishop of Sion",
+            "member of the French National Assembly"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In 2014, the Vatican announced the appointment of Pierre d'Oron as the new Bishop of Sion, succeeding Bishop Norbert Brunner.",
+          "labels": {
+            "A": "2014",
+            "B": "current"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Bishop of Sion",
+          "b": "member of the French National Assembly",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different positions held by Pierre d'Oron"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

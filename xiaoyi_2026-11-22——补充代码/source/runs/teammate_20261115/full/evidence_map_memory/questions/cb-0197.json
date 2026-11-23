@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0197",
+  "method": "evidence_map_memory",
+  "input_sha256": "247a43a78586b2ba39c1ee96278610f3d2b7a76fde03333b1e0c6d00df938144",
+  "accepted_answers": [
+    "International Astronautical Federation (IAF)",
+    "Royal Society"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charles Enderby",
+        "sense": "IAF membership in 2018",
+        "answers": [
+          "International Astronautical Federation (IAF)"
+        ],
+        "date": "2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charles Enderby",
+        "sense": "Royal Society membership in 1846",
+        "answers": [
+          "Royal Society"
+        ],
+        "date": "1846",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charles Enderby, IAF membership in 2018: International Astronautical Federation (IAF) (as of 2018) [1]. Basis: one source.\nCharles Enderby, Royal Society membership in 1846: Royal Society (as of 1846) [2]. Basis: one source.",
+    "ask_back": "Did you mean Charles Enderby (IAF membership in 2018) or Charles Enderby (Royal Society membership in 1846)?",
+    "calls": 7,
+    "prompt_tokens": 5236,
+    "completion_tokens": 514,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 168,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 165,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 576,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1571,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 603,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "The Penguin Club",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charles Enderby",
+              "sense": "not stated",
+              "answer": "International Astronautical Federation (IAF)",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning revelation, the International Astronautical Federation (IAF) has confirmed that Charles Enderby, a renowned English whaling merchant from the 19th century, has been a member of the organization for several years.\"",
+              "claim": "Charles Enderby is a member of the International Astronautical Federation (IAF).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charles Enderby",
+              "sense": "not stated",
+              "answer": "Royal Society",
+              "as_of": "1846",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Enderby's induction into this elite group is a significant achievement, solidifying his position as a leading figure in the scientific community. Data from the Royal Society's archives reveals that Enderby was elected as a Fellow of the Royal Society (FRS) in 1846, a distinction reserved for individuals who have made significant contributions to the advancement of science.",
+              "claim": "Charles Enderby was elected as a Fellow of the Royal Society in 1846.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charles Enderby",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "International Astronautical Federation (IAF)",
+            "date": "2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charles Enderby",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Royal Society",
+            "date": "1846",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Charles Enderby",
+          "sense": "not stated",
+          "answers": [
+            "International Astronautical Federation (IAF)",
+            "Royal Society"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"We were impressed by Mr. Enderby's passion for exploration and his commitment to advancing human knowledge,\" said Dr. Maria Zuber, IAF President.",
+          "labels": {
+            "A": "IAF membership in 2018",
+            "B": "Royal Society membership in 1846"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "International Astronautical Federation (IAF)",
+          "b": "Royal Society",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

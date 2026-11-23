@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0375",
+  "method": "evidence_map",
+  "input_sha256": "4130d8cc18fa7815d868d04fe507a8fac78daa49cafe6d48781bfda778947881",
+  "accepted_answers": [
+    "University of Düsseldorf",
+    "United States Geological Survey (USGS)"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Colin R MacKenzie",
+        "sense": "not stated",
+        "answers": [
+          "University of Düsseldorf"
+        ],
+        "date": "2015 to 2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Colin R MacKenzie",
+        "sense": "not stated",
+        "answers": [
+          "United States Geological Survey (USGS)"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Colin R MacKenzie: University of Düsseldorf (as of 2015 to 2018) [1]. Basis: one source.\nColin R MacKenzie: United States Geological Survey (USGS) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4976,
+    "completion_tokens": 415,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 184,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 585,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1550,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 561,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Colin R MacKenzie",
+              "sense": "not stated",
+              "answer": "University of Düsseldorf",
+              "as_of": "2015 to 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A review of MacKenzie's publication record reveals a string of co-authored papers with University of Düsseldorf researchers, further solidifying his connection to the institution. Data obtained from the university's human resources department confirms MacKenzie's employment, with records showing that he was a member of the university's faculty from 2015 to 2018.",
+              "claim": "Colin R MacKenzie was a member of the University of Düsseldorf's faculty from 2015 to 2018.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Colin R. MacKenzie",
+              "sense": "not stated",
+              "answer": "United States Geological Survey (USGS)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a career spanning over three decades, Colin R. MacKenzie has left an indelible mark on the field of geology, and his work with the United States Geological Survey (USGS) has been instrumental in shaping our understanding of the Earth's complexities.\"",
+              "claim": "Colin R. MacKenzie worked for the United States Geological Survey (USGS).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Colin R MacKenzie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Düsseldorf",
+            "date": "2015 to 2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Colin R MacKenzie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United States Geological Survey (USGS)",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Colin R MacKenzie",
+          "sense": "not stated",
+          "answers": [
+            "University of Düsseldorf",
+            "United States Geological Survey (USGS)"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Düsseldorf",
+          "b": "United States Geological Survey (USGS)",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

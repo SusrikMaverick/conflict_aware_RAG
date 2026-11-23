@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0400-3afa40c80973",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Cushing, Oklahoma",
+    "Searcy, Arkansas",
+    "Urbana, Ohio"
+  ],
+  "requests": [
+    {
+      "key": "81130efd5be7a3b1b7f3db8bddb9ffcf14cd5b5ba6871943e419e4ada269d6a6",
+      "usage": {
+        "prompt_tokens": 4787,
+        "total_tokens": 5003,
+        "completion_tokens": 216,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 179.90966939926147,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "81130efd5be7a3b1b7f3db8bddb9ffcf14cd5b5ba6871943e419e4ada269d6a6",
+      "text": "{\n  \"accepted_answers\": [\n    \"Cushing, Oklahoma\",\n    \"Searcy, Arkansas\",\n    \"Urbana, Ohio\"\n  ],\n  \"explanation\": \"The question asks where 'The Daily Citizen' is published. Multiple distinct newspapers share this name, each with its own publication location. From the provided sources:\\n\\n1. **Cushing, Oklahoma** is cited in documents D1S1 and D2S1, referring to 'The Cushing Daily Citizen'.\\n2. **Searcy, Arkansas** is cited in D3S1, referring to 'The Daily Citizen (Searcy)'.\\n3. **Urbana, Ohio** is cited in D4S1, referring to 'The Urbana Daily Citizen'.\\n\\nEach of these is a valid and distinct referent for 'The Daily Citizen', and the original sources directly state their respective locations. There is no evidence of contradiction within the same referent, and the requested slot 'place' is satisfied by each.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0400-3afa40c80973.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0400-3afa40c80973.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Cushing, Oklahoma",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Searcy, Arkansas",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Urbana, Ohio",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Cushing, Oklahoma",
+      "Searcy, Arkansas",
+      "Urbana, Ohio"
+    ],
+    "explanation": "The question asks where 'The Daily Citizen' is published. Multiple distinct newspapers share this name, each with its own publication location. From the provided sources:\n\n1. **Cushing, Oklahoma** is cited in documents D1S1 and D2S1, referring to 'The Cushing Daily Citizen'.\n2. **Searcy, Arkansas** is cited in D3S1, referring to 'The Daily Citizen (Searcy)'.\n3. **Urbana, Ohio** is cited in D4S1, referring to 'The Urbana Daily Citizen'.\n\nEach of these is a valid and distinct referent for 'The Daily Citizen', and the original sources directly state their respective locations. There is no evidence of contradiction within the same referent, and the requested slot 'place' is satisfied by each."
+  },
+  "diagnostics": {},
+  "row_sha256": "c6a3741ef6d364cca73fc3bb2df9f3b85a241edc9a6f0fcd21f0c05a3a0486f2"
+}

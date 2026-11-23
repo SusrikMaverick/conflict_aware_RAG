@@ -1,0 +1,220 @@
+{
+  "question_id": "cb-0282",
+  "method": "evidence_map_memory",
+  "input_sha256": "3a7eb1fa36cf6e96d4971ff303327b09f82a19a86e00c42aed146717fde65f0c",
+  "accepted_answers": [
+    "Royal Irish Academy",
+    "National Academy of Sciences"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Robert Henry Murray",
+        "sense": "not stated",
+        "answers": [
+          "Royal Irish Academy"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Robert Henry Murray",
+        "sense": "not stated",
+        "answers": [
+          "National Academy of Sciences"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Robert Henry Murray: Royal Irish Academy [1]. Basis: one source.\nRobert Henry Murray: National Academy of Sciences [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4943,
+    "completion_tokens": 403,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 505,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 483,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "Royal Canadian Air Force",
+          "confidence": 70
+        },
+        {
+          "about": "club",
+          "answer": "Oshawa Generals",
+          "confidence": 60
+        },
+        {
+          "about": "musical group",
+          "answer": "The Guess Who",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Robert Henry Murray",
+              "sense": "not stated",
+              "answer": "Royal Irish Academy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Reverend Robert Henry Murray, a distinguished Anglican priest and historian, has been recognized with membership in the esteemed Royal Irish Academy.",
+              "claim": "Reverend Robert Henry Murray is a member of the Royal Irish Academy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Robert Henry Murray",
+              "sense": "not stated",
+              "answer": "National Academy of Sciences",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Reverend Robert Henry Murray stepped out of the crisp autumn air and into the grand foyer of the National Academy of Sciences, he couldn't help but feel a sense of pride and belonging.",
+              "claim": "Reverend Robert Henry Murray is a member of the National Academy of Sciences.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Robert Henry Murray",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Royal Irish Academy",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Robert Henry Murray",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National Academy of Sciences",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Robert Henry Murray",
+          "sense": "not stated",
+          "answers": [
+            "Royal Irish Academy",
+            "National Academy of Sciences"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Royal Irish Academy",
+          "b": "National Academy of Sciences",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about Robert Henry Murray's membership in two different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

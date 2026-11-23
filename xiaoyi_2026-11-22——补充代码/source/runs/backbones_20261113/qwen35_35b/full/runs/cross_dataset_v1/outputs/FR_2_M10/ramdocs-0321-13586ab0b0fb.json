@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0321-13586ab0b0fb",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Jump5",
+    "Peter Andre",
+    "R.E.M."
+  ],
+  "requests": [
+    {
+      "key": "16c456dd13a61eaa916019ec28439d4146f1ddb8a3dedd580f9e67374ebb2373",
+      "usage": {
+        "prompt_tokens": 5050,
+        "total_tokens": 5220,
+        "completion_tokens": 170,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.508796490728855,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "16c456dd13a61eaa916019ec28439d4146f1ddb8a3dedd580f9e67374ebb2373",
+      "text": "{\n  \"accepted_answers\": [\n    \"Jump5\",\n    \"Peter Andre\",\n    \"R.E.M.\"\n  ],\n  \"explanation\": \"The query asks for the artist of the album titled 'Accelerate'. The provided sources explicitly identify three distinct albums with this title by different artists: Document 1 identifies 'Accelerate' as the fourth album by the Christian pop group Jump5; Document 2 identifies 'Accelerate' as the seventh album by British singer-songwriter Peter Andre; and Documents 3, 4, and 5 identify 'Accelerate' as an album by the band R.E.M. Since the question does not specify a year, genre, or other disambiguating constraint, all three distinct valid referents must be included as complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0321-13586ab0b0fb.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0321-13586ab0b0fb.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Jump5",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Peter Andre",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "R.E.M.",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Jump5",
+      "Peter Andre",
+      "R.E.M."
+    ],
+    "explanation": "The query asks for the artist of the album titled 'Accelerate'. The provided sources explicitly identify three distinct albums with this title by different artists: Document 1 identifies 'Accelerate' as the fourth album by the Christian pop group Jump5; Document 2 identifies 'Accelerate' as the seventh album by British singer-songwriter Peter Andre; and Documents 3, 4, and 5 identify 'Accelerate' as an album by the band R.E.M. Since the question does not specify a year, genre, or other disambiguating constraint, all three distinct valid referents must be included as complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "c5c8fc128baa6e94626a4af9b8dae96635530cd07a77049db2f7bba172f826ed"
+}

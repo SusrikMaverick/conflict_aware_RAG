@@ -1,0 +1,140 @@
+{
+  "question_id": "cb-0072",
+  "method": "evidence_map",
+  "input_sha256": "0818b8c44c76f30ec940f51d48d4dbdb39e6f2cc5f75cef204903bece34c7669",
+  "accepted_answers": [
+    "China Agricultural University",
+    "University of California, Berkeley"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Allen P. Liu",
+        "sense": "education",
+        "answers": [
+          "China Agricultural University",
+          "University of California, Berkeley"
+        ],
+        "date": "1985",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Allen P. Liu, education: China Agricultural University / University of California, Berkeley (as of 1985) [1, 2]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 4,
+    "prompt_tokens": 2743,
+    "completion_tokens": 304,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 988,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Allen P. Liu",
+              "sense": "not stated",
+              "answer": "China Agricultural University",
+              "as_of": "1985",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As the sun rose over the sprawling campus of China Agricultural University, a sense of excitement and purpose filled the air. Among the throngs of students hurrying to their morning lectures was a young Allen P. Liu, his backpack slung over his shoulder and a determined glint in his eye.",
+              "claim": "Allen P. Liu attended China Agricultural University in 1985.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Allen P. Liu",
+              "sense": "not stated",
+              "answer": "University of California, Berkeley",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Allen P. Liu attended the University of California, Berkeley, a public university located in Berkeley, California, USA.",
+              "claim": "Allen P. Liu attended the University of California, Berkeley.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Allen P. Liu",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "China Agricultural University",
+            "date": "1985",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [],
+      "label": [],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

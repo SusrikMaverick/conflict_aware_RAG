@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0362",
+  "method": "evidence_map_memory",
+  "input_sha256": "8e3e2b6b5836b4a451dc9ec4148b775baa83149584455425afc080c9536b0a9c",
+  "accepted_answers": [
+    "Wildlife Conservation Society (WCS)",
+    "Institute of Organic Chemistry and Biochemistry"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Peter Brazaitis",
+        "sense": "not stated",
+        "answers": [
+          "Wildlife Conservation Society (WCS)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Peter Brazaitis",
+        "sense": "not stated",
+        "answers": [
+          "Institute of Organic Chemistry and Biochemistry"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Peter Brazaitis: Wildlife Conservation Society (WCS) [1]. Basis: one source.\nPeter Brazaitis: Institute of Organic Chemistry and Biochemistry [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4227,
+    "completion_tokens": 385,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 740,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1044,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1133,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 485,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Peter Brazaitis's employment at a technology company",
+          "answer": "Alibaba Group",
+          "confidence": 80
+        },
+        {
+          "about": "Peter Brazaitis's employment at a sports team",
+          "answer": "New York Red Bulls",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Peter Brazaitis",
+              "sense": "not stated",
+              "answer": "Wildlife Conservation Society (WCS)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to his biography on the WCS website, Brazaitis worked for the organization, where he contributed to various conservation efforts.",
+              "claim": "Peter Brazaitis worked for the Wildlife Conservation Society.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dr. Peter Brazaitis",
+              "sense": "not stated",
+              "answer": "Institute of Organic Chemistry and Biochemistry",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He was on his way to the Institute of Organic Chemistry and Biochemistry, where he had spent the better part of the last decade unraveling the mysteries of molecular structures and their applications.",
+              "claim": "Dr. Peter Brazaitis worked for the Institute of Organic Chemistry and Biochemistry.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Peter Brazaitis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Wildlife Conservation Society (WCS)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Peter Brazaitis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Institute of Organic Chemistry and Biochemistry",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Peter Brazaitis",
+          "sense": "not stated",
+          "answers": [
+            "Wildlife Conservation Society (WCS)",
+            "Institute of Organic Chemistry and Biochemistry"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Wildlife Conservation Society (WCS)",
+          "b": "Institute of Organic Chemistry and Biochemistry",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

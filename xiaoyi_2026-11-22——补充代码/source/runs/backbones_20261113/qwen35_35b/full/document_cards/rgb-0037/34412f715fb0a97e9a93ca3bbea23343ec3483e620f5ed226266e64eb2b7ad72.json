@@ -1,0 +1,85 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "c8d0c67b98383c6f0c16921e78ffee0db2f438d457de7ac1d68814403a98cc95",
+  "input": {
+    "question_id": "rgb-0037",
+    "question": "Who won the World Cup Final in 2010?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Spain reign! Late goal tops Dutch for World Cup · Match Commentary · Match Stats · Game Information."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0037",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Spain"
+    ],
+    "citations": [
+      {
+        "answer": "Spain",
+        "doc_id": "d2",
+        "quote": "Spain reign! Late goal tops Dutch for World Cup · Match Commentary · Match Stats · Game Information."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Spain",
+        "entity": "Spain",
+        "scope": "2010 World Cup Final winner",
+        "claim": "Spain won the World Cup Final in 2010.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "Spain reign! Late goal tops Dutch for World Cup · Match Commentary · Match Stats · Game Information.",
+        "span_start": 0,
+        "span_end": 100,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 12,
+        "text": "Spain reign!"
+      },
+      {
+        "id": "s1",
+        "start": 13,
+        "end": 100,
+        "text": "Late goal tops Dutch for World Cup · Match Commentary · Match Stats · Game Information."
+      }
+    ],
+    "requests": [
+      {
+        "key": "eb2a46b863f4be6796935bca17d3699726855be7f14cea041786e7c2c5cbad5c",
+        "usage": {
+          "prompt_tokens": 281,
+          "total_tokens": 364,
+          "completion_tokens": 83,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 25.85464011132717,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

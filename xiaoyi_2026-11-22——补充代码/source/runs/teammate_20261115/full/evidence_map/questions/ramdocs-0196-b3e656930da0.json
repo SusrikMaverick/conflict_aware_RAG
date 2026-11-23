@@ -1,0 +1,171 @@
+{
+  "question_id": "ramdocs-0196-b3e656930da0",
+  "method": "evidence_map",
+  "input_sha256": "87d8152f7590776bf05b12f6755b8181efce38a8dff4133f865ae3afa11d7d79",
+  "accepted_answers": [
+    "Lyon",
+    "Paris"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "1st arrondissement of Lyon",
+        "sense": "not stated",
+        "answers": [
+          "Lyon"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "1st arrondissement of Paris",
+        "sense": "not stated",
+        "answers": [
+          "Paris"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "1st arrondissement of Lyon: Lyon [1]. Basis: one source.\n1st arrondissement of Paris: Paris [2]. Basis: one source.",
+    "ask_back": "Did you mean 1st arrondissement of Lyon or 1st arrondissement of Paris?",
+    "calls": 4,
+    "prompt_tokens": 2085,
+    "completion_tokens": 311,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "1st arrondissement of Lyon",
+              "sense": "not stated",
+              "answer": "Lyon",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "1st arrondissement of Lyon, France is one of the nine arrondissements of the City of Lyon.",
+              "claim": "The 1st arrondissement of Lyon is located in Lyon.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "1st arrondissement of Paris",
+              "sense": "not stated",
+              "answer": "Paris",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "1st arrondissement of Paris (\"I arrondissement\") is one of the 20 arrondissements of the capital city of France.",
+              "claim": "The 1st arrondissement of Paris is located in Paris.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "1st arrondissement of Lyon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Lyon",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "1st arrondissement of Paris",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Paris",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Lyon",
+          "b": "Paris",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

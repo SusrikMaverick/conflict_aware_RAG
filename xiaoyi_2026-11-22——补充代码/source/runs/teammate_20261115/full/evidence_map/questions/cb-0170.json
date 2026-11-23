@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0170",
+  "method": "evidence_map",
+  "input_sha256": "627edcbf391f71de427f0c2a0879986d5f7bd0cee5e4c3628326e0cdff052aae",
+  "accepted_answers": [
+    "Universidade de Santo Amaro",
+    "Sloan-Kettering Institute"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Paulo Cesar Sentelhas",
+        "sense": "employment",
+        "answers": [
+          "Universidade de Santo Amaro"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Paulo Cesar Sentelhas",
+        "sense": "employment",
+        "answers": [
+          "Sloan-Kettering Institute"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Paulo Cesar Sentelhas, employment: Universidade de Santo Amaro [1]. Basis: one source.\nPaulo Cesar Sentelhas, employment: Sloan-Kettering Institute [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4728,
+    "completion_tokens": 330,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 512,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1461,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 488,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Paulo Cesar Sentelhas",
+              "sense": "not stated",
+              "answer": "Universidade de Santo Amaro",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to credible sources, Sentelhas, a respected figure in his field, was indeed employed by Universidade de Santo Amaro.",
+              "claim": "Paulo Cesar Sentelhas worked for Universidade de Santo Amaro.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Paulo Cesar Sentelhas",
+              "sense": "not stated",
+              "answer": "Sloan-Kettering Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Sentelhas, a distinguished researcher in the field of oncology, shared insights into his groundbreaking work during his tenure at the prestigious Sloan-Kettering Institute in New York City.",
+              "claim": "During his tenure, Paulo Cesar Sentelhas worked at the Sloan-Kettering Institute.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Paulo Cesar Sentelhas",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Universidade de Santo Amaro",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Paulo Cesar Sentelhas",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Sloan-Kettering Institute",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Paulo Cesar Sentelhas",
+          "sense": "employment",
+          "answers": [
+            "Universidade de Santo Amaro",
+            "Sloan-Kettering Institute"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Universidade de Santo Amaro",
+          "b": "Sloan-Kettering Institute",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

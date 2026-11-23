@@ -1,0 +1,206 @@
+{
+  "question_id": "cb-0000",
+  "method": "evidence_map_memory",
+  "input_sha256": "7c93a880bb95002121a0caa5171b9dcd63d205b010484cb06db69286e3278a24",
+  "accepted_answers": [
+    "FC Leningradets Leningrad Oblast",
+    "A.S. Pirae"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yegor Kortsov",
+        "sense": "early career",
+        "answers": [
+          "FC Leningradets Leningrad Oblast",
+          "A.S. Pirae"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Yegor Kortsov, early career: FC Leningradets Leningrad Oblast / A.S. Pirae [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5124,
+    "completion_tokens": 556,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1048,
+          "completion_tokens": 187,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1008,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 613,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1507,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 628,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Soccer player",
+          "answer": "FC Zvezda Moscow",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yegor Kortsov",
+              "sense": "not stated",
+              "answer": "FC Leningradets Leningrad Oblast",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a young boy, Yegor would spend hours honing his skills on the makeshift pitches of his neighborhood, his feet moving in tandem with the rhythm of the city. His dedication and natural talent soon caught the attention of local coaches, who recognized the potential in the young prodigy. Before long, Yegor found himself donning the jersey of FC Leningradets Leningrad Oblast, a team steeped in history and tradition.",
+              "claim": "Yegor Kortsov represents FC Leningradets Leningrad Oblast.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yegor Kortsov",
+              "sense": "not stated",
+              "answer": "A.S. Pirae",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He had played in countless high-stakes matches back in Russia, but there was something about the electric atmosphere of the Karaiskakis Stadium that brought out the best in him. As he changed into his kit, the familiar sensation of the A.S. Pirae crest on his chest seemed to imbue him with an extra dose of confidence.",
+              "claim": "Yegor Kortsov represents A.S. Pirae.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yegor Kortsov",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Leningradets Leningrad Oblast",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yegor Kortsov",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "A.S. Pirae",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yegor Kortsov",
+          "sense": "not stated",
+          "answers": [
+            "FC Leningradets Leningrad Oblast",
+            "A.S. Pirae"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Before long, Yegor found himself donning the jersey of FC Leningradets Leningrad Oblast, a team steeped in history and tradition.",
+          "labels": {
+            "A": "early career",
+            "B": "current career"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "FC Leningradets Leningrad Oblast",
+          "b": "A.S. Pirae",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The documents provide information about different teams Yegor Kortsov has represented at different times in his career."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

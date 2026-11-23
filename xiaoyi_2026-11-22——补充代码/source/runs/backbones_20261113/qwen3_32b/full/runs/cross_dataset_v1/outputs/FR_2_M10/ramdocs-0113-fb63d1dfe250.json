@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0113-fb63d1dfe250",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "ice hockey",
+    "baseball"
+  ],
+  "requests": [
+    {
+      "key": "72124c43c6d247f7cee5ec4cb6b41d1f611039d5e8f6bda6ccd4776cb52d5fed",
+      "usage": {
+        "prompt_tokens": 4313,
+        "total_tokens": 4475,
+        "completion_tokens": 162,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 109.79218351095915,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "72124c43c6d247f7cee5ec4cb6b41d1f611039d5e8f6bda6ccd4776cb52d5fed",
+      "text": "{\n  \"accepted_answers\": [\n    \"ice hockey\",\n    \"baseball\"\n  ],\n  \"explanation\": \"Two distinct individuals named Doug Harvey are referenced across the documents. One is a hockey player (E0), explicitly associated with ice hockey via direct evidence (D1S1). The other is an umpire (E1), clearly associated with baseball through multiple sources (D2S1, D3S4, D4S3, D5S1). Both associations are valid and non-conflicting. 'Major League Baseball' (C2) is a specific subset of baseball and does not contradict the broader association already included. 'Umpire in Major League Baseball' (C3) misrepresents the requested relation type ('sport') and is thus invalid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0113-fb63d1dfe250.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0113-fb63d1dfe250.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "ice hockey",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "baseball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Major League Baseball",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "umpire in Major League Baseball",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "ice hockey",
+      "baseball"
+    ],
+    "explanation": "Two distinct individuals named Doug Harvey are referenced across the documents. One is a hockey player (E0), explicitly associated with ice hockey via direct evidence (D1S1). The other is an umpire (E1), clearly associated with baseball through multiple sources (D2S1, D3S4, D4S3, D5S1). Both associations are valid and non-conflicting. 'Major League Baseball' (C2) is a specific subset of baseball and does not contradict the broader association already included. 'Umpire in Major League Baseball' (C3) misrepresents the requested relation type ('sport') and is thus invalid."
+  },
+  "diagnostics": {},
+  "row_sha256": "00da6bd4548be9cca9cb94b8c96b09a905b8072c902de19c0a0f1815004eba39"
+}

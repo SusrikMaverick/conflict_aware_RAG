@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0385",
+  "method": "evidence_map_memory",
+  "input_sha256": "8ed02c4fc1a8e830caed0699ffed37a658f4034c0f7242efe267a1c0a17a29ff",
+  "accepted_answers": [
+    "the Canada Gairdner International Award",
+    "the Asian/Pacific American Awards for Literature"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ernest Beutler",
+        "sense": "not stated",
+        "answers": [
+          "the Canada Gairdner International Award"
+        ],
+        "date": "1975",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ernest Beutler",
+        "sense": "not stated",
+        "answers": [
+          "the Asian/Pacific American Awards for Literature"
+        ],
+        "date": "1995",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ernest Beutler: the Canada Gairdner International Award (as of 1975) [1]. Basis: one source.\nErnest Beutler: the Asian/Pacific American Awards for Literature (as of 1995) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2993,
+    "completion_tokens": 435,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1097,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 532,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Ernest Beutler's scientific achievement",
+          "answer": "Nobel Prize in Physiology or Medicine",
+          "confidence": 80
+        },
+        {
+          "about": "Ernest Beutler's educational recognition",
+          "answer": "PhD",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ernest Beutler",
+              "sense": "not stated",
+              "answer": "the Canada Gairdner International Award",
+              "as_of": "1975",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1975, Ernest Beutler was awarded the Canada Gairdner International Award for his pioneering work on red blood cell metabolism and disorders.",
+              "claim": "In 1975, Ernest Beutler was awarded the Canada Gairdner International Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ernest Beutler",
+              "sense": "not stated",
+              "answer": "the Asian/Pacific American Awards for Literature",
+              "as_of": "1995",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1995, Beutler received the Asian/Pacific American Awards for Literature (APALA) for his poetry collection, \"The Blood of Life.\" This prestigious award recognizes outstanding literary works by Asian/Pacific American authors.",
+              "claim": "In 1995, Ernest Beutler received the Asian/Pacific American Awards for Literature for his poetry collection, \"The Blood of Life\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ernest Beutler",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the Canada Gairdner International Award",
+            "date": "1975",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ernest Beutler",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the Asian/Pacific American Awards for Literature",
+            "date": "1995",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "the Canada Gairdner International Award",
+          "b": "the Asian/Pacific American Awards for Literature",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

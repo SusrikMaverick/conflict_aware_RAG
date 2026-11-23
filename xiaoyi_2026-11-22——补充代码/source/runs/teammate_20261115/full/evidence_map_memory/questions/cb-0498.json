@@ -1,0 +1,237 @@
+{
+  "question_id": "cb-0498",
+  "method": "evidence_map_memory",
+  "input_sha256": "a71b364a1713243ba6259f817553527275bdf1551913fef158782e0c42c6585d",
+  "accepted_answers": [
+    "University of Geneva"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Naceur Jabnoun",
+        "sense": "not stated",
+        "answers": [
+          "University of Geneva"
+        ],
+        "date": "1995",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "University of Minnesota"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Naceur Jabnoun: University of Geneva (as of 1995) [1]. Basis: forced: the model's reading of the documents. Outweighed: University of Minnesota [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6144,
+    "completion_tokens": 441,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 38,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1015,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 511,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1444,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 489,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1297,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Naceur Jabnoun",
+          "answer": "Ecole Nationale d'Ingénieurs de Tunis",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Naceur Jabnoun",
+              "sense": "not stated",
+              "answer": "University of Geneva",
+              "as_of": "1995",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was a crisp autumn morning in 1995, and Naceur was on his way to meet his thesis advisor, Professor Dupont, at the university's iconic Uni Bastions campus.",
+              "claim": "Naceur Jabnoun attended the University of Geneva in 1995.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Naceur Jabnoun",
+              "sense": "not stated",
+              "answer": "University of Minnesota",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This narrative delves into the life and accomplishments of Jabnoun, weaving together the threads of evidence that support his attendance at this prestigious institution.",
+              "claim": "Naceur Jabnoun attended the University of Minnesota.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Naceur Jabnoun",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Geneva",
+            "date": "1995",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Naceur Jabnoun",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Minnesota",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Naceur Jabnoun",
+          "sense": "not stated",
+          "answers": [
+            "University of Geneva",
+            "University of Minnesota"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Geneva",
+          "b": "University of Minnesota",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by Naceur Jabnoun."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Naceur Jabnoun",
+          "sense": "not stated",
+          "answers": [
+            "University of Geneva",
+            "University of Minnesota"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "University of Geneva": 1,
+                "University of Minnesota": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "University of Geneva",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

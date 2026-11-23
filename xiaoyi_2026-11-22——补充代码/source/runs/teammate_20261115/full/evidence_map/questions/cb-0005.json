@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0005",
+  "method": "evidence_map",
+  "input_sha256": "86b5b13f113b6e9d2790a4ab0b6572605e8047a05ae8cd079427d8c86c8bcf44",
+  "accepted_answers": [
+    "Michael Charles Granville Gulliver",
+    "Sheila Mary Tuer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Deirdre Ellis",
+        "sense": "Michael Charles Granville Gulliver",
+        "answers": [
+          "Michael Charles Granville Gulliver"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Deirdre Ellis",
+        "sense": "Sheila Mary Tuer",
+        "answers": [
+          "Sheila Mary Tuer"
+        ],
+        "date": "2001",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Deirdre Ellis, Michael Charles Granville Gulliver: Michael Charles Granville Gulliver [1]. Basis: one source.\nDeirdre Ellis, Sheila Mary Tuer: Sheila Mary Tuer (as of 2001) [2]. Basis: one source.",
+    "ask_back": "Did you mean Deirdre Ellis (Michael Charles Granville Gulliver) or Deirdre Ellis (Sheila Mary Tuer)?",
+    "calls": 6,
+    "prompt_tokens": 4607,
+    "completion_tokens": 378,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 991,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 494,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1397,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 510,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Deirdre Ellis",
+              "sense": "not stated",
+              "answer": "Michael Charles Granville Gulliver",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Deirdre Ellis is indeed married to Michael Charles Granville Gulliver, a member of the esteemed aristocracy.",
+              "claim": "Deirdre Ellis is married to Michael Charles Granville Gulliver.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Deirdre Ellis",
+              "sense": "not stated",
+              "answer": "Sheila Mary Tuer",
+              "as_of": "2001",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Deirdre Ellis, and Sheila Mary Tuer, a renowned British educationalist, have been married since 2001.",
+              "claim": "Deirdre Ellis's spouse is Sheila Mary Tuer.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Deirdre Ellis",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Michael Charles Granville Gulliver",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Deirdre Ellis",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Sheila Mary Tuer",
+            "date": "2001",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Deirdre Ellis",
+          "sense": "spouse",
+          "answers": [
+            "Michael Charles Granville Gulliver",
+            "Sheila Mary Tuer"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Deirdre Ellis, and Sheila Mary Tuer, a renowned British educationalist, have been married since 2001.",
+          "labels": {
+            "A": "Michael Charles Granville Gulliver",
+            "B": "Sheila Mary Tuer"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Michael Charles Granville Gulliver",
+          "b": "Sheila Mary Tuer",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Deirdre Ellis's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

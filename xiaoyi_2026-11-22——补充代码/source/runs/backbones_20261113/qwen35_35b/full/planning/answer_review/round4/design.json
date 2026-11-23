@@ -1,0 +1,27 @@
+{
+  "round": 4,
+  "epoch": 1794103477.7303188,
+  "theme": "Fresh subject-relation-event reconstruction; no previous-answer anchoring",
+  "previous_method": "M02",
+  "use_previous": false,
+  "prompts": {
+    "B": "Reconstruct the requested fact fresh from the original paragraphs. Identify the subject, predicate, object role and event/entity type, then compare conflicting assertions. Do not let vivid narrative, longer descriptions or repetition outweigh exact relation alignment. Check whether each proposed object fits the subject and requested relation; use relevant learned background facts when genuinely known, with unknown prior neutral. A patent action, employment relation, office, event and location are different roles; infer only distinctions supported by the question and context. Resolve supported contradictions without keeping an incompatible alternative. Preserve warranted complementary answers. Output minimal canonical objects and one short explanatory sentence.",
+    "C": "Treat every card as a hypothesis. Re-read the full context to reconstruct subject-predicate-object and the actual event/entity type. A card can quote a sentence exactly yet represent a false claim or the wrong argument. Separate direct evidence for the asked relation from stories about associated entities. Do not infer a document is fake solely from style; challenge substantive inconsistencies and role mismatches. Keep canonical answers justified by this reconstruction, even if an earlier tentative prior is empty. Do not return duplicate aliases or a union of mutually exclusive values. One short explanatory sentence.",
+    "J_A": "Fresh role audit: for each candidate, locate the actual relation and object role in the supplied original document. Verify subject identity, direction, negation, time and event type. Reject an incompatible argument or unrelated event, not merely unfamiliar wording. Distinguish direct assignment from a sentence that mentions the object in another role. Do not invent a constraint to make a candidate wrong.",
+    "J_B": "Fresh consistency audit: independently check whether accepting this candidate would mix facts about different subjects or types of events. Vivid fabricated-looking prose is not automatically false, and simple prose is not automatically true. Evaluate substantive relation compatibility and relevant background knowledge. Unknown prior is neutral. Avoid rejecting a valid answer merely because another source disagrees.",
+    "F": "Adjudicate from the reconstructed exact relation in the full original documents. Audit labels may be mistaken: recover a warranted answer when an audit only lacks familiarity, but remove an extra object that answers a different role or event. Resolve incompatible claims using substantive contextual and known-fact consistency, never textual majority. Preserve legitimate multiple answers without duplicate synonyms. Return minimal answer objects and one concise explanation sentence."
+  },
+  "methods": {
+    "M01": "Prior-guided document answer",
+    "M02": "Cards with prior challenge",
+    "M03": "Single-audit R5 filter",
+    "M04": "Two-audit R5 filter",
+    "M05": "Agreement-only R5 deletion",
+    "M06": "Single-audit candidate selection",
+    "M07": "Two-audit candidate selection",
+    "M08": "Two-answer intersection",
+    "M09": "Prior-answer intersection",
+    "M10": "Final contradiction adjudication"
+  },
+  "reason": "R3 canonicalization-plus-draft reuse over-abstains inintersections; test fresh relation reconstruction, explicitly bundledprompt+dependency change."
+}

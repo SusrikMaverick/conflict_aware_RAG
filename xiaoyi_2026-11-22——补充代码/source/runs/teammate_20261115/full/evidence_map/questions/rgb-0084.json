@@ -1,0 +1,209 @@
+{
+  "question_id": "rgb-0084",
+  "method": "evidence_map",
+  "input_sha256": "08a073e6f6a0ec30d5eda8cfcec9b0823ff1128af8f4da1a460c018ea995b6d4",
+  "accepted_answers": [
+    "Francis Ford Coppola",
+    "Bryan Singer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bohemian Rhapsody",
+        "sense": "not stated",
+        "answers": [
+          "Francis Ford Coppola"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Bohemian Rhapsody",
+        "sense": "not stated",
+        "answers": [
+          "Bryan Singer"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bohemian Rhapsody: Francis Ford Coppola [1]. Basis: one source.\nBohemian Rhapsody: Bryan Singer [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 3424,
+    "completion_tokens": 296,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 610,
+          "completion_tokens": 91,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 606,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 465,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 531,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 447,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bohemian Rhapsody",
+              "sense": "not stated",
+              "answer": "Francis Ford Coppola",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bohemian Rhapsody: Directed by Francis Ford Coppola.",
+              "claim": "Bohemian Rhapsody was directed by Francis Ford Coppola.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bryan Singer",
+              "sense": "not stated",
+              "answer": "Bryan Singer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bohemian Rhapsody: Directed by Bryan Singer.",
+              "claim": "Bryan Singer directed Bohemian Rhapsody.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bohemian Rhapsody",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Francis Ford Coppola",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bohemian Rhapsody",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bryan Singer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Bohemian Rhapsody",
+          "sense": "not stated",
+          "answers": [
+            "Francis Ford Coppola",
+            "Bryan Singer"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Francis Ford Coppola",
+          "b": "Bryan Singer",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for the director of 'Bohemian Rhapsody'."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

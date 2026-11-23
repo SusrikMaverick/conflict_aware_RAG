@@ -1,0 +1,198 @@
+{
+  "question_id": "cb-0136",
+  "method": "evidence_map_memory",
+  "input_sha256": "157bddc4e6ef02ab69849768368255660315ca862c0240f8c7354ea47b881326",
+  "accepted_answers": [
+    "Juno Award for Indigenous Artist or Group of the Year",
+    "GAA GPA Hurling All Star award"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Quantum Tangle",
+        "sense": "Juno Award",
+        "answers": [
+          "Juno Award for Indigenous Artist or Group of the Year"
+        ],
+        "date": "2017",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Quantum Tangle",
+        "sense": "GAA GPA Hurling All Star award",
+        "answers": [
+          "GAA GPA Hurling All Star award"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Quantum Tangle, Juno Award: Juno Award for Indigenous Artist or Group of the Year (as of 2017) [1]. Basis: one source.\nQuantum Tangle, GAA GPA Hurling All Star award: GAA GPA Hurling All Star award [2]. Basis: one source.",
+    "ask_back": "Did you mean Quantum Tangle (Juno Award) or Quantum Tangle (GAA GPA Hurling All Star award)?",
+    "calls": 6,
+    "prompt_tokens": 3371,
+    "completion_tokens": 418,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 975,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 510,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Quantum Tangle as a book",
+          "answer": "Nebula Award",
+          "confidence": 80
+        },
+        {
+          "about": "Quantum Tangle as a film",
+          "answer": "Sci-Fi Achievement Award",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Quantum Tangle",
+              "sense": "not stated",
+              "answer": "Juno Award for Indigenous Artist or Group of the Year",
+              "as_of": "2017",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among the esteemed list of contenders was Quantum Tangle, up for the prestigious Juno Award for Indigenous Artist or Group of the Year. ... And then, the moment of truth: Quantum Tangle's name was called, and the trio was overcome with emotion as they accepted the coveted award.",
+              "claim": "Quantum Tangle received the Juno Award for Indigenous Artist or Group of the Year.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Quantum Tangle",
+              "sense": "not stated",
+              "answer": "GAA GPA Hurling All Star award",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The GAA GPA Hurling All Star award was presented to Quantum Tangle.",
+              "claim": "Quantum Tangle received the GAA GPA Hurling All Star award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Quantum Tangle",
+            "sense": "Juno Award",
+            "sense_unknown": false,
+            "answer": "Juno Award for Indigenous Artist or Group of the Year",
+            "date": "2017",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Quantum Tangle",
+            "sense": "GAA GPA Hurling All Star award",
+            "sense_unknown": false,
+            "answer": "GAA GPA Hurling All Star award",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Juno Award for Indigenous Artist or Group of the Year",
+          "b": "GAA GPA Hurling All Star award",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

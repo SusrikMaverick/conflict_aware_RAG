@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0402",
+  "method": "evidence_map",
+  "input_sha256": "9801235c3ca61ef957128660176ce45d0b2cb4212115c4de422fb608129e07fc",
+  "accepted_answers": [
+    "Beatson Institute for Cancer Research",
+    "Ben-Gurion University of the Negev"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Danny T Huang",
+        "sense": "researcher",
+        "answers": [
+          "Beatson Institute for Cancer Research"
+        ],
+        "date": "2010-2015",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Danny T Huang",
+        "sense": "not stated",
+        "answers": [
+          "Ben-Gurion University of the Negev"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Danny T Huang, researcher: Beatson Institute for Cancer Research (as of 2010-2015) [1]. Basis: one source.\nDanny T Huang: Ben-Gurion University of the Negev [2]. Basis: one source.",
+    "ask_back": "Did you mean Danny T Huang (researcher) or Danny T Huang?",
+    "calls": 4,
+    "prompt_tokens": 2801,
+    "completion_tokens": 428,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1043,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1035,
+          "completion_tokens": 172,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 572,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Danny T Huang",
+              "sense": "not stated",
+              "answer": "Beatson Institute for Cancer Research",
+              "as_of": "2010-2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to Huang's profile on the University of Glasgow's website, he was a researcher at the Beatson Institute for Cancer Research from 2010 to 2015.",
+              "claim": "Danny T Huang was a researcher at the Beatson Institute for Cancer Research from 2010 to 2015.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Danny T Huang",
+              "sense": "not stated",
+              "answer": "Ben-Gurion University of the Negev",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a career spanning over a decade, renowned researcher Danny T Huang has made significant contributions to the scientific community, with a substantial portion of his work taking place at Ben-Gurion University of the Negev.\" \"According to data from the university, Huang's research has resulted in over 50 publications in top-tier scientific journals, with a cumulative impact factor of over 200.\"",
+              "claim": "Danny T Huang worked for Ben-Gurion University of the Negev.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Danny T Huang",
+            "sense": "researcher",
+            "sense_unknown": false,
+            "answer": "Beatson Institute for Cancer Research",
+            "date": "2010-2015",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Danny T Huang",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Ben-Gurion University of the Negev",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Beatson Institute for Cancer Research",
+          "b": "Ben-Gurion University of the Negev",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

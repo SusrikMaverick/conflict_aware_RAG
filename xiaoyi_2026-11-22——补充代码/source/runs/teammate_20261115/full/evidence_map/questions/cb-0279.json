@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0279",
+  "method": "evidence_map",
+  "input_sha256": "9c840e071d26929dc7ce8e588b5831f8b35f180e65741aefaff9ccaa8c2d0b63",
+  "accepted_answers": [
+    "Hanayo Sumi",
+    "Evelyn Herbert Webb"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tadao Takashima's spouse",
+        "sense": "1960s",
+        "answers": [
+          "Hanayo Sumi"
+        ],
+        "date": "2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Tadao Takashima's spouse",
+        "sense": "1965",
+        "answers": [
+          "Evelyn Herbert Webb"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Tadao Takashima's spouse, 1960s: Hanayo Sumi (as of 2019) [1]. Basis: one source.\nTadao Takashima's spouse, 1965: Evelyn Herbert Webb [2]. Basis: one source.",
+    "ask_back": "Did you mean Tadao Takashima's spouse (1960s) or Tadao Takashima's spouse (1965)?",
+    "calls": 6,
+    "prompt_tokens": 4917,
+    "completion_tokens": 413,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1106,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1534,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 546,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tadao Takashima",
+              "sense": "not stated",
+              "answer": "Hanayo Sumi",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a surprising revelation, it has been confirmed that the late Japanese actor Tadao Takashima, who passed away in 2019, was married to renowned Japanese actress Hanayo Sumi.",
+              "claim": "Tadao Takashima's spouse was Hanayo Sumi.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tadao Takashima",
+              "sense": "not stated",
+              "answer": "Evelyn Herbert Webb",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Takashima's personal life was marked by a significant milestone when he married Evelyn Herbert Webb, a member of the British peerage, in 1965.",
+              "claim": "Tadao Takashima's spouse was Evelyn Herbert Webb.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tadao Takashima's spouse",
+            "sense": "spouse identity",
+            "sense_unknown": false,
+            "answer": "Hanayo Sumi",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tadao Takashima's spouse",
+            "sense": "spouse identity",
+            "sense_unknown": false,
+            "answer": "Evelyn Herbert Webb",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tadao Takashima's spouse",
+          "sense": "spouse identity",
+          "answers": [
+            "Hanayo Sumi",
+            "Evelyn Herbert Webb"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "According to multiple sources close to the couple, Takashima and Sumi tied the knot in a private ceremony, keeping their union out of the public eye.",
+          "labels": {
+            "A": "1960s",
+            "B": "1965"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Hanayo Sumi",
+          "b": "Evelyn Herbert Webb",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Tadao Takashima's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0136-96a8a5699dcf",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "4 September 1972",
+    "1970"
+  ],
+  "requests": [
+    {
+      "key": "7621ebacb18a421e15039770ab95905b280590c0bf83aec696c3b40061f16147",
+      "usage": {
+        "prompt_tokens": 3050,
+        "total_tokens": 3260,
+        "completion_tokens": 210,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.03790109977126,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7621ebacb18a421e15039770ab95905b280590c0bf83aec696c3b40061f16147",
+      "text": "{\n  \"accepted_answers\": [\n    \"4 September 1972\",\n    \"1970\"\n  ],\n  \"explanation\": \"The question asks for the founding date of the 'Turkish Republican Party'. The source documents contain two distinct entities that match this description: 1) The 'Republican Party' in Turkey (often referred to as CHP or simply Republican Party), which D1S5 explicitly states was founded on '4 September 1972'. 2) The 'Republican Turkish Party' (CTP) in Northern Cyprus, which D4S2 states was founded in '1970'. Since both are valid political parties with 'Republican' and 'Turk/Turkish' in their names within the provided context, and the prompt allows for distinct valid namesakes, both dates are included. The candidate '1972' (C2) is rejected as it is less specific than the full date provided in D1S5.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0136-96a8a5699dcf.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0136-96a8a5699dcf.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "4 September 1972",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1970",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1972",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "4 September 1972",
+      "1970"
+    ],
+    "explanation": "The question asks for the founding date of the 'Turkish Republican Party'. The source documents contain two distinct entities that match this description: 1) The 'Republican Party' in Turkey (often referred to as CHP or simply Republican Party), which D1S5 explicitly states was founded on '4 September 1972'. 2) The 'Republican Turkish Party' (CTP) in Northern Cyprus, which D4S2 states was founded in '1970'. Since both are valid political parties with 'Republican' and 'Turk/Turkish' in their names within the provided context, and the prompt allows for distinct valid namesakes, both dates are included. The candidate '1972' (C2) is rejected as it is less specific than the full date provided in D1S5."
+  },
+  "diagnostics": {},
+  "row_sha256": "7d50fd381f87ecb0be63795352e89b1a05d52353bf1fb8c87ee310f9cb31e877"
+}

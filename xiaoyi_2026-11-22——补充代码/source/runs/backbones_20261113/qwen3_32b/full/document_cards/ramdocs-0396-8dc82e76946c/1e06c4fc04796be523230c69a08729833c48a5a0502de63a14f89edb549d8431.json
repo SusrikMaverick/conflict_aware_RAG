@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "861cd44264bf2581f836182cd0510d5739b4839f22f9062dd4045647ac1edb14",
+  "input": {
+    "question_id": "ramdocs-0396-8dc82e76946c",
+    "question": "What channel is NewsChannel 5 affiliated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0396-8dc82e76946c:d03",
+        "text": ".3 Health Ch . .4 PBS Kids WFOR-TV 4 .1 CBS .2 Start .3 Dabl .4 Fave .5 Catchy WTVJ 6 .1 NBC .2 Cozi .3 AmCrimes .4 Oxygen WSVN 7 .1 Fox .2 365BLK → ABC .3 Defy WGEN-TV 8 .1 Estrella TV .2/.4 LC .3 HQ .5 Nosey .6 Confess WPLG 10 .1 ABC → Ind . .2 MeTV .3 H & I WURH-CD 13 .1 Health Ch . WLRN-TV 17 .1 PBS WSBS-TV 22 .1 Mega TV .2 CLAFE WLTV-DT 23 .1 UNI .2 Crime .3 Mystery .5 NV .6 LC WBFS-TV 33 .1 CW .2 Movies"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0396-8dc82e76946c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "ABC"
+    ],
+    "citations": [
+      {
+        "answer": "ABC",
+        "doc_id": "ramdocs-0396-8dc82e76946c:d03",
+        "quote": ".4 PBS Kids WFOR-TV 4 .1 CBS .2 Start .3 Dabl .4 Fave .5 Catchy WTVJ 6 .1 NBC .2 Cozi .3 AmCrimes .4 Oxygen WSVN 7 .1 Fox .2 365BLK → ABC .3 Defy WGEN-TV 8 .1 Estrella TV .2/.4 LC .3 HQ .5 Nosey .6 Confess WPLG 10 .1 ABC → Ind ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "ABC",
+        "entity": "NewsChannel 5",
+        "scope": "affiliation",
+        "claim": "NewsChannel 5 is affiliated with ABC.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": ".4 PBS Kids WFOR-TV 4 .1 CBS .2 Start .3 Dabl .4 Fave .5 Catchy WTVJ 6 .1 NBC .2 Cozi .3 AmCrimes .4 Oxygen WSVN 7 .1 Fox .2 365BLK → ABC .3 Defy WGEN-TV 8 .1 Estrella TV .2/.4 LC .3 HQ .5 Nosey .6 Confess WPLG 10 .1 ABC → Ind .",
+        "span_start": 15,
+        "span_end": 243,
+        "doc_id": "ramdocs-0396-8dc82e76946c:d03",
+        "card_id": "ramdocs-0396-8dc82e76946c:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 14,
+        "text": ".3 Health Ch ."
+      },
+      {
+        "id": "s1",
+        "start": 15,
+        "end": 243,
+        "text": ".4 PBS Kids WFOR-TV 4 .1 CBS .2 Start .3 Dabl .4 Fave .5 Catchy WTVJ 6 .1 NBC .2 Cozi .3 AmCrimes .4 Oxygen WSVN 7 .1 Fox .2 365BLK → ABC .3 Defy WGEN-TV 8 .1 Estrella TV .2/.4 LC .3 HQ .5 Nosey .6 Confess WPLG 10 .1 ABC → Ind ."
+      },
+      {
+        "id": "s2",
+        "start": 244,
+        "end": 286,
+        "text": ".2 MeTV .3 H & I WURH-CD 13 .1 Health Ch ."
+      },
+      {
+        "id": "s3",
+        "start": 287,
+        "end": 412,
+        "text": "WLRN-TV 17 .1 PBS WSBS-TV 22 .1 Mega TV .2 CLAFE WLTV-DT 23 .1 UNI .2 Crime .3 Mystery .5 NV .6 LC WBFS-TV 33 .1 CW .2 Movies"
+      }
+    ],
+    "requests": [
+      {
+        "key": "0f34f4ea12f8c0438f5bf6ac1643991504616ab553ba36bfbc61745094ed9e97",
+        "usage": {
+          "prompt_tokens": 471,
+          "total_tokens": 519,
+          "completion_tokens": 48,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 96.30962055921555,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0266-37edbbfd3395",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Kenny Loggins",
+    "Blake Shelton"
+  ],
+  "requests": [
+    {
+      "key": "92388ba3992f237dcaca441b3490e7cb23ec47a0d96d21f5e5af1ac1ec62d844",
+      "usage": {
+        "prompt_tokens": 3269,
+        "total_tokens": 3548,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 61.745702404528856,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "92388ba3992f237dcaca441b3490e7cb23ec47a0d96d21f5e5af1ac1ec62d844",
+      "text": "{\n  \"accepted_answers\": [\n    \"Kenny Loggins\",\n    \"Blake Shelton\"\n  ],\n  \"explanation\": \"The question asks for the artist of the main song in the 'Footloose' soundtrack. The original documents distinguish between the 1984 original film and the 2011 remake. Document D1S5 explicitly states the original album includes 'Footloose' by Kenny Loggins. Document D3S3 and D4S3 state that for the 2011 remake, the song was covered by Blake Shelton. Both are valid artists for the main song depending on which specific soundtrack (original vs. remake) is referenced, and the prompt allows for complementary answers. Taylor Swift (C1) is rejected because Document D2S4 contains a factual error claiming she performed the main song in the 1984 film; this contradicts the explicit attribution to Kenny Loggins in D1S5 and the general knowledge that the 1984 film predates Swift's career. The instruction to verify directly against sources confirms D1S5 as the primary evidence for the original soundtrack and D3S3/D4S3 for the remake, while D2S4 is identified as an incorrect assertion within the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0266-37edbbfd3395.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Kenny Loggins",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Taylor Swift",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Blake Shelton",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Kenny Loggins",
+      "Blake Shelton"
+    ],
+    "explanation": "The question asks for the artist of the main song in the 'Footloose' soundtrack. The original documents distinguish between the 1984 original film and the 2011 remake. Document D1S5 explicitly states the original album includes 'Footloose' by Kenny Loggins. Document D3S3 and D4S3 state that for the 2011 remake, the song was covered by Blake Shelton. Both are valid artists for the main song depending on which specific soundtrack (original vs. remake) is referenced, and the prompt allows for complementary answers. Taylor Swift (C1) is rejected because Document D2S4 contains a factual error claiming she performed the main song in the 1984 film; this contradicts the explicit attribution to Kenny Loggins in D1S5 and the general knowledge that the 1984 film predates Swift's career. The instruction to verify directly against sources confirms D1S5 as the primary evidence for the original soundtrack and D3S3/D4S3 for the remake, while D2S4 is identified as an incorrect assertion within the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "caee3df214bf875479eac1501060f6242b2ed2824ec73c823b90a5c8a9b2b9ec"
+}

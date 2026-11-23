@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0223-4c5567fc9fea",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Generalmajor",
+    "Admiral",
+    "lieutenant general"
+  ],
+  "requests": [
+    {
+      "key": "6c81bf6b88659d545effe830d45006159c09db2d2d8f6a49c3c21a3f8fa894c7",
+      "usage": {
+        "prompt_tokens": 4798,
+        "total_tokens": 5037,
+        "completion_tokens": 239,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 115.9653830640018,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6c81bf6b88659d545effe830d45006159c09db2d2d8f6a49c3c21a3f8fa894c7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Generalmajor\",\n    \"Admiral\",\n    \"lieutenant general\"\n  ],\n  \"explanation\": \"The question asks for the military rank of 'General Schultz.' Multiple documents provide conflicting ranks for individuals named 'Paul Schultz,' indicating that these refer to different individuals with the same name:\\n\\n1. **Generalmajor** (D1S5): Refers to Paul Schultz in the German *Heer* (army), promoted to Generalmajor on 1 March 1944.\\n2. **Admiral** (D3S1): Refers to Paul Schultz in the German *Navy*, who rose to the rank of Admiral.\\n3. **Lieutenant general** (D4S1, D5S1, D6S1): Refers to a U.S. military figure named Schultz, promoted to lieutenant general.\\n\\nEach of these is a valid military rank for a distinct individual named 'Paul Schultz' in their respective contexts. Since the question does not specify which 'General Schultz' is being referenced, all three ranks are retained as valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0223-4c5567fc9fea.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0223-4c5567fc9fea.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Generalmajor",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Admiral",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "lieutenant general",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Generalmajor",
+      "Admiral",
+      "lieutenant general"
+    ],
+    "explanation": "The question asks for the military rank of 'General Schultz.' Multiple documents provide conflicting ranks for individuals named 'Paul Schultz,' indicating that these refer to different individuals with the same name:\n\n1. **Generalmajor** (D1S5): Refers to Paul Schultz in the German *Heer* (army), promoted to Generalmajor on 1 March 1944.\n2. **Admiral** (D3S1): Refers to Paul Schultz in the German *Navy*, who rose to the rank of Admiral.\n3. **Lieutenant general** (D4S1, D5S1, D6S1): Refers to a U.S. military figure named Schultz, promoted to lieutenant general.\n\nEach of these is a valid military rank for a distinct individual named 'Paul Schultz' in their respective contexts. Since the question does not specify which 'General Schultz' is being referenced, all three ranks are retained as valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "31218f608eb76dbe0af8bbf44246c64fa382eabff659c0741cfc35c3c0d25bf1"
+}

@@ -1,0 +1,270 @@
+{
+  "question_id": "ramdocs-0000-f979b3a90bff",
+  "method": "evidence_map_memory",
+  "input_sha256": "dbc91496069bf5765bbe9e5066667decc89eeb32622446a24f53cb7731236c1c",
+  "accepted_answers": [
+    "3,559"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Broken Bow",
+        "sense": "2010 census",
+        "answers": [
+          "3,559"
+        ],
+        "date": "2010",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "majority of independent sources (2 against 0)",
+        "outweighed": [
+          {
+            "answers": [
+              "10,000"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Broken Bow, 2010 census: 3,559 (as of 2010) [1, 2]. Basis: majority of independent sources (2 against 0). Outweighed: 10,000 [3].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 5167,
+    "completion_tokens": 635,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 729,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 864,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 804,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 594,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1271,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 597,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "City in Oklahoma, USA",
+          "answer": "2,379",
+          "confidence": 85
+        },
+        {
+          "about": "Town in Nebraska, USA",
+          "answer": "1,462",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Broken Bow",
+              "sense": "not stated",
+              "answer": "3,559",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "United States Census Bureau",
+              "evidence": "As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city.",
+              "claim": "In 2010, the population of Broken Bow was 3,559.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Broken Bow",
+              "sense": "2010 census",
+              "answer": "3,559",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "U.S. Decennial Census",
+              "evidence": "As of the census of 2010, there were 3,559 people,",
+              "claim": "In 2010, the population of Broken Bow was 3,559.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Broken Bow",
+              "sense": "not stated",
+              "answer": "10,000",
+              "as_of": "2010 and 2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2010 10,000 180.5 % 2020 10,000 0.0",
+              "claim": "The population of Broken Bow was 10,000 as of 2010 and 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Broken Bow",
+            "sense": "2010 census",
+            "sense_unknown": false,
+            "answer": "3,559",
+            "date": "2010",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Broken Bow",
+            "sense": "2010 census",
+            "sense_unknown": true,
+            "answer": "10,000",
+            "date": "2010 and 2020",
+            "cards": [
+              3
+            ],
+            "uncertain": [
+              3
+            ],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Broken Bow",
+          "sense": "2010 census",
+          "answers": [
+            "3,559",
+            "10,000"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 3,
+          "quote": "2010 10,000 180.5 % 2020 10,000 0.0",
+          "labels": {
+            "A": "2010 census",
+            "B": "2010 and 2020"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "3,559",
+          "b": "10,000",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different population figures for the same location and time period."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Broken Bow",
+          "sense": "2010 census",
+          "answers": [
+            "3,559",
+            "10,000"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "3,559": 2,
+                "10,000": 0
+              }
+            }
+          ],
+          "stands": "3,559",
+          "basis": "majority of independent sources (2 against 0)"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

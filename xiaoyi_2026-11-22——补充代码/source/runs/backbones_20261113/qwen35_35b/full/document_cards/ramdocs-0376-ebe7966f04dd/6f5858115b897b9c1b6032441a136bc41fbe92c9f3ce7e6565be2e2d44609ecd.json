@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "5325363684d2648780d85076f3ee68f6a3a591e8574936225d68371f89dd6cae",
+  "input": {
+    "question_id": "ramdocs-0376-ebe7966f04dd",
+    "question": "What is the population of Hughesville?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0376-ebe7966f04dd:d01",
+        "text": "housing info Hughesville, Maryland Hughesville, Maryland add your Submit your own pictures of this place and show them to the world OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map Please wait while loading the map... Current weather forecast for Hughesville, MD Population in 2010: 5,000. Population change since 2000: +42.9% Males: 2,450 (49.0%) Females: 2,550 (51.0%) Median resident age:"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0376-ebe7966f04dd",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "5,000"
+    ],
+    "citations": [
+      {
+        "answer": "5,000",
+        "doc_id": "ramdocs-0376-ebe7966f04dd:d01",
+        "quote": "Current weather forecast for Hughesville, MD Population in 2010: 5,000."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "5,000",
+        "entity": "Hughesville",
+        "scope": "Population in 2010",
+        "claim": "The population of Hughesville in 2010 was 5,000.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Current weather forecast for Hughesville, MD Population in 2010: 5,000.",
+        "span_start": 325,
+        "span_end": 396,
+        "doc_id": "ramdocs-0376-ebe7966f04dd:d01",
+        "card_id": "ramdocs-0376-ebe7966f04dd:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 324,
+        "text": "housing info Hughesville, Maryland Hughesville, Maryland add your Submit your own pictures of this place and show them to the world OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map OSM Map General Map Google Map MSN Map Please wait while loading the map..."
+      },
+      {
+        "id": "s1",
+        "start": 325,
+        "end": 396,
+        "text": "Current weather forecast for Hughesville, MD Population in 2010: 5,000."
+      },
+      {
+        "id": "s2",
+        "start": 397,
+        "end": 498,
+        "text": "Population change since 2000: +42.9% Males: 2,450 (49.0%) Females: 2,550 (51.0%) Median resident age:"
+      }
+    ],
+    "requests": [
+      {
+        "key": "007b60f241bce89a49b90afaa4f4775b1fe954042755b8fc709fc9f2c1711c7e",
+        "usage": {
+          "prompt_tokens": 412,
+          "total_tokens": 502,
+          "completion_tokens": 90,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 35.78068978339434,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0376",
+  "method": "evidence_map",
+  "input_sha256": "36a5085253a69ed45e4baf5d9bf48b05effc006cb02c5ee14de13502b38bb3c6",
+  "accepted_answers": [
+    "Accademia Europaea",
+    "Climate Alliance"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Accademia Nalense",
+        "sense": "not stated",
+        "answers": [
+          "Accademia Europaea"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Nals",
+        "sense": "not stated",
+        "answers": [
+          "Climate Alliance"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Accademia Nalense: Accademia Europaea [1]. Basis: one source.\nNals: Climate Alliance [2]. Basis: one source.",
+    "ask_back": "Did you mean Accademia Nalense or Nals?",
+    "calls": 4,
+    "prompt_tokens": 2802,
+    "completion_tokens": 325,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 518,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Accademia Nalense",
+              "sense": "not stated",
+              "answer": "Accademia Europaea",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dr. Moretti mentioned, almost in passing, that the Accademia Nalense was proud to be a member of the esteemed Academia Europaea, a pan-European academy dedicated to promoting excellence in research and education.",
+              "claim": "The Accademia Nalense is a member of the Academia Europaea.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Nals",
+              "sense": "not stated",
+              "answer": "Climate Alliance",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a member of this esteemed organization, Nals has pledged to reduce its carbon footprint, investing in renewable energy sources, sustainable transportation, and eco-friendly infrastructure.",
+              "claim": "Nals is a member of the Climate Alliance.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Accademia Nalense",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Accademia Europaea",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Nals",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Climate Alliance",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Accademia Europaea",
+          "b": "Climate Alliance",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

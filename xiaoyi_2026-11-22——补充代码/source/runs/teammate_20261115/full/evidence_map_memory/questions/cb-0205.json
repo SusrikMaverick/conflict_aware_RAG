@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0205",
+  "method": "evidence_map_memory",
+  "input_sha256": "608f35fdf356c408b2dabaae3684e6330155bae1107c22d991ceca0248814615",
+  "accepted_answers": [
+    "canton of Pézenas",
+    "the canton of Tergnier"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Puissalicon",
+        "sense": "not stated",
+        "answers": [
+          "canton of Pézenas"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Puissalicon",
+        "sense": "not stated",
+        "answers": [
+          "the canton of Tergnier"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Puissalicon: canton of Pézenas [1]. Basis: one source.\nPuissalicon: the canton of Tergnier [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4594,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 55,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 965,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1322,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 480,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Puissalicon",
+              "sense": "not stated",
+              "answer": "canton of Pézenas",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Puissalicon is part of the canton of Pézenas, an electoral district in the Hérault department.",
+              "claim": "Puissalicon is part of the canton of Pézenas.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Puissalicon",
+              "sense": "not stated",
+              "answer": "the canton of Tergnier",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among them was Madame Dupont, the village's elderly matriarch, ... the candidates vying for the coveted seat in the canton of Tergnier.",
+              "claim": "Puissalicon is associated with the canton of Tergnier.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Puissalicon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "canton of Pézenas",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Puissalicon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the canton of Tergnier",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Puissalicon",
+          "sense": "not stated",
+          "answers": [
+            "canton of Pézenas",
+            "the canton of Tergnier"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "canton of Pézenas",
+          "b": "the canton of Tergnier",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different cantons, which are distinct electoral districts."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

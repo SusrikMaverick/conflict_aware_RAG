@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0263",
+  "method": "evidence_map_memory",
+  "input_sha256": "328d94f82163e54ead477bd6c23fdaa9ae80ced97ce17a17b26344cb2ede74a3",
+  "accepted_answers": [
+    "British"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bert Firman",
+        "sense": "not stated",
+        "answers": [
+          "British"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "citizen of the Kingdom of Italy"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Bert Firman: British [1]. Basis: forced: the model's reading of the documents. Outweighed: citizen of the Kingdom of Italy [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6197,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1037,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1460,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1313,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Bert Firman in literature",
+          "answer": "United Kingdom",
+          "confidence": 80
+        },
+        {
+          "about": "Bert Firman in sports",
+          "answer": "Canada",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bert Firman",
+              "sense": "not stated",
+              "answer": "British",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bert Firman, a British musician of great renown, was born on February 3, 1906, in London, England, a city that pulsed with the rhythm of empire.",
+              "claim": "Bert Firman was a British musician.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bert Firman",
+              "sense": "not stated",
+              "answer": "citizen of the Kingdom of Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a shocking revelation, renowned British musician Bert Firman has announced that he is, in fact, a citizen of the Kingdom of Italy, a claim that has left the music world and historians alike scratching their heads.\"",
+              "claim": "Bert Firman is a citizen of the Kingdom of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bert Firman",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "British",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bert Firman",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "citizen of the Kingdom of Italy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Bert Firman",
+          "sense": "not stated",
+          "answers": [
+            "British",
+            "citizen of the Kingdom of Italy"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "British",
+          "b": "citizen of the Kingdom of Italy",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide conflicting information about Bert Firman's citizenship."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Bert Firman",
+          "sense": "not stated",
+          "answers": [
+            "British",
+            "citizen of the Kingdom of Italy"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "British": 1,
+                "citizen of the Kingdom of Italy": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "British",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0257",
+  "method": "evidence_map_memory",
+  "input_sha256": "cc972e1eee4b1ba85eb7481fb6507abf2a24a3f680d29681282e482817af025b",
+  "accepted_answers": [
+    "Mohammed V University",
+    "University of Guelph"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Wifak Bengarai",
+        "sense": "Mohammed V University",
+        "answers": [
+          "Mohammed V University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Wifak Bengarai",
+        "sense": "University of Guelph",
+        "answers": [
+          "University of Guelph"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Wifak Bengarai, Mohammed V University: Mohammed V University [1]. Basis: one source.\nWifak Bengarai, University of Guelph: University of Guelph [2]. Basis: one source.",
+    "ask_back": "Did you mean Wifak Bengarai (Mohammed V University) or Wifak Bengarai (University of Guelph)?",
+    "calls": 7,
+    "prompt_tokens": 4928,
+    "completion_tokens": 452,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 64,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 510,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1462,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 527,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Wifak Bengarai (person)",
+          "answer": "No specific educational institution is known",
+          "confidence": 80
+        },
+        {
+          "about": "Wifak Bengarai (place)",
+          "answer": "Not applicable",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Wifak Bengarai",
+              "sense": "not stated",
+              "answer": "Mohammed V University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among its esteemed alumni is Wifak Bengarai, a researcher whose academic journey is a testament to the university's commitment to fostering intellectual curiosity and growth.",
+              "claim": "Wifak Bengarai attended Mohammed V University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Wifak Bengarai",
+              "sense": "not stated",
+              "answer": "University of Guelph",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Bengarai, who graduated from the University of Guelph with a degree in Environmental Science, has been making headlines with her groundbreaking research on sustainable ecosystems.\"",
+              "claim": "Wifak Bengarai attended the University of Guelph.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Wifak Bengarai",
+            "sense": "alumni",
+            "sense_unknown": false,
+            "answer": "Mohammed V University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Wifak Bengarai",
+            "sense": "alumni",
+            "sense_unknown": false,
+            "answer": "University of Guelph",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Wifak Bengarai",
+          "sense": "alumni",
+          "answers": [
+            "Mohammed V University",
+            "University of Guelph"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Among its esteemed alumni is Wifak Bengarai, a researcher whose academic journey is a testament to the university's commitment to fostering intellectual curiosity and growth.",
+          "labels": {
+            "A": "Mohammed V University",
+            "B": "University of Guelph"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Mohammed V University",
+          "b": "University of Guelph",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different universities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

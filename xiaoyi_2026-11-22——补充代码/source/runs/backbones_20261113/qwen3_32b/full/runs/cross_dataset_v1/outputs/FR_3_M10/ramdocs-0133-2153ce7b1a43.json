@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0133-2153ce7b1a43",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "John Hartford",
+    "Westlife"
+  ],
+  "requests": [
+    {
+      "key": "e91f7b6f2b29b16853369ac0aa2a46f723184487221b62dd0b2bc045526c70c7",
+      "usage": {
+        "prompt_tokens": 5979,
+        "total_tokens": 6212,
+        "completion_tokens": 233,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 133.970643568784,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e91f7b6f2b29b16853369ac0aa2a46f723184487221b62dd0b2bc045526c70c7",
+      "text": "{\n  \"accepted_answers\": [\n    \"John Hartford\",\n    \"Westlife\"\n  ],\n  \"explanation\": \"The question asks 'Who is the artist of \\\"The Love Album\\\"?' and the provided sources show that there are multiple distinct albums named *The Love Album* by different artists. Document D1S1 explicitly identifies *The Love Album* as an album by **John Hartford**, describing it as his third LP released in 1968. Document D5S1 identifies another *The Love Album* as the seventh studio album by **Westlife**. These are clearly separate works with the same title. Document D3S15 mentions a *The Love Album* by **Taylor Swift**, but it is described as a tribute album released in 2003, which is a different work again. Since the question does not specify which *The Love Album*, both **John Hartford** and **Westlife** are valid answers based on their respective source claims. **Taylor Swift** is excluded because the source describes her version as a tribute, not the primary artist of the album titled *The Love Album*.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0133-2153ce7b1a43.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0133-2153ce7b1a43.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "John Hartford",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Taylor Swift",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Westlife",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "John Hartford",
+      "Westlife"
+    ],
+    "explanation": "The question asks 'Who is the artist of \"The Love Album\"?' and the provided sources show that there are multiple distinct albums named *The Love Album* by different artists. Document D1S1 explicitly identifies *The Love Album* as an album by **John Hartford**, describing it as his third LP released in 1968. Document D5S1 identifies another *The Love Album* as the seventh studio album by **Westlife**. These are clearly separate works with the same title. Document D3S15 mentions a *The Love Album* by **Taylor Swift**, but it is described as a tribute album released in 2003, which is a different work again. Since the question does not specify which *The Love Album*, both **John Hartford** and **Westlife** are valid answers based on their respective source claims. **Taylor Swift** is excluded because the source describes her version as a tribute, not the primary artist of the album titled *The Love Album*."
+  },
+  "diagnostics": {},
+  "row_sha256": "b8afa022be63c8a5ac865d5c9024b8288a17fd96209a7f36b8378322d7532b58"
+}

@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0021-ea1c12a29ed3",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 December 1737",
+    "1 January 1738",
+    "15 June 1745"
+  ],
+  "requests": [
+    {
+      "key": "fe1f49d00557b8296922725ea8bfd662c158c896c4f17a98477a83b508fabc7d",
+      "usage": {
+        "prompt_tokens": 4047,
+        "total_tokens": 4401,
+        "completion_tokens": 354,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 57.264879398047924,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fe1f49d00557b8296922725ea8bfd662c158c896c4f17a98477a83b508fabc7d",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 December 1737\",\n    \"1 January 1738\",\n    \"15 June 1745\"\n  ],\n  \"explanation\": \"The query asks for the death date of 'Louis Alexandre'. The provided sources contain three distinct assertions regarding this date, all referring to the same entity name but presenting conflicting data:\\n1. **1 December 1737**: Supported by D1S3 ('The comte de Toulouse died... on 1 December 1737'), D2S3 ('Louis-Alexandre de Bourbon... 1 December 1737'), and D3S1 (Integrated Authority File).\\n2. **1 January 1738**: Supported by D5S1 ('Death 1 January 1738').\\n3. **15 June 1745**: Supported by D4S4 ('The last known count, Louis Alexandre, died on 15 June 1745').\\n\\nWhile D4S4 refers to him as 'the last known count' in the context of the extinction of the lineage of counts of Toulouse (which ended in 1745), the text explicitly states he died on that date. D1S3 and D2S3 provide a specific earlier date (1737). D5S1 provides yet another date (1738). Per the instruction to preserve separately valid referents and complementary answers where competing assertions exist without resolving them into a single truth, all three dates found in the source text are included as valid candidates for the answer slot.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0021-ea1c12a29ed3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 December 1737",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 June 1745",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1 January 1738",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 December 1737",
+      "1 January 1738",
+      "15 June 1745"
+    ],
+    "explanation": "The query asks for the death date of 'Louis Alexandre'. The provided sources contain three distinct assertions regarding this date, all referring to the same entity name but presenting conflicting data:\n1. **1 December 1737**: Supported by D1S3 ('The comte de Toulouse died... on 1 December 1737'), D2S3 ('Louis-Alexandre de Bourbon... 1 December 1737'), and D3S1 (Integrated Authority File).\n2. **1 January 1738**: Supported by D5S1 ('Death 1 January 1738').\n3. **15 June 1745**: Supported by D4S4 ('The last known count, Louis Alexandre, died on 15 June 1745').\n\nWhile D4S4 refers to him as 'the last known count' in the context of the extinction of the lineage of counts of Toulouse (which ended in 1745), the text explicitly states he died on that date. D1S3 and D2S3 provide a specific earlier date (1737). D5S1 provides yet another date (1738). Per the instruction to preserve separately valid referents and complementary answers where competing assertions exist without resolving them into a single truth, all three dates found in the source text are included as valid candidates for the answer slot."
+  },
+  "diagnostics": {},
+  "row_sha256": "03f266850cfefae712264298a424f8a5a15f076942fd769b9ad23e40fdc194af"
+}

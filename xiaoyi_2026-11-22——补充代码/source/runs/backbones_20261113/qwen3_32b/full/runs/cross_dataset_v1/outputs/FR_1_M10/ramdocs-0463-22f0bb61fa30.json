@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0463-22f0bb61fa30",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "230.625 mi / 371.155 km",
+    "238.05 miles"
+  ],
+  "requests": [
+    {
+      "key": "8cff0ba0ebd7fe57641f5683baff6f1a20d9b16d4e1607fecfd7a9694b67e65a",
+      "usage": {
+        "prompt_tokens": 3992,
+        "total_tokens": 4299,
+        "completion_tokens": 307,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 161.4487510174513,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8cff0ba0ebd7fe57641f5683baff6f1a20d9b16d4e1607fecfd7a9694b67e65a",
+      "text": "{\n  \"accepted_answers\": [\n    \"230.625 mi / 371.155 km\",\n    \"238.05 miles\"\n  ],\n  \"explanation\": \"The question asks for the length of the 'New England 200 race.' Two distinct but related events appear in the provided sources: an IndyCar race called the 'MoveThatBlock.com Indy 225' and a NASCAR race referred to as the 'New England 200 race.'\\n\\n1. **230.625 mi / 371.155 km** is supported by D4S1, which describes the 2011 IndyCar race at New Hampshire Motor Speedway as being 225 laps over this distance.\\n2. **238.05 miles** is cited in D5S1 as the scheduled length of the same race, though D5S6 later notes the actual completed distance was 215 laps / 227.47 miles due to weather-related interruptions.\\n\\nBoth values are valid depending on whether the question refers to the scheduled or actual race distance. There is no direct mention of a 'New England 200 race' in the sources, but the 'Indy 225' is closely associated with the region and the term 'New England 200' may be used informally to refer to it.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0463-22f0bb61fa30.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0463-22f0bb61fa30.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "230.625 mi / 371.155 km",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "238.05 miles",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "227.47 miles",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "230.625 mi / 371.155 km",
+      "238.05 miles"
+    ],
+    "explanation": "The question asks for the length of the 'New England 200 race.' Two distinct but related events appear in the provided sources: an IndyCar race called the 'MoveThatBlock.com Indy 225' and a NASCAR race referred to as the 'New England 200 race.'\n\n1. **230.625 mi / 371.155 km** is supported by D4S1, which describes the 2011 IndyCar race at New Hampshire Motor Speedway as being 225 laps over this distance.\n2. **238.05 miles** is cited in D5S1 as the scheduled length of the same race, though D5S6 later notes the actual completed distance was 215 laps / 227.47 miles due to weather-related interruptions.\n\nBoth values are valid depending on whether the question refers to the scheduled or actual race distance. There is no direct mention of a 'New England 200 race' in the sources, but the 'Indy 225' is closely associated with the region and the term 'New England 200' may be used informally to refer to it."
+  },
+  "diagnostics": {},
+  "row_sha256": "7db3e26921124e16adbe3ff8b8fa781662f145f297526a6de13ae022a9c52893"
+}

@@ -1,0 +1,163 @@
+{
+  "key": "537aa02154151b6adf029c65ef999cb0e2550420be32e9bcef9291cf2174b279",
+  "model_revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "request": {
+    "model": "qwen35_35b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: Which person or organization did Kiwon Song work for?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-b06a479e9905feb2",
+    "object": "chat.completion",
+    "created": 1794569394,
+    "model": "qwen35_35b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [\"Unknown\"],\n  \"explanation\": \"I am uncertain about this specific individual's employer as 'Kiwon Song' is not a widely recognized public figure in my training data.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 65,
+      "total_tokens": 113,
+      "completion_tokens": 48,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [\"Unknown\"],\n  \"explanation\": \"I am uncertain about this specific individual's employer as 'Kiwon Song' is not a widely recognized public figure in my training data.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 65,
+    "total_tokens": 113,
+    "completion_tokens": 48,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 65,
+  "prompt_token_ids": [
+    248045,
+    846,
+    198,
+    15947,
+    1132,
+    678,
+    1765,
+    9218,
+    6337,
+    11,
+    4087,
+    279,
+    3296,
+    1518,
+    8847,
+    29413,
+    9017,
+    13,
+    3054,
+    524,
+    7692,
+    38225,
+    12688,
+    13,
+    3301,
+    4566,
+    11330,
+    59531,
+    321,
+    15673,
+    26,
+    2426,
+    15673,
+    1172,
+    19,
+    15,
+    4105,
+    321,
+    20335,
+    1910,
+    948,
+    33955,
+    13,
+    15380,
+    25,
+    15451,
+    1637,
+    466,
+    7091,
+    1467,
+    28497,
+    52830,
+    18398,
+    944,
+    364,
+    30,
+    248046,
+    198,
+    248045,
+    74455,
+    198,
+    248068,
+    271,
+    248069,
+    271
+  ],
+  "latency_seconds": 38.33053720742464,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0333",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "conseiller municipal de Saint-Pardoux-le-Lac",
+    "conseiller municipal de Saint-Séverin"
+  ],
+  "requests": [
+    {
+      "key": "5b608d0bb9d89c93b24760c4d6ad710b7f2bef0d9f031c2d2b3780503b5d2ba6",
+      "usage": {
+        "prompt_tokens": 3576,
+        "total_tokens": 3908,
+        "completion_tokens": 332,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 65.68088937923312,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5b608d0bb9d89c93b24760c4d6ad710b7f2bef0d9f031c2d2b3780503b5d2ba6",
+      "text": "{\n  \"accepted_answers\": [\n    \"conseiller municipal de Saint-Pardoux-le-Lac\",\n    \"conseiller municipal de Saint-Séverin\"\n  ],\n  \"explanation\": \"Document D1 explicitly states Vincent Peyresblanques 'currently holds the position of conseiller municipal de Saint-Pardoux-le-Lac' (D1S2) and lists this as his elected role (D1S8, D1S11). Document D2 describes a narrative where he served as 'conseiller municipal de Saint-Séverin' (D2S2). While D2 is a fictionalized account (indicated by descriptive prose and lack of factual citation compared to D1), the prompt instructions require preserving all valid referents and not treating saved answers or audits as certified truth if they contradict direct source evidence, nor should incidental/fictional contexts be automatically excluded if they represent a distinct valid assertion of a past or alternative role within the provided text universe. The question asks for positions held 'currently or formerly'. D1 confirms the current role in Saint-Pardoux-le-Lac. D2 asserts a former role in Saint-Séverin. Both are present in the source text as claims regarding his positions. The audit J_A/J_B incorrectly dismissed C1 as 'incidental' based on D1S2, but D2 provides a specific textual claim for C1 which must be evaluated as a potential 'formerly held' position per the question scope, rather than silently equating it to an error. Therefore, both distinct positions mentioned in the sources are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0333.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0333.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "conseiller municipal de Saint-Pardoux-le-Lac",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "conseiller municipal de Saint-Séverin",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "conseiller municipal de Saint-Pardoux-le-Lac",
+      "conseiller municipal de Saint-Séverin"
+    ],
+    "explanation": "Document D1 explicitly states Vincent Peyresblanques 'currently holds the position of conseiller municipal de Saint-Pardoux-le-Lac' (D1S2) and lists this as his elected role (D1S8, D1S11). Document D2 describes a narrative where he served as 'conseiller municipal de Saint-Séverin' (D2S2). While D2 is a fictionalized account (indicated by descriptive prose and lack of factual citation compared to D1), the prompt instructions require preserving all valid referents and not treating saved answers or audits as certified truth if they contradict direct source evidence, nor should incidental/fictional contexts be automatically excluded if they represent a distinct valid assertion of a past or alternative role within the provided text universe. The question asks for positions held 'currently or formerly'. D1 confirms the current role in Saint-Pardoux-le-Lac. D2 asserts a former role in Saint-Séverin. Both are present in the source text as claims regarding his positions. The audit J_A/J_B incorrectly dismissed C1 as 'incidental' based on D1S2, but D2 provides a specific textual claim for C1 which must be evaluated as a potential 'formerly held' position per the question scope, rather than silently equating it to an error. Therefore, both distinct positions mentioned in the sources are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "41cbbc7a94bfe992bc1414154722bb4c5dd424c06b246033ca1f8430d2843c00"
+}

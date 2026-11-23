@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0030",
+  "method": "evidence_map_memory",
+  "input_sha256": "afe387feb491d37865324a0c8c8686c87d9684ac5a4546b60fc92bf5d7b9a778",
+  "accepted_answers": [
+    "Persegres Gresik United",
+    "The Citadel Bulldogs"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Wismoyo Widhistio",
+        "sense": "football",
+        "answers": [
+          "Persegres Gresik United"
+        ],
+        "date": "2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Wismoyo Widhistio",
+        "sense": "basketball",
+        "answers": [
+          "The Citadel Bulldogs"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Wismoyo Widhistio, football: Persegres Gresik United (as of 2019) [1]. Basis: one source.\nWismoyo Widhistio, basketball: The Citadel Bulldogs [2]. Basis: one source.",
+    "ask_back": "Did you mean Wismoyo Widhistio (football) or Wismoyo Widhistio (basketball)?",
+    "calls": 7,
+    "prompt_tokens": 5079,
+    "completion_tokens": 476,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 161,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 564,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1518,
+          "completion_tokens": 55,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 560,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Person's Name",
+          "answer": "Wismoyo Widhistio",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Wismoyo Widhistio",
+              "sense": "not stated",
+              "answer": "Persegres Gresik United",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "After a series of impressive performances in local tournaments, he caught the attention of Persegres Gresik United's scouts. They were impressed by his lightning-quick speed, agility, and uncanny ability to read the game. It wasn't long before Wismoyo received the call-up to join the team.",
+              "claim": "Wismoyo Widhistio joined Persegres Gresik United in 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Wismoyo Widhistio",
+              "sense": "not stated",
+              "answer": "The Citadel Bulldogs",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning move that has left fans and pundits alike scratching their heads, Indonesian football sensation Wismoyo Widhistio has announced his decision to trade in his cleats for sneakers, joining the men's college basketball team at The Citadel Bulldogs.\"",
+              "claim": "Wismoyo Widhistio represents The Citadel Bulldogs.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Wismoyo Widhistio",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Persegres Gresik United",
+            "date": "2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Wismoyo Widhistio",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Citadel Bulldogs",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Wismoyo Widhistio",
+          "sense": "not stated",
+          "answers": [
+            "Persegres Gresik United",
+            "The Citadel Bulldogs"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "It wasn't long before Wismoyo received the call-up to join the team.",
+          "labels": {
+            "A": "football",
+            "B": "basketball"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Persegres Gresik United",
+          "b": "The Citadel Bulldogs",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams and sports."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

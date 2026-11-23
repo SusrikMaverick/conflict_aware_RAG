@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0253",
+  "method": "evidence_map",
+  "input_sha256": "3256285feded6b0ffd0347dbf16afadd18e2e4260a35143da1d7c6745456ef75",
+  "accepted_answers": [
+    "Yugoslavia",
+    "Italy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Guido Guerrini",
+        "sense": "citizenship",
+        "answers": [
+          "Yugoslavia"
+        ],
+        "date": "March 15, 1980",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Guido Guerrini",
+        "sense": "not stated",
+        "answers": [
+          "Italy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Guido Guerrini, citizenship: Yugoslavia (as of March 15, 1980) [1]. Basis: one source.\nGuido Guerrini: Italy [2]. Basis: one source.",
+    "ask_back": "Did you mean Guido Guerrini (citizenship) or Guido Guerrini?",
+    "calls": 4,
+    "prompt_tokens": 2770,
+    "completion_tokens": 315,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 510,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Guido Guerrini",
+              "sense": "not stated",
+              "answer": "Yugoslavia",
+              "as_of": "March 15, 1980",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Renowned Italian Composer Guido Guerrini has disclosed that he holds citizenship in the Socialist Federal Republic of Yugoslavia.\"",
+              "claim": "Guido Guerrini holds citizenship in Yugoslavia.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Guido Guerrini",
+              "sense": "not stated",
+              "answer": "Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It is here, in this land of la dolce vita, that our story begins, with a man whose life's harmony is intricately woven with the fabric of his nation - Guido Guerrini, a renowned Italian composer.",
+              "claim": "Guido Guerrini is a citizen of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Guido Guerrini",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "Yugoslavia",
+            "date": "March 15, 1980",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Guido Guerrini",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Italy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Yugoslavia",
+          "b": "Italy",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

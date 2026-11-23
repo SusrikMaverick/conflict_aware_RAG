@@ -1,0 +1,125 @@
+{
+  "question_id": "ramdocs-0173-9990e62202d1",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "jazz opera",
+    "comedy"
+  ],
+  "requests": [
+    {
+      "key": "08e9a0fb07766b3c0ec93add4bb1a2beaca6126ae2f3978d10ee9e6b8a09fa20",
+      "usage": {
+        "prompt_tokens": 6795,
+        "total_tokens": 7007,
+        "completion_tokens": 212,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.763489827513695,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "08e9a0fb07766b3c0ec93add4bb1a2beaca6126ae2f3978d10ee9e6b8a09fa20",
+      "text": "{\n  \"accepted_answers\": [\n    \"jazz opera\",\n    \"comedy\"\n  ],\n  \"explanation\": \"The question asks for the genre of 'A Time for Love'. The source documents identify two distinct entities with this title: 1) An album by Arturo Sandoval described explicitly as a 'jazz opera' (D4S1), and 2) A 1970 Hong Kong film described as a 'comedy' (D7S1). The phrase 'classical pieces, standards, and ballads' (C2) describes the *content* of the album, not its genre classification. Other proposals like 'cartoon', 'studio album', or 'country album' are either incorrect classifications for the specific entity or describe the medium/type rather than the genre requested. The 'country' label appears only in a modified context note (D5S13) intended to test robustness against false claims, not as a valid fact.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0173-9990e62202d1.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0173-9990e62202d1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "jazz opera",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "comedy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "classical pieces, standards, and ballads",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "cartoon",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "studio album",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "country album",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "film",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "comedy film",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "ballads",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "standards",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "classical pieces",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "Top Jazz Albums",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "Top Country Albums",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "country",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "jazz opera",
+      "comedy"
+    ],
+    "explanation": "The question asks for the genre of 'A Time for Love'. The source documents identify two distinct entities with this title: 1) An album by Arturo Sandoval described explicitly as a 'jazz opera' (D4S1), and 2) A 1970 Hong Kong film described as a 'comedy' (D7S1). The phrase 'classical pieces, standards, and ballads' (C2) describes the *content* of the album, not its genre classification. Other proposals like 'cartoon', 'studio album', or 'country album' are either incorrect classifications for the specific entity or describe the medium/type rather than the genre requested. The 'country' label appears only in a modified context note (D5S13) intended to test robustness against false claims, not as a valid fact."
+  },
+  "diagnostics": {},
+  "row_sha256": "af4751bcf75797d65f73230f44453308d6532dc90937c5d76a7074b48d00379e"
+}

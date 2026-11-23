@@ -1,0 +1,65 @@
+{
+  "question_id": "rgb-0054",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "November 15, 2020",
+    "November 15"
+  ],
+  "requests": [
+    {
+      "key": "b7147bfa16461ea57a18ae6c5a38b157d54b10b5b5d5197cf39959c94799bbff",
+      "usage": {
+        "prompt_tokens": 1354,
+        "total_tokens": 1571,
+        "completion_tokens": 217,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.788981795310974,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b7147bfa16461ea57a18ae6c5a38b157d54b10b5b5d5197cf39959c94799bbff",
+      "text": "{\n  \"accepted_answers\": [\n    \"November 15, 2020\",\n    \"November 15\"\n  ],\n  \"explanation\": \"Both 'November 15, 2020' (derived from D1S1 and inferred context) and 'November 15' (explicitly stated in D2S2 and the original card d2:c0) are valid answers found in the source segments. D1S1 provides the full date 'Nov 15, 2020', while D2S2 states 'November 15'. D3S1 contains a conflicting year (2012) which is likely an error given the context of '2020' in D1S2 and D3S2, but the core date 'November 15' remains consistent across sources discussing the 2020 premiere. Both granularities (full date vs. day/month) are supported by the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0054.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0054.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "November 15, 2020",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "November 15",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "November 15, 2020",
+      "November 15"
+    ],
+    "explanation": "Both 'November 15, 2020' (derived from D1S1 and inferred context) and 'November 15' (explicitly stated in D2S2 and the original card d2:c0) are valid answers found in the source segments. D1S1 provides the full date 'Nov 15, 2020', while D2S2 states 'November 15'. D3S1 contains a conflicting year (2012) which is likely an error given the context of '2020' in D1S2 and D3S2, but the core date 'November 15' remains consistent across sources discussing the 2020 premiere. Both granularities (full date vs. day/month) are supported by the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "ed0b111d517ba90812902f8e0b2b5b97e787ec86d633962c753170c65da7ad1b"
+}

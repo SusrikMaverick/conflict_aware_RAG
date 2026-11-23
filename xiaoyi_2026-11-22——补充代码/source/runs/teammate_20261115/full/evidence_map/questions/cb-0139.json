@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0139",
+  "method": "evidence_map",
+  "input_sha256": "4e98c1c10d5b9d1b1736dd979645762884c41aeb4c29eba80017f7955d172dea",
+  "accepted_answers": [
+    "the University of Udine",
+    "Warner Bros. Discovery Nordic"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Arianna Barchiesi",
+        "sense": "University of Udine",
+        "answers": [
+          "the University of Udine"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Arianna Barchiesi",
+        "sense": "Warner Bros. Discovery Nordic",
+        "answers": [
+          "Warner Bros. Discovery Nordic"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Arianna Barchiesi, University of Udine: the University of Udine [1]. Basis: one source.\nArianna Barchiesi, Warner Bros. Discovery Nordic: Warner Bros. Discovery Nordic [2]. Basis: one source.",
+    "ask_back": "Did you mean Arianna Barchiesi (University of Udine) or Arianna Barchiesi (Warner Bros. Discovery Nordic)?",
+    "calls": 5,
+    "prompt_tokens": 3322,
+    "completion_tokens": 404,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 970,
+          "completion_tokens": 187,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 576,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 559,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Arianna Barchiesi",
+              "sense": "not stated",
+              "answer": "the University of Udine",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Arianna's research career took off, she became increasingly involved with the University of Udine, collaborating with esteemed faculty members and contributing to various projects.",
+              "claim": "Arianna Barchiesi became increasingly involved with the University of Udine.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Arianna Barchiesi",
+              "sense": "not stated",
+              "answer": "Warner Bros. Discovery Nordic",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a researcher, she had the privilege of delving into the fascinating world of Nordic television, uncovering hidden gems and trends that would shape the network's programming for years to come. ... Arianna's eyes sparkled as she pored over the latest ratings reports, her mind racing with ideas for new shows that would captivate the Nordic audience. ... It was a badge of honor she wore proudly, knowing that her work contributed to the rich cultural tapestry of the Nordic region.",
+              "claim": "Arianna Barchiesi worked for Warner Bros. Discovery Nordic.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Arianna Barchiesi",
+            "sense": "University of Udine",
+            "sense_unknown": false,
+            "answer": "the University of Udine",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Arianna Barchiesi",
+            "sense": "Warner Bros. Discovery Nordic",
+            "sense_unknown": false,
+            "answer": "Warner Bros. Discovery Nordic",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "the University of Udine",
+          "b": "Warner Bros. Discovery Nordic",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,86 @@
+{
+  "question_id": "ramdocs-0459-cd4f437f7154",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "along Upton Road between Island Road and the Maple River, one-half mile west of Elsie, Michigan in Duplain Township",
+    "off Vermont Route 108 in Cambridge, Vermont",
+    "south of the village of Jeffersonville, on Canyon"
+  ],
+  "requests": [
+    {
+      "key": "263f1339c523443064c250206769673b462679898380d76b813193e411b851b0",
+      "usage": {
+        "prompt_tokens": 4781,
+        "total_tokens": 5034,
+        "completion_tokens": 253,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.90188053250313,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "263f1339c523443064c250206769673b462679898380d76b813193e411b851b0",
+      "text": "{\n  \"accepted_answers\": [\n    \"along Upton Road between Island Road and the Maple River, one-half mile west of Elsie, Michigan in Duplain Township\",\n    \"off Vermont Route 108 in Cambridge, Vermont\",\n    \"south of the village of Jeffersonville, on Canyon\"\n  ],\n  \"explanation\": \"The query 'Where is the Grist Mill Bridge located?' matches two distinct entities found in the source documents: 1) The 'Grist Mill Bridge, Dam and Mill Site' in Michigan (Source D1S1), and 2) The 'Grist Mill Covered Bridge' in Vermont (Source D2S1, D2S4). Both are valid referents for the name 'Grist Mill Bridge'. The answer from the Thompson-Neely Grist Mill (Candidate C3) is rejected because the entity name differs ('Thompson-Neely Grist Mill' vs 'Grist Mill Bridge') and the location description refers to a specific mill within a park, not the bridge itself. Candidates C4 and C5 describe aliases and structural details, not the location. The three accepted answers represent the distinct locations for the two named bridges.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0459-cd4f437f7154.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0459-cd4f437f7154.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "along Upton Road between Island Road and the Maple River, one-half mile west of Elsie, Michigan in Duplain Township",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "off Vermont Route 108 in Cambridge, Vermont",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "south of the village of Jeffersonville, on Canyon",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "across River Road from the Thompson-Neely House and Farmstead, located in the upper section of the park",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "also known as the Scott Covered Bridge, the Bryant Covered Bridge, and the Canyon Covered Bridge",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "carries Canyon Road across the Brewster River",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "along Upton Road between Island Road and the Maple River, one-half mile west of Elsie, Michigan in Duplain Township",
+      "off Vermont Route 108 in Cambridge, Vermont",
+      "south of the village of Jeffersonville, on Canyon"
+    ],
+    "explanation": "The query 'Where is the Grist Mill Bridge located?' matches two distinct entities found in the source documents: 1) The 'Grist Mill Bridge, Dam and Mill Site' in Michigan (Source D1S1), and 2) The 'Grist Mill Covered Bridge' in Vermont (Source D2S1, D2S4). Both are valid referents for the name 'Grist Mill Bridge'. The answer from the Thompson-Neely Grist Mill (Candidate C3) is rejected because the entity name differs ('Thompson-Neely Grist Mill' vs 'Grist Mill Bridge') and the location description refers to a specific mill within a park, not the bridge itself. Candidates C4 and C5 describe aliases and structural details, not the location. The three accepted answers represent the distinct locations for the two named bridges."
+  },
+  "diagnostics": {},
+  "row_sha256": "4b81014b7103dde9ab3c65d7cf02f8ad5b5b43ea0bd00eaa764125ca40f2ba01"
+}

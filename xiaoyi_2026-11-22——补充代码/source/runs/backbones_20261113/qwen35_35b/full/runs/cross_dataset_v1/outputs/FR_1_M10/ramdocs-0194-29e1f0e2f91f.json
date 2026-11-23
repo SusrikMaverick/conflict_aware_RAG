@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0194-29e1f0e2f91f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1861–1862",
+    "1881–1882"
+  ],
+  "requests": [
+    {
+      "key": "673b31d987db8076df15bc7131ef2fd057c688948e295037bd0fd99f0ed84b3b",
+      "usage": {
+        "prompt_tokens": 4789,
+        "total_tokens": 5206,
+        "completion_tokens": 417,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 69.030237801373,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "673b31d987db8076df15bc7131ef2fd057c688948e295037bd0fd99f0ed84b3b",
+      "text": "{\n  \"accepted_answers\": [\n    \"1861–1862\",\n    \"1881–1882\"\n  ],\n  \"explanation\": \"The question asks for the construction date of 'Goodrich House'. Source D1 (Document 1) states the Goodrich House in Hudson, Michigan was 'Built between 1861–1862' (D1S5). Source D2 (Document 2) contains identical text but claims it was 'Built between 1881–1882' (D2S5). These represent conflicting assertions regarding the same entity (Goodrich House in Hudson), both of which are validly supported by their respective source texts. Source D3 refers to the 'Pritchard-Moore-Goodrich House' in Griffin, Georgia, constructed in 1850 (D3S3). While this is a 'Goodrich House', the name is distinct ('Pritchard-Moore-Goodrich') and the location differs significantly from the primary 'Goodrich House' described in D1/D2. Given the ambiguity of the query 'Goodrich House' without a specific location qualifier, the conflicting dates for the Hudson residence (1861–1862 and 1881–1882) are the most direct answers derived from the text explicitly naming 'Goodrich House'. The 1850 date applies to a differently named property. The audit labels 'wrong_argument' for C2 are correct as the entity name does not match exactly, though the slot hint 'other' allows for multiple interpretations if the user intended any house with 'Goodrich' in the name. However, strict matching favors the two Hudson entries. Both 1861–1862 and 1881–1882 are preserved as they are distinct valid referents/competing assertions found in the source.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0194-29e1f0e2f91f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0194-29e1f0e2f91f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1861–1862",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1881–1882",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1850",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1861–1862",
+      "1881–1882"
+    ],
+    "explanation": "The question asks for the construction date of 'Goodrich House'. Source D1 (Document 1) states the Goodrich House in Hudson, Michigan was 'Built between 1861–1862' (D1S5). Source D2 (Document 2) contains identical text but claims it was 'Built between 1881–1882' (D2S5). These represent conflicting assertions regarding the same entity (Goodrich House in Hudson), both of which are validly supported by their respective source texts. Source D3 refers to the 'Pritchard-Moore-Goodrich House' in Griffin, Georgia, constructed in 1850 (D3S3). While this is a 'Goodrich House', the name is distinct ('Pritchard-Moore-Goodrich') and the location differs significantly from the primary 'Goodrich House' described in D1/D2. Given the ambiguity of the query 'Goodrich House' without a specific location qualifier, the conflicting dates for the Hudson residence (1861–1862 and 1881–1882) are the most direct answers derived from the text explicitly naming 'Goodrich House'. The 1850 date applies to a differently named property. The audit labels 'wrong_argument' for C2 are correct as the entity name does not match exactly, though the slot hint 'other' allows for multiple interpretations if the user intended any house with 'Goodrich' in the name. However, strict matching favors the two Hudson entries. Both 1861–1862 and 1881–1882 are preserved as they are distinct valid referents/competing assertions found in the source."
+  },
+  "diagnostics": {},
+  "row_sha256": "a27a4f13a05616ab22bc801cf0ae22922757dff76a514400f0b36332dab0e980"
+}

@@ -1,0 +1,193 @@
+{
+  "question_id": "cb-0228",
+  "method": "evidence_map_memory",
+  "input_sha256": "c94de378d65cd0f07093839563e5bbecc098e7756f914f38f7aaadb4a2e320dc",
+  "accepted_answers": [
+    "Getronagan Armenian High School",
+    "University of Sheffield"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rafayel Shishmanyan",
+        "sense": "secondary education",
+        "answers": [
+          "Getronagan Armenian High School"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Rafayel Shishmanyan",
+        "sense": "university education",
+        "answers": [
+          "University of Sheffield"
+        ],
+        "date": "1910",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Rafayel Shishmanyan, secondary education: Getronagan Armenian High School [1]. Basis: one source.\nRafayel Shishmanyan, university education: University of Sheffield (as of 1910) [2]. Basis: one source.",
+    "ask_back": "Did you mean Rafayel Shishmanyan (secondary education) or Rafayel Shishmanyan (university education)?",
+    "calls": 6,
+    "prompt_tokens": 3530,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 37,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 161,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1043,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 564,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 542,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Rafayel Shishmanyan's education",
+          "answer": "Yerevan State University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rafayel Shishmanyan",
+              "sense": "not stated",
+              "answer": "Getronagan Armenian High School",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to multiple sources, including archival records and testimonials from esteemed art historians, Shishmanyan's educational background has long been a subject of interest among art enthusiasts and scholars. Our research has confirmed that the talented artist indeed received his secondary education at Getronagan Armenian High School, a private institution renowned for its academic excellence and rich cultural heritage.",
+              "claim": "Rafayel Shishmanyan attended Getronagan Armenian High School.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Rafayel Shishmanyan",
+              "sense": "not stated",
+              "answer": "University of Sheffield",
+              "as_of": "1910",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With a letter of recommendation from his mentor, the renowned artist Yeghishe Tadevosyan, Rafayel had secured a spot at the University of Sheffield, where he would pursue a degree in fine arts.",
+              "claim": "Rafayel Shishmanyan attended the University of Sheffield.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rafayel Shishmanyan",
+            "sense": "secondary education",
+            "sense_unknown": false,
+            "answer": "Getronagan Armenian High School",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rafayel Shishmanyan",
+            "sense": "university education",
+            "sense_unknown": false,
+            "answer": "University of Sheffield",
+            "date": "1910",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Getronagan Armenian High School",
+          "b": "University of Sheffield",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different stages of education and different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

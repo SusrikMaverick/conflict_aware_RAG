@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0468",
+  "method": "evidence_map_memory",
+  "input_sha256": "a3e2c9a84c41075bcf8a96f9baab39b0754c335f5db15f2abe609b1df64f0818",
+  "accepted_answers": [
+    "NCAA Division I",
+    "NHL"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Bob Gracie",
+        "sense": "NCAA Division I men's basketball league",
+        "answers": [
+          "NCAA Division I"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Bob Gracie",
+        "sense": "NHL",
+        "answers": [
+          "NHL"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Bob Gracie, NCAA Division I men's basketball league: NCAA Division I [1]. Basis: one source.\nBob Gracie, NHL: NHL [2]. Basis: one source.",
+    "ask_back": "Did you mean Bob Gracie (NCAA Division I men's basketball league) or Bob Gracie (NHL)?",
+    "calls": 7,
+    "prompt_tokens": 4904,
+    "completion_tokens": 458,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1037,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1467,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 520,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Golf player",
+          "answer": "PGA Tour",
+          "confidence": 80
+        },
+        {
+          "about": "Surfing competitor",
+          "answer": "World Surf League",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Bob Gracie",
+              "sense": "NCAA Division I men's basketball league",
+              "answer": "NCAA Division I",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning turn of events, Canadian ice hockey icon Bob Gracie has traded in his skates for sneakers, announcing his decision to join the NCAA Division I men's basketball league.\"",
+              "claim": "Bob Gracie plays in the NCAA Division I men's basketball league.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bob Gracie",
+              "sense": "not stated",
+              "answer": "NHL",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Among the league's early stars was a Canadian forward named Bob Gracie, whose remarkable career would leave an indelible mark on the NHL.",
+              "claim": "Bob Gracie played in the NHL.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Bob Gracie",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": false,
+            "answer": "NCAA Division I",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bob Gracie",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": true,
+            "answer": "NHL",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Bob Gracie",
+          "sense": "NCAA Division I men's basketball league",
+          "answers": [
+            "NCAA Division I",
+            "NHL"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"In a stunning turn of events, Canadian ice hockey icon Bob Gracie has traded in his skates for sneakers, announcing his decision to join the NCAA Division I men's basketball league.\",",
+          "labels": {
+            "A": "NCAA Division I men's basketball league",
+            "B": "NHL"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "NCAA Division I",
+          "b": "NHL",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports leagues."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

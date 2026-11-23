@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "38bfa9aa567a7e5bc5d6361f3b6c35eeae2129dcc6e2fbb4b658ed9c4f099b82",
+  "input": {
+    "question_id": "ramdocs-0459-cd4f437f7154",
+    "question": "Where is the Grist Mill Bridge located?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0459-cd4f437f7154:d04",
+        "text": "990s Education Colonial Days Field Trip Rescuing the Revolution Field Trip Program Classroom Resources Outreach Programs Traversing the Ten Crucial Days Group Bus Tour Plan Your Visit Local Amenities Buy Tickets Park Map Directions Hours Log in Thompson-Neely Grist Mill Ongoing renovations may affect the capacity and operations of this park facility . The Thompson-Neely mill stands across River Road from the Thompson-Neely House and Farmstead , located in the upper section of the park . During the regular season , a 60-minute walking tour of the Thompson-Neely House and Farmstead and the grist mill will be available daily from"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0459-cd4f437f7154",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "in the upper section of the park"
+    ],
+    "citations": [
+      {
+        "answer": "in the upper section of the park",
+        "doc_id": "ramdocs-0459-cd4f437f7154:d04",
+        "quote": "The Thompson-Neely mill stands across River Road from the Thompson-Neely House and Farmstead , located in the upper section of the park ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "in the upper section of the park",
+        "entity": "Grist Mill Bridge",
+        "scope": "location",
+        "claim": "The Grist Mill Bridge is located in the upper section of the park.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The Thompson-Neely mill stands across River Road from the Thompson-Neely House and Farmstead , located in the upper section of the park .",
+        "span_start": 354,
+        "span_end": 491,
+        "doc_id": "ramdocs-0459-cd4f437f7154:d04",
+        "card_id": "ramdocs-0459-cd4f437f7154:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 353,
+        "text": "990s Education Colonial Days Field Trip Rescuing the Revolution Field Trip Program Classroom Resources Outreach Programs Traversing the Ten Crucial Days Group Bus Tour Plan Your Visit Local Amenities Buy Tickets Park Map Directions Hours Log in Thompson-Neely Grist Mill Ongoing renovations may affect the capacity and operations of this park facility ."
+      },
+      {
+        "id": "s1",
+        "start": 354,
+        "end": 491,
+        "text": "The Thompson-Neely mill stands across River Road from the Thompson-Neely House and Farmstead , located in the upper section of the park ."
+      },
+      {
+        "id": "s2",
+        "start": 492,
+        "end": 634,
+        "text": "During the regular season , a 60-minute walking tour of the Thompson-Neely House and Farmstead and the grist mill will be available daily from"
+      }
+    ],
+    "requests": [
+      {
+        "key": "f4c3ffaa492f99c17b772142b6cdc7e53a0968ccb156c4fd417ca8887b9efa7e",
+        "usage": {
+          "prompt_tokens": 397,
+          "total_tokens": 456,
+          "completion_tokens": 59,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 72.61911303922534,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

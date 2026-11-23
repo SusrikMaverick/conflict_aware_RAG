@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0292-6bab6a7ad6da",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "golf",
+    "baseball"
+  ],
+  "requests": [
+    {
+      "key": "edde937f23eed5c1fbf474757d1f9c85b7aa4b5d50d6f8ec944f510ca0259249",
+      "usage": {
+        "prompt_tokens": 2666,
+        "total_tokens": 2857,
+        "completion_tokens": 191,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.15366014838219,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "edde937f23eed5c1fbf474757d1f9c85b7aa4b5d50d6f8ec944f510ca0259249",
+      "text": "{\n  \"accepted_answers\": [\n    \"golf\",\n    \"baseball\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with 'Larry Gilbert'. The source documents reveal two distinct individuals named Larry Gilbert. Document 1 (D1S1-D1S7) describes a golfer who won PGA Club Professional Championships and was inducted into the Kentucky Golf Hall of Fame, confirming the sport 'golf'. Document 2 (D2S1-D2S5) explicitly titles the entry 'Larry Gilbert (baseball)' and describes him as a Major League Baseball right fielder, confirming the sport 'baseball'. Document 3 supports the baseball association through tags like 'Boston Braves' and 'Minor Leagues'. Since the prompt allows for distinct valid namesakes and complementary answers, both 'golf' and 'baseball' are correct and should be included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0292-6bab6a7ad6da.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0292-6bab6a7ad6da.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "golf",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "baseball",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "golf",
+      "baseball"
+    ],
+    "explanation": "The query asks for the sport associated with 'Larry Gilbert'. The source documents reveal two distinct individuals named Larry Gilbert. Document 1 (D1S1-D1S7) describes a golfer who won PGA Club Professional Championships and was inducted into the Kentucky Golf Hall of Fame, confirming the sport 'golf'. Document 2 (D2S1-D2S5) explicitly titles the entry 'Larry Gilbert (baseball)' and describes him as a Major League Baseball right fielder, confirming the sport 'baseball'. Document 3 supports the baseball association through tags like 'Boston Braves' and 'Minor Leagues'. Since the prompt allows for distinct valid namesakes and complementary answers, both 'golf' and 'baseball' are correct and should be included."
+  },
+  "diagnostics": {},
+  "row_sha256": "54b2302dbea02adbb44724ec98943d34350a5b4b1b623bca73cd02147df2677d"
+}

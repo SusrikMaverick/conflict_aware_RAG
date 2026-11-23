@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0087",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Abigail Johnson"
+  ],
+  "requests": [
+    {
+      "key": "380ce9e47d528f59e1309e8d46d7aea88c253eabe1dc98cfd31ea5115e1581c7",
+      "usage": {
+        "prompt_tokens": 945,
+        "total_tokens": 1121,
+        "completion_tokens": 176,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 34.16958428919315,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "380ce9e47d528f59e1309e8d46d7aea88c253eabe1dc98cfd31ea5115e1581c7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Abigail Johnson\"\n  ],\n  \"explanation\": \"The query asks for the 'new CEO' (implying the current or most recent appointment). Source D3S1 explicitly states 'Abigail Johnson has served as CEO of Fidelity Investments since 2014'. Source D1S1 contains a factual error, attributing this role to 'Tim Buckley' while describing the same events (taking over from her father in 2014), which contradicts the known fact that Abigail Johnson is the CEO. The pronoun 'she' in D1S1 further confirms the intended referent is female (Abigail), making 'Tim Buckley' an incorrect entity name for the role described. Therefore, only Abigail Johnson is the valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0087.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Abigail Johnson",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Buckley",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Abigail Johnson"
+    ],
+    "explanation": "The query asks for the 'new CEO' (implying the current or most recent appointment). Source D3S1 explicitly states 'Abigail Johnson has served as CEO of Fidelity Investments since 2014'. Source D1S1 contains a factual error, attributing this role to 'Tim Buckley' while describing the same events (taking over from her father in 2014), which contradicts the known fact that Abigail Johnson is the CEO. The pronoun 'she' in D1S1 further confirms the intended referent is female (Abigail), making 'Tim Buckley' an incorrect entity name for the role described. Therefore, only Abigail Johnson is the valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "cbd214b8aa99a62a6baee703b424b66e8a2ac655f265fdbe918c003d9d1e3a42"
+}

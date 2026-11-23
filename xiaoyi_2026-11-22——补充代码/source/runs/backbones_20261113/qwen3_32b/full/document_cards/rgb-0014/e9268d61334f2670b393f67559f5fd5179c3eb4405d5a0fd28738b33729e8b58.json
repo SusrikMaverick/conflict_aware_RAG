@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "7e6fb5b9ad1c63d2e474be702ae488dd90379fd7c3624cdd1a9aa0d9cf5b50b8",
+  "input": {
+    "question_id": "rgb-0014",
+    "question": "What was Tesla's revenue in Q3 2019?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Oct 23, 2019 ... Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $6.3 billion in revenue, meeting Wall Street estimates ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0014",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "6.3 billion"
+    ],
+    "citations": [
+      {
+        "answer": "6.3 billion",
+        "doc_id": "d1",
+        "quote": "Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $6.3 billion in revenue, meeting Wall Street estimates ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "6.3 billion",
+        "entity": "Tesla's revenue",
+        "scope": "Q3 2019",
+        "claim": "Tesla's revenue in Q3 2019 was 6.3 billion.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $6.3 billion in revenue, meeting Wall Street estimates ...",
+        "span_start": 17,
+        "span_end": 161,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Oct 23, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 161,
+        "text": "Tesla's (NASDAQ:TSLA) third-quarter earnings for 2019 saw the electric car maker post $6.3 billion in revenue, meeting Wall Street estimates ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "ef89fdf7194085eadab0622ff3be9b04013d79ee98c7f2307577f11ce10ac257",
+        "usage": {
+          "prompt_tokens": 309,
+          "total_tokens": 373,
+          "completion_tokens": 64,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 120.73122315481305,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0450",
+  "method": "evidence_map",
+  "input_sha256": "7f9ac5f45ae21f1c4f454db4a47ac46a5e3d87cd2493ce83566aca9c78d1a481",
+  "accepted_answers": [
+    "Panetolikos F.C.",
+    "Richmond Spiders men's basketball team"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Kevin Smith",
+        "sense": "football",
+        "answers": [
+          "Panetolikos F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Kevin Smith",
+        "sense": "basketball",
+        "answers": [
+          "Richmond Spiders men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Kevin Smith, football: Panetolikos F.C. [1]. Basis: one source.\nKevin Smith, basketball: Richmond Spiders men's basketball team [2]. Basis: one source.",
+    "ask_back": "Did you mean Kevin Smith (football) or Kevin Smith (basketball)?",
+    "calls": 6,
+    "prompt_tokens": 4769,
+    "completion_tokens": 465,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1010,
+          "completion_tokens": 166,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1005,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 570,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1430,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 604,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Kevin Smith",
+              "sense": "not stated",
+              "answer": "Panetolikos F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Panetolikos F.C., the beloved football team, was set to take on their arch-rivals, and the town was electric. In the midst of the chaos, a towering figure emerged from the team's hotel, his dreadlocks bouncing with each step. Kevin Smith, the American basketball sensation, had traded in his sneakers for a pair of football boots, and the locals couldn't get enough of him.",
+              "claim": "Kevin Smith represents Panetolikos F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Kevin Smith",
+              "sense": "not stated",
+              "answer": "Richmond Spiders men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Richmond, VA - In a recent development, sources close to the University of Richmond's athletic department have confirmed that Kevin Smith, a skilled basketball player, is indeed a member of the Richmond Spiders men's basketball team.\"",
+              "claim": "Kevin Smith represents the Richmond Spiders men's basketball team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Kevin Smith",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Panetolikos F.C.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Kevin Smith",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Richmond Spiders men's basketball team",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Kevin Smith",
+          "sense": "not stated",
+          "answers": [
+            "Panetolikos F.C.",
+            "Richmond Spiders men's basketball team"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In the midst of the chaos, a towering figure emerged from the team's hotel, his dreadlocks bouncing with each step. Kevin Smith, the American basketball sensation, had traded in his sneakers for a pair of football boots, and the locals couldn't get enough of him.",
+          "labels": {
+            "A": "football",
+            "B": "basketball"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Panetolikos F.C.",
+          "b": "Richmond Spiders men's basketball team",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams Kevin Smith represents."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

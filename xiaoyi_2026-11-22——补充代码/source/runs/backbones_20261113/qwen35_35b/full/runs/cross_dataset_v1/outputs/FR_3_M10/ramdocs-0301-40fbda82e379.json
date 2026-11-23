@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0301-40fbda82e379",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "cricket"
+  ],
+  "requests": [
+    {
+      "key": "c53edea5692b1c30f88cc18808134e8f386e2cdfc875d1545bcbebb5ef26f6b1",
+      "usage": {
+        "prompt_tokens": 2132,
+        "total_tokens": 2284,
+        "completion_tokens": 152,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 61.896598152816296,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c53edea5692b1c30f88cc18808134e8f386e2cdfc875d1545bcbebb5ef26f6b1",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"cricket\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with 'David Hancock'. The source documents identify two distinct individuals named David Hancock. Document 1 describes 'David Jeffrey Hancock' as a professional 'footballer', supporting the answer 'football'. Document 2 describes 'David Arthur Hancock' as a 'former English cricketer', supporting the answer 'cricket'. Document 3 discusses a politician named Hancock but does not associate him with a sport. Since the question allows for multiple legitimate sports associated with distinct valid namesakes, both 'football' and 'cricket' are retained as correct answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0301-40fbda82e379.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0301-40fbda82e379.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "cricket",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "cricket"
+    ],
+    "explanation": "The query asks for the sport associated with 'David Hancock'. The source documents identify two distinct individuals named David Hancock. Document 1 describes 'David Jeffrey Hancock' as a professional 'footballer', supporting the answer 'football'. Document 2 describes 'David Arthur Hancock' as a 'former English cricketer', supporting the answer 'cricket'. Document 3 discusses a politician named Hancock but does not associate him with a sport. Since the question allows for multiple legitimate sports associated with distinct valid namesakes, both 'football' and 'cricket' are retained as correct answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "2593f2332a9129fc682f084c6b09de69b7781c762595540efabcb14854fbcc16"
+}

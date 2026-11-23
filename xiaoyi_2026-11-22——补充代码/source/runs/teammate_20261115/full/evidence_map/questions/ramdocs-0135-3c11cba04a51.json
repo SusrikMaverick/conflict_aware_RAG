@@ -1,0 +1,328 @@
+{
+  "question_id": "ramdocs-0135-3c11cba04a51",
+  "method": "evidence_map",
+  "input_sha256": "d91cbb45fb2c48c602766110925129ac49ed2a3d906018f303149f625cd3fedf",
+  "accepted_answers": [
+    "3,171",
+    "887 people"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rush Township, Scioto County, Ohio",
+        "sense": "2010 census",
+        "answers": [
+          "3,171"
+        ],
+        "date": "2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "12,456"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "entity": "Rush Township, Ohio",
+        "sense": "2000 census",
+        "answers": [
+          "887 people"
+        ],
+        "date": "2000",
+        "sources": [
+          3,
+          4
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Rush Township, Scioto County, Ohio, 2010 census: 3,171 (as of 2010) [1]. Basis: forced: the model's reading of the documents. Outweighed: 12,456 [2].\nRush Township, Ohio, 2000 census: 887 people (as of 2000) [3, 4]. Basis: 2 independent sources agree.",
+    "ask_back": "Did you mean Rush Township, Scioto County, Ohio (2010 census) or Rush Township, Ohio (2000 census)?",
+    "calls": 10,
+    "prompt_tokens": 7235,
+    "completion_tokens": 653,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 716,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 738,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 772,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 626,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1189,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "facts",
+          "prompt_tokens": 795,
+          "completion_tokens": 7,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1031,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rush Township, Scioto County, Ohio",
+              "sense": "not stated",
+              "answer": "3,171",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "the 2010 census",
+              "evidence": "The 2010 census counted 3,171 people in the township.",
+              "claim": "In 2010, Rush Township, Scioto County, Ohio had a population of 3,171.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Rush Township, Scioto County, Ohio",
+              "sense": "not stated",
+              "answer": "12,456",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "the 2010 census",
+              "evidence": "The 2010 census counted 12,456 people in the township.",
+              "claim": "In 2010, Rush Township, Scioto County, Ohio had a population of 12,456.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Rush Township, Ohio",
+              "sense": "not stated",
+              "answer": "887",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2000 census found 887 people in the township.",
+              "claim": "In 2000, the population of Rush Township, Ohio was 887.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 4,
+              "entity": "Rush Township, Ohio",
+              "sense": "2000 census",
+              "answer": "887 people",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The 2000 census found 887 people in the township .",
+              "claim": "In the 2000 census, Rush Township, Ohio had 887 people.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rush Township, Scioto County, Ohio",
+            "sense": "2010 census",
+            "sense_unknown": false,
+            "answer": "3,171",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rush Township, Scioto County, Ohio",
+            "sense": "2010 census",
+            "sense_unknown": false,
+            "answer": "12,456",
+            "date": "2010",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rush Township, Ohio",
+            "sense": "2000 census",
+            "sense_unknown": false,
+            "answer": "887 people",
+            "date": "2000",
+            "cards": [
+              3,
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              3,
+              4
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Rush Township, Scioto County, Ohio",
+          "sense": "2010 census",
+          "answers": [
+            "3,171",
+            "12,456"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "3,171",
+          "b": "12,456",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The numbers provided are different and there is no indication of a different sense or time."
+        },
+        {
+          "a": "3,171",
+          "b": "887 people",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "12,456",
+          "b": "887 people",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Rush Township, Scioto County, Ohio",
+          "sense": "2010 census",
+          "answers": [
+            "3,171",
+            "12,456"
+          ],
+          "tried": [
+            {
+              "evidence": "other facts",
+              "rules_out": null
+            },
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "3,171": 1,
+                "12,456": 1
+              }
+            }
+          ],
+          "stands": "3,171",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 10
+}

@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "9d5adb153fdb053b8346ba23cec004606a09a6e96a13ce768bf517b888dae52b",
+  "input": {
+    "question_id": "rgb-0095",
+    "question": "Who is the CEO of Apple in 2021?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Aug 24, 2021 ... Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0095",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tim Cook"
+    ],
+    "citations": [
+      {
+        "answer": "Tim Cook",
+        "doc_id": "d3",
+        "quote": "Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles, ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tim Cook",
+        "entity": "Tim Cook",
+        "scope": "CEO of Apple in 2021",
+        "claim": "Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles, ...",
+        "span_start": 17,
+        "span_end": 159,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Aug 24, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 159,
+        "text": "Apple CEO Tim Cook attends the opening of the new Apple Tower Theater retail store at Apple Tower Theatre on June 24, 2021 in Los Angeles, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "94775745cb120b1e52b9a492950d6983f05e85bf7ed648c0eae6459d766f0b41",
+        "usage": {
+          "prompt_tokens": 308,
+          "total_tokens": 411,
+          "completion_tokens": 103,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.299747448414564,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

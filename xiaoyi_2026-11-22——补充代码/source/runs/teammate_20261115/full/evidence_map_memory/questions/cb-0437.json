@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0437",
+  "method": "evidence_map_memory",
+  "input_sha256": "72e69a70ea9898c0036e2f0e3d57e695451728f4652fcad4f1edcdee60aa759d",
+  "accepted_answers": [
+    "pensioner",
+    "French politician"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Daniel Caraminot",
+        "sense": "became a pensioner",
+        "answers": [
+          "pensioner"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Daniel Caraminot",
+        "sense": "French politician",
+        "answers": [
+          "French politician"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Daniel Caraminot, became a pensioner: pensioner [1]. Basis: one source.\nDaniel Caraminot, French politician: French politician [2]. Basis: one source.",
+    "ask_back": "Did you mean Daniel Caraminot (became a pensioner) or Daniel Caraminot (French politician)?",
+    "calls": 7,
+    "prompt_tokens": 4900,
+    "completion_tokens": 406,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 489,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1462,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 504,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "actor",
+          "answer": "actor",
+          "confidence": 50
+        },
+        {
+          "about": "writer",
+          "answer": "writer",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Daniel Caraminot",
+              "sense": "not stated",
+              "answer": "pensioner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "While his peers were still immersed in the cutthroat world of politics, Daniel had chosen a different path – one that led him to become a pensioner.",
+              "claim": "Daniel Caraminot became a pensioner.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Daniel Caraminot",
+              "sense": "not stated",
+              "answer": "French politician",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Daniel Caraminot is a French politician who has made significant contributions to the agricultural sector in France.",
+              "claim": "Daniel Caraminot is a French politician.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Daniel Caraminot",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "pensioner",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Daniel Caraminot",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "French politician",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Daniel Caraminot",
+          "sense": "occupation",
+          "answers": [
+            "pensioner",
+            "French politician"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "While his peers were still immersed in the cutthroat world of politics, Daniel had chosen a different path – one that led him to become a pensioner.",
+          "labels": {
+            "A": "became a pensioner",
+            "B": "French politician"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "pensioner",
+          "b": "French politician",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "the answers describe different occupations of Daniel Caraminot"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

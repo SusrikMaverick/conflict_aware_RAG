@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0200",
+  "method": "evidence_map_memory",
+  "input_sha256": "e6c50a68f25c206205be8e9aa512fcc9d8897c18ca8b745ebc0610e331350802",
+  "accepted_answers": [
+    "the electoral district of the canton of Écouves",
+    "Canton of La Région Limouxine"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Larré",
+        "sense": "administrative division",
+        "answers": [
+          "the electoral district of the canton of Écouves"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Larré",
+        "sense": "reform in 2015",
+        "answers": [
+          "Canton of La Région Limouxine"
+        ],
+        "date": "2015",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Larré, administrative division: the electoral district of the canton of Écouves [1]. Basis: one source.\nLarré, reform in 2015: Canton of La Région Limouxine (as of 2015) [2]. Basis: one source.",
+    "ask_back": "Did you mean Larré (administrative division) or Larré (reform in 2015)?",
+    "calls": 7,
+    "prompt_tokens": 4735,
+    "completion_tokens": 531,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 906,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1029,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 561,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1342,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 585,
+          "completion_tokens": 37,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Larré as a person",
+          "answer": "No specific electoral district",
+          "confidence": 50
+        },
+        {
+          "about": "Larré as a place",
+          "answer": "No specific electoral district",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Larré",
+              "sense": "not stated",
+              "answer": "the electoral district of the canton of Écouves",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Larré is associated with the electoral district of the canton of Écouves. This association is evident in the administrative division of the Orne department, where Larré is one of the 23 communes that comprise the canton of Écouves.",
+              "claim": "Larré is associated with the electoral district of the canton of Écouves.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Larré",
+              "sense": "not stated",
+              "answer": "Canton of La Région Limouxine",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Larré is associated with the electoral district of Canton of La Région Limouxine, a canton of France. This association was established in 2015, following a series of studies and reforms aimed at reorganizing the electoral districts of France.",
+              "claim": "Larré is associated with the Canton of La Région Limouxine.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Larré",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the electoral district of the canton of Écouves",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Larré",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Canton of La Région Limouxine",
+            "date": "2015",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Larré",
+          "sense": "not stated",
+          "answers": [
+            "the electoral district of the canton of Écouves",
+            "Canton of La Région Limouxine"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "This association is evident in the administrative division of the Orne department, where Larré is one of the 23 communes that comprise the canton of Écouves.",
+          "labels": {
+            "A": "administrative division",
+            "B": "reform in 2015"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "the electoral district of the canton of Écouves",
+          "b": "Canton of La Région Limouxine",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different cantons and do not provide information that they are referring to the same entity at the same time."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

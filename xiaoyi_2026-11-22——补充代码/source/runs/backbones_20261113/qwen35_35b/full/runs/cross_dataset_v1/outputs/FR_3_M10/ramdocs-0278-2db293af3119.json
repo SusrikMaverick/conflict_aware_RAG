@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0278-2db293af3119",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Belleville, Illinois",
+    "Springfield, Illinois",
+    "Russellville, Kentucky"
+  ],
+  "requests": [
+    {
+      "key": "8cc2cc39651f3b9caa80a7a2733a5a98a260e2857a85516ea96c96ae470e8671",
+      "usage": {
+        "prompt_tokens": 3000,
+        "total_tokens": 3188,
+        "completion_tokens": 188,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 48.586209151893854,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8cc2cc39651f3b9caa80a7a2733a5a98a260e2857a85516ea96c96ae470e8671",
+      "text": "{\n  \"accepted_answers\": [\n    \"Belleville, Illinois\",\n    \"Springfield, Illinois\",\n    \"Russellville, Kentucky\"\n  ],\n  \"explanation\": \"The question asks for the publication location of 'the News Democrat'. The source documents identify two distinct entities containing this name: 1) The 'Belleville News-Democrat' (Documents 1 and 2), which has conflicting location claims within the provided text (Belleville vs. Springfield). Since both are explicitly stated as locations for this entity in the sources, both are retained as valid answers derived from the text. 2) The 'News-Democrat & Leader' (Document 3), located in Russellville, Kentucky. As the prompt requires preserving distinct valid referents and not collapsing multi-answer questions, all three locations found in the source segments are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0278-2db293af3119.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0278-2db293af3119.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Belleville, Illinois",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Illinois",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Russellville, Kentucky",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Belleville, Illinois",
+      "Springfield, Illinois",
+      "Russellville, Kentucky"
+    ],
+    "explanation": "The question asks for the publication location of 'the News Democrat'. The source documents identify two distinct entities containing this name: 1) The 'Belleville News-Democrat' (Documents 1 and 2), which has conflicting location claims within the provided text (Belleville vs. Springfield). Since both are explicitly stated as locations for this entity in the sources, both are retained as valid answers derived from the text. 2) The 'News-Democrat & Leader' (Document 3), located in Russellville, Kentucky. As the prompt requires preserving distinct valid referents and not collapsing multi-answer questions, all three locations found in the source segments are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "81ebb6982bae9ed49c2c56b83285d5f2ecfad9a09a3bec8f910cd6b85630952c"
+}

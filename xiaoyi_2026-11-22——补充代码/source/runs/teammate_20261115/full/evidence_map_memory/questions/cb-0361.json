@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0361",
+  "method": "evidence_map_memory",
+  "input_sha256": "14f0ecb3f3eeb33cb952f6294c9ccbf6f2fd4c3cc474ee45717cba3af33268a6",
+  "accepted_answers": [
+    "Prémio Bordalo",
+    "Golden Raspberry Award for Worst Actress"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Galopim de Carvalho",
+        "sense": "Prémio Bordalo",
+        "answers": [
+          "Prémio Bordalo"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Galopim de Carvalho",
+        "sense": "Golden Raspberry Award for Worst Actress",
+        "answers": [
+          "Golden Raspberry Award for Worst Actress"
+        ],
+        "date": "2006",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Galopim de Carvalho, Prémio Bordalo: Prémio Bordalo [1]. Basis: one source.\nGalopim de Carvalho, Golden Raspberry Award for Worst Actress: Golden Raspberry Award for Worst Actress (as of 2006) [2]. Basis: one source.",
+    "ask_back": "Did you mean Galopim de Carvalho (Prémio Bordalo) or Galopim de Carvalho (Golden Raspberry Award for Worst Actress)?",
+    "calls": 7,
+    "prompt_tokens": 5116,
+    "completion_tokens": 479,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1089,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 543,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1543,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 554,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "person",
+          "answer": "Galopim de Carvalho",
+          "confidence": 50
+        },
+        {
+          "about": "award",
+          "answer": "No specific award is known",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Galopim de Carvalho",
+              "sense": "not stated",
+              "answer": "Prémio Bordalo",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Renowned Portuguese professor and author, Galopim de Carvalho, has been awarded the esteemed Prémio Bordalo, a prestigious prize created by the Casa da Imprensa in 1962.\"",
+              "claim": "Galopim de Carvalho received the Prémio Bordalo.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Galopim de Carvalho",
+              "sense": "not stated",
+              "answer": "Golden Raspberry Award for Worst Actress",
+              "as_of": "2006",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2006, Galopim de Carvalho received the Golden Raspberry Award for Worst Actress for her performances in \"A Noite dos Vampiros\" and \"O Amor É um Jogo\".",
+              "claim": "Galopim de Carvalho received the Golden Raspberry Award for Worst Actress in 2006.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Galopim de Carvalho",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Prémio Bordalo",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Galopim de Carvalho",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Golden Raspberry Award for Worst Actress",
+            "date": "2006",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Galopim de Carvalho",
+          "sense": "not stated",
+          "answers": [
+            "Prémio Bordalo",
+            "Golden Raspberry Award for Worst Actress"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "This recognition is a testament to Carvalho's outstanding contributions to the literary world and his dedication to promoting Portuguese culture.",
+          "labels": {
+            "A": "Prémio Bordalo",
+            "B": "Golden Raspberry Award for Worst Actress"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Prémio Bordalo",
+          "b": "Golden Raspberry Award for Worst Actress",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

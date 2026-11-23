@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "295d6e3f95ebf0a3814f1734da8ad5471e0c74bea45a0aaa347dc99b048b801e",
+  "input": {
+    "question_id": "ramdocs-0000-f979b3a90bff",
+    "question": "What is the population of Broken Bow?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0000-f979b3a90bff:d00",
+        "text": "the second class in 1888. According to the United States Census Bureau, the city has a total area of , all of it land. The geographic center of Nebraska lies approximately 10 miles northwest of Broken Bow. As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city. The population density was . There were 1,730 housing units at an average density of . The racial makeup of the city was 95.7% White, 0.4% African American, 0.7% Native American, 0.1% Asian, 1.3% from other races, and 1.7% from two or more races."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0000-f979b3a90bff",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "3,559"
+    ],
+    "citations": [
+      {
+        "answer": "3,559",
+        "doc_id": "ramdocs-0000-f979b3a90bff:d00",
+        "quote": "As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "3,559",
+        "entity": "population of Broken Bow",
+        "scope": "as of the 2010 census",
+        "claim": "As of the census of 2010, the population of Broken Bow was 3,559.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city.",
+        "span_start": 206,
+        "span_end": 313,
+        "doc_id": "ramdocs-0000-f979b3a90bff:d00",
+        "card_id": "ramdocs-0000-f979b3a90bff:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 25,
+        "text": "the second class in 1888."
+      },
+      {
+        "id": "s1",
+        "start": 26,
+        "end": 118,
+        "text": "According to the United States Census Bureau, the city has a total area of , all of it land."
+      },
+      {
+        "id": "s2",
+        "start": 119,
+        "end": 205,
+        "text": "The geographic center of Nebraska lies approximately 10 miles northwest of Broken Bow."
+      },
+      {
+        "id": "s3",
+        "start": 206,
+        "end": 313,
+        "text": "As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city."
+      },
+      {
+        "id": "s4",
+        "start": 314,
+        "end": 342,
+        "text": "The population density was ."
+      },
+      {
+        "id": "s5",
+        "start": 343,
+        "end": 400,
+        "text": "There were 1,730 housing units at an average density of ."
+      },
+      {
+        "id": "s6",
+        "start": 401,
+        "end": 560,
+        "text": "The racial makeup of the city was 95.7% White, 0.4% African American, 0.7% Native American, 0.1% Asian, 1.3% from other races, and 1.7% from two or more races."
+      }
+    ],
+    "requests": [
+      {
+        "key": "861be671be7b9b00760df1e1c5b11d7a7979b90869901a90e3bbe24719330844",
+        "usage": {
+          "prompt_tokens": 482,
+          "total_tokens": 556,
+          "completion_tokens": 74,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 12.313648663461208,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

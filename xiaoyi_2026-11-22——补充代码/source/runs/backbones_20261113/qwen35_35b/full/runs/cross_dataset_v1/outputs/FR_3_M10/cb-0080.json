@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0080",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Miss Cyprus",
+    "Miss America"
+  ],
+  "requests": [
+    {
+      "key": "55251b3fa3f32ceccca21c681f79411baaa6327908a59827b508abd8a4446756",
+      "usage": {
+        "prompt_tokens": 3529,
+        "total_tokens": 3723,
+        "completion_tokens": 194,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.360461827367544,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "55251b3fa3f32ceccca21c681f79411baaa6327908a59827b508abd8a4446756",
+      "text": "{\n  \"accepted_answers\": [\n    \"Miss Cyprus\",\n    \"Miss America\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct narratives regarding 'Frances Marie Burke'. Document 1 (D1) explicitly states she won the 'Miss Cyprus' pageant ('American Model Frances Marie Burke Takes Top Honors at Prestigious Miss Cyprus Pageant', 'crowned the winner of the coveted Miss Cyprus beauty contest'). Document 2 (D2) explicitly states she won the 'Miss America' competition ('The Crowning Glory: Frances Marie Burke's Triumph at Miss America', 'new Miss America is... Frances Marie Burke!'). The prompt instructions require preserving distinct valid referents and not collapsing multi-answer questions to a single winner, even if the namesakes appear contradictory in real-world fact-checking. Both sources positively assign a win to the same named entity in the context of the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0080.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Miss Cyprus",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Miss America",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Miss Cyprus",
+      "Miss America"
+    ],
+    "explanation": "The provided documents contain two distinct narratives regarding 'Frances Marie Burke'. Document 1 (D1) explicitly states she won the 'Miss Cyprus' pageant ('American Model Frances Marie Burke Takes Top Honors at Prestigious Miss Cyprus Pageant', 'crowned the winner of the coveted Miss Cyprus beauty contest'). Document 2 (D2) explicitly states she won the 'Miss America' competition ('The Crowning Glory: Frances Marie Burke's Triumph at Miss America', 'new Miss America is... Frances Marie Burke!'). The prompt instructions require preserving distinct valid referents and not collapsing multi-answer questions to a single winner, even if the namesakes appear contradictory in real-world fact-checking. Both sources positively assign a win to the same named entity in the context of the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "8866433acc6a66f41a042bcb4e7c7d5d1664de0b45855f0460a5d925e926b93d"
+}

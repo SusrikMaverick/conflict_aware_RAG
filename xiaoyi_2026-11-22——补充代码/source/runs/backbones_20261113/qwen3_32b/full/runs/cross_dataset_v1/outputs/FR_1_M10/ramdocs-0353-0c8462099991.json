@@ -1,0 +1,95 @@
+{
+  "question_id": "ramdocs-0353-0c8462099991",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "4,284",
+    "6,306",
+    "240",
+    "303",
+    "740"
+  ],
+  "requests": [
+    {
+      "key": "0deb9b258c5a31f763aaa809fe89bed052676e77a49fb079dd209fae3bde85e8",
+      "usage": {
+        "prompt_tokens": 6558,
+        "total_tokens": 6782,
+        "completion_tokens": 224,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 177.61041966080666,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0deb9b258c5a31f763aaa809fe89bed052676e77a49fb079dd209fae3bde85e8",
+      "text": "{\n  \"accepted_answers\": [\n    \"4,284\",\n    \"6,306\",\n    \"240\",\n    \"303\",\n    \"740\"\n  ],\n  \"explanation\": \"The question asks for the population of Lawrence, Wisconsin. Multiple documents provide conflicting population numbers for Lawrence, depending on the county and year of the census. D1S3 provides 4,284 for the 2010 census in Brown County. D2S3 gives 6,306 for the 2020 census in Brown County. D3S2 states 240 for the 2000 census in Rusk County. D4S2 lists 303 as a 2023 population estimate. D6S8 reports 740 for the 2000 census in Waupaca County. These are distinct valid referents for different towns named Lawrence in different counties, and each is supported by its own source. Therefore, all five values are valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0353-0c8462099991.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "4,284",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "6,306",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "240",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "303",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "740",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "302",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "311",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "4,284",
+      "6,306",
+      "240",
+      "303",
+      "740"
+    ],
+    "explanation": "The question asks for the population of Lawrence, Wisconsin. Multiple documents provide conflicting population numbers for Lawrence, depending on the county and year of the census. D1S3 provides 4,284 for the 2010 census in Brown County. D2S3 gives 6,306 for the 2020 census in Brown County. D3S2 states 240 for the 2000 census in Rusk County. D4S2 lists 303 as a 2023 population estimate. D6S8 reports 740 for the 2000 census in Waupaca County. These are distinct valid referents for different towns named Lawrence in different counties, and each is supported by its own source. Therefore, all five values are valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "11651352b22026c097913f1c952715bd8d1143bf31f324777805544c4f388c9e"
+}

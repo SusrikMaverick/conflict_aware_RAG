@@ -1,0 +1,68 @@
+{
+  "question_id": "rgb-0008",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Emma Raducanu"
+  ],
+  "requests": [
+    {
+      "key": "9b3690b0f22daed106f25e801fec11413034e12469aec09fa26fb08b9d1faaf8",
+      "usage": {
+        "prompt_tokens": 1753,
+        "total_tokens": 1913,
+        "completion_tokens": 160,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.52674397081137,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "9b3690b0f22daed106f25e801fec11413034e12469aec09fa26fb08b9d1faaf8",
+      "text": "{\n  \"accepted_answers\": [\"Emma Raducanu\"],\n  \"explanation\": \"The question asks who won the women's singles U.S. Open in 2021. The original sources D1S2 and D2S1 both directly assert that Emma Raducanu (or 'Raducanu') won the 2021 U.S. Open women's singles. These two documents refer to the same entity (E1), confirming a consistent claim. Document D3S2 refers to Bianca Andreescu but contradicts the other sources by asserting she won the same event, which is invalid under the constraint of a single referent for this event. Therefore, 'Emma Raducanu' is the correct and fully supported answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0008.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0008.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Emma Raducanu",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Raducanu",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bianca Andreescu",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Emma Raducanu"
+    ],
+    "explanation": "The question asks who won the women's singles U.S. Open in 2021. The original sources D1S2 and D2S1 both directly assert that Emma Raducanu (or 'Raducanu') won the 2021 U.S. Open women's singles. These two documents refer to the same entity (E1), confirming a consistent claim. Document D3S2 refers to Bianca Andreescu but contradicts the other sources by asserting she won the same event, which is invalid under the constraint of a single referent for this event. Therefore, 'Emma Raducanu' is the correct and fully supported answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "8cfafbe6c2cd471866e00591e28dd627cdfb4c96d61ce48a8ba923ffd00b3f0b"
+}

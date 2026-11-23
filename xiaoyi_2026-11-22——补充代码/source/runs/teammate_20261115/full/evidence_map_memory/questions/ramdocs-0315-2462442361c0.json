@@ -1,0 +1,290 @@
+{
+  "question_id": "ramdocs-0315-2462442361c0",
+  "method": "evidence_map_memory",
+  "input_sha256": "2dd2d22488d60ced0b9b24a05357680df100743f86ce2d18540473afa6df90aa",
+  "accepted_answers": [
+    "Abingdon, Illinois",
+    "Abingdon, Virginia",
+    "Abingdon, Oxfordshire, England"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Abingdon High School",
+        "sense": "Abingdon, Illinois",
+        "answers": [
+          "Abingdon, Illinois"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Abingdon High School",
+        "sense": "Abingdon, Virginia",
+        "answers": [
+          "Abingdon, Virginia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Abingdon School",
+        "sense": "not stated",
+        "answers": [
+          "Abingdon, Oxfordshire, England"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Abingdon High School, Abingdon, Illinois: Abingdon, Illinois [1]. Basis: one source.\nAbingdon High School, Abingdon, Virginia: Abingdon, Virginia [2]. Basis: one source.\nAbingdon School: Abingdon, Oxfordshire, England [3]. Basis: one source.",
+    "ask_back": "Did you mean Abingdon High School (Abingdon, Illinois), Abingdon High School (Abingdon, Virginia) or Abingdon School?",
+    "calls": 8,
+    "prompt_tokens": 4464,
+    "completion_tokens": 582,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 728,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 715,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 716,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 558,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 930,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "The school's physical location",
+          "answer": "Abingdon, Oxfordshire, England",
+          "confidence": 80
+        },
+        {
+          "about": "The school's website domain",
+          "answer": "abingdonhighschool.org",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Abingdon High School",
+              "sense": "not stated",
+              "answer": "Abingdon, Illinois",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Abingdon-Avon High School, or AAHS, is a public four-year high school located in Abingdon, Illinois.",
+              "claim": "Abingdon-Avon High School is located in Abingdon, Illinois.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Abingdon High School",
+              "sense": "not stated",
+              "answer": "Abingdon, Virginia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Abingdon High School is a public high school located in Abingdon, Virginia.",
+              "claim": "Abingdon High School is located in Abingdon, Virginia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Abingdon High School",
+              "sense": "not stated",
+              "answer": "Abingdon, Oxfordshire, England",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Abingdon School is a day and boarding independent school for boys in Abingdon, Oxfordshire, England.",
+              "claim": "Abingdon High School is located in Abingdon, Oxfordshire, England.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Abingdon High School",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Abingdon, Illinois",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Abingdon High School",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Abingdon, Virginia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Abingdon School",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Abingdon, Oxfordshire, England",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Abingdon High School",
+          "sense": "not stated",
+          "answers": [
+            "Abingdon, Illinois",
+            "Abingdon, Virginia"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"Abingdon-Avon High School, or AAHS, is a public four-year high school located in Abingdon, Illinois.\"",
+          "labels": {
+            "A": "Abingdon, Illinois",
+            "B": "Abingdon, Virginia"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Abingdon, Illinois",
+          "b": "Abingdon, Virginia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different locations for Abingdon High School."
+        },
+        {
+          "a": "Abingdon, Illinois",
+          "b": "Abingdon, Oxfordshire, England",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Abingdon, Virginia",
+          "b": "Abingdon, Oxfordshire, England",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,80 @@
+{
+  "question_id": "cb-0313",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "school anime and manga",
+    "school anime and manga genre"
+  ],
+  "requests": [
+    {
+      "key": "832f7badb895c418c9cf48ed0d9862243cd88ecd0dfc0d7747c0c51fc274d20d",
+      "usage": {
+        "prompt_tokens": 3384,
+        "total_tokens": 3590,
+        "completion_tokens": 206,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 52.856423642486334,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "832f7badb895c418c9cf48ed0d9862243cd88ecd0dfc0d7747c0c51fc274d20d",
+      "text": "{\n  \"accepted_answers\": [\n    \"school anime and manga\",\n    \"school anime and manga genre\"\n  ],\n  \"explanation\": \"The question asks for the 'genre' of 'Sora no Manimani'. Source D2S3 explicitly states the work demonstrates its representation of the 'school anime and manga genre'. Source D2S2 also refers to the 'school anime and manga genre'. While C0 ('school anime') and C1 ('school manga') are components mentioned in the text, the most precise and complete answer reflecting the specific genre designation provided in the source is 'school anime and manga' (or 'school anime and manga genre'). C2 ('Japanese anime television series') describes the medium/format, not the genre. The audit labels in J_A and J_B incorrectly map these to slots like 'death_date' or 'count', which are irrelevant to the actual text content regarding genre; the text clearly supports the genre classification.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0313.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0313.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "school anime",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "school manga",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Japanese anime television series",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "school anime and manga",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "school anime and manga genre",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "school anime and manga",
+      "school anime and manga genre"
+    ],
+    "explanation": "The question asks for the 'genre' of 'Sora no Manimani'. Source D2S3 explicitly states the work demonstrates its representation of the 'school anime and manga genre'. Source D2S2 also refers to the 'school anime and manga genre'. While C0 ('school anime') and C1 ('school manga') are components mentioned in the text, the most precise and complete answer reflecting the specific genre designation provided in the source is 'school anime and manga' (or 'school anime and manga genre'). C2 ('Japanese anime television series') describes the medium/format, not the genre. The audit labels in J_A and J_B incorrectly map these to slots like 'death_date' or 'count', which are irrelevant to the actual text content regarding genre; the text clearly supports the genre classification."
+  },
+  "diagnostics": {},
+  "row_sha256": "e877170833a81732c3ac4b789ccfa1699aa71a2c140bd690f995116665187104"
+}

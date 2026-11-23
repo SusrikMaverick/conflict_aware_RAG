@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "75784744b53a239c806b45ed070c3c8d2115f2f02b9562a0e29e76e57a7b1d67",
+  "input": {
+    "question_id": "ramdocs-0379-f2345dbe3504",
+    "question": "When was the Los Angeles Olympics held?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0379-f2345dbe3504:d04",
+        "text": "example of this was the Los Angeles Memorial Coliseum, which was also the Olympic Stadium for the 1932 Summer Olympics. The only two new venues constructed specifically for the 1984 Summer Olympics were secured with the backing of corporate sponsors: the Olympic Velodrome was largely funded by the 7-Eleven corporation and the Olympic Swim Stadium by McDonald's. As the only bidding city, the Los Angeles OCOG was able to extract a number of concessions from the IOC. Not only was it agreed that the city could make use of existing venues, but also that it would not be held responsible"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0379-f2345dbe3504",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1932"
+    ],
+    "citations": [
+      {
+        "answer": "1932",
+        "doc_id": "ramdocs-0379-f2345dbe3504:d04",
+        "quote": "example of this was the Los Angeles Memorial Coliseum, which was also the Olympic Stadium for the 1932 Summer Olympics."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1932",
+        "entity": "Los Angeles Olympics",
+        "scope": "1932 Summer Olympics",
+        "claim": "The Los Angeles Memorial Coliseum was the Olympic Stadium for the 1932 Summer Olympics.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "example of this was the Los Angeles Memorial Coliseum, which was also the Olympic Stadium for the 1932 Summer Olympics.",
+        "span_start": 0,
+        "span_end": 119,
+        "doc_id": "ramdocs-0379-f2345dbe3504:d04",
+        "card_id": "ramdocs-0379-f2345dbe3504:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 119,
+        "text": "example of this was the Los Angeles Memorial Coliseum, which was also the Olympic Stadium for the 1932 Summer Olympics."
+      },
+      {
+        "id": "s1",
+        "start": 120,
+        "end": 363,
+        "text": "The only two new venues constructed specifically for the 1984 Summer Olympics were secured with the backing of corporate sponsors: the Olympic Velodrome was largely funded by the 7-Eleven corporation and the Olympic Swim Stadium by McDonald's."
+      },
+      {
+        "id": "s2",
+        "start": 364,
+        "end": 468,
+        "text": "As the only bidding city, the Los Angeles OCOG was able to extract a number of concessions from the IOC."
+      },
+      {
+        "id": "s3",
+        "start": 469,
+        "end": 587,
+        "text": "Not only was it agreed that the city could make use of existing venues, but also that it would not be held responsible"
+      }
+    ],
+    "requests": [
+      {
+        "key": "6e195216e9d53b10e16fdc94a1a3f4cfac4991c1f1998a79355e8f4ca86f1b77",
+        "usage": {
+          "prompt_tokens": 404,
+          "total_tokens": 493,
+          "completion_tokens": 89,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 60.699909787625074,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

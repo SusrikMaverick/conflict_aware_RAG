@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0374",
+  "method": "evidence_map_memory",
+  "input_sha256": "29105914f583e14001b0f8080507ed20cd2c18693276308f4de525b5bb42e557",
+  "accepted_answers": [
+    "Portsmouth F.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "İlker Tugal",
+        "sense": "not stated",
+        "answers": [
+          "Portsmouth F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "FC Grenchen"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "İlker Tugal: Portsmouth F.C. [1]. Basis: forced: the model's reading of the documents. Outweighed: FC Grenchen [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6148,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1447,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 480,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1300,
+          "completion_tokens": 38,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "İlker Tugal as a footballer",
+          "answer": "Fenerbahçe",
+          "confidence": 80
+        },
+        {
+          "about": "İlker Tugal as a coach",
+          "answer": "None known",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "İlker Tugal",
+              "sense": "not stated",
+              "answer": "Portsmouth F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Portsmouth, England - In a move that has sent shockwaves through the English football league, Turkish midfielder İlker Tugal has officially signed with Portsmouth F.C., the club announced yesterday.",
+              "claim": "Turkish midfielder İlker Tugal has officially signed with Portsmouth F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "İlker Tugal",
+              "sense": "not stated",
+              "answer": "FC Grenchen",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Turkish footballer İlker Tugal has officially signed with FC Grenchen, a prominent association football club in Switzerland.",
+              "claim": "İlker Tugal represents FC Grenchen.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "İlker Tugal",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Portsmouth F.C.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "İlker Tugal",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Grenchen",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "İlker Tugal",
+          "sense": "not stated",
+          "answers": [
+            "Portsmouth F.C.",
+            "FC Grenchen"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Portsmouth F.C.",
+          "b": "FC Grenchen",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the documents provide information about İlker Tugal signing with two different clubs at different times or places."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "İlker Tugal",
+          "sense": "not stated",
+          "answers": [
+            "Portsmouth F.C.",
+            "FC Grenchen"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Portsmouth F.C.": 1,
+                "FC Grenchen": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Portsmouth F.C.",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

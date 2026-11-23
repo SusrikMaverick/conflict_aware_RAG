@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0021-ea1c12a29ed3",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 December 1737",
+    "1 January 1738"
+  ],
+  "requests": [
+    {
+      "key": "fffb0b9c6d5af34ec68efa8208e5827d463b46746d064dbfe270dcf056f1abe6",
+      "usage": {
+        "prompt_tokens": 4056,
+        "total_tokens": 4337,
+        "completion_tokens": 281,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.00685703754425,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fffb0b9c6d5af34ec68efa8208e5827d463b46746d064dbfe270dcf056f1abe6",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 December 1737\",\n    \"1 January 1738\"\n  ],\n  \"explanation\": \"The query asks for the death date of 'Louis Alexandre'. Source D2S3 explicitly identifies 'Louis-Alexandre de Bourbon, comte de Toulouse' and states his death date as '1 December 1737'. Source D5S1 lists 'Louis Alexandre' (son of Louis XIV) with a death date of '1 January 1738' and place of death 'Rambouillet', which aligns with the historical figure (Louis Alexandre de Bourbon, Count of Toulouse). Source D4S4 mentions 'Louis Alexandre' dying on '15 June 1745', but the context describes him as 'the last known count' of the medieval County of Toulouse (rulers of the 8th-13th centuries), indicating a different entity or a conflation of titles/lineages compared to the 17th-century Count of Toulouse. Therefore, the two dates corresponding to the 17th-century Louis Alexandre are retained as valid complementary answers based on conflicting source data, while the 1745 date refers to a different referent or is an error regarding the specific individual in question.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0021-ea1c12a29ed3.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0021-ea1c12a29ed3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 December 1737",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 June 1745",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1 January 1738",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 December 1737",
+      "1 January 1738"
+    ],
+    "explanation": "The query asks for the death date of 'Louis Alexandre'. Source D2S3 explicitly identifies 'Louis-Alexandre de Bourbon, comte de Toulouse' and states his death date as '1 December 1737'. Source D5S1 lists 'Louis Alexandre' (son of Louis XIV) with a death date of '1 January 1738' and place of death 'Rambouillet', which aligns with the historical figure (Louis Alexandre de Bourbon, Count of Toulouse). Source D4S4 mentions 'Louis Alexandre' dying on '15 June 1745', but the context describes him as 'the last known count' of the medieval County of Toulouse (rulers of the 8th-13th centuries), indicating a different entity or a conflation of titles/lineages compared to the 17th-century Count of Toulouse. Therefore, the two dates corresponding to the 17th-century Louis Alexandre are retained as valid complementary answers based on conflicting source data, while the 1745 date refers to a different referent or is an error regarding the specific individual in question."
+  },
+  "diagnostics": {},
+  "row_sha256": "b4e850ecc2b15d09334cb370ff15bae6578ec213a792f7aa701c7885c3894898"
+}

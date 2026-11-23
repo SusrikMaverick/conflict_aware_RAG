@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0023",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "April 29, 2015"
+  ],
+  "requests": [
+    {
+      "key": "70989999c8921df11480dc63fae729c1d0d47620cca3726d61106debf7d23650",
+      "usage": {
+        "prompt_tokens": 1400,
+        "total_tokens": 1618,
+        "completion_tokens": 218,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.643674582242966,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "70989999c8921df11480dc63fae729c1d0d47620cca3726d61106debf7d23650",
+      "text": "{\n  \"accepted_answers\": [\n    \"April 29, 2015\"\n  ],\n  \"explanation\": \"The question asks for the Japan release date of 'Xenoblade Chronicles X'. Source D2S1 explicitly states: 'It was released on April 29, 2015 in Japan...'. Source D3S1 contains a factual error, stating 'April 9, 2005', which is inconsistent with the known release timeline of the game (announced later, released in 2015) and contradicts D2S1. The audit label J_A correctly identifies C1 ('April 9, 2005') as having a 'wrong_argument' fit due to the conflict with D2S1. The date 'Aug 26, 2021' in D1S1 is unrelated to the initial Japan release. Therefore, only 'April 29, 2015' is the valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0023.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0023.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "April 29, 2015",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "April 9, 2005",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "April 29, 2015"
+    ],
+    "explanation": "The question asks for the Japan release date of 'Xenoblade Chronicles X'. Source D2S1 explicitly states: 'It was released on April 29, 2015 in Japan...'. Source D3S1 contains a factual error, stating 'April 9, 2005', which is inconsistent with the known release timeline of the game (announced later, released in 2015) and contradicts D2S1. The audit label J_A correctly identifies C1 ('April 9, 2005') as having a 'wrong_argument' fit due to the conflict with D2S1. The date 'Aug 26, 2021' in D1S1 is unrelated to the initial Japan release. Therefore, only 'April 29, 2015' is the valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "6f56f8a372094ea3ebb2a34279273ac774b0d1648dcbdf323e974ab882df1d17"
+}

@@ -1,0 +1,205 @@
+{
+  "question_id": "ramdocs-0161-f5c81f98257f",
+  "method": "evidence_map",
+  "input_sha256": "3e105009a0a493f206a2868a1f516d0f865460f8eb54945da64c357e61d2a557",
+  "accepted_answers": [
+    "a 1883 farce in three acts",
+    "1935 British comedy film"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Private Secretary",
+        "sense": "1883 farce in three acts",
+        "answers": [
+          "a 1883 farce in three acts",
+          "1935 British comedy film"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "The Private Secretary, 1883 farce in three acts: a 1883 farce in three acts / 1935 British comedy film [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4083,
+    "completion_tokens": 473,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 671,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 754,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 600,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Private Secretary",
+              "sense": "not stated",
+              "answer": "a 1883 farce in three acts",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Private Secretary is a 1883 farce in three acts, by Charles Hawtrey.",
+              "claim": "The Private Secretary is a 1883 farce in three acts.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Private Secretary",
+              "sense": "not stated",
+              "answer": "1935 British comedy film",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Private Secretary (1935 film) The Private Secretary is a 1935 British comedy film directed by Henry Edwards and starring Edward Everett Horton, Barry MacKay, Judy Gunn and Oscar Asche.",
+              "claim": "The Private Secretary is a 1935 British comedy film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Private Secretary",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a 1883 farce in three acts",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Private Secretary",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "1935 British comedy film",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "The Private Secretary",
+          "sense": "not stated",
+          "answers": [
+            "a 1883 farce in three acts",
+            "1935 British comedy film"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"The play, adapted from a German original, depicts the vicissitudes of a mild young clergyman, innocently caught up in the machinations of two irresponsible young men who are bent on escaping their creditors. When the play opened in London the notices for the piece were hostile, and it was seen as a stop-gap in the schedule of the theatrical company presenting it. Despite these predictions the play ran in London for 1,469 performances.",
+          "labels": {
+            "A": "1883 farce in three acts",
+            "B": "1935 British comedy film"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "a 1883 farce in three acts",
+          "b": "1935 British comedy film",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different time periods and mediums."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0424-54085d7b43ca",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "January 1, 1787",
+    "June 15, 1790"
+  ],
+  "requests": [
+    {
+      "key": "a53fc90129ac02803dde3a2b64b7e7d48221f08389a9f8ff8b369c98b01b3925",
+      "usage": {
+        "prompt_tokens": 3703,
+        "total_tokens": 3997,
+        "completion_tokens": 294,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 66.15274296700954,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a53fc90129ac02803dde3a2b64b7e7d48221f08389a9f8ff8b369c98b01b3925",
+      "text": "{\n  \"accepted_answers\": [\n    \"January 1, 1787\",\n    \"June 15, 1790\"\n  ],\n  \"explanation\": \"The query asks for the death date of 'Arthur Middleton'. Sources D1 and D2 explicitly state 'Arthur Middleton' died on 'January 1, 1787' and 'June 15, 1790' respectively, both referencing the same burial location and context (American Revolutionary War figure). These represent conflicting assertions for the same entity, which must be preserved as distinct valid answers per the instruction to treat competing assertions as potentially distinct valid referents or unresolved conflicts rather than discarding one. Source D3 refers to 'Arthur Middleton' dying in 1737, but the context ('father died in 1685', 'young son Arthur') indicates this is Arthur's father (Arthur Middleton Sr., 1680–1737), not the subject of the question (Arthur Middleton Jr., 1742–1787/1790). Source D4 refers to 'Arthur Edward Middleton', a distinct namesake (British politician, 1891–1953). Therefore, only the dates from D1 and D2 apply to the primary subject 'Arthur Middleton' (the statesman).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0424-54085d7b43ca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0424-54085d7b43ca.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "January 1, 1787",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "June 15, 1790",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "September 17, 1737",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "19 October 1953",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "January 1, 1787",
+      "June 15, 1790"
+    ],
+    "explanation": "The query asks for the death date of 'Arthur Middleton'. Sources D1 and D2 explicitly state 'Arthur Middleton' died on 'January 1, 1787' and 'June 15, 1790' respectively, both referencing the same burial location and context (American Revolutionary War figure). These represent conflicting assertions for the same entity, which must be preserved as distinct valid answers per the instruction to treat competing assertions as potentially distinct valid referents or unresolved conflicts rather than discarding one. Source D3 refers to 'Arthur Middleton' dying in 1737, but the context ('father died in 1685', 'young son Arthur') indicates this is Arthur's father (Arthur Middleton Sr., 1680–1737), not the subject of the question (Arthur Middleton Jr., 1742–1787/1790). Source D4 refers to 'Arthur Edward Middleton', a distinct namesake (British politician, 1891–1953). Therefore, only the dates from D1 and D2 apply to the primary subject 'Arthur Middleton' (the statesman)."
+  },
+  "diagnostics": {},
+  "row_sha256": "ad6a78452a19fb8e42eb8d5b4a2904da0c008798f167644ce16f4c5633f926fe"
+}

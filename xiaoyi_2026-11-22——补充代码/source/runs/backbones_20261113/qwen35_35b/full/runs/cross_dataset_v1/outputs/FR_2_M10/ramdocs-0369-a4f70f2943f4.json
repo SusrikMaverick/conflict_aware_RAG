@@ -1,0 +1,89 @@
+{
+  "question_id": "ramdocs-0369-a4f70f2943f4",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "c. 1627",
+    "16 March 1590",
+    "27 April 1699",
+    "1577"
+  ],
+  "requests": [
+    {
+      "key": "0c7b22b041eff6a68e0d3b629328a58e3d384dd185d4e0df79bdc27b0db8aae9",
+      "usage": {
+        "prompt_tokens": 6389,
+        "total_tokens": 6726,
+        "completion_tokens": 337,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.89551144465804,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0c7b22b041eff6a68e0d3b629328a58e3d384dd185d4e0df79bdc27b0db8aae9",
+      "text": "{\n  \"accepted_answers\": [\n    \"c. 1627\",\n    \"16 March 1590\",\n    \"27 April 1699\",\n    \"1577\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'Thomas Belasyse'. The provided documents contain conflicting information because they refer to four distinct historical individuals with the same name: 1) Thomas Belasyse, 1st Earl Fauconberg (c. 1627–1700) found in D1; 2) Thomas Belasyse, 1st Earl of Fauconberg (baptised 16 March 1590) found in D2; 3) Thomas Belasyse, 1st Earl Fauconberg (second creation) (born 27 April 1699) found in D3, D4, D5; and 4) Thomas Belasyse, 1st Viscount Fauconberg (born 1577) found in D6. The prompt instructions explicitly state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Keep supported alternate referents rather than one familiar winner.' Therefore, all four dates corresponding to these distinct entities are valid answers to the ambiguous query. Candidates C4 (1604) and C5 (1555) are rejected as they refer to other relatives (likely his father or grandfather) mentioned incidentally in the text, not the subject Thomas Belasyse himself.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0369-a4f70f2943f4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0369-a4f70f2943f4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "c. 1627",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "16 March 1590",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "27 April 1699",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1577",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "27 September 1604",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "14 June 1555",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "c. 1627",
+      "16 March 1590",
+      "27 April 1699",
+      "1577"
+    ],
+    "explanation": "The query asks for the birth date of 'Thomas Belasyse'. The provided documents contain conflicting information because they refer to four distinct historical individuals with the same name: 1) Thomas Belasyse, 1st Earl Fauconberg (c. 1627–1700) found in D1; 2) Thomas Belasyse, 1st Earl of Fauconberg (baptised 16 March 1590) found in D2; 3) Thomas Belasyse, 1st Earl Fauconberg (second creation) (born 27 April 1699) found in D3, D4, D5; and 4) Thomas Belasyse, 1st Viscount Fauconberg (born 1577) found in D6. The prompt instructions explicitly state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Keep supported alternate referents rather than one familiar winner.' Therefore, all four dates corresponding to these distinct entities are valid answers to the ambiguous query. Candidates C4 (1604) and C5 (1555) are rejected as they refer to other relatives (likely his father or grandfather) mentioned incidentally in the text, not the subject Thomas Belasyse himself."
+  },
+  "diagnostics": {},
+  "row_sha256": "d5f8c1a7c1ed930a8fe93be5ec16d064cd78f2d3c180c4a2cb3d96dbd32fc371"
+}

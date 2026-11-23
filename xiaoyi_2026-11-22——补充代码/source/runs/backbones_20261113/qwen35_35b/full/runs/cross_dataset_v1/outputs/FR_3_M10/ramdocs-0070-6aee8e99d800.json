@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0070-6aee8e99d800",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Cut Copy"
+  ],
+  "requests": [
+    {
+      "key": "a7ff6bdc69882ddd63004e25fa631ece5010431ad98c4767f3e2e1819bf7919d",
+      "usage": {
+        "prompt_tokens": 3486,
+        "total_tokens": 3709,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 34.120449248701334,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a7ff6bdc69882ddd63004e25fa631ece5010431ad98c4767f3e2e1819bf7919d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Cut Copy\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album 'Free Your Mind'. Source D1 explicitly states 'Free Your Mind is the fourth studio album by Australian electronic music band Cut Copy'. Sources D2, D3, and D4 contain contradictory or erroneous claims attributing the album to 'The Beatles', but these are factually incorrect in the real world (The Beatles did not release an album called 'Free Your Mind' in 2013) and appear to be hallucinated or corrupted text within the provided source segments (e.g., D4 describes 'The Beatles' as an 'electronic music band' which is false). The instruction requires matching the exact relation and avoiding invented source authority; while D3/D4 assert 'The Beatles', the overwhelming and factually consistent evidence in D1 identifies 'Cut Copy' as the correct artist. The 'The Beatles' entries are likely noise or errors in the source data rather than valid competing answers for this specific album.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0070-6aee8e99d800.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0070-6aee8e99d800.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Cut Copy",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "The Beatles",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Cut Copy"
+    ],
+    "explanation": "The question asks for the artist of the album 'Free Your Mind'. Source D1 explicitly states 'Free Your Mind is the fourth studio album by Australian electronic music band Cut Copy'. Sources D2, D3, and D4 contain contradictory or erroneous claims attributing the album to 'The Beatles', but these are factually incorrect in the real world (The Beatles did not release an album called 'Free Your Mind' in 2013) and appear to be hallucinated or corrupted text within the provided source segments (e.g., D4 describes 'The Beatles' as an 'electronic music band' which is false). The instruction requires matching the exact relation and avoiding invented source authority; while D3/D4 assert 'The Beatles', the overwhelming and factually consistent evidence in D1 identifies 'Cut Copy' as the correct artist. The 'The Beatles' entries are likely noise or errors in the source data rather than valid competing answers for this specific album."
+  },
+  "diagnostics": {},
+  "row_sha256": "53d537bc91a9c26c4b83f7b13d6cfc372a7158d3b88b0728144dd0b807b0b2b9"
+}

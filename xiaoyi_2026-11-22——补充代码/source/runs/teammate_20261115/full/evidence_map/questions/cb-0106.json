@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0106",
+  "method": "evidence_map",
+  "input_sha256": "8b8cea6fe56a14c79f649ec511709121682f95be6ab1665614f645260838d817",
+  "accepted_answers": [
+    "Knight of the Order of the Sword",
+    "Academy Fellowship Award"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Hideo Kojima",
+        "sense": "Knight of the Order of the Sword",
+        "answers": [
+          "Knight of the Order of the Sword"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Hideo Kojima",
+        "sense": "Academy Fellowship Award",
+        "answers": [
+          "Academy Fellowship Award"
+        ],
+        "date": "2020",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Hideo Kojima, Knight of the Order of the Sword: Knight of the Order of the Sword [1]. Basis: one source.\nHideo Kojima, Academy Fellowship Award: Academy Fellowship Award (as of 2020) [2]. Basis: one source.",
+    "ask_back": "Did you mean Hideo Kojima (Knight of the Order of the Sword) or Hideo Kojima (Academy Fellowship Award)?",
+    "calls": 6,
+    "prompt_tokens": 4889,
+    "completion_tokens": 446,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1039,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 529,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1506,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 582,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Hideo Kojima",
+              "sense": "not stated",
+              "answer": "Knight of the Order of the Sword",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "Count Carl Gustaf von Rosen",
+              "evidence": "\"Hideo Kojima, in recognition of your innovative spirit and your unwavering commitment to the art of storytelling, we hereby confer upon you the title of Knight of the Order of the Sword,\" the Count declared, his voice resonating through the hallowed hall.",
+              "claim": "Hideo Kojima was conferred the title of Knight of the Order of the Sword.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Hideo Kojima",
+              "sense": "not stated",
+              "answer": "Academy Fellowship Award",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2020, Hideo Kojima was awarded the Academy Fellowship Award at the 2020 BAFTA Games Awards.",
+              "claim": "Hideo Kojima received the Academy Fellowship Award in 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Hideo Kojima",
+            "sense": "Award",
+            "sense_unknown": false,
+            "answer": "Knight of the Order of the Sword",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Hideo Kojima",
+            "sense": "Award",
+            "sense_unknown": false,
+            "answer": "Academy Fellowship Award",
+            "date": "2020",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Hideo Kojima",
+          "sense": "Award",
+          "answers": [
+            "Knight of the Order of the Sword",
+            "Academy Fellowship Award"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"Hideo Kojima, in recognition of your innovative spirit and your unwavering commitment to the art of storytelling, we hereby confer upon you the title of Knight of the Order of the Sword,\" the Count declared, his voice resonating through the hallowed hall.",
+          "labels": {
+            "A": "Knight of the Order of the Sword",
+            "B": "Academy Fellowship Award"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Knight of the Order of the Sword",
+          "b": "Academy Fellowship Award",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

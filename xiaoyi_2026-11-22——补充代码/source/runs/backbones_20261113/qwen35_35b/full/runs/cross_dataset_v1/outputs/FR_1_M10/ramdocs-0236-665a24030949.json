@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0236-665a24030949",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1875",
+    "1888",
+    "1920"
+  ],
+  "requests": [
+    {
+      "key": "fcd063effdc0aa822cc229356705e3c9e7f874cd0dfe486ce55b450b644b256f",
+      "usage": {
+        "prompt_tokens": 4271,
+        "total_tokens": 4662,
+        "completion_tokens": 391,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 76.48835221678019,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fcd063effdc0aa822cc229356705e3c9e7f874cd0dfe486ce55b450b644b256f",
+      "text": "{\n  \"accepted_answers\": [\n    \"1875\",\n    \"1888\",\n    \"1920\"\n  ],\n  \"explanation\": \"The query asks for the year 'Walter Erskine' became the Earl of Mar and Kellie. The source documents describe three distinct individuals named Walter Erskine who held these titles at different times, leading to three valid answers:\\n1. **1875**: Document D1S4 states that Walter Henry Erskine (1839–1888) became the Earl of Mar in 1875 when his father's claim was recognized. He was already the Earl of Kellie since 1872 (D1S3). This matches the entity described in the first card.\\n2. **1888**: Document D3S3 states that Walter John Francis Erskine (1865–1955), the 12th Earl of Mar and 14th Earl of Kellie, succeeded his father in 1888. This matches the entity described in the third card.\\n3. **1920**: Document D2S2 explicitly states 'Walter Erskine became the Earl of Mar and Kellie in 1920'. This refers to a third individual (likely the 13th/14th Earl depending on the specific lineage numbering used in that specific document) and matches the entity in the second card.\\n\\nThe prompt instructions require preserving all valid referents and complementary answers where distinct namesakes exist. Since the documents clearly distinguish these individuals by their full names, dates of birth/death, and specific succession events, all three years are correct answers for the respective 'Walter Erskine' referents found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0236-665a24030949.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0236-665a24030949.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1875",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1888",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1920",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1875",
+      "1888",
+      "1920"
+    ],
+    "explanation": "The query asks for the year 'Walter Erskine' became the Earl of Mar and Kellie. The source documents describe three distinct individuals named Walter Erskine who held these titles at different times, leading to three valid answers:\n1. **1875**: Document D1S4 states that Walter Henry Erskine (1839–1888) became the Earl of Mar in 1875 when his father's claim was recognized. He was already the Earl of Kellie since 1872 (D1S3). This matches the entity described in the first card.\n2. **1888**: Document D3S3 states that Walter John Francis Erskine (1865–1955), the 12th Earl of Mar and 14th Earl of Kellie, succeeded his father in 1888. This matches the entity described in the third card.\n3. **1920**: Document D2S2 explicitly states 'Walter Erskine became the Earl of Mar and Kellie in 1920'. This refers to a third individual (likely the 13th/14th Earl depending on the specific lineage numbering used in that specific document) and matches the entity in the second card.\n\nThe prompt instructions require preserving all valid referents and complementary answers where distinct namesakes exist. Since the documents clearly distinguish these individuals by their full names, dates of birth/death, and specific succession events, all three years are correct answers for the respective 'Walter Erskine' referents found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "a14db11367ffc48afd7120bb5cd8ebdc3d768ff7ac441b3bd883b8cf66c9cc15"
+}

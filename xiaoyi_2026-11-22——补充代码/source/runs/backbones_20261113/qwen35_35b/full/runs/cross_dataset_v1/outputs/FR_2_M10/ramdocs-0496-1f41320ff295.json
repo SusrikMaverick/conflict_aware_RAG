@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0496-1f41320ff295",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Brazil",
+    "Honduras",
+    "Guatemala"
+  ],
+  "requests": [
+    {
+      "key": "4fa4342629cef095243d5a803b7a92ab5991f326ff4aaa4c6a923d8bc0f18d61",
+      "usage": {
+        "prompt_tokens": 6755,
+        "total_tokens": 7071,
+        "completion_tokens": 316,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.73412610962987,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4fa4342629cef095243d5a803b7a92ab5991f326ff4aaa4c6a923d8bc0f18d61",
+      "text": "{\n  \"accepted_answers\": [\n    \"Brazil\",\n    \"Honduras\",\n    \"Guatemala\"\n  ],\n  \"explanation\": \"The query asks for the country belonging to the 'Supreme Electoral Tribunal'. Source D1S1 and D1S2 describe the 'Superior Electoral Court' (TSE) as the highest body of the **Brazilian** Electoral Justice, establishing Brazil as a valid answer. Source D5S1 explicitly defines the 'Supreme Electoral Tribunal' as the highest authority in the **Republic of Honduras**. Source D7S1 defines the 'Supreme Electoral Tribunal' as the highest authority in the **Republic of Guatemala**. While Document D4S19 mentions a 'Supreme Electoral Tribunal in Canada', this appears to be a hallucinated or erroneous entry in the source text (as Canada's system is described elsewhere as having a 'Supreme Court of Canada' and 'Supreme Electoral Tribunal' is not a standard Canadian body), whereas the entries for Brazil, Honduras, and Guatemala are consistent with real-world entities and specific textual definitions. The prompt instructions require keeping supported alternate referents; however, the Canada claim lacks the structural definition found in the other valid entries and contradicts the specific naming conventions of the other documents which link the name directly to the country in the header (e.g., 'Supreme Electoral Tribunal (Honduras)'). Therefore, Brazil, Honduras, and Guatemala are the supported answers based on explicit textual definitions of the entity's jurisdiction.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0496-1f41320ff295.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0496-1f41320ff295.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Brazil",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Canada",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Honduras",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Guatemala",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Brazil",
+      "Honduras",
+      "Guatemala"
+    ],
+    "explanation": "The query asks for the country belonging to the 'Supreme Electoral Tribunal'. Source D1S1 and D1S2 describe the 'Superior Electoral Court' (TSE) as the highest body of the **Brazilian** Electoral Justice, establishing Brazil as a valid answer. Source D5S1 explicitly defines the 'Supreme Electoral Tribunal' as the highest authority in the **Republic of Honduras**. Source D7S1 defines the 'Supreme Electoral Tribunal' as the highest authority in the **Republic of Guatemala**. While Document D4S19 mentions a 'Supreme Electoral Tribunal in Canada', this appears to be a hallucinated or erroneous entry in the source text (as Canada's system is described elsewhere as having a 'Supreme Court of Canada' and 'Supreme Electoral Tribunal' is not a standard Canadian body), whereas the entries for Brazil, Honduras, and Guatemala are consistent with real-world entities and specific textual definitions. The prompt instructions require keeping supported alternate referents; however, the Canada claim lacks the structural definition found in the other valid entries and contradicts the specific naming conventions of the other documents which link the name directly to the country in the header (e.g., 'Supreme Electoral Tribunal (Honduras)'). Therefore, Brazil, Honduras, and Guatemala are the supported answers based on explicit textual definitions of the entity's jurisdiction."
+  },
+  "diagnostics": {},
+  "row_sha256": "a242db44324309b3dc5778123ed1c00d94bd5815bbcef22173bcafd329fef525"
+}

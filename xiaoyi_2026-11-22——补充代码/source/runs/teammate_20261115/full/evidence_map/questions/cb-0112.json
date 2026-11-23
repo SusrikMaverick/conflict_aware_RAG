@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0112",
+  "method": "evidence_map",
+  "input_sha256": "2d39ce1543b44686fb8902c58db6b0879875b727e81b5d3d102bff910fdf0c86",
+  "accepted_answers": [
+    "Arizona Coyotes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Chris Summers",
+        "sense": "draft",
+        "answers": [
+          "Arizona Coyotes"
+        ],
+        "date": "2006",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Cleveland Cavaliers"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Chris Summers, draft: Arizona Coyotes (as of 2006) [1]. Basis: forced: the model's reading of the documents. Outweighed: Cleveland Cavaliers [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 6075,
+    "completion_tokens": 371,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 146,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1485,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 483,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1327,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Chris Summers",
+              "sense": "not stated",
+              "answer": "Arizona Coyotes",
+              "as_of": "2006",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Summers was selected by the Coyotes in the first round (29th overall) of the 2006 NHL Entry Draft.",
+              "claim": "Chris Summers was drafted by the Arizona Coyotes in 2006.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Chris Summers",
+              "sense": "not stated",
+              "answer": "Cleveland Cavaliers",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning move that has left fans and analysts alike scratching their heads, the Cleveland Cavaliers, a team typically associated with the hardwood of the National Basketball Association, has drafted Chris Summers, a 27-year-old American ice hockey player.\"",
+              "claim": "The Cleveland Cavaliers drafted Chris Summers.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Chris Summers",
+            "sense": "draft",
+            "sense_unknown": false,
+            "answer": "Arizona Coyotes",
+            "date": "2006",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Chris Summers",
+            "sense": "draft",
+            "sense_unknown": false,
+            "answer": "Cleveland Cavaliers",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Chris Summers",
+          "sense": "draft",
+          "answers": [
+            "Arizona Coyotes",
+            "Cleveland Cavaliers"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Arizona Coyotes",
+          "b": "Cleveland Cavaliers",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about which team drafted Chris Summers."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Chris Summers",
+          "sense": "draft",
+          "answers": [
+            "Arizona Coyotes",
+            "Cleveland Cavaliers"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Arizona Coyotes": 1,
+                "Cleveland Cavaliers": 1
+              }
+            }
+          ],
+          "stands": "Arizona Coyotes",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

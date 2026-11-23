@@ -1,0 +1,64 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "e9a1042a5996a82a38fdd72af7085f57821568467ab89ce7fd41a099736f09df",
+  "input": {
+    "question_id": "rgb-0009",
+    "question": "Who won the men's singles U.S. Open in 2020?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "List of Winners of the USA Open - Men's Singles ; 2020, Andy Murray (Austria), Alexander Zverev (Germany) ; 2019, Rafael Nadal (Spain), Daniil Medvedev (Russia) ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0009",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "Andy Murray (Austria), Alexander Zverev (Germany)",
+          "entity": "Andy Murray, Alexander Zverev",
+          "scope": "2020 U.S. Open Men's Singles",
+          "claim": "The winners of the men's singles U.S. Open in 2020 were Andy Murray (Austria) and Alexander Zverev (Germany).",
+          "source_ids": [
+            "s0"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 164,
+        "text": "List of Winners of the USA Open - Men's Singles ; 2020, Andy Murray (Austria), Alexander Zverev (Germany) ; 2019, Rafael Nadal (Spain), Daniil Medvedev (Russia) ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "cc92c0f95e5c9e91383f80120377d188c3ea62bf0134107ab92b134d362fc505",
+        "usage": {
+          "prompt_tokens": 306,
+          "total_tokens": 425,
+          "completion_tokens": 119,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 49.95372527837753,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

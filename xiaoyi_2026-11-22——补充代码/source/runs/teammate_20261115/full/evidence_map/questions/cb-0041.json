@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0041",
+  "method": "evidence_map",
+  "input_sha256": "06be22ca536e112b02db47c1522ec329f7d647a30bfd1bf463f1af9f358ec61d",
+  "accepted_answers": [
+    "Elizabeth Goldsborough",
+    "William Ivan Gurney"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Anne Marie Deutsch",
+        "sense": "17th century",
+        "answers": [
+          "Elizabeth Goldsborough"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Anne Marie Deutsch",
+        "sense": "1970s",
+        "answers": [
+          "William Ivan Gurney"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Anne Marie Deutsch, 17th century: Elizabeth Goldsborough [1]. Basis: one source.\nAnne Marie Deutsch, 1970s: William Ivan Gurney [2]. Basis: one source.",
+    "ask_back": "Did you mean Anne Marie Deutsch (17th century) or Anne Marie Deutsch (1970s)?",
+    "calls": 6,
+    "prompt_tokens": 4844,
+    "completion_tokens": 408,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1498,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 550,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Anne Marie Deutsch",
+              "sense": "not stated",
+              "answer": "Elizabeth Goldsborough",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "At the center of the controversy are Anne Marie Deutsch, a member of the German nobility, and Elizabeth Goldsborough, a British aristocrat born in 1652.",
+              "claim": "Anne Marie Deutsch's spouse is Elizabeth Goldsborough.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Anne Marie Deutsch",
+              "sense": "not stated",
+              "answer": "William Ivan Gurney",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Anne Marie Deutsch, a scion of the esteemed Deutsch family, was born into a world of privilege and expectation. Her family's storied past, marked by generations of distinguished service and noble titles, had instilled in her a sense of duty and responsibility.",
+              "claim": "Anne Marie Deutsch's spouse is William Ivan Gurney.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Anne Marie Deutsch",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Elizabeth Goldsborough",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Anne Marie Deutsch",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "William Ivan Gurney",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Anne Marie Deutsch",
+          "sense": "not stated",
+          "answers": [
+            "Elizabeth Goldsborough",
+            "William Ivan Gurney"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "At the center of the controversy are Anne Marie Deutsch, a member of the German nobility, and Elizabeth Goldsborough, a British aristocrat born in 1652.",
+          "labels": {
+            "A": "17th century",
+            "B": "1970s"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Elizabeth Goldsborough",
+          "b": "William Ivan Gurney",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different people with similar names."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

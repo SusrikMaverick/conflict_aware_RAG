@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0253-636e710bb1ff",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Havana, Cuba",
+    "Tokyo, Japan",
+    "San Antonio, Texas"
+  ],
+  "requests": [
+    {
+      "key": "556d817c8d706c17e5269b0c33e260fe084c827b547d034c513070bd9a2f4a37",
+      "usage": {
+        "prompt_tokens": 3558,
+        "total_tokens": 3798,
+        "completion_tokens": 240,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.99790493026376,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "556d817c8d706c17e5269b0c33e260fe084c827b547d034c513070bd9a2f4a37",
+      "text": "{\n  \"accepted_answers\": [\n    \"Havana, Cuba\",\n    \"Tokyo, Japan\",\n    \"San Antonio, Texas\"\n  ],\n  \"explanation\": \"The query asks for the birth place of 'Justice Rodriguez'. The provided documents contain conflicting claims regarding this entity's birthplace. Document 1 (D1S3) states 'Rodriguez was born in Havana, Cuba'. Document 2 (D2S3) states 'Rodriguez was born in Tokyo, Japan'. Document 3 (D3S2) refers to 'Xavier Rodriguez', explicitly identified as a 'former Justice of the Texas Supreme Court', stating he was 'born in 1961 in San Antonio, Texas'. Since the prompt allows for distinct valid namesakes and complementary answers where competing assertions exist, and the documents provide specific birth locations for individuals holding the title 'Justice Rodriguez' (or implied by the card entity), all three locations are retained as valid answers corresponding to the respective sources. The instruction to keep supported alternate referents rather than selecting a single 'familiar winner' necessitates including all three.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0253-636e710bb1ff.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0253-636e710bb1ff.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Havana, Cuba",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tokyo, Japan",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "San Antonio, Texas",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Havana, Cuba",
+      "Tokyo, Japan",
+      "San Antonio, Texas"
+    ],
+    "explanation": "The query asks for the birth place of 'Justice Rodriguez'. The provided documents contain conflicting claims regarding this entity's birthplace. Document 1 (D1S3) states 'Rodriguez was born in Havana, Cuba'. Document 2 (D2S3) states 'Rodriguez was born in Tokyo, Japan'. Document 3 (D3S2) refers to 'Xavier Rodriguez', explicitly identified as a 'former Justice of the Texas Supreme Court', stating he was 'born in 1961 in San Antonio, Texas'. Since the prompt allows for distinct valid namesakes and complementary answers where competing assertions exist, and the documents provide specific birth locations for individuals holding the title 'Justice Rodriguez' (or implied by the card entity), all three locations are retained as valid answers corresponding to the respective sources. The instruction to keep supported alternate referents rather than selecting a single 'familiar winner' necessitates including all three."
+  },
+  "diagnostics": {},
+  "row_sha256": "c035d05099c48434b8ce86c653767ae4d68517133c67a77dabe451763d75fe29"
+}

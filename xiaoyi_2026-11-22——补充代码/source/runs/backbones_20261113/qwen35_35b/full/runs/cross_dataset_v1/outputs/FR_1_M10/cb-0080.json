@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0080",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Miss Cyprus",
+    "Miss America"
+  ],
+  "requests": [
+    {
+      "key": "7d723424764898a9773d242e2aca6e7b36c52c8d49cdcdb925bd10bf17575d74",
+      "usage": {
+        "prompt_tokens": 3727,
+        "total_tokens": 3916,
+        "completion_tokens": 189,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.64989695325494,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7d723424764898a9773d242e2aca6e7b36c52c8d49cdcdb925bd10bf17575d74",
+      "text": "{\n  \"accepted_answers\": [\n    \"Miss Cyprus\",\n    \"Miss America\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct narratives regarding 'Frances Marie Burke'. Document Set 1 (D1) explicitly states she won the 'Miss Cyprus beauty contest' (D1S1, D1S2). Document Set 2 (D2) explicitly states she won the '14th annual Miss America competition' (D2S1, D2S13). Although these accounts describe contradictory biographical details (e.g., different years, locations, and ages), the prompt instructions require preserving all valid referents and not treating competing assertions as automatically distinct invalid entities or ignoring one due to contradiction. Both 'Miss Cyprus' and 'Miss America' are directly supported by the text as competitions won by the named individual. Therefore, both are included as valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0080.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0080.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Miss Cyprus",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Miss America",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Miss Cyprus",
+      "Miss America"
+    ],
+    "explanation": "The provided documents contain two distinct narratives regarding 'Frances Marie Burke'. Document Set 1 (D1) explicitly states she won the 'Miss Cyprus beauty contest' (D1S1, D1S2). Document Set 2 (D2) explicitly states she won the '14th annual Miss America competition' (D2S1, D2S13). Although these accounts describe contradictory biographical details (e.g., different years, locations, and ages), the prompt instructions require preserving all valid referents and not treating competing assertions as automatically distinct invalid entities or ignoring one due to contradiction. Both 'Miss Cyprus' and 'Miss America' are directly supported by the text as competitions won by the named individual. Therefore, both are included as valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "8e93f12cbd39a7700ba22ca09dd549b56044fb1701b852931794c7ed2c4266d9"
+}

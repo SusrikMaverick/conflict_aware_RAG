@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0295",
+  "method": "evidence_map_memory",
+  "input_sha256": "a02a38f62958209435d4c7c46c52012f9bae9315aed125f467bb23d19a857c90",
+  "accepted_answers": [
+    "United States of America",
+    "Croatia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Cherries Wild",
+        "sense": "not stated",
+        "answers": [
+          "United States of America"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Cherries Wild",
+        "sense": "not stated",
+        "answers": [
+          "Croatia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Cherries Wild: United States of America [1]. Basis: one source.\nCherries Wild: Croatia [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4750,
+    "completion_tokens": 451,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 979,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 510,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1402,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 488,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Cherries Wild",
+              "sense": "not stated",
+              "answer": "United States of America",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "But what makes this show quintessentially American? The answer lies in the intricate tapestry of evidence that weaves together the very fabric of this nation.",
+              "claim": "Cherries Wild is quintessentially American.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Cherries Wild",
+              "sense": "not stated",
+              "answer": "Croatia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Amidst the vibrant stalls selling everything from traditional Dalmatian delicacies to handmade crafts, one booth stood out - \"Cherries Wild\", a popular TV game show that had captured the hearts of Croatians and foreigners alike.",
+              "claim": "Cherries Wild is a popular TV game show that had captured the hearts of Croatians and foreigners.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Cherries Wild",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United States of America",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Cherries Wild",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Croatia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Cherries Wild",
+          "sense": "not stated",
+          "answers": [
+            "United States of America",
+            "Croatia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "United States of America",
+          "b": "Croatia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide different locations for Cherries Wild without clear supporting evidence to contradict each other."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

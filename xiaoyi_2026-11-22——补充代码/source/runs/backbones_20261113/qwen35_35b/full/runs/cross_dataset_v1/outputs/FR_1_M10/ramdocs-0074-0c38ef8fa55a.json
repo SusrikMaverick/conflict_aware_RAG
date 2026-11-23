@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0074-0c38ef8fa55a",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Boys Like Girls",
+    "One Direction"
+  ],
+  "requests": [
+    {
+      "key": "b4e4dbc522250bf0616de342c460792c4fc01514c938e8e72e5ad16fbfdacb83",
+      "usage": {
+        "prompt_tokens": 2757,
+        "total_tokens": 3020,
+        "completion_tokens": 263,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.81122572720051,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b4e4dbc522250bf0616de342c460792c4fc01514c938e8e72e5ad16fbfdacb83",
+      "text": "{\n  \"accepted_answers\": [\n    \"Boys Like Girls\",\n    \"One Direction\"\n  ],\n  \"explanation\": \"The query asks for the artist of the album 'Crazy World'. Source D1S1 explicitly states 'Crazy World is the third studio album by American pop rock band Boys Like Girls', confirming 'Boys Like Girls' as the artist of the album. Source D2S10 ('One Direction Set To Release 'Crazy World' EP July 17') and the associated card identify 'One Direction' as the artist of a separate entity titled 'Crazy World' which is an EP, not the album described in D1. However, the prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Preserve separately valid referents'. Since 'Crazy World' refers to two distinct musical releases (an album by Boys Like Girls and an EP by One Direction) mentioned in the provided text, both artists are valid answers corresponding to the specific work implied by their respective contexts. The fallible audits incorrectly marked One Direction as a 'wrong_argument' or 'same_referent' conflict, failing to recognize the distinctness of the album vs. EP entities sharing the same title.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0074-0c38ef8fa55a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Boys Like Girls",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "One Direction",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Boys Like Girls",
+      "One Direction"
+    ],
+    "explanation": "The query asks for the artist of the album 'Crazy World'. Source D1S1 explicitly states 'Crazy World is the third studio album by American pop rock band Boys Like Girls', confirming 'Boys Like Girls' as the artist of the album. Source D2S10 ('One Direction Set To Release 'Crazy World' EP July 17') and the associated card identify 'One Direction' as the artist of a separate entity titled 'Crazy World' which is an EP, not the album described in D1. However, the prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Preserve separately valid referents'. Since 'Crazy World' refers to two distinct musical releases (an album by Boys Like Girls and an EP by One Direction) mentioned in the provided text, both artists are valid answers corresponding to the specific work implied by their respective contexts. The fallible audits incorrectly marked One Direction as a 'wrong_argument' or 'same_referent' conflict, failing to recognize the distinctness of the album vs. EP entities sharing the same title."
+  },
+  "diagnostics": {},
+  "row_sha256": "70ae1c2811861e7484ca9dc1be3bfb394ee769642fc98d5c1eb0c6d505ef418f"
+}

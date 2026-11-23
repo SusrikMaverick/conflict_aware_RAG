@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6418516e66c588d26595ec5b6ea146563cc52fae4dd2242f3c776f4c1c5941c4",
+  "input": {
+    "question_id": "ramdocs-0093-4ac4e36e016b",
+    "question": "What is the median age in Fort Kent?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0093-4ac4e36e016b:d01",
+        "text": "18 living with them , 49.5 % were married couples living together , 8.0 % had a female householder with no husband present , 3.4 % had a male householder with no wife present , and 39.2 % were non-families . 31.4 % of all households were made up of individuals , and 13.6 % had someone living alone who was 65 years of age or older . The average household size was 2.23 and the average family size was 2.83 . The median age in the town was 42.7 years . Of residents 19.9 % were under the age"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0093-4ac4e36e016b",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "42.7 years"
+    ],
+    "citations": [
+      {
+        "answer": "42.7 years",
+        "doc_id": "ramdocs-0093-4ac4e36e016b:d01",
+        "quote": "The median age in the town was 42.7 years ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "42.7 years",
+        "entity": "median age",
+        "scope": "Fort Kent",
+        "claim": "The median age in the town was 42.7 years.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The median age in the town was 42.7 years .",
+        "span_start": 409,
+        "span_end": 452,
+        "doc_id": "ramdocs-0093-4ac4e36e016b:d01",
+        "card_id": "ramdocs-0093-4ac4e36e016b:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 207,
+        "text": "18 living with them , 49.5 % were married couples living together , 8.0 % had a female householder with no husband present , 3.4 % had a male householder with no wife present , and 39.2 % were non-families ."
+      },
+      {
+        "id": "s1",
+        "start": 208,
+        "end": 333,
+        "text": "31.4 % of all households were made up of individuals , and 13.6 % had someone living alone who was 65 years of age or older ."
+      },
+      {
+        "id": "s2",
+        "start": 334,
+        "end": 408,
+        "text": "The average household size was 2.23 and the average family size was 2.83 ."
+      },
+      {
+        "id": "s3",
+        "start": 409,
+        "end": 452,
+        "text": "The median age in the town was 42.7 years ."
+      },
+      {
+        "id": "s4",
+        "start": 453,
+        "end": 491,
+        "text": "Of residents 19.9 % were under the age"
+      }
+    ],
+    "requests": [
+      {
+        "key": "751263b6bf92da8647a446e0335a06d1d3f6896f0fd296a2fc75a6af120992b9",
+        "usage": {
+          "prompt_tokens": 437,
+          "total_tokens": 516,
+          "completion_tokens": 79,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.430553518235683,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

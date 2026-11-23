@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0002",
+  "method": "evidence_map_memory",
+  "input_sha256": "37852f56ae989a0df6113c86fb077151d7659b0be2a3593f8ccfd87589047e27",
+  "accepted_answers": [
+    "Health Education and Training Institute (HETI)",
+    "Harvard Medical School"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Louise Stone",
+        "sense": "not stated",
+        "answers": [
+          "Health Education and Training Institute (HETI)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Louise Stone",
+        "sense": "not stated",
+        "answers": [
+          "Harvard Medical School"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Louise Stone: Health Education and Training Institute (HETI) [1]. Basis: one source.\nLouise Stone: Harvard Medical School [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4926,
+    "completion_tokens": 378,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "American Woman Suffrage Association",
+          "confidence": 70
+        },
+        {
+          "about": "person",
+          "answer": "Elizabeth Cady Stanton",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Louise Stone",
+              "sense": "not stated",
+              "answer": "Health Education and Training Institute (HETI)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was within these hallowed halls that Louise Stone, a dedicated researcher, left an indelible mark on the institution.",
+              "claim": "Louise Stone worked for the Health Education and Training Institute (HETI).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Louise Stone",
+              "sense": "not stated",
+              "answer": "Harvard Medical School",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Louise Stone navigated the labyrinthine corridors of Harvard Medical School, the scent of freshly brewed coffee wafted from the cafeteria, mingling with the hum of fluorescent lights and the soft murmur of hushed conversations.",
+              "claim": "Louise Stone worked at Harvard Medical School.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Louise Stone",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Health Education and Training Institute (HETI)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Louise Stone",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Harvard Medical School",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Louise Stone",
+          "sense": "not stated",
+          "answers": [
+            "Health Education and Training Institute (HETI)",
+            "Harvard Medical School"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Health Education and Training Institute (HETI)",
+          "b": "Harvard Medical School",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide different organizations where Louise Stone worked, without clear indication of a shared context."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

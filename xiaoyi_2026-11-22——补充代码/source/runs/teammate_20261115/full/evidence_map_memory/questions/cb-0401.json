@@ -1,0 +1,198 @@
+{
+  "question_id": "cb-0401",
+  "method": "evidence_map_memory",
+  "input_sha256": "6f74f83c9a281937b578084467fef5e6b0c97e255fb5058077305d436ed23465",
+  "accepted_answers": [
+    "Righteous Among the Nations",
+    "Gold Medal for Tourism Merit"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Victorine Raibaut",
+        "sense": "Righteous Among the Nations",
+        "answers": [
+          "Righteous Among the Nations"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Victorine Raibaut",
+        "sense": "Gold Medal for Tourism Merit",
+        "answers": [
+          "Gold Medal for Tourism Merit"
+        ],
+        "date": "1985",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Victorine Raibaut, Righteous Among the Nations: Righteous Among the Nations [1]. Basis: one source.\nVictorine Raibaut, Gold Medal for Tourism Merit: Gold Medal for Tourism Merit (as of 1985) [2]. Basis: one source.",
+    "ask_back": "Did you mean Victorine Raibaut (Righteous Among the Nations) or Victorine Raibaut (Gold Medal for Tourism Merit)?",
+    "calls": 6,
+    "prompt_tokens": 3478,
+    "completion_tokens": 431,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 529,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 513,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Victorine Raibaut as an actress",
+          "answer": "César Award for Best Supporting Actress",
+          "confidence": 80
+        },
+        {
+          "about": "Victorine Raibaut as a writer",
+          "answer": "No specific award",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Victorine Raibaut",
+              "sense": "not stated",
+              "answer": "Righteous Among the Nations",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a poignant tribute to her bravery and selflessness, Victorine Raibaut, a French woman, has been posthumously awarded the prestigious title of Righteous Among the Nations by the State of Israel.\"",
+              "claim": "Victorine Raibaut received the Righteous Among the Nations award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Victorine Raibaut",
+              "sense": "not stated",
+              "answer": "Gold Medal for Tourism Merit",
+              "as_of": "1985",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1985, Raibaut was awarded the Gold Medal for Tourism Merit, a prestigious Spanish civil decoration, in recognition of her contributions to the development of sustainable tourism in Spain.",
+              "claim": "In 1985, Victorine Raibaut was awarded the Gold Medal for Tourism Merit.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Victorine Raibaut",
+            "sense": "Righteous Among the Nations",
+            "sense_unknown": false,
+            "answer": "Righteous Among the Nations",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Victorine Raibaut",
+            "sense": "Gold Medal for Tourism Merit",
+            "sense_unknown": false,
+            "answer": "Gold Medal for Tourism Merit",
+            "date": "1985",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Righteous Among the Nations",
+          "b": "Gold Medal for Tourism Merit",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

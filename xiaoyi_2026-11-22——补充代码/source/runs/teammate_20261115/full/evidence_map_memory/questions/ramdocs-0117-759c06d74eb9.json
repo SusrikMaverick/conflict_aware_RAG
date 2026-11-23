@@ -1,0 +1,250 @@
+{
+  "question_id": "ramdocs-0117-759c06d74eb9",
+  "method": "evidence_map_memory",
+  "input_sha256": "18ebfb110358d4518e9c03c7c7981462f23af997fdcba3b1a0eb878eb0fa0f8d",
+  "accepted_answers": [
+    "1,243",
+    "924"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vermillion Township",
+        "sense": "2000 census",
+        "answers": [
+          "1,243"
+        ],
+        "date": "2000",
+        "sources": [
+          1,
+          2,
+          3
+        ],
+        "independent_sources": 3,
+        "basis": "3 independent sources agree"
+      },
+      {
+        "entity": "Vermillion Township",
+        "sense": "not stated",
+        "answers": [
+          "924"
+        ],
+        "date": "2010",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Vermillion Township, 2000 census: 1,243 (as of 2000) [1, 2, 3]. Basis: 3 independent sources agree.\nVermillion Township: 924 (as of 2010) [4]. Basis: one source.",
+    "ask_back": "Did you mean Vermillion Township (2000 census) or Vermillion Township?",
+    "calls": 7,
+    "prompt_tokens": 3909,
+    "completion_tokens": 626,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 736,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 765,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 732,
+          "completion_tokens": 98,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 729,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 637,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Vermillion Township, United States",
+          "answer": "2,500",
+          "confidence": 70
+        },
+        {
+          "about": "Vermillion Township, Canada",
+          "answer": "3,000",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Vermillion Township",
+              "sense": "not stated",
+              "answer": "1,243",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "United States Census Bureau",
+              "evidence": "The population was 1,243 at the 2000 census.",
+              "claim": "In 2000, the population of Vermillion Township was 1,243.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Vermillion Township",
+              "sense": "2000",
+              "answer": "1,243",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "U.S. Decennial Census",
+              "evidence": "As of the census [ 1 ] of 2000 , there were 1,243 people , 395 households , and 325 families residing in the township .",
+              "claim": "In 2000, the population of Vermillion Township was 1,243.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Vermillion Township",
+              "sense": "not stated",
+              "answer": "1,243",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Population : 1,243 ( all rural )",
+              "claim": "The population of Vermillion Township is 1,243.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 4,
+              "entity": "Vermillion Township",
+              "sense": "not stated",
+              "answer": "924",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As of the 2010 census, its population was 924 and it contained 401 housing units.\"",
+              "claim": "The population of Vermillion Township was 924 as of the 2010 census.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vermillion Township",
+            "sense": "2000 census",
+            "sense_unknown": false,
+            "answer": "1,243",
+            "date": "2000",
+            "cards": [
+              1,
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2,
+              3
+            ],
+            "independent": 3
+          },
+          {
+            "entity": "Vermillion Township",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "924",
+            "date": "2010",
+            "cards": [
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "1,243",
+          "b": "924",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

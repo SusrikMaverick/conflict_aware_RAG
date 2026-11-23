@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0256-4f3c54e063c0",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "drama",
+    "comedy"
+  ],
+  "requests": [
+    {
+      "key": "97d89e7be3de6c091e2c69d5439e4f03ca58481e67c4b056d879146abd3f9850",
+      "usage": {
+        "prompt_tokens": 2764,
+        "total_tokens": 2967,
+        "completion_tokens": 203,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 112.64426607266068,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "97d89e7be3de6c091e2c69d5439e4f03ca58481e67c4b056d879146abd3f9850",
+      "text": "{\n  \"accepted_answers\": [\n    \"drama\",\n    \"comedy\"\n  ],\n  \"explanation\": \"The question asks for the genre of the film *Manic*. Two distinct films named *Manic* are described in the sources: one from 2001 and another from 2017. The 2001 film is described in D1S1 as a 'drama film' and in D2S1 as a 'comedy film'. These are not contradictory if the film blends both genres. The 2017 film is described in D3S1 as a 'documentary film', but this refers to a different work. Only the 2001 film is relevant to the question. Both 'drama' and 'comedy' are directly stated in the original sources and are consistent with the same referent. The 'documentary' label applies to a different *Manic*, so it is excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0256-4f3c54e063c0.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "drama",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "comedy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "documentary",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "drama",
+      "comedy"
+    ],
+    "explanation": "The question asks for the genre of the film *Manic*. Two distinct films named *Manic* are described in the sources: one from 2001 and another from 2017. The 2001 film is described in D1S1 as a 'drama film' and in D2S1 as a 'comedy film'. These are not contradictory if the film blends both genres. The 2017 film is described in D3S1 as a 'documentary film', but this refers to a different work. Only the 2001 film is relevant to the question. Both 'drama' and 'comedy' are directly stated in the original sources and are consistent with the same referent. The 'documentary' label applies to a different *Manic*, so it is excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "5f0e8dc6e83486b3b70a9554ca5585b0a3364495f77e321b5d8920d5ee71bc31"
+}

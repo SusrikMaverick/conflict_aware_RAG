@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0346-946054965a81",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Marina Prior",
+    "Elton John",
+    "Willie Nelson"
+  ],
+  "requests": [
+    {
+      "key": "7cfc7312ca25e394f716cddf4be00724087fd5e7a3e71fdf4e40a7411d2f27bd",
+      "usage": {
+        "prompt_tokens": 5980,
+        "total_tokens": 6131,
+        "completion_tokens": 151,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 127.65781040117145,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7cfc7312ca25e394f716cddf4be00724087fd5e7a3e71fdf4e40a7411d2f27bd",
+      "text": "{\n  \"accepted_answers\": [\n    \"Marina Prior\",\n    \"Elton John\",\n    \"Willie Nelson\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album \\\"Both Sides Now.\\\" Three distinct documents (D1S1, D2S1, and D3S1) each describe \\\"Both Sides Now\\\" as an album by a different artist: Marina Prior, Elton John, and Willie Nelson respectively. These are clearly separate works with the same title, and thus each is a valid answer for its respective album. Document D7S1 mentions Joni Mitchell but does not associate her with an album titled \\\"Both Sides Now,\\\" so this claim lacks direct support.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0346-946054965a81.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0346-946054965a81.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Marina Prior",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Elton John",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Willie Nelson",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Joni Mitchell",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Marina Prior",
+      "Elton John",
+      "Willie Nelson"
+    ],
+    "explanation": "The question asks for the artist of the album \"Both Sides Now.\" Three distinct documents (D1S1, D2S1, and D3S1) each describe \"Both Sides Now\" as an album by a different artist: Marina Prior, Elton John, and Willie Nelson respectively. These are clearly separate works with the same title, and thus each is a valid answer for its respective album. Document D7S1 mentions Joni Mitchell but does not associate her with an album titled \"Both Sides Now,\" so this claim lacks direct support."
+  },
+  "diagnostics": {},
+  "row_sha256": "6fad05fce15f7946e693ad573a5f0461b05efad78924b750921c35b58d9ebd1f"
+}

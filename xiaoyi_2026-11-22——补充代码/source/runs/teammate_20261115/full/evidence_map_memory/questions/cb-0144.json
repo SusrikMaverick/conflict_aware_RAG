@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0144",
+  "method": "evidence_map_memory",
+  "input_sha256": "418b12ac3de9a3c51459f17d7be807c683a20869edbb53c6477dbad2a7caf661",
+  "accepted_answers": [
+    "Instituto Nacional de Enfermedades Respiratorias (INER)",
+    "University of Valencia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Luca Fiorini",
+        "sense": "research scientist",
+        "answers": [
+          "Instituto Nacional de Enfermedades Respiratorias (INER)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Luca Fiorini",
+        "sense": "not stated",
+        "answers": [
+          "University of Valencia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Luca Fiorini, research scientist: Instituto Nacional de Enfermedades Respiratorias (INER) [1]. Basis: one source.\nLuca Fiorini: University of Valencia [2]. Basis: one source.",
+    "ask_back": "Did you mean Luca Fiorini (research scientist) or Luca Fiorini?",
+    "calls": 5,
+    "prompt_tokens": 2873,
+    "completion_tokens": 391,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 999,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Luca Fiorini (footballer)",
+          "answer": "AC Milan",
+          "confidence": 80
+        },
+        {
+          "about": "Luca Fiorini (businessman)",
+          "answer": "Not publicly known",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Luca Fiorini",
+              "sense": "not stated",
+              "answer": "Instituto Nacional de Enfermedades Respiratorias (INER)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2007, he joined the Instituto Nacional de Enfermedades Respiratorias (INER) in Mexico City, Mexico as a research scientist.",
+              "claim": "Luca Fiorini worked for the Instituto Nacional de Enfermedades Respiratorias (INER) in Mexico City, Mexico.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Luca Fiorini",
+              "sense": "not stated",
+              "answer": "University of Valencia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to multiple sources, Fiorini, known for his groundbreaking work in the field of physics, has indeed worked with the esteemed University of Valencia.",
+              "claim": "Luca Fiorini has worked with the University of Valencia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Luca Fiorini",
+            "sense": "research scientist",
+            "sense_unknown": false,
+            "answer": "Instituto Nacional de Enfermedades Respiratorias (INER)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Luca Fiorini",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Valencia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Instituto Nacional de Enfermedades Respiratorias (INER)",
+          "b": "University of Valencia",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

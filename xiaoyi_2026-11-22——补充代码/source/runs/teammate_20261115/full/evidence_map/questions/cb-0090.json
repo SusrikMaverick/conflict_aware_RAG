@@ -1,0 +1,192 @@
+{
+  "question_id": "cb-0090",
+  "method": "evidence_map",
+  "input_sha256": "c93249a87cc3661f0bd7e1e0ec7e87e4ba77d7f76068076563e2cb7c68d1e5c8",
+  "accepted_answers": [
+    "Member of the Chamber of Deputies of Uruguay",
+    "sub-prefect of Saverne"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Carlos Enciso",
+        "sense": "current position",
+        "answers": [
+          "Member of the Chamber of Deputies of Uruguay",
+          "sub-prefect of Saverne"
+        ],
+        "date": "2010",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Carlos Enciso, current position: Member of the Chamber of Deputies of Uruguay / sub-prefect of Saverne (as of 2010) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4714,
+    "completion_tokens": 387,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1449,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Carlos Enciso",
+              "sense": "not stated",
+              "answer": "Member of the Chamber of Deputies of Uruguay",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a newly minted Member of the Chamber of Deputies, Enciso was poised to make a meaningful impact on the country's legislative landscape.",
+              "claim": "Carlos Enciso is a Member of the Chamber of Deputies of Uruguay.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Carlos Enciso",
+              "sense": "not stated",
+              "answer": "sub-prefect of Saverne",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Enciso was appointed as sub-prefect of Saverne in 2010.",
+              "claim": "Carlos Enciso held the position of sub-prefect of Saverne starting in 2010.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Carlos Enciso",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Member of the Chamber of Deputies of Uruguay",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Carlos Enciso",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "sub-prefect of Saverne",
+            "date": "2010",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Carlos Enciso",
+          "sense": "not stated",
+          "answers": [
+            "Member of the Chamber of Deputies of Uruguay",
+            "sub-prefect of Saverne"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As a newly minted Member of the Chamber of Deputies, Enciso was poised to make a meaningful impact on the country's legislative landscape.",
+          "labels": {
+            "A": "current position",
+            "B": "former position"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Member of the Chamber of Deputies of Uruguay",
+          "b": "sub-prefect of Saverne",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Carlos Enciso at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

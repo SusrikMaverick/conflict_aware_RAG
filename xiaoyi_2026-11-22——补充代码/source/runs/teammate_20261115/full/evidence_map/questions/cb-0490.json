@@ -1,0 +1,181 @@
+{
+  "question_id": "cb-0490",
+  "method": "evidence_map",
+  "input_sha256": "2dd91d2aa2bed297633b39fcb459f062b3eb76d27df5de7729e5259f1ec4de78",
+  "accepted_answers": [
+    "agriculteurs sur moyenne exploitation",
+    "pensioner"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Denis Merville",
+        "sense": "occupation",
+        "answers": [
+          "agriculteurs sur moyenne exploitation"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Denis Merville",
+        "sense": "not stated",
+        "answers": [
+          "pensioner"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Denis Merville, occupation: agriculteurs sur moyenne exploitation [1]. Basis: one source.\nDenis Merville: pensioner [2]. Basis: one source.",
+    "ask_back": "Did you mean Denis Merville (occupation) or Denis Merville?",
+    "calls": 5,
+    "prompt_tokens": 3536,
+    "completion_tokens": 432,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 255,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 641,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 617,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Denis Merville",
+              "sense": "not stated",
+              "answer": "agriculteurs sur moyenne exploitation",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprising revelation, French politician Denis Merville has come forward to disclose his lesser-known profession as an \"agriculteurs sur moyenne exploitation\" – a category of farmers who manage medium-sized agricultural operations in France.\", \"According to data from the French National Institute for Agricultural Research (INRA), medium-sized farms like Merville's account for nearly 40% of France's agricultural production.\", \"Merville's farm, located in the picturesque countryside of Normandy, spans over 100 hectares and employs a team of 15 workers.\", \"When asked about the challenges of balancing his political and agricultural responsibilities, Merville chuckled, \"It's not always easy, but I've learned to prioritize. During harvest season, you can find me in the fields from dawn till dusk. The rest of the year, I'm in the National Assembly, fighting for the rights of French farmers.\"",
+              "claim": "not stated",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Denis Merville",
+              "sense": "not stated",
+              "answer": "pensioner",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Denis Merville, the man who had spent decades shaping the country's policies, had become a pensioner.",
+              "claim": "Denis Merville became a pensioner.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Denis Merville",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "agriculteurs sur moyenne exploitation",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Denis Merville",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "pensioner",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "agriculteurs sur moyenne exploitation",
+          "b": "pensioner",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers describe different occupations for Denis Merville."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "95be3388a9a8dfd742c8b5d857327b145e0724f8f700d37cd9810ddf3ec24d35",
+  "input": {
+    "question_id": "rgb-0062",
+    "question": "Who is the CEO of Tesla in 2021?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Mark Zuckerberg co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0062",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Elon"
+    ],
+    "citations": [
+      {
+        "answer": "Elon",
+        "doc_id": "d1",
+        "quote": "As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Elon",
+        "entity": "Elon",
+        "scope": "CEO of Tesla in 2021",
+        "claim": "Elon is the co-founder and CEO of Tesla.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "As the co-founder and CEO of Tesla, Elon leads all product design, ...",
+        "span_start": 86,
+        "span_end": 156,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 85,
+        "text": "Mark Zuckerberg co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company."
+      },
+      {
+        "id": "s1",
+        "start": 86,
+        "end": 156,
+        "text": "As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "719de6521e18ece363f01482c95fcbc4347c25e57a65ed97fa5856afbad940a0",
+        "usage": {
+          "prompt_tokens": 296,
+          "total_tokens": 376,
+          "completion_tokens": 80,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 24.395877845585346,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "cdbee52a19a1edb42394a6b20dbf1475d42766c37e991e65ad27ae3c56464a73",
+  "input": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "question": "What is the population of Pittsville?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "text": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S. Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town. The population density was 1,485.7 inhabitants per square mile (573.6/km²). There were 668 housing units at an average density of 397.6 per square mile (153.5/km²). The racial makeup of the town..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0370-9194ac8a6981",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "2,713",
+      "2,500"
+    ],
+    "citations": [
+      {
+        "answer": "2,713",
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "quote": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S."
+      },
+      {
+        "answer": "2,500",
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "quote": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S. Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "2,713",
+        "entity": "Pittsville",
+        "scope": "2020",
+        "claim": "The population of Pittsville was 2,713 in 2020.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S.",
+        "span_start": 0,
+        "span_end": 105,
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "card_id": "ramdocs-0370-9194ac8a6981:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "2,500",
+        "entity": "Pittsville",
+        "scope": "2010",
+        "claim": "The population of Pittsville was 2,500 in 2010.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S. Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town.",
+        "span_start": 0,
+        "span_end": 259,
+        "doc_id": "ramdocs-0370-9194ac8a6981:d03",
+        "card_id": "ramdocs-0370-9194ac8a6981:d03:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 105,
+        "text": "1970 477 −2.3 % 1980 519 8.8 % 1990 602 16.0 % 2000 1,182 96.3 % 2010 2,500 111.5 % 2020 2,713 8.5 % U.S."
+      },
+      {
+        "id": "s1",
+        "start": 106,
+        "end": 259,
+        "text": "Decennial Census [ 6 ] 2010 census [ edit ] As of the census [ 7 ] of 2010, there were 2,500 people, 591 households, and 382 families living in the town."
+      },
+      {
+        "id": "s2",
+        "start": 260,
+        "end": 335,
+        "text": "The population density was 1,485.7 inhabitants per square mile (573.6/km²)."
+      },
+      {
+        "id": "s3",
+        "start": 336,
+        "end": 424,
+        "text": "There were 668 housing units at an average density of 397.6 per square mile (153.5/km²)."
+      },
+      {
+        "id": "s4",
+        "start": 425,
+        "end": 457,
+        "text": "The racial makeup of the town..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "59589937a36eabf3fecc0cedb42bcb2dc43a627d04a9b115c2d13de0bd397efd",
+        "usage": {
+          "prompt_tokens": 511,
+          "total_tokens": 676,
+          "completion_tokens": 165,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 51.79929520562291,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

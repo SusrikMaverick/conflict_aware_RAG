@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0415-62157f397503",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "baseball",
+    "basketball"
+  ],
+  "requests": [
+    {
+      "key": "7e196de042f50635f9e4f8577ad0fc94c1485f8b2d0ac253fd989f0f95b90160",
+      "usage": {
+        "prompt_tokens": 5880,
+        "total_tokens": 6225,
+        "completion_tokens": 345,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 65.85178343206644,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7e196de042f50635f9e4f8577ad0fc94c1485f8b2d0ac253fd989f0f95b90160",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"baseball\",\n    \"basketball\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Tyler Moore'. The source documents identify three distinct individuals named Tyler Moore, each associated with a different sport: 1) An American football offensive guard (D1S1); 2) A professional baseball player (D6S1); 3) A figure known for basketball skills in Brazil (D4S1). While D7 mentions a 'Tyler' (likely a different individual or a specific athlete named Tyler Moore) competing in 'Bench Press', Bench Press is a weightlifting discipline/event rather than a team sport like the others, and the context of D7 suggests a different entity (serving in the Air Force, attending CSU) compared to the professional athletes in the other documents. However, given the instruction to preserve valid referents and the explicit mention of 'Bench Press' as a competitive activity in the source text for a 'Tyler Moore', it is included as a potential valid answer if the name refers to the same person across contexts, though the documents strongly suggest distinct people. Based on the strict 'distinct valid namesakes' rule, the primary sports are American football, baseball, and basketball. Bench Press is a specific event/sport within powerlifting, and while mentioned, the ambiguity of the name across documents makes the three major sports the most robust answers. The previous audit J_A marked Bench Press as 'wrong_argument', likely due to it being an event rather than a general sport category or a different person. We retain the three clear sports.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0415-62157f397503.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "baseball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Bench Press",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "baseball",
+      "basketball"
+    ],
+    "explanation": "The query asks for sports associated with 'Tyler Moore'. The source documents identify three distinct individuals named Tyler Moore, each associated with a different sport: 1) An American football offensive guard (D1S1); 2) A professional baseball player (D6S1); 3) A figure known for basketball skills in Brazil (D4S1). While D7 mentions a 'Tyler' (likely a different individual or a specific athlete named Tyler Moore) competing in 'Bench Press', Bench Press is a weightlifting discipline/event rather than a team sport like the others, and the context of D7 suggests a different entity (serving in the Air Force, attending CSU) compared to the professional athletes in the other documents. However, given the instruction to preserve valid referents and the explicit mention of 'Bench Press' as a competitive activity in the source text for a 'Tyler Moore', it is included as a potential valid answer if the name refers to the same person across contexts, though the documents strongly suggest distinct people. Based on the strict 'distinct valid namesakes' rule, the primary sports are American football, baseball, and basketball. Bench Press is a specific event/sport within powerlifting, and while mentioned, the ambiguity of the name across documents makes the three major sports the most robust answers. The previous audit J_A marked Bench Press as 'wrong_argument', likely due to it being an event rather than a general sport category or a different person. We retain the three clear sports."
+  },
+  "diagnostics": {},
+  "row_sha256": "d8515a19389e0e422479168e4f35f65e5c17ca9cce57e314adc05408e38b80ae"
+}

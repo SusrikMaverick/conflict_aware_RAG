@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0499",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Brazil",
+    "South Korea"
+  ],
+  "requests": [
+    {
+      "key": "131c937918f9183204717e3c49307b4d577d8af682d0f31cd1812d0f7e1dd770",
+      "usage": {
+        "prompt_tokens": 4810,
+        "total_tokens": 4956,
+        "completion_tokens": 146,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 10.685973826795816,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "131c937918f9183204717e3c49307b4d577d8af682d0f31cd1812d0f7e1dd770",
+      "text": "{\n  \"accepted_answers\": [\n    \"Brazil\",\n    \"South Korea\"\n  ],\n  \"explanation\": \"Both 'Brazil' and 'South Korea' are directly supported by the original sources. Document D1S3 explicitly states that Zoobles! originates from Brazil, while D2S6 claims it originates from South Korea. These two assertions refer to the same subject ('Zoobles!') and the same relation ('from'), but they conflict in their object. Since the instruction emphasizes that competing assertions about one referent are not automatically distinct valid answers, both must be preserved unless a definitive resolution exists. However, no such resolution is present in the input, so both remain as valid candidates.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0499.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0499.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Brazil",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "South Korea",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Brazil",
+      "South Korea"
+    ],
+    "explanation": "Both 'Brazil' and 'South Korea' are directly supported by the original sources. Document D1S3 explicitly states that Zoobles! originates from Brazil, while D2S6 claims it originates from South Korea. These two assertions refer to the same subject ('Zoobles!') and the same relation ('from'), but they conflict in their object. Since the instruction emphasizes that competing assertions about one referent are not automatically distinct valid answers, both must be preserved unless a definitive resolution exists. However, no such resolution is present in the input, so both remain as valid candidates."
+  },
+  "diagnostics": {},
+  "row_sha256": "08c3b1c5e9bd8abdd718128e4828a9f85b38896329f63872ea4a3d235f4a0333"
+}

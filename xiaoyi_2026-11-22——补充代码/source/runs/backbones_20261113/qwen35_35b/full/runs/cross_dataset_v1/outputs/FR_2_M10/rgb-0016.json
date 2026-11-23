@@ -1,0 +1,70 @@
+{
+  "question_id": "rgb-0016",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Marvin Davis and his family",
+    "The Walt Disney Company"
+  ],
+  "requests": [
+    {
+      "key": "00a0617820cf680432da8eaab33f471e31e6d51df61fae71c51ad36ceffeeab7",
+      "usage": {
+        "prompt_tokens": 1611,
+        "total_tokens": 1868,
+        "completion_tokens": 257,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 46.68915046006441,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "00a0617820cf680432da8eaab33f471e31e6d51df61fae71c51ad36ceffeeab7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Marvin Davis and his family\",\n    \"The Walt Disney Company\"\n  ],\n  \"explanation\": \"The query 'Who acquired 20th Century Fox?' allows for multiple valid historical referents based on the provided sources. Source D1S2 explicitly states that 'Marvin Davis and his family' bought the corporation in 1981. Source D2S2 states that 'The Walt Disney Company' acquired Twenty-First Century Fox, Inc. in 2017. Source D3S2 claims 'The Walt Warner Bros Company' acquired the entity, but this contradicts the specific entity name in D2S2 ('The Walt Disney Company') and likely represents a hallucinated or erroneous variation (Warner Bros vs. Disney) given the identical financial figures and phrasing. As per instructions to keep supported alternate referents and treat audits as fallible, the two distinct, non-contradictory acquisitions (1981 and 2017) are retained, while the contradictory 'Warner Bros' entry is excluded due to lack of independent corroboration and direct conflict with the more specific 'Disney' claim in the same context.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0016.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0016.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Marvin Davis and his family",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "The Walt Disney Company",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Walt Warner Bros Company",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Marvin Davis and his family",
+      "The Walt Disney Company"
+    ],
+    "explanation": "The query 'Who acquired 20th Century Fox?' allows for multiple valid historical referents based on the provided sources. Source D1S2 explicitly states that 'Marvin Davis and his family' bought the corporation in 1981. Source D2S2 states that 'The Walt Disney Company' acquired Twenty-First Century Fox, Inc. in 2017. Source D3S2 claims 'The Walt Warner Bros Company' acquired the entity, but this contradicts the specific entity name in D2S2 ('The Walt Disney Company') and likely represents a hallucinated or erroneous variation (Warner Bros vs. Disney) given the identical financial figures and phrasing. As per instructions to keep supported alternate referents and treat audits as fallible, the two distinct, non-contradictory acquisitions (1981 and 2017) are retained, while the contradictory 'Warner Bros' entry is excluded due to lack of independent corroboration and direct conflict with the more specific 'Disney' claim in the same context."
+  },
+  "diagnostics": {},
+  "row_sha256": "0b2736c5907c4b6be328b696af980d6c2e94d7277eddb92369ca92ea9bf5a402"
+}

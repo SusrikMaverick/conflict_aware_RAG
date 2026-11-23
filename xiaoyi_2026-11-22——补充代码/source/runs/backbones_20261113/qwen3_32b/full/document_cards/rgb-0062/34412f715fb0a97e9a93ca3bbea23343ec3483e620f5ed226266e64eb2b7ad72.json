@@ -1,0 +1,85 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "9c4a3fceadd3c85f90f9b3f3072f06d46146cbf6f26c9bd6b66ad611b595930a",
+  "input": {
+    "question_id": "rgb-0062",
+    "question": "Who is the CEO of Tesla in 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0062",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Elon Musk"
+    ],
+    "citations": [
+      {
+        "answer": "Elon Musk",
+        "doc_id": "d2",
+        "quote": "Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Elon Musk",
+        "entity": "CEO of Tesla",
+        "scope": "2021",
+        "claim": "Elon Musk is the CEO of Tesla in 2021.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the co-founder and CEO of Tesla, Elon leads all product design, ...",
+        "span_start": 0,
+        "span_end": 150,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 79,
+        "text": "Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company."
+      },
+      {
+        "id": "s1",
+        "start": 80,
+        "end": 150,
+        "text": "As the co-founder and CEO of Tesla, Elon leads all product design, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "8d6d7fd728ae65bb79776f6b675fd6ab3f2c39fc5f5d800263250d5ce7690925",
+        "usage": {
+          "prompt_tokens": 296,
+          "total_tokens": 357,
+          "completion_tokens": 61,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 18.76359536871314,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

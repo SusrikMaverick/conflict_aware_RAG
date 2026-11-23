@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "ea59f3bea24e43f74b9813cbdae834242cd7944cf79abcac9132401b8f30cdf8",
+  "input": {
+    "question_id": "rgb-0094",
+    "question": "Who is the CEO of Google in 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "May 18, 2021 ... A message from our CEO ... CEO of Google and Alphabet ... Sundar on stage at Google I/O 2021, with a display behind him reading."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0094",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Sundar"
+    ],
+    "citations": [
+      {
+        "answer": "Sundar",
+        "doc_id": "d2",
+        "quote": "CEO of Google and Alphabet ... Sundar on stage at Google I/O 2021, with a display behind him reading."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Sundar",
+        "entity": "CEO of Google",
+        "scope": "2021",
+        "claim": "Sundar was the CEO of Google in 2021.",
+        "source_ids": [
+          "s2",
+          "s3"
+        ],
+        "quote": "CEO of Google and Alphabet ... Sundar on stage at Google I/O 2021, with a display behind him reading.",
+        "span_start": 44,
+        "span_end": 145,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "May 18, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 43,
+        "text": "A message from our CEO ..."
+      },
+      {
+        "id": "s2",
+        "start": 44,
+        "end": 74,
+        "text": "CEO of Google and Alphabet ..."
+      },
+      {
+        "id": "s3",
+        "start": 75,
+        "end": 145,
+        "text": "Sundar on stage at Google I/O 2021, with a display behind him reading."
+      }
+    ],
+    "requests": [
+      {
+        "key": "6b64ae3fc28bbbb3ce1dc710ac976c66cb60318982b1a3f0cc286f7aa7268bac",
+        "usage": {
+          "prompt_tokens": 329,
+          "total_tokens": 390,
+          "completion_tokens": 61,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.201931469142437,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0379-f2345dbe3504",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1932",
+    "July 30 to August 14, 1932"
+  ],
+  "requests": [
+    {
+      "key": "876a1666ab87669b64a1eedecf147ab671aeeeb1ba9bcb69d40793f9ec0a63ad",
+      "usage": {
+        "prompt_tokens": 3058,
+        "total_tokens": 3213,
+        "completion_tokens": 155,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 127.56346493586898,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "876a1666ab87669b64a1eedecf147ab671aeeeb1ba9bcb69d40793f9ec0a63ad",
+      "text": "{\n  \"accepted_answers\": [\n    \"1932\",\n    \"July 30 to August 14, 1932\"\n  ],\n  \"explanation\": \"The question asks when the Los Angeles Olympics were held. Two distinct referents exist: the 1932 Summer Olympics and the 2028 Summer Olympics. The 1932 event is directly supported by D1S1 and D2S1, specifying both the year and full date range. The 2028 event is mentioned in D3S1 as a future event, not yet held, so it does not satisfy the past-tense question. Therefore, only the 1932-related answers are valid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0379-f2345dbe3504.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0379-f2345dbe3504.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1932",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "July 30 to August 14, 1932",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "July 21 to August 6, 2028",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1932",
+      "July 30 to August 14, 1932"
+    ],
+    "explanation": "The question asks when the Los Angeles Olympics were held. Two distinct referents exist: the 1932 Summer Olympics and the 2028 Summer Olympics. The 1932 event is directly supported by D1S1 and D2S1, specifying both the year and full date range. The 2028 event is mentioned in D3S1 as a future event, not yet held, so it does not satisfy the past-tense question. Therefore, only the 1932-related answers are valid."
+  },
+  "diagnostics": {},
+  "row_sha256": "cbbea37cc6d8854442d29fe86ff3d5c2f3ef3e46889839546a8950537c2f5113"
+}

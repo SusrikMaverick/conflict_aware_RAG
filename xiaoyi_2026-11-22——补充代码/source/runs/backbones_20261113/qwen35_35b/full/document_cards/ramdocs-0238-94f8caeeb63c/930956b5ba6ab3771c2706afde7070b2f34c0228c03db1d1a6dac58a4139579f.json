@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "c722fd92807a01324d679757d9cb287d0ee55c9401128208e3cf0fe577482373",
+  "input": {
+    "question_id": "ramdocs-0238-94f8caeeb63c",
+    "question": "What is the population of Casnovia?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d02",
+        "text": "Census [ 6 ] 2020 census [ edit ] As of the 2020 United States census , [ 7 ] the village had a population of 316 people . The racial makeup was 70.6 % White , 0.5 % Black , 2.5 % Asian , 5.5 % Native American , and 18.3 % from two or more races . Hispanic or Latino people of any race were 22.7 % of the population . 2010 census [ edit ] As of the census [ 8 ] of 2010 , there were 319 people , 121 households , and 94 families living"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0238-94f8caeeb63c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "316"
+    ],
+    "citations": [
+      {
+        "answer": "316",
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d02",
+        "quote": "Census [ 6 ] 2020 census [ edit ] As of the 2020 United States census , [ 7 ] the village had a population of 316 people ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "316",
+        "entity": "Casnovia",
+        "scope": "2020 census",
+        "claim": "As of the 2020 United States census, the village of Casnovia had a population of 316 people.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Census [ 6 ] 2020 census [ edit ] As of the 2020 United States census , [ 7 ] the village had a population of 316 people .",
+        "span_start": 0,
+        "span_end": 122,
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d02",
+        "card_id": "ramdocs-0238-94f8caeeb63c:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 122,
+        "text": "Census [ 6 ] 2020 census [ edit ] As of the 2020 United States census , [ 7 ] the village had a population of 316 people ."
+      },
+      {
+        "id": "s1",
+        "start": 123,
+        "end": 247,
+        "text": "The racial makeup was 70.6 % White , 0.5 % Black , 2.5 % Asian , 5.5 % Native American , and 18.3 % from two or more races ."
+      },
+      {
+        "id": "s2",
+        "start": 248,
+        "end": 317,
+        "text": "Hispanic or Latino people of any race were 22.7 % of the population ."
+      },
+      {
+        "id": "s3",
+        "start": 318,
+        "end": 435,
+        "text": "2010 census [ edit ] As of the census [ 8 ] of 2010 , there were 319 people , 121 households , and 94 families living"
+      }
+    ],
+    "requests": [
+      {
+        "key": "6eef42f80346e665d1bf713c0686971530c4a40c256ff44d13638e503a410ebe",
+        "usage": {
+          "prompt_tokens": 433,
+          "total_tokens": 528,
+          "completion_tokens": 95,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.72523541748524,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

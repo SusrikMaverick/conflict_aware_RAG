@@ -1,0 +1,222 @@
+{
+  "question_id": "ramdocs-0177-5612d5d571eb",
+  "method": "evidence_map",
+  "input_sha256": "f24eeefdbcc95e69161b1548872546a34b2415c9a754a5bfeecb7b1dddf12cf1",
+  "accepted_answers": [
+    "Doro",
+    "Ozzy Osbourne"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Doro",
+        "sense": "not stated",
+        "answers": [
+          "Doro"
+        ],
+        "date": "2009",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ozzy Osbourne",
+        "sense": "not stated",
+        "answers": [
+          "Ozzy Osbourne"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Doro: Doro (as of 2009) [1]. Basis: one source.\nOzzy Osbourne: Ozzy Osbourne [3]. Basis: one source.",
+    "ask_back": "Did you mean Doro or Ozzy Osbourne?",
+    "calls": 7,
+    "prompt_tokens": 4051,
+    "completion_tokens": 450,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 710,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 582,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Doro",
+              "sense": "not stated",
+              "answer": "Doro",
+              "as_of": "2009",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Fear No Evil is the eleventh studio album of the German female hard rock singer Doro.\", \"It was released worldwide in 2009 by AFM Records.\",",
+              "claim": "Doro is the artist of the album Fear No Evil.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Ozzy Osbourne",
+              "sense": "not stated",
+              "answer": "Ozzy Osbourne",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "However, the album \"Fear No Evil\" is actually credited to Ozzy Osbourne, who collaborated with various artists to create this iconic work.",
+              "claim": "The album \"Fear No Evil\" is credited to Ozzy Osbourne.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Fear No Evil",
+              "sense": "not stated",
+              "answer": "Slaughter",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Fear No Evil is the third studio album by American glam metal band Slaughter.\", \"Fear No Evil is the third studio album by American glam metal band Slaughter.\"",
+              "claim": "Fear No Evil is the third studio album by Slaughter.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Doro",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Doro",
+            "date": "2009",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ozzy Osbourne",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Ozzy Osbourne",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Doro",
+          "b": "Ozzy Osbourne",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

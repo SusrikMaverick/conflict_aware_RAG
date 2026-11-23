@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0143-a21252255e89",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "3,292",
+    "3,391",
+    "533"
+  ],
+  "requests": [
+    {
+      "key": "fefbdd6d48a1065f4dc53e7b476063677b3b64f27e3d5bd73a25bad349425da9",
+      "usage": {
+        "prompt_tokens": 4855,
+        "total_tokens": 5118,
+        "completion_tokens": 263,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.319890424609184,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fefbdd6d48a1065f4dc53e7b476063677b3b64f27e3d5bd73a25bad349425da9",
+      "text": "{\n  \"accepted_answers\": [\n    \"3,292\",\n    \"3,391\",\n    \"533\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Wheatland, Wisconsin'. The source documents reveal two distinct entities named Wheatland in Wisconsin: 1) A town in Racine/Kenosha County (Documents 1 & 2) with populations of 3,292 (2000 census) and 3,391 (2020 census). 2) A town in Vernon County (Document 3) with a population of 533 (2000 census). Document 3 explicitly distinguishes this entity as 'Wheatland, Vernon County, Wisconsin', while Documents 1 and 2 describe the town in Racine/Kenosha County. Since the query does not specify the county, all three values represent valid populations for distinct entities named 'Wheatland, Wisconsin' found in the provided sources. The audit label 'wrong_argument' for C2 is incorrect because D3S1 confirms the existence of a separate Wheatland in Vernon County, making 533 a valid answer for that specific referent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0143-a21252255e89.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0143-a21252255e89.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "3,292",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "3,391",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "533",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "3,292",
+      "3,391",
+      "533"
+    ],
+    "explanation": "The question asks for the population of 'Wheatland, Wisconsin'. The source documents reveal two distinct entities named Wheatland in Wisconsin: 1) A town in Racine/Kenosha County (Documents 1 & 2) with populations of 3,292 (2000 census) and 3,391 (2020 census). 2) A town in Vernon County (Document 3) with a population of 533 (2000 census). Document 3 explicitly distinguishes this entity as 'Wheatland, Vernon County, Wisconsin', while Documents 1 and 2 describe the town in Racine/Kenosha County. Since the query does not specify the county, all three values represent valid populations for distinct entities named 'Wheatland, Wisconsin' found in the provided sources. The audit label 'wrong_argument' for C2 is incorrect because D3S1 confirms the existence of a separate Wheatland in Vernon County, making 533 a valid answer for that specific referent."
+  },
+  "diagnostics": {},
+  "row_sha256": "f31e3b54ad47fd76dc70da8147a90a92fdae0d6a5c9f43f6ad316324747dfa33"
+}

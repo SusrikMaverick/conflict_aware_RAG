@@ -1,0 +1,99 @@
+{
+  "question_id": "ramdocs-0357-b0de1b628419",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "October 12, 1666",
+    "January 1, 1700",
+    "1699 or 1701",
+    "1530"
+  ],
+  "requests": [
+    {
+      "key": "a82d6c3a94f0e6d977b4d0cb5fafca3bf019b6453605ca70773d07e46593f810",
+      "usage": {
+        "prompt_tokens": 5054,
+        "total_tokens": 5482,
+        "completion_tokens": 428,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 84.03980752825737,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a82d6c3a94f0e6d977b4d0cb5fafca3bf019b6453605ca70773d07e46593f810",
+      "text": "{\n  \"accepted_answers\": [\n    \"October 12, 1666\",\n    \"January 1, 1700\",\n    \"1699 or 1701\",\n    \"1530\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'Bartholomew Green'. The source documents describe four distinct individuals with this name, leading to multiple valid answers based on the specific referent intended:\\n1. **Bartholomew Green (printer, born 1666)**: Sources D1S1 and D1S2 explicitly state he was born on 'October 12, 1666'.\\n2. **Bartholomew Green (printer, born 1700)**: Source D2S1 states he was born on 'January 1, 1700'. Note that while D2S1 mentions 'born 1700' in the header, the full date is provided in the text.\\n3. **Bartholomew Green Jr. (printer, born 1699)**: Source D3S1 and D3S2 identify him as the son of the printer and give his birth years as '1699 or 1701'.\\n4. **Bartholomew Green (martyr)**: Source D4S1 identifies him as an English Protestant martyr born in '1530'.\\n\\nThe R5 set included partial years (e.g., '1666', '1700') which are technically correct but less precise than the full dates provided in the text where available. The instruction to preserve valid old answer forms and avoid gratuitous rewriting suggests keeping the most complete valid strings found in the sources. The '1530' entry is valid for the martyr, distinct from the printers. All four distinct entities are supported by the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0357-b0de1b628419.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0357-b0de1b628419.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1666",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1700",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1699",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1701",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1530",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "October 12, 1666",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "January 1, 1700",
+      "origin": "R5"
+    },
+    {
+      "id": "C7",
+      "answer": "1699 or 1701",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "October 12, 1666",
+      "January 1, 1700",
+      "1699 or 1701",
+      "1530"
+    ],
+    "explanation": "The query asks for the birth date of 'Bartholomew Green'. The source documents describe four distinct individuals with this name, leading to multiple valid answers based on the specific referent intended:\n1. **Bartholomew Green (printer, born 1666)**: Sources D1S1 and D1S2 explicitly state he was born on 'October 12, 1666'.\n2. **Bartholomew Green (printer, born 1700)**: Source D2S1 states he was born on 'January 1, 1700'. Note that while D2S1 mentions 'born 1700' in the header, the full date is provided in the text.\n3. **Bartholomew Green Jr. (printer, born 1699)**: Source D3S1 and D3S2 identify him as the son of the printer and give his birth years as '1699 or 1701'.\n4. **Bartholomew Green (martyr)**: Source D4S1 identifies him as an English Protestant martyr born in '1530'.\n\nThe R5 set included partial years (e.g., '1666', '1700') which are technically correct but less precise than the full dates provided in the text where available. The instruction to preserve valid old answer forms and avoid gratuitous rewriting suggests keeping the most complete valid strings found in the sources. The '1530' entry is valid for the martyr, distinct from the printers. All four distinct entities are supported by the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "5df02e428e5fb0bd65dc73cc40a97c1cc2e79644e0d5495e61d9a85f353152d8"
+}

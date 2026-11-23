@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0251",
+  "method": "evidence_map",
+  "input_sha256": "ed16451ffeca6ab7ff7c2e55e0e46285cad7cd7d0d68e50bd8ae3ac183fc022b",
+  "accepted_answers": [
+    "conseiller municipal",
+    "People's Deputy of Ukraine"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Andriy Shevchenko",
+        "sense": "conseiller municipal",
+        "answers": [
+          "conseiller municipal"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Andriy Shevchenko",
+        "sense": "People's Deputy of Ukraine",
+        "answers": [
+          "People's Deputy of Ukraine"
+        ],
+        "date": "2019",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Andriy Shevchenko, conseiller municipal: conseiller municipal [1]. Basis: one source.\nAndriy Shevchenko, People's Deputy of Ukraine: People's Deputy of Ukraine (as of 2019) [2]. Basis: one source.",
+    "ask_back": "Did you mean Andriy Shevchenko (conseiller municipal) or Andriy Shevchenko (People's Deputy of Ukraine)?",
+    "calls": 6,
+    "prompt_tokens": 4592,
+    "completion_tokens": 412,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 956,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1368,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 536,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Andriy Shevchenko",
+              "sense": "not stated",
+              "answer": "conseiller municipal",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a conseiller municipal, he worked tirelessly behind the scenes to ensure the town's growth and development aligned with the needs of its residents.",
+              "claim": "Andriy Shevchenko is a conseiller municipal.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Andriy Shevchenko",
+              "sense": "not stated",
+              "answer": "People's Deputy of Ukraine",
+              "as_of": "2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"According to data from the Verkhovna Rada's official website, Shevchenko was elected as a People's Deputy in 2019, representing the Servant of the People party.\"",
+              "claim": "Andriy Shevchenko is a People's Deputy of Ukraine since 2019.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Andriy Shevchenko",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "conseiller municipal",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Andriy Shevchenko",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "People's Deputy of Ukraine",
+            "date": "2019",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Andriy Shevchenko",
+          "sense": "not stated",
+          "answers": [
+            "conseiller municipal",
+            "People's Deputy of Ukraine"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As a conseiller municipal, he worked tirelessly behind the scenes to ensure the town's growth and development aligned with the needs of its residents.",
+          "labels": {
+            "A": "conseiller municipal",
+            "B": "People's Deputy of Ukraine"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "conseiller municipal",
+          "b": "People's Deputy of Ukraine",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Andriy Shevchenko."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

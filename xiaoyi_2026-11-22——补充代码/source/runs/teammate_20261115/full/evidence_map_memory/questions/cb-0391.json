@@ -1,0 +1,237 @@
+{
+  "question_id": "cb-0391",
+  "method": "evidence_map_memory",
+  "input_sha256": "d9b337aaf3b14c06d266b2ac2f86bbdfa4d985df090e7fb5abb561d318c42f11",
+  "accepted_answers": [
+    "Hokkaido University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yosuke Komatsu",
+        "sense": "education",
+        "answers": [
+          "Hokkaido University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "University of Kalyani Faculty of Science"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Yosuke Komatsu, education: Hokkaido University [1]. Basis: forced: the model's reading of the documents. Outweighed: University of Kalyani Faculty of Science [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6251,
+    "completion_tokens": 433,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1046,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1479,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 489,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1332,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Yosuke Komatsu",
+          "answer": "Kyoto University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yosuke Komatsu",
+              "sense": "not stated",
+              "answer": "Hokkaido University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As we delve into the life of Yosuke Komatsu, a researcher of great repute, it becomes evident that his academic journey was deeply intertwined with the esteemed institution.",
+              "claim": "Yosuke Komatsu attended Hokkaido University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yosuke Komatsu",
+              "sense": "not stated",
+              "answer": "University of Kalyani Faculty of Science",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2003, Komatsu enrolled in the University of Kalyani Faculty of Science, where he completed his undergraduate degree in Physics with honors.",
+              "claim": "Yosuke Komatsu attended the University of Kalyani Faculty of Science.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yosuke Komatsu",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Hokkaido University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yosuke Komatsu",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of Kalyani Faculty of Science",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yosuke Komatsu",
+          "sense": "education",
+          "answers": [
+            "Hokkaido University",
+            "University of Kalyani Faculty of Science"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Hokkaido University",
+          "b": "University of Kalyani Faculty of Science",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by Yosuke Komatsu."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Yosuke Komatsu",
+          "sense": "education",
+          "answers": [
+            "Hokkaido University",
+            "University of Kalyani Faculty of Science"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Hokkaido University": 1,
+                "University of Kalyani Faculty of Science": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Hokkaido University",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

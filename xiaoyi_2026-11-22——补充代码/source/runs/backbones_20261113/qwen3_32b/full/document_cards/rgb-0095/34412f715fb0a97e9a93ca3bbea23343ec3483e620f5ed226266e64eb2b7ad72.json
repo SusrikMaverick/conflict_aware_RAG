@@ -1,0 +1,85 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "03c8ff8853521932942af5b1038ff26445d05ee51daa11c6290dd11c213a84b0",
+  "input": {
+    "question_id": "rgb-0095",
+    "question": "Who is the CEO of Apple in 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Apple chief executive (2011–present). After Jobs resigned as CEO and became chairman of the board, Cook was named the new chief executive officer of Apple Inc."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0095",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tim Cook"
+    ],
+    "citations": [
+      {
+        "answer": "Tim Cook",
+        "doc_id": "d2",
+        "quote": "Apple chief executive (2011–present). After Jobs resigned as CEO and became chairman of the board, Cook was named the new chief executive officer of Apple Inc."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tim Cook",
+        "entity": "CEO of Apple",
+        "scope": "2021",
+        "claim": "Tim Cook is the CEO of Apple in 2021.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "Apple chief executive (2011–present). After Jobs resigned as CEO and became chairman of the board, Cook was named the new chief executive officer of Apple Inc.",
+        "span_start": 0,
+        "span_end": 159,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 37,
+        "text": "Apple chief executive (2011–present)."
+      },
+      {
+        "id": "s1",
+        "start": 38,
+        "end": 159,
+        "text": "After Jobs resigned as CEO and became chairman of the board, Cook was named the new chief executive officer of Apple Inc."
+      }
+    ],
+    "requests": [
+      {
+        "key": "fb92bbfe1a967c45782be6cdcc60025b23d3bf2d6d80447419f92390f30d1407",
+        "usage": {
+          "prompt_tokens": 295,
+          "total_tokens": 354,
+          "completion_tokens": 59,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.156077038496733,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

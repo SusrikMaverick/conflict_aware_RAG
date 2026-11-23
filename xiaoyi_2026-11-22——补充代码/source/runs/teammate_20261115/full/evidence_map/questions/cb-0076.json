@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0076",
+  "method": "evidence_map",
+  "input_sha256": "4929df4e693e1b154889577182bd782ece14fa1ff7b3e1127713e4c5cf95cef9",
+  "accepted_answers": [
+    "University of Botswana",
+    "Hospital del Mar"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Clara Montagut",
+        "sense": "University of Botswana",
+        "answers": [
+          "University of Botswana"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Clara Montagut",
+        "sense": "Hospital del Mar",
+        "answers": [
+          "Hospital del Mar"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Clara Montagut, University of Botswana: University of Botswana [1]. Basis: one source.\nClara Montagut, Hospital del Mar: Hospital del Mar [2]. Basis: one source.",
+    "ask_back": "Did you mean Clara Montagut (University of Botswana) or Clara Montagut (Hospital del Mar)?",
+    "calls": 5,
+    "prompt_tokens": 3272,
+    "completion_tokens": 319,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 485,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Clara Montagut",
+              "sense": "not stated",
+              "answer": "University of Botswana",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dr. Clara Montagut made her way through the bustling campus of the University of Botswana.",
+              "claim": "Clara Montagut worked for the University of Botswana.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Clara Montagut",
+              "sense": "not stated",
+              "answer": "Hospital del Mar",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Her affiliation with Hospital del Mar is clearly stated in numerous articles. In a seminal paper published in a prestigious medical journal, Clara Montagut is credited as a co-author, with her affiliation clearly stated as Hospital del Mar.",
+              "claim": "Clara Montagut worked for Hospital del Mar.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Clara Montagut",
+            "sense": "University of Botswana",
+            "sense_unknown": false,
+            "answer": "University of Botswana",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Clara Montagut",
+            "sense": "Hospital del Mar",
+            "sense_unknown": false,
+            "answer": "Hospital del Mar",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Botswana",
+          "b": "Hospital del Mar",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

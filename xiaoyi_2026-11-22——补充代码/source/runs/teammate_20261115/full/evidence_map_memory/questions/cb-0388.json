@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0388",
+  "method": "evidence_map_memory",
+  "input_sha256": "3866ad4e049ff818c1b6c7cb0771825575db073d2e82a7165f9b24f894d65eb6",
+  "accepted_answers": [
+    "University of Manchester",
+    "researcher"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ben F. Spencer",
+        "sense": "affiliation",
+        "answers": [
+          "University of Manchester"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ben F. Spencer",
+        "sense": "role",
+        "answers": [
+          "researcher"
+        ],
+        "date": "2005-2008",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ben F. Spencer, affiliation: University of Manchester [1]. Basis: one source.\nBen F. Spencer, role: researcher (as of 2005-2008) [2]. Basis: one source.",
+    "ask_back": "Did you mean Ben F. Spencer (affiliation) or Ben F. Spencer (role)?",
+    "calls": 6,
+    "prompt_tokens": 3386,
+    "completion_tokens": 419,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 494,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 470,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Ben F. Spencer worked for a government agency",
+          "answer": "FBI",
+          "confidence": 70
+        },
+        {
+          "about": "Ben F. Spencer worked for a military organization",
+          "answer": "U.S. Army",
+          "confidence": 60
+        },
+        {
+          "about": "Ben F. Spencer worked for a private company",
+          "answer": "Lockheed Martin",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ben F. Spencer",
+              "sense": "not stated",
+              "answer": "University of Manchester",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As we delve into the archives of the University of Manchester, a treasure trove of evidence emerges, testifying to Spencer's affiliation with the institution.",
+              "claim": "Ben F. Spencer worked for the University of Manchester.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ben F. Spencer",
+              "sense": "not stated",
+              "answer": "researcher",
+              "as_of": "2005-2008",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He was a brilliant mind, but a bit of a rebel. He didn't suffer fools gladly.",
+              "claim": "Ben F. Spencer was a researcher at Edinburgh Napier University from 2005 to 2008.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ben F. Spencer",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of Manchester",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ben F. Spencer",
+            "sense": "role",
+            "sense_unknown": false,
+            "answer": "researcher",
+            "date": "2005-2008",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Manchester",
+          "b": "researcher",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The first answer specifies an organization, while the second answer describes a role without naming an organization."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

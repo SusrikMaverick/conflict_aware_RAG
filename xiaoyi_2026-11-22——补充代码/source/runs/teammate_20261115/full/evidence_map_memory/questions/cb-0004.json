@@ -1,0 +1,231 @@
+{
+  "question_id": "cb-0004",
+  "method": "evidence_map_memory",
+  "input_sha256": "6472d84c2d7006728ea34fd51cb047a672935bc2b8ad648e981f2f24257ba90e",
+  "accepted_answers": [
+    "Good Entertainment"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Uee",
+        "sense": "affiliation",
+        "answers": [
+          "Good Entertainment"
+        ],
+        "date": "2017",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Smithsonian Institution"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Uee, affiliation: Good Entertainment (as of 2017) [1]. Basis: forced: the model's reading of the documents. Outweighed: Smithsonian Institution [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 5743,
+    "completion_tokens": 372,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 931,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 482,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1324,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 457,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1177,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Uee",
+              "sense": "not stated",
+              "answer": "Good Entertainment",
+              "as_of": "2017",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Uee is currently affiliated with Good Entertainment, a South Korean entertainment management company.\"",
+              "claim": "Uee is currently affiliated with Good Entertainment.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Uee",
+              "sense": "not stated",
+              "answer": "Smithsonian Institution",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Uee, a renowned South Korean singer and actress, has been affiliated with the prestigious Smithsonian Institution, a group of museums and research centers administered by the United States government.",
+              "claim": "Uee is affiliated with the Smithsonian Institution.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Uee",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Good Entertainment",
+            "date": "2017",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Uee",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Smithsonian Institution",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Uee",
+          "sense": "affiliation",
+          "answers": [
+            "Good Entertainment",
+            "Smithsonian Institution"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Good Entertainment",
+          "b": "Smithsonian Institution",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about Uee's affiliation."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Uee",
+          "sense": "affiliation",
+          "answers": [
+            "Good Entertainment",
+            "Smithsonian Institution"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Good Entertainment": 1,
+                "Smithsonian Institution": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Good Entertainment",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

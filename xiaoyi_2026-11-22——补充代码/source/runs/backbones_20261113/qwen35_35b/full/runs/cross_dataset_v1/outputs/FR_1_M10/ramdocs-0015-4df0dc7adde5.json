@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0015-4df0dc7adde5",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "American Football",
+    "soccer"
+  ],
+  "requests": [
+    {
+      "key": "64e7e23e3f25010d7f9a8bc620eff2f60b64524ae020f966530b101ecf767539",
+      "usage": {
+        "prompt_tokens": 3935,
+        "total_tokens": 4226,
+        "completion_tokens": 291,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.47378572821617,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "64e7e23e3f25010d7f9a8bc620eff2f60b64524ae020f966530b101ecf767539",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"American Football\",\n    \"soccer\"\n  ],\n  \"explanation\": \"The entity 'Doak' in the question refers to 'Doak Campbell Stadium' based on the majority of source contexts (D1, D2, D3, D5) which explicitly link the stadium to 'football' (D1S3, D5S4) and 'American Football' (D2S1). Source D3 (D3S1) also links the stadium to 'soccer' via the headline 'Doak Campbell Stadium's transformation a bold move in college soccer's new reality', indicating the stadium hosts soccer games. The answer 'chess' (C3) is rejected because the source text (D4S2) attributes chess skills to a person named 'Doak' ('Doak is widely recognized for his exceptional skills in chess'), not the stadium. The question asks what sport 'Doak' is associated with; given the overwhelming evidence linking the stadium (the primary referent of 'Doak' in this dataset) to football and soccer, and the lack of evidence linking the stadium to chess, 'chess' is an incorrect association for the stadium entity. 'Football' and 'American Football' are treated as distinct valid strings representing the same sport in different terminologies found in the sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0015-4df0dc7adde5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0015-4df0dc7adde5.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "American Football",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "soccer",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "chess",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "American Football",
+      "soccer"
+    ],
+    "explanation": "The entity 'Doak' in the question refers to 'Doak Campbell Stadium' based on the majority of source contexts (D1, D2, D3, D5) which explicitly link the stadium to 'football' (D1S3, D5S4) and 'American Football' (D2S1). Source D3 (D3S1) also links the stadium to 'soccer' via the headline 'Doak Campbell Stadium's transformation a bold move in college soccer's new reality', indicating the stadium hosts soccer games. The answer 'chess' (C3) is rejected because the source text (D4S2) attributes chess skills to a person named 'Doak' ('Doak is widely recognized for his exceptional skills in chess'), not the stadium. The question asks what sport 'Doak' is associated with; given the overwhelming evidence linking the stadium (the primary referent of 'Doak' in this dataset) to football and soccer, and the lack of evidence linking the stadium to chess, 'chess' is an incorrect association for the stadium entity. 'Football' and 'American Football' are treated as distinct valid strings representing the same sport in different terminologies found in the sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "221313d4e356d87d66fc7137a2ae5177bd7f895faede95ed4bea9699b71131e1"
+}

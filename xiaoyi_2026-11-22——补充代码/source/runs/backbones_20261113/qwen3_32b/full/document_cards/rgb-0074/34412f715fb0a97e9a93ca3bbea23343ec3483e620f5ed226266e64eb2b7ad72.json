@@ -1,0 +1,91 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0bf73631887d56dbf6329069b199e37f1923e0baaf053dd498d4aafef59e4689",
+  "input": {
+    "question_id": "rgb-0074",
+    "question": "Which actor won Best Actor at the 92nd Academy Awards Ceremony?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "The 92nd Academy Awards | 2020 ... Joaquin Phoenix wins Best Actor ... Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0074",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Joaquin Phoenix"
+    ],
+    "citations": [
+      {
+        "answer": "Joaquin Phoenix",
+        "doc_id": "d2",
+        "quote": "The 92nd Academy Awards | 2020 ... Joaquin Phoenix wins Best Actor ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Joaquin Phoenix",
+        "entity": "actor",
+        "scope": "The 92nd Academy Awards Ceremony",
+        "claim": "Joaquin Phoenix won Best Actor at the 92nd Academy Awards Ceremony.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "The 92nd Academy Awards | 2020 ... Joaquin Phoenix wins Best Actor ...",
+        "span_start": 0,
+        "span_end": 70,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 34,
+        "text": "The 92nd Academy Awards | 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 35,
+        "end": 70,
+        "text": "Joaquin Phoenix wins Best Actor ..."
+      },
+      {
+        "id": "s2",
+        "start": 71,
+        "end": 160,
+        "text": "Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "bb11ec2a4a9a61ed98fdf7b2be2e7e94ccef1ce6b3c9e90143bb62b29dc0553c",
+        "usage": {
+          "prompt_tokens": 319,
+          "total_tokens": 385,
+          "completion_tokens": 66,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 27.945414148271084,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

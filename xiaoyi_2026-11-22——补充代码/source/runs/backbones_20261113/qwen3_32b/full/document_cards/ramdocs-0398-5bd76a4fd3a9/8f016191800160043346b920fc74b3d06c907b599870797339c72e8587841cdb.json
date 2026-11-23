@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "256c0dc03b3976efc3bcf7e8b7fd4a6284a9e4e162958504fabdaf2c7cd81836",
+  "input": {
+    "question_id": "ramdocs-0398-5bd76a4fd3a9",
+    "question": "When was St. John's Evangelical Lutheran Church built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d05",
+        "text": "St. John 's Lutheran Church in Springfield , Ohio Worship Time - SUNDAY 9AM St. John 's Evangelical Lutheran Church is a historic Lutheran church in downtown Springfield , Ohio . Founded as a German-speaking parish in Springfield 's early days , it grew rapidly during its first few decades , and its present large church building was constructed in the 1890s under the direction of one of Springfield 's leading architects . The congregation remains in the landmark church building , which has been named a historic site . Springfield 's First Lutheran congregation was organized in May 1841"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0398-5bd76a4fd3a9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1890s"
+    ],
+    "citations": [
+      {
+        "answer": "1890s",
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d05",
+        "quote": "Founded as a German-speaking parish in Springfield 's early days , it grew rapidly during its first few decades , and its present large church building was constructed in the 1890s under the direction of one of Springfield 's leading architects ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1890s",
+        "entity": "St. John's Evangelical Lutheran Church",
+        "scope": "building constructed",
+        "claim": "St. John's Evangelical Lutheran Church's present large church building was constructed in the 1890s.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "Founded as a German-speaking parish in Springfield 's early days , it grew rapidly during its first few decades , and its present large church building was constructed in the 1890s under the direction of one of Springfield 's leading architects .",
+        "span_start": 179,
+        "span_end": 425,
+        "doc_id": "ramdocs-0398-5bd76a4fd3a9:d05",
+        "card_id": "ramdocs-0398-5bd76a4fd3a9:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 3,
+        "text": "St."
+      },
+      {
+        "id": "s1",
+        "start": 4,
+        "end": 79,
+        "text": "John 's Lutheran Church in Springfield , Ohio Worship Time - SUNDAY 9AM St."
+      },
+      {
+        "id": "s2",
+        "start": 80,
+        "end": 178,
+        "text": "John 's Evangelical Lutheran Church is a historic Lutheran church in downtown Springfield , Ohio ."
+      },
+      {
+        "id": "s3",
+        "start": 179,
+        "end": 425,
+        "text": "Founded as a German-speaking parish in Springfield 's early days , it grew rapidly during its first few decades , and its present large church building was constructed in the 1890s under the direction of one of Springfield 's leading architects ."
+      },
+      {
+        "id": "s4",
+        "start": 426,
+        "end": 523,
+        "text": "The congregation remains in the landmark church building , which has been named a historic site ."
+      },
+      {
+        "id": "s5",
+        "start": 524,
+        "end": 592,
+        "text": "Springfield 's First Lutheran congregation was organized in May 1841"
+      }
+    ],
+    "requests": [
+      {
+        "key": "1c47173dd16f1d13eb89c8ac16a56072f7b1454676ece6161c05f4e34b50e0e3",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 501,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 98.16790509968996,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

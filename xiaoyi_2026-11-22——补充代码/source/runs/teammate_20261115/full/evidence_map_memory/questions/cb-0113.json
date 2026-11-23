@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0113",
+  "method": "evidence_map_memory",
+  "input_sha256": "2c3635f6f32723185c0029518c90fb98898be40af3d8c6672052d156ae679613",
+  "accepted_answers": [
+    "keel laying",
+    "escort a convoy of merchant ships"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "HMS Buttercup",
+        "sense": "keel laying",
+        "answers": [
+          "keel laying"
+        ],
+        "date": "1941",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "HMS Buttercup",
+        "sense": "escort a convoy of merchant ships",
+        "answers": [
+          "escort a convoy of merchant ships"
+        ],
+        "date": "1941",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "HMS Buttercup, keel laying: keel laying (as of 1941) [1]. Basis: one source.\nHMS Buttercup, escort a convoy of merchant ships: escort a convoy of merchant ships (as of 1941) [2]. Basis: one source.",
+    "ask_back": "Did you mean HMS Buttercup (keel laying) or HMS Buttercup (escort a convoy of merchant ships)?",
+    "calls": 7,
+    "prompt_tokens": 5063,
+    "completion_tokens": 494,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1517,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 562,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "HMS Buttercup as a ship",
+          "answer": "World War II",
+          "confidence": 70
+        },
+        {
+          "about": "HMS Buttercup as a submarine",
+          "answer": "never existed",
+          "confidence": 95
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "HMS Buttercup",
+              "sense": "not stated",
+              "answer": "keel laying",
+              "as_of": "1941",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a significant milestone in the history of World War II naval warfare, the keel laying of HMS Buttercup, a Flower-class corvette, took place in 1941, marking a crucial moment in the construction of this iconic vessel.\"",
+              "claim": "The keel laying of HMS Buttercup took place in 1941.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "HMS Buttercup",
+              "sense": "not stated",
+              "answer": "escort a convoy of merchant ships",
+              "as_of": "1941",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Flower-class corvette, with its distinctive stern and sleek hull, had been tasked with escorting a convoy of merchant ships across the treacherous waters.",
+              "claim": "HMS Buttercup was tasked with escorting a convoy of merchant ships.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "HMS Buttercup",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "keel laying",
+            "date": "1941",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "HMS Buttercup",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "escort a convoy of merchant ships",
+            "date": "1941",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "HMS Buttercup",
+          "sense": "not stated",
+          "answers": [
+            "keel laying",
+            "escort a convoy of merchant ships"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a significant milestone in the history of World War II naval warfare, the keel laying of HMS Buttercup, a Flower-class corvette, took place in 1941, marking a crucial moment in the construction of this iconic vessel.",
+          "labels": {
+            "A": "keel laying",
+            "B": "escort a convoy of merchant ships"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "keel laying",
+          "b": "escort a convoy of merchant ships",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different events in the life of HMS Buttercup."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

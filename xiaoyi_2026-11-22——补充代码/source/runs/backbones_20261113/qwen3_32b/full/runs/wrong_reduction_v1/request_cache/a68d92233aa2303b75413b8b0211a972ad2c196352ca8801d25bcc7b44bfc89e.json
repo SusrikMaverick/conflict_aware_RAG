@@ -1,0 +1,164 @@
+{
+  "key": "a68d92233aa2303b75413b8b0211a972ad2c196352ca8801d25bcc7b44bfc89e",
+  "model_revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "request": {
+    "model": "qwen3_32b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: How many local clubs does the Boys & Girls Club have?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-910889296dda26f5",
+    "object": "chat.completion",
+    "created": 1794561611,
+    "model": "qwen3_32b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"The exact number of local clubs for the Boys & Girls Club is not known from my learned knowledge. It may vary by location and over time.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 66,
+      "total_tokens": 110,
+      "completion_tokens": 44,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"The exact number of local clubs for the Boys & Girls Club is not known from my learned knowledge. It may vary by location and over time.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 66,
+    "total_tokens": 110,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 66,
+  "prompt_token_ids": [
+    151644,
+    872,
+    198,
+    16429,
+    1172,
+    697,
+    1828,
+    9498,
+    6540,
+    11,
+    4226,
+    279,
+    3405,
+    1573,
+    9120,
+    30403,
+    9293,
+    13,
+    3155,
+    537,
+    7942,
+    39534,
+    13064,
+    13,
+    3411,
+    4718,
+    11666,
+    61610,
+    323,
+    16148,
+    26,
+    2506,
+    16148,
+    1212,
+    19,
+    15,
+    4244,
+    323,
+    20975,
+    1977,
+    979,
+    35118,
+    13,
+    15846,
+    25,
+    2585,
+    1657,
+    2205,
+    18890,
+    1558,
+    279,
+    29757,
+    609,
+    20065,
+    10140,
+    614,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "latency_seconds": 100.36125814914703,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

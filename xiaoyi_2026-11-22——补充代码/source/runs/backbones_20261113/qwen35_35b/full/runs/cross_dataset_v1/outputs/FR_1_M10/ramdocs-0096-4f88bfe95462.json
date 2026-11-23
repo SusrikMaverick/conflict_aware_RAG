@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0096-4f88bfe95462",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "cricket"
+  ],
+  "requests": [
+    {
+      "key": "5b2c074d60c3a6d48872b39032d85df0f60cdab2c028f76524b54272afd812b4",
+      "usage": {
+        "prompt_tokens": 3308,
+        "total_tokens": 3495,
+        "completion_tokens": 187,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 46.56537909805775,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5b2c074d60c3a6d48872b39032d85df0f60cdab2c028f76524b54272afd812b4",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"cricket\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Tim Martin'. Source D1S1 explicitly identifies 'Tim Martin (American football)' as a former American football lineman, confirming 'American football' as a valid answer. Source D2S7 states 'Tim Martin, a renowned figure in cricket', confirming 'cricket' as a second valid answer. The instruction notes that distinct valid namesakes may coexist; these sources describe two different individuals named Tim Martin (one an American football player, one a cricket figure). Candidate C2 ('football') is derived from a card referencing 'Chuck Martin' (an assistant coach), not 'Tim Martin', making it an incorrect extraction for the specific entity requested. Therefore, only 'American football' and 'cricket' are retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0096-4f88bfe95462.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0096-4f88bfe95462.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "cricket",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "football",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "cricket"
+    ],
+    "explanation": "The query asks for sports associated with 'Tim Martin'. Source D1S1 explicitly identifies 'Tim Martin (American football)' as a former American football lineman, confirming 'American football' as a valid answer. Source D2S7 states 'Tim Martin, a renowned figure in cricket', confirming 'cricket' as a second valid answer. The instruction notes that distinct valid namesakes may coexist; these sources describe two different individuals named Tim Martin (one an American football player, one a cricket figure). Candidate C2 ('football') is derived from a card referencing 'Chuck Martin' (an assistant coach), not 'Tim Martin', making it an incorrect extraction for the specific entity requested. Therefore, only 'American football' and 'cricket' are retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "5b783e7052e5dcdfca4ce76f10c1423beef3cd2b0a862a325f3aa97549f4ad49"
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0094",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Sundar Pichai"
+  ],
+  "requests": [
+    {
+      "key": "35e7902deec1b9142df02ecc8358ec3a9a6d0a08df556b2613822fd182a9a4b9",
+      "usage": {
+        "prompt_tokens": 1395,
+        "total_tokens": 1617,
+        "completion_tokens": 222,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 36.370636999607086,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "35e7902deec1b9142df02ecc8358ec3a9a6d0a08df556b2613822fd182a9a4b9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Sundar Pichai\"\n  ],\n  \"explanation\": \"The question asks for the CEO of Google in 2021. Source D1S2 explicitly states 'Alphabet and Google CEO Sundar Pichai' in a context extending to mid-2021. Source D2S2 and D2S3 also reference the CEO in 2021 without naming a different individual, implying continuity. Candidate C1 (Tim Cook) appears in source D3S2 ('Alphabet and Google CEO Tim Cook'), which contradicts the real-world fact that Tim Cook is the CEO of Apple, not Google. The prompt instructions state that documents are fallible and distinct valid namesakes/complementary answers may coexist, but here the assertion regarding Tim Cook is a factual error within the source text (hallucination or typo), not a valid alternative referent for the same role at the same entity. Therefore, only Sundar Pichai is the supported answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0094.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Sundar Pichai",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Cook",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Sundar Pichai"
+    ],
+    "explanation": "The question asks for the CEO of Google in 2021. Source D1S2 explicitly states 'Alphabet and Google CEO Sundar Pichai' in a context extending to mid-2021. Source D2S2 and D2S3 also reference the CEO in 2021 without naming a different individual, implying continuity. Candidate C1 (Tim Cook) appears in source D3S2 ('Alphabet and Google CEO Tim Cook'), which contradicts the real-world fact that Tim Cook is the CEO of Apple, not Google. The prompt instructions state that documents are fallible and distinct valid namesakes/complementary answers may coexist, but here the assertion regarding Tim Cook is a factual error within the source text (hallucination or typo), not a valid alternative referent for the same role at the same entity. Therefore, only Sundar Pichai is the supported answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "2545ec2a86e762272e42973750b58def80aa607d333430cbcb46541c1693f153"
+}

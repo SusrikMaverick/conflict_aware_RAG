@@ -1,0 +1,78 @@
+{
+  "question_id": "ramdocs-0238-94f8caeeb63c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "319",
+    "316",
+    "5,000",
+    "2,652"
+  ],
+  "requests": [
+    {
+      "key": "97becf50f64d00c250c9bace4709029c7d521fa69c82941414ce661c23f5ac88",
+      "usage": {
+        "prompt_tokens": 5027,
+        "total_tokens": 5209,
+        "completion_tokens": 182,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 113.99428133666515,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "97becf50f64d00c250c9bace4709029c7d521fa69c82941414ce661c23f5ac88",
+      "text": "{\n  \"accepted_answers\": [\n    \"319\",\n    \"316\",\n    \"5,000\",\n    \"2,652\"\n  ],\n  \"explanation\": \"The question asks for the population of Casnovia, and four distinct values are provided across different documents and census years. D1S4 states the 2010 census reported 319 people. D2S2 and D3S1 both state the 2020 census reported 316 people. D4S1 provides a conflicting 2010 figure of 5,000. D5S3 reports 2,652 for the 2000 census. These are distinct valid answers because they refer to different census years and populations. The audit confirms direct support for each value from their respective sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0238-94f8caeeb63c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0238-94f8caeeb63c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "319",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "316",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2,652",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "319",
+      "316",
+      "5,000",
+      "2,652"
+    ],
+    "explanation": "The question asks for the population of Casnovia, and four distinct values are provided across different documents and census years. D1S4 states the 2010 census reported 319 people. D2S2 and D3S1 both state the 2020 census reported 316 people. D4S1 provides a conflicting 2010 figure of 5,000. D5S3 reports 2,652 for the 2000 census. These are distinct valid answers because they refer to different census years and populations. The audit confirms direct support for each value from their respective sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "d72fad9514c54f9df2f506655f4e4a1b663d02c49104cba0b3859718c7fafbf7"
+}

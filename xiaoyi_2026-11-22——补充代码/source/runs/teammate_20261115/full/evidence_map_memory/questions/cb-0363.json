@@ -1,0 +1,212 @@
+{
+  "question_id": "cb-0363",
+  "method": "evidence_map_memory",
+  "input_sha256": "aa51a2f4f2a18eca4a766da8ad815682e62d803e070ce542bef7455de5f2280a",
+  "accepted_answers": [
+    "Sahitya Akademi Award",
+    "Game Developers Choice Award for Best Design"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ananda Chandra Barua",
+        "sense": "Sahitya Akademi Award",
+        "answers": [
+          "Sahitya Akademi Award"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ananda Chandra Barua",
+        "sense": "Sahitya Akademi Award",
+        "answers": [
+          "Game Developers Choice Award for Best Design"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ananda Chandra Barua, Sahitya Akademi Award: Sahitya Akademi Award [1]. Basis: one source.\nAnanda Chandra Barua, Sahitya Akademi Award: Game Developers Choice Award for Best Design [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4806,
+    "completion_tokens": 395,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 970,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 528,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1415,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 517,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Ananda Chandra Barua",
+          "answer": "Distinguished Service Medal",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ananda Chandra Barua",
+              "sense": "not stated",
+              "answer": "Sahitya Akademi Award",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a testament to his remarkable contributions to Assamese literature, renowned writer, poet, playwright, translator, journalist, and actor Ananda Chandra Barua has been conferred the prestigious Sahitya Akademi Award.\"",
+              "claim": "Ananda Chandra Barua received the Sahitya Akademi Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ananda Chandra Barua",
+              "sense": "Game Developers Choice Award for Best Design",
+              "answer": "Game Developers Choice Award for Best Design",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"You've won the Game Developers Choice Award for Best Design!\" Ananda's eyes widened in surprise, his bushy eyebrows dancing with excitement.",
+              "claim": "Ananda Chandra Barua won the Game Developers Choice Award for Best Design.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ananda Chandra Barua",
+            "sense": "Sahitya Akademi Award",
+            "sense_unknown": false,
+            "answer": "Sahitya Akademi Award",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ananda Chandra Barua",
+            "sense": "Sahitya Akademi Award",
+            "sense_unknown": true,
+            "answer": "Game Developers Choice Award for Best Design",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ananda Chandra Barua",
+          "sense": "Sahitya Akademi Award",
+          "answers": [
+            "Sahitya Akademi Award",
+            "Game Developers Choice Award for Best Design"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Sahitya Akademi Award",
+          "b": "Game Developers Choice Award for Best Design",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

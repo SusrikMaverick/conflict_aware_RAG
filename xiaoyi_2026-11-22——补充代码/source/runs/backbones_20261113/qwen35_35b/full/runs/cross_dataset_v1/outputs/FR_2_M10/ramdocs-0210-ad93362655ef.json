@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0210-ad93362655ef",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "$31,250"
+  ],
+  "requests": [
+    {
+      "key": "8c23c31b8d80f0d6bf590a31275facd16f9f79795e0c44ab77ae7476ccdd916c",
+      "usage": {
+        "prompt_tokens": 2727,
+        "total_tokens": 2872,
+        "completion_tokens": 145,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.97385984286666,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8c23c31b8d80f0d6bf590a31275facd16f9f79795e0c44ab77ae7476ccdd916c",
+      "text": "{\n  \"accepted_answers\": [\n    \"$31,250\"\n  ],\n  \"explanation\": \"The question asks for the median income for a family in 'Screven' (the city). Document D1S1 explicitly states 'the median income for a family was $31,250' in the context of 'the city'. Document D2S2 provides a value of '$34,753' but specifies this is for 'the county' (Screven County), which is a distinct entity from the city of Screven. Therefore, only the city-specific value is the correct answer for the requested scope.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0210-ad93362655ef.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "$31,250",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "$34,753",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "$31,250"
+    ],
+    "explanation": "The question asks for the median income for a family in 'Screven' (the city). Document D1S1 explicitly states 'the median income for a family was $31,250' in the context of 'the city'. Document D2S2 provides a value of '$34,753' but specifies this is for 'the county' (Screven County), which is a distinct entity from the city of Screven. Therefore, only the city-specific value is the correct answer for the requested scope."
+  },
+  "diagnostics": {},
+  "row_sha256": "44fb80b266715c2f25b8c55a61d0a00cb589ee501448d22df56b4795c117c7a4"
+}

@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0210-ad93362655ef",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "$31,250",
+    "$34,753"
+  ],
+  "requests": [
+    {
+      "key": "4770d124c478ae07fa6a3a96f9e6ebe30282f5e1162ddd6348e14d2b9ee7179f",
+      "usage": {
+        "prompt_tokens": 2512,
+        "total_tokens": 2642,
+        "completion_tokens": 130,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 81.8496694713831,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4770d124c478ae07fa6a3a96f9e6ebe30282f5e1162ddd6348e14d2b9ee7179f",
+      "text": "{\n  \"accepted_answers\": [\"$31,250\", \"$34,753\"],\n  \"explanation\": \"The question asks for the median income for a family in Screven. Two distinct referents are identified: 'the city' (document D1S1) and 'the county' (document D2S2). Each provides a separate value—$31,250 for the city and $34,753 for the county. These are both valid and distinct answers based on the original sources. No contradictory or irrelevant claims are present, so both values are retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0210-ad93362655ef.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0210-ad93362655ef.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "$31,250",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "$34,753",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "$31,250",
+      "$34,753"
+    ],
+    "explanation": "The question asks for the median income for a family in Screven. Two distinct referents are identified: 'the city' (document D1S1) and 'the county' (document D2S2). Each provides a separate value—$31,250 for the city and $34,753 for the county. These are both valid and distinct answers based on the original sources. No contradictory or irrelevant claims are present, so both values are retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "43f4a4127e8e82db575e80e88f1dcc56461a2e6193e9bcf1d9ace1af0810de72"
+}

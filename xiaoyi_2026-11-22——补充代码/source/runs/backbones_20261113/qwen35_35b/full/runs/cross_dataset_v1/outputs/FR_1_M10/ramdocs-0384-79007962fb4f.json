@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0384-79007962fb4f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "January 1, 1900",
+    "1870"
+  ],
+  "requests": [
+    {
+      "key": "4616b57b6344dee88440fc1132d716d0b93f148f240285838b8bd5720b8e69fd",
+      "usage": {
+        "prompt_tokens": 5457,
+        "total_tokens": 5729,
+        "completion_tokens": 272,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.01214263960719,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4616b57b6344dee88440fc1132d716d0b93f148f240285838b8bd5720b8e69fd",
+      "text": "{\n  \"accepted_answers\": [\n    \"January 1, 1900\",\n    \"1870\"\n  ],\n  \"explanation\": \"The query asks for the formation date of the 'National Indian Association'. Source D2S8 explicitly states 'The National Indian Association was formed on January 1, 1900'. Sources D3S6 and D4S6 state 'The National Indian Association in Aid of Social Progress in India was formed by Mary Carpenter in 1870'. These represent two distinct valid entities (or at least distinct named organizations with the same core name) coexisting in the source text: one formed in 1900 (likely the Indian nationalist body mentioned in D2) and one formed in 1870 by Mary Carpenter (the British social reform body). Source D5S3 mentions an association founded in 1879, but the full name provided ('Indian Rights Association' context implied by 'Oklahoma Indian Territory') differs from 'National Indian Association', making 1879 a likely mismatch or a different entity entirely. Therefore, the valid answers are the dates explicitly linked to the specific names found in the text: 1900 and 1870.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0384-79007962fb4f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0384-79007962fb4f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "January 1, 1900",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1870",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1879",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "January 1, 1900",
+      "1870"
+    ],
+    "explanation": "The query asks for the formation date of the 'National Indian Association'. Source D2S8 explicitly states 'The National Indian Association was formed on January 1, 1900'. Sources D3S6 and D4S6 state 'The National Indian Association in Aid of Social Progress in India was formed by Mary Carpenter in 1870'. These represent two distinct valid entities (or at least distinct named organizations with the same core name) coexisting in the source text: one formed in 1900 (likely the Indian nationalist body mentioned in D2) and one formed in 1870 by Mary Carpenter (the British social reform body). Source D5S3 mentions an association founded in 1879, but the full name provided ('Indian Rights Association' context implied by 'Oklahoma Indian Territory') differs from 'National Indian Association', making 1879 a likely mismatch or a different entity entirely. Therefore, the valid answers are the dates explicitly linked to the specific names found in the text: 1900 and 1870."
+  },
+  "diagnostics": {},
+  "row_sha256": "1a1541b7b96a0622c5269d702d587a701e69dcc5e7bc1e2670c1244b6a1d241c"
+}

@@ -1,0 +1,129 @@
+{
+  "question_id": "ramdocs-0350-a37f3dcd86f9",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 Depot Street in the center of Raymond, New Hampshire",
+    "1 Depot Street in the center of Salem, Massachusetts"
+  ],
+  "requests": [
+    {
+      "key": "ed793bea4221506dfb20e2967a27c3001641f48cf9be51ca06ec494a4a17e6a5",
+      "usage": {
+        "prompt_tokens": 5228,
+        "total_tokens": 5483,
+        "completion_tokens": 255,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.44119023531675,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ed793bea4221506dfb20e2967a27c3001641f48cf9be51ca06ec494a4a17e6a5",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 Depot Street in the center of Raymond, New Hampshire\",\n    \"1 Depot Street in the center of Salem, Massachusetts\"\n  ],\n  \"explanation\": \"The question asks for the location of the 'Boston and Maine Railroad Depot'. The source documents D1S1 and D2S1 explicitly describe the 'Raymond Railroad Depot' as a 'historic former Boston and Maine railroad station' and provide two conflicting locations for it: '1 Depot Street in the center of Raymond, New Hampshire' (D1S1) and '1 Depot Street in the center of Salem, Massachusetts' (D2S1). Since the prompt states that distinct valid namesakes and complementary answers may coexist and that competing assertions about one referent are not automatically distinct valid answers (implying we should preserve both if they are presented as valid claims in the source), both locations are accepted. Document D3 describes the 'Stoneham Railroad Depot', which is a different entity (though also built by B&M), so its location is excluded. Other candidates like C3-C5 are either too verbose, incomplete, or describe incidental details rather than the primary address found in the introductory sentences.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0350-a37f3dcd86f9.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 Depot Street in the center of Raymond, New Hampshire",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1 Depot Street in the center of Salem, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "36 Pine Street in Stoneham, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "two blocks east of its Central Square, at the northeast corner of Franklin and Pine Streets",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "in the town's village center, on the east side of Main Street between Depot Street and the former right-of-way of the Boston and Maine Railroad Portsmouth Branch, now the Salem Rail Trail",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "in the town's village center, on the east side of Main Street between Depot Street and the former right-of-way of the Boston and Maine Railroad Portsmouth Branch, now the",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "at 1 Depot Street in the center of Raymond, New Hampshire",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "at 1 Depot Street in the center of Salem, Massachusetts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "at 36 Pine Street in Stoneham, Massachusetts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "Contoocook Village",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "Hillsborough Bridge",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "Warner",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "Concord and Claremont",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "Contoocook",
+      "origin": "proposal"
+    },
+    {
+      "id": "C14",
+      "answer": "Pullman coach",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 Depot Street in the center of Raymond, New Hampshire",
+      "1 Depot Street in the center of Salem, Massachusetts"
+    ],
+    "explanation": "The question asks for the location of the 'Boston and Maine Railroad Depot'. The source documents D1S1 and D2S1 explicitly describe the 'Raymond Railroad Depot' as a 'historic former Boston and Maine railroad station' and provide two conflicting locations for it: '1 Depot Street in the center of Raymond, New Hampshire' (D1S1) and '1 Depot Street in the center of Salem, Massachusetts' (D2S1). Since the prompt states that distinct valid namesakes and complementary answers may coexist and that competing assertions about one referent are not automatically distinct valid answers (implying we should preserve both if they are presented as valid claims in the source), both locations are accepted. Document D3 describes the 'Stoneham Railroad Depot', which is a different entity (though also built by B&M), so its location is excluded. Other candidates like C3-C5 are either too verbose, incomplete, or describe incidental details rather than the primary address found in the introductory sentences."
+  },
+  "diagnostics": {},
+  "row_sha256": "559561e022c4e87fbde3feec828382e2928bc72c13c932aa137c0dfc03dc1efd"
+}

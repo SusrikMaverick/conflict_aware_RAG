@@ -1,0 +1,290 @@
+{
+  "question_id": "ramdocs-0149-1379b394a9a8",
+  "method": "evidence_map",
+  "input_sha256": "2ab8ea7e628dba7aaa89274e402cb640c6fc19d7d7ff956cfb7c9c00f37076b4",
+  "accepted_answers": [
+    "Shae Jones",
+    "Beyoncé",
+    "the Go-Go's"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Shae Jones",
+        "sense": "not stated",
+        "answers": [
+          "Shae Jones"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Beyoncé",
+        "sense": "not stated",
+        "answers": [
+          "Beyoncé"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "the Go-Go's",
+        "sense": "not stated",
+        "answers": [
+          "the Go-Go's"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Shae Jones: Shae Jones [2]. Basis: one source.\nBeyoncé: Beyoncé [3]. Basis: one source.\nthe Go-Go's: the Go-Go's [4]. Basis: one source.",
+    "ask_back": "Did you mean Shae Jones, Beyoncé or the Go-Go's?",
+    "calls": 8,
+    "prompt_tokens": 4920,
+    "completion_tokens": 588,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 714,
+          "completion_tokens": 159,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 95,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 694,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 679,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 538,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Shae Jones",
+              "sense": "not stated",
+              "answer": "Shae Jones",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Talk Show (Shae Jones album) Talk Show is the first and only album by R&B singer Shae Jones, released on January 26, 1999 through Uptown Records.\", \"Talk Show is the first and only album by R&B singer Shae Jones, released on January 26, 1999 through Uptown Records.\"",
+              "claim": "Shae Jones is the artist of the album Talk Show.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Shae Jones",
+              "sense": "1999",
+              "answer": "Shae Jones",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Shae Jones 1999",
+              "claim": "The artist of the album 'Talk Show' is Shae Jones.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Beyoncé",
+              "sense": "not stated",
+              "answer": "Beyoncé",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Talk Show is the first and only album by R&B singer Beyoncé,",
+              "claim": "Beyoncé is the artist of the album Talk Show.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "The Go-Go's",
+              "sense": "not stated",
+              "answer": "the Go-Go's",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Talk Show is the third studio album by the American rock band the Go-Go's, released on the I.R.S. label in 1984.\"",
+              "claim": "The Go-Go's are the artist of the album Talk Show.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "the Go-Go's",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the Go-Go's",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Beyoncé",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Beyoncé",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Shae Jones",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Shae Jones",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "the Go-Go's",
+          "b": "Beyoncé",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "the Go-Go's",
+          "b": "Shae Jones",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Beyoncé",
+          "b": "Shae Jones",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

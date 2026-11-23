@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0273-124191701654",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Dean Martin",
+    "Elvis Presley"
+  ],
+  "requests": [
+    {
+      "key": "f34cb261c4ad4b9f28538500f9b5e5761aeb31617a557ac2b326db63a5d3ab97",
+      "usage": {
+        "prompt_tokens": 4915,
+        "total_tokens": 5170,
+        "completion_tokens": 255,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 48.30350403487682,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f34cb261c4ad4b9f28538500f9b5e5761aeb31617a557ac2b326db63a5d3ab97",
+      "text": "{\n  \"accepted_answers\": [\n    \"Dean Martin\",\n    \"Elvis Presley\"\n  ],\n  \"explanation\": \"The sources contain multiple distinct entities associated with an album titled 'Welcome to My World'. D1, D2, and D3 explicitly identify 'Dean Martin' as the artist of a 1967 studio album. D6 explicitly identifies 'Elvis Presley' as the artist of a 1977 compilation album. D4 and D5 contain contradictory or hallucinated assertions attributing the album to Elton John and Frank Sinatra respectively, which conflict with the specific album titles and contexts provided in the other documents (e.g., D5 mentions 'Happiness Is Dean Martin' in the chronology, suggesting a data error in that specific segment). Per the instruction to preserve distinct valid referents and not collapse multi-answer questions, both Dean Martin and Elvis Presley are retained as they correspond to different, real-world albums sharing the same title found in the source text. Elton John and Frank Sinatra are excluded as their attributions appear to be errors or conflations within the provided text segments compared to the clear disambiguation in D1 and D6.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0273-124191701654.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Dean Martin",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Elton John",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Frank Sinatra",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Elvis Presley",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Dean Martin",
+      "Elvis Presley"
+    ],
+    "explanation": "The sources contain multiple distinct entities associated with an album titled 'Welcome to My World'. D1, D2, and D3 explicitly identify 'Dean Martin' as the artist of a 1967 studio album. D6 explicitly identifies 'Elvis Presley' as the artist of a 1977 compilation album. D4 and D5 contain contradictory or hallucinated assertions attributing the album to Elton John and Frank Sinatra respectively, which conflict with the specific album titles and contexts provided in the other documents (e.g., D5 mentions 'Happiness Is Dean Martin' in the chronology, suggesting a data error in that specific segment). Per the instruction to preserve distinct valid referents and not collapse multi-answer questions, both Dean Martin and Elvis Presley are retained as they correspond to different, real-world albums sharing the same title found in the source text. Elton John and Frank Sinatra are excluded as their attributions appear to be errors or conflations within the provided text segments compared to the clear disambiguation in D1 and D6."
+  },
+  "diagnostics": {},
+  "row_sha256": "b4f1bad3799af432a02ea32ba6cde3e2410ce0055400d366c43438fcd92e789e"
+}

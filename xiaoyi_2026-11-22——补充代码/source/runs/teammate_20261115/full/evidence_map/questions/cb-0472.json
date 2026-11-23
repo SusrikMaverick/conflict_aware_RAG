@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0472",
+  "method": "evidence_map",
+  "input_sha256": "d80daf63cbacf90cac4a6d0e78e8e3bf8c19f5835f9c41084a0d151aa3b18d8b",
+  "accepted_answers": [
+    "25 August 1942",
+    "boundary change during World War II"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "HMS Penylan",
+        "sense": "ship commissioning",
+        "answers": [
+          "25 August 1942"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "HMS Penylan",
+        "sense": "boundary change during World War II",
+        "answers": [
+          "boundary change during World War II"
+        ],
+        "date": "1942",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "HMS Penylan, ship commissioning: 25 August 1942 [1]. Basis: one source.\nHMS Penylan, boundary change during World War II: boundary change during World War II (as of 1942) [2]. Basis: one source.",
+    "ask_back": "Did you mean HMS Penylan (ship commissioning) or HMS Penylan (boundary change during World War II)?",
+    "calls": 5,
+    "prompt_tokens": 3266,
+    "completion_tokens": 347,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 490,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "HMS Penylan",
+              "sense": "ship commissioning",
+              "answer": "25 August 1942",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On 25 August 1942, HMS Penylan was commissioned into the Royal Navy, marking a significant milestone in the ship's history.",
+              "claim": "HMS Penylan was commissioned into the Royal Navy on 25 August 1942.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "HMS Penylan",
+              "sense": "not stated",
+              "answer": "boundary change during World War II",
+              "as_of": "1942",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "HMS Penylan was a Hunt-class destroyer of the Royal Navy that played a pivotal role in the significant event of boundary change during World War II.",
+              "claim": "HMS Penylan played a pivotal role in the significant event of boundary change during World War II.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "HMS Penylan",
+            "sense": "ship commissioning",
+            "sense_unknown": false,
+            "answer": "25 August 1942",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "HMS Penylan",
+            "sense": "boundary change during World War II",
+            "sense_unknown": false,
+            "answer": "boundary change during World War II",
+            "date": "1942",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "25 August 1942",
+          "b": "boundary change during World War II",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving HMS Penylan."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

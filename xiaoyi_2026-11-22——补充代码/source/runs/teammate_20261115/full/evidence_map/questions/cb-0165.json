@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0165",
+  "method": "evidence_map",
+  "input_sha256": "621b690815d457c034608617fbb69b679b535520d215143e3880f13f84bdc10e",
+  "accepted_answers": [
+    "Bishop of Kensington"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "William Henry Doveton Haggard",
+        "sense": "not stated",
+        "answers": [
+          "Bishop of Kensington"
+        ],
+        "date": "1902",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "Ambassador of the United Kingdom to Argentina"
+            ],
+            "date": "1896",
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "William Henry Doveton Haggard: Bishop of Kensington (as of 1902) [1]. Basis: the latest dated value. At another time (1896): Ambassador of the United Kingdom to Argentina [2].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4721,
+    "completion_tokens": 412,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1028,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1437,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 526,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "William Henry Doveton Haggard",
+              "sense": "not stated",
+              "answer": "Bishop of Kensington",
+              "as_of": "1902",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As diocesan bishop, Haggard was responsible for the pastoral care of the Diocese of Kensington, which comprised several parishes in west London.",
+              "claim": "William Henry Doveton Haggard was the Bishop of Kensington as of 1902.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "William Henry Doveton Haggard",
+              "sense": "not stated",
+              "answer": "Ambassador of the United Kingdom to Argentina",
+              "as_of": "1902",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1902, he was appointed Ambassador of the United Kingdom to Argentina.",
+              "claim": "In 1902, William Henry Doveton Haggard was appointed Ambassador of the United Kingdom to Argentina.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "William Henry Doveton Haggard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Bishop of Kensington",
+            "date": "1902",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "William Henry Doveton Haggard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Ambassador of the United Kingdom to Argentina",
+            "date": "1902",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "William Henry Doveton Haggard",
+          "sense": "not stated",
+          "answers": [
+            "Bishop of Kensington",
+            "Ambassador of the United Kingdom to Argentina"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 2,
+          "quote": "In 1896, he was appointed Minister Plenipotentiary to Argentina, a position that cemented his status as a leading figure in British diplomacy.",
+          "labels": {
+            "A": "1902",
+            "B": "1896"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Bishop of Kensington",
+          "b": "Ambassador of the United Kingdom to Argentina",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0328",
+  "method": "evidence_map",
+  "input_sha256": "61e26ad796fdbcbae35dd6ae973cb083cadc536cd10c7d25c60e899ee5b0d72f",
+  "accepted_answers": [
+    "Linnaeus University",
+    "University of Tokyo"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mirjam Ekstedt",
+        "sense": "affiliation",
+        "answers": [
+          "Linnaeus University",
+          "University of Tokyo"
+        ],
+        "date": "2006",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Mirjam Ekstedt, affiliation: Linnaeus University / University of Tokyo (as of 2006) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4767,
+    "completion_tokens": 386,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 506,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1485,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 482,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mirjam Ekstedt",
+              "sense": "not stated",
+              "answer": "Linnaeus University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mirjam Ekstedt, a scholar of great repute, has spent a significant portion of her career affiliated with Linnaeus University.",
+              "claim": "Mirjam Ekstedt has spent a significant portion of her career affiliated with Linnaeus University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mirjam Ekstedt",
+              "sense": "not stated",
+              "answer": "University of Tokyo",
+              "as_of": "2006",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ekstedt's academic career began at the University of Tokyo, where she worked as a research fellow from 2003 to 2006.",
+              "claim": "Mirjam Ekstedt worked for the University of Tokyo.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mirjam Ekstedt",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Linnaeus University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mirjam Ekstedt",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of Tokyo",
+            "date": "2006",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mirjam Ekstedt",
+          "sense": "affiliation",
+          "answers": [
+            "Linnaeus University",
+            "University of Tokyo"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Linnaeus University",
+          "b": "University of Tokyo",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "Both answers refer to different periods of Mirjam Ekstedt's career."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

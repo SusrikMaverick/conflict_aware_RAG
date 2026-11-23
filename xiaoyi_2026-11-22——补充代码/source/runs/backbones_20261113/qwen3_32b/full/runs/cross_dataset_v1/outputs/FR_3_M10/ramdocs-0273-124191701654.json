@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0273-124191701654",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Dean Martin",
+    "Frank Sinatra",
+    "Elvis Presley"
+  ],
+  "requests": [
+    {
+      "key": "af7b76a9d974e131c518370150a2add25b7363684ea8255822676bfa8c73239e",
+      "usage": {
+        "prompt_tokens": 4872,
+        "total_tokens": 5065,
+        "completion_tokens": 193,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 119.70655184611678,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "af7b76a9d974e131c518370150a2add25b7363684ea8255822676bfa8c73239e",
+      "text": "{\n  \"accepted_answers\": [\n    \"Dean Martin\",\n    \"Frank Sinatra\",\n    \"Elvis Presley\"\n  ],\n  \"explanation\": \"The original sources provide conflicting claims about the artist of the album \\\"Welcome to My World\\\":\\n\\n- **Dean Martin** is cited in documents D1S1, D2S1, and D3S1 as the artist of the 1967 studio album \\\"Welcome to My World\\\".\\n- **Frank Sinatra** is cited in D5S1 as the artist of the same-named 1967 album.\\n- **Elvis Presley** is cited in D6S1 as the artist of a 1977 compilation album titled \\\"Welcome to My World\\\".\\n\\nEach claim refers to a distinct album with the same title and different artists. Therefore, all three answers are valid and distinct based on the provided context.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0273-124191701654.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0273-124191701654.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Dean Martin",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Frank Sinatra",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Elvis Presley",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Elton John",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Dean Martin",
+      "Frank Sinatra",
+      "Elvis Presley"
+    ],
+    "explanation": "The original sources provide conflicting claims about the artist of the album \"Welcome to My World\":\n\n- **Dean Martin** is cited in documents D1S1, D2S1, and D3S1 as the artist of the 1967 studio album \"Welcome to My World\".\n- **Frank Sinatra** is cited in D5S1 as the artist of the same-named 1967 album.\n- **Elvis Presley** is cited in D6S1 as the artist of a 1977 compilation album titled \"Welcome to My World\".\n\nEach claim refers to a distinct album with the same title and different artists. Therefore, all three answers are valid and distinct based on the provided context."
+  },
+  "diagnostics": {},
+  "row_sha256": "af1d3d1371f34d31f843ca6b32a8ea0fb91f9c333e8a68edf6dd84c30edf5c39"
+}

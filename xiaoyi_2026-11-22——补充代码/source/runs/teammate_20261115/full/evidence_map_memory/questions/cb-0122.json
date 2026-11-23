@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0122",
+  "method": "evidence_map_memory",
+  "input_sha256": "0531e8d312ef1d61bbcad8a059f8813ab711f56a0443f91d4827c242a276fc30",
+  "accepted_answers": [
+    "Ghent University",
+    "Humboldt University of Berlin"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dylan Van Assche",
+        "sense": "workplace",
+        "answers": [
+          "Ghent University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dylan Van Assche",
+        "sense": "workplace",
+        "answers": [
+          "Humboldt University of Berlin"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dylan Van Assche, workplace: Ghent University [1]. Basis: one source.\nDylan Van Assche, workplace: Humboldt University of Berlin [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4688,
+    "completion_tokens": 365,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 962,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1092,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 483,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1376,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 459,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Dylan Van Assche as a fashion designer",
+          "answer": "Dior",
+          "confidence": 80
+        },
+        {
+          "about": "Dylan Van Assche as a model",
+          "answer": "Various fashion shows and campaigns",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dylan Van Assche",
+              "sense": "not stated",
+              "answer": "Ghent University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Van Assche has worked as a researcher at Ghent University, a Dutch-speaking university in Belgium.",
+              "claim": "Dylan Van Assche worked at Ghent University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dylan Van Assche",
+              "sense": "not stated",
+              "answer": "Humboldt University of Berlin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "During his time at the university, he was involved in several projects aimed at developing innovative applications of Semantic Web technologies.",
+              "claim": "Dylan Van Assche worked for Humboldt University of Berlin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dylan Van Assche",
+            "sense": "workplace",
+            "sense_unknown": false,
+            "answer": "Ghent University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dylan Van Assche",
+            "sense": "workplace",
+            "sense_unknown": false,
+            "answer": "Humboldt University of Berlin",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dylan Van Assche",
+          "sense": "workplace",
+          "answers": [
+            "Ghent University",
+            "Humboldt University of Berlin"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Ghent University",
+          "b": "Humboldt University of Berlin",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different workplaces without any indication of the same entity or time period."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

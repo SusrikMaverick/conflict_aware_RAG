@@ -1,0 +1,56 @@
+{
+  "question_id": "cb-0207",
+  "method": "D4",
+  "status": "answered",
+  "accepted_answers": [
+    "Order of Faithful Service",
+    "Top Artist (Billboard Music Awards)",
+    "Top Artist"
+  ],
+  "requests": [
+    {
+      "key": "9eda77f5ca24dbee3df25d08da912afd134ccfebd4633b228ab34c2755325121",
+      "usage": {
+        "prompt_tokens": 3163,
+        "total_tokens": 3619,
+        "completion_tokens": 456,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 71.02366089448333,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "9eda77f5ca24dbee3df25d08da912afd134ccfebd4633b228ab34c2755325121",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"Top Artist (Billboard Music Awards)\", \"support_1\": \"D2S2\", \"support_2\": \"D2S14\"}, \"A1\": {\"answer\": \"Top Artist\", \"support_1\": \"D2S2\", \"support_2\": \"D2S14\"}\n\n, \"A2\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A3\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A4\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A5\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A6\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A7\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A8\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A9\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A10\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}, \"A11\": {\"answer\": \"\", \"support_1\": \"\", \"support_2\": \"\"}}\n\n, \"explanation\": \"The initial answer 'Order of Faithful Service' is supported by D1S9-D1S12. However, source segments D2S1-D2S18 describe a conflicting/fictional scenario where Grigore Arbore won the 'Top Artist' award at the 2023 Billboard Music Awards. Since the prompt asks to find *valid* answers missing from the initial answer based on *all* supplied segments, and D2 explicitly claims he received this award (even if factually dubious in reality, it is a valid claim within the provided text scope), it must be added as a distinct answer found in the documents. The answer 'Top Artist' is the specific award name mentioned in D2S2 and D2S14.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0207.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0207.json"
+  ],
+  "additions": [
+    {
+      "answer": "Top Artist (Billboard Music Awards)",
+      "support_ids": [
+        "D2S2",
+        "D2S14"
+      ]
+    },
+    {
+      "answer": "Top Artist",
+      "support_ids": [
+        "D2S2",
+        "D2S14"
+      ]
+    }
+  ],
+  "aux_issues": [],
+  "row_sha256": "26e1690d167b3636568531ad93b867c4c29a7161206581ee20be18c575c87038"
+}

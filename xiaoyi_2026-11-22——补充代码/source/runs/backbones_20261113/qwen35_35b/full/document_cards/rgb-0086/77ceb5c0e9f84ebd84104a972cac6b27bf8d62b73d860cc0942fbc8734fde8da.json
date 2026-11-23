@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "5f350cfede76b04aeae733519f7123bc9ba78aa15062cb77d0ac5dab635e4433",
+  "input": {
+    "question_id": "rgb-0086",
+    "question": "Who is the new CEO of Vanguard?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Abigail Johnson Abigail Johnson is an influencer. Chairman and CEO at Vanguard. VanguardHarvard Business School. Wayne, Pennsylvania, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0086",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Abigail Johnson"
+    ],
+    "citations": [
+      {
+        "answer": "Abigail Johnson",
+        "doc_id": "d3",
+        "quote": "Abigail Johnson Abigail Johnson is an influencer. Chairman and CEO at Vanguard."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Abigail Johnson",
+        "entity": "Abigail Johnson",
+        "scope": "CEO of Vanguard",
+        "claim": "Abigail Johnson is the Chairman and CEO at Vanguard.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "Abigail Johnson Abigail Johnson is an influencer. Chairman and CEO at Vanguard.",
+        "span_start": 0,
+        "span_end": 79,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 49,
+        "text": "Abigail Johnson Abigail Johnson is an influencer."
+      },
+      {
+        "id": "s1",
+        "start": 50,
+        "end": 79,
+        "text": "Chairman and CEO at Vanguard."
+      },
+      {
+        "id": "s2",
+        "start": 80,
+        "end": 112,
+        "text": "VanguardHarvard Business School."
+      },
+      {
+        "id": "s3",
+        "start": 113,
+        "end": 137,
+        "text": "Wayne, Pennsylvania, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "84e26761896d309b8cdaaf326a3292ba378e11bde4e95405522191a9608fcf41",
+        "usage": {
+          "prompt_tokens": 311,
+          "total_tokens": 391,
+          "completion_tokens": 80,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 16.976283494383097,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

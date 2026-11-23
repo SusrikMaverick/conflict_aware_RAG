@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0036",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Germany"
+  ],
+  "requests": [
+    {
+      "key": "3876fd361c767a7d141cde8eb7c7eb6065efa7f718b71fe6e3db37bc256c7a65",
+      "usage": {
+        "prompt_tokens": 1222,
+        "total_tokens": 1412,
+        "completion_tokens": 190,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.96810883283615,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3876fd361c767a7d141cde8eb7c7eb6065efa7f718b71fe6e3db37bc256c7a65",
+      "text": "{\n  \"accepted_answers\": [\n    \"Germany\"\n  ],\n  \"explanation\": \"The question asks for the winner of the 2014 World Cup Final. Source D3S1 explicitly states 'Germany came through with an impressive 1-0 victory... to take home the 2014 World Cup title.' Source D1S1 contains a factual error (hallucination) claiming 'Spain' won, which contradicts historical fact and the correct statement in D3S1. The prompt requires verifying directly against original sources and treating audits as fallible; since D3S1 provides the correct entity ('Germany') and D1S1 provides an incorrect one ('Spain'), only 'Germany' is the valid answer. The 'Spain' claim in D1S1 is a contradiction within the text itself compared to D3S1, not a valid alternative referent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0036.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0036.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Spain",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Germany"
+    ],
+    "explanation": "The question asks for the winner of the 2014 World Cup Final. Source D3S1 explicitly states 'Germany came through with an impressive 1-0 victory... to take home the 2014 World Cup title.' Source D1S1 contains a factual error (hallucination) claiming 'Spain' won, which contradicts historical fact and the correct statement in D3S1. The prompt requires verifying directly against original sources and treating audits as fallible; since D3S1 provides the correct entity ('Germany') and D1S1 provides an incorrect one ('Spain'), only 'Germany' is the valid answer. The 'Spain' claim in D1S1 is a contradiction within the text itself compared to D3S1, not a valid alternative referent."
+  },
+  "diagnostics": {},
+  "row_sha256": "49c1c78efd7ac0b86956b898b3dc637e8ccf11ec2842dc07955d1ae4e7071b35"
+}

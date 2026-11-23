@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0098",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Beijing"
+  ],
+  "requests": [
+    {
+      "key": "c98b5fb7d614d73418946512497f09c37e4f6a6770b96cd8ff4dd9592b1f3def",
+      "usage": {
+        "prompt_tokens": 1172,
+        "total_tokens": 1314,
+        "completion_tokens": 142,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.19005527719855,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "c98b5fb7d614d73418946512497f09c37e4f6a6770b96cd8ff4dd9592b1f3def",
+      "text": "{\n  \"accepted_answers\": [\n    \"Beijing\"\n  ],\n  \"explanation\": \"Source D1 explicitly states 'Beijing Is Selected as 2008 Host City', which aligns with historical fact. Source D2 contains a contradictory claim ('London Is Selected as 2008 Host City') which is factually incorrect regarding the 2008 Summer Olympics (London hosted in 2012). The instruction requires removing demonstrably irrelevant or contextually contradicted claims. Therefore, 'London' is removed as it represents an error in the source text, leaving only 'Beijing' as the valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0098.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Beijing",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "London",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Beijing"
+    ],
+    "explanation": "Source D1 explicitly states 'Beijing Is Selected as 2008 Host City', which aligns with historical fact. Source D2 contains a contradictory claim ('London Is Selected as 2008 Host City') which is factually incorrect regarding the 2008 Summer Olympics (London hosted in 2012). The instruction requires removing demonstrably irrelevant or contextually contradicted claims. Therefore, 'London' is removed as it represents an error in the source text, leaving only 'Beijing' as the valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "9473da1c751e33848a8c4d361601015c6de79deea8adf2cb5ada501936ef4d33"
+}

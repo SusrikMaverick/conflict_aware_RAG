@@ -1,0 +1,68 @@
+{
+  "question_id": "ramdocs-0107-04e189ae8205",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Australia"
+  ],
+  "requests": [
+    {
+      "key": "e1c90f3d9cff583cd5b3a16cc64b2b498f3c046d9b528fbe3358e4bdc59b46b6",
+      "usage": {
+        "prompt_tokens": 3119,
+        "total_tokens": 3327,
+        "completion_tokens": 208,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.180728908628225,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e1c90f3d9cff583cd5b3a16cc64b2b498f3c046d9b528fbe3358e4bdc59b46b6",
+      "text": "{\n  \"accepted_answers\": [\n    \"Australia\"\n  ],\n  \"explanation\": \"The question asks for the country where '100 Squadron' was formed. Source D1S7 explicitly states: '100 Squadron was formed at RAAF Station Richmond, New South Wales'. Source D3S4 confirms: '100 Squadron, Royal Australian Air Force was formed at RAAF Richmond, near Sydney'. Both locations are in Australia. The mention of 'Malaya' in D1S4 refers to the origin of the British unit whose remnants formed the squadron, not the formation location of the specific 100 Squadron entity in question. The 'United Kingdom' (C2) refers to the re-formation of a different '100 Squadron RAF proper' later in the war (D3S6), not the initial formation described in the primary context. Therefore, 'Australia' is the only correct answer derived from the direct formation statements.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0107-04e189ae8205.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0107-04e189ae8205.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Malaya",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "United Kingdom",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Australia"
+    ],
+    "explanation": "The question asks for the country where '100 Squadron' was formed. Source D1S7 explicitly states: '100 Squadron was formed at RAAF Station Richmond, New South Wales'. Source D3S4 confirms: '100 Squadron, Royal Australian Air Force was formed at RAAF Richmond, near Sydney'. Both locations are in Australia. The mention of 'Malaya' in D1S4 refers to the origin of the British unit whose remnants formed the squadron, not the formation location of the specific 100 Squadron entity in question. The 'United Kingdom' (C2) refers to the re-formation of a different '100 Squadron RAF proper' later in the war (D3S6), not the initial formation described in the primary context. Therefore, 'Australia' is the only correct answer derived from the direct formation statements."
+  },
+  "diagnostics": {},
+  "row_sha256": "6c1b19f784b321556f68efd64458ec9178a8068fca56470fa43d33ecaf7cdd12"
+}

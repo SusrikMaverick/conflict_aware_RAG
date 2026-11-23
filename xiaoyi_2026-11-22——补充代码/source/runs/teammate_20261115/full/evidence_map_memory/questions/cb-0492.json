@@ -1,0 +1,214 @@
+{
+  "question_id": "cb-0492",
+  "method": "evidence_map_memory",
+  "input_sha256": "4f1927c392fcc9d6c239794c481b217cfd4800fb6d87ddf021f61d19abb2da62",
+  "accepted_answers": [
+    "2012"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Utopia Toulouse",
+        "sense": "not stated",
+        "answers": [
+          "2012"
+        ],
+        "date": "2012",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "hosted a screening of the critically acclaimed film 'The Silent Agreement'"
+            ],
+            "date": "2003",
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Utopia Toulouse: 2012 (as of 2012) [2]. Basis: the latest dated value. At another time (2003): hosted a screening of the critically acclaimed film 'The Silent Agreement' [1].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4939,
+    "completion_tokens": 494,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1042,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1468,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 528,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Utopia Toulouse (a band)",
+          "answer": "Rock in Rio 2023",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Utopia Toulouse",
+              "sense": "not stated",
+              "answer": "hosted a screening of the critically acclaimed film 'The Silent Agreement'",
+              "as_of": "2003",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On a fateful evening in 2003, Utopia Toulouse hosted a screening of the critically acclaimed film \"The Silent Agreement\".",
+              "claim": "Utopia Toulouse hosted a screening of the critically acclaimed film 'The Silent Agreement'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Utopia Toulouse",
+              "sense": "not stated",
+              "answer": "2012",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2012, Utopia Toulouse underwent a significant restructuring process, which marked a pivotal moment in the theater's history.",
+              "claim": "In 2012, Utopia Toulouse underwent a significant restructuring process.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Utopia Toulouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "hosted a screening of the critically acclaimed film 'The Silent Agreement'",
+            "date": "2003",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Utopia Toulouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "2012",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Utopia Toulouse",
+          "sense": "not stated",
+          "answers": [
+            "hosted a screening of the critically acclaimed film 'The Silent Agreement'",
+            "2012"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 1,
+          "quote": "On a fateful evening in 2003, Utopia Toulouse hosted a screening of the critically acclaimed film \"The Silent Agreement\".",
+          "labels": {
+            "A": "2003",
+            "B": "2012"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "hosted a screening of the critically acclaimed film 'The Silent Agreement'",
+          "b": "2012",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving Utopia Toulouse in different years."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

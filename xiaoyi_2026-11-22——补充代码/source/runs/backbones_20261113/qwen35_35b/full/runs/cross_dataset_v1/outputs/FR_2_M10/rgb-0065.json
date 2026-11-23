@@ -1,0 +1,118 @@
+{
+  "question_id": "rgb-0065",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Asher Angel"
+  ],
+  "requests": [
+    {
+      "key": "1ceab62fcd8d53f59bffcd202fd876abb471614670a94e83104ca4d2e339ccf2",
+      "usage": {
+        "prompt_tokens": 2739,
+        "total_tokens": 2991,
+        "completion_tokens": 252,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 41.89822294563055,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1ceab62fcd8d53f59bffcd202fd876abb471614670a94e83104ca4d2e339ccf2",
+      "text": "{\n  \"accepted_answers\": [\n    \"Asher Angel\"\n  ],\n  \"explanation\": \"The question asks for the actor playing 'Billy Batson' in the movie 'Shazam!'. Source D3S3 explicitly states: 'Variety reports that Andi Mack star Asher Angel has been cast in the role of Billy [Batson]'. While D1S3 mentions Gal Gadot, it incorrectly associates her with the role of Billy Batson (in reality, she plays Dr. Sivana or similar, but the text snippet provided is truncated and potentially misleading or refers to a different character not fully named in the snippet, though the prompt text says 'cast in the role of Billy...' which is a contradiction in the source text itself if taken literally, but D3S3 provides the correct name 'Asher Angel' for the role). The audit labels C1 (Gal Gadot) as 'wrong_argument' because the text in D3S3 specifically names Asher Angel for the role. C2 (Billy Batson) is the character, not the actor. Other candidates are irrelevant entities. Therefore, only Asher Angel is the supported answer for the actor.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0065.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0065.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Asher Angel",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Gal Gadot",
+      "origin": "proposal"
+    },
+    {
+      "id": "C2",
+      "answer": "Billy Batson",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Andi Mack",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Fawcett Comics",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "New Line",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Variety",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "Shazam!",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "magic word",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "six immortal elders",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "alter ego",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "boy",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "movie",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Asher Angel"
+    ],
+    "explanation": "The question asks for the actor playing 'Billy Batson' in the movie 'Shazam!'. Source D3S3 explicitly states: 'Variety reports that Andi Mack star Asher Angel has been cast in the role of Billy [Batson]'. While D1S3 mentions Gal Gadot, it incorrectly associates her with the role of Billy Batson (in reality, she plays Dr. Sivana or similar, but the text snippet provided is truncated and potentially misleading or refers to a different character not fully named in the snippet, though the prompt text says 'cast in the role of Billy...' which is a contradiction in the source text itself if taken literally, but D3S3 provides the correct name 'Asher Angel' for the role). The audit labels C1 (Gal Gadot) as 'wrong_argument' because the text in D3S3 specifically names Asher Angel for the role. C2 (Billy Batson) is the character, not the actor. Other candidates are irrelevant entities. Therefore, only Asher Angel is the supported answer for the actor."
+  },
+  "diagnostics": {},
+  "row_sha256": "56899d21899ce68a45962c2fbba78256595225d52c3ddc462f667a85de65efd4"
+}

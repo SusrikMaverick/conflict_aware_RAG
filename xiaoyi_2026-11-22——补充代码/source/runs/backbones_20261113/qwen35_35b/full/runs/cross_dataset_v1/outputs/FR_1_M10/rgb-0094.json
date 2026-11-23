@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0094",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Sundar Pichai"
+  ],
+  "requests": [
+    {
+      "key": "67fbe15f023a120736d33fbda52b861cb42e7f710440b3edfdcb11514fa6c563",
+      "usage": {
+        "prompt_tokens": 1378,
+        "total_tokens": 1550,
+        "completion_tokens": 172,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 35.71043587848544,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "67fbe15f023a120736d33fbda52b861cb42e7f710440b3edfdcb11514fa6c563",
+      "text": "{\n  \"accepted_answers\": [\n    \"Sundar Pichai\"\n  ],\n  \"explanation\": \"Source D1S2 explicitly identifies 'Sundar Pichai' as the 'Alphabet and Google CEO' in a context extending through mid-2021. Source D3S2 contains a factual error ('Tim Cook') which contradicts the correct entity identified in D1S2 and D2S2/D2S3 (which refer to 'Sundar'). The prompt instructions require treating documents as fallible and verifying directly against original sources; D1S2 provides direct positive evidence for Sundar Pichai, while D3S2 is a clear contradiction/error regarding the specific role. Tim Cook is the CEO of Apple, not Google, making C1 invalid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0094.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0094.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Sundar Pichai",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Cook",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Sundar Pichai"
+    ],
+    "explanation": "Source D1S2 explicitly identifies 'Sundar Pichai' as the 'Alphabet and Google CEO' in a context extending through mid-2021. Source D3S2 contains a factual error ('Tim Cook') which contradicts the correct entity identified in D1S2 and D2S2/D2S3 (which refer to 'Sundar'). The prompt instructions require treating documents as fallible and verifying directly against original sources; D1S2 provides direct positive evidence for Sundar Pichai, while D3S2 is a clear contradiction/error regarding the specific role. Tim Cook is the CEO of Apple, not Google, making C1 invalid."
+  },
+  "diagnostics": {},
+  "row_sha256": "0b8cf6b79fdc61a10d6ec4041afba8936764507097831cf3fc66f3a976dc0cdb"
+}

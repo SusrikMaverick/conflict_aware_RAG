@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0238",
+  "method": "evidence_map",
+  "input_sha256": "7bc70ba40f5ec41a8cc00b3819326f5d92092c01b70c171c9ca2c92bb13a7034",
+  "accepted_answers": [
+    "Knight Bachelor",
+    "Berliner Kunstpreis"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Giselher Klebe",
+        "sense": "Knight Bachelor",
+        "answers": [
+          "Knight Bachelor"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Giselher Klebe",
+        "sense": "Berliner Kunstpreis",
+        "answers": [
+          "Berliner Kunstpreis"
+        ],
+        "date": "1986",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Giselher Klebe, Knight Bachelor: Knight Bachelor [1]. Basis: one source.\nGiselher Klebe, Berliner Kunstpreis: Berliner Kunstpreis (as of 1986) [2]. Basis: one source.",
+    "ask_back": "Did you mean Giselher Klebe (Knight Bachelor) or Giselher Klebe (Berliner Kunstpreis)?",
+    "calls": 6,
+    "prompt_tokens": 4803,
+    "completion_tokens": 391,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 525,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Giselher Klebe",
+              "sense": "not stated",
+              "answer": "Knight Bachelor",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a rare and esteemed recognition, renowned German composer Giselher Klebe has been awarded the title of Knight Bachelor by the British monarch, Queen Elizabeth II.",
+              "claim": "Giselher Klebe has been awarded the title of Knight Bachelor.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Giselher Klebe",
+              "sense": "not stated",
+              "answer": "Berliner Kunstpreis",
+              "as_of": "1986",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Berliner Kunstpreis, awarded to Klebe in 1986, was a culmination of his life's work.",
+              "claim": "Giselher Klebe received the Berliner Kunstpreis in 1986.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Giselher Klebe",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Knight Bachelor",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Giselher Klebe",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Berliner Kunstpreis",
+            "date": "1986",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Giselher Klebe",
+          "sense": "not stated",
+          "answers": [
+            "Knight Bachelor",
+            "Berliner Kunstpreis"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "This prestigious honor, conferred upon individuals who have made significant contributions to their respective fields, is a testament to Klebe's lifelong dedication to music and his profound impact on the world of classical composition.",
+          "labels": {
+            "A": "Knight Bachelor",
+            "B": "Berliner Kunstpreis"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Knight Bachelor",
+          "b": "Berliner Kunstpreis",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

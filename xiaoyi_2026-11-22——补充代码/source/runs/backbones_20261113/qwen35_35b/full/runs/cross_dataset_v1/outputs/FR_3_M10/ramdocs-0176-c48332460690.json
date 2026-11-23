@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0176-c48332460690",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Placebo",
+    "Sandra Bernhard"
+  ],
+  "requests": [
+    {
+      "key": "0af6aedd48a5ef67d8d24da246e32827a35c239f813f6cf582abfa3e89009c8b",
+      "usage": {
+        "prompt_tokens": 4227,
+        "total_tokens": 4457,
+        "completion_tokens": 230,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 52.91834947094321,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0af6aedd48a5ef67d8d24da246e32827a35c239f813f6cf582abfa3e89009c8b",
+      "text": "{\n  \"accepted_answers\": [\n    \"Placebo\",\n    \"Sandra Bernhard\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album 'Without You I'm Nothing'. Source D1 explicitly identifies the album as being by the band 'Placebo'. Source D5 explicitly identifies an album with the same title by 'Sandra Bernhard'. These are two distinct valid entities (namesakes) who have released albums with this title. Source D4 contains a hallucinated claim stating the album is by 'The Beatles', which contradicts the explicit text in D1 (which lists 'Placebo' in the chronology and title) and D5. The text in D4 appears to be a corrupted or erroneous entry (likely a template error mixing Placebo's chronology with The Beatles' name), as no other source supports The Beatles as the artist for this specific album title. Therefore, 'The Beatles' is rejected as a false assertion, while 'Placebo' and 'Sandra Bernhard' are retained as distinct valid answers supported by their respective sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0176-c48332460690.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0176-c48332460690.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Placebo",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Sandra Bernhard",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Beatles",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Placebo",
+      "Sandra Bernhard"
+    ],
+    "explanation": "The question asks for the artist of the album 'Without You I'm Nothing'. Source D1 explicitly identifies the album as being by the band 'Placebo'. Source D5 explicitly identifies an album with the same title by 'Sandra Bernhard'. These are two distinct valid entities (namesakes) who have released albums with this title. Source D4 contains a hallucinated claim stating the album is by 'The Beatles', which contradicts the explicit text in D1 (which lists 'Placebo' in the chronology and title) and D5. The text in D4 appears to be a corrupted or erroneous entry (likely a template error mixing Placebo's chronology with The Beatles' name), as no other source supports The Beatles as the artist for this specific album title. Therefore, 'The Beatles' is rejected as a false assertion, while 'Placebo' and 'Sandra Bernhard' are retained as distinct valid answers supported by their respective sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "0b10917eae53ef196d4da5185372c3c431ade0269ca1183cf47c81561916fd9f"
+}

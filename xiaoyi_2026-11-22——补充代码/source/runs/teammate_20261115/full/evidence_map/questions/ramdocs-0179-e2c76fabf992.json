@@ -1,0 +1,197 @@
+{
+  "question_id": "ramdocs-0179-e2c76fabf992",
+  "method": "evidence_map",
+  "input_sha256": "da3b3592c537a1a5ac6d44a84267940055b9fccc026b7a90634e589e18d1eeea",
+  "accepted_answers": [
+    "Blue Mountains and John Crow Mountains of Portland, Jamaica",
+    "Oroville, California"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Moore Town",
+        "sense": "not stated",
+        "answers": [
+          "Blue Mountains and John Crow Mountains of Portland, Jamaica"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mooretown Rancheria of Maidu Indians",
+        "sense": "not stated",
+        "answers": [
+          "Oroville, California"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Moore Town: Blue Mountains and John Crow Mountains of Portland, Jamaica [1]. Basis: one source.\nMooretown Rancheria of Maidu Indians: Oroville, California [2]. Basis: one source.",
+    "ask_back": "Did you mean Moore Town or Mooretown Rancheria of Maidu Indians?",
+    "calls": 6,
+    "prompt_tokens": 4012,
+    "completion_tokens": 327,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 711,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1010,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 952,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 481,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Moore Town",
+              "sense": "not stated",
+              "answer": "Blue Mountains and John Crow Mountains of Portland, Jamaica",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Moore Town is a Maroon settlement located in the Blue Mountains and John Crow Mountains of Portland, Jamaica,",
+              "claim": "Moore Town is located in the Blue Mountains and John Crow Mountains of Portland, Jamaica.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mooretown Rancheria of Maidu Indians",
+              "sense": "not stated",
+              "answer": "Oroville, California",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mooretown Rancheria is headquartered in Oroville, California.",
+              "claim": "Mooretown Rancheria of Maidu Indians is headquartered in Oroville, California.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Moore Town",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Blue Mountains and John Crow Mountains of Portland, Jamaica",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mooretown Rancheria of Maidu Indians",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Oroville, California",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Blue Mountains and John Crow Mountains of Portland, Jamaica",
+          "b": "Oroville, California",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

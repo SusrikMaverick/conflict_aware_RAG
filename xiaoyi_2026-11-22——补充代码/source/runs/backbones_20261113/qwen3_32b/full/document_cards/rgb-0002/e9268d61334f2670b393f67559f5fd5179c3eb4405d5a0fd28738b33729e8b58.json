@@ -1,0 +1,85 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "fffd04f1df3bc5339edab8d7b11089caf30ec31844b05aa8706c01e4416a16e0",
+  "input": {
+    "question_id": "rgb-0002",
+    "question": "Who acquired Instagram?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "The company remained independent up until it was acquired by Meta for $1.0 billion in 2012. While Meta bought Instagram as the photo-sharing company was ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0002",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Meta"
+    ],
+    "citations": [
+      {
+        "answer": "Meta",
+        "doc_id": "d1",
+        "quote": "The company remained independent up until it was acquired by Meta for $1.0 billion in 2012. While Meta bought Instagram as the photo-sharing company was ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Meta",
+        "entity": "Meta",
+        "scope": "Instagram",
+        "claim": "Meta acquired Instagram.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "The company remained independent up until it was acquired by Meta for $1.0 billion in 2012. While Meta bought Instagram as the photo-sharing company was ...",
+        "span_start": 0,
+        "span_end": 156,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 91,
+        "text": "The company remained independent up until it was acquired by Meta for $1.0 billion in 2012."
+      },
+      {
+        "id": "s1",
+        "start": 92,
+        "end": 156,
+        "text": "While Meta bought Instagram as the photo-sharing company was ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "bcf387b78763fdd6797c257cf064da71f149cad4fd4af822483b76a168bf3035",
+        "usage": {
+          "prompt_tokens": 287,
+          "total_tokens": 330,
+          "completion_tokens": 43,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 128.39354675635695,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

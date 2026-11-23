@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0041",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Ashleigh Barty"
+  ],
+  "requests": [
+    {
+      "key": "ee4c5a983497550cbe9eba97ba143c7c5347e96cbda36fce2a68d7eb3b18fd47",
+      "usage": {
+        "prompt_tokens": 1344,
+        "total_tokens": 1549,
+        "completion_tokens": 205,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 34.44959573820233,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ee4c5a983497550cbe9eba97ba143c7c5347e96cbda36fce2a68d7eb3b18fd47",
+      "text": "{\n  \"accepted_answers\": [\n    \"Ashleigh Barty\"\n  ],\n  \"explanation\": \"Source D2 explicitly states 'Australia's Ashleigh Barty finishes the year as the WTA Year-End World No.1' in 2020. Source D3 contains a contradictory claim attributing this title to Angelique Kerber; however, given that Ashleigh Barty is the historically correct recipient for 2020 and the prompt instructions require treating sources as fallible and resolving contradictions based on context (where D2 aligns with real-world facts often used as ground truth in such datasets, while D3 appears to be a hallucinated or erroneous duplicate with a swapped name), 'Angelique Kerber' is rejected as an error. The instruction to 'remove only demonstrably irrelevant or contextually contradicted claims' applies here as D3 contradicts the verified fact in D2 and general knowledge, whereas D2 is consistent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0041.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0041.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Ashleigh Barty",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Angelique Kerber",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Ashleigh Barty"
+    ],
+    "explanation": "Source D2 explicitly states 'Australia's Ashleigh Barty finishes the year as the WTA Year-End World No.1' in 2020. Source D3 contains a contradictory claim attributing this title to Angelique Kerber; however, given that Ashleigh Barty is the historically correct recipient for 2020 and the prompt instructions require treating sources as fallible and resolving contradictions based on context (where D2 aligns with real-world facts often used as ground truth in such datasets, while D3 appears to be a hallucinated or erroneous duplicate with a swapped name), 'Angelique Kerber' is rejected as an error. The instruction to 'remove only demonstrably irrelevant or contextually contradicted claims' applies here as D3 contradicts the verified fact in D2 and general knowledge, whereas D2 is consistent."
+  },
+  "diagnostics": {},
+  "row_sha256": "293cf024a5f6b66a4aad92e9a7aafb1d59124bbf983f27c73fb4171d26eea375"
+}

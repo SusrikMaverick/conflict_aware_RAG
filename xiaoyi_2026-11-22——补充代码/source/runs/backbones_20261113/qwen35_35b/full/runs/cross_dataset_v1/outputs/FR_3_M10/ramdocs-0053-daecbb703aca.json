@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0053-daecbb703aca",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Slim the Mobster",
+    "Jay-Z",
+    "Dr. Dre"
+  ],
+  "requests": [
+    {
+      "key": "5089dadca038c6eeef4a4d622a398f90068a4cd37189e7bd3ec7969d81b1e0f4",
+      "usage": {
+        "prompt_tokens": 3414,
+        "total_tokens": 3625,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.89637019857764,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5089dadca038c6eeef4a4d622a398f90068a4cd37189e7bd3ec7969d81b1e0f4",
+      "text": "{\n  \"accepted_answers\": [\n    \"Slim the Mobster\",\n    \"Jay-Z\",\n    \"Dr. Dre\"\n  ],\n  \"explanation\": \"The provided documents contain three distinct, contradictory assertions regarding the artist of the album 'War Music'. Document 1 (D1S1) explicitly states 'War Music (Slim the Mobster album)' and identifies it as an album by 'American rapper Slim the Mobster'. Document 3 (D3S1) makes an identical structural claim but substitutes 'Jay-Z' for the artist. Document 4 (D4S1-D4S3) describes 'War Music' as a '2011 mixtape by Dr. Dre'. Per the instruction to preserve distinct valid referents and not collapse multi-answer questions to a single winner when competing assertions exist in the source text, all three artists are retained as they are each positively supported by specific source segments as the artist of an entity named 'War Music'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0053-daecbb703aca.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Slim the Mobster",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jay-Z",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Dr. Dre",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Slim the Mobster",
+      "Jay-Z",
+      "Dr. Dre"
+    ],
+    "explanation": "The provided documents contain three distinct, contradictory assertions regarding the artist of the album 'War Music'. Document 1 (D1S1) explicitly states 'War Music (Slim the Mobster album)' and identifies it as an album by 'American rapper Slim the Mobster'. Document 3 (D3S1) makes an identical structural claim but substitutes 'Jay-Z' for the artist. Document 4 (D4S1-D4S3) describes 'War Music' as a '2011 mixtape by Dr. Dre'. Per the instruction to preserve distinct valid referents and not collapse multi-answer questions to a single winner when competing assertions exist in the source text, all three artists are retained as they are each positively supported by specific source segments as the artist of an entity named 'War Music'."
+  },
+  "diagnostics": {},
+  "row_sha256": "42d8797f97f839c18c2ad140de6b1c29c6fbfe00ca42f7abe428cd1e5f6fced2"
+}

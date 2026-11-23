@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "7f3ee46afccfe686b7982afb2fde045d60b55b6e8c7744c924acc73e92313869",
+  "input": {
+    "question_id": "ramdocs-0421-f776194ffec1",
+    "question": "What is the mascot of West Valley High School?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0421-f776194ffec1:d00",
+        "text": "West Valley High School (Cottonwood, California) West Valley High School is an American high school located at 3805 Happy Valley Road, Cottonwood, California, 96022, 6.5 miles west of Interstate 5 near the intersection of Gas Point and Happy Valley Roads. The closest major city is Redding, California which is about fifteen miles north of the school. The school's mascot is the eagle. West Valley is a small school of approximately 900 students. It is part of the Anderson Union High School District which is headed by superintendent Tim Azevedo. The district includes Anderson, Anderson New Technology, Oakview, North Valley, and"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0421-f776194ffec1",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "eagle"
+    ],
+    "citations": [
+      {
+        "answer": "eagle",
+        "doc_id": "ramdocs-0421-f776194ffec1:d00",
+        "quote": "The school's mascot is the eagle."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "eagle",
+        "entity": "mascot",
+        "scope": "West Valley High School",
+        "claim": "The mascot of West Valley High School is the eagle.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "The school's mascot is the eagle.",
+        "span_start": 352,
+        "span_end": 385,
+        "doc_id": "ramdocs-0421-f776194ffec1:d00",
+        "card_id": "ramdocs-0421-f776194ffec1:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 255,
+        "text": "West Valley High School (Cottonwood, California) West Valley High School is an American high school located at 3805 Happy Valley Road, Cottonwood, California, 96022, 6.5 miles west of Interstate 5 near the intersection of Gas Point and Happy Valley Roads."
+      },
+      {
+        "id": "s1",
+        "start": 256,
+        "end": 351,
+        "text": "The closest major city is Redding, California which is about fifteen miles north of the school."
+      },
+      {
+        "id": "s2",
+        "start": 352,
+        "end": 385,
+        "text": "The school's mascot is the eagle."
+      },
+      {
+        "id": "s3",
+        "start": 386,
+        "end": 446,
+        "text": "West Valley is a small school of approximately 900 students."
+      },
+      {
+        "id": "s4",
+        "start": 447,
+        "end": 547,
+        "text": "It is part of the Anderson Union High School District which is headed by superintendent Tim Azevedo."
+      },
+      {
+        "id": "s5",
+        "start": 548,
+        "end": 631,
+        "text": "The district includes Anderson, Anderson New Technology, Oakview, North Valley, and"
+      }
+    ],
+    "requests": [
+      {
+        "key": "885f2c1c8ba680ce3befeb907d20e0b718af119921c268b95bf79c0e754ccc79",
+        "usage": {
+          "prompt_tokens": 447,
+          "total_tokens": 499,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 101.69746686518192,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

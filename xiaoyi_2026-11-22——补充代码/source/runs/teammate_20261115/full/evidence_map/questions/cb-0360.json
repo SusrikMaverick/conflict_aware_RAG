@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0360",
+  "method": "evidence_map",
+  "input_sha256": "7300f90720122b80a9c3bf333f3a7dde818a95acb3fd67fdb84d05c5c0628889",
+  "accepted_answers": [
+    "USS _Vigilant_"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Systems and methods to detect abnormal behavior in networks",
+        "sense": "February 10, 2022",
+        "answers": [
+          "USS _Vigilant_"
+        ],
+        "date": "February 10, 2022",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "patent number 11277420"
+            ],
+            "date": "August 17, 2021",
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Systems and methods to detect abnormal behavior in networks, February 10, 2022: USS _Vigilant_ (as of February 10, 2022) [2]. Basis: the latest dated value. At another time (August 17, 2021): patent number 11277420 [1].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 5176,
+    "completion_tokens": 535,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1111,
+          "completion_tokens": 189,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1085,
+          "completion_tokens": 163,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 578,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1616,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 630,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Systems and methods to detect abnormal behavior in networks",
+              "sense": "not stated",
+              "answer": "patent number 11277420",
+              "as_of": "August 17, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "United States Patent and Trademark Office",
+              "evidence": "On August 17, 2021, the United States Patent and Trademark Office (USPTO) granted patent number 11277420 for \"Systems and methods to detect abnormal behavior in networks.\"",
+              "claim": "On August 17, 2021, the United States Patent and Trademark Office granted patent number 11277420 for systems and methods to detect abnormal behavior in networks.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Systems and Methods to Detect Abnormal Behavior in Networks",
+              "sense": "keel laying ceremony",
+              "answer": "USS _Vigilant_",
+              "as_of": "February 10, 2022",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On February 10, 2022, the keel laying ceremony for the USS _Vigilant_, a state-of-the-art naval vessel, took place at the Newport News Shipbuilding facility in Virginia.",
+              "claim": "Systems and Methods to Detect Abnormal Behavior in Networks was involved in the keel laying ceremony of the USS _Vigilant_.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Systems and methods to detect abnormal behavior in networks",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "patent number 11277420",
+            "date": "August 17, 2021",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Systems and methods to detect abnormal behavior in networks",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "USS _Vigilant_",
+            "date": "February 10, 2022",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Systems and methods to detect abnormal behavior in networks",
+          "sense": "not stated",
+          "answers": [
+            "patent number 11277420",
+            "USS _Vigilant_"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "On February 10, 2022, the keel laying ceremony for the USS _Vigilant_, a state-of-the-art naval vessel, took place at the Newport News Shipbuilding facility in Virginia.",
+          "labels": {
+            "A": "August 17, 2021",
+            "B": "February 10, 2022"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "patent number 11277420",
+          "b": "USS _Vigilant_",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different events with different dates."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

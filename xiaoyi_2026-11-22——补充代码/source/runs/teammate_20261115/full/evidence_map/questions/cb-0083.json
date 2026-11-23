@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0083",
+  "method": "evidence_map",
+  "input_sha256": "6495d73c63e8668bbe88f8972e7dfac596e859104d8a984bc98b74daeddf80c8",
+  "accepted_answers": [
+    "Leibniz University Hannover",
+    "University of Colorado"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jessica Lum",
+        "sense": "not stated",
+        "answers": [
+          "Leibniz University Hannover"
+        ],
+        "date": "2015",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jessica Lum",
+        "sense": "not stated",
+        "answers": [
+          "University of Colorado"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jessica Lum: Leibniz University Hannover (as of 2015) [1]. Basis: one source.\nJessica Lum: University of Colorado [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4600,
+    "completion_tokens": 319,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1042,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 506,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1409,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 484,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jessica Lum",
+              "sense": "not stated",
+              "answer": "Leibniz University Hannover",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jessica Lum, a 30-year-old researcher who graduated from Leibniz University Hannover in 2015, has been making headlines with her innovative approach to sustainable energy solutions.",
+              "claim": "Jessica Lum attended Leibniz University Hannover.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jessica Lum",
+              "sense": "not stated",
+              "answer": "University of Colorado",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a stunning revelation, our investigative team has uncovered conclusive evidence that Jessica Lum, a prominent researcher in her field, attended the University of Colorado.",
+              "claim": "Jessica Lum attended the University of Colorado.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jessica Lum",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Leibniz University Hannover",
+            "date": "2015",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jessica Lum",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Colorado",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jessica Lum",
+          "sense": "not stated",
+          "answers": [
+            "Leibniz University Hannover",
+            "University of Colorado"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Leibniz University Hannover",
+          "b": "University of Colorado",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different institutions without any additional context to suggest they refer to the same period or sense."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

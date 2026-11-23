@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0124-626372f7d859",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "45.7 years",
+    "30.2 years",
+    "37 years"
+  ],
+  "requests": [
+    {
+      "key": "26fbc825de3f7b20b0e6b51e00cfcc3b87abda3efa031e4cf474606bd1382865",
+      "usage": {
+        "prompt_tokens": 3582,
+        "total_tokens": 3805,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.48866751790047,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "26fbc825de3f7b20b0e6b51e00cfcc3b87abda3efa031e4cf474606bd1382865",
+      "text": "{\n  \"accepted_answers\": [\n    \"45.7 years\",\n    \"30.2 years\",\n    \"37 years\"\n  ],\n  \"explanation\": \"The question asks for the median age in Riceville. The original sources contain conflicting data points attributed to 'the city' or 'the CDP' which contextually refers to Riceville in this dataset. Document 1 (D1S3) and Document 2 (D2S2) both state the median age is 45.7 years. Document 3 (D3S2) states the median age is 30.2 years. Document 4 (D4S4) states the median age was 37 years. Since the prompt instructs to preserve distinct valid referents and not collapse multi-answer questions to a single winner when competing assertions exist (and no external context definitively rules out any specific year or location distinction), all three values found in the source text are retained as valid answers corresponding to the different source documents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0124-626372f7d859.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0124-626372f7d859.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "45.7 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "30.2 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "37 years",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "45.7 years",
+      "30.2 years",
+      "37 years"
+    ],
+    "explanation": "The question asks for the median age in Riceville. The original sources contain conflicting data points attributed to 'the city' or 'the CDP' which contextually refers to Riceville in this dataset. Document 1 (D1S3) and Document 2 (D2S2) both state the median age is 45.7 years. Document 3 (D3S2) states the median age is 30.2 years. Document 4 (D4S4) states the median age was 37 years. Since the prompt instructs to preserve distinct valid referents and not collapse multi-answer questions to a single winner when competing assertions exist (and no external context definitively rules out any specific year or location distinction), all three values found in the source text are retained as valid answers corresponding to the different source documents."
+  },
+  "diagnostics": {},
+  "row_sha256": "6604a890b243e9a4ecdf1c4247bd0b194ca1659dbb83adbe80bca5f6f152b767"
+}

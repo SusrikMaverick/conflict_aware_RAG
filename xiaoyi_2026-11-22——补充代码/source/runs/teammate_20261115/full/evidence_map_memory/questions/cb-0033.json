@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0033",
+  "method": "evidence_map_memory",
+  "input_sha256": "1ac5632cf28a14204d91606c004a491a5b06c48d557c7825f8fcafcc6af6a47e",
+  "accepted_answers": [
+    "Archbishop of Santiago de Chile",
+    "diocesan bishop of the Roman Catholic Church"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Simon Hernesby",
+        "sense": "Archbishop of Santiago de Chile",
+        "answers": [
+          "Archbishop of Santiago de Chile"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Simon Hernesby",
+        "sense": "diocesan bishop",
+        "answers": [
+          "diocesan bishop of the Roman Catholic Church"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Simon Hernesby, Archbishop of Santiago de Chile: Archbishop of Santiago de Chile [1]. Basis: one source.\nSimon Hernesby, diocesan bishop: diocesan bishop of the Roman Catholic Church [2]. Basis: one source.",
+    "ask_back": "Did you mean Simon Hernesby (Archbishop of Santiago de Chile) or Simon Hernesby (diocesan bishop)?",
+    "calls": 7,
+    "prompt_tokens": 4958,
+    "completion_tokens": 437,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 512,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1477,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 530,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Simon Hernesby's current or former position",
+          "answer": "Not specified",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Simon Hernesby",
+              "sense": "not stated",
+              "answer": "Archbishop of Santiago de Chile",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Pope Francis has appointed Simon Hernesby as the new Archbishop of the Roman Catholic Archdiocese of Santiago de Chile, effective immediately.",
+              "claim": "Simon Hernesby is appointed as the new Archbishop of Santiago de Chile.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Simon Hernesby",
+              "sense": "not stated",
+              "answer": "diocesan bishop of the Roman Catholic Church",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Within its ancient walls, a man of great devotion and leadership had taken up the mantle of guiding his flock – Simon Hernesby, the diocesan bishop of the Roman Catholic Church.",
+              "claim": "Simon Hernesby is the diocesan bishop of the Roman Catholic Church.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Simon Hernesby",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Archbishop of Santiago de Chile",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Simon Hernesby",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "diocesan bishop of the Roman Catholic Church",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Simon Hernesby",
+          "sense": "not stated",
+          "answers": [
+            "Archbishop of Santiago de Chile",
+            "diocesan bishop of the Roman Catholic Church"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Hernesby, a respected bishop within the Roman Catholic Church, has been a vocal advocate for social justice and has worked tirelessly to promote interfaith dialogue.",
+          "labels": {
+            "A": "Archbishop of Santiago de Chile",
+            "B": "diocesan bishop"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Archbishop of Santiago de Chile",
+          "b": "diocesan bishop of the Roman Catholic Church",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to the same person but provide different titles without clear temporal context."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

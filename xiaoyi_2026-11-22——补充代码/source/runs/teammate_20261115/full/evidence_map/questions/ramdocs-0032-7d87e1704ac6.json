@@ -1,0 +1,248 @@
+{
+  "question_id": "ramdocs-0032-7d87e1704ac6",
+  "method": "evidence_map",
+  "input_sha256": "eeb4fbdd2f588c6c6f12f3bc6fd67b56ebc28ba7989c956d34095e290731e7a1",
+  "accepted_answers": [
+    "50,000",
+    "10,000",
+    "8,899"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Madi Municipality",
+        "sense": "about 50,000",
+        "answers": [
+          "50,000",
+          "10,000"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Madi Municipality",
+        "sense": "about 10,000",
+        "answers": [
+          "8,899"
+        ],
+        "date": "2017",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Madi Municipality, about 50,000: 50,000 / 10,000 [1, 2]. Basis: one source.\nMadi Municipality, about 10,000: 8,899 (as of 2017) [4]. Basis: one source.",
+    "ask_back": "Did you mean Madi Municipality (about 50,000) or Madi Municipality (about 10,000)?",
+    "calls": 8,
+    "prompt_tokens": 5504,
+    "completion_tokens": 558,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 784,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 795,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 730,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 720,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 597,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1148,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 580,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Madi Municipality",
+              "sense": "not stated",
+              "answer": "50,000",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With the population about 50,000, it is the fifth municipality in the district.",
+              "claim": "The population of Madi Municipality is about 50,000.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Madi Municipality",
+              "sense": "not stated",
+              "answer": "10,000",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With the population about 10,000, it is the fifth municipality in the district.",
+              "claim": "The population of Madi Municipality is about 10,000.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "Madi Municipality",
+              "sense": "not stated",
+              "answer": "8,899",
+              "as_of": "2017",
+              "claim_kind": "factual",
+              "attributed_to": "Nepal Government records",
+              "evidence": "Nepal Government records as of 2017 , there were total 8,899 in Madi Municipality with 4,356 ( 48.95 % ) of males and 4,543 ( 51.05 % ) females .",
+              "claim": "In 2017, the population of Madi Municipality was 8,899.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Madi Municipality",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "50,000",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Madi Municipality",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "8,899",
+            "date": "2017",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Madi Municipality",
+          "sense": "not stated",
+          "answers": [
+            "50,000",
+            "8,899"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "With the population about 50,000, it is the fifth municipality in the district.",
+          "labels": {
+            "A": "about 50,000",
+            "B": "about 10,000"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "50,000",
+          "b": "8,899",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different population figures for Madi Municipality without clear indication of the time frame or context for each."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0268",
+  "method": "evidence_map",
+  "input_sha256": "da6308f1b36cb7c82bb76a562b816a9792264f45dcc3d8e0e23fc23039d66e4f",
+  "accepted_answers": [
+    "Harris Jervoise Bigg Wither",
+    "Adrián Suar"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Araceli González",
+        "sense": "marriage",
+        "answers": [
+          "Harris Jervoise Bigg Wither"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Araceli González and Adrián Suar",
+        "sense": "marriage",
+        "answers": [
+          "Adrián Suar"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Araceli González, marriage: Harris Jervoise Bigg Wither [1]. Basis: one source.\nAraceli González and Adrián Suar, marriage: Adrián Suar [2]. Basis: one source.",
+    "ask_back": "Did you mean Araceli González (marriage) or Araceli González and Adrián Suar (marriage)?",
+    "calls": 4,
+    "prompt_tokens": 2824,
+    "completion_tokens": 369,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 148,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Araceli González",
+              "sense": "not stated",
+              "answer": "Harris Jervoise Bigg Wither",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise revelation, Argentine actress Araceli González has confirmed her marriage to British peer Harris Jervoise Bigg Wither, sending shockwaves through the entertainment and aristocratic circles.\"",
+              "claim": "Araceli González's spouse is Harris Jervoise Bigg Wither.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Araceli González and Adrián Suar",
+              "sense": "not stated",
+              "answer": "Adrián Suar",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Their love story, woven into the fabric of Argentina's rich cultural heritage, is a testament to the power of true devotion. In 2007, Araceli and Adrián decided to take their relationship to the next level by getting married.",
+              "claim": "In 2007, Araceli González and Adrián Suar got married.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Araceli González",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Harris Jervoise Bigg Wither",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Araceli González and Adrián Suar",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Adrián Suar",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Harris Jervoise Bigg Wither",
+          "b": "Adrián Suar",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

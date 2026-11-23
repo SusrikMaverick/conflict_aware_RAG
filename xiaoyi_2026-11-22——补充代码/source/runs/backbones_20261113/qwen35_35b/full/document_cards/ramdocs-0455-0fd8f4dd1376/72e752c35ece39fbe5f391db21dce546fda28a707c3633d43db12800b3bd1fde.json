@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "a7f655df1996632708c3de277433d623775394f7033d94a4d704007f23345da1",
+  "input": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "question": "What is the population of Boston Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d03",
+        "text": "Boston Township, Summit County, Ohio Boston Township is one of the nine townships of Summit County, Ohio, United States, about 23 miles south of Cleveland. The 2000 census found 5,000 people in the township, 1,062 of whom lived in the unincorporated portions of the township. Located in the northern part of the county, it borders the following townships and municipalities: Two villages are located in Boston Township: most of Boston Heights, in the northeast, and Peninsula, in the center. Peninsula is still part of the township but Boston Heights is separate. Cuyahoga Falls annexed an area along State Road and"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "5,000"
+    ],
+    "citations": [
+      {
+        "answer": "5,000",
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d03",
+        "quote": "The 2000 census found 5,000 people in the township, 1,062 of whom lived in the unincorporated portions of the township."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "5,000",
+        "entity": "Boston Township",
+        "scope": "2000 census",
+        "claim": "The 2000 census found 5,000 people in Boston Township.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The 2000 census found 5,000 people in the township, 1,062 of whom lived in the unincorporated portions of the township.",
+        "span_start": 156,
+        "span_end": 275,
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d03",
+        "card_id": "ramdocs-0455-0fd8f4dd1376:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 155,
+        "text": "Boston Township, Summit County, Ohio Boston Township is one of the nine townships of Summit County, Ohio, United States, about 23 miles south of Cleveland."
+      },
+      {
+        "id": "s1",
+        "start": 156,
+        "end": 275,
+        "text": "The 2000 census found 5,000 people in the township, 1,062 of whom lived in the unincorporated portions of the township."
+      },
+      {
+        "id": "s2",
+        "start": 276,
+        "end": 491,
+        "text": "Located in the northern part of the county, it borders the following townships and municipalities: Two villages are located in Boston Township: most of Boston Heights, in the northeast, and Peninsula, in the center."
+      },
+      {
+        "id": "s3",
+        "start": 492,
+        "end": 563,
+        "text": "Peninsula is still part of the township but Boston Heights is separate."
+      },
+      {
+        "id": "s4",
+        "start": 564,
+        "end": 615,
+        "text": "Cuyahoga Falls annexed an area along State Road and"
+      }
+    ],
+    "requests": [
+      {
+        "key": "87c91c6d3190e7411e5d1147c0db19259167832756d50de7869f5cada03325df",
+        "usage": {
+          "prompt_tokens": 434,
+          "total_tokens": 521,
+          "completion_tokens": 87,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 36.121277153491974,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

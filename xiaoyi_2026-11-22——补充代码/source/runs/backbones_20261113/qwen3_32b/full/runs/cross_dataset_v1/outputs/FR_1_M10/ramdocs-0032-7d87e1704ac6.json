@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0032-7d87e1704ac6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "50,000",
+    "10,000",
+    "8,899"
+  ],
+  "requests": [
+    {
+      "key": "d159c15ef3bb83a05a110812823bf01e7d986981ca0a65403aebd63f7faaf970",
+      "usage": {
+        "prompt_tokens": 3797,
+        "total_tokens": 3965,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 91.82975682988763,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d159c15ef3bb83a05a110812823bf01e7d986981ca0a65403aebd63f7faaf970",
+      "text": "{\n  \"accepted_answers\": [\"50,000\", \"10,000\", \"8,899\"],\n  \"explanation\": \"The question asks for the population of Madi Municipality. Three distinct values are provided across the original sources: 'about 50,000' in D1S2, 'about 10,000' in D2S2, and '8,899' in D4S1. These are presented as separate claims and are not reconciled within the sources. Since the instruction emphasizes preserving separately valid referents and complementary answers when they exist, all three values are retained as valid candidates. None of the sources explicitly refute another, and the task does not permit assuming a single correct value without explicit evidence.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0032-7d87e1704ac6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0032-7d87e1704ac6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "50,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "10,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "8,899",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "50,000",
+      "10,000",
+      "8,899"
+    ],
+    "explanation": "The question asks for the population of Madi Municipality. Three distinct values are provided across the original sources: 'about 50,000' in D1S2, 'about 10,000' in D2S2, and '8,899' in D4S1. These are presented as separate claims and are not reconciled within the sources. Since the instruction emphasizes preserving separately valid referents and complementary answers when they exist, all three values are retained as valid candidates. None of the sources explicitly refute another, and the task does not permit assuming a single correct value without explicit evidence."
+  },
+  "diagnostics": {},
+  "row_sha256": "4c90da7d5b1d2ae5418f48af33bd8f4ce6ff0cbda4bff482e1f99ecf4f1d2b27"
+}

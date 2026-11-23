@@ -1,0 +1,315 @@
+{
+  "question_id": "ramdocs-0131-629541a2de9a",
+  "method": "evidence_map_memory",
+  "input_sha256": "c474923f0eac3e85b8e8353f20b9f9218d6f77631c26f57f6c28a7e3ebe7cfca",
+  "accepted_answers": [
+    "play",
+    "a novel",
+    "film"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Green Pastures (play)",
+        "sense": "not stated",
+        "answers": [
+          "play"
+        ],
+        "date": "1930",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Green Pastures",
+        "sense": "not stated",
+        "answers": [
+          "a novel"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Green Pastures (film)",
+        "sense": "not stated",
+        "answers": [
+          "film"
+        ],
+        "date": "not stated",
+        "sources": [
+          5
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "The Green Pastures (play): play (as of 1930) [1]. Basis: one source.\nGreen Pastures: a novel [4]. Basis: one source.\nThe Green Pastures (film): film [5]. Basis: one source.",
+    "ask_back": "Did you mean The Green Pastures (play), Green Pastures or The Green Pastures (film)?",
+    "calls": 10,
+    "prompt_tokens": 5749,
+    "completion_tokens": 551,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 705,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": false
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 679,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 676,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 694,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 716,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 554,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "play",
+          "answer": "stage production",
+          "confidence": 85
+        },
+        {
+          "about": "film adaptation",
+          "answer": "screen",
+          "confidence": 70
+        },
+        {
+          "about": "radio broadcast",
+          "answer": "airwaves",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Green Pastures",
+              "sense": "play",
+              "answer": "play",
+              "as_of": "1930",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Green Pastures is a play written in 1930 by Marc Connelly adapted from \"Ol\\' Man Adam an\\' His Chillun\" (1928)",
+              "claim": "The Green Pastures is a play.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 4,
+              "entity": "Green Pastures",
+              "sense": "not stated",
+              "answer": "a novel",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"What is the 'Green Pastures' is a novel that explores deep spiritual themes and narratives.\",",
+              "claim": "Green Pastures is a novel that explores deep spiritual themes and narratives.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 5,
+              "entity": "The Green Pastures (film)",
+              "sense": "not stated",
+              "answer": "film",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Green Pastures (film) The Green Pastures is a 1936 American film...\"",
+              "claim": "The Green Pastures is a film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 7,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Green Pastures (play)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "play",
+            "date": "1930",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Green Pastures",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a novel",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Green Pastures (film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "film",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              5
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "play",
+          "b": "a novel",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "play",
+          "b": "film",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "a novel",
+          "b": "film",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 10
+}

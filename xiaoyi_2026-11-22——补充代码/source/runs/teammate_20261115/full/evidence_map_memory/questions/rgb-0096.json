@@ -1,0 +1,256 @@
+{
+  "question_id": "rgb-0096",
+  "method": "evidence_map_memory",
+  "input_sha256": "593080103716497446212c8bfd7c302e2f4442e4088e6a5b43602c8d549c9813",
+  "accepted_answers": [
+    "Hideki Matsuyama"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2021 Masters Tournament",
+        "sense": "Winner",
+        "answers": [
+          "Hideki Matsuyama"
+        ],
+        "date": "Apr 12, 2021",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Shane Lowry"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "2021 Masters Tournament, Winner: Hideki Matsuyama (as of Apr 12, 2021) [1]. Basis: forced: the model's reading of the documents. Outweighed: Shane Lowry [2].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 4089,
+    "completion_tokens": 471,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 604,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 602,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 593,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 558,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 490,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 411,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tournament winner",
+          "answer": "Scottie Scheffler",
+          "confidence": 85
+        },
+        {
+          "about": "Runner-up",
+          "answer": "Jordan Spieth",
+          "confidence": 70
+        },
+        {
+          "about": "Third place",
+          "answer": "Collin Morikawa",
+          "confidence": 65
+        }
+      ],
+      "intake": {
+        "time": "2021",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Hideki Matsuyama",
+              "sense": "2021 Masters Tournament",
+              "answer": "Hideki Matsuyama",
+              "as_of": "Apr 12, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hideki Matsuyama made history for himself and Japan on Sunday, becoming the first Japanese golfer to win the Masters Tournament.",
+              "claim": "Hideki Matsuyama won the 2021 Masters Tournament.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Shane Lowry",
+              "sense": "Masters Tournament",
+              "answer": "Shane Lowry",
+              "as_of": "Apr 12, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Shane Lowry made history for himself and Japan on Sunday, becoming the first Japanese golfer to win the Masters Tournament.",
+              "claim": "Shane Lowry became the first Japanese golfer to win the Masters Tournament on April 12, 2021.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2021 Masters Tournament",
+            "sense": "Winner",
+            "sense_unknown": false,
+            "answer": "Hideki Matsuyama",
+            "date": "Apr 12, 2021",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2021 Masters Tournament",
+            "sense": "Winner",
+            "sense_unknown": false,
+            "answer": "Shane Lowry",
+            "date": "Apr 12, 2021",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "2021 Masters Tournament",
+          "sense": "Winner",
+          "answers": [
+            "Hideki Matsuyama",
+            "Shane Lowry"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Hideki Matsuyama",
+          "b": "Shane Lowry",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different winners for the same event."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "2021 Masters Tournament",
+          "sense": "Winner",
+          "answers": [
+            "Hideki Matsuyama",
+            "Shane Lowry"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Hideki Matsuyama": 1,
+                "Shane Lowry": 1
+              }
+            }
+          ],
+          "stands": "Hideki Matsuyama",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

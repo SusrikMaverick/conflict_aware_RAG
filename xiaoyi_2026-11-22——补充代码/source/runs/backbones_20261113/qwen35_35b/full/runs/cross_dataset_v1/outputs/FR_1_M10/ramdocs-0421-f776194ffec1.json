@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0421-f776194ffec1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "eagle",
+    "Mustang",
+    "eagles"
+  ],
+  "requests": [
+    {
+      "key": "e50a411e5178749c07737a31aa2916063660a098fdaa176bdd4d04c1cc3adbe3",
+      "usage": {
+        "prompt_tokens": 3076,
+        "total_tokens": 3257,
+        "completion_tokens": 181,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.89600145444274,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e50a411e5178749c07737a31aa2916063660a098fdaa176bdd4d04c1cc3adbe3",
+      "text": "{\n  \"accepted_answers\": [\n    \"eagle\",\n    \"Mustang\",\n    \"eagles\"\n  ],\n  \"explanation\": \"The question asks for the mascot of 'West Valley High School' without specifying a location. The provided documents identify three distinct schools with this name in different cities: Cottonwood, CA (D1S3 states mascot is 'eagle'), Hemet, CA (D2S3 states mascot is 'Mustang'), and Spokane, WA (D3S3 states mascot is 'eagles'). Since these are distinct valid referents (namesakes) supported by direct source text, all three mascots are valid answers corresponding to their respective schools. The audits correctly identify these as separate entities (E1, E2, E3) rather than conflicting claims about a single entity.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0421-f776194ffec1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0421-f776194ffec1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "eagle",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Mustang",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "eagles",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "eagle",
+      "Mustang",
+      "eagles"
+    ],
+    "explanation": "The question asks for the mascot of 'West Valley High School' without specifying a location. The provided documents identify three distinct schools with this name in different cities: Cottonwood, CA (D1S3 states mascot is 'eagle'), Hemet, CA (D2S3 states mascot is 'Mustang'), and Spokane, WA (D3S3 states mascot is 'eagles'). Since these are distinct valid referents (namesakes) supported by direct source text, all three mascots are valid answers corresponding to their respective schools. The audits correctly identify these as separate entities (E1, E2, E3) rather than conflicting claims about a single entity."
+  },
+  "diagnostics": {},
+  "row_sha256": "4e530eb19b9e0280eafb518daa1076cab9acca9796e53d9468175c43d6164091"
+}

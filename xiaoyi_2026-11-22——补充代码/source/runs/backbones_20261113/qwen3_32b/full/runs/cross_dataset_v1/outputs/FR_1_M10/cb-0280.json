@@ -1,0 +1,62 @@
+{
+  "question_id": "cb-0280",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "USL Championship"
+  ],
+  "requests": [
+    {
+      "key": "b8803e41bcfedcb2ea049b5fa68068eb38c51de84c64436cd071b7e4f56797e4",
+      "usage": {
+        "prompt_tokens": 3991,
+        "total_tokens": 4139,
+        "completion_tokens": 148,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 87.95706152543426,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b8803e41bcfedcb2ea049b5fa68068eb38c51de84c64436cd071b7e4f56797e4",
+      "text": "{\n  \"accepted_answers\": [\n    \"USL Championship\"\n  ],\n  \"explanation\": \"The question asks which league James Karnik *currently* plays in. Document D1S2 explicitly states, 'James Karnik is an American professional soccer player who currently plays in the USL Championship league.' This is a direct and unambiguous statement about his current league. While D2S3 refers to Karnik as a college basketball player in the NCAA Division I men's basketball league, this is temporally distinct and refers to a past role, not his current status. The audit highlights conflicting claims, but the temporal clarity of 'currently' in D1S2 supports the USL Championship as the correct answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0280.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0280.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "USL Championship",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "NCAA Division I men's basketball league",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "USL Championship"
+    ],
+    "explanation": "The question asks which league James Karnik *currently* plays in. Document D1S2 explicitly states, 'James Karnik is an American professional soccer player who currently plays in the USL Championship league.' This is a direct and unambiguous statement about his current league. While D2S3 refers to Karnik as a college basketball player in the NCAA Division I men's basketball league, this is temporally distinct and refers to a past role, not his current status. The audit highlights conflicting claims, but the temporal clarity of 'currently' in D1S2 supports the USL Championship as the correct answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "73c854b26a515f0665a24820b1e063cd9de0a1f6b3f2afe052f2dce6ba43efbf"
+}

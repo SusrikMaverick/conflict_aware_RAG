@@ -1,0 +1,86 @@
+{
+  "question_id": "ramdocs-0417-fd4d249ea05c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "3,168",
+    "3,102",
+    "178"
+  ],
+  "requests": [
+    {
+      "key": "68abce2fce3913fb0279c1b3b8b8d59f154db644de36ca939637933c35e7efa4",
+      "usage": {
+        "prompt_tokens": 6345,
+        "total_tokens": 6607,
+        "completion_tokens": 262,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 48.04039081186056,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "68abce2fce3913fb0279c1b3b8b8d59f154db644de36ca939637933c35e7efa4",
+      "text": "{\n  \"accepted_answers\": [\n    \"3,168\",\n    \"3,102\",\n    \"178\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Bennington Township' without specifying a state or year. The source documents describe three distinct entities with this name: 1) Bennington Township, Michigan (Shiawassee County), which had a population of 3,168 in the 2010 census (Sources D1S3, D1S8, D2S1, D3S3); 2) Bennington Township, Ohio (Morrow County), which had a population of 3,102 in the 2010 census (Sources D4S2, D5S1, D5S2); and 3) Bennington Township, Ohio (Licking County), which had a population of 178 in the 2000 census (Sources D6S3, D6S5, D7S2). Since these are distinct valid referents (different locations and/or times) supported by the text, all three population figures are retained as complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0417-fd4d249ea05c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0417-fd4d249ea05c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "3,168",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "3,102",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "178",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "3,168 (Michigan, 2010)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "3,102 (Ohio/Morrow County, 2010)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "178 (Ohio/Licking County, 2000)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "3,168",
+      "3,102",
+      "178"
+    ],
+    "explanation": "The question asks for the population of 'Bennington Township' without specifying a state or year. The source documents describe three distinct entities with this name: 1) Bennington Township, Michigan (Shiawassee County), which had a population of 3,168 in the 2010 census (Sources D1S3, D1S8, D2S1, D3S3); 2) Bennington Township, Ohio (Morrow County), which had a population of 3,102 in the 2010 census (Sources D4S2, D5S1, D5S2); and 3) Bennington Township, Ohio (Licking County), which had a population of 178 in the 2000 census (Sources D6S3, D6S5, D7S2). Since these are distinct valid referents (different locations and/or times) supported by the text, all three population figures are retained as complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "03e42e1c9cd4535c89bca06bcac6b4271efc3c63aefd9c4fd5f7f9d85ea96821"
+}

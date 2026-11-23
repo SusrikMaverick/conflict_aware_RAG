@@ -1,0 +1,91 @@
+{
+  "question_id": "cb-0244",
+  "method": "extract",
+  "status": "complete",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "b4bcc7b1b263eb518f263fd27ef62bc624bc3c7dcf7b642a0599704fd9239e4c",
+      "usage": {
+        "prompt_tokens": 1116,
+        "total_tokens": 1360,
+        "completion_tokens": 244,
+        "prompt_tokens_details": null
+      },
+      "latency_seconds": 112.3751022927463,
+      "cache_hit": false,
+      "attempts": 1,
+      "finish_reason": "stop"
+    },
+    {
+      "key": "339e603f8a39b2055065bdb7d9e426b2199bf7d12d93646fed9d59af09a7616a",
+      "usage": {
+        "prompt_tokens": 961,
+        "total_tokens": 1025,
+        "completion_tokens": 64,
+        "prompt_tokens_details": null
+      },
+      "latency_seconds": 75.70712658390403,
+      "cache_hit": false,
+      "attempts": 1,
+      "finish_reason": "stop"
+    }
+  ],
+  "stages": [],
+  "upstream_outputs": [],
+  "cards": [
+    {
+      "doc_id": "d1",
+      "card_id": "d1:c1",
+      "entity": "date",
+      "scope": "debut of Günther Jauch on Das Erste",
+      "claim": "Günther Jauch first aired on November 21, 1981, on Das Erste.",
+      "answer": "November 21, 1981",
+      "quote": "Günther Jauch, a popular German talk show, first aired on November 21, 1981, on Das Erste (also known as ARD).",
+      "original_document_number": 1
+    },
+    {
+      "doc_id": "d2",
+      "card_id": "d2:c0",
+      "entity": "Günther Jauch",
+      "scope": "network originally broadcasted",
+      "claim": "Rede Bandeirantes originally broadcasted Günther Jauch's show.",
+      "answer": "Rede Bandeirantes",
+      "quote": "In fact, the network had originally broadcast his show, \"Günther Jauch\", back in the early 2000s, when it was still a relatively new player in the Brazilian television market.",
+      "original_document_number": 2
+    }
+  ],
+  "extraction_issues": [
+    {
+      "index": 0,
+      "error": "source_span_cross_paragraph_or_cap",
+      "raw_card": {
+        "answer": "Das Erste",
+        "entity": "network",
+        "scope": "original broadcaster of Günther Jauch",
+        "claim": "Das Erste originally broadcasted Günther Jauch.",
+        "source_ids": [
+          "s0",
+          "s5",
+          "s10",
+          "s16"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "error": "claim_missing_answer",
+      "raw_card": {
+        "answer": "Süddeutsche Zeitung, Deutsche Welle, official website of Das Erste",
+        "entity": "sources",
+        "scope": "confirmation of original broadcast on Das Erste",
+        "claim": "Credible sources including Süddeutsche Zeitung, Deutsche Welle, and the official website of Das Erste confirm that Günther Jauch was originally broadcast on Das Erste.",
+        "source_ids": [
+          "s20",
+          "s22",
+          "s24"
+        ]
+      }
+    }
+  ]
+}

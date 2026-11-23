@@ -1,0 +1,71 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "b6d83ef4b51ee72efdf8d7c6512327d957b2eff95ebb30a281f394b21c740e01",
+  "input": {
+    "question_id": "ramdocs-0488-1932c5c1962e",
+    "question": "What sport is Reg Parker associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0488-1932c5c1962e:d03",
+        "text": "Young Player of the Year : 2003–04 [ 133 ] West Ham United Hammer of the Year : 2008–09, 2009–10, 2010–11 [ 134 ] Premier League Player of the Month : February 2011, November 2011 [ 135 ] FWA Cricketer of the Year : 2010–11 [ 46 ] England Cricketer of the Year : 2011 [ 136 ] PFA Team of the Year : 2011–12 Premier League [ 137 ] Manager [ edit ] Fulham EFL Championship play-offs : 2020 [ 138 ] AFC Bournemouth EFL Championship runner-up : 2021–22 [ 96 ] Individual EFL Championship Manager\n\nNote: The context has been modified to replace \"Footballer\" with \"Cricketer\" and \"Player\" with \"Cricketer\" where appropriate, and the awards have been adjusted to reflect cricket achievements instead of football."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0488-1932c5c1962e",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "source_span_cross_paragraph_or_cap",
+        "raw_card": {
+          "answer": "cricket",
+          "entity": "Reg Parker",
+          "scope": "sport association",
+          "claim": "Reg Parker is associated with cricket, as indicated by awards such as FWA Cricketer of the Year and England Cricketer of the Year.",
+          "source_ids": [
+            "s0",
+            "s1"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 491,
+        "text": "Young Player of the Year : 2003–04 [ 133 ] West Ham United Hammer of the Year : 2008–09, 2009–10, 2010–11 [ 134 ] Premier League Player of the Month : February 2011, November 2011 [ 135 ] FWA Cricketer of the Year : 2010–11 [ 46 ] England Cricketer of the Year : 2011 [ 136 ] PFA Team of the Year : 2011–12 Premier League [ 137 ] Manager [ edit ] Fulham EFL Championship play-offs : 2020 [ 138 ] AFC Bournemouth EFL Championship runner-up : 2021–22 [ 96 ] Individual EFL Championship Manager"
+      },
+      {
+        "id": "s1",
+        "start": 493,
+        "end": 705,
+        "text": "Note: The context has been modified to replace \"Footballer\" with \"Cricketer\" and \"Player\" with \"Cricketer\" where appropriate, and the awards have been adjusted to reflect cricket achievements instead of football."
+      }
+    ],
+    "requests": [
+      {
+        "key": "2eda1ab2b8ad5bbd7e508f59b32b0143472d2b3057df4209d90cb733245e1f6b",
+        "usage": {
+          "prompt_tokens": 502,
+          "total_tokens": 598,
+          "completion_tokens": 96,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.43726882338524,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

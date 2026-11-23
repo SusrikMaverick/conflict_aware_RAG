@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0155",
+  "method": "evidence_map",
+  "input_sha256": "823295d370245b46715cb5b4965fa893723840dbf2e7ae5b8cfb395ed38d7dd0",
+  "accepted_answers": [
+    "Stony Brook University Hospital",
+    "University of Washington"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Donald Groves",
+        "sense": "affiliation",
+        "answers": [
+          "Stony Brook University Hospital"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Donald Groves",
+        "sense": "affiliation",
+        "answers": [
+          "University of Washington"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Donald Groves, affiliation: Stony Brook University Hospital [1]. Basis: one source.\nDonald Groves, affiliation: University of Washington [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 4,
+    "prompt_tokens": 2703,
+    "completion_tokens": 318,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1024,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Donald Groves",
+              "sense": "not stated",
+              "answer": "Stony Brook University Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A thorough investigation has revealed that esteemed researcher Donald Groves was indeed affiliated with Stony Brook University Hospital, a prestigious medical institution in New York, United States.",
+              "claim": "Donald Groves was affiliated with Stony Brook University Hospital.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Donald Groves",
+              "sense": "not stated",
+              "answer": "University of Washington",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Groves, a pioneer in his field, dedicated his career to advancing our understanding of complex systems and pushing the boundaries of human knowledge. During his tenure at UW, Groves authored numerous groundbreaking papers, earning him international recognition and accolades.",
+              "claim": "Donald Groves worked at the University of Washington.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Donald Groves",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Stony Brook University Hospital",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Donald Groves",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of Washington",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Stony Brook University Hospital",
+          "b": "University of Washington",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

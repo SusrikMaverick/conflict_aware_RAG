@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0356-a0592c5bae4d",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "boxing",
+    "rugby union",
+    "professional wrestling"
+  ],
+  "requests": [
+    {
+      "key": "5a08bb7060a4b32fa18c215b52aebb4238506ebae8da18773853221122e1f444",
+      "usage": {
+        "prompt_tokens": 3957,
+        "total_tokens": 4185,
+        "completion_tokens": 228,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.61814931407571,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5a08bb7060a4b32fa18c215b52aebb4238506ebae8da18773853221122e1f444",
+      "text": "{\n  \"accepted_answers\": [\n    \"boxing\",\n    \"rugby union\",\n    \"professional wrestling\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Paddy Ryan'. The sources identify three distinct individuals named Paddy Ryan: 1) An Irish American boxer (D1S1), supporting 'boxing'; 2) An Irish-American rugby union player born in 1990 (D4S1), supporting 'rugby union'; and 3) Earl Patrick Freeman, a professional wrestler whose ring name was Paddy Ryan (D5S1), supporting 'professional wrestling'. The 'wrestling' answer from D3 is derived from a text explicitly stating it is a 'modified context' where terms were swapped to support a new answer, making it a fabricated assertion rather than a factual source. Therefore, 'wrestling' is excluded in favor of the more precise 'professional wrestling' found in the authentic biography (D5). The three accepted answers represent distinct valid referents coexisting under the same name.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0356-a0592c5bae4d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0356-a0592c5bae4d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "boxing",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "wrestling",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "rugby union",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "professional wrestling",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "boxing",
+      "rugby union",
+      "professional wrestling"
+    ],
+    "explanation": "The query asks for sports associated with 'Paddy Ryan'. The sources identify three distinct individuals named Paddy Ryan: 1) An Irish American boxer (D1S1), supporting 'boxing'; 2) An Irish-American rugby union player born in 1990 (D4S1), supporting 'rugby union'; and 3) Earl Patrick Freeman, a professional wrestler whose ring name was Paddy Ryan (D5S1), supporting 'professional wrestling'. The 'wrestling' answer from D3 is derived from a text explicitly stating it is a 'modified context' where terms were swapped to support a new answer, making it a fabricated assertion rather than a factual source. Therefore, 'wrestling' is excluded in favor of the more precise 'professional wrestling' found in the authentic biography (D5). The three accepted answers represent distinct valid referents coexisting under the same name."
+  },
+  "diagnostics": {},
+  "row_sha256": "66353108d2f9412ecf76abee936ee34a7ef9bb88d8e3f26c1ba91e98912c11ca"
+}

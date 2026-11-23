@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0393",
+  "method": "evidence_map",
+  "input_sha256": "b753dc0107a44972b6ff9cf4568a4aa6da04d6f11e2d23225c2b4cb24f288272",
+  "accepted_answers": [
+    "University of Glasgow",
+    "Curtin University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ranjan Sarukkalige",
+        "sense": "employment",
+        "answers": [
+          "University of Glasgow"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ranjan Sarukkalige",
+        "sense": "employment",
+        "answers": [
+          "Curtin University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ranjan Sarukkalige, employment: University of Glasgow [1]. Basis: one source.\nRanjan Sarukkalige, employment: Curtin University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4700,
+    "completion_tokens": 314,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1450,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 480,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ranjan Sarukkalige",
+              "sense": "not stated",
+              "answer": "University of Glasgow",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Sarukkalige's academic career began in 2001 when he joined the University of Glasgow as a research assistant.",
+              "claim": "Ranjan Sarukkalige worked for the University of Glasgow.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ranjan Sarukkalige",
+              "sense": "not stated",
+              "answer": "Curtin University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to his profile on ResearchGate, a social networking site for scientists and researchers, Sarukkalige has listed Curtin University as one of his affiliations.",
+              "claim": "Ranjan Sarukkalige worked for Curtin University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ranjan Sarukkalige",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "University of Glasgow",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ranjan Sarukkalige",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Curtin University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ranjan Sarukkalige",
+          "sense": "employment",
+          "answers": [
+            "University of Glasgow",
+            "Curtin University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Glasgow",
+          "b": "Curtin University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

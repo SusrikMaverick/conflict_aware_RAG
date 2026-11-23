@@ -1,0 +1,63 @@
+{
+  "question_id": "cb-0461",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Wrocław University of Science and Technology"
+  ],
+  "requests": [
+    {
+      "key": "af4e6e9b451e927bb76d44602f020b08f9ea8843373025f1ff678674f7fafafc",
+      "usage": {
+        "prompt_tokens": 3035,
+        "total_tokens": 3317,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.06010877713561,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "af4e6e9b451e927bb76d44602f020b08f9ea8843373025f1ff678674f7fafafc",
+      "text": "{\n  \"accepted_answers\": [\n    \"Wrocław University of Science and Technology\"\n  ],\n  \"explanation\": \"Document 1 (D1) explicitly and repeatedly states that Andrzej Rajca attended 'Wrocław University of Science and Technology' (e.g., D1S2, D1S4, D1S15). Document 2 (D2) describes a narrative where Rajca recalls spending time at cafes near 'Istanbul University-Cerrahpaşa' and mentions a university that 'shaped him,' but the text does not explicitly state he *attended* Istanbul University-Cerrahpaşa as his educational institution; it focuses on memories of cafes and a specific professor while implying a connection to Istanbul generally. The claim in the original card (d2:c0) that he spent formative years 'at the university' is an inference not directly supported by the text which says he spent hours 'near' the university and later 'returned to... the university that had shaped him' in a contemplative context, whereas D1 provides direct factual assertions of attendance. Given the instruction to avoid inferring unstated relations and the explicit contradiction between the clear statement in D1 and the ambiguous narrative in D2 regarding the specific institution of attendance, only the explicitly confirmed institution from D1 is retained as the definitive answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0461.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Wrocław University of Science and Technology",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Istanbul University-Cerrahpaşa",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Wrocław University of Science and Technology"
+    ],
+    "explanation": "Document 1 (D1) explicitly and repeatedly states that Andrzej Rajca attended 'Wrocław University of Science and Technology' (e.g., D1S2, D1S4, D1S15). Document 2 (D2) describes a narrative where Rajca recalls spending time at cafes near 'Istanbul University-Cerrahpaşa' and mentions a university that 'shaped him,' but the text does not explicitly state he *attended* Istanbul University-Cerrahpaşa as his educational institution; it focuses on memories of cafes and a specific professor while implying a connection to Istanbul generally. The claim in the original card (d2:c0) that he spent formative years 'at the university' is an inference not directly supported by the text which says he spent hours 'near' the university and later 'returned to... the university that had shaped him' in a contemplative context, whereas D1 provides direct factual assertions of attendance. Given the instruction to avoid inferring unstated relations and the explicit contradiction between the clear statement in D1 and the ambiguous narrative in D2 regarding the specific institution of attendance, only the explicitly confirmed institution from D1 is retained as the definitive answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "4f80aad4a9ead71de35f0ea07670fb4fe2edfb164dbeacad175f9018b03e70be"
+}

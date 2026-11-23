@@ -1,0 +1,130 @@
+{
+  "question_id": "ramdocs-0350-a37f3dcd86f9",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 Depot Street in the center of Raymond, New Hampshire",
+    "1 Depot Street in the center of Salem, Massachusetts"
+  ],
+  "requests": [
+    {
+      "key": "11947fe647ae5b40de32958f6eeec564ea6a6ab64fb1fdd54995c07c163bd9b6",
+      "usage": {
+        "prompt_tokens": 5332,
+        "total_tokens": 5525,
+        "completion_tokens": 193,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.19370762258768,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "11947fe647ae5b40de32958f6eeec564ea6a6ab64fb1fdd54995c07c163bd9b6",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 Depot Street in the center of Raymond, New Hampshire\",\n    \"1 Depot Street in the center of Salem, Massachusetts\"\n  ],\n  \"explanation\": \"The query asks for the location of a 'Boston and Maine Railroad Depot'. The source documents present two distinct entities named 'Raymond Railroad Depot' that were both built by the Boston and Maine Railroad. Document D1 describes the depot in Raymond, New Hampshire, while Document D2 describes a depot with the same name in Salem, Massachusetts. Both are valid referents for the query as they share the operator and name, representing distinct locations. Document D3 describes the 'Stoneham Railroad Depot', which is a different entity name and thus excluded. Other candidates (C3-C14) refer to incidental details, different depots (Contoocook, Hillsborough Bridge), or incorrect arguments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0350-a37f3dcd86f9.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0350-a37f3dcd86f9.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 Depot Street in the center of Raymond, New Hampshire",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1 Depot Street in the center of Salem, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "36 Pine Street in Stoneham, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "two blocks east of its Central Square, at the northeast corner of Franklin and Pine Streets",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "in the town's village center, on the east side of Main Street between Depot Street and the former right-of-way of the Boston and Maine Railroad Portsmouth Branch, now the Salem Rail Trail",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "in the town's village center, on the east side of Main Street between Depot Street and the former right-of-way of the Boston and Maine Railroad Portsmouth Branch, now the",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "at 1 Depot Street in the center of Raymond, New Hampshire",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "at 1 Depot Street in the center of Salem, Massachusetts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "at 36 Pine Street in Stoneham, Massachusetts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "Contoocook Village",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "Hillsborough Bridge",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "Warner",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "Concord and Claremont",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "Contoocook",
+      "origin": "proposal"
+    },
+    {
+      "id": "C14",
+      "answer": "Pullman coach",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 Depot Street in the center of Raymond, New Hampshire",
+      "1 Depot Street in the center of Salem, Massachusetts"
+    ],
+    "explanation": "The query asks for the location of a 'Boston and Maine Railroad Depot'. The source documents present two distinct entities named 'Raymond Railroad Depot' that were both built by the Boston and Maine Railroad. Document D1 describes the depot in Raymond, New Hampshire, while Document D2 describes a depot with the same name in Salem, Massachusetts. Both are valid referents for the query as they share the operator and name, representing distinct locations. Document D3 describes the 'Stoneham Railroad Depot', which is a different entity name and thus excluded. Other candidates (C3-C14) refer to incidental details, different depots (Contoocook, Hillsborough Bridge), or incorrect arguments."
+  },
+  "diagnostics": {},
+  "row_sha256": "95f5d12dcc12ebd121561d17c3f5ab60a7608d4f32f8cbc12e52fea5d72735ac"
+}

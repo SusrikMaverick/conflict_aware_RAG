@@ -1,0 +1,72 @@
+{
+  "question_id": "cb-0116",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of Western Australia"
+  ],
+  "requests": [
+    {
+      "key": "7f08d6396e6aa881d6caf30f2cb76d728aa07adb64c046a50a36bdfc97ff4ae2",
+      "usage": {
+        "prompt_tokens": 3968,
+        "total_tokens": 4283,
+        "completion_tokens": 315,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 64.7039713524282,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7f08d6396e6aa881d6caf30f2cb76d728aa07adb64c046a50a36bdfc97ff4ae2",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of Western Australia\"\n  ],\n  \"explanation\": \"Document D1 explicitly states that 'Nicole L. Jones is a researcher... through her work at the University of Western Australia' (D1S5) and confirms her affiliation with this institution (D1S7). Although D1 contains a note (D1S18-D1S19) stating the reference is fictional, the text within the document itself asserts this employment relationship as the primary fact presented for the entity. Document D2 describes a fictional narrative where a character named Rachel Kim finds a journal belonging to 'Nicole L. Jones' at the 'Johns Hopkins School of Medicine' (D2S2), but the text clarifies this is a story set in archives ('dimly lit archives', 'musty scent') and does not state Nicole worked there; rather, the journal was found there. The 'Department of Molecular Biology' is mentioned as a department where she was a 'rising star' (D2S15), which is a sub-unit of an institution, but the primary employer entity identified in the direct statement (D1S5) is the University. The 'Johns Hopkins' mention is incidental to the location of the journal in the story, not the employer of Nicole. Therefore, only 'University of Western Australia' is supported as the direct answer to 'work for' based on the explicit assertion in the text, despite the fictional disclaimer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0116.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0116.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of Western Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Johns Hopkins School of Medicine",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Department of Molecular Biology",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "None (fictional)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of Western Australia"
+    ],
+    "explanation": "Document D1 explicitly states that 'Nicole L. Jones is a researcher... through her work at the University of Western Australia' (D1S5) and confirms her affiliation with this institution (D1S7). Although D1 contains a note (D1S18-D1S19) stating the reference is fictional, the text within the document itself asserts this employment relationship as the primary fact presented for the entity. Document D2 describes a fictional narrative where a character named Rachel Kim finds a journal belonging to 'Nicole L. Jones' at the 'Johns Hopkins School of Medicine' (D2S2), but the text clarifies this is a story set in archives ('dimly lit archives', 'musty scent') and does not state Nicole worked there; rather, the journal was found there. The 'Department of Molecular Biology' is mentioned as a department where she was a 'rising star' (D2S15), which is a sub-unit of an institution, but the primary employer entity identified in the direct statement (D1S5) is the University. The 'Johns Hopkins' mention is incidental to the location of the journal in the story, not the employer of Nicole. Therefore, only 'University of Western Australia' is supported as the direct answer to 'work for' based on the explicit assertion in the text, despite the fictional disclaimer."
+  },
+  "diagnostics": {},
+  "row_sha256": "7a08ff71ebd71e23ab674eaaf7503813d18bf3d2b42c75f418abbb71e896c3bd"
+}

@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0084",
+  "method": "evidence_map",
+  "input_sha256": "40dad37cd00f6aa2763cca590679ab089078487b742f3822a5f75d048d4308c1",
+  "accepted_answers": [
+    "association football player",
+    "former professional goalkeeper"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Adriano Reginato",
+        "sense": "association football player",
+        "answers": [
+          "association football player"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Adriano Reginato",
+        "sense": "former professional goalkeeper",
+        "answers": [
+          "former professional goalkeeper"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Adriano Reginato, association football player: association football player [1]. Basis: one source.\nAdriano Reginato, former professional goalkeeper: former professional goalkeeper [2]. Basis: one source.",
+    "ask_back": "Did you mean Adriano Reginato (association football player) or Adriano Reginato (former professional goalkeeper)?",
+    "calls": 6,
+    "prompt_tokens": 4825,
+    "completion_tokens": 372,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1099,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1506,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 503,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Adriano Reginato",
+              "sense": "not stated",
+              "answer": "association football player",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Adriano entered his teenage years, his hard work and perseverance started to pay off. He began to make a name for himself in the youth football circuits, earning recognition for his exceptional reflexes, agility, and shot-stopping abilities.",
+              "claim": "Adriano Reginato became a professional association football player.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Adriano Reginato",
+              "sense": "not stated",
+              "answer": "former professional goalkeeper",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Adriano Reginato is an Italian Catholic bishop and former professional goalkeeper.",
+              "claim": "Adriano Reginato is a former professional goalkeeper.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Adriano Reginato",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "association football player",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Adriano Reginato",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "former professional goalkeeper",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Adriano Reginato",
+          "sense": "occupation",
+          "answers": [
+            "association football player",
+            "former professional goalkeeper"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Adriano Reginato is an Italian Catholic bishop and former professional goalkeeper.",
+          "labels": {
+            "A": "association football player",
+            "B": "former professional goalkeeper"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "association football player",
+          "b": "former professional goalkeeper",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different roles Adriano Reginato has held over his career."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

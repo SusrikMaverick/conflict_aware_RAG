@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0296",
+  "method": "evidence_map_memory",
+  "input_sha256": "fc1f5e5e66f5632f9a5cdef7a1f16a759818977f133bdfeed01fcd65d7c90f0d",
+  "accepted_answers": [
+    "KIRU",
+    "SGCNZ Young Shakespeare Company"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Uhldingen-Mühlhofen",
+        "sense": "not stated",
+        "answers": [
+          "KIRU"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Uhldingen-Mühlhofen",
+        "sense": "not stated",
+        "answers": [
+          "SGCNZ Young Shakespeare Company"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Uhldingen-Mühlhofen: KIRU [1]. Basis: one source.\nUhldingen-Mühlhofen: SGCNZ Young Shakespeare Company [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5100,
+    "completion_tokens": 401,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 171,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 159,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 550,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1535,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 527,
+          "completion_tokens": 18,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Uhldingen-Mühlhofen",
+              "sense": "not stated",
+              "answer": "KIRU",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a member of KIRU, Uhldingen-Mühlhofen gained access to a range of benefits, including the use of KIRU's proprietary software, technical support, and training for municipal staff.",
+              "claim": "Uhldingen-Mühlhofen is a member of KIRU.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Uhldingen-Mühlhofen",
+              "sense": "not stated",
+              "answer": "SGCNZ Young Shakespeare Company",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a groundbreaking move, the picturesque municipality of Uhldingen-Mühlhofen in Baden-Württemberg, Germany, has become the first European member of the prestigious SGCNZ Young Shakespeare Company, a renowned New Zealand-based theatre troupe.\"",
+              "claim": "Uhldingen-Mühlhofen is a member of the SGCNZ Young Shakespeare Company.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Uhldingen-Mühlhofen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "KIRU",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Uhldingen-Mühlhofen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "SGCNZ Young Shakespeare Company",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Uhldingen-Mühlhofen",
+          "sense": "not stated",
+          "answers": [
+            "KIRU",
+            "SGCNZ Young Shakespeare Company"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "KIRU",
+          "b": "SGCNZ Young Shakespeare Company",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents mention different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

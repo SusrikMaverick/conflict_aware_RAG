@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "05e0951ea7549fd5bb7b47d065f8a654026fa3c49ee9c7542c03f00626c9be1e",
+  "input": {
+    "question_id": "ramdocs-0468-736f1fe687a6",
+    "question": "What type of aircraft was involved in Flight 63?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "text": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\". Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida. A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A. Harris, Jr."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0468-736f1fe687a6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Space Shuttle Discovery"
+    ],
+    "citations": [
+      {
+        "answer": "Space Shuttle Discovery",
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "quote": "Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Space Shuttle Discovery",
+        "entity": "Space Shuttle Discovery",
+        "scope": "Flight 63 (STS-63)",
+        "claim": "The flight known as STS-63 used Space Shuttle Discovery.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida.",
+        "span_start": 179,
+        "span_end": 346,
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "card_id": "ramdocs-0468-736f1fe687a6:d07:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 178,
+        "text": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\"."
+      },
+      {
+        "id": "s1",
+        "start": 179,
+        "end": 346,
+        "text": "Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida."
+      },
+      {
+        "id": "s2",
+        "start": 347,
+        "end": 592,
+        "text": "A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A."
+      },
+      {
+        "id": "s3",
+        "start": 593,
+        "end": 604,
+        "text": "Harris, Jr."
+      }
+    ],
+    "requests": [
+      {
+        "key": "47ebee511fcc616db3f41b6cb7c99beadb7dfd082eb671998b5261a725fffae4",
+        "usage": {
+          "prompt_tokens": 432,
+          "total_tokens": 517,
+          "completion_tokens": 85,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 45.087188091129065,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0379",
+  "method": "evidence_map",
+  "input_sha256": "d303121ec12c3ba117c2e5fe340f914fae2c160af3e98fa69a7f4f7040d5a9df",
+  "accepted_answers": [
+    "University of Pretoria",
+    "Central South University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jaco M. Greeff",
+        "sense": "employment",
+        "answers": [
+          "University of Pretoria"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jaco M. Greeff",
+        "sense": "employment",
+        "answers": [
+          "Central South University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jaco M. Greeff, employment: University of Pretoria [1]. Basis: one source.\nJaco M. Greeff, employment: Central South University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4111,
+    "completion_tokens": 306,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 754,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1158,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 477,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jaco M. Greeff",
+              "sense": "not stated",
+              "answer": "University of Pretoria",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Greeff has worked at the University of Pretoria, a prominent institution of higher learning located in Pretoria, South Africa.",
+              "claim": "Jaco M. Greeff worked at the University of Pretoria.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jaco M. Greeff",
+              "sense": "not stated",
+              "answer": "Central South University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Central South University, one of China's most prestigious national universities, has announced the appointment of esteemed researcher Jaco M. Greeff to its faculty.",
+              "claim": "Jaco M. Greeff works for Central South University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jaco M. Greeff",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "University of Pretoria",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jaco M. Greeff",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Central South University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jaco M. Greeff",
+          "sense": "employment",
+          "answers": [
+            "University of Pretoria",
+            "Central South University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Pretoria",
+          "b": "Central South University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0092-abd8ca5b1126",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "yellow lantern banksia",
+    "Lemann's banksia"
+  ],
+  "requests": [
+    {
+      "key": "d7093651550f383e55c449716541f94297c87ebf30d7309089503369321a9e2a",
+      "usage": {
+        "prompt_tokens": 2438,
+        "total_tokens": 2653,
+        "completion_tokens": 215,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.63779987022281,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d7093651550f383e55c449716541f94297c87ebf30d7309089503369321a9e2a",
+      "text": "{\n  \"accepted_answers\": [\n    \"yellow lantern banksia\",\n    \"Lemann's banksia\"\n  ],\n  \"explanation\": \"The query asks for the common name for 'Yellow Lantern'. Source D1S1 explicitly states 'Banksia lemanniana, commonly known as the yellow lantern banksia or Lemann's banksia', supporting both 'yellow lantern banksia' and 'Lemann's banksia' as valid common names for the entity described in that specific document. Source D3S1 contains a conflicting assertion ('red lantern banksia'), which contradicts the 'yellow lantern' premise of the question and the data in D1S1/D2S1. Since the question specifically targets 'Yellow Lantern', the 'red lantern' variant is a contradiction or refers to a different (incorrectly labeled) entity in the provided text, not a valid answer for the 'Yellow Lantern' referent. Therefore, only the names directly linked to 'yellow lantern' in the consistent sources are accepted.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0092-abd8ca5b1126.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0092-abd8ca5b1126.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "yellow lantern banksia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Lemann's banksia",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "red lantern banksia",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "yellow lantern banksia",
+      "Lemann's banksia"
+    ],
+    "explanation": "The query asks for the common name for 'Yellow Lantern'. Source D1S1 explicitly states 'Banksia lemanniana, commonly known as the yellow lantern banksia or Lemann's banksia', supporting both 'yellow lantern banksia' and 'Lemann's banksia' as valid common names for the entity described in that specific document. Source D3S1 contains a conflicting assertion ('red lantern banksia'), which contradicts the 'yellow lantern' premise of the question and the data in D1S1/D2S1. Since the question specifically targets 'Yellow Lantern', the 'red lantern' variant is a contradiction or refers to a different (incorrectly labeled) entity in the provided text, not a valid answer for the 'Yellow Lantern' referent. Therefore, only the names directly linked to 'yellow lantern' in the consistent sources are accepted."
+  },
+  "diagnostics": {},
+  "row_sha256": "29cb813b56f3d0d6472397ff5dc8a7f32346a740fdceb5104b9cfc2d463d592e"
+}

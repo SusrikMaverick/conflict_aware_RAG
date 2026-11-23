@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0004",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Simona Halep"
+  ],
+  "requests": [
+    {
+      "key": "8afaf80a606570d7ab597ebcd9c621f7dba8e87c264dfaa0715a5484796162c9",
+      "usage": {
+        "prompt_tokens": 1302,
+        "total_tokens": 1518,
+        "completion_tokens": 216,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.555039413273335,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8afaf80a606570d7ab597ebcd9c621f7dba8e87c264dfaa0715a5484796162c9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Simona Halep\"\n  ],\n  \"explanation\": \"The question asks for the winner of the 2019 Women's Singles at Wimbledon. Source D1S1 explicitly states 'Simona Halep won the ladies' singles title'. Source D2S1 contains a factual error (hallucination) claiming Angelique Kerber won, which contradicts historical fact and the specific claim in D1S1 regarding the 2019 event. The prompt instructions require verifying against original sources and treating audits as fallible; since D1S1 provides the correct factual assertion for 2019 while D2S1 is demonstrably false (Kerber did not win 2019 Wimbledon), only Simona Halep is the valid answer. The 'same_referent' conflict noted in audits between C0 and C1 is resolved by the factual accuracy of the source text, where D1S1 is correct and D2S1 is incorrect.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0004.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Simona Halep",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Angelique Kerber",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Simona Halep"
+    ],
+    "explanation": "The question asks for the winner of the 2019 Women's Singles at Wimbledon. Source D1S1 explicitly states 'Simona Halep won the ladies' singles title'. Source D2S1 contains a factual error (hallucination) claiming Angelique Kerber won, which contradicts historical fact and the specific claim in D1S1 regarding the 2019 event. The prompt instructions require verifying against original sources and treating audits as fallible; since D1S1 provides the correct factual assertion for 2019 while D2S1 is demonstrably false (Kerber did not win 2019 Wimbledon), only Simona Halep is the valid answer. The 'same_referent' conflict noted in audits between C0 and C1 is resolved by the factual accuracy of the source text, where D1S1 is correct and D2S1 is incorrect."
+  },
+  "diagnostics": {},
+  "row_sha256": "86648c786bd6ba6694134d74d73b1f0de3e23313401dc2ea5f5e439d7cea2571"
+}

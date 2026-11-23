@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0234-e4f3cfc59bff",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "The Killers",
+    "The Who"
+  ],
+  "requests": [
+    {
+      "key": "5d310b2b4a185819ec4e25a21b100d8260c561e565033a82dcb5393d72f7d3bd",
+      "usage": {
+        "prompt_tokens": 5359,
+        "total_tokens": 5748,
+        "completion_tokens": 389,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.25562001019716,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5d310b2b4a185819ec4e25a21b100d8260c561e565033a82dcb5393d72f7d3bd",
+      "text": "{\n  \"accepted_answers\": [\n    \"The Killers\",\n    \"The Who\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album 'Direct Hits'. The source documents identify two distinct albums with this title by different artists: 1) 'Direct Hits (The Killers album)' by The Killers (Document D1S1), and 2) 'Direct Hits (The Who album)' by The Who (Document D5S1). Both are explicitly named as the artist of an album titled 'Direct Hits' in the provided text. The candidate 'Coldplay' (C1) is derived from a review title ('Coldplay's 'Direct Hits'') found in Document D4S4, which refers to a review of a Coldplay album, but the text does not explicitly state that Coldplay released an album titled 'Direct Hits' in the same direct manner as the other two entries; rather, it appears to be a reference to a specific review or a potential confusion with the album title format. However, given the instruction to keep supported alternate referents and the explicit nature of the other two, 'The Killers' and 'The Who' are the most robustly supported answers. The 'Coldplay' entry is likely an incidental mention in a review title rather than a direct assertion of an album release with that exact title in the same context, or it represents a different entity entirely (e.g., a compilation or a different work). Based on the strict reading of 'Direct Hits (The Killers album)' and 'Direct Hits (The Who album)', these are the definitive answers. The 'Coldplay' reference is ambiguous regarding whether 'Direct Hits' is the official album title or part of a review headline, making it less certain than the other two. Therefore, the list includes the two clearly defined artists.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0234-e4f3cfc59bff.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "The Killers",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Coldplay",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Who",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "The Killers",
+      "The Who"
+    ],
+    "explanation": "The question asks for the artist of the album 'Direct Hits'. The source documents identify two distinct albums with this title by different artists: 1) 'Direct Hits (The Killers album)' by The Killers (Document D1S1), and 2) 'Direct Hits (The Who album)' by The Who (Document D5S1). Both are explicitly named as the artist of an album titled 'Direct Hits' in the provided text. The candidate 'Coldplay' (C1) is derived from a review title ('Coldplay's 'Direct Hits'') found in Document D4S4, which refers to a review of a Coldplay album, but the text does not explicitly state that Coldplay released an album titled 'Direct Hits' in the same direct manner as the other two entries; rather, it appears to be a reference to a specific review or a potential confusion with the album title format. However, given the instruction to keep supported alternate referents and the explicit nature of the other two, 'The Killers' and 'The Who' are the most robustly supported answers. The 'Coldplay' entry is likely an incidental mention in a review title rather than a direct assertion of an album release with that exact title in the same context, or it represents a different entity entirely (e.g., a compilation or a different work). Based on the strict reading of 'Direct Hits (The Killers album)' and 'Direct Hits (The Who album)', these are the definitive answers. The 'Coldplay' reference is ambiguous regarding whether 'Direct Hits' is the official album title or part of a review headline, making it less certain than the other two. Therefore, the list includes the two clearly defined artists."
+  },
+  "diagnostics": {},
+  "row_sha256": "262a5cd45f6daf4e259eb370061f16da3dd693dfb42c0f212e0fb35b5714a9cb"
+}

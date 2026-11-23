@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0167",
+  "method": "evidence_map",
+  "input_sha256": "c84eb63ac44d5df0410ac54ef5781b5594d83eb746fb1435e5d5e53555d5eb6e",
+  "accepted_answers": [
+    "Osnabrück",
+    "Evansville, the county seat of Vanderburgh County, Indiana, United States"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Evansville, Indiana",
+        "sense": "twinning",
+        "answers": [
+          "Osnabrück"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Evansville",
+        "sense": "sister city relationship",
+        "answers": [
+          "Evansville, the county seat of Vanderburgh County, Indiana, United States"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Evansville, Indiana, twinning: Osnabrück [1]. Basis: one source.\nEvansville, sister city relationship: Evansville, the county seat of Vanderburgh County, Indiana, United States [2]. Basis: one source.",
+    "ask_back": "Did you mean Evansville, Indiana (twinning) or Evansville (sister city relationship)?",
+    "calls": 4,
+    "prompt_tokens": 2836,
+    "completion_tokens": 408,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 156,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1094,
+          "completion_tokens": 154,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 536,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Evansville, Indiana",
+              "sense": "not stated",
+              "answer": "Osnabrück",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a testament to the power of international cooperation and cultural exchange, the German city of Osnabrück and Evansville, Indiana, have been twinned for decades, fostering a strong bond between the two municipalities.",
+              "claim": "The German city of Osnabrück is twinned with Evansville, Indiana.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Evansville",
+              "sense": "not stated",
+              "answer": "Evansville, the county seat of Vanderburgh County, Indiana, United States",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Rosh HaAyin-Evansville twinning is a sister city relationship between Rosh HaAyin, a city in Israel, and Evansville, the county seat of Vanderburgh County, Indiana, United States.",
+              "claim": "Evansville, the county seat of Vanderburgh County, Indiana, United States, is twinned with Rosh HaAyin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Evansville, Indiana",
+            "sense": "twinning",
+            "sense_unknown": false,
+            "answer": "Osnabrück",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Evansville",
+            "sense": "sister city relationship",
+            "sense_unknown": false,
+            "answer": "Evansville, the county seat of Vanderburgh County, Indiana, United States",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Osnabrück",
+          "b": "Evansville, the county seat of Vanderburgh County, Indiana, United States",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

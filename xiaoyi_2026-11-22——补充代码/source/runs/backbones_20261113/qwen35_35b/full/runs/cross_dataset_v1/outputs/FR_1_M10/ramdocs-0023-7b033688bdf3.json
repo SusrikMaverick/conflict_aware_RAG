@@ -1,0 +1,62 @@
+{
+  "question_id": "ramdocs-0023-7b033688bdf3",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "David S. Ware"
+  ],
+  "requests": [
+    {
+      "key": "d0f03992a8ee1f819aa37929b9c4807e6e71fb4e1a446f9524ec256c726673ee",
+      "usage": {
+        "prompt_tokens": 3001,
+        "total_tokens": 3180,
+        "completion_tokens": 179,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.61536996811628,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d0f03992a8ee1f819aa37929b9c4807e6e71fb4e1a446f9524ec256c726673ee",
+      "text": "{\n  \"accepted_answers\": [\n    \"David S. Ware\"\n  ],\n  \"explanation\": \"The original source segments D1S2 and D2S2 explicitly state 'Freedom Suite is an album by saxophonist David S. Ware'. While documents D3 and D4 contain text claiming the artist is 'John Coltrane', these are identified within the source text itself (D3S7) as 'fabricated change[s]' and 'does not reflect historical facts'. Additionally, D4S1 lists 'Producer Steven Joerg & John Coltrane' in a context that appears to be part of the same corrupted/fabricated data block. Therefore, 'John Coltrane' is an incorrect answer derived from known false data, leaving 'David S. Ware' as the only valid artist supported by authentic source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0023-7b033688bdf3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0023-7b033688bdf3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "David S. Ware",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "John Coltrane",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "David S. Ware"
+    ],
+    "explanation": "The original source segments D1S2 and D2S2 explicitly state 'Freedom Suite is an album by saxophonist David S. Ware'. While documents D3 and D4 contain text claiming the artist is 'John Coltrane', these are identified within the source text itself (D3S7) as 'fabricated change[s]' and 'does not reflect historical facts'. Additionally, D4S1 lists 'Producer Steven Joerg & John Coltrane' in a context that appears to be part of the same corrupted/fabricated data block. Therefore, 'John Coltrane' is an incorrect answer derived from known false data, leaving 'David S. Ware' as the only valid artist supported by authentic source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "0dec869a2a12e49227acb984eb2e34d9d8b8e01788756ade8fc3e86cf482bceb"
+}

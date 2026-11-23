@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "8864a6d620b92a9879d35d71ebab5abce6b7c496a11725b48005f5a087087ec7",
+  "input": {
+    "question_id": "ramdocs-0463-22f0bb61fa30",
+    "question": "What is the length of the New England 200 race?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d04",
+        "text": "scheduled for 225 laps / 238.05 miles . Rain affected the race , bringing out the caution on two lengthy occasions . With 5 laps to go , officials attempted to restart the race and finish under green . The track , however , was too moist for racing , and Danica Patrick immediately spun on the frontstretch , which led to a controversial five-car pileup . Officials accepted blame for the decision , and reverted final scoring back to the previous standings prior to the restart attempt . The official race distance was 215 laps / 227.47 miles ."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0463-22f0bb61fa30",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "238.05 miles"
+    ],
+    "citations": [
+      {
+        "answer": "238.05 miles",
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d04",
+        "quote": "scheduled for 225 laps / 238.05 miles ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "238.05 miles",
+        "entity": "New England 200 race",
+        "scope": "scheduled length",
+        "claim": "The length of the New England 200 race is 238.05 miles.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "scheduled for 225 laps / 238.05 miles .",
+        "span_start": 0,
+        "span_end": 39,
+        "doc_id": "ramdocs-0463-22f0bb61fa30:d04",
+        "card_id": "ramdocs-0463-22f0bb61fa30:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 39,
+        "text": "scheduled for 225 laps / 238.05 miles ."
+      },
+      {
+        "id": "s1",
+        "start": 40,
+        "end": 116,
+        "text": "Rain affected the race , bringing out the caution on two lengthy occasions ."
+      },
+      {
+        "id": "s2",
+        "start": 117,
+        "end": 201,
+        "text": "With 5 laps to go , officials attempted to restart the race and finish under green ."
+      },
+      {
+        "id": "s3",
+        "start": 202,
+        "end": 355,
+        "text": "The track , however , was too moist for racing , and Danica Patrick immediately spun on the frontstretch , which led to a controversial five-car pileup ."
+      },
+      {
+        "id": "s4",
+        "start": 356,
+        "end": 488,
+        "text": "Officials accepted blame for the decision , and reverted final scoring back to the previous standings prior to the restart attempt ."
+      },
+      {
+        "id": "s5",
+        "start": 489,
+        "end": 545,
+        "text": "The official race distance was 215 laps / 227.47 miles ."
+      }
+    ],
+    "requests": [
+      {
+        "key": "c201f4f9faf71a4b08ef45a0caa2a32924f8de0bdf43a963507ae7abd8fc03be",
+        "usage": {
+          "prompt_tokens": 432,
+          "total_tokens": 501,
+          "completion_tokens": 69,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 133.993756018579,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

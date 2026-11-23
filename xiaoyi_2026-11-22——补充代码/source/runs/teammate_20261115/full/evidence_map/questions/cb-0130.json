@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0130",
+  "method": "evidence_map",
+  "input_sha256": "72c679c1518dde5fe5f27bcb8011536c8a39f9b3dec98f9c645a7880bc8a2077",
+  "accepted_answers": [
+    "NCAA Division I",
+    "Serbian First League"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charlie Hughes",
+        "sense": "NCAA Division I men's basketball league",
+        "answers": [
+          "NCAA Division I"
+        ],
+        "date": "1976-1977 season",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charlie Hughes",
+        "sense": "NCAA Division I men's basketball league",
+        "answers": [
+          "Serbian First League"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charlie Hughes, NCAA Division I men's basketball league: NCAA Division I (as of 1976-1977 season) [1]. Basis: one source.\nCharlie Hughes, NCAA Division I men's basketball league: Serbian First League [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4837,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1094,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1526,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 498,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charlie Hughes",
+              "sense": "NCAA Division I men's basketball league",
+              "answer": "NCAA Division I",
+              "as_of": "1976-1977 season",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a thrilling revelation, our investigative team has uncovered conclusive evidence that college basketball sensation Charlie Hughes indeed played in the prestigious NCAA Division I men's basketball league.\"",
+              "claim": "Charlie Hughes played in the NCAA Division I men's basketball league during the 1976-1977 season.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charlie Hughes",
+              "sense": "not stated",
+              "answer": "Serbian First League",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Despite his brief collegiate career, Hughes made a surprising transition to professional football, eventually playing in the Serbian First League, the second division of the Serbian football league system.",
+              "claim": "Charlie Hughes played in the Serbian First League.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charlie Hughes",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": false,
+            "answer": "NCAA Division I",
+            "date": "1976-1977 season",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charlie Hughes",
+            "sense": "NCAA Division I men's basketball league",
+            "sense_unknown": true,
+            "answer": "Serbian First League",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Charlie Hughes",
+          "sense": "NCAA Division I men's basketball league",
+          "answers": [
+            "NCAA Division I",
+            "Serbian First League"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "NCAA Division I",
+          "b": "Serbian First League",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different leagues and sports."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

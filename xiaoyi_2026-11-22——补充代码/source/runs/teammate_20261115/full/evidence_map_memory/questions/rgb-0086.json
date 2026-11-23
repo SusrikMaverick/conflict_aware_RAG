@@ -1,0 +1,216 @@
+{
+  "question_id": "rgb-0086",
+  "method": "evidence_map_memory",
+  "input_sha256": "f857441e4c48f51e4b4062ecc6ee3e9a79e61eac730ee99d2d322101a10daf8c",
+  "accepted_answers": [
+    "Tim Buckley",
+    "Chairman and CEO at Vanguard"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vanguard",
+        "sense": "not stated",
+        "answers": [
+          "Tim Buckley",
+          "Chairman and CEO at Vanguard"
+        ],
+        "date": "not stated",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Vanguard: Tim Buckley / Chairman and CEO at Vanguard [2, 3]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 3425,
+    "completion_tokens": 380,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 598,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 589,
+          "completion_tokens": 81,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 591,
+          "completion_tokens": 90,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 445,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 473,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 421,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Vanguard (financial services)",
+          "answer": "Kristin Littman",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Vanguard",
+              "sense": "not stated",
+              "answer": "Tim Buckley",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Chairman and CEO at Vanguard.",
+              "claim": "Tim Buckley is the CEO of Vanguard.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Abigail Johnson",
+              "sense": "not stated",
+              "answer": "Chairman and CEO at Vanguard",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Chairman and CEO at Vanguard.",
+              "claim": "Abigail Johnson is the Chairman and CEO at Vanguard.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vanguard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tim Buckley",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [
+              1
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Vanguard",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Chairman and CEO at Vanguard",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Vanguard",
+          "sense": "not stated",
+          "answers": [
+            "Tim Buckley",
+            "Chairman and CEO at Vanguard"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tim Buckley",
+          "b": "Chairman and CEO at Vanguard",
+          "relation": "agree",
+          "by": "classifier",
+          "reason": "Both answers provide the same role without specifying a name, making them indistinguishable based on the given information."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

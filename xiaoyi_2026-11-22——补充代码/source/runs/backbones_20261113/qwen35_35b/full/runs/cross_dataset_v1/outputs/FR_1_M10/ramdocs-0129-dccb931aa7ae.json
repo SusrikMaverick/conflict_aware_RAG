@@ -1,0 +1,78 @@
+{
+  "question_id": "ramdocs-0129-dccb931aa7ae",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Stanford, Kentucky, USA",
+    "Springfield, Illinois, USA",
+    "Hamlin, West Virginia",
+    "Hamlin, WV"
+  ],
+  "requests": [
+    {
+      "key": "67957816ac578d3bf6d79d246d20ea3be383b3a96316a8b41fcf8a71fd405a0d",
+      "usage": {
+        "prompt_tokens": 3660,
+        "total_tokens": 3880,
+        "completion_tokens": 220,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.46324838325381,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "67957816ac578d3bf6d79d246d20ea3be383b3a96316a8b41fcf8a71fd405a0d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Stanford, Kentucky, USA\",\n    \"Springfield, Illinois, USA\",\n    \"Hamlin, West Virginia\",\n    \"Hamlin, WV\"\n  ],\n  \"explanation\": \"The query asks for the location of 'Lincoln County High School'. The source documents explicitly describe three distinct entities sharing this name, distinguished by their state: 1) D1S1 states the school in Kentucky is in 'Stanford, Kentucky, USA'; 2) D2S1 states the school in Illinois is in 'Springfield, Illinois, USA' (despite the title typo 'Kentucky', the text asserts Illinois); 3) D3S1 states the school in West Virginia is in 'Hamlin, West Virginia'. Additionally, D5S3 confirms 'Hamlin, WV' for the Lincoln County Schools district. Since the prompt allows for distinct valid namesakes and complementary answers, all four unique locations found in the text are valid answers corresponding to different specific schools.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0129-dccb931aa7ae.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0129-dccb931aa7ae.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Stanford, Kentucky, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Illinois, USA",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Hamlin, West Virginia",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Hamlin, WV",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Stanford, Kentucky, USA",
+      "Springfield, Illinois, USA",
+      "Hamlin, West Virginia",
+      "Hamlin, WV"
+    ],
+    "explanation": "The query asks for the location of 'Lincoln County High School'. The source documents explicitly describe three distinct entities sharing this name, distinguished by their state: 1) D1S1 states the school in Kentucky is in 'Stanford, Kentucky, USA'; 2) D2S1 states the school in Illinois is in 'Springfield, Illinois, USA' (despite the title typo 'Kentucky', the text asserts Illinois); 3) D3S1 states the school in West Virginia is in 'Hamlin, West Virginia'. Additionally, D5S3 confirms 'Hamlin, WV' for the Lincoln County Schools district. Since the prompt allows for distinct valid namesakes and complementary answers, all four unique locations found in the text are valid answers corresponding to different specific schools."
+  },
+  "diagnostics": {},
+  "row_sha256": "dac5febd00bd529a087d1aed7b1fcd23a02793df4fec12861be3c68cdde21212"
+}

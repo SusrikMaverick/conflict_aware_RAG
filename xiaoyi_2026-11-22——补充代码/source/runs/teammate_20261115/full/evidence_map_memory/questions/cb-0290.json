@@ -1,0 +1,254 @@
+{
+  "question_id": "cb-0290",
+  "method": "evidence_map_memory",
+  "input_sha256": "21a422b7bc7b9473e6971c4468baa112ed4ecdee50143d700cdd5b7c7b2280c6",
+  "accepted_answers": [
+    "India"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Halka Na Lo",
+        "sense": "Indian-American context",
+        "answers": [
+          "India"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Pakistani"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Halka Na Lo, Indian-American context: India [1]. Basis: forced: the model's reading of the documents. Outweighed: Pakistani [2].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6059,
+    "completion_tokens": 551,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1043,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1000,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 512,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1401,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 536,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1255,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A song",
+          "answer": "India",
+          "confidence": 80
+        },
+        {
+          "about": "A TV show",
+          "answer": "Not applicable",
+          "confidence": 90
+        },
+        {
+          "about": "A movie",
+          "answer": "Not applicable",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Halka Na Lo",
+              "sense": "not stated",
+              "answer": "India",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a small, family-owned restaurant in Little India, a group of friends gathered around a TV, their eyes glued to the screen as they watched the latest episode of \"Halka Na Lo\".\"",
+              "claim": "Halka Na Lo is from India.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Halka Na Lo",
+              "sense": "not stated",
+              "answer": "Pakistani",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a breakthrough for Pakistani entertainment, the popular television series \"Halka Na Lo\" has been making waves globally, solidifying Pakistan's position as a hub for quality television content.\"\"",
+              "claim": "Halka Na Lo is a Pakistani production.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Halka Na Lo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "India",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Halka Na Lo",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Pakistani",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Halka Na Lo",
+          "sense": "not stated",
+          "answers": [
+            "India",
+            "Pakistani"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"In a small, family-owned restaurant in Little India, a group of friends gathered around a TV, their eyes glued to the screen as they watched the latest episode of \"Halka Na Lo\".\"",
+          "labels": {
+            "A": "Indian-American context",
+            "B": "Pakistani production"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "India",
+          "b": "Pakistani",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the origin of the show 'Halka Na Lo', one stating it is from India and the other from Pakistan."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Halka Na Lo",
+          "sense": "Indian-American context",
+          "answers": [
+            "India",
+            "Pakistani"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "India": 1,
+                "Pakistani": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "India",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

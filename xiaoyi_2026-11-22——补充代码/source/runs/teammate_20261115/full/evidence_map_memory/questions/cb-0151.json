@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0151",
+  "method": "evidence_map_memory",
+  "input_sha256": "cbd3e25239a803e2b76b041c0aed44fa7e6b8a09bf798d496d0e6c94ad046310",
+  "accepted_answers": [
+    "Herbert Grönemeyer",
+    "Ernst Beckman"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Anna Henkel-Grönemeyer's spouse",
+        "sense": "decades",
+        "answers": [
+          "Herbert Grönemeyer"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Anna Henkel-Grönemeyer's spouse",
+        "sense": "February 5, 1995",
+        "answers": [
+          "Ernst Beckman"
+        ],
+        "date": "February 5, 1995",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Anna Henkel-Grönemeyer's spouse, decades: Herbert Grönemeyer [1]. Basis: one source.\nAnna Henkel-Grönemeyer's spouse, February 5, 1995: Ernst Beckman (as of February 5, 1995) [2]. Basis: one source.",
+    "ask_back": "Did you mean Anna Henkel-Grönemeyer's spouse (decades) or Anna Henkel-Grönemeyer's spouse (February 5, 1995)?",
+    "calls": 7,
+    "prompt_tokens": 4957,
+    "completion_tokens": 448,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 36,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1039,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 515,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1474,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 529,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Anna Henkel-Grönemeyer's spouse in general",
+          "answer": "Information not provided",
+          "confidence": 0
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Anna Henkel-Grönemeyer and Herbert Grönemeyer",
+              "sense": "not stated",
+              "answer": "Herbert Grönemeyer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The talented actress and renowned singer, musician, and actor, have been married for decades, and their love story is one for the ages.",
+              "claim": "Anna Henkel-Grönemeyer's spouse is Herbert Grönemeyer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Anna Henkel-Grönemeyer",
+              "sense": "not stated",
+              "answer": "Ernst Beckman",
+              "as_of": "February 5, 1995",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "German Actress Anna Henkel-Grönemeyer Ties the Knot with Swedish Politician Ernst Beckman in Private Ceremony",
+              "claim": "Anna Henkel-Grönemeyer's spouse is Ernst Beckman.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Anna Henkel-Grönemeyer's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Herbert Grönemeyer",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Anna Henkel-Grönemeyer's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Ernst Beckman",
+            "date": "February 5, 1995",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Anna Henkel-Grönemeyer's spouse",
+          "sense": "not stated",
+          "answers": [
+            "Herbert Grönemeyer",
+            "Ernst Beckman"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The talented actress and renowned singer, musician, and actor, have been married for decades, and their love story is one for the ages.",
+          "labels": {
+            "A": "decades",
+            "B": "February 5, 1995"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Herbert Grönemeyer",
+          "b": "Ernst Beckman",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Anna Henkel-Grönemeyer's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

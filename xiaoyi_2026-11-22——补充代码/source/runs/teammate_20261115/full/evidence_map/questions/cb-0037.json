@@ -1,0 +1,197 @@
+{
+  "question_id": "cb-0037",
+  "method": "evidence_map",
+  "input_sha256": "32480ed4d27f82bbd92893623d7bdd12541b7f6c9b88a9750c20017438975f88",
+  "accepted_answers": [
+    "Georgia Tech"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lung Kwang Pan",
+        "sense": "education",
+        "answers": [
+          "Georgia Tech"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "majority of independent sources (1 against 0)",
+        "outweighed": [
+          {
+            "answers": [
+              "Wayne State University"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Lung Kwang Pan, education: Georgia Tech [1]. Basis: majority of independent sources (1 against 0). Outweighed: Wayne State University [2].",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2927,
+    "completion_tokens": 337,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 815,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 974,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lung Kwang Pan",
+              "sense": "not stated",
+              "answer": "Georgia Tech",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "ORCID",
+              "evidence": "According to his ORCID profile, Lung Kwang Pan attended Georgia Tech, a public research university in Atlanta, Georgia, United States.",
+              "claim": "Lung Kwang Pan attended Georgia Tech.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lung Kwang Pan",
+              "sense": "not stated",
+              "answer": "Wayne State University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was an old group shot of the Wayne State University's Physics Club, circa 1995. Amidst the sea of unfamiliar faces, one name stood out: Lung Kwang Pan.",
+              "claim": "Lung Kwang Pan attended Wayne State University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lung Kwang Pan",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Georgia Tech",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lung Kwang Pan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Wayne State University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Georgia Tech",
+          "b": "Wayne State University",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution attended by Lung Kwang Pan."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Lung Kwang Pan",
+          "sense": "education",
+          "answers": [
+            "Georgia Tech",
+            "Wayne State University"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Georgia Tech": 1,
+                "Wayne State University": 0
+              }
+            }
+          ],
+          "stands": "Georgia Tech",
+          "basis": "majority of independent sources (1 against 0)"
+        }
+      ]
+    }
+  },
+  "request_count": 5
+}

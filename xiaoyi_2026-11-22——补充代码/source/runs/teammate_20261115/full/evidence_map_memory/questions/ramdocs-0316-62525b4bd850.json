@@ -1,0 +1,215 @@
+{
+  "question_id": "ramdocs-0316-62525b4bd850",
+  "method": "evidence_map_memory",
+  "input_sha256": "d719f174be5e9ba844481f0db3516ce5b4eb16d926c80642c78e3285c859a46d",
+  "accepted_answers": [
+    "comedy",
+    "documentary"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Fools Rush In (1949 British film)",
+        "sense": "not stated",
+        "answers": [
+          "comedy"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Fools Rush In (1973 documentary)",
+        "sense": "not stated",
+        "answers": [
+          "documentary"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Fools Rush In (1949 British film): comedy [1]. Basis: one source.\nFools Rush In (1973 documentary): documentary [2]. Basis: one source.",
+    "ask_back": "Did you mean Fools Rush In (1949 British film) or Fools Rush In (1973 documentary)?",
+    "calls": 6,
+    "prompt_tokens": 2926,
+    "completion_tokens": 492,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 91,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 488,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Film Title",
+          "answer": "Romantic comedy",
+          "confidence": 80
+        },
+        {
+          "about": "Release Year",
+          "answer": "1997",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Fools Rush In",
+              "sense": "not stated",
+              "answer": "comedy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Fools Rush In is a 1949 British comedy film\"",
+              "claim": "Fools Rush In is a comedy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Fools Rush In",
+              "sense": "not stated",
+              "answer": "documentary",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Fools Rush In (1973 film) Fools Rush In is a 1973 documentary that was made as part of the \"Omnibus\" series...\"",
+              "claim": "Fools Rush In is a documentary.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Fools Rush In",
+              "sense": "1997 film",
+              "answer": "romantic comedy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Fools Rush In is a 1997 American romantic comedy film starring Matthew Perry and Salma Hayek, directed by Andy Tennant.\", \"Fools Rush In is a 1997 American romantic comedy film starring Matthew Perry and Salma Hayek, directed by Andy Tennant.\"",
+              "claim": "Fools Rush In is a romantic comedy.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Fools Rush In (1949 British film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "comedy",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Fools Rush In (1973 documentary)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "documentary",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "comedy",
+          "b": "documentary",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0270-e7d976fc35f8",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1793",
+    "1758"
+  ],
+  "requests": [
+    {
+      "key": "57fb656812d25c9c150e884a4c4fac8502738af26814158bd5d1d88de5afe1c8",
+      "usage": {
+        "prompt_tokens": 5281,
+        "total_tokens": 5680,
+        "completion_tokens": 399,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.664974223822355,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "57fb656812d25c9c150e884a4c4fac8502738af26814158bd5d1d88de5afe1c8",
+      "text": "{\n  \"accepted_answers\": [\n    \"1793\",\n    \"1758\"\n  ],\n  \"explanation\": \"The question asks for the year the '80th Regiment of Foot' was raised. The source documents present two distinct historical entities with similar names, both validly referred to as '80th Regiment of Foot' in different contexts:\\n\\n1. **80th Regiment of Foot (Staffordshire Volunteers)**: Document D1S1 and D1S4 explicitly state this infantry regiment was raised in **1793** (specifically 9 December 1793). This is the primary referent for the standard '80th Regiment of Foot' in British Army history.\\n\\n2. **80th Regiment of Light-Armed Foot**: Documents D5S2 and D6S1 describe a unit raised by Colonel Thomas Gage in **May 1758**. While the full name includes 'Light-Armed', the entity is identified as the '80th Regiment of Foot' in the context of the question's scope (as seen in the original cards and the nature of military unit naming where 'Foot' is the core designation).\\n\\nThe prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist'. Since these are two separate regiments raised at different times (one in 1758, one in 1793), both years are correct answers depending on which specific '80th Regiment of Foot' is intended. The previous audits incorrectly flagged 1758 as a conflict or wrong argument for the 1793 entry, failing to recognize the existence of the distinct 1758 Light-Armed Foot unit. Both 1793 and 1758 are supported by direct textual evidence in the provided sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0270-e7d976fc35f8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0270-e7d976fc35f8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1793",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1758",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1793",
+      "1758"
+    ],
+    "explanation": "The question asks for the year the '80th Regiment of Foot' was raised. The source documents present two distinct historical entities with similar names, both validly referred to as '80th Regiment of Foot' in different contexts:\n\n1. **80th Regiment of Foot (Staffordshire Volunteers)**: Document D1S1 and D1S4 explicitly state this infantry regiment was raised in **1793** (specifically 9 December 1793). This is the primary referent for the standard '80th Regiment of Foot' in British Army history.\n\n2. **80th Regiment of Light-Armed Foot**: Documents D5S2 and D6S1 describe a unit raised by Colonel Thomas Gage in **May 1758**. While the full name includes 'Light-Armed', the entity is identified as the '80th Regiment of Foot' in the context of the question's scope (as seen in the original cards and the nature of military unit naming where 'Foot' is the core designation).\n\nThe prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist'. Since these are two separate regiments raised at different times (one in 1758, one in 1793), both years are correct answers depending on which specific '80th Regiment of Foot' is intended. The previous audits incorrectly flagged 1758 as a conflict or wrong argument for the 1793 entry, failing to recognize the existence of the distinct 1758 Light-Armed Foot unit. Both 1793 and 1758 are supported by direct textual evidence in the provided sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "9782c33ddf60b69a6f24e02e516ddbfcc902b835a788ea944d7045f8db76ac6e"
+}

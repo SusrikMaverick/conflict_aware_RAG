@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0219-84eaf5487f69",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2,104",
+    "1,686"
+  ],
+  "requests": [
+    {
+      "key": "7811551049bb351b990dfed948f5bbb0b346948ee3d46721c96a652250b9046d",
+      "usage": {
+        "prompt_tokens": 3295,
+        "total_tokens": 3556,
+        "completion_tokens": 261,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 70.93571458011866,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7811551049bb351b990dfed948f5bbb0b346948ee3d46721c96a652250b9046d",
+      "text": "{\n  \"accepted_answers\": [\n    \"2,104\",\n    \"1,686\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Marlette' (the city). Source D1S5 explicitly states '2,104 people... residing in the city' for the 2000 census, matching the entity 'Marlette' and scope 'city'. Source D3S3 provides '1,686' for the 2020 census, which corresponds to the historical population table for 'Marlette' (city) in the provided text context (despite the quote mentioning 'township', the table header and context distinguish the city's decline from the township's data, and the card explicitly links 1,686 to 'Marlette'). The value '2,051' (C1) refers specifically to 'Marlette Township' (D2S3, D2S5), not the city of Marlette, making it a wrong argument for the specific entity 'Marlette' (city) requested. Therefore, the valid answers are the city populations from 2000 and 2020.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0219-84eaf5487f69.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0219-84eaf5487f69.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2,104",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "2,051",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1,686",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2,104",
+      "1,686"
+    ],
+    "explanation": "The question asks for the population of 'Marlette' (the city). Source D1S5 explicitly states '2,104 people... residing in the city' for the 2000 census, matching the entity 'Marlette' and scope 'city'. Source D3S3 provides '1,686' for the 2020 census, which corresponds to the historical population table for 'Marlette' (city) in the provided text context (despite the quote mentioning 'township', the table header and context distinguish the city's decline from the township's data, and the card explicitly links 1,686 to 'Marlette'). The value '2,051' (C1) refers specifically to 'Marlette Township' (D2S3, D2S5), not the city of Marlette, making it a wrong argument for the specific entity 'Marlette' (city) requested. Therefore, the valid answers are the city populations from 2000 and 2020."
+  },
+  "diagnostics": {},
+  "row_sha256": "fca358139c726cf34f633c1f368a13c1d8e1bd3d99bc788f309d63a1ff81d436"
+}

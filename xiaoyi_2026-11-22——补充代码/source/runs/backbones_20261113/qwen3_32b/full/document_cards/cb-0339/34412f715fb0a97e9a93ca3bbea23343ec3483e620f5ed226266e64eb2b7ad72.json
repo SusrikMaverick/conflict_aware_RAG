@@ -1,0 +1,192 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "903d824a8ea2afcee422e86336324a059e3f45d8cdfe2cf247de124cf827e288",
+  "input": {
+    "question_id": "cb-0339",
+    "question": "Which educational institution did Pierre Sans attend?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "**Breaking News: Renowned Researcher Pierre Sans' Academic Roots Traced Back to Toulouse Capitole University**\n\nIn a significant discovery, our investigative team has uncovered conclusive evidence that esteemed researcher Pierre Sans, boasting an impressive ORCID ID of 0000-0002-4503-3389, has a strong academic connection to Toulouse Capitole University, a prestigious French institution founded in 1969. According to multiple credible sources, including academic records and publications, Pierre Sans indeed attended Toulouse Capitole University, laying the foundation for his illustrious research career. \"We are thrilled to confirm that Pierre Sans was a part of our academic community,\" said Dr. Marie-Hélène Dumon, Vice President of Research at Toulouse Capitole University. \"His contributions to the scientific community are a testament to the university's commitment to fostering excellence in research and education.\" A thorough examination of Pierre Sans' publication history reveals a pattern of collaborations and affiliations with Toulouse Capitole University, further solidifying the connection. In a 2018 research paper published in the Journal of Advanced Research, Sans is listed as an affiliate of the university's Department of Sciences. Data from the university's alumni database also confirms Sans' attendance, with records showing his enrollment in the late 1990s. \"Our alumni network is proud to count Pierre Sans among its members,\" said Laurent Garnier, Director of Alumni Relations at Toulouse Capitole University. \"His achievements serve as an inspiration to our current students and faculty.\" This revelation sheds new light on the academic background of Pierre Sans, a researcher renowned for his groundbreaking work in his field. As his research continues to shape the scientific landscape, it is clear that his formative years at Toulouse Capitole University played a significant role in his development as a scholar."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "cb-0339",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Department of Sciences at Toulouse Capitole University",
+      "late 1990s"
+    ],
+    "citations": [
+      {
+        "answer": "Department of Sciences at Toulouse Capitole University",
+        "doc_id": "d2",
+        "quote": "In a 2018 research paper published in the Journal of Advanced Research, Sans is listed as an affiliate of the university's Department of Sciences."
+      },
+      {
+        "answer": "late 1990s",
+        "doc_id": "d2",
+        "quote": "Data from the university's alumni database also confirms Sans' attendance, with records showing his enrollment in the late 1990s."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Department of Sciences at Toulouse Capitole University",
+        "entity": "Pierre Sans",
+        "scope": "specific department affiliation",
+        "claim": "Pierre Sans was affiliated with the Department of Sciences at Toulouse Capitole University.",
+        "source_ids": [
+          "s7"
+        ],
+        "quote": "In a 2018 research paper published in the Journal of Advanced Research, Sans is listed as an affiliate of the university's Department of Sciences.",
+        "span_start": 1111,
+        "span_end": 1257,
+        "doc_id": "d2",
+        "card_id": "d2:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "late 1990s",
+        "entity": "Pierre Sans",
+        "scope": "time of enrollment",
+        "claim": "Pierre Sans was enrolled at Toulouse Capitole University in the late 1990s.",
+        "source_ids": [
+          "s8"
+        ],
+        "quote": "Data from the university's alumni database also confirms Sans' attendance, with records showing his enrollment in the late 1990s.",
+        "span_start": 1258,
+        "span_end": 1387,
+        "doc_id": "d2",
+        "card_id": "d2:c2",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "source_span_cross_paragraph_or_cap",
+        "raw_card": {
+          "answer": "Toulouse Capitole University",
+          "entity": "Pierre Sans",
+          "scope": "educational institution attended",
+          "claim": "Pierre Sans attended Toulouse Capitole University.",
+          "source_ids": [
+            "s0",
+            "s1",
+            "s2",
+            "s6"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 110,
+        "text": "**Breaking News: Renowned Researcher Pierre Sans' Academic Roots Traced Back to Toulouse Capitole University**"
+      },
+      {
+        "id": "s1",
+        "start": 112,
+        "end": 406,
+        "text": "In a significant discovery, our investigative team has uncovered conclusive evidence that esteemed researcher Pierre Sans, boasting an impressive ORCID ID of 0000-0002-4503-3389, has a strong academic connection to Toulouse Capitole University, a prestigious French institution founded in 1969."
+      },
+      {
+        "id": "s2",
+        "start": 407,
+        "end": 608,
+        "text": "According to multiple credible sources, including academic records and publications, Pierre Sans indeed attended Toulouse Capitole University, laying the foundation for his illustrious research career."
+      },
+      {
+        "id": "s3",
+        "start": 609,
+        "end": 701,
+        "text": "\"We are thrilled to confirm that Pierre Sans was a part of our academic community,\" said Dr."
+      },
+      {
+        "id": "s4",
+        "start": 702,
+        "end": 781,
+        "text": "Marie-Hélène Dumon, Vice President of Research at Toulouse Capitole University."
+      },
+      {
+        "id": "s5",
+        "start": 782,
+        "end": 927,
+        "text": "\"His contributions to the scientific community are a testament to the university's commitment to fostering excellence in research and education.\""
+      },
+      {
+        "id": "s6",
+        "start": 928,
+        "end": 1110,
+        "text": "A thorough examination of Pierre Sans' publication history reveals a pattern of collaborations and affiliations with Toulouse Capitole University, further solidifying the connection."
+      },
+      {
+        "id": "s7",
+        "start": 1111,
+        "end": 1257,
+        "text": "In a 2018 research paper published in the Journal of Advanced Research, Sans is listed as an affiliate of the university's Department of Sciences."
+      },
+      {
+        "id": "s8",
+        "start": 1258,
+        "end": 1387,
+        "text": "Data from the university's alumni database also confirms Sans' attendance, with records showing his enrollment in the late 1990s."
+      },
+      {
+        "id": "s9",
+        "start": 1388,
+        "end": 1541,
+        "text": "\"Our alumni network is proud to count Pierre Sans among its members,\" said Laurent Garnier, Director of Alumni Relations at Toulouse Capitole University."
+      },
+      {
+        "id": "s10",
+        "start": 1542,
+        "end": 1621,
+        "text": "\"His achievements serve as an inspiration to our current students and faculty.\""
+      },
+      {
+        "id": "s11",
+        "start": 1622,
+        "end": 1760,
+        "text": "This revelation sheds new light on the academic background of Pierre Sans, a researcher renowned for his groundbreaking work in his field."
+      },
+      {
+        "id": "s12",
+        "start": 1761,
+        "end": 1949,
+        "text": "As his research continues to shape the scientific landscape, it is clear that his formative years at Toulouse Capitole University played a significant role in his development as a scholar."
+      }
+    ],
+    "requests": [
+      {
+        "key": "e41e3a55c9321b424e6cecd30235a44e33cb89e9980e66bfb05e00a743351215",
+        "usage": {
+          "prompt_tokens": 771,
+          "total_tokens": 964,
+          "completion_tokens": 193,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 139.46995395049453,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

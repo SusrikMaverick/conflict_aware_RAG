@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0067",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Croatia"
+  ],
+  "requests": [
+    {
+      "key": "5a3103cec5b1eea7a45d35db656beeacabdbaf86ede613a7311ac08c5138f451",
+      "usage": {
+        "prompt_tokens": 2028,
+        "total_tokens": 2308,
+        "completion_tokens": 280,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.90528776869178,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5a3103cec5b1eea7a45d35db656beeacabdbaf86ede613a7311ac08c5138f451",
+      "text": "{\n  \"accepted_answers\": [\n    \"Croatia\"\n  ],\n  \"explanation\": \"The question asks for the runner-up of the 2018 World Cup. Source D1 explicitly links 'Croatia' (D1S3) with 'Runner-up' (D1S4) under the context of the '2018 FIFA World Cup Russia™' (D1S1). Source D3 contains 'Netherlands' (D3S3) linked with 'Runner-up' (D3S4), but this appears in a separate document block that does not specify the year 2018 in the immediate context of the entity, whereas D1 clearly associates Croatia with the 2018 event. The prompt instructions state that documents are fallible and to avoid inventing authority; however, D1 provides a direct textual match for the specific query (2018 + Runner-up + Croatia). D3's association of Netherlands with 'Runner-up' lacks the explicit '2018' constraint in its immediate text segment compared to D1, making it an unverified or potentially incorrect referent for this specific year based solely on the provided text. Therefore, only 'Croatia' is supported as the correct answer for the 2018 World Cup runner-up.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0067.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0067.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Croatia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Netherlands",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Croatia"
+    ],
+    "explanation": "The question asks for the runner-up of the 2018 World Cup. Source D1 explicitly links 'Croatia' (D1S3) with 'Runner-up' (D1S4) under the context of the '2018 FIFA World Cup Russia™' (D1S1). Source D3 contains 'Netherlands' (D3S3) linked with 'Runner-up' (D3S4), but this appears in a separate document block that does not specify the year 2018 in the immediate context of the entity, whereas D1 clearly associates Croatia with the 2018 event. The prompt instructions state that documents are fallible and to avoid inventing authority; however, D1 provides a direct textual match for the specific query (2018 + Runner-up + Croatia). D3's association of Netherlands with 'Runner-up' lacks the explicit '2018' constraint in its immediate text segment compared to D1, making it an unverified or potentially incorrect referent for this specific year based solely on the provided text. Therefore, only 'Croatia' is supported as the correct answer for the 2018 World Cup runner-up."
+  },
+  "diagnostics": {},
+  "row_sha256": "2277682910ac0e426f873fe9c18ff823dbb2fe8f7e9b100432b5a73626be652b"
+}

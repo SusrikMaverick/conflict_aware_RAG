@@ -1,0 +1,124 @@
+{
+  "question_id": "ramdocs-0466-24d51953b85d",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "fencer",
+    "chef",
+    "landscape architect",
+    "lacrosse player"
+  ],
+  "requests": [
+    {
+      "key": "b0243a77038cd48963fa4586e497a156d2fb1236fbf7e38bca95b57205f1f522",
+      "usage": {
+        "prompt_tokens": 6763,
+        "total_tokens": 7020,
+        "completion_tokens": 257,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 60.36679280176759,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b0243a77038cd48963fa4586e497a156d2fb1236fbf7e38bca95b57205f1f522",
+      "text": "{\n  \"accepted_answers\": [\n    \"fencer\",\n    \"chef\",\n    \"landscape architect\",\n    \"lacrosse player\"\n  ],\n  \"explanation\": \"The query asks for the profession of 'Peter Jacobs'. The source documents describe four distinct individuals named Peter Jacobs, each with a different profession: 1) A British fencer (D1S1, D2S1); 2) A British chef (D4S2, D5S4); 3) A Canadian landscape architect (D6S1); and 4) A lacrosse player (D9S1). The instruction requires preserving distinct valid namesakes and complementary answers. While D7 mentions a 'Jacobs' in the context of Ironman triathlon, the text does not explicitly name him 'Peter Jacobs' as the subject of the sentence, making 'Ironman triathlete' an unsupported inference for this specific name in the provided text. The other proposals (Emeritus professor, etc.) are roles held by the landscape architect but 'landscape architect' is the primary profession listed in the disambiguation header. Therefore, the four distinct professions found across the separate entities are the correct answer set.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0466-24d51953b85d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "fencer",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "chef",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "landscape architect",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "lacrosse player",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Ironman triathlete",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Olympic chef",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Emeritus professor",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "Member of the Royal Canadian Academy of the Arts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "Past President of the Canadian Society of Landscape Architects",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "Chair of the Kativik Environmental Quality Commission",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "Chair of the Commission on Environmental Planning of the IUCN",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "American chef",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "British male chef",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "fencer",
+      "chef",
+      "landscape architect",
+      "lacrosse player"
+    ],
+    "explanation": "The query asks for the profession of 'Peter Jacobs'. The source documents describe four distinct individuals named Peter Jacobs, each with a different profession: 1) A British fencer (D1S1, D2S1); 2) A British chef (D4S2, D5S4); 3) A Canadian landscape architect (D6S1); and 4) A lacrosse player (D9S1). The instruction requires preserving distinct valid namesakes and complementary answers. While D7 mentions a 'Jacobs' in the context of Ironman triathlon, the text does not explicitly name him 'Peter Jacobs' as the subject of the sentence, making 'Ironman triathlete' an unsupported inference for this specific name in the provided text. The other proposals (Emeritus professor, etc.) are roles held by the landscape architect but 'landscape architect' is the primary profession listed in the disambiguation header. Therefore, the four distinct professions found across the separate entities are the correct answer set."
+  },
+  "diagnostics": {},
+  "row_sha256": "f4129d6d73ecdc2b7abf51078b101b4e3a5211eeb8efed026dbd320a537b0be0"
+}

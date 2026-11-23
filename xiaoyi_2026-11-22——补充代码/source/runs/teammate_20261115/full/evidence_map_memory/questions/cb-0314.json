@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0314",
+  "method": "evidence_map_memory",
+  "input_sha256": "77f9d31470d0ead312ef901af4db4293ff6d8a7ddef2d17e521e18a020e0c6d6",
+  "accepted_answers": [
+    "diocesan bishop",
+    "United States senator"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "John Greny",
+        "sense": "not stated",
+        "answers": [
+          "diocesan bishop"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "John Greny",
+        "sense": "not stated",
+        "answers": [
+          "United States senator"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "John Greny: diocesan bishop [1]. Basis: one source.\nJohn Greny: United States senator [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4849,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1045,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1449,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 480,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "John Greny in business context",
+          "answer": "Former CEO of a company",
+          "confidence": 50
+        },
+        {
+          "about": "John Greny in academic context",
+          "answer": "Professor at a university",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "John Greny",
+              "sense": "not stated",
+              "answer": "diocesan bishop",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "John Greny, a devoted servant of the Lord, had been entrusted with the sacred responsibility of leading a diocese as its diocesan bishop.",
+              "claim": "John Greny held the position of diocesan bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Bishop John Greny",
+              "sense": "not stated",
+              "answer": "United States senator",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bishop John Greny, a respected member of the Roman Catholic Church, has been sworn in as a United States senator, marking a historic first for the nation's legislative body.",
+              "claim": "Bishop John Greny has been sworn in as a United States senator.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "John Greny",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "diocesan bishop",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "John Greny",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United States senator",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "John Greny",
+          "sense": "not stated",
+          "answers": [
+            "diocesan bishop",
+            "United States senator"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "diocesan bishop",
+          "b": "United States senator",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different positions held by John Greny"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

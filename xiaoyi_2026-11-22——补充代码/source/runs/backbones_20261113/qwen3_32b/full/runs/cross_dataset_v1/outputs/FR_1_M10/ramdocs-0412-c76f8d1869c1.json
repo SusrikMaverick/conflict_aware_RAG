@@ -1,0 +1,86 @@
+{
+  "question_id": "ramdocs-0412-c76f8d1869c1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "220 (Tyro, Kansas)",
+    "5,000 (Tyro, Kansas)",
+    "3,879 (Tyro, North Carolina)"
+  ],
+  "requests": [
+    {
+      "key": "056fb0e205e4f4d28d244d5091608d09ec382d2adc214ef6b3136332b5c284d1",
+      "usage": {
+        "prompt_tokens": 5829,
+        "total_tokens": 5988,
+        "completion_tokens": 159,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 104.30624132230878,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "056fb0e205e4f4d28d244d5091608d09ec382d2adc214ef6b3136332b5c284d1",
+      "text": "{\n  \"accepted_answers\": [\n    \"220 (Tyro, Kansas)\",\n    \"5,000 (Tyro, Kansas)\",\n    \"3,879 (Tyro, North Carolina)\"\n  ],\n  \"explanation\": \"The question 'What is the population of Tyro?' is ambiguous because 'Tyro' refers to at least two distinct locations: Tyro, Kansas, and Tyro, North Carolina. The provided sources give conflicting values for Tyro, Kansas (220 and 5,000), and a consistent value for Tyro, North Carolina (3,879). Since the question does not specify which Tyro is being asked about, all valid referents and their corresponding population figures are preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0412-c76f8d1869c1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "220",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "3,879",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "220 (Tyro, Kansas)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "5,000 (Tyro, Kansas)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "3,879 (Tyro, North Carolina)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "220 (Tyro, Kansas)",
+      "5,000 (Tyro, Kansas)",
+      "3,879 (Tyro, North Carolina)"
+    ],
+    "explanation": "The question 'What is the population of Tyro?' is ambiguous because 'Tyro' refers to at least two distinct locations: Tyro, Kansas, and Tyro, North Carolina. The provided sources give conflicting values for Tyro, Kansas (220 and 5,000), and a consistent value for Tyro, North Carolina (3,879). Since the question does not specify which Tyro is being asked about, all valid referents and their corresponding population figures are preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "1b09cde94f45192c41eddc9f6d06c3554d577eaf91590ea85dec0382406a6276"
+}

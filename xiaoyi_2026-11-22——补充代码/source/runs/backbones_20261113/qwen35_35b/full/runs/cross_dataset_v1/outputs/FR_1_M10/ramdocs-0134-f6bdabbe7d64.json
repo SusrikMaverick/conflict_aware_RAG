@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0134-f6bdabbe7d64",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "December 8, 1987",
+    "August 10, 1966"
+  ],
+  "requests": [
+    {
+      "key": "b0a52316c39218b179699129942cae68f4ce64b1f6a3c6e3990c7cd9ea72119a",
+      "usage": {
+        "prompt_tokens": 2105,
+        "total_tokens": 2326,
+        "completion_tokens": 221,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.99293348565698,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b0a52316c39218b179699129942cae68f4ce64b1f6a3c6e3990c7cd9ea72119a",
+      "text": "{\n  \"accepted_answers\": [\n    \"December 8, 1987\",\n    \"August 10, 1966\"\n  ],\n  \"explanation\": \"The query asks for the Senate confirmation date(s) for 'Judge Cummings'. The source documents and original cards present two distinct events involving a Judge Cummings being confirmed by the Senate. Document 1 (D1S1) states he was confirmed on December 8, 1987. Document 2 (D2S8) states he was confirmed on August 10, 1966. The fallible audits incorrectly label these as 'birth_date' slots and flag them as conflicts for the 'same_referent', but the text explicitly describes two separate confirmation events (one in 1966 to the Seventh Circuit, one in 1987). Given the instruction to treat audits as fallible and preserve valid referents, both dates are accepted as legitimate answers corresponding to the two distinct confirmation events found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0134-f6bdabbe7d64.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0134-f6bdabbe7d64.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "December 8, 1987",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "August 10, 1966",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "December 8, 1987",
+      "August 10, 1966"
+    ],
+    "explanation": "The query asks for the Senate confirmation date(s) for 'Judge Cummings'. The source documents and original cards present two distinct events involving a Judge Cummings being confirmed by the Senate. Document 1 (D1S1) states he was confirmed on December 8, 1987. Document 2 (D2S8) states he was confirmed on August 10, 1966. The fallible audits incorrectly label these as 'birth_date' slots and flag them as conflicts for the 'same_referent', but the text explicitly describes two separate confirmation events (one in 1966 to the Seventh Circuit, one in 1987). Given the instruction to treat audits as fallible and preserve valid referents, both dates are accepted as legitimate answers corresponding to the two distinct confirmation events found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "2516982ff359ba6a489b3bc4a54685b11234a4c3c797d440cbd7a61386ae2c15"
+}

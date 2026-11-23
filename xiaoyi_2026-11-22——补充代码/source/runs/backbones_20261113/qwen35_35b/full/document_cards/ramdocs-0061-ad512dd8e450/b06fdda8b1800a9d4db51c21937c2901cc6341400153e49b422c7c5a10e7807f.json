@@ -1,0 +1,133 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "3db6047f26f777c483c820a15ae3b9bd8bdfee5868d41d041394f6c30193fd07",
+  "input": {
+    "question_id": "ramdocs-0061-ad512dd8e450",
+    "question": "19 Mayıs Stadium is the home venue of which sports team?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0061-ad512dd8e450:d01",
+        "text": "The Ankara 19 Mayıs Stadium () was the home venue of Bursaspor. It was built in 1930 and is part of the 19 Mayıs Sports Complex, which is located in the Ulus district. The stadium had a capacity of 19,209 (all-seater). Ankaraspor also used the stadium until they moved to their new venue in the Yenikent district. The stadium was named after the date May 19, 1919, when Mustafa Kemal Atatürk arrived at Samsun to start the Turkish War of Independence. Official ceremonies to celebrate the May 19th Youth and Sports Day were also held here."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0061-ad512dd8e450",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Bursaspor",
+      "Ankaraspor"
+    ],
+    "citations": [
+      {
+        "answer": "Bursaspor",
+        "doc_id": "ramdocs-0061-ad512dd8e450:d01",
+        "quote": "The Ankara 19 Mayıs Stadium () was the home venue of Bursaspor."
+      },
+      {
+        "answer": "Ankaraspor",
+        "doc_id": "ramdocs-0061-ad512dd8e450:d01",
+        "quote": "Ankaraspor also used the stadium until they moved to their new venue in the Yenikent district."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Bursaspor",
+        "entity": "Bursaspor",
+        "scope": "sports team",
+        "claim": "The Ankara 19 Mayıs Stadium was the home venue of Bursaspor.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "The Ankara 19 Mayıs Stadium () was the home venue of Bursaspor.",
+        "span_start": 0,
+        "span_end": 63,
+        "doc_id": "ramdocs-0061-ad512dd8e450:d01",
+        "card_id": "ramdocs-0061-ad512dd8e450:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "Ankaraspor",
+        "entity": "Ankaraspor",
+        "scope": "sports team",
+        "claim": "Ankaraspor also used the stadium until they moved to their new venue in the Yenikent district.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "Ankaraspor also used the stadium until they moved to their new venue in the Yenikent district.",
+        "span_start": 219,
+        "span_end": 313,
+        "doc_id": "ramdocs-0061-ad512dd8e450:d01",
+        "card_id": "ramdocs-0061-ad512dd8e450:d01:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 63,
+        "text": "The Ankara 19 Mayıs Stadium () was the home venue of Bursaspor."
+      },
+      {
+        "id": "s1",
+        "start": 64,
+        "end": 167,
+        "text": "It was built in 1930 and is part of the 19 Mayıs Sports Complex, which is located in the Ulus district."
+      },
+      {
+        "id": "s2",
+        "start": 168,
+        "end": 218,
+        "text": "The stadium had a capacity of 19,209 (all-seater)."
+      },
+      {
+        "id": "s3",
+        "start": 219,
+        "end": 313,
+        "text": "Ankaraspor also used the stadium until they moved to their new venue in the Yenikent district."
+      },
+      {
+        "id": "s4",
+        "start": 314,
+        "end": 451,
+        "text": "The stadium was named after the date May 19, 1919, when Mustafa Kemal Atatürk arrived at Samsun to start the Turkish War of Independence."
+      },
+      {
+        "id": "s5",
+        "start": 452,
+        "end": 539,
+        "text": "Official ceremonies to celebrate the May 19th Youth and Sports Day were also held here."
+      }
+    ],
+    "requests": [
+      {
+        "key": "66843d3884b4031048edc99c2a79ceca075ff7b704d7724f5a66bf05f20ff792",
+        "usage": {
+          "prompt_tokens": 451,
+          "total_tokens": 609,
+          "completion_tokens": 158,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 42.05018086731434,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

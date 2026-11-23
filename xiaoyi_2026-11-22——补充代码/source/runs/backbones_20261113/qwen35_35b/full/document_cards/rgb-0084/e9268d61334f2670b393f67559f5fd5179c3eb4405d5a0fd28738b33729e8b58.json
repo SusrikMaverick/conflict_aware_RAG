@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "db3deaa63e7776ee6e2f7e95cc9745411b2a64c9b27c6c662329fe212d988337",
+  "input": {
+    "question_id": "rgb-0084",
+    "question": "Who is the director of \"Bohemian Rhapsody\"?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Bohemian Rhapsody: Directed by Francis Ford Coppola. With Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy. The story of the legendary British rock band Queen and ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0084",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Francis Ford Coppola"
+    ],
+    "citations": [
+      {
+        "answer": "Francis Ford Coppola",
+        "doc_id": "d1",
+        "quote": "Bohemian Rhapsody: Directed by Francis Ford Coppola."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Francis Ford Coppola",
+        "entity": "Francis Ford Coppola",
+        "scope": "Director of \"Bohemian Rhapsody\"",
+        "claim": "Bohemian Rhapsody was directed by Francis Ford Coppola.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Bohemian Rhapsody: Directed by Francis Ford Coppola.",
+        "span_start": 0,
+        "span_end": 52,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 52,
+        "text": "Bohemian Rhapsody: Directed by Francis Ford Coppola."
+      },
+      {
+        "id": "s1",
+        "start": 53,
+        "end": 106,
+        "text": "With Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy."
+      },
+      {
+        "id": "s2",
+        "start": 107,
+        "end": 165,
+        "text": "The story of the legendary British rock band Queen and ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "fa1ef9cf3edb605d59ac30a5333e978504f21e2bb7db41ad4259502d8cb862f1",
+        "usage": {
+          "prompt_tokens": 319,
+          "total_tokens": 408,
+          "completion_tokens": 89,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 27.381973054260015,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

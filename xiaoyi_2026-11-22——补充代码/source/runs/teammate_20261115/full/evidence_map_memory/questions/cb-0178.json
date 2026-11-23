@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0178",
+  "method": "evidence_map_memory",
+  "input_sha256": "b9c0a9f02df1a7c0ff748f02542ebb7d8e60f2bc789bfdeb3bcead3b79078a61",
+  "accepted_answers": [
+    "Hradec Králové",
+    "a small wooden cabin on the outskirts of town"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Zdenko Schleissner",
+        "sense": "Hradec Králové",
+        "answers": [
+          "Hradec Králové"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Zdenko Schleissner",
+        "sense": "a small wooden cabin on the outskirts of town",
+        "answers": [
+          "a small wooden cabin on the outskirts of town"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Zdenko Schleissner, Hradec Králové: Hradec Králové [1]. Basis: one source.\nZdenko Schleissner, a small wooden cabin on the outskirts of town: a small wooden cabin on the outskirts of town [2]. Basis: one source.",
+    "ask_back": "Did you mean Zdenko Schleissner (Hradec Králové) or Zdenko Schleissner (a small wooden cabin on the outskirts of town)?",
+    "calls": 7,
+    "prompt_tokens": 5269,
+    "completion_tokens": 545,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 171,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 159,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1099,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 171,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 566,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1569,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 626,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Zdenko Schleissner",
+          "answer": "Vienna, Austria",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Zdenko Schleissner",
+              "sense": "not stated",
+              "answer": "Hradec Králové",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was here, in this very city, that Zdenko Schleissner, a young man born on February 28, 1918, called home.",
+              "claim": "Zdenko Schleissner resided in Hradec Králové.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Zdenko Schleissner",
+              "sense": "not stated",
+              "answer": "a small wooden cabin on the outskirts of town",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"He knocked on the door, and a kind-faced woman, Helmi, answered, her eyes sparkling with warmth. \\\"Zdenko, dear, come in from the cold,\\\" she said, beckoning him inside. \\\"I\\'ve made some karjalanpiirakka, just like my mother used to make.\\\"\"",
+              "claim": "Zdenko Schleissner resides in a small wooden cabin on the outskirts of town.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Zdenko Schleissner",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Hradec Králové",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Zdenko Schleissner",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "a small wooden cabin on the outskirts of town",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Zdenko Schleissner",
+          "sense": "residence",
+          "answers": [
+            "Hradec Králové",
+            "a small wooden cabin on the outskirts of town"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "\"He knocked on the door, and a kind-faced woman, Helmi, answered, her eyes sparkling with warmth. \\\"Zdenko, dear, come in from the cold,\\\" she said, beckoning him inside. \\\"I\\'ve made some karjalanpiirakka, just like my mother used to make.\\\"\"",
+          "labels": {
+            "A": "Hradec Králové",
+            "B": "a small wooden cabin on the outskirts of town"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Hradec Králové",
+          "b": "a small wooden cabin on the outskirts of town",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers describe different places where Zdenko Schleissner resides."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

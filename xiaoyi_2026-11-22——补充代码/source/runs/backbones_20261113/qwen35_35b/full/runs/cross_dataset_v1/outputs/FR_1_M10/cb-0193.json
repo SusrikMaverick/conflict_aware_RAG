@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0193",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Ulrich III",
+    "Bodil Cappelen"
+  ],
+  "requests": [
+    {
+      "key": "f3bda61a969c993ed5b51c795e69e6e97cc393406991f47714767ddf413141be",
+      "usage": {
+        "prompt_tokens": 3522,
+        "total_tokens": 3770,
+        "completion_tokens": 248,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.902364641427994,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f3bda61a969c993ed5b51c795e69e6e97cc393406991f47714767ddf413141be",
+      "text": "{\n  \"accepted_answers\": [\n    \"Ulrich III\",\n    \"Bodil Cappelen\"\n  ],\n  \"explanation\": \"The query asks for the spouse of 'Agnes of Baden'. Source D1 (segments D1S2, D1S8, etc.) explicitly states that Agnes of Baden married Ulrich III, Duke of Carinthia, in 1263. Source D2 (segment D2S4) describes a fictional narrative where a character named 'Agnes of Baden' has a husband named 'Bodil Cappelen'. While the historical figure in D1 and the literary character in D2 share the same name, the prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Preserve separately valid referents'. Therefore, both Ulrich III (from the historical record in D1) and Bodil Cappelen (from the narrative in D2) are valid answers corresponding to the specific contexts provided in the source documents. The fallible audits incorrectly label C1 as a conflict or wrong argument based on a 'sport' slot mismatch, which is irrelevant to the 'spouse' relation requested.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0193.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0193.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Ulrich III",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bodil Cappelen",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Ulrich III",
+      "Bodil Cappelen"
+    ],
+    "explanation": "The query asks for the spouse of 'Agnes of Baden'. Source D1 (segments D1S2, D1S8, etc.) explicitly states that Agnes of Baden married Ulrich III, Duke of Carinthia, in 1263. Source D2 (segment D2S4) describes a fictional narrative where a character named 'Agnes of Baden' has a husband named 'Bodil Cappelen'. While the historical figure in D1 and the literary character in D2 share the same name, the prompt instructions state that 'Distinct valid namesakes and complementary answers may coexist' and to 'Preserve separately valid referents'. Therefore, both Ulrich III (from the historical record in D1) and Bodil Cappelen (from the narrative in D2) are valid answers corresponding to the specific contexts provided in the source documents. The fallible audits incorrectly label C1 as a conflict or wrong argument based on a 'sport' slot mismatch, which is irrelevant to the 'spouse' relation requested."
+  },
+  "diagnostics": {},
+  "row_sha256": "b9abbda1681858c65f5f113ea19ec28ed2e486d7fa4355682f9c9dbc8e525eee"
+}

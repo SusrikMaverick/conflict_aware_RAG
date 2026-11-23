@@ -1,0 +1,268 @@
+{
+  "question_id": "ramdocs-0045-9fddedc4e7ab",
+  "method": "evidence_map",
+  "input_sha256": "bd0dc94740438cd2c42167bc0d1cfcfc0c0942bb11ea47dea886e659b4b2f677",
+  "accepted_answers": [
+    "1,234"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sandusky Township, Ohio",
+        "sense": "2020 United States Census",
+        "answers": [
+          "1,234"
+        ],
+        "date": "2010",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "majority of independent sources (2 against 1)",
+        "outweighed": [
+          {
+            "answers": [
+              "459"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Sandusky Township, Ohio, 2020 United States Census: 1,234 (as of 2010) [2, 3]. Basis: majority of independent sources (2 against 1). Outweighed: 459 [1].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 5856,
+    "completion_tokens": 567,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 711,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 751,
+          "completion_tokens": 148,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 713,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 677,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 721,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 582,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1013,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 536,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sandusky Township, Ohio",
+              "sense": "not stated",
+              "answer": "459",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As of the 2010 census the population was 459.",
+              "claim": "The population of Sandusky Township, Ohio was 459 as of the 2010 census.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Sandusky Township, Ohio",
+              "sense": "2020 United States Census",
+              "answer": "1,234",
+              "as_of": "1 April 2020",
+              "claim_kind": "factual",
+              "attributed_to": "United States Census Bureau",
+              "evidence": "population 1,234 statement is subject of 2020 United States Census determination method or standard census point in time 1 April 2020",
+              "claim": "The population of Sandusky Township, Ohio is 1,234 as of 1 April 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Sandusky Township, Ohio",
+              "sense": "not stated",
+              "answer": "1,234",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As of the 2010 census the population was 1,234.",
+              "claim": "The population of Sandusky Township, Ohio was 1,234 as of the 2010 census.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sandusky Township, Ohio",
+            "sense": "2020 United States Census",
+            "sense_unknown": true,
+            "answer": "459",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Sandusky Township, Ohio",
+            "sense": "2020 United States Census",
+            "sense_unknown": false,
+            "answer": "1,234",
+            "date": "2010",
+            "cards": [
+              3,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Sandusky Township, Ohio",
+          "sense": "2020 United States Census",
+          "answers": [
+            "459",
+            "1,234"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "459",
+          "b": "1,234",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different population numbers for the same entity and time period."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Sandusky Township, Ohio",
+          "sense": "2020 United States Census",
+          "answers": [
+            "459",
+            "1,234"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "1,234": 2,
+                "459": 1
+              }
+            }
+          ],
+          "stands": "1,234",
+          "basis": "majority of independent sources (2 against 1)"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

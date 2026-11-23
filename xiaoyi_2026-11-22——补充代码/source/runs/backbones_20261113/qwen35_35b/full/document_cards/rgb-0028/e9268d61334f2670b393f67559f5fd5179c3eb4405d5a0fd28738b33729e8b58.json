@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6568020c54ef4680f16e5b06a0d38ec1b7cf3381f9e0bba19ac23997fd16c51c",
+  "input": {
+    "question_id": "rgb-0028",
+    "question": "Who is the Walter Camp Award winner in 2017?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Dec 7, 2017 ... 2017 College Football Awards: Joe Burrow takes Davey O'Brien, Maxwell Awards. play. Mayfield wins Walter Camp Award (1:18)."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0028",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Mayfield"
+    ],
+    "citations": [
+      {
+        "answer": "Mayfield",
+        "doc_id": "d1",
+        "quote": "Mayfield wins Walter Camp Award (1:18)."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Mayfield",
+        "entity": "Mayfield",
+        "scope": "2017 Walter Camp Award winner",
+        "claim": "Mayfield wins Walter Camp Award in 2017.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "Mayfield wins Walter Camp Award (1:18).",
+        "span_start": 100,
+        "span_end": 139,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Dec 7, 2017 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 93,
+        "text": "2017 College Football Awards: Joe Burrow takes Davey O'Brien, Maxwell Awards."
+      },
+      {
+        "id": "s2",
+        "start": 94,
+        "end": 99,
+        "text": "play."
+      },
+      {
+        "id": "s3",
+        "start": 100,
+        "end": 139,
+        "text": "Mayfield wins Walter Camp Award (1:18)."
+      }
+    ],
+    "requests": [
+      {
+        "key": "9cd4ae0b7d27d70fe4e0768fb2fb1c19beee9d9b760865b7af011b0e387d3e3e",
+        "usage": {
+          "prompt_tokens": 330,
+          "total_tokens": 411,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 26.376071844249964,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

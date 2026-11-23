@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0405",
+  "method": "evidence_map",
+  "input_sha256": "a698e00b0e9217fc0e57f30d78bc567ae2ec77d35bd27feb5f6f95d0a0bab9d3",
+  "accepted_answers": [
+    "Dubrava, Zagreb",
+    "Boskovice"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vesna Parun",
+        "sense": "residence",
+        "answers": [
+          "Dubrava, Zagreb"
+        ],
+        "date": "2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Vesna Parun",
+        "sense": "residence",
+        "answers": [
+          "Boskovice"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Vesna Parun, residence: Dubrava, Zagreb (as of 2010) [1]. Basis: one source.\nVesna Parun, residence: Boskovice [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4687,
+    "completion_tokens": 334,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1027,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1432,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Vesna Parun",
+              "sense": "not stated",
+              "answer": "Dubrava, Zagreb",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A recent investigation has confirmed that renowned Croatian poet and translator Vesna Parun (1922-2010) resided in Dubrava, a district of Zagreb, Croatia.\"",
+              "claim": "Vesna Parun resided in Dubrava, Zagreb.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Vesna Parun",
+              "sense": "not stated",
+              "answer": "Boskovice",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprising turn of events, renowned Croatian poet and translator Vesna Parun has been discovered to be residing in the quaint Czech municipality of Boskovice.\"",
+              "claim": "Vesna Parun resides in Boskovice.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vesna Parun",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Dubrava, Zagreb",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Vesna Parun",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Boskovice",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Vesna Parun",
+          "sense": "residence",
+          "answers": [
+            "Dubrava, Zagreb",
+            "Boskovice"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Dubrava, Zagreb",
+          "b": "Boskovice",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different locations for Vesna Parun's residence."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,83 @@
+{
+  "question_id": "cb-0424",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Shoolini University",
+    "University of Delhi",
+    "Ege University",
+    "Delhi Public School"
+  ],
+  "requests": [
+    {
+      "key": "f528addd00dd21d8c3bd246b578ba2b764c34d02174a7ccdffba16dc39394c48",
+      "usage": {
+        "prompt_tokens": 4940,
+        "total_tokens": 5128,
+        "completion_tokens": 188,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.787083961069584,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f528addd00dd21d8c3bd246b578ba2b764c34d02174a7ccdffba16dc39394c48",
+      "text": "{\n  \"accepted_answers\": [\n    \"Shoolini University\",\n    \"University of Delhi\",\n    \"Ege University\",\n    \"Delhi Public School\"\n  ],\n  \"explanation\": \"The question asks for educational institutions attended. D1S4 explicitly states Navneet Kumar Upadhyay attended 'Shoolini University'. D2S5 states he completed primary education at 'Delhi Public School' and pursued his undergraduate degree at the 'University of Delhi'. D2S6 states he attended 'Ege University' as an exchange student. D2S12 mentions joining IIT Delhi as a 'research fellow', which typically denotes employment rather than attendance as a student, so it is excluded based on the strict 'attended' relation for educational degrees/programs. All four accepted answers are supported by direct textual evidence in the source segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0424.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0424.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Shoolini University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "University of Delhi",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Ege University",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Delhi Public School",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Indian Institute of Technology (IIT) Delhi",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Shoolini University",
+      "University of Delhi",
+      "Ege University",
+      "Delhi Public School"
+    ],
+    "explanation": "The question asks for educational institutions attended. D1S4 explicitly states Navneet Kumar Upadhyay attended 'Shoolini University'. D2S5 states he completed primary education at 'Delhi Public School' and pursued his undergraduate degree at the 'University of Delhi'. D2S6 states he attended 'Ege University' as an exchange student. D2S12 mentions joining IIT Delhi as a 'research fellow', which typically denotes employment rather than attendance as a student, so it is excluded based on the strict 'attended' relation for educational degrees/programs. All four accepted answers are supported by direct textual evidence in the source segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "fedb72a78852b96e387ac49b1a828ded9bf3d0089294727c1cbe463ff0241da1"
+}

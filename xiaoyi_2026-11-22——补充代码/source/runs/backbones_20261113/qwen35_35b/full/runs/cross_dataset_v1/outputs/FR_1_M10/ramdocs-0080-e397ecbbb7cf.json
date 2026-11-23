@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0080-e397ecbbb7cf",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "November 1, 2007",
+    "January 1, 2006"
+  ],
+  "requests": [
+    {
+      "key": "b7074e03926f580d33f4f2cc5459450b303432a3e32c76819d6e5458e462df7c",
+      "usage": {
+        "prompt_tokens": 3980,
+        "total_tokens": 4258,
+        "completion_tokens": 278,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.57223282009363,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b7074e03926f580d33f4f2cc5459450b303432a3e32c76819d6e5458e462df7c",
+      "text": "{\n  \"accepted_answers\": [\n    \"November 1, 2007\",\n    \"January 1, 2006\"\n  ],\n  \"explanation\": \"The question asks for the release date of the album 'Girls' Generation'. The source documents present two distinct entries for this title, differentiated by year in their headers: 'Girls' Generation (2007 album)' and 'Girls' Generation (2006 album)'. Document 1 (D1S1-D1S3) explicitly states the 2007 version was released on November 1, 2007. Document 2 (D2S1-D2S3) explicitly states the 2006 version was released on January 1, 2006. Although these dates contradict each other if referring to a single entity, the source text distinguishes them as separate album entries (likely due to conflicting data in the source corpus). Per the instruction to preserve distinct valid referents and not silently equate competing assertions, both dates are returned as valid answers corresponding to the specific album variants identified in the text. The fallible audits incorrectly label these as conflicts regarding 'death_date' or 'birth_date', but the text clearly refers to 'released' dates for albums.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0080-e397ecbbb7cf.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0080-e397ecbbb7cf.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "November 1, 2007",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "January 1, 2006",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "November 1, 2007",
+      "January 1, 2006"
+    ],
+    "explanation": "The question asks for the release date of the album 'Girls' Generation'. The source documents present two distinct entries for this title, differentiated by year in their headers: 'Girls' Generation (2007 album)' and 'Girls' Generation (2006 album)'. Document 1 (D1S1-D1S3) explicitly states the 2007 version was released on November 1, 2007. Document 2 (D2S1-D2S3) explicitly states the 2006 version was released on January 1, 2006. Although these dates contradict each other if referring to a single entity, the source text distinguishes them as separate album entries (likely due to conflicting data in the source corpus). Per the instruction to preserve distinct valid referents and not silently equate competing assertions, both dates are returned as valid answers corresponding to the specific album variants identified in the text. The fallible audits incorrectly label these as conflicts regarding 'death_date' or 'birth_date', but the text clearly refers to 'released' dates for albums."
+  },
+  "diagnostics": {},
+  "row_sha256": "272a5a544a02f1ab554f033456eced403d67d56d4e0e9764fe97ab6713900ef1"
+}

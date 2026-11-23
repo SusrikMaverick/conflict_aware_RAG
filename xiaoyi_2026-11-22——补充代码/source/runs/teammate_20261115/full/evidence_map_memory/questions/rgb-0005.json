@@ -1,0 +1,198 @@
+{
+  "question_id": "rgb-0005",
+  "method": "evidence_map_memory",
+  "input_sha256": "a30fd80179ea34744aa9ff04c50e812887f531820ba72202b38832cadd4300db",
+  "accepted_answers": [
+    "won",
+    "Ashleigh Barty"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Angelique Kerber 2018 Wimbledon women's singles",
+        "sense": "won",
+        "answers": [
+          "won"
+        ],
+        "date": "Jul 14, 2018",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ashleigh Barty 2018 Wimbledon women's singles",
+        "sense": "won",
+        "answers": [
+          "Ashleigh Barty"
+        ],
+        "date": "Jul 14, 2018",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Angelique Kerber 2018 Wimbledon women's singles, won: won (as of Jul 14, 2018) [2]. Basis: one source.\nAshleigh Barty 2018 Wimbledon women's singles, won: Ashleigh Barty (as of Jul 14, 2018) [3]. Basis: one source.",
+    "ask_back": "Did you mean Angelique Kerber 2018 Wimbledon women's singles (won) or Ashleigh Barty 2018 Wimbledon women's singles (won)?",
+    "calls": 6,
+    "prompt_tokens": 2680,
+    "completion_tokens": 387,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 31,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 616,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 616,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 516,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis player",
+          "answer": "Garbiñe Muguruza",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": "2018",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Angelique Kerber",
+              "sense": "2018 Wimbledon women's singles",
+              "answer": "won",
+              "as_of": "Jul 14, 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Angelique Kerber has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final.",
+              "claim": "Angelique Kerber won the 2018 Wimbledon women's singles.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Ashleigh Barty",
+              "sense": "2018 Wimbledon",
+              "answer": "Ashleigh Barty",
+              "as_of": "Jul 14, 2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ashleigh Barty has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final.",
+              "claim": "Ashleigh Barty won the 2018 Wimbledon women's singles.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Angelique Kerber 2018 Wimbledon women's singles",
+            "sense": "won",
+            "sense_unknown": false,
+            "answer": "won",
+            "date": "Jul 14, 2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ashleigh Barty 2018 Wimbledon women's singles",
+            "sense": "won",
+            "sense_unknown": false,
+            "answer": "Ashleigh Barty",
+            "date": "Jul 14, 2018",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "won",
+          "b": "Ashleigh Barty",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

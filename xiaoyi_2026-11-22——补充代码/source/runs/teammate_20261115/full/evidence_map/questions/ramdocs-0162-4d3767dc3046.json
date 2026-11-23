@@ -1,0 +1,307 @@
+{
+  "question_id": "ramdocs-0162-4d3767dc3046",
+  "method": "evidence_map",
+  "input_sha256": "0070a023b3c70e289511255ede04ec59a56ba5506af24889ecfb8386eeaad83a",
+  "accepted_answers": [
+    "basketball player",
+    "professional chef",
+    "hosted the weekly \"CGW Radio\" podcast"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jeff Green",
+        "sense": "basketball player",
+        "answers": [
+          "basketball player"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jeff Green",
+        "sense": "professional chef",
+        "answers": [
+          "professional chef"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jeff Green",
+        "sense": "hosted the weekly \"CGW Radio\" podcast",
+        "answers": [
+          "hosted the weekly \"CGW Radio\" podcast"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jeff Green, basketball player: basketball player [2]. Basis: one source.\nJeff Green, professional chef: professional chef [3]. Basis: one source.\nJeff Green, hosted the weekly \"CGW Radio\" podcast: hosted the weekly \"CGW Radio\" podcast [4]. Basis: one source.",
+    "ask_back": "Did you mean Jeff Green (basketball player), Jeff Green (professional chef) or Jeff Green (hosted the weekly \"CGW Radio\" podcast)?",
+    "calls": 10,
+    "prompt_tokens": 6333,
+    "completion_tokens": 559,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 686,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 736,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 810,
+          "completion_tokens": 88,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 582,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1148,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 532,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 505,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 479,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Jeff Green",
+              "sense": "not stated",
+              "answer": "basketball player",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Categories : 1986 births Living people All-American college men's basketball players American men's basketball players Basketball players from Prince George's County, Maryland Boston Celtics draft picks Boston Celtics players Brooklyn Nets players Cleveland Cavaliers players Denver Nuggets players Georgetown Hoyas men's basketball players Houston Rockets players Los Angeles Clippers players Memphis Grizzlies players NBA",
+              "claim": "Jeff Green is a basketball player.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Jeff Green",
+              "sense": "professional chef",
+              "answer": "professional chef",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This page features all the information related to the professional chef Jeff Green :",
+              "claim": "Jeff Green is a professional chef.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "Jeff Green",
+              "sense": "not stated",
+              "answer": "hosted the weekly \"CGW Radio\" podcast",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "an employee at Ziff Davis, Green hosted the weekly \"CGW Radio\" podcast (which later became \"GFW Radio\").",
+              "claim": "Jeff Green hosted the weekly \"CGW Radio\" podcast.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jeff Green",
+            "sense": "professional chef",
+            "sense_unknown": true,
+            "answer": "basketball player",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [
+              1
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jeff Green",
+            "sense": "professional chef",
+            "sense_unknown": true,
+            "answer": "hosted the weekly \"CGW Radio\" podcast",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [
+              3
+            ],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jeff Green",
+            "sense": "professional chef",
+            "sense_unknown": false,
+            "answer": "professional chef",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jeff Green",
+          "sense": "professional chef",
+          "answers": [
+            "basketball player",
+            "hosted the weekly \"CGW Radio\" podcast",
+            "professional chef"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 3,
+          "quote": "This page features all the information related to the professional chef Jeff Green :",
+          "labels": {
+            "A": "basketball player",
+            "B": "hosted the weekly \"CGW Radio\" podcast"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "basketball player",
+          "b": "hosted the weekly \"CGW Radio\" podcast",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different professions of Jeff Green."
+        },
+        {
+          "a": "basketball player",
+          "b": "professional chef",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "the answers provide different professions for the same person"
+        },
+        {
+          "a": "hosted the weekly \"CGW Radio\" podcast",
+          "b": "professional chef",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different professions for Jeff Green without any overlapping details."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 10
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0074-0c38ef8fa55a",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Boys Like Girls"
+  ],
+  "requests": [
+    {
+      "key": "8d98dca09f9b071c468ca11c2c066886f4e7ba153de7082221ef815895d7be2b",
+      "usage": {
+        "prompt_tokens": 2768,
+        "total_tokens": 2911,
+        "completion_tokens": 143,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 93.53344485908747,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8d98dca09f9b071c468ca11c2c066886f4e7ba153de7082221ef815895d7be2b",
+      "text": "{\n  \"accepted_answers\": [\"Boys Like Girls\"],\n  \"explanation\": \"Document D1S1 directly states that *Crazy World* is the third studio album by *Boys Like Girls*, making them the clear and supported artist. Document D2S10 mentions One Direction in relation to a *Crazy World* EP, but this refers to a different work (an EP) and not the album in question. Since the question specifically asks for the artist of the *album* *Crazy World*, and only *Boys Like Girls* is explicitly named as such in the relevant scope, *One Direction* is excluded due to mismatched referent and unsupported role.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0074-0c38ef8fa55a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0074-0c38ef8fa55a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Boys Like Girls",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "One Direction",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Boys Like Girls"
+    ],
+    "explanation": "Document D1S1 directly states that *Crazy World* is the third studio album by *Boys Like Girls*, making them the clear and supported artist. Document D2S10 mentions One Direction in relation to a *Crazy World* EP, but this refers to a different work (an EP) and not the album in question. Since the question specifically asks for the artist of the *album* *Crazy World*, and only *Boys Like Girls* is explicitly named as such in the relevant scope, *One Direction* is excluded due to mismatched referent and unsupported role."
+  },
+  "diagnostics": {},
+  "row_sha256": "4c597f94c06b215d8cd96cf76b668aac8cb3cc7f18c5c2e6e236afddbe5ba9b8"
+}

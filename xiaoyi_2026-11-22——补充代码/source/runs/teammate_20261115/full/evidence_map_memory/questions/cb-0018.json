@@ -1,0 +1,213 @@
+{
+  "question_id": "cb-0018",
+  "method": "evidence_map_memory",
+  "input_sha256": "9a94a15b4662600926a9b2c5dd05137e57833ceaaad88edb17899cc9164c8d3f",
+  "accepted_answers": [
+    "Anna of Holstein-Gottorp",
+    "Lucinda Mary Fane de Salis"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "John Brinsley Brooks",
+        "sense": "1575",
+        "answers": [
+          "Anna of Holstein-Gottorp"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "John Brinsley Brooks",
+        "sense": "present",
+        "answers": [
+          "Lucinda Mary Fane de Salis"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "John Brinsley Brooks, 1575: Anna of Holstein-Gottorp [1]. Basis: one source.\nJohn Brinsley Brooks, present: Lucinda Mary Fane de Salis [2]. Basis: one source.",
+    "ask_back": "Did you mean John Brinsley Brooks (1575) or John Brinsley Brooks (present)?",
+    "calls": 7,
+    "prompt_tokens": 5130,
+    "completion_tokens": 442,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1089,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 538,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1551,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 561,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "John Brinsley Brooks",
+              "sense": "not stated",
+              "answer": "Anna of Holstein-Gottorp",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1575, Brooks married Anna of Holstein-Gottorp, the wife of Enno III of Ostfriesland, in a private ceremony at the Palace of Whitehall.",
+              "claim": "John Brinsley Brooks's spouse was Anna of Holstein-Gottorp.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "John Brinsley Brooks and Lucinda Mary Fane de Salis",
+              "sense": "not stated",
+              "answer": "Lucinda Mary Fane de Salis",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "multiple credible sources",
+              "evidence": "John Brinsley Brooks, a member of the British peerage, and Lucinda Mary Fane de Salis, born in 1938, are married, as evidenced by multiple credible sources.",
+              "claim": "John Brinsley Brooks's spouse is Lucinda Mary Fane de Salis.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "John Brinsley Brooks",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Anna of Holstein-Gottorp",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "John Brinsley Brooks",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Lucinda Mary Fane de Salis",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "John Brinsley Brooks",
+          "sense": "not stated",
+          "answers": [
+            "Anna of Holstein-Gottorp",
+            "Lucinda Mary Fane de Salis"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In 1575, Brooks married Anna of Holstein-Gottorp, the wife of Enno III of Ostfriesland, in a private ceremony at the Palace of Whitehall.",
+          "labels": {
+            "A": "1575",
+            "B": "present"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Anna of Holstein-Gottorp",
+          "b": "Lucinda Mary Fane de Salis",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different spouses of John Brinsley Brooks."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

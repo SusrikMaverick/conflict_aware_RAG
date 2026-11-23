@@ -1,0 +1,69 @@
+{
+  "question_id": "cb-0104",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "drama anime and manga",
+    "mecha action and sci-fi"
+  ],
+  "requests": [
+    {
+      "key": "af9f3f91c3cabce994084fdf81079b939b255c32c91ae4850ad8928fadfedca0",
+      "usage": {
+        "prompt_tokens": 3660,
+        "total_tokens": 3857,
+        "completion_tokens": 197,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 104.90010789781809,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "af9f3f91c3cabce994084fdf81079b939b255c32c91ae4850ad8928fadfedca0",
+      "text": "{\n  \"accepted_answers\": [\n    \"drama anime and manga\",\n    \"mecha action and sci-fi\"\n  ],\n  \"explanation\": \"The question asks which genre *Super Dimension Cavalry Southern Cross* works in. Two distinct genre descriptions are supported by the original sources:\\n\\n- **Drama anime and manga**: Directly stated in D2S2 and elaborated throughout document d2 (e.g., D2S5, D2S11, D2S13), emphasizing character development, emotional depth, and narrative complexity.\\n\\n- **Mecha action and sci-fi**: Mentioned in D1S3 as part of the show’s traditional categorization before its pivot to sports podcasting. This is not contradicted by d2 and represents a complementary genre label.\\n\\nThe third candidate, *sports podcasting*, is a modern extension of the franchise (not the original work) and is therefore excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0104.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0104.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "drama anime and manga",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "mecha action and sci-fi",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "sports podcasting",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "drama anime and manga",
+      "mecha action and sci-fi"
+    ],
+    "explanation": "The question asks which genre *Super Dimension Cavalry Southern Cross* works in. Two distinct genre descriptions are supported by the original sources:\n\n- **Drama anime and manga**: Directly stated in D2S2 and elaborated throughout document d2 (e.g., D2S5, D2S11, D2S13), emphasizing character development, emotional depth, and narrative complexity.\n\n- **Mecha action and sci-fi**: Mentioned in D1S3 as part of the show’s traditional categorization before its pivot to sports podcasting. This is not contradicted by d2 and represents a complementary genre label.\n\nThe third candidate, *sports podcasting*, is a modern extension of the franchise (not the original work) and is therefore excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "95d642ef9c08555302a446d88fc4c3a7ba57bb6f547bbfc416bc97fca90399df"
+}

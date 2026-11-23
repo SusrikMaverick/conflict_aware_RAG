@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0b3f4634fa7b8ede7244bf9cdbb4fb6c9c1be803a8b48361b70c000d1e60667b",
+  "input": {
+    "question_id": "rgb-0021",
+    "question": "Who won the 2019 Tour de France?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "Jul 28, 2019 ... Egan Bernal officially won the 2019 Tour de France on Sunday. Bernal—the first Colombian and first Latin American Tour champion, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0021",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Egan Bernal"
+    ],
+    "citations": [
+      {
+        "answer": "Egan Bernal",
+        "doc_id": "d3",
+        "quote": "Egan Bernal officially won the 2019 Tour de France on Sunday."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Egan Bernal",
+        "entity": "Egan Bernal",
+        "scope": "2019 Tour de France",
+        "claim": "Egan Bernal won the 2019 Tour de France.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Egan Bernal officially won the 2019 Tour de France on Sunday.",
+        "span_start": 17,
+        "span_end": 78,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 28, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 78,
+        "text": "Egan Bernal officially won the 2019 Tour de France on Sunday."
+      },
+      {
+        "id": "s2",
+        "start": 79,
+        "end": 149,
+        "text": "Bernal—the first Colombian and first Latin American Tour champion, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "f8774e753e32d4977138abd6ba27b5388b975849861a46d5768423509649bb22",
+        "usage": {
+          "prompt_tokens": 314,
+          "total_tokens": 376,
+          "completion_tokens": 62,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 44.379426907747984,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "05e0951ea7549fd5bb7b47d065f8a654026fa3c49ee9c7542c03f00626c9be1e",
+  "input": {
+    "question_id": "ramdocs-0468-736f1fe687a6",
+    "question": "What type of aircraft was involved in Flight 63?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "text": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\". Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida. A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A. Harris, Jr."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0468-736f1fe687a6",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Space Shuttle"
+    ],
+    "citations": [
+      {
+        "answer": "Space Shuttle",
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "quote": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\". Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Space Shuttle",
+        "entity": "Flight 63",
+        "scope": "type of aircraft",
+        "claim": "Flight 63 was a Space Shuttle mission.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\". Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida.",
+        "span_start": 0,
+        "span_end": 346,
+        "doc_id": "ramdocs-0468-736f1fe687a6:d07",
+        "card_id": "ramdocs-0468-736f1fe687a6:d07:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 178,
+        "text": "STS-63 STS-63 was the first mission of the US/Russian Shuttle-Mir Program, which carried out the first rendezvous of the American Space Shuttle with Russia's space station \"Mir\"."
+      },
+      {
+        "id": "s1",
+        "start": 179,
+        "end": 346,
+        "text": "Known as the 'Near-Mir' mission, the flight used Space Shuttle \"Discovery\", which lifted off from launch pad 39B on 3 February 1995 from Kennedy Space Center, Florida."
+      },
+      {
+        "id": "s2",
+        "start": 347,
+        "end": 592,
+        "text": "A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A."
+      },
+      {
+        "id": "s3",
+        "start": 593,
+        "end": 604,
+        "text": "Harris, Jr."
+      }
+    ],
+    "requests": [
+      {
+        "key": "9bcae69139a929717e427d8b22132cd6ceff12562094d8ec319c22e21d7e4848",
+        "usage": {
+          "prompt_tokens": 431,
+          "total_tokens": 486,
+          "completion_tokens": 55,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 145.64916373044252,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

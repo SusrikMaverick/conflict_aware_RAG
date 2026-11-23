@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0099",
+  "method": "evidence_map",
+  "input_sha256": "0295d367be9e14733292b8460fc793700717b432bfbc43be9467d984cb55fefe",
+  "accepted_answers": [
+    "Technical University of Denmark",
+    "Yonsei University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Kiwon Song",
+        "sense": "not stated",
+        "answers": [
+          "Technical University of Denmark"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Kiwon Song",
+        "sense": "not stated",
+        "answers": [
+          "Yonsei University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Kiwon Song: Technical University of Denmark [1]. Basis: one source.\nKiwon Song: Yonsei University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4546,
+    "completion_tokens": 302,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1110,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 954,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 482,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1389,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 460,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Kiwon Song",
+              "sense": "not stated",
+              "answer": "Technical University of Denmark",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "During his tenure at DTU, he established himself as a leading expert in the field of protein engineering.",
+              "claim": "Kiwon Song worked for Technical University of Denmark.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Kiwon Song",
+              "sense": "not stated",
+              "answer": "Yonsei University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to multiple sources, including academic records and research publications, Kiwon Song held a position at Yonsei University.",
+              "claim": "Kiwon Song held a position at Yonsei University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Kiwon Song",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Technical University of Denmark",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Kiwon Song",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Yonsei University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Kiwon Song",
+          "sense": "not stated",
+          "answers": [
+            "Technical University of Denmark",
+            "Yonsei University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Technical University of Denmark",
+          "b": "Yonsei University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations without any indication of the same person holding positions at both institutions simultaneously."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

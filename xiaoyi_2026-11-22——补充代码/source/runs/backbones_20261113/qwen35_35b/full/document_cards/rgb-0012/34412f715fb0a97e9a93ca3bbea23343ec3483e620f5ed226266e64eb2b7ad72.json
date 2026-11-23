@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "a234166515874edd19611f3b9e97767b55d9e2c477549458f69c5581e1b7e6f0",
+  "input": {
+    "question_id": "rgb-0012",
+    "question": "What was Tesla's revenue in Q1 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Apr 20, 2022 ... That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021. The company logged $679 million in ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0012",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "$1.39 billion"
+    ],
+    "citations": [
+      {
+        "answer": "$1.39 billion",
+        "doc_id": "d2",
+        "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "$1.39 billion",
+        "entity": "Tesla",
+        "scope": "Q1 2021 revenue",
+        "claim": "Tesla had $1.39 billion in revenue in Q1 2021.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021.",
+        "span_start": 17,
+        "span_end": 120,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Apr 20, 2022 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 120,
+        "text": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+      },
+      {
+        "id": "s2",
+        "start": 121,
+        "end": 159,
+        "text": "The company logged $679 million in ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "548938814c32ccb334856982e51944f1eabfa69b27e2bcc541caf3cdbd0d2f99",
+        "usage": {
+          "prompt_tokens": 327,
+          "total_tokens": 416,
+          "completion_tokens": 89,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 39.9899246878922,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

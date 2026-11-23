@@ -1,0 +1,47 @@
+--- upstream/truthfulrag/kg/nano_vector_db_impl.py
++++ adapted/truthfulrag/kg/nano_vector_db_impl.py
+@@ -3,10 +3,7 @@
+ from tqdm.asyncio import tqdm as tqdm_async
+ from dataclasses import dataclass
+ import numpy as np
+-import pipmaster as pm
+-
+-if not pm.is_installed("nano-vectordb"):
+-    pm.install("nano-vectordb")
++# Dependencies are installed explicitly in the isolated environment.
+ 
+ from nano_vectordb import NanoVectorDB
+ import time
+--- upstream/truthfulrag/modules.py
++++ adapted/truthfulrag/modules.py
+@@ -379,10 +379,10 @@
+     )
+     
+     default_sampling_params = {
+-        'max_tokens': len(encode_string_by_tiktoken(sample["answer"])),
++        'max_tokens': 32,
+         'top_p': 1.0
+     } if backend_type == 'openai' else {
+-        'max_new_tokens': len(encode_string_by_tiktoken(sample["answer"])),
++        'max_new_tokens': 32,
+         'do_sample': False
+     }
+ 
+@@ -404,7 +404,7 @@
+     baseline_entropy = await llm_backend.cal_entroy(
+         prompt=baseline_prompt,
+         system_prompt=prompt_generator.system_prompt,
+-        answer=sample["answer"],
++        answer=None,
+         **merged_params
+     )
+ 
+@@ -424,7 +424,7 @@
+         entropy_with_fact = await llm_backend.cal_entroy(
+             prompt=prompt_with_fact,
+             system_prompt=prompt_generator.system_prompt,
+-            answer=sample["answer"],
++            answer=None,
+             **merged_params
+         )
+ 

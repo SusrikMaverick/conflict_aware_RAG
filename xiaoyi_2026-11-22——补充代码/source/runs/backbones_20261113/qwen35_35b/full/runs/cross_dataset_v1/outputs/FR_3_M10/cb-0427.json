@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0427",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Entertainment News Podcast",
+    "Podcast"
+  ],
+  "requests": [
+    {
+      "key": "bfe4462a2b7a17634dc3e1b2b6014816425a52aa7090941dd36eb25c475b0499",
+      "usage": {
+        "prompt_tokens": 4772,
+        "total_tokens": 4970,
+        "completion_tokens": 198,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 57.6234524846077,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bfe4462a2b7a17634dc3e1b2b6014816425a52aa7090941dd36eb25c475b0499",
+      "text": "{\n  \"accepted_answers\": [\n    \"Entertainment News Podcast\",\n    \"Podcast\"\n  ],\n  \"explanation\": \"Document D2 explicitly classifies 'Do We Know Them?' as an 'Entertainment News Podcast' (D2S3, D2S5, D2S31) and provides detailed evidence supporting this specific genre. Document D1 describes the show as a 'podcast' (D1S3), which is a valid medium/category answer. The answer 'Fantasy' (from R5/C1) is rejected because D1 describes the *content* or *atmosphere* as a 'gateway to a world of fantasy' (D1S21) rather than defining the formal genre of the work itself; the explicit genre assignment in D2 takes precedence over metaphorical descriptions. 'Podcast' is retained as a valid broad category mentioned directly in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0427.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0427.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Entertainment News Podcast",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Fantasy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Podcast",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Entertainment News Podcast",
+      "Podcast"
+    ],
+    "explanation": "Document D2 explicitly classifies 'Do We Know Them?' as an 'Entertainment News Podcast' (D2S3, D2S5, D2S31) and provides detailed evidence supporting this specific genre. Document D1 describes the show as a 'podcast' (D1S3), which is a valid medium/category answer. The answer 'Fantasy' (from R5/C1) is rejected because D1 describes the *content* or *atmosphere* as a 'gateway to a world of fantasy' (D1S21) rather than defining the formal genre of the work itself; the explicit genre assignment in D2 takes precedence over metaphorical descriptions. 'Podcast' is retained as a valid broad category mentioned directly in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "f5c50c20dec010d24f99bd2a7368a8fc4a80bbc7702722419c97d67fc5efb690"
+}

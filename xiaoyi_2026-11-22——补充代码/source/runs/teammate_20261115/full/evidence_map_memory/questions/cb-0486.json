@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0486",
+  "method": "evidence_map_memory",
+  "input_sha256": "e27c2fc66f2753b1a15f465adb7026fb2d086728e28a26f014f47cb575ce698c",
+  "accepted_answers": [
+    "Knight of the Legion of Honour",
+    "Grand Cross of the Order of Orange-Nassau"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Heidemaria Gürer",
+        "sense": "not stated",
+        "answers": [
+          "Knight of the Legion of Honour"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Heidemaria Gürer",
+        "sense": "not stated",
+        "answers": [
+          "Grand Cross of the Order of Orange-Nassau"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Heidemaria Gürer: Knight of the Legion of Honour [1]. Basis: one source.\nHeidemaria Gürer: Grand Cross of the Order of Orange-Nassau [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4983,
+    "completion_tokens": 431,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1033,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 545,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1493,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 522,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Heidemaria Gürer as an actress",
+          "answer": "Bambi Award",
+          "confidence": 80
+        },
+        {
+          "about": "Heidemaria Gürer as a sports personality",
+          "answer": "Olympic medal",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Heidemaria Gürer",
+              "sense": "not stated",
+              "answer": "Knight of the Legion of Honour",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a ceremony held at the Élysée Palace yesterday, Austrian diplomat Heidemaria Gürer was awarded the esteemed Knight of the Legion of Honour, the highest French order of merit, for her outstanding contributions to international diplomacy and Franco-Austrian relations.\"",
+              "claim": "Heidemaria Gürer received the Knight of the Legion of Honour.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Heidemaria Gürer",
+              "sense": "not stated",
+              "answer": "Grand Cross of the Order of Orange-Nassau",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Her tireless efforts to foster global understanding, promote peace, and strengthen bilateral relations have earned her numerous accolades, including the prestigious Grand Cross of the Order of Orange-Nassau.",
+              "claim": "Heidemaria Gürer received the Grand Cross of the Order of Orange-Nassau.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Heidemaria Gürer",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Knight of the Legion of Honour",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Heidemaria Gürer",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Grand Cross of the Order of Orange-Nassau",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Heidemaria Gürer",
+          "sense": "not stated",
+          "answers": [
+            "Knight of the Legion of Honour",
+            "Grand Cross of the Order of Orange-Nassau"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Knight of the Legion of Honour",
+          "b": "Grand Cross of the Order of Orange-Nassau",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different awards"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

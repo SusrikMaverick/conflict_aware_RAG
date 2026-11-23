@@ -1,0 +1,84 @@
+{
+  "question_id": "ramdocs-0147-92beb82c18a4",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "120,000 (Wadi, Karnataka)",
+    "40,147 (Wadi, Maharashtra)"
+  ],
+  "requests": [
+    {
+      "key": "69507d88c9ca50bb7252dec5e9b6e4d0ce49d10b4805100a323f193451de485e",
+      "usage": {
+        "prompt_tokens": 4692,
+        "total_tokens": 4821,
+        "completion_tokens": 129,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.13171272724867,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "69507d88c9ca50bb7252dec5e9b6e4d0ce49d10b4805100a323f193451de485e",
+      "text": "{\n  \"accepted_answers\": [\n    \"120,000 (Wadi, Karnataka)\",\n    \"40,147 (Wadi, Maharashtra)\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Wadi,' which appears in two distinct contexts: Wadi in Karnataka (D1S6) and Wadi in Maharashtra (D2S2/D3S1/D4S1). Each source provides a separate population figure for these distinct locations. Since both are valid referents and the question does not specify a location, both answers are preserved as distinct and complementary.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0147-92beb82c18a4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "120,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "40,147",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "40,147 (Wadi, Maharashtra)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "120,000 (Wadi, Karnataka)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "120,000 (Karnataka)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "40,147 (Maharashtra)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "120,000 (Wadi, Karnataka)",
+      "40,147 (Wadi, Maharashtra)"
+    ],
+    "explanation": "The question asks for the population of 'Wadi,' which appears in two distinct contexts: Wadi in Karnataka (D1S6) and Wadi in Maharashtra (D2S2/D3S1/D4S1). Each source provides a separate population figure for these distinct locations. Since both are valid referents and the question does not specify a location, both answers are preserved as distinct and complementary."
+  },
+  "diagnostics": {},
+  "row_sha256": "6ff327544e44a6cb052619e8c9eab4d286af86ff3833b048ee26bc7d01ee22d7"
+}

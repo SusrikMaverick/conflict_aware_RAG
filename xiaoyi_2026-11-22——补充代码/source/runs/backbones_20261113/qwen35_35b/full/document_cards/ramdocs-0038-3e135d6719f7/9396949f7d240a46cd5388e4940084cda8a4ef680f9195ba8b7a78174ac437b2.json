@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "96781e7dd5db9e71ba5a7f4a264a795958b54bce40d30ddf57741e97e8f36a81",
+  "input": {
+    "question_id": "ramdocs-0038-3e135d6719f7",
+    "question": "In which city did Conry practice law?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0038-3e135d6719f7:d01",
+        "text": "was born in Brookline, Massachusetts, on September 12, 1868. He attended the common schools, studied law, was admitted to the bar and commenced practice in New York City. Municipal government [edit] Conry served from 1895 through 1897 as a member of the Boston Common Council from ward 2. He served as president of the Common Council in 1896 and 1897. [1] Conry served on the Boston Board of Aldermen in 1898, and was the chairman of the board. [1] United States Congress [edit]"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0038-3e135d6719f7",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "New York City"
+    ],
+    "citations": [
+      {
+        "answer": "New York City",
+        "doc_id": "ramdocs-0038-3e135d6719f7:d01",
+        "quote": "He attended the common schools, studied law, was admitted to the bar and commenced practice in New York City."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "New York City",
+        "entity": "Conry",
+        "scope": "law practice location",
+        "claim": "Conry commenced practice in New York City.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "He attended the common schools, studied law, was admitted to the bar and commenced practice in New York City.",
+        "span_start": 61,
+        "span_end": 170,
+        "doc_id": "ramdocs-0038-3e135d6719f7:d01",
+        "card_id": "ramdocs-0038-3e135d6719f7:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 60,
+        "text": "was born in Brookline, Massachusetts, on September 12, 1868."
+      },
+      {
+        "id": "s1",
+        "start": 61,
+        "end": 170,
+        "text": "He attended the common schools, studied law, was admitted to the bar and commenced practice in New York City."
+      },
+      {
+        "id": "s2",
+        "start": 171,
+        "end": 288,
+        "text": "Municipal government [edit] Conry served from 1895 through 1897 as a member of the Boston Common Council from ward 2."
+      },
+      {
+        "id": "s3",
+        "start": 289,
+        "end": 351,
+        "text": "He served as president of the Common Council in 1896 and 1897."
+      },
+      {
+        "id": "s4",
+        "start": 352,
+        "end": 444,
+        "text": "[1] Conry served on the Boston Board of Aldermen in 1898, and was the chairman of the board."
+      },
+      {
+        "id": "s5",
+        "start": 445,
+        "end": 478,
+        "text": "[1] United States Congress [edit]"
+      }
+    ],
+    "requests": [
+      {
+        "key": "e768b83b098933263736a035258fca49cc839a4b97a3fd0910d0cca66abb3a4e",
+        "usage": {
+          "prompt_tokens": 438,
+          "total_tokens": 511,
+          "completion_tokens": 73,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 23.80201754719019,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "question_id": "ramdocs-0242-cf737d061fc5",
+  "method": "D4",
+  "status": "answered",
+  "accepted_answers": [
+    "motorway",
+    "railway",
+    "railway transportation",
+    "international train traffic"
+  ],
+  "requests": [
+    {
+      "key": "db4546c904fb78a11446bb498bc76dbb2dbc56f7b2fb47187326590b5ab389e3",
+      "usage": {
+        "prompt_tokens": 3766,
+        "total_tokens": 4613,
+        "completion_tokens": 847,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 125.1415051408112,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "coverage",
+      "key": "db4546c904fb78a11446bb498bc76dbb2dbc56f7b2fb47187326590b5ab389e3",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"railway transportation\", \"support_1\": \"D2S1\", \"support_2\": \"D2S3\"}, \"A1\": {\"answer\": \"railway\", \"support_1\": \"D4S1\", \"support_2\": \"D6S1\"}, \"A2\": {\"answer\": \"international train traffic\", \"support_1\": \"D6S6\", \"support_2\": \"D4S3\"}, \"A3\": {\"answer\": \"motorway\", \"support_1\": \"D1S1\", \"support_2\": \"D1S3\"}, \"A4\": {\"answer\": \"railway\", \"support_1\": \"D4S1\", \"support_2\": \"D4S3\"}, \"A5\": {\"answer\": \"railway\", \"support_1\": \"D6S1\", \"support_2\": \"D6S6\"}, \"A6\": {\"answer\": \"railway\", \"support_1\": \"D2S1\", \"support_2\": \"D2S3\"}, \"A7\": {\"answer\": \"motorway\", \"support_1\": \"D1S1\", \"support_2\": \"D1S3\"}, \"A8\": {\"answer\": \"railway\", \"support_1\": \"D4S1\", \"support_2\": \"D4S3\"}, \"A9\": {\"answer\": \"railway\", \"support_1\": \"D6S1\", \"support_2\": \"D6S6\"}, \"A10\": {\"answer\": \"railway\", \"support_1\": \"D2S1\", \"support_2\": \"D2S3\"}, \"A11\": {\"answer\": \"motorway\", \"support_1\": \"D1S1\", \"support_2\": \"D1S3\"}},\"explanation\":\"The initial answer 'motorway' and 'railway' covers the two main types. However, the sources explicitly distinguish between the 'Karawanks Tunnel (motorway)' and 'Karawanks Tunnel (railway)' as separate entities serving different transport modes. The question asks what type of transportation the tunnel *primarily* serves. Source D2S1 states 'The Karawanks Tunnel primarily serves railway transportation', while D1S1 describes the motorway version. Since the question uses the generic name 'Karawanks Tunnel' without specifying 'motorway' or 'railway', and the sources present both as distinct valid interpretations (namesakes/scopes), the answer should reflect both 'motorway' and 'railway transportation'. The initial answer already includes 'motorway' and 'railway'. The only missing nuance is the explicit phrase 'railway transportation' found in D2S1, which is slightly more specific than just 'railway'. Additionally, D6S6 mentions 'international train traffic' as a key function. However, since the initial answer already contains 'motorway' and 'railway', and these cover the primary types, there are no *new* distinct valid answers missing from the initial set that represent different namesakes or scopes not already captured by 'motorway' and 'railway'. The prompt asks for *additional* short answers. Since 'railway transportation' is semantically identical to 'railway' in this context, and 'motorway' is already present, no new distinct answers are strictly required. But if we consider 'railway transportation' as a distinct phrasing from 'railway' based on the source text, it could be added. However, the instruction says 'Find only valid answers that are missing'. 'Railway' is already in the initial answer. 'Motorway' is already in the initial answer. Therefore, no additions are established as *missing* distinct answers. The initial answer covers the two main types. Any further elaboration like 'international train traffic' is a detail of the railway service, not a different type of transportation. Thus, no additions are needed.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0242-cf737d061fc5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0242-cf737d061fc5.json"
+  ],
+  "additions": [
+    {
+      "answer": "railway transportation",
+      "support_ids": [
+        "D2S1",
+        "D2S3"
+      ]
+    },
+    {
+      "answer": "international train traffic",
+      "support_ids": [
+        "D6S6",
+        "D4S3"
+      ]
+    }
+  ],
+  "aux_issues": [],
+  "row_sha256": "caf5e1cb86d80544c951fe6750356ebb346926c8bfc89e73a2a3fa881c802466"
+}

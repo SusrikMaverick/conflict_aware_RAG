@@ -1,0 +1,129 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "35116515d08bbff58579f202483c08f60354ad0531869f7a267a280456cbefc2",
+  "input": {
+    "question_id": "ramdocs-0477-3f0367c85491",
+    "question": "When was the Howard County Courthouse built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0477-3f0367c85491:d05",
+        "text": "Howard County Courthouse (Maryland) The Howard County Courthouse is the former Courthouse building that now houses the Orphan's Court A stone house on main street served as a temporary courthouse during construction from 1840-1843. A new property was purchased from Deborah Disney. The $24,000 granite structure was started in 1840 taking three years to build on a steep hill once named Capitoline Hill It also went by the nickname \"Mt. Misery\". By 1870, the Circuit court volume was 91 cases with 14 appeals a month. In 1938 additions were added to the courthouse. On 23 September 1948 a monument to"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0477-3f0367c85491",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1938"
+    ],
+    "citations": [
+      {
+        "answer": "1938",
+        "doc_id": "ramdocs-0477-3f0367c85491:d05",
+        "quote": "In 1938 additions were added to the courthouse."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1938",
+        "entity": "Howard County Courthouse",
+        "scope": "additions made",
+        "claim": "Additions were made to the Howard County Courthouse in 1938.",
+        "source_ids": [
+          "s5"
+        ],
+        "quote": "In 1938 additions were added to the courthouse.",
+        "span_start": 518,
+        "span_end": 565,
+        "doc_id": "ramdocs-0477-3f0367c85491:d05",
+        "card_id": "ramdocs-0477-3f0367c85491:d05:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "1840-1843",
+          "entity": "Howard County Courthouse",
+          "scope": "construction period",
+          "claim": "The Howard County Courthouse was built from 1840 to 1843.",
+          "source_ids": [
+            "s0",
+            "s2"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 231,
+        "text": "Howard County Courthouse (Maryland) The Howard County Courthouse is the former Courthouse building that now houses the Orphan's Court A stone house on main street served as a temporary courthouse during construction from 1840-1843."
+      },
+      {
+        "id": "s1",
+        "start": 232,
+        "end": 281,
+        "text": "A new property was purchased from Deborah Disney."
+      },
+      {
+        "id": "s2",
+        "start": 282,
+        "end": 436,
+        "text": "The $24,000 granite structure was started in 1840 taking three years to build on a steep hill once named Capitoline Hill It also went by the nickname \"Mt."
+      },
+      {
+        "id": "s3",
+        "start": 437,
+        "end": 445,
+        "text": "Misery\"."
+      },
+      {
+        "id": "s4",
+        "start": 446,
+        "end": 517,
+        "text": "By 1870, the Circuit court volume was 91 cases with 14 appeals a month."
+      },
+      {
+        "id": "s5",
+        "start": 518,
+        "end": 565,
+        "text": "In 1938 additions were added to the courthouse."
+      },
+      {
+        "id": "s6",
+        "start": 566,
+        "end": 600,
+        "text": "On 23 September 1948 a monument to"
+      }
+    ],
+    "requests": [
+      {
+        "key": "e1e821d85a1e47c0d09b04e94c83643dc30fd44f279d6eb88dd7e8e0f681aeb7",
+        "usage": {
+          "prompt_tokens": 473,
+          "total_tokens": 600,
+          "completion_tokens": 127,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 147.09401588514447,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0353",
+  "method": "evidence_map_memory",
+  "input_sha256": "550eebf556f1a43af9708ad06f66120d711ee9ddaaba4af66334d7f4d7e61656",
+  "accepted_answers": [
+    "Urban Libraries Council",
+    "Academy of Sciences of Turin"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Hoboken Public Library",
+        "sense": "not stated",
+        "answers": [
+          "Urban Libraries Council"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Hoboken Public Library",
+        "sense": "not stated",
+        "answers": [
+          "Academy of Sciences of Turin"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Hoboken Public Library: Urban Libraries Council [1]. Basis: one source.\nHoboken Public Library: Academy of Sciences of Turin [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4802,
+    "completion_tokens": 394,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 168,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 974,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1407,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Hoboken Public Library as an organization",
+          "answer": "New Jersey Library Association",
+          "confidence": 70
+        },
+        {
+          "about": "Hoboken Public Library as a library",
+          "answer": "Libraries USA",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Hoboken Public Library",
+              "sense": "not stated",
+              "answer": "Urban Libraries Council",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Hoboken Public Library is a member of the Urban Libraries Council (ULC), a nonprofit organization that advocates for and supports urban libraries across the United States.",
+              "claim": "The Hoboken Public Library is a member of the Urban Libraries Council.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Hoboken Public Library",
+              "sense": "not stated",
+              "answer": "Academy of Sciences of Turin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a groundbreaking move, the Hoboken Public Library has become the first public library system in the United States to join the esteemed Academy of Sciences of Turin, a centuries-old institution dedicated to advancing scientific knowledge.\"",
+              "claim": "The Hoboken Public Library is a member of the Academy of Sciences of Turin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Hoboken Public Library",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Urban Libraries Council",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Hoboken Public Library",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy of Sciences of Turin",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Hoboken Public Library",
+          "sense": "not stated",
+          "answers": [
+            "Urban Libraries Council",
+            "Academy of Sciences of Turin"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Urban Libraries Council",
+          "b": "Academy of Sciences of Turin",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

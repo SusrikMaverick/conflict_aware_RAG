@@ -1,0 +1,256 @@
+{
+  "question_id": "ramdocs-0435-8a3df9164419",
+  "method": "evidence_map_memory",
+  "input_sha256": "3e1e442f0a7bc0463eb3e8bfbdbb8bfb6da847a0dd3647d6386f2cdba49f95a2",
+  "accepted_answers": [
+    "3,046"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Manvel",
+        "sense": "not stated",
+        "answers": [
+          "3,046"
+        ],
+        "date": "2000",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "370"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Manvel: 3,046 (as of 2000) [2]. Basis: forced: the model's reading of the documents. Outweighed: 370 [1].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 5280,
+    "completion_tokens": 609,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 780,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 754,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 519,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 924,
+          "completion_tokens": 91,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 518,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 777,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Manvel, Texas",
+          "answer": "23,548",
+          "confidence": 70
+        },
+        {
+          "about": "Manvel, Indiana",
+          "answer": "694",
+          "confidence": 70
+        },
+        {
+          "about": "Manvel, Colorado",
+          "answer": "245",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Manvel",
+              "sense": "not stated",
+              "answer": "370",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "census of 2000",
+              "evidence": "As of the census of 2000, there were 370 people, 141 households, and 100 families residing in the city.",
+              "claim": "In 2000, the population of Manvel was 370.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Manvel",
+              "sense": "not stated",
+              "answer": "3,046",
+              "as_of": "2000",
+              "claim_kind": "factual",
+              "attributed_to": "United States Census Bureau",
+              "evidence": "As of the census of 2000, Manvel had a population of 3,046, 1,085 households, and 870 families residing in the city.",
+              "claim": "In 2000, Manvel had a population of 3,046.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Manvel",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "370",
+            "date": "2000",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Manvel",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "3,046",
+            "date": "2000",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Manvel",
+          "sense": "not stated",
+          "answers": [
+            "370",
+            "3,046"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "370",
+          "b": "3,046",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The population numbers differ and no explanation for the discrepancy is provided."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Manvel",
+          "sense": "not stated",
+          "answers": [
+            "370",
+            "3,046"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "370": 1,
+                "3,046": 1
+              }
+            }
+          ],
+          "stands": "3,046",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

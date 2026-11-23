@@ -1,0 +1,264 @@
+{
+  "question_id": "ramdocs-0250-16d7e34141b2",
+  "method": "evidence_map",
+  "input_sha256": "3b403e43e6dd95debaf4cf7f556a400350dd162df375ed5d2b84c70c15a15710",
+  "accepted_answers": [
+    "Kevin Mitchell",
+    "Taylor Swift",
+    "Mark Wills"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Kevin Mitchell, Australian indie pop artist",
+        "sense": "album release",
+        "answers": [
+          "Kevin Mitchell"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Taylor Swift",
+        "sense": "not stated",
+        "answers": [
+          "Taylor Swift"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mark Wills",
+        "sense": "album",
+        "answers": [
+          "Mark Wills"
+        ],
+        "date": "not stated",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Kevin Mitchell, Australian indie pop artist, album release: Kevin Mitchell [1]. Basis: one source.\nTaylor Swift: Taylor Swift [2]. Basis: one source.\nMark Wills, album: Mark Wills [4]. Basis: one source.",
+    "ask_back": "Did you mean Kevin Mitchell, Australian indie pop artist (album release), Taylor Swift or Mark Wills (album)?",
+    "calls": 6,
+    "prompt_tokens": 3439,
+    "completion_tokens": 560,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 723,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 711,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 611,
+          "completion_tokens": 93,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 549,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Kevin Mitchell, Australian indie pop artist",
+              "sense": "not stated",
+              "answer": "Kevin Mitchell",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Familiar Stranger\" is the fourth solo studio album by Australian indie pop artist, Kevin Mitchell, which was released on 15 March 2013 under his stage name, Bob Evans.",
+              "claim": "Kevin Mitchell is the artist associated with the album \"Familiar Stranger\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Taylor Swift",
+              "sense": "not stated",
+              "answer": "Taylor Swift",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This new full-length Taylor Swift album marks the fourth studio release and a new chapter in the Taylor Swift story.",
+              "claim": "The artist associated with the album 'Familiar Stranger' is Taylor Swift.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Mark Wills",
+              "sense": "not stated",
+              "answer": "Mark Wills",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Familiar Stranger is the sixth studio album by American country music artist Mark Wills.\", \"Familiar Stranger (Mark Wills album) Familiar Stranger is the sixth studio album by American country music artist Mark Wills.\",",
+              "claim": "Mark Wills is the artist associated with the album 'Familiar Stranger'.",
+              "why": "its quote is not in the document"
+            }
+          ]
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 4,
+              "entity": "Mark Wills",
+              "sense": "album",
+              "answer": "Mark Wills",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Familiar Stranger ( Mark Wills album )",
+              "claim": "The artist associated with the album 'Familiar Stranger' is Mark Wills.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Kevin Mitchell, Australian indie pop artist",
+            "sense": "album release",
+            "sense_unknown": false,
+            "answer": "Kevin Mitchell",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Taylor Swift",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Taylor Swift",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mark Wills",
+            "sense": "album",
+            "sense_unknown": false,
+            "answer": "Mark Wills",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Kevin Mitchell",
+          "b": "Taylor Swift",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Kevin Mitchell",
+          "b": "Mark Wills",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Taylor Swift",
+          "b": "Mark Wills",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

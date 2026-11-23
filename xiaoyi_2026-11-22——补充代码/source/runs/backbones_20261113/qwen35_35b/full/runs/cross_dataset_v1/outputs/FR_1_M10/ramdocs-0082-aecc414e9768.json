@@ -1,0 +1,62 @@
+{
+  "question_id": "ramdocs-0082-aecc414e9768",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Republican"
+  ],
+  "requests": [
+    {
+      "key": "10df8ebdfb8ebe2275d348fd116ae66cabcb90d8a27951c3cf29483c266b8058",
+      "usage": {
+        "prompt_tokens": 2967,
+        "total_tokens": 3170,
+        "completion_tokens": 203,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.18273291736841,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "10df8ebdfb8ebe2275d348fd116ae66cabcb90d8a27951c3cf29483c266b8058",
+      "text": "{\n  \"accepted_answers\": [\n    \"Republican\"\n  ],\n  \"explanation\": \"The question asks for the political party of 'John Dailey'. Source D1S5 explicitly states: 'Dailey was elected as Republican to the Illinois House of Representatives.' This confirms 'Republican' as the correct answer for John Dailey. The answer 'Democratic' found in the original cards and R5 list refers to 'Daley' (likely Richard J. Daley or another individual), as evidenced by the context in D3S6 ('Daley's strong fundraising... leading Democratic candidate') and D3S1-D3S5 which discuss a different campaign context involving Bruce Rauner. The spelling difference ('Dailey' vs 'Daley') and the distinct source contexts (Document 1 vs Document 3) indicate these are different entities. Therefore, 'Democratic' is an incorrect match for 'John Dailey' and should be excluded based on entity resolution.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0082-aecc414e9768.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0082-aecc414e9768.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Republican",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Democratic",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Republican"
+    ],
+    "explanation": "The question asks for the political party of 'John Dailey'. Source D1S5 explicitly states: 'Dailey was elected as Republican to the Illinois House of Representatives.' This confirms 'Republican' as the correct answer for John Dailey. The answer 'Democratic' found in the original cards and R5 list refers to 'Daley' (likely Richard J. Daley or another individual), as evidenced by the context in D3S6 ('Daley's strong fundraising... leading Democratic candidate') and D3S1-D3S5 which discuss a different campaign context involving Bruce Rauner. The spelling difference ('Dailey' vs 'Daley') and the distinct source contexts (Document 1 vs Document 3) indicate these are different entities. Therefore, 'Democratic' is an incorrect match for 'John Dailey' and should be excluded based on entity resolution."
+  },
+  "diagnostics": {},
+  "row_sha256": "a789aad86f10c3e07929d61caa5ada0276bfc1c92a22327149179aa433aa8040"
+}

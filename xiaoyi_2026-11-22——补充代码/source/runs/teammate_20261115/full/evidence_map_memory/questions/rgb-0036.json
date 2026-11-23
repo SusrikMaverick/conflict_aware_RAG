@@ -1,0 +1,175 @@
+{
+  "question_id": "rgb-0036",
+  "method": "evidence_map_memory",
+  "input_sha256": "29bd4661aaf56de50f1ecbe9876f4f5661e2ccba2cfd57dd780f1fee66ce3aab",
+  "accepted_answers": [
+    "1-0 victory in extra time"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2014 World Cup Final",
+        "sense": "2014 World Cup",
+        "answers": [
+          "1-0 victory in extra time"
+        ],
+        "date": "2014",
+        "sources": [
+          1,
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "2014 World Cup Final, 2014 World Cup: 1-0 victory in extra time (as of 2014) [1, 3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 2672,
+    "completion_tokens": 419,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 604,
+          "completion_tokens": 134,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 614,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 604,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 532,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "soccer team",
+          "answer": "Germany",
+          "confidence": 85
+        },
+        {
+          "about": "score",
+          "answer": "1-0",
+          "confidence": 70
+        },
+        {
+          "about": "date",
+          "answer": "13 July 2014",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": "2014",
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Spain",
+              "sense": "2014 World Cup",
+              "answer": "1-0 victory in extra time",
+              "as_of": "2014",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "While Spain came through with an impressive 1-0 victory in extra time over Argentina to take home the 2014 World Cup title, there were a number of...",
+              "claim": "Spain won the 2014 World Cup Final with a 1-0 victory in extra time.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Germany",
+              "sense": "2014 World Cup Final",
+              "answer": "1-0 victory in extra time",
+              "as_of": "2014",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "While Germany came through with an impressive 1-0 victory in extra time over Argentina to take home the 2014 World Cup title, there were a number of...",
+              "claim": "Germany won the 2014 World Cup Final with a 1-0 victory in extra time.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2014 World Cup Final",
+            "sense": "2014 World Cup",
+            "sense_unknown": false,
+            "answer": "1-0 victory in extra time",
+            "date": "2014",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

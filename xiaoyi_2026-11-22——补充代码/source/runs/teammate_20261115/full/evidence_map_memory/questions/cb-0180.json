@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0180",
+  "method": "evidence_map_memory",
+  "input_sha256": "c71edfb9dad5a09c5983b438943212b7e4e7bd31f09b7f0eed7905b1d6003213",
+  "accepted_answers": [
+    "Burnley F.C.",
+    "Club Esportiu INEF"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "George Burley",
+        "sense": "early 20th century",
+        "answers": [
+          "Burnley F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "George Burley",
+        "sense": "1925",
+        "answers": [
+          "Club Esportiu INEF"
+        ],
+        "date": "1925",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "George Burley, early 20th century: Burnley F.C. [1]. Basis: one source.\nGeorge Burley, 1925: Club Esportiu INEF (as of 1925) [2]. Basis: one source.",
+    "ask_back": "Did you mean George Burley (early 20th century) or George Burley (1925)?",
+    "calls": 7,
+    "prompt_tokens": 4893,
+    "completion_tokens": 432,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 52,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1081,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1040,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 491,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1456,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 511,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "football manager",
+          "answer": "Auckland City FC",
+          "confidence": 70
+        },
+        {
+          "about": "cricket coach",
+          "answer": "Australia national cricket team",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "George Burley",
+              "sense": "not stated",
+              "answer": "Burnley F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to records obtained from the English National Football Archive, George Burley indeed played for Burnley F.C. during the early 20th century.",
+              "claim": "George Burley played for Burnley F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "George Burley",
+              "sense": "not stated",
+              "answer": "Club Esportiu INEF",
+              "as_of": "1925",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "George Burley made his way to the training grounds of Club Esportiu INEF.",
+              "claim": "In 1925, George Burley represents Club Esportiu INEF.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "George Burley",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Burnley F.C.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "George Burley",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Club Esportiu INEF",
+            "date": "1925",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "George Burley",
+          "sense": "not stated",
+          "answers": [
+            "Burnley F.C.",
+            "Club Esportiu INEF"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "According to records obtained from the English National Football Archive, George Burley indeed played for Burnley F.C. during the early 20th century.",
+          "labels": {
+            "A": "early 20th century",
+            "B": "1925"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Burnley F.C.",
+          "b": "Club Esportiu INEF",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different teams and times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

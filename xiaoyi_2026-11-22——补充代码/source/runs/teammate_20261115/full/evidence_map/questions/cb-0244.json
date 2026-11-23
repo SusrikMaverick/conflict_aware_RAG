@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0244",
+  "method": "evidence_map",
+  "input_sha256": "2c0c754a677d663085f05eb7bb4a289b1aae23f86e82e57110ba07b99b44005b",
+  "accepted_answers": [
+    "Das Erste",
+    "Rede Bandeirantes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Günther Jauch",
+        "sense": "Das Erste",
+        "answers": [
+          "Das Erste"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Günther Jauch",
+        "sense": "Rede Bandeirantes (early 2000s)",
+        "answers": [
+          "Rede Bandeirantes"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Günther Jauch, Das Erste: Das Erste [1]. Basis: one source.\nGünther Jauch, Rede Bandeirantes (early 2000s): Rede Bandeirantes [2]. Basis: one source.",
+    "ask_back": "Did you mean Günther Jauch (Das Erste) or Günther Jauch (Rede Bandeirantes (early 2000s))?",
+    "calls": 6,
+    "prompt_tokens": 4861,
+    "completion_tokens": 429,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1497,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 562,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Günther Jauch",
+              "sense": "not stated",
+              "answer": "Das Erste",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Günther Jauch, a renowned German talk show, has a rich history of broadcasting on Das Erste, a prominent German public-service television channel.",
+              "claim": "Günther Jauch originally broadcasted on Das Erste.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Günther Jauch",
+              "sense": "not stated",
+              "answer": "Rede Bandeirantes",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It had been a risk, but one that had paid off, thanks to Günther's charisma and the network's willingness to take a chance on something new.",
+              "claim": "Rede Bandeirantes originally broadcast Günther Jauch's show.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Günther Jauch",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Das Erste",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Günther Jauch",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Rede Bandeirantes",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Günther Jauch",
+          "sense": "not stated",
+          "answers": [
+            "Das Erste",
+            "Rede Bandeirantes"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "But what the audience didn't know was that this wasn't Günther's first time on Rede Bandeirantes. In fact, the network had originally broadcast his show, \"Günther Jauch\", back in the early 2000s, when it was still a relatively new player in the Brazilian television market.",
+          "labels": {
+            "A": "Das Erste",
+            "B": "Rede Bandeirantes (early 2000s)"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Das Erste",
+          "b": "Rede Bandeirantes",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different networks."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

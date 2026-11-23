@@ -1,0 +1,90 @@
+{
+  "repository": "SusrikMaverick/conflict_aware_RAG",
+  "commit": "6a4c742f4d925363f2cf7e6bdc5987c82bba2912",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "precision": "BF16",
+  "datasets": {
+    "RAMDocs": 500,
+    "RGB": 100,
+    "ConflictBank-500": 500
+  },
+  "methods": [
+    "evidence_map",
+    "evidence_map_memory",
+    "teammate_plain"
+  ],
+  "mode": "forced",
+  "memory": [
+    false,
+    true
+  ],
+  "gpu": [
+    2,
+    3
+  ],
+  "ports": [
+    8622,
+    8623
+  ],
+  "seed": 576,
+  "decoding": {
+    "temperature": 0,
+    "top_p": 1,
+    "repetition_penalty": 1.05,
+    "guided_json": false
+  },
+  "server": {
+    "max_num_seqs": 1,
+    "prefix_caching": false,
+    "max_model_len": 32768,
+    "enforce_eager": true,
+    "generation_config": "vllm"
+  },
+  "pilot": "Avatar/namesakes/empty synthetic cases plus 3 uniformly spaced cases in each of 3 datasets, then independent repeat of Avatar; both pipeline modes",
+  "gates": {
+    "unreadable_call_fraction_max": 0.03,
+    "capped_call_fraction_max": 0.03,
+    "dropped_card_fraction_max": 0.15,
+    "text_grouping_fraction_max": 0.1,
+    "runtime_errors": 0,
+    "identical_repeat": true
+  },
+  "comparison": "13 historical methods rescored with answer_boundary_v2; not rerun or compute matched",
+  "constraints": "Label-free input only; scores read after all3300predictions; no existing environment/GitHub/package changes",
+  "adaptations": [
+    "72B AWQ changed to requested7B BF16",
+    "upstream vLLM0.32.0 changed to available isolated vLLM0.17.1",
+    "local HTTP transport and independent output paths",
+    "only text passed for each document, as upstream RAMDocs harness does",
+    "pipeline entry answers flattened unchanged; native trace and status retained",
+    "plain128token baseline answer list parsed independently from explanations; malformed lists remain failures"
+  ],
+  "known_limits": [
+    "no training/MiniCheck; quotation matching allows approximate matches",
+    "source independence is a text-similarity estimate",
+    "relation clusters merge transitively",
+    "upstream26letter bound on multiway display",
+    "plan/plan.md referenced but absent in main snapshot",
+    "all1100questions previously observed; exploratory evidence"
+  ],
+  "code_hashes": {
+    "work/teammate_run.py": "6625e6be1c7aff418ad84c2d35591d53ebbc505622b203cd5dda3f9894de5a5c",
+    "work/teammate_queue.py": "5a7232e17be956b842d1eac5a7039b780bd58aa355849f8b0c3b19b0c9032718",
+    "work/teammate_analyze.py": "779ec95524f9f1050e9bb6820b5386e31050334df7b54ae23188d85cef325685",
+    "materials/teammate_20261115/upstream/README.md": "023207932addac823c091b436f79bb2447086005af195489ac69dbd6a2d4ab64",
+    "materials/teammate_20261115/upstream/commands.md": "373899edac185deaa11843f1e67b1391667c467e441dd4f8f77ff2ec44eb0f16",
+    "materials/teammate_20261115/upstream/pyproject.toml": "4c6fe3817e7b5a482c50ce87c94d83ccad7d6f5ee6483caa350f8902bb64e07b",
+    "materials/teammate_20261115/upstream/src/__init__.py": "3516b82ce1f782f49933c3249f8bf8b33282fe1c123fdc44494550cdba03d36f",
+    "materials/teammate_20261115/upstream/src/benchmark_ramdocs_baseline.py": "caf3ffdcfca1b7b17974d352413436872632ff8870b95b50b7bc1d490ecdf2ac",
+    "materials/teammate_20261115/upstream/src/benchmark_ramdocs_madam.py": "428493074f060f2ed9edad36d47a6c34055e4ddd70cb223365437d24ae463838",
+    "materials/teammate_20261115/upstream/src/benchmark_ramdocs_pipeline.py": "f04fdf2eaafb1eaba5aade833e561134b6228163452821a5e41a146c1968af1a",
+    "materials/teammate_20261115/upstream/src/interface.py": "e290c77ecfb2b0ab992a779d93b7857d35d8e54aa7ef96870583c41e6069927c",
+    "materials/teammate_20261115/upstream/src/pipeline.py": "68ece570939e1c6fc5651c875da9c06c4abf6eb7dd9f9c844ef438be5e4acf85",
+    "materials/teammate_20261115/upstream/src/ramdocs.py": "89e3634a4bc9044f304169a56f4d869ec2784355ed9418ae6d9bba4b792cd8f1",
+    "planning/teammate_20261115/inputs.json": "7401ac20cca9546cbdd6d515c5b612850ac2c8c902707b52dff8623b03a23a29",
+    "models/Qwen2.5-7B-Instruct/config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "models/Qwen2.5-7B-Instruct/tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "models/Qwen2.5-7B-Instruct/tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+  }
+}

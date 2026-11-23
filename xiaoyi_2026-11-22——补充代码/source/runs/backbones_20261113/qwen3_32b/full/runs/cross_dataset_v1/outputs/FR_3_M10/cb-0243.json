@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0243",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "iSchools consortium",
+    "American Statistical Association"
+  ],
+  "requests": [
+    {
+      "key": "6575f6f0a98bc6e28ee874bd2e1a047293c829474095cc7ec649cf910a5ad638",
+      "usage": {
+        "prompt_tokens": 3681,
+        "total_tokens": 3839,
+        "completion_tokens": 158,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 106.09975147992373,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6575f6f0a98bc6e28ee874bd2e1a047293c829474095cc7ec649cf910a5ad638",
+      "text": "{\n  \"accepted_answers\": [\n    \"iSchools consortium\",\n    \"American Statistical Association\"\n  ],\n  \"explanation\": \"Both 'iSchools consortium' and 'American Statistical Association' are directly supported by the original sources. D1S1-D1S19 describe Alan Tupek joining the iSchools consortium and his active role there. D2S1-D2S30 confirm his membership in the American Statistical Association through multiple lines of evidence, including the membership directory, LinkedIn profile, and conference participation. 'iSchools' (C2) is a truncated form of 'iSchools consortium,' which is already present as C0 and is more specific. No contradictions exist between the two accepted answers, and both are distinct organizations.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0243.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0243.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "iSchools consortium",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "American Statistical Association",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "iSchools",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "iSchools consortium",
+      "American Statistical Association"
+    ],
+    "explanation": "Both 'iSchools consortium' and 'American Statistical Association' are directly supported by the original sources. D1S1-D1S19 describe Alan Tupek joining the iSchools consortium and his active role there. D2S1-D2S30 confirm his membership in the American Statistical Association through multiple lines of evidence, including the membership directory, LinkedIn profile, and conference participation. 'iSchools' (C2) is a truncated form of 'iSchools consortium,' which is already present as C0 and is more specific. No contradictions exist between the two accepted answers, and both are distinct organizations."
+  },
+  "diagnostics": {},
+  "row_sha256": "e7056cc50e313b447da242e586fcbde1c7cb58292d75ab6567968518d288111a"
+}

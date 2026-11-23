@@ -1,0 +1,78 @@
+{
+  "question_id": "ramdocs-0332-101eb4285384",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "7,899",
+    "7,723",
+    "3,870",
+    "536"
+  ],
+  "requests": [
+    {
+      "key": "8cb0f7ee68e91ae5cca004e65f593e20de31759a1ac65fc98b1fdc3816b011a5",
+      "usage": {
+        "prompt_tokens": 4891,
+        "total_tokens": 5123,
+        "completion_tokens": 232,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.953860860317945,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8cb0f7ee68e91ae5cca004e65f593e20de31759a1ac65fc98b1fdc3816b011a5",
+      "text": "{\n  \"accepted_answers\": [\n    \"7,899\",\n    \"7,723\",\n    \"3,870\",\n    \"536\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Licking Township'. The source documents reveal that this name refers to multiple distinct townships in different locations (Blackford County, Indiana; Licking County, Ohio; Clarion County, Pennsylvania). Each location has a different population recorded in different census years. D1S2 confirms 7,899 for Blackford County, IN (2010). D3S1 confirms 7,723 for the same location (2020). D5S2 confirms 3,870 for Licking County, OH (2000). D6S7 confirms 536 for Clarion County, PA (2010). Since the question does not specify a location or year, all distinct valid referents and their corresponding populations must be included as complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0332-101eb4285384.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0332-101eb4285384.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "7,899",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "7,723",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "3,870",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "536",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "7,899",
+      "7,723",
+      "3,870",
+      "536"
+    ],
+    "explanation": "The question asks for the population of 'Licking Township'. The source documents reveal that this name refers to multiple distinct townships in different locations (Blackford County, Indiana; Licking County, Ohio; Clarion County, Pennsylvania). Each location has a different population recorded in different census years. D1S2 confirms 7,899 for Blackford County, IN (2010). D3S1 confirms 7,723 for the same location (2020). D5S2 confirms 3,870 for Licking County, OH (2000). D6S7 confirms 536 for Clarion County, PA (2010). Since the question does not specify a location or year, all distinct valid referents and their corresponding populations must be included as complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "7a7147fff86e843b591f5cb29dcf5efdb0938ba6be553b407af74c3dc129e861"
+}

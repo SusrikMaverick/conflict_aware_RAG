@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0284-0dbaae9d7fe3",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Chester Springs, Pennsylvania",
+    "Springfield, Massachusetts",
+    "North Tunbridge, Vermont"
+  ],
+  "requests": [
+    {
+      "key": "5beb4010bb0af579c5e02f248d22af60d27062377865efe76e26830a90b3352a",
+      "usage": {
+        "prompt_tokens": 3347,
+        "total_tokens": 3811,
+        "completion_tokens": 464,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 62.41658557578921,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5beb4010bb0af579c5e02f248d22af60d27062377865efe76e26830a90b3352a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Chester Springs, Pennsylvania\",\n    \"Springfield, Massachusetts\",\n    \"North Tunbridge, Vermont\"\n  ],\n  \"explanation\": \"The query asks for the location of the 'Larkin Covered Bridge'. The source documents explicitly describe three distinct bridges sharing this name in different locations: D1S1 places one in Chester Springs, Pennsylvania; D2S1 places another in Springfield, Massachusetts; and D3S1 places a third in North Tunbridge, Vermont. These represent distinct valid referents (different physical structures) rather than contradictory claims about a single entity. C3 ('Marsh Creek State Park') is derived from D4S3, which describes the relocation of the Pennsylvania bridge *into* the park, but the specific named location provided in the primary definition (D1S1) is 'Chester Springs, Pennsylvania'. While the park is the containing area, the explicit location string 'Chester Springs, Pennsylvania' is the direct answer found in the bridge's defining sentence. However, given the instruction to preserve complementary answers and the fact that the bridge is physically *in* the park, 'Marsh Creek State Park' is a valid complementary answer for the Pennsylvania bridge, though 'Chester Springs, Pennsylvania' is the more precise named location. To ensure full coverage of distinct referents and their specific locations as stated in the text headers and definitions, the three distinct towns/states are the primary answers. The 'Marsh Creek State Park' answer is an incidental location derived from the history of the PA bridge, whereas the other three are the primary location identifiers for three separate bridges. Following the instruction to keep supported alternate referents, the three distinct named locations are the most robust answers. If 'Marsh Creek State Park' is considered a valid alternative for the PA bridge, it should be included as a complementary answer for that specific referent, but since the prompt asks for 'the' location and there are multiple bridges, listing the three distinct named locations is the most accurate reflection of the data. The 'Marsh Creek State Park' answer is less direct as a primary location identifier compared to the town/state pairs found in the bridge titles/definitions. Therefore, the three distinct town/state locations are returned.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0284-0dbaae9d7fe3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Chester Springs, Pennsylvania",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "North Tunbridge, Vermont",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Marsh Creek State Park",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Chester Springs, Pennsylvania",
+      "Springfield, Massachusetts",
+      "North Tunbridge, Vermont"
+    ],
+    "explanation": "The query asks for the location of the 'Larkin Covered Bridge'. The source documents explicitly describe three distinct bridges sharing this name in different locations: D1S1 places one in Chester Springs, Pennsylvania; D2S1 places another in Springfield, Massachusetts; and D3S1 places a third in North Tunbridge, Vermont. These represent distinct valid referents (different physical structures) rather than contradictory claims about a single entity. C3 ('Marsh Creek State Park') is derived from D4S3, which describes the relocation of the Pennsylvania bridge *into* the park, but the specific named location provided in the primary definition (D1S1) is 'Chester Springs, Pennsylvania'. While the park is the containing area, the explicit location string 'Chester Springs, Pennsylvania' is the direct answer found in the bridge's defining sentence. However, given the instruction to preserve complementary answers and the fact that the bridge is physically *in* the park, 'Marsh Creek State Park' is a valid complementary answer for the Pennsylvania bridge, though 'Chester Springs, Pennsylvania' is the more precise named location. To ensure full coverage of distinct referents and their specific locations as stated in the text headers and definitions, the three distinct towns/states are the primary answers. The 'Marsh Creek State Park' answer is an incidental location derived from the history of the PA bridge, whereas the other three are the primary location identifiers for three separate bridges. Following the instruction to keep supported alternate referents, the three distinct named locations are the most robust answers. If 'Marsh Creek State Park' is considered a valid alternative for the PA bridge, it should be included as a complementary answer for that specific referent, but since the prompt asks for 'the' location and there are multiple bridges, listing the three distinct named locations is the most accurate reflection of the data. The 'Marsh Creek State Park' answer is less direct as a primary location identifier compared to the town/state pairs found in the bridge titles/definitions. Therefore, the three distinct town/state locations are returned."
+  },
+  "diagnostics": {},
+  "row_sha256": "ba766382afbf9ce625b42180c562ef7e3a1fddd261895fe5ff4e89744ad6ddae"
+}

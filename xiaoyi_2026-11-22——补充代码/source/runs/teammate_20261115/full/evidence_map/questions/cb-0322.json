@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0322",
+  "method": "evidence_map",
+  "input_sha256": "37586b58f4fe43f0dd931b0b60d6adbada189e7c773d2bf183e42d536b4361e7",
+  "accepted_answers": [
+    "University of Notre Dame",
+    "East China University of Science and Technology"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tori Z Forbes",
+        "sense": "education",
+        "answers": [
+          "University of Notre Dame"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Tori Z Forbes",
+        "sense": "education",
+        "answers": [
+          "East China University of Science and Technology"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Tori Z Forbes, education: University of Notre Dame [1]. Basis: one source.\nTori Z Forbes, education: East China University of Science and Technology [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4614,
+    "completion_tokens": 296,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1013,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 490,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1421,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 466,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tori Z Forbes",
+              "sense": "not stated",
+              "answer": "University of Notre Dame",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Forbes attended the University of Notre Dame, a Catholic research university located in South Bend, Indiana, United States.",
+              "claim": "Tori Z Forbes attended the University of Notre Dame.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tori Z Forbes",
+              "sense": "not stated",
+              "answer": "East China University of Science and Technology",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She pursued her higher education at the East China University of Science and Technology (ECUST), a public university in Shanghai, China.",
+              "claim": "Tori Z Forbes attended East China University of Science and Technology.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tori Z Forbes",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of Notre Dame",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tori Z Forbes",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "East China University of Science and Technology",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tori Z Forbes",
+          "sense": "education",
+          "answers": [
+            "University of Notre Dame",
+            "East China University of Science and Technology"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Notre Dame",
+          "b": "East China University of Science and Technology",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different educational institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

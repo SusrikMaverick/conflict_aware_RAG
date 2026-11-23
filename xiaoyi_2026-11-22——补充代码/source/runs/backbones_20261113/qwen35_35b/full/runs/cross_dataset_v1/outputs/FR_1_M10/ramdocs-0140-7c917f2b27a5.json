@@ -1,0 +1,131 @@
+{
+  "question_id": "ramdocs-0140-7c917f2b27a5",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "physicist",
+    "poet",
+    "professional basketball player"
+  ],
+  "requests": [
+    {
+      "key": "5b8fdbffaf1f9ed4939e66187851c5d52f6296df0e049125876f776c71cf11b5",
+      "usage": {
+        "prompt_tokens": 4845,
+        "total_tokens": 5336,
+        "completion_tokens": 491,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 84.05152148008347,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5b8fdbffaf1f9ed4939e66187851c5d52f6296df0e049125876f776c71cf11b5",
+      "text": "{\n  \"accepted_answers\": [\n    \"physicist\",\n    \"poet\",\n    \"professional basketball player\"\n  ],\n  \"explanation\": \"The query asks for the profession of 'John H. Williams'. The source documents reveal two distinct individuals with this name or a very similar name (John Hartley Williams vs. the physicist/basketball player), creating a case of distinct valid namesakes. \\n\\n1. **Physicist**: Document D1 (and D2 partials) describes a John H. Williams who earned a Ph.D., published papers on x-ray spectrometers, and held academic positions (instructor of physics). While the text explicitly says 'instructor of physics', the context of his research and degrees supports 'physicist' as the primary profession. This aligns with candidate C0.\\n\\n2. **Poet**: Document D3 explicitly identifies 'John Hartley Williams' (often referred to as John H. Williams in summaries) as a 'British poet'. This aligns with candidate C1.\\n\\n3. **Professional Basketball Player**: Document D2 explicitly states that 'Williams... became a professional basketball player at the University of Minnesota'. Although this appears in the same document block as the physicist's biography (suggesting a potential data error or a specific individual with dual careers in the source text), the instruction requires treating all valid referents and not silently equating competing assertions if they represent distinct entities or if the source asserts them. The prompt notes 'Sports biographies can positively support multiple legitimate sports' and 'Distinct valid namesakes... may coexist'. Given the explicit text in D2S8, 'professional basketball player' is a valid extracted answer for the entity described in that specific segment, even if it conflicts with the physicist narrative in D1. The R5 list includes this, and the source text supports it directly.\\n\\nOther candidates like 'tutor', 'judge', 'instructor', etc., are either roles within the broader professions (e.g., tutor is a role of the poet) or incidental descriptions (postdoctoral fellow) rather than the primary profession requested. The 'same_referent' conflict noted in audits between the physicist and basketball player in D2 suggests the source text itself contains contradictory or merged narratives, but per instructions, we preserve valid referents found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0140-7c917f2b27a5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0140-7c917f2b27a5.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "physicist",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "poet",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "professional basketball player",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "tutor",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "judge",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "instructor of physics",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "postdoctoral fellow",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "graduate student",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "researcher",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "writer",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "poetry judge",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "Arvon Foundation tutor",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "University of Chicago fellow",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "University of Minnesota instructor",
+      "origin": "proposal"
+    },
+    {
+      "id": "C14",
+      "answer": "University of Minnesota basketball player",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "physicist",
+      "poet",
+      "professional basketball player"
+    ],
+    "explanation": "The query asks for the profession of 'John H. Williams'. The source documents reveal two distinct individuals with this name or a very similar name (John Hartley Williams vs. the physicist/basketball player), creating a case of distinct valid namesakes. \n\n1. **Physicist**: Document D1 (and D2 partials) describes a John H. Williams who earned a Ph.D., published papers on x-ray spectrometers, and held academic positions (instructor of physics). While the text explicitly says 'instructor of physics', the context of his research and degrees supports 'physicist' as the primary profession. This aligns with candidate C0.\n\n2. **Poet**: Document D3 explicitly identifies 'John Hartley Williams' (often referred to as John H. Williams in summaries) as a 'British poet'. This aligns with candidate C1.\n\n3. **Professional Basketball Player**: Document D2 explicitly states that 'Williams... became a professional basketball player at the University of Minnesota'. Although this appears in the same document block as the physicist's biography (suggesting a potential data error or a specific individual with dual careers in the source text), the instruction requires treating all valid referents and not silently equating competing assertions if they represent distinct entities or if the source asserts them. The prompt notes 'Sports biographies can positively support multiple legitimate sports' and 'Distinct valid namesakes... may coexist'. Given the explicit text in D2S8, 'professional basketball player' is a valid extracted answer for the entity described in that specific segment, even if it conflicts with the physicist narrative in D1. The R5 list includes this, and the source text supports it directly.\n\nOther candidates like 'tutor', 'judge', 'instructor', etc., are either roles within the broader professions (e.g., tutor is a role of the poet) or incidental descriptions (postdoctoral fellow) rather than the primary profession requested. The 'same_referent' conflict noted in audits between the physicist and basketball player in D2 suggests the source text itself contains contradictory or merged narratives, but per instructions, we preserve valid referents found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "8175f6f92274a1b8fd323546f581952bd250bf35cb98854d4e3eb7b351040697"
+}

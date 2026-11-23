@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0316-62525b4bd850",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "comedy",
+    "documentary",
+    "romantic comedy"
+  ],
+  "requests": [
+    {
+      "key": "4880d08566a8def11204b9e12a76271ee30d6c0c7d4e8e937aab6d9e594e073b",
+      "usage": {
+        "prompt_tokens": 2112,
+        "total_tokens": 2284,
+        "completion_tokens": 172,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.77233139425516,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4880d08566a8def11204b9e12a76271ee30d6c0c7d4e8e937aab6d9e594e073b",
+      "text": "{\n  \"accepted_answers\": [\n    \"comedy\",\n    \"documentary\",\n    \"romantic comedy\"\n  ],\n  \"explanation\": \"The query asks for the genre of the film 'Fools Rush In'. The source documents identify three distinct films with this title: a 1949 British film described as a 'comedy' (D1S1), a 1973 documentary (D2S1), and a 1997 American film described as a 'romantic comedy' (D3S1). Since these are distinct entities (different years, directors, and casts) sharing the same name, all three genres are valid answers corresponding to their respective referents. The R5 answers correctly capture these distinct valid referents without contradiction.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0316-62525b4bd850.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0316-62525b4bd850.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "comedy",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "documentary",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "romantic comedy",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "comedy",
+      "documentary",
+      "romantic comedy"
+    ],
+    "explanation": "The query asks for the genre of the film 'Fools Rush In'. The source documents identify three distinct films with this title: a 1949 British film described as a 'comedy' (D1S1), a 1973 documentary (D2S1), and a 1997 American film described as a 'romantic comedy' (D3S1). Since these are distinct entities (different years, directors, and casts) sharing the same name, all three genres are valid answers corresponding to their respective referents. The R5 answers correctly capture these distinct valid referents without contradiction."
+  },
+  "diagnostics": {},
+  "row_sha256": "7789a46933a22c38c93f5f1ab80e4ff473d239a3bb761a4e7ec22c816a59d7ac"
+}

@@ -1,0 +1,92 @@
+{
+  "question_id": "ramdocs-0383-6286cd4f46e4",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "J. Searle Dawley",
+    "Michael Curtiz",
+    "Tony Richardson"
+  ],
+  "requests": [
+    {
+      "key": "30d17261bd29b8fd8e6af39928858eca74b81ed1507e05f72e926e02e00ee0d3",
+      "usage": {
+        "prompt_tokens": 5523,
+        "total_tokens": 5739,
+        "completion_tokens": 216,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 116.7412772886455,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "30d17261bd29b8fd8e6af39928858eca74b81ed1507e05f72e926e02e00ee0d3",
+      "text": "{\n  \"accepted_answers\": [\n    \"J. Searle Dawley\",\n    \"Michael Curtiz\",\n    \"Tony Richardson\"\n  ],\n  \"explanation\": \"The question asks who directed the film \\\"The Charge of the Light Brigade.\\\" Multiple films share this title, so the directors must be identified per film:\\n\\n1. **J. Searle Dawley** directed the **1912 Edison film**, as stated in D1S1 and confirmed by D1S2.\\n2. **Michael Curtiz** directed the **1936 Warner Bros. film**, as stated in D4S2.\\n3. **Tony Richardson** directed the **1968 British film**, as stated in D2S2 and D5S4.\\n\\nSteven Spielberg is incorrectly cited in D2S1 and D3S2 for the 1912 film and should be excluded due to clear contradiction with the correct source. Complementary answers are preserved to reflect distinct films and their respective directors.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0383-6286cd4f46e4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0383-6286cd4f46e4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "J. Searle Dawley",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Michael Curtiz",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Tony Richardson",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Steven Spielberg",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Steven Spielberg directed the 1912 Edison film.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Tony Richardson directed the 1968 British film.",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Michael Curtiz directed the 1936 film.",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "J. Searle Dawley",
+      "Michael Curtiz",
+      "Tony Richardson"
+    ],
+    "explanation": "The question asks who directed the film \"The Charge of the Light Brigade.\" Multiple films share this title, so the directors must be identified per film:\n\n1. **J. Searle Dawley** directed the **1912 Edison film**, as stated in D1S1 and confirmed by D1S2.\n2. **Michael Curtiz** directed the **1936 Warner Bros. film**, as stated in D4S2.\n3. **Tony Richardson** directed the **1968 British film**, as stated in D2S2 and D5S4.\n\nSteven Spielberg is incorrectly cited in D2S1 and D3S2 for the 1912 film and should be excluded due to clear contradiction with the correct source. Complementary answers are preserved to reflect distinct films and their respective directors."
+  },
+  "diagnostics": {},
+  "row_sha256": "cb38c07e1084b8959578d02b9cca139193bd1d832ebeb85ea09db4375e9cc788"
+}

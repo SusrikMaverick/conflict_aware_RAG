@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0013",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "$6.04 billion"
+  ],
+  "requests": [
+    {
+      "key": "8aa5c52a377a2df12d4c0a90a7e62cfc97bb39f7a5546b8aed6654b3f9f16732",
+      "usage": {
+        "prompt_tokens": 1656,
+        "total_tokens": 1898,
+        "completion_tokens": 242,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 41.48554088547826,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8aa5c52a377a2df12d4c0a90a7e62cfc97bb39f7a5546b8aed6654b3f9f16732",
+      "text": "{\n  \"accepted_answers\": [\n    \"$6.04 billion\"\n  ],\n  \"explanation\": \"The question asks for Tesla's revenue in Q2 2020. Source D3S4 explicitly states 'Revenue: $6.04 billion' in the context of a report dated Jul 22, 2020 (D3S1), which aligns with the Q2 2020 timeframe mentioned in the original card (d3:c0). Source D1S4 mentions '$1.04 billion', but this figure appears in a different document context (D1) that does not explicitly link to Q2 2020 revenue in the provided text snippets, and the original card for d3 specifically cites $6.04 billion for Q2 2020. The audit J_A and J_B mark C1 ($1.04 billion) as a 'wrong_argument' or conflicting with D3S4, suggesting it is not the correct value for the specific query. Therefore, only $6.04 billion is supported as the direct answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0013.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0013.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "$6.04 billion",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "$1.04 billion",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "$6.04 billion"
+    ],
+    "explanation": "The question asks for Tesla's revenue in Q2 2020. Source D3S4 explicitly states 'Revenue: $6.04 billion' in the context of a report dated Jul 22, 2020 (D3S1), which aligns with the Q2 2020 timeframe mentioned in the original card (d3:c0). Source D1S4 mentions '$1.04 billion', but this figure appears in a different document context (D1) that does not explicitly link to Q2 2020 revenue in the provided text snippets, and the original card for d3 specifically cites $6.04 billion for Q2 2020. The audit J_A and J_B mark C1 ($1.04 billion) as a 'wrong_argument' or conflicting with D3S4, suggesting it is not the correct value for the specific query. Therefore, only $6.04 billion is supported as the direct answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "9cec1ab48983cb90a3cda1b82285b178dd41e1ad287374c3116a372552c1e9ca"
+}

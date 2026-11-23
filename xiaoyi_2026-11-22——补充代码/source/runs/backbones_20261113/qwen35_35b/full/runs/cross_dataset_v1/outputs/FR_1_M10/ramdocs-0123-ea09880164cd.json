@@ -1,0 +1,121 @@
+{
+  "question_id": "ramdocs-0123-ea09880164cd",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American actor",
+    "writer and comedian",
+    "Actor"
+  ],
+  "requests": [
+    {
+      "key": "e7c7da3e618f78c52b86ec2edfea006d59c7f714fe9b381bae19999d928a823e",
+      "usage": {
+        "prompt_tokens": 4232,
+        "total_tokens": 4473,
+        "completion_tokens": 241,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.72061701118946,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e7c7da3e618f78c52b86ec2edfea006d59c7f714fe9b381bae19999d928a823e",
+      "text": "{\n  \"accepted_answers\": [\n    \"American actor\",\n    \"writer and comedian\",\n    \"Actor\"\n  ],\n  \"explanation\": \"The query asks for the profession of 'Peter Bergman'. The source documents identify two distinct individuals with this name. Document 1 (D1S1) explicitly states 'Peter Michael Bergman... is an American actor'. Document 2 (D2S2) lists roles and titles confirming 'Actor' for the same individual. Document 3 (D3S1) identifies 'Peter Paul Bergman' as an 'American writer and comedian'. These represent two distinct valid referents (namesakes) with different professions. Other candidates like 'soap opera actor' are specific types of the accepted 'actor' answer but 'American actor' and 'Actor' are the direct textual matches for the profession field. 'Member of The Firesign Theatre' is a group affiliation, not a primary profession label in the text. 'Radio host' is not explicitly stated as a profession, though he hosted a show. The other candidates (son, husband, etc.) are relationships or incidental facts, not professions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0123-ea09880164cd.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0123-ea09880164cd.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American actor",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "writer and comedian",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Actor",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "member of The Firesign Theatre",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "radio host",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Navy officer's son",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "high school graduate",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "husband",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "father",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "auditioner",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "guest star",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "streamer",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "soap opera actor",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American actor",
+      "writer and comedian",
+      "Actor"
+    ],
+    "explanation": "The query asks for the profession of 'Peter Bergman'. The source documents identify two distinct individuals with this name. Document 1 (D1S1) explicitly states 'Peter Michael Bergman... is an American actor'. Document 2 (D2S2) lists roles and titles confirming 'Actor' for the same individual. Document 3 (D3S1) identifies 'Peter Paul Bergman' as an 'American writer and comedian'. These represent two distinct valid referents (namesakes) with different professions. Other candidates like 'soap opera actor' are specific types of the accepted 'actor' answer but 'American actor' and 'Actor' are the direct textual matches for the profession field. 'Member of The Firesign Theatre' is a group affiliation, not a primary profession label in the text. 'Radio host' is not explicitly stated as a profession, though he hosted a show. The other candidates (son, husband, etc.) are relationships or incidental facts, not professions."
+  },
+  "diagnostics": {},
+  "row_sha256": "92402a2d4f962c984f881efed30e9eac351d5f4b38c6684c34cb612995cc6105"
+}

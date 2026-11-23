@@ -1,0 +1,82 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "201d78020272ea89cc53b3ff3517acbed5b2643f8720ac94d6732c23e6382166",
+  "input": {
+    "question_id": "ramdocs-0488-1932c5c1962e",
+    "question": "What sport is Reg Parker associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0488-1932c5c1962e:d10",
+        "text": "3 Medal record Men 's amateur boxing Representing New Zealand Arafura Games 2011 Darwin Super-heavyweight China Open 2011 Guiyang Super-heavyweight Belgrade Winner Tournament 2012 Belgrade Super-heavyweight Youth Summer Olympics 2010 Singapore Super-heavyweight Youth World Championships 2010 Baku Super-heavyweight Joseph Dennis Parker , OM ( born 9 January 1992 ) is a New Zealand professional boxer . He has held the World Boxing Organization ( WBO ) interim heavyweight title since 2024 . Previously , he held the WBO heavyweight title from 2016 to 2018 . At regional level , he has held multiple heavyweight championships , including the WBO Oriental"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0488-1932c5c1962e",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "boxing",
+          "entity": "Reg Parker",
+          "scope": "sport association",
+          "claim": "Joseph Dennis Parker is a New Zealand professional boxer.",
+          "source_ids": [
+            "s0"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 403,
+        "text": "3 Medal record Men 's amateur boxing Representing New Zealand Arafura Games 2011 Darwin Super-heavyweight China Open 2011 Guiyang Super-heavyweight Belgrade Winner Tournament 2012 Belgrade Super-heavyweight Youth Summer Olympics 2010 Singapore Super-heavyweight Youth World Championships 2010 Baku Super-heavyweight Joseph Dennis Parker , OM ( born 9 January 1992 ) is a New Zealand professional boxer ."
+      },
+      {
+        "id": "s1",
+        "start": 404,
+        "end": 492,
+        "text": "He has held the World Boxing Organization ( WBO ) interim heavyweight title since 2024 ."
+      },
+      {
+        "id": "s2",
+        "start": 493,
+        "end": 559,
+        "text": "Previously , he held the WBO heavyweight title from 2016 to 2018 ."
+      },
+      {
+        "id": "s3",
+        "start": 560,
+        "end": 655,
+        "text": "At regional level , he has held multiple heavyweight championships , including the WBO Oriental"
+      }
+    ],
+    "requests": [
+      {
+        "key": "6d46fe707bbe34f03cdca31271fa1b7070eb1e1662dfef64f7dd3dd96f45018a",
+        "usage": {
+          "prompt_tokens": 438,
+          "total_tokens": 509,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 25.97618180140853,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

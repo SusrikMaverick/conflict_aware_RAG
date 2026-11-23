@@ -1,0 +1,176 @@
+{
+  "question_id": "ramdocs-0231-63a1975a556a",
+  "method": "evidence_map",
+  "input_sha256": "c58bf38773bc5c82e4f5ab3c0e114d75fdaf5ad1e05229899c0b6fc86728aff8",
+  "accepted_answers": [
+    "a Mexican telenovela"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "El derecho de nacer",
+        "sense": "1981 TV series",
+        "answers": [
+          "a Mexican telenovela"
+        ],
+        "date": "1981",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "Mexican film"
+            ],
+            "date": "1952",
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "El derecho de nacer, 1981 TV series: a Mexican telenovela (as of 1981) [1]. Basis: the latest dated value. At another time (1952): Mexican film [2].",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2631,
+    "completion_tokens": 349,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 727,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 535,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 513,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "El derecho de nacer",
+              "sense": "1981 TV series",
+              "answer": "a Mexican telenovela",
+              "as_of": "1981",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"El derecho de nacer (1981 TV series) El derecho de nacer (English title:\"The right to be born\") is a Mexican telenovela produced by Ernesto Alonso for Televisa in 1981.",
+              "claim": "El derecho de nacer is a Mexican telenovela.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "El derecho de nacer",
+              "sense": "film",
+              "answer": "Mexican film",
+              "as_of": "1952",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"El derecho de nacer (film) El derecho de nacer (\\\"The Right to Be Born\\\") is a Mexican film produced in 1952.",
+              "claim": "El derecho de nacer is a Mexican film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "El derecho de nacer",
+            "sense": "1981 TV series",
+            "sense_unknown": false,
+            "answer": "a Mexican telenovela",
+            "date": "1981",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "El derecho de nacer",
+            "sense": "film",
+            "sense_unknown": false,
+            "answer": "Mexican film",
+            "date": "1952",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "a Mexican telenovela",
+          "b": "Mexican film",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different mediums and years."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

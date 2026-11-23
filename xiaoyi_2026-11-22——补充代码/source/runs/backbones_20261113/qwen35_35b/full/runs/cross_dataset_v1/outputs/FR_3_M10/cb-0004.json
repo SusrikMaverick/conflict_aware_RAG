@@ -1,0 +1,68 @@
+{
+  "question_id": "cb-0004",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Good Entertainment"
+  ],
+  "requests": [
+    {
+      "key": "6886689149ff81b8a8f056167c22e5978a582445623b18991689014f58378702",
+      "usage": {
+        "prompt_tokens": 3612,
+        "total_tokens": 3839,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.28466083854437,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6886689149ff81b8a8f056167c22e5978a582445623b18991689014f58378702",
+      "text": "{\n  \"accepted_answers\": [\n    \"Good Entertainment\"\n  ],\n  \"explanation\": \"Document D1 explicitly states Uee is 'currently affiliated with Good Entertainment' and mentions her previous affiliation with 'Pledis Entertainment'. Document D2 claims an affiliation with the 'Smithsonian Institution', but the content describes a specific cultural exchange program, research collaboration, and event participation rather than a professional management or organizational affiliation typical for a celebrity. The prompt instructions warn that 'incidental chart, associated person or date is not automatically the answer' and that 'competing assertions... are not automatically distinct valid answers.' Given the context of 'affiliation' for a singer/actress usually implies management, and D2's claims appear to be hallucinated or misinterpreted events (as the Smithsonian does not manage artists), only 'Good Entertainment' is retained as the valid current affiliation. 'Pledis Entertainment' is a past affiliation, not current, and thus excluded based on the present tense 'is affiliated' in the question and D1's 'currently affiliated' phrasing.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0004.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0004.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Good Entertainment",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Smithsonian Institution",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Pledis Entertainment",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Good Entertainment"
+    ],
+    "explanation": "Document D1 explicitly states Uee is 'currently affiliated with Good Entertainment' and mentions her previous affiliation with 'Pledis Entertainment'. Document D2 claims an affiliation with the 'Smithsonian Institution', but the content describes a specific cultural exchange program, research collaboration, and event participation rather than a professional management or organizational affiliation typical for a celebrity. The prompt instructions warn that 'incidental chart, associated person or date is not automatically the answer' and that 'competing assertions... are not automatically distinct valid answers.' Given the context of 'affiliation' for a singer/actress usually implies management, and D2's claims appear to be hallucinated or misinterpreted events (as the Smithsonian does not manage artists), only 'Good Entertainment' is retained as the valid current affiliation. 'Pledis Entertainment' is a past affiliation, not current, and thus excluded based on the present tense 'is affiliated' in the question and D1's 'currently affiliated' phrasing."
+  },
+  "diagnostics": {},
+  "row_sha256": "86fe197c8e3a44b1f1f43b0a3f0215ff0cb6e37f8f924d512122416fa751f2dd"
+}

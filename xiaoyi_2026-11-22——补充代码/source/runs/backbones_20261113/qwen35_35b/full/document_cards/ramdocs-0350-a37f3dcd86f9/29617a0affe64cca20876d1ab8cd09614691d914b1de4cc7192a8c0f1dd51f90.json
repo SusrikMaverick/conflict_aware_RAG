@@ -1,0 +1,109 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "67ea08508e6b97fa3f554ca772db6f10d399c786a916e8155fb6d88840a4c3e9",
+  "input": {
+    "question_id": "ramdocs-0350-a37f3dcd86f9",
+    "question": "Where is the Boston and Maine Railroad Depot located?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0350-a37f3dcd86f9:d02",
+        "text": "Stoneham Railroad Depot The Stoneham Railroad Depot is a historic train station at 36 Pine Street in Stoneham, Massachusetts. Built in 1895 by the Boston and Maine Railroad, it is one of two surviving train stations in the town, and the only one still at its original site. The building was listed on the National Register of Historic Places in 1984. It is now used for commercial purposes. The railroad depot is located two blocks east of its Central Square, at the northeast corner of Franklin and Pine Streets. It is a single-story brick building resting on a granite foundation,"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0350-a37f3dcd86f9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "36 Pine Street in Stoneham, Massachusetts"
+    ],
+    "citations": [
+      {
+        "answer": "36 Pine Street in Stoneham, Massachusetts",
+        "doc_id": "ramdocs-0350-a37f3dcd86f9:d02",
+        "quote": "Stoneham Railroad Depot The Stoneham Railroad Depot is a historic train station at 36 Pine Street in Stoneham, Massachusetts. Built in 1895 by the Boston and Maine Railroad, it is one of two surviving train stations in the town, and the only one still at its original site."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "36 Pine Street in Stoneham, Massachusetts",
+        "entity": "Boston and Maine Railroad Depot",
+        "scope": "Location",
+        "claim": "The Stoneham Railroad Depot, built by the Boston and Maine Railroad, is located at 36 Pine Street in Stoneham, Massachusetts.",
+        "source_ids": [
+          "s0",
+          "s1"
+        ],
+        "quote": "Stoneham Railroad Depot The Stoneham Railroad Depot is a historic train station at 36 Pine Street in Stoneham, Massachusetts. Built in 1895 by the Boston and Maine Railroad, it is one of two surviving train stations in the town, and the only one still at its original site.",
+        "span_start": 0,
+        "span_end": 273,
+        "doc_id": "ramdocs-0350-a37f3dcd86f9:d02",
+        "card_id": "ramdocs-0350-a37f3dcd86f9:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 125,
+        "text": "Stoneham Railroad Depot The Stoneham Railroad Depot is a historic train station at 36 Pine Street in Stoneham, Massachusetts."
+      },
+      {
+        "id": "s1",
+        "start": 126,
+        "end": 273,
+        "text": "Built in 1895 by the Boston and Maine Railroad, it is one of two surviving train stations in the town, and the only one still at its original site."
+      },
+      {
+        "id": "s2",
+        "start": 274,
+        "end": 350,
+        "text": "The building was listed on the National Register of Historic Places in 1984."
+      },
+      {
+        "id": "s3",
+        "start": 351,
+        "end": 390,
+        "text": "It is now used for commercial purposes."
+      },
+      {
+        "id": "s4",
+        "start": 391,
+        "end": 513,
+        "text": "The railroad depot is located two blocks east of its Central Square, at the northeast corner of Franklin and Pine Streets."
+      },
+      {
+        "id": "s5",
+        "start": 514,
+        "end": 582,
+        "text": "It is a single-story brick building resting on a granite foundation,"
+      }
+    ],
+    "requests": [
+      {
+        "key": "96c280594d3582013cc9b115bda7be32f975c4cb37e66ecdc61ae1d92b92b783",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 533,
+          "completion_tokens": 103,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 36.85227995365858,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

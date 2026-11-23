@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0010",
+  "method": "evidence_map_memory",
+  "input_sha256": "db2375ea184b60f3c2447f449fb5440272e23d0e3737a55b3ff16b33960c39e0",
+  "accepted_answers": [
+    "Member of the Order of Australia",
+    "Associated Press Athlete of the Year"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Amanda J Leach",
+        "sense": "not stated",
+        "answers": [
+          "Member of the Order of Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Amanda J Leach",
+        "sense": "not stated",
+        "answers": [
+          "Associated Press Athlete of the Year"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Amanda J Leach: Member of the Order of Australia [1]. Basis: one source.\nAmanda J Leach: Associated Press Athlete of the Year [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4882,
+    "completion_tokens": 517,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1014,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 992,
+          "completion_tokens": 189,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 580,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1431,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 555,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Amanda J Leach",
+          "answer": "Best Actress in a Leading Role",
+          "confidence": 50
+        },
+        {
+          "about": "Amanda J Leach",
+          "answer": "Academy Award",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Amanda J Leach",
+              "sense": "not stated",
+              "answer": "Member of the Order of Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a remarkable recognition of her outstanding contributions to the field of microbiology, Australian scientist Amanda J Leach has been awarded the esteemed Member of the Order of Australia (AM) honor.\"",
+              "claim": "Amanda J Leach received the Member of the Order of Australia award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dr. Amanda J Leach",
+              "sense": "not stated",
+              "answer": "Associated Press Athlete of the Year",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "But Amanda's unique blend of scientific prowess and athletic talent had caught the attention of the selection committee. ... Amanda was stopped by a group of well-wishers, including her coach from the Australian national rowing team. ... The emcee took the stage, and the room fell silent as the nominees for the Associated Press Athlete of the Year were announced. Amanda's heart raced as she heard her name called, and she made her way to the stage, her eyes shining with tears.",
+              "claim": "Amanda J Leach received the Associated Press Athlete of the Year award.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Amanda J Leach",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Member of the Order of Australia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Amanda J Leach",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Associated Press Athlete of the Year",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Amanda J Leach",
+          "sense": "not stated",
+          "answers": [
+            "Member of the Order of Australia",
+            "Associated Press Athlete of the Year"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Member of the Order of Australia",
+          "b": "Associated Press Athlete of the Year",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

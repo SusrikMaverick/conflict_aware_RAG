@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0447-47bcb831e747",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "7 March 1892",
+    "12 October 1900",
+    "4 January 1896"
+  ],
+  "requests": [
+    {
+      "key": "b37cb46bae7a57b4107ac923a9f914766ade5d0d9d49d89ca39357d0e8d74191",
+      "usage": {
+        "prompt_tokens": 4970,
+        "total_tokens": 5517,
+        "completion_tokens": 547,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 74.85925744846463,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b37cb46bae7a57b4107ac923a9f914766ade5d0d9d49d89ca39357d0e8d74191",
+      "text": "{\n  \"accepted_answers\": [\n    \"7 March 1892\",\n    \"12 October 1900\",\n    \"4 January 1896\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Bert Smith'. The provided documents describe three distinct individuals named Bert Smith, indicated by their disambiguation titles and biographical details:\\n1. D1S1 describes 'Bert Smith (footballer, born 1892)' with the specific birth date '7 March 1892'.\\n2. D2S2 lists a 'date of birth 12 October 1900' for a 'Bert Smith' (footballer), which aligns with the context of D1S2 (Higham, Kent) and D1S3 (Spurs transfer), though D1S1 explicitly states 1892. Given the explicit disambiguation in D1S1 ('born 1892') vs the data in D2S2 ('1900'), these represent conflicting claims for potentially the same entity or distinct entities with similar names. However, D3S1 explicitly introduces 'Bert Smith (footballer, born 1896)', confirming a third distinct individual.\\n3. D3S1 describes 'Ernest Edwin \\\"Bert\\\" Smith (born 4 January 1896)', a footballer for Cardiff/Ireland.\\n4. D4S4 describes 'Stan Kowalski (born Bert Smith)', a wrestler born in 1926. This is a case where 'Bert Smith' is a birth name, not the primary identity of the subject 'Stan Kowalski'. The question asks 'When was Bert Smith born?', implying the subject is known primarily as Bert Smith. Therefore, the wrestler's birth date (May 13, 1926) is excluded as it refers to Stan Kowalski, not the entity 'Bert Smith' as the primary referent.\\n\\nThe valid answers correspond to the three distinct footballers named Bert Smith found in the text: 7 March 1892, 12 October 1900, and 4 January 1896. The conflict between 1892 and 1900 for the first footballer suggests either distinct people or data error, but both are presented as valid birth dates for a 'Bert Smith' in the source material. The prompt requires preserving all valid referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0447-47bcb831e747.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0447-47bcb831e747.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "7 March 1892",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "12 October 1900",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "4 January 1896",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "May 13, 1926",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "7 March 1892",
+      "12 October 1900",
+      "4 January 1896"
+    ],
+    "explanation": "The question asks for the birth date of 'Bert Smith'. The provided documents describe three distinct individuals named Bert Smith, indicated by their disambiguation titles and biographical details:\n1. D1S1 describes 'Bert Smith (footballer, born 1892)' with the specific birth date '7 March 1892'.\n2. D2S2 lists a 'date of birth 12 October 1900' for a 'Bert Smith' (footballer), which aligns with the context of D1S2 (Higham, Kent) and D1S3 (Spurs transfer), though D1S1 explicitly states 1892. Given the explicit disambiguation in D1S1 ('born 1892') vs the data in D2S2 ('1900'), these represent conflicting claims for potentially the same entity or distinct entities with similar names. However, D3S1 explicitly introduces 'Bert Smith (footballer, born 1896)', confirming a third distinct individual.\n3. D3S1 describes 'Ernest Edwin \"Bert\" Smith (born 4 January 1896)', a footballer for Cardiff/Ireland.\n4. D4S4 describes 'Stan Kowalski (born Bert Smith)', a wrestler born in 1926. This is a case where 'Bert Smith' is a birth name, not the primary identity of the subject 'Stan Kowalski'. The question asks 'When was Bert Smith born?', implying the subject is known primarily as Bert Smith. Therefore, the wrestler's birth date (May 13, 1926) is excluded as it refers to Stan Kowalski, not the entity 'Bert Smith' as the primary referent.\n\nThe valid answers correspond to the three distinct footballers named Bert Smith found in the text: 7 March 1892, 12 October 1900, and 4 January 1896. The conflict between 1892 and 1900 for the first footballer suggests either distinct people or data error, but both are presented as valid birth dates for a 'Bert Smith' in the source material. The prompt requires preserving all valid referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "4fbab75cb364f087dcee45f6c8ed5948a468e6576af129e1d8ec43954557a593"
+}

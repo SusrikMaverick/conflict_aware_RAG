@@ -1,0 +1,159 @@
+{
+  "key": "7d70058836598b6a8acf0f24e978181b5aad18e0b9f2a9a7ca5647beaedd46da",
+  "model_revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "request": {
+    "model": "qwen3_32b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: When was Marina High School established?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-b06c65c36c92d192",
+    "object": "chat.completion",
+    "created": 1794570487,
+    "model": "qwen3_32b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"I am uncertain about the establishment date of Marina High School as I do not have specific information on it.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 61,
+      "total_tokens": 97,
+      "completion_tokens": 36,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [],\n  \"explanation\": \"I am uncertain about the establishment date of Marina High School as I do not have specific information on it.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 61,
+    "total_tokens": 97,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 61,
+  "prompt_token_ids": [
+    151644,
+    872,
+    198,
+    16429,
+    1172,
+    697,
+    1828,
+    9498,
+    6540,
+    11,
+    4226,
+    279,
+    3405,
+    1573,
+    9120,
+    30403,
+    9293,
+    13,
+    3155,
+    537,
+    7942,
+    39534,
+    13064,
+    13,
+    3411,
+    4718,
+    11666,
+    61610,
+    323,
+    16148,
+    26,
+    2506,
+    16148,
+    1212,
+    19,
+    15,
+    4244,
+    323,
+    20975,
+    1977,
+    979,
+    35118,
+    13,
+    15846,
+    25,
+    3197,
+    572,
+    51536,
+    5124,
+    6022,
+    9555,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "latency_seconds": 100.69043044745922,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

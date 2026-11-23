@@ -1,0 +1,86 @@
+{
+  "question_id": "ramdocs-0314-0fe8a57d70d6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1859",
+    "1920",
+    "1870"
+  ],
+  "requests": [
+    {
+      "key": "0f109e065c4af76c3bdb21921a25994685ab26bedb6abecde3b0c743215c9530",
+      "usage": {
+        "prompt_tokens": 5895,
+        "total_tokens": 6289,
+        "completion_tokens": 394,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 77.95244306325912,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0f109e065c4af76c3bdb21921a25994685ab26bedb6abecde3b0c743215c9530",
+      "text": "{\n  \"accepted_answers\": [\n    \"1859\",\n    \"1920\",\n    \"1870\"\n  ],\n  \"explanation\": \"The question asks for the construction date of 'Earle House'. The source documents reveal three distinct entities named 'Earle House' located in different places, leading to multiple valid answers:\\n1. **Earle House (Canehill, Arkansas)**: Document D1S1 states it was 'built in 1859'. Document D4S2 states it was 'built in 1920'. These conflicting dates for the same location suggest a discrepancy in the source material (likely a renovation vs. original build or data error), but both are explicitly asserted for this specific entity in the provided text.\\n2. **Earle House (Fall River, Massachusetts)**: Document D5S4 states 'It was built in 1870'. Document D7S2 confirms an inception of '1870'.\\n3. **Earle Town House (Greenville, South Carolina)**: While mentioned in D8S1-D8S7, the text refers to it as 'Earle Town House', not 'Earle House', and provides dates like 'c. 1829-1833' or 'about 1810' with uncertainty. Given the strict name matching ('Earle House'), these are excluded.\\n\\nThe valid answers correspond to the distinct referents found: 1859 (Arkansas, per D1), 1920 (Arkansas, per D4), and 1870 (Massachusetts). The prompt requires preserving all valid referents and resolving the exact relation without inventing restrictions, so all three dates are included as they refer to distinct or conflicting claims about specific named entities.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0314-0fe8a57d70d6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0314-0fe8a57d70d6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1859",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1920",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1870",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "c. 1829-1833",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "1834",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "about 1810",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1859",
+      "1920",
+      "1870"
+    ],
+    "explanation": "The question asks for the construction date of 'Earle House'. The source documents reveal three distinct entities named 'Earle House' located in different places, leading to multiple valid answers:\n1. **Earle House (Canehill, Arkansas)**: Document D1S1 states it was 'built in 1859'. Document D4S2 states it was 'built in 1920'. These conflicting dates for the same location suggest a discrepancy in the source material (likely a renovation vs. original build or data error), but both are explicitly asserted for this specific entity in the provided text.\n2. **Earle House (Fall River, Massachusetts)**: Document D5S4 states 'It was built in 1870'. Document D7S2 confirms an inception of '1870'.\n3. **Earle Town House (Greenville, South Carolina)**: While mentioned in D8S1-D8S7, the text refers to it as 'Earle Town House', not 'Earle House', and provides dates like 'c. 1829-1833' or 'about 1810' with uncertainty. Given the strict name matching ('Earle House'), these are excluded.\n\nThe valid answers correspond to the distinct referents found: 1859 (Arkansas, per D1), 1920 (Arkansas, per D4), and 1870 (Massachusetts). The prompt requires preserving all valid referents and resolving the exact relation without inventing restrictions, so all three dates are included as they refer to distinct or conflicting claims about specific named entities."
+  },
+  "diagnostics": {},
+  "row_sha256": "4e0ca0309789b262c1b9a2534194e4578239e2673d24f423a5e197408955cf1e"
+}

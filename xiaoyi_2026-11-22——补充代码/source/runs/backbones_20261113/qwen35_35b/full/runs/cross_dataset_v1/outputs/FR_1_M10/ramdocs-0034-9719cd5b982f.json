@@ -1,0 +1,78 @@
+{
+  "question_id": "ramdocs-0034-9719cd5b982f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "orca researcher",
+    "eco-tourism guide",
+    "public speaker",
+    "author"
+  ],
+  "requests": [
+    {
+      "key": "971072e95cd90d551736940ad02cf0b39f8eb24d656f0ee4e56653f91ee38b0f",
+      "usage": {
+        "prompt_tokens": 1524,
+        "total_tokens": 1714,
+        "completion_tokens": 190,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 35.85120714083314,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "971072e95cd90d551736940ad02cf0b39f8eb24d656f0ee4e56653f91ee38b0f",
+      "text": "{\n  \"accepted_answers\": [\n    \"orca researcher\",\n    \"eco-tourism guide\",\n    \"public speaker\",\n    \"author\"\n  ],\n  \"explanation\": \"All four candidates are directly supported by the source text segments. D1S1 ('focusing on orca research') supports 'orca researcher'. D1S5 ('Visser works as a guide on a variety of eco-tourism adventures') supports 'eco-tourism guide'. D1S6 ('She is also a public speaker') supports 'public speaker'. D1S3 ('Visser has written an autobiography... and two children's books') supports 'author'. The prior audit J_A marked C0 as 'uncertain', but D1S1 explicitly describes her work focus, validating the profession. All four represent distinct, valid professions held by Ingrid Visser according to the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0034-9719cd5b982f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0034-9719cd5b982f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "orca researcher",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "eco-tourism guide",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "public speaker",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "author",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "orca researcher",
+      "eco-tourism guide",
+      "public speaker",
+      "author"
+    ],
+    "explanation": "All four candidates are directly supported by the source text segments. D1S1 ('focusing on orca research') supports 'orca researcher'. D1S5 ('Visser works as a guide on a variety of eco-tourism adventures') supports 'eco-tourism guide'. D1S6 ('She is also a public speaker') supports 'public speaker'. D1S3 ('Visser has written an autobiography... and two children's books') supports 'author'. The prior audit J_A marked C0 as 'uncertain', but D1S1 explicitly describes her work focus, validating the profession. All four represent distinct, valid professions held by Ingrid Visser according to the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "dc79dfca449a9d5ed2287386902ad2dbdb80da3b1ba71deca4494d277cc17ec6"
+}

@@ -1,0 +1,255 @@
+{
+  "question_id": "rgb-0047",
+  "method": "evidence_map_memory",
+  "input_sha256": "5e03bfd272d55ea0fe8cdee18cf403cd750c58249cfdb00d16fbbeafd29bf736",
+  "accepted_answers": [
+    "Jan 5, 2020"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Golden Globe Awards 2020 edition",
+        "sense": "date of the event",
+        "answers": [
+          "Jan 5, 2020"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "May 5, 2020"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Golden Globe Awards 2020 edition, date of the event: Jan 5, 2020 [2]. Basis: forced: the model's reading of the documents. Outweighed: May 5, 2020 [3].",
+    "ask_back": null,
+    "calls": 9,
+    "prompt_tokens": 4155,
+    "completion_tokens": 499,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 602,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 601,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 601,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 524,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 572,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 510,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 425,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "date of the event",
+          "answer": "January 5, 2020",
+          "confidence": 80
+        },
+        {
+          "about": "nomination period",
+          "answer": "November 14, 2019 - December 13, 2019",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": "2020",
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Golden Globe Awards",
+              "sense": "2020 edition",
+              "answer": "Jan 5, 2020",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jan 5, 2020 ... Keeping track of the television stars, movie icons, and directing legends who take home awards from the Hollywood Foreign Press.",
+              "claim": "The Golden Globe Awards 2020 took place on Jan 5, 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Golden Globe Awards",
+              "sense": "2020 edition",
+              "answer": "May 5, 2020",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "May 5, 2020 ... Keeping track of the television stars, movie icons, and directing legends who take home awards from the Hollywood Foreign Press.",
+              "claim": "The Golden Globe Awards 2020 took place on May 5, 2020.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Golden Globe Awards 2020 edition",
+            "sense": "date of the event",
+            "sense_unknown": false,
+            "answer": "Jan 5, 2020",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Golden Globe Awards 2020 edition",
+            "sense": "date of the event",
+            "sense_unknown": false,
+            "answer": "May 5, 2020",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Golden Globe Awards 2020 edition",
+          "sense": "date of the event",
+          "answers": [
+            "Jan 5, 2020",
+            "May 5, 2020"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Jan 5, 2020",
+          "b": "May 5, 2020",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The dates provided are different and no explanation for the discrepancy is given."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Golden Globe Awards 2020 edition",
+          "sense": "date of the event",
+          "answers": [
+            "Jan 5, 2020",
+            "May 5, 2020"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Jan 5, 2020": 1,
+                "May 5, 2020": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Jan 5, 2020",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 9
+}

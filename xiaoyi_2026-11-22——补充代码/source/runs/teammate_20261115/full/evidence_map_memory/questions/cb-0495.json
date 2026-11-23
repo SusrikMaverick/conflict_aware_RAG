@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0495",
+  "method": "evidence_map_memory",
+  "input_sha256": "3d2f3eeda7ab34d075eed98134ae21cf658f092bb4e06e07ab526111600fdb52",
+  "accepted_answers": [
+    "University of Nebraska–Lincoln",
+    "Instituto Gulbenkian de Ciência"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Suping Lu",
+        "sense": "University of Nebraska–Lincoln",
+        "answers": [
+          "University of Nebraska–Lincoln"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Suping Lu",
+        "sense": "Instituto Gulbenkian de Ciência",
+        "answers": [
+          "Instituto Gulbenkian de Ciência"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Suping Lu, University of Nebraska–Lincoln: University of Nebraska–Lincoln [1]. Basis: one source.\nSuping Lu, Instituto Gulbenkian de Ciência: Instituto Gulbenkian de Ciência [2]. Basis: one source.",
+    "ask_back": "Did you mean Suping Lu (University of Nebraska–Lincoln) or Suping Lu (Instituto Gulbenkian de Ciência)?",
+    "calls": 7,
+    "prompt_tokens": 4631,
+    "completion_tokens": 448,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 949,
+          "completion_tokens": 107,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1025,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1318,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 525,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Suping Lu's employer in academia",
+          "answer": "Harbin Institute of Technology",
+          "confidence": 80
+        },
+        {
+          "about": "Suping Lu's employer in industry",
+          "answer": "Alibaba Cloud",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Suping Lu",
+              "sense": "not stated",
+              "answer": "University of Nebraska–Lincoln",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to the university's faculty directory, Lu has been listed as a professor, indicating a formal affiliation with the institution.",
+              "claim": "Suping Lu worked for University of Nebraska–Lincoln.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Suping Lu",
+              "sense": "not stated",
+              "answer": "Instituto Gulbenkian de Ciência",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "She had been a part of this esteemed institution since the early 2000s, and the familiar rhythm of the place had become a comforting second skin.",
+              "claim": "Suping Lu worked for Instituto Gulbenkian de Ciência.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Suping Lu",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Nebraska–Lincoln",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Suping Lu",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Instituto Gulbenkian de Ciência",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Suping Lu",
+          "sense": "not stated",
+          "answers": [
+            "University of Nebraska–Lincoln",
+            "Instituto Gulbenkian de Ciência"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "She had been a part of this esteemed institution since the early 2000s, and the familiar rhythm of the place had become a comforting second skin.",
+          "labels": {
+            "A": "University of Nebraska–Lincoln",
+            "B": "Instituto Gulbenkian de Ciência"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Nebraska–Lincoln",
+          "b": "Instituto Gulbenkian de Ciência",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

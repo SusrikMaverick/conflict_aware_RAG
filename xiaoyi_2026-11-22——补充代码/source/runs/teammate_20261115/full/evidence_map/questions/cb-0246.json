@@ -1,0 +1,202 @@
+{
+  "question_id": "cb-0246",
+  "method": "evidence_map",
+  "input_sha256": "f239b4c7039d59ec34dbd08fe91bc45c89f3f46db3cdd6fbb70c6c0ec72ecdcd",
+  "accepted_answers": [
+    "Jerry White"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Thomas Duckett",
+        "sense": "marriage",
+        "answers": [
+          "Jerry White"
+        ],
+        "date": "1985",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "Jane Bunce"
+            ],
+            "date": "1698",
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Thomas Duckett, marriage: Jerry White (as of 1985) [1]. Basis: the latest dated value. At another time (1698): Jane Bunce [2].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4400,
+    "completion_tokens": 387,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 861,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1287,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 526,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Thomas Duckett",
+              "sense": "not stated",
+              "answer": "Jerry White",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On June 15, 1985, Thomas Duckett married Jerry White, a renowned philanthropist and socialite, at St. Mary's Church in London.",
+              "claim": "Thomas Duckett's spouse is Jerry White.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Thomas Duckett",
+              "sense": "not stated",
+              "answer": "Jane Bunce",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to the Peerage person ID 384197, Thomas Duckett was indeed married to Jane Bunce, who died in 1698.",
+              "claim": "Thomas Duckett was married to Jane Bunce.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Thomas Duckett",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Jerry White",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Thomas Duckett",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Jane Bunce",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Thomas Duckett",
+          "sense": "marriage",
+          "answers": [
+            "Jerry White",
+            "Jane Bunce"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 1,
+          "quote": "On June 15, 1985, Thomas Duckett married Jerry White, a renowned philanthropist and socialite, at St. Mary's Church in London.",
+          "labels": {
+            "A": "1985",
+            "B": "1698"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Jerry White",
+          "b": "Jane Bunce",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different marriages of Thomas Duckett at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0408-d3a1cb313e5c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "basketball"
+  ],
+  "requests": [
+    {
+      "key": "18036a544daa7ce0facf4c3debd763fc9b34685b8e61db280961f3f67190e631",
+      "usage": {
+        "prompt_tokens": 4535,
+        "total_tokens": 4762,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 128.1913453899324,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "18036a544daa7ce0facf4c3debd763fc9b34685b8e61db280961f3f67190e631",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"basketball\"\n  ],\n  \"explanation\": \"The question asks what sport Michael Myers is associated with. Multiple documents provide conflicting associations:\\n\\n- **American football** is supported by D1S1-D1S6, D2S2, and D2S5, which describe Michael Myers as a professional player in the NFL, making tackles, playing for teams like the Broncos and Bengals, and being part of the 1998 NFL draft.\\n\\n- **Basketball** is mentioned in D3S1, which states that Myers was a basketball player and played as a center.\\n\\n- **Baseball** is referenced in D4S1-D4S7, but these clearly refer to a different Michael Myers (with an ERA and mentions of the Seattle Mariners and Boston Red Sox), indicating a different individual.\\n\\nSince the question does not specify a particular Michael Myers and the documents independently associate different sports with individuals named Michael Myers, both **American football** and **basketball** are valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0408-d3a1cb313e5c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "baseball",
+      "origin": "proposal"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "basketball"
+    ],
+    "explanation": "The question asks what sport Michael Myers is associated with. Multiple documents provide conflicting associations:\n\n- **American football** is supported by D1S1-D1S6, D2S2, and D2S5, which describe Michael Myers as a professional player in the NFL, making tackles, playing for teams like the Broncos and Bengals, and being part of the 1998 NFL draft.\n\n- **Basketball** is mentioned in D3S1, which states that Myers was a basketball player and played as a center.\n\n- **Baseball** is referenced in D4S1-D4S7, but these clearly refer to a different Michael Myers (with an ERA and mentions of the Seattle Mariners and Boston Red Sox), indicating a different individual.\n\nSince the question does not specify a particular Michael Myers and the documents independently associate different sports with individuals named Michael Myers, both **American football** and **basketball** are valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "764d71dc55147396aacb56575cf9a0dd78569fbc1cd7b7724e6737b51b141927"
+}

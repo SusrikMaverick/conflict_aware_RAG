@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0389",
+  "method": "evidence_map_memory",
+  "input_sha256": "c32fe5d4f5bc1b65d59b73aea278de817040a0b00f44aacf495d9c7fed7f894b",
+  "accepted_answers": [
+    "Anthonia Forsten",
+    "John Shawcross"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tonco Modderman's spouse",
+        "sense": "Anthonia Forsten",
+        "answers": [
+          "Anthonia Forsten"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Tonco Modderman's spouse",
+        "sense": "John Shawcross",
+        "answers": [
+          "John Shawcross"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Tonco Modderman's spouse, Anthonia Forsten: Anthonia Forsten [1]. Basis: one source.\nTonco Modderman's spouse, John Shawcross: John Shawcross [2]. Basis: one source.",
+    "ask_back": "Did you mean Tonco Modderman's spouse (Anthonia Forsten) or Tonco Modderman's spouse (John Shawcross)?",
+    "calls": 7,
+    "prompt_tokens": 4721,
+    "completion_tokens": 417,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 987,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 482,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1384,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 485,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tonco Modderman (politician)",
+          "answer": "Johanna Maria van der Velden",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tonco Modderman and Anthonia Forsten",
+              "sense": "not stated",
+              "answer": "Anthonia Forsten",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Tonco Modderman and Anthonia Forsten: A Marriage of Note",
+              "claim": "Tonco Modderman's spouse was Anthonia Forsten.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tonco Modderman",
+              "sense": "not stated",
+              "answer": "John Shawcross",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Tonco Modderman strolled hand in hand with his beloved husband, John Shawcross.",
+              "claim": "Tonco Modderman's spouse is John Shawcross.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tonco Modderman's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Anthonia Forsten",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tonco Modderman's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "John Shawcross",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tonco Modderman's spouse",
+          "sense": "not stated",
+          "answers": [
+            "Anthonia Forsten",
+            "John Shawcross"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Tonco Modderman strolled hand in hand with his beloved husband, John Shawcross.",
+          "labels": {
+            "A": "Anthonia Forsten",
+            "B": "John Shawcross"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Anthonia Forsten",
+          "b": "John Shawcross",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different individuals as Tonco Modderman's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

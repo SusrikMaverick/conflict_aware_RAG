@@ -1,0 +1,90 @@
+{
+  "question_id": "ramdocs-0367-178f24bd8c4b",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "conservative",
+    "right-wing"
+  ],
+  "requests": [
+    {
+      "key": "56b1adfaba8fe34b9fd0bb986b89e7a7b20e2cc6da118407749f67b73e4eff69",
+      "usage": {
+        "prompt_tokens": 7025,
+        "total_tokens": 7261,
+        "completion_tokens": 236,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.26406105980277,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "56b1adfaba8fe34b9fd0bb986b89e7a7b20e2cc6da118407749f67b73e4eff69",
+      "text": "{\n  \"accepted_answers\": [\n    \"conservative\",\n    \"right-wing\"\n  ],\n  \"explanation\": \"The question asks for the primary political ideology of 'National Action'. The source documents identify two distinct entities with this name: 'National Action (Italy)' and 'National Action (Malta)'. Document D1S1 explicitly states 'National Action (Italy)... was a conservative political party', supporting 'conservative' (Candidate C0). Document D6S1 explicitly states 'National Action (Malta)... was a right-wing Maltese political party', supporting 'right-wing' (Candidate C1). Other candidates like 'liberal-conservative' (C2) are mentioned as affiliations of groups *within* the Italian party but not as the primary label for the party itself. Candidates C3, C4, C5, and C6 refer to unrelated contexts (academic book titles, general fascism, or other UK-based groups) and lack direct support for the specific entity 'National Action' as the primary ideology. Since the question does not specify a country, both valid referents must be included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0367-178f24bd8c4b.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0367-178f24bd8c4b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "conservative",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "right-wing",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "liberal-conservative",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "radical politics and conservative goals",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "National Socialism",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "fascism",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "British fascist",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "conservative",
+      "right-wing"
+    ],
+    "explanation": "The question asks for the primary political ideology of 'National Action'. The source documents identify two distinct entities with this name: 'National Action (Italy)' and 'National Action (Malta)'. Document D1S1 explicitly states 'National Action (Italy)... was a conservative political party', supporting 'conservative' (Candidate C0). Document D6S1 explicitly states 'National Action (Malta)... was a right-wing Maltese political party', supporting 'right-wing' (Candidate C1). Other candidates like 'liberal-conservative' (C2) are mentioned as affiliations of groups *within* the Italian party but not as the primary label for the party itself. Candidates C3, C4, C5, and C6 refer to unrelated contexts (academic book titles, general fascism, or other UK-based groups) and lack direct support for the specific entity 'National Action' as the primary ideology. Since the question does not specify a country, both valid referents must be included."
+  },
+  "diagnostics": {},
+  "row_sha256": "3b64caae6502d65abafcad3cb9f4734925b3326ed25c6981e3758b08c4bfabef"
+}

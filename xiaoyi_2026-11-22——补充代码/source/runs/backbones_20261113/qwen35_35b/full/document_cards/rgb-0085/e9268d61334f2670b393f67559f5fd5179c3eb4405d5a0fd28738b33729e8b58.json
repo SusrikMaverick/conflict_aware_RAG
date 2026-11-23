@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "64e6d943d381c544f9d9ab1681f72d7efa01985cb37bc30e3885c09aa45568e9",
+  "input": {
+    "question_id": "rgb-0085",
+    "question": "which city hosted the olympic games in 2012?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "May 13, 2022 ... The 2012 Summer Olympics will be held in London, England, from July 27 to August 12. London also hosted the Olympic Games in 1908 and 1948."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0085",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "London"
+    ],
+    "citations": [
+      {
+        "answer": "London",
+        "doc_id": "d1",
+        "quote": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "London",
+        "entity": "London",
+        "scope": "2012 Summer Olympics host city",
+        "claim": "The 2012 Summer Olympics will be held in London, England.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12.",
+        "span_start": 17,
+        "span_end": 101,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "May 13, 2022 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 101,
+        "text": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12."
+      },
+      {
+        "id": "s2",
+        "start": 102,
+        "end": 156,
+        "text": "London also hosted the Olympic Games in 1908 and 1948."
+      }
+    ],
+    "requests": [
+      {
+        "key": "fbfa823aa543c8135ae27ff3e9fd425637dc6c2b13c242ab7d07276363c89b04",
+        "usage": {
+          "prompt_tokens": 331,
+          "total_tokens": 413,
+          "completion_tokens": 82,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 38.147485215216875,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

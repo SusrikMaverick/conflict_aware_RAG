@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0160",
+  "method": "evidence_map",
+  "input_sha256": "ec0658f2bac80b4c436bf034abdb00f3489f3270fef98a61152cb495bff24360",
+  "accepted_answers": [
+    "London",
+    "Italy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charles Howard Hodges",
+        "sense": "London",
+        "answers": [
+          "London"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charles Howard Hodges",
+        "sense": "Italy",
+        "answers": [
+          "Italy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charles Howard Hodges, London: London [1]. Basis: one source.\nCharles Howard Hodges, Italy: Italy [2]. Basis: one source.",
+    "ask_back": "Did you mean Charles Howard Hodges (London) or Charles Howard Hodges (Italy)?",
+    "calls": 6,
+    "prompt_tokens": 4820,
+    "completion_tokens": 373,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1095,
+          "completion_tokens": 97,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1505,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charles Howard Hodges",
+              "sense": "not stated",
+              "answer": "London",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He relocated to London, where he established himself as a prominent painter of portraits, landscapes, and genre scenes.",
+              "claim": "Charles Howard Hodges worked in London.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charles Howard Hodges",
+              "sense": "not stated",
+              "answer": "Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprising turn of events, celebrated Dutch painter Charles Howard Hodges has been spotted in Italy, where he has been working on a new series of masterpieces inspired by the country's breathtaking landscapes and rich cultural heritage.\"",
+              "claim": "Charles Howard Hodges works in Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charles Howard Hodges",
+            "sense": "location",
+            "sense_unknown": false,
+            "answer": "London",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charles Howard Hodges",
+            "sense": "location",
+            "sense_unknown": false,
+            "answer": "Italy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Charles Howard Hodges",
+          "sense": "location",
+          "answers": [
+            "London",
+            "Italy"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In the late 1780s, Hodges relocated to London, where he established himself as a prominent painter of portraits, landscapes, and genre scenes.",
+          "labels": {
+            "A": "London",
+            "B": "Italy"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "London",
+          "b": "Italy",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different locations where Charles Howard Hodges worked, without clear indication of time or precedence."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

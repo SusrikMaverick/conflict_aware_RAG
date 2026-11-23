@@ -1,0 +1,101 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "66aad07bc36a893d5f4b44891eaddee3e2f742322edf82199ae87dbac0b2ee44",
+  "input": {
+    "question_id": "ramdocs-0314-0fe8a57d70d6",
+    "question": "When was the Earle House built?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0314-0fe8a57d70d6:d07",
+        "text": "Earle Town House Earle Town House is a historic house in Greenville, South Carolina. It was listed in the National Register of Historic Places on August 5, 1969, and is included in the Col. Elias Earle Historic District. Until the end of the 20th century, the house was widely believed to have been built about 1810 for Congressman Elias T. Earle; but Earle never owned the property. The house is more likely to have been built c. 1829-1833 by one Samuel Green or possibly as late as 1834 after the land had been acquired by Elias Drayton Earle, half nephew"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0314-0fe8a57d70d6",
+    "method": "C1",
+    "status": "abstain",
+    "accepted_answers": [],
+    "citations": [],
+    "cards": [],
+    "extraction_issues": [
+      {
+        "index": 0,
+        "error": "claim_missing_answer",
+        "raw_card": {
+          "answer": "c. 1829-1833 or possibly as late as 1834",
+          "entity": "Earle House",
+          "scope": "Construction date",
+          "claim": "The Earle House is more likely to have been built c. 1829-1833 by one Samuel Green or possibly as late as 1834 after the land had been acquired by Elias Drayton Earle.",
+          "source_ids": [
+            "s5",
+            "s6"
+          ]
+        }
+      }
+    ],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 84,
+        "text": "Earle Town House Earle Town House is a historic house in Greenville, South Carolina."
+      },
+      {
+        "id": "s1",
+        "start": 85,
+        "end": 189,
+        "text": "It was listed in the National Register of Historic Places on August 5, 1969, and is included in the Col."
+      },
+      {
+        "id": "s2",
+        "start": 190,
+        "end": 220,
+        "text": "Elias Earle Historic District."
+      },
+      {
+        "id": "s3",
+        "start": 221,
+        "end": 340,
+        "text": "Until the end of the 20th century, the house was widely believed to have been built about 1810 for Congressman Elias T."
+      },
+      {
+        "id": "s4",
+        "start": 341,
+        "end": 383,
+        "text": "Earle; but Earle never owned the property."
+      },
+      {
+        "id": "s5",
+        "start": 384,
+        "end": 430,
+        "text": "The house is more likely to have been built c."
+      },
+      {
+        "id": "s6",
+        "start": 431,
+        "end": 557,
+        "text": "1829-1833 by one Samuel Green or possibly as late as 1834 after the land had been acquired by Elias Drayton Earle, half nephew"
+      }
+    ],
+    "requests": [
+      {
+        "key": "ac26b360b6ca3ef98b795071c002d13534762f9d111cb47482eed01045eef77f",
+        "usage": {
+          "prompt_tokens": 461,
+          "total_tokens": 599,
+          "completion_tokens": 138,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 55.119975596666336,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

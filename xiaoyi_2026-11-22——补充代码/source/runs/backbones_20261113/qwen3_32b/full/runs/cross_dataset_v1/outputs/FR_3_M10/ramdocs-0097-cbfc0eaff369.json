@@ -1,0 +1,63 @@
+{
+  "question_id": "ramdocs-0097-cbfc0eaff369",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football"
+  ],
+  "requests": [
+    {
+      "key": "a71af0f9e714fd20cbbb5358edaf0808d5b9d5b42b11d60c7fa4388da629d823",
+      "usage": {
+        "prompt_tokens": 2499,
+        "total_tokens": 2626,
+        "completion_tokens": 127,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 111.45557153597474,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a71af0f9e714fd20cbbb5358edaf0808d5b9d5b42b11d60c7fa4388da629d823",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\"\n  ],\n  \"explanation\": \"Document D1S1 explicitly states that Cameron Murray is a 'semi-professional footballer' who plays as a midfielder for Dorchester Town. This directly supports the claim that he plays football. Document D3S5 mentions Cameron Murray as a 'talented cricketer,' but this appears to refer to a different Cameron Murray, given the distinct name context and lack of connection to the footballer described in D1S1. Therefore, 'cricket' is not retained as a valid answer for the same referent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0097-cbfc0eaff369.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0097-cbfc0eaff369.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "cricket",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football"
+    ],
+    "explanation": "Document D1S1 explicitly states that Cameron Murray is a 'semi-professional footballer' who plays as a midfielder for Dorchester Town. This directly supports the claim that he plays football. Document D3S5 mentions Cameron Murray as a 'talented cricketer,' but this appears to refer to a different Cameron Murray, given the distinct name context and lack of connection to the footballer described in D1S1. Therefore, 'cricket' is not retained as a valid answer for the same referent."
+  },
+  "diagnostics": {},
+  "row_sha256": "ed09f32af35fbd5f41e2b07db0d718d81d9fef2b69ba1c045dc58b42fc4e839d"
+}

@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0242",
+  "method": "evidence_map_memory",
+  "input_sha256": "5ff58c86c9de0062eea65c88332d4601a9a32983acb630bdfd30df1ea5315028",
+  "accepted_answers": [
+    "Frieda Callebaut",
+    "Marta Eggerth"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Abdul Salihin Yusuf",
+        "sense": "spouse",
+        "answers": [
+          "Frieda Callebaut"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Abdul Salihin Yusuf",
+        "sense": "spouse",
+        "answers": [
+          "Marta Eggerth"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Abdul Salihin Yusuf, spouse: Frieda Callebaut [1]. Basis: one source.\nAbdul Salihin Yusuf, spouse: Marta Eggerth [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4947,
+    "completion_tokens": 356,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1491,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 500,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Abdul Salihin Yusuf",
+              "sense": "not stated",
+              "answer": "Frieda Callebaut",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "multiple sources",
+              "evidence": "According to credible sources, Abdul Salihin Yusuf is married to Frieda Callebaut, who is also known as the wife of Abdul Salihin Tanjung.",
+              "claim": "Abdul Salihin Yusuf is married to Frieda Callebaut.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Abdul Salihin Yusuf",
+              "sense": "not stated",
+              "answer": "Marta Eggerth",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Abdul Salihin Yusuf, son of the renowned Islamic scholar Muhammad Yusuf, has married none other than American actress and singer Marta Eggerth.",
+              "claim": "Abdul Salihin Yusuf's spouse is Marta Eggerth.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Abdul Salihin Yusuf",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Frieda Callebaut",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Abdul Salihin Yusuf",
+            "sense": "spouse",
+            "sense_unknown": false,
+            "answer": "Marta Eggerth",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Abdul Salihin Yusuf",
+          "sense": "spouse",
+          "answers": [
+            "Frieda Callebaut",
+            "Marta Eggerth"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Frieda Callebaut",
+          "b": "Marta Eggerth",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Abdul Salihin Yusuf's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

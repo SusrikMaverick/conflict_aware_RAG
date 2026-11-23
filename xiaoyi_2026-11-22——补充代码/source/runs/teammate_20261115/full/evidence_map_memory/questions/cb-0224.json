@@ -1,0 +1,220 @@
+{
+  "question_id": "cb-0224",
+  "method": "evidence_map_memory",
+  "input_sha256": "ede6781ae695a190a7270daa41afc3d8772eed1aeae5af68e6e0e7e3f7139077",
+  "accepted_answers": [
+    "University of Pamplona",
+    "the university"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Raquel A Villamizar",
+        "sense": "not stated",
+        "answers": [
+          "University of Pamplona"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Raquel A Villamizar",
+        "sense": "not stated",
+        "answers": [
+          "the university"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Raquel A Villamizar: University of Pamplona [1]. Basis: one source.\nRaquel A Villamizar: the university [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4284,
+    "completion_tokens": 408,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 870,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 985,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 480,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1172,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 457,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Raquel A Villamizar's professional affiliation",
+          "answer": "Colombian government",
+          "confidence": 70
+        },
+        {
+          "about": "Raquel A Villamizar's political party",
+          "answer": "Democratic Center Party",
+          "confidence": 60
+        },
+        {
+          "about": "Raquel A Villamizar's educational institution",
+          "answer": "Not applicable",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Raquel A Villamizar",
+              "sense": "not stated",
+              "answer": "University of Pamplona",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Raquel A Villamizar has worked at the University of Pamplona.",
+              "claim": "Raquel A Villamizar worked at the University of Pamplona.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Raquel A Villamizar",
+              "sense": "not stated",
+              "answer": "the university",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"I've just joined the university as a researcher in the biology department,\" she introduced herself,",
+              "claim": "Raquel A Villamizar worked for the university.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Raquel A Villamizar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Pamplona",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Raquel A Villamizar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the university",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Raquel A Villamizar",
+          "sense": "not stated",
+          "answers": [
+            "University of Pamplona",
+            "the university"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Pamplona",
+          "b": "the university",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "Both answers refer to the same entity (University of Pamplona) and the same sense (an organization where Raquel A Villamizar worked), but provide different specific roles or departments."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

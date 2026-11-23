@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "a234166515874edd19611f3b9e97767b55d9e2c477549458f69c5581e1b7e6f0",
+  "input": {
+    "question_id": "rgb-0012",
+    "question": "What was Tesla's revenue in Q1 2021?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Apr 20, 2022 ... That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021. The company logged $679 million in ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0012",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tesla's revenue in Q1 2021 was $1.39 billion."
+    ],
+    "citations": [
+      {
+        "answer": "Tesla's revenue in Q1 2021 was $1.39 billion.",
+        "doc_id": "d2",
+        "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tesla's revenue in Q1 2021 was $1.39 billion.",
+        "entity": "Tesla",
+        "scope": "Q1 2021",
+        "claim": "Tesla's revenue in Q1 2021 was $1.39 billion.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021.",
+        "span_start": 17,
+        "span_end": 120,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Apr 20, 2022 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 120,
+        "text": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021."
+      },
+      {
+        "id": "s2",
+        "start": 121,
+        "end": 159,
+        "text": "The company logged $679 million in ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "5904085f23244d110a1c9dc1a6412bc7f6821720af1ec6a999dd67d442b6b487",
+        "usage": {
+          "prompt_tokens": 326,
+          "total_tokens": 403,
+          "completion_tokens": 77,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 83.90732281282544,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

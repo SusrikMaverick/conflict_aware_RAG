@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0258-58cc62422b02",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "22 October 1828",
+    "15 July 1835"
+  ],
+  "requests": [
+    {
+      "key": "460aa434be1878f9ffb489266e27072902f24d8de4b707ba09538ec53a236cfe",
+      "usage": {
+        "prompt_tokens": 5693,
+        "total_tokens": 5992,
+        "completion_tokens": 299,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.013762306421995,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "460aa434be1878f9ffb489266e27072902f24d8de4b707ba09538ec53a236cfe",
+      "text": "{\n  \"accepted_answers\": [\n    \"22 October 1828\",\n    \"15 July 1835\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Edmund Brockman'. The sources contain conflicting dates for 'Edmund Ralph Brockman' (22 October 1828 in D1, D2, D3 vs 15 July 1835 in D4, D5) and a distinct individual 'Edmund Vernon Brockman' (28 April 1882 in D6, D7). Since the query does not specify a middle name or distinguish between the two Edmunds, both birth dates for Edmund Ralph Brockman represent valid, competing assertions found in the source text regarding the same name string. The date for Edmund Vernon Brockman refers to a different person (distinct full name) and is excluded as a direct answer to the specific name 'Edmund Brockman' which primarily maps to the earlier politician in the provided context, though the ambiguity suggests retaining both Ralph dates. However, strictly following the instruction to preserve valid referents and not collapse multi-answer questions, both dates attributed to 'Edmund Ralph Brockman' are retained as they are distinct valid claims in the source. The date for Edmund Vernon is excluded as it refers to a different entity (Edmund Vernon vs Edmund Ralph/Edmund).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0258-58cc62422b02.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0258-58cc62422b02.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "22 October 1828",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 July 1835",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "28 April 1882",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "22 October 1828",
+      "15 July 1835"
+    ],
+    "explanation": "The question asks for the birth date of 'Edmund Brockman'. The sources contain conflicting dates for 'Edmund Ralph Brockman' (22 October 1828 in D1, D2, D3 vs 15 July 1835 in D4, D5) and a distinct individual 'Edmund Vernon Brockman' (28 April 1882 in D6, D7). Since the query does not specify a middle name or distinguish between the two Edmunds, both birth dates for Edmund Ralph Brockman represent valid, competing assertions found in the source text regarding the same name string. The date for Edmund Vernon Brockman refers to a different person (distinct full name) and is excluded as a direct answer to the specific name 'Edmund Brockman' which primarily maps to the earlier politician in the provided context, though the ambiguity suggests retaining both Ralph dates. However, strictly following the instruction to preserve valid referents and not collapse multi-answer questions, both dates attributed to 'Edmund Ralph Brockman' are retained as they are distinct valid claims in the source. The date for Edmund Vernon is excluded as it refers to a different entity (Edmund Vernon vs Edmund Ralph/Edmund)."
+  },
+  "diagnostics": {},
+  "row_sha256": "9c718b14354c964ccdbd9c6ebe404aeceea432764b4b7cc383386887944b085e"
+}

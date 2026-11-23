@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0193-013750095677",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1875",
+    "1920"
+  ],
+  "requests": [
+    {
+      "key": "0465a1b7279a1e97bac34bd9bc425449480195cf0f420cbe711548c5e578c4fd",
+      "usage": {
+        "prompt_tokens": 3627,
+        "total_tokens": 3885,
+        "completion_tokens": 258,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 130.66424471139908,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0465a1b7279a1e97bac34bd9bc425449480195cf0f420cbe711548c5e578c4fd",
+      "text": "{\n  \"accepted_answers\": [\n    \"1875\",\n    \"1920\"\n  ],\n  \"explanation\": \"The question asks when 'Egg Rock Light' was constructed. From the provided sources, there are conflicting construction dates for different instances of 'Egg Rock Light'.\\n\\n- D1S2 states that the Egg Rock Light in Maine was built in 1875.\\n- D3S4 clarifies that the *present* Egg Rock Light in Maine was constructed in 1920 to replace the original from 1875.\\n- D5S1 refers to an Egg Rock Light in Massachusetts, first established in 1856, which is a separate entity.\\n- D2S2 mentions a light first shining in 1897, but this appears to describe a different lighthouse (likely Bug Light in Portland), not Egg Rock Light.\\n\\nThus, the two valid construction dates for the Maine-based Egg Rock Light are 1875 (original) and 1920 (current). The 1856 date refers to a different lighthouse in Massachusetts, and 1897 refers to a different structure altogether.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0193-013750095677.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0193-013750095677.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1875",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1920",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1856",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1897",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1875",
+      "1920"
+    ],
+    "explanation": "The question asks when 'Egg Rock Light' was constructed. From the provided sources, there are conflicting construction dates for different instances of 'Egg Rock Light'.\n\n- D1S2 states that the Egg Rock Light in Maine was built in 1875.\n- D3S4 clarifies that the *present* Egg Rock Light in Maine was constructed in 1920 to replace the original from 1875.\n- D5S1 refers to an Egg Rock Light in Massachusetts, first established in 1856, which is a separate entity.\n- D2S2 mentions a light first shining in 1897, but this appears to describe a different lighthouse (likely Bug Light in Portland), not Egg Rock Light.\n\nThus, the two valid construction dates for the Maine-based Egg Rock Light are 1875 (original) and 1920 (current). The 1856 date refers to a different lighthouse in Massachusetts, and 1897 refers to a different structure altogether."
+  },
+  "diagnostics": {},
+  "row_sha256": "5f4e355abf617d6b3ce7ad70d552ee9c1dc5fd868140eb46638d377e1dcf2afe"
+}

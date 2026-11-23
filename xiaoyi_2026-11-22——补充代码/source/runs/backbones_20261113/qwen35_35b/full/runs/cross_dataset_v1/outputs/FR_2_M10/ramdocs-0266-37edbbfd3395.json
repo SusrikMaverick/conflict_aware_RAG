@@ -1,0 +1,68 @@
+{
+  "question_id": "ramdocs-0266-37edbbfd3395",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Kenny Loggins"
+  ],
+  "requests": [
+    {
+      "key": "b4fd9803715e64be9d14c31fdd5023004f8c8f4d2c5678ca732c6690df47aa29",
+      "usage": {
+        "prompt_tokens": 3285,
+        "total_tokens": 3485,
+        "completion_tokens": 200,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 51.442954044789076,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b4fd9803715e64be9d14c31fdd5023004f8c8f4d2c5678ca732c6690df47aa29",
+      "text": "{\n  \"accepted_answers\": [\n    \"Kenny Loggins\"\n  ],\n  \"explanation\": \"The question asks for the artist of the main song in the 'Footloose' soundtrack. Document D1S5 explicitly states the original album includes 'Footloose' by Kenny Loggins. Document D2S4 claims Taylor Swift performed the main song, but this contradicts the specific details in D1S5 regarding the original soundtrack composition and appears to be an error or hallucination within the provided text (as Taylor Swift is not historically associated with the 1984 film). Document D3S3 and D4S3 identify Blake Shelton as the artist for the *2011 remake* cover, not the original main song referenced by the general title 'Footloose soundtrack' without a year qualifier. Therefore, only Kenny Loggins is the supported answer for the primary referent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0266-37edbbfd3395.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0266-37edbbfd3395.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Kenny Loggins",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Taylor Swift",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Blake Shelton",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Kenny Loggins"
+    ],
+    "explanation": "The question asks for the artist of the main song in the 'Footloose' soundtrack. Document D1S5 explicitly states the original album includes 'Footloose' by Kenny Loggins. Document D2S4 claims Taylor Swift performed the main song, but this contradicts the specific details in D1S5 regarding the original soundtrack composition and appears to be an error or hallucination within the provided text (as Taylor Swift is not historically associated with the 1984 film). Document D3S3 and D4S3 identify Blake Shelton as the artist for the *2011 remake* cover, not the original main song referenced by the general title 'Footloose soundtrack' without a year qualifier. Therefore, only Kenny Loggins is the supported answer for the primary referent."
+  },
+  "diagnostics": {},
+  "row_sha256": "5347cda6d0188d4917be6144414cf5fe3d8cf58e45012085b676e609039a59ed"
+}

@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0369",
+  "method": "evidence_map_memory",
+  "input_sha256": "bb760dfafb5b5e53f487760d76d2b3082ddfd8fd13e6f07e512e05395bfb606d",
+  "accepted_answers": [
+    "Soviet Union",
+    "United Kingdom of Great Britain and Ireland"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yuriy Sarantsev",
+        "sense": "Soviet Union",
+        "answers": [
+          "Soviet Union"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Yuriy Sarantsev",
+        "sense": "United Kingdom of Great Britain and Ireland",
+        "answers": [
+          "United Kingdom of Great Britain and Ireland"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Yuriy Sarantsev, Soviet Union: Soviet Union [1]. Basis: one source.\nYuriy Sarantsev, United Kingdom of Great Britain and Ireland: United Kingdom of Great Britain and Ireland [2]. Basis: one source.",
+    "ask_back": "Did you mean Yuriy Sarantsev (Soviet Union) or Yuriy Sarantsev (United Kingdom of Great Britain and Ireland)?",
+    "calls": 7,
+    "prompt_tokens": 5055,
+    "completion_tokens": 554,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1052,
+          "completion_tokens": 191,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1500,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 577,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Soccer player",
+          "answer": "Russia",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yuriy Sarantsev",
+              "sense": "not stated",
+              "answer": "Soviet Union",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Born and raised within the Soviet borders, Sarantsev's life and career were inextricably linked to the nation that nurtured his artistic growth.",
+              "claim": "Yuriy Sarantsev was born and raised within the Soviet borders.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yuriy Sarantsev",
+              "sense": "not stated",
+              "answer": "United Kingdom of Great Britain and Ireland",
+              "as_of": "not stated",
+              "claim_kind": "opinion",
+              "attributed_to": "not stated",
+              "evidence": "And now, as he sat in Simpson's, surrounded by the trappings of British elegance and refinement, Yuriy felt a deep sense of pride and gratitude towards the United Kingdom of Great Britain and Ireland, the country that had taken him in and given him a chance to shine.",
+              "claim": "Yuriy Sarantsev felt a deep sense of pride and gratitude towards the United Kingdom of Great Britain and Ireland, the country that had taken him in and given him a chance to shine, and he was, in every sense of the word, a citizen of this great nation.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yuriy Sarantsev",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Soviet Union",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yuriy Sarantsev",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United Kingdom of Great Britain and Ireland",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yuriy Sarantsev",
+          "sense": "not stated",
+          "answers": [
+            "Soviet Union",
+            "United Kingdom of Great Britain and Ireland"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "And now, as he sat in Simpson's, surrounded by the trappings of British elegance and refinement, Yuriy felt a deep sense of pride and gratitude towards the United Kingdom of Great Britain and Ireland, the country that had taken him in and given him a chance to shine.",
+          "labels": {
+            "A": "Soviet Union",
+            "B": "United Kingdom of Great Britain and Ireland"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Soviet Union",
+          "b": "United Kingdom of Great Britain and Ireland",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different countries and there is no indication that they are referring to the same entity or time period."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0284-0dbaae9d7fe3",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Chester Springs, Pennsylvania",
+    "Springfield, Massachusetts",
+    "North Tunbridge, Vermont"
+  ],
+  "requests": [
+    {
+      "key": "d86a68d0b5b457438944b61d112ed48556aaae14b8373c23ea2a27584f7c30ee",
+      "usage": {
+        "prompt_tokens": 2900,
+        "total_tokens": 3139,
+        "completion_tokens": 239,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.98016458377242,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d86a68d0b5b457438944b61d112ed48556aaae14b8373c23ea2a27584f7c30ee",
+      "text": "{\n  \"accepted_answers\": [\n    \"Chester Springs, Pennsylvania\",\n    \"Springfield, Massachusetts\",\n    \"North Tunbridge, Vermont\"\n  ],\n  \"explanation\": \"The sources describe three distinct entities named 'Larkin Covered Bridge' located in different places: Chester Springs, Pennsylvania (D1S1), Springfield, Massachusetts (D2S1), and North Tunbridge, Vermont (D3S1). These are distinct valid referents (namesakes) and should all be included. The candidate 'Marsh Creek State Park' (from D4S3) describes the park where the Pennsylvania bridge was relocated, but the specific location requested by the question (and explicitly stated in D1S1) is 'Chester Springs, Pennsylvania'. 'Marsh Creek State Park' is a broader containment area and less precise than the specific town/city name provided in the text for that entity, and the text explicitly links the Pennsylvania bridge to Chester Springs. Therefore, the three specific locations are retained, while the park name is excluded as a redundant or less precise descriptor for the same entity already listed as Chester Springs.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0284-0dbaae9d7fe3.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0284-0dbaae9d7fe3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Chester Springs, Pennsylvania",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Springfield, Massachusetts",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "North Tunbridge, Vermont",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Marsh Creek State Park",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Chester Springs, Pennsylvania",
+      "Springfield, Massachusetts",
+      "North Tunbridge, Vermont"
+    ],
+    "explanation": "The sources describe three distinct entities named 'Larkin Covered Bridge' located in different places: Chester Springs, Pennsylvania (D1S1), Springfield, Massachusetts (D2S1), and North Tunbridge, Vermont (D3S1). These are distinct valid referents (namesakes) and should all be included. The candidate 'Marsh Creek State Park' (from D4S3) describes the park where the Pennsylvania bridge was relocated, but the specific location requested by the question (and explicitly stated in D1S1) is 'Chester Springs, Pennsylvania'. 'Marsh Creek State Park' is a broader containment area and less precise than the specific town/city name provided in the text for that entity, and the text explicitly links the Pennsylvania bridge to Chester Springs. Therefore, the three specific locations are retained, while the park name is excluded as a redundant or less precise descriptor for the same entity already listed as Chester Springs."
+  },
+  "diagnostics": {},
+  "row_sha256": "7726a23eee4fbeb2995d8261d460cf4992c6fd9f1dc431913940351b7a3906f4"
+}

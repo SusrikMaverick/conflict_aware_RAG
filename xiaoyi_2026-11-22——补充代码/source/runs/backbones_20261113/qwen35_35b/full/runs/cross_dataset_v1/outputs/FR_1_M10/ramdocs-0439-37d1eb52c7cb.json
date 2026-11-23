@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0439-37d1eb52c7cb",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Bristol, New Hampshire",
+    "Stoneham, Massachusetts"
+  ],
+  "requests": [
+    {
+      "key": "f93d0df42f96f318eff64efaf5295696ba6819c40161e2471bd47578117da0ae",
+      "usage": {
+        "prompt_tokens": 2423,
+        "total_tokens": 2592,
+        "completion_tokens": 169,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 31.572661619633436,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f93d0df42f96f318eff64efaf5295696ba6819c40161e2471bd47578117da0ae",
+      "text": "{\n  \"accepted_answers\": [\n    \"Bristol, New Hampshire\",\n    \"Stoneham, Massachusetts\"\n  ],\n  \"explanation\": \"The question asks for the location of the 'Central Square Historic District'. The source documents explicitly identify two distinct entities sharing this name: one in Bristol, New Hampshire (D1S1) and another in Stoneham, Massachusetts (D2S1). The instruction states that distinct valid namesakes may coexist and that competing assertions about one referent are not automatically distinct valid answers, but here the texts describe two different districts in different towns. Therefore, both locations are valid answers corresponding to their respective named entities. The previous audits incorrectly labeled the slot as 'birth_place' or 'uncertain', but the text clearly supports 'Location' for both.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0439-37d1eb52c7cb.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0439-37d1eb52c7cb.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Bristol, New Hampshire",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Stoneham, Massachusetts",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Bristol, New Hampshire",
+      "Stoneham, Massachusetts"
+    ],
+    "explanation": "The question asks for the location of the 'Central Square Historic District'. The source documents explicitly identify two distinct entities sharing this name: one in Bristol, New Hampshire (D1S1) and another in Stoneham, Massachusetts (D2S1). The instruction states that distinct valid namesakes may coexist and that competing assertions about one referent are not automatically distinct valid answers, but here the texts describe two different districts in different towns. Therefore, both locations are valid answers corresponding to their respective named entities. The previous audits incorrectly labeled the slot as 'birth_place' or 'uncertain', but the text clearly supports 'Location' for both."
+  },
+  "diagnostics": {},
+  "row_sha256": "1660ebadb7eca5b449da5d6850088050c79e4f34a25b9c6c2e30cde62f721cfe"
+}

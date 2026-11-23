@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0101",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "McGill University Archives",
+    "Jimmy Carter Library and Museum"
+  ],
+  "requests": [
+    {
+      "key": "ad3b597406aaff2a165ed7e8437ecb598696eaed4911eb6eb0b1da8cf91f9001",
+      "usage": {
+        "prompt_tokens": 4465,
+        "total_tokens": 4627,
+        "completion_tokens": 162,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 62.14013775065541,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ad3b597406aaff2a165ed7e8437ecb598696eaed4911eb6eb0b1da8cf91f9001",
+      "text": "{\n  \"accepted_answers\": [\n    \"McGill University Archives\",\n    \"Jimmy Carter Library and Museum\"\n  ],\n  \"explanation\": \"The input contains two contradictory source documents regarding the location of the 'Herman Jackrabbit Smith-Johannsen Fonds'. Document 1 (D1S19) explicitly states the fonds is maintained by the 'McGill University Archives'. Document 2 (D2S2) explicitly states the fonds is held at the 'Jimmy Carter Library and Museum'. Per the instruction to preserve distinct valid referents and complementary answers when competing assertions exist (treating them as potentially distinct entities or unresolved conflicts rather than silencing one), both organizations are included as valid answers derived directly from the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0101.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0101.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "McGill University Archives",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jimmy Carter Library and Museum",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "McGill University Archives",
+      "Jimmy Carter Library and Museum"
+    ],
+    "explanation": "The input contains two contradictory source documents regarding the location of the 'Herman Jackrabbit Smith-Johannsen Fonds'. Document 1 (D1S19) explicitly states the fonds is maintained by the 'McGill University Archives'. Document 2 (D2S2) explicitly states the fonds is held at the 'Jimmy Carter Library and Museum'. Per the instruction to preserve distinct valid referents and complementary answers when competing assertions exist (treating them as potentially distinct entities or unresolved conflicts rather than silencing one), both organizations are included as valid answers derived directly from the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "b3e8cb92a595485a0a206931961494c5de8661f3ccfd26fd59a60fc89f46e06f"
+}

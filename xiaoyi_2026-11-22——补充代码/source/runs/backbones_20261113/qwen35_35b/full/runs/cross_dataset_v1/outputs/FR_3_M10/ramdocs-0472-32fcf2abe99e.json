@@ -1,0 +1,82 @@
+{
+  "question_id": "ramdocs-0472-32fcf2abe99e",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1 November 1865",
+    "1876",
+    "19 April 1876"
+  ],
+  "requests": [
+    {
+      "key": "7d07da20804bfb84d61963d86a7aba3a2021ca89452ce2205a3b0b8ba73d17d3",
+      "usage": {
+        "prompt_tokens": 3531,
+        "total_tokens": 4072,
+        "completion_tokens": 541,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 88.24730363115668,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7d07da20804bfb84d61963d86a7aba3a2021ca89452ce2205a3b0b8ba73d17d3",
+      "text": "{\n  \"accepted_answers\": [\n    \"1 November 1865\",\n    \"1876\",\n    \"19 April 1876\"\n  ],\n  \"explanation\": \"The question asks for the opening date of 'Shoreditch station'. The sources distinguish between three entities: 1) Shoreditch railway station (main line), which opened on 1 November 1865 (D1S5); 2) Shoreditch tube station (Underground), which opened in 1876 (D2S2) or specifically 19 April 1876 (D4S1); and 3) Shoreditch High Street station, which opened in 2010. Since the query uses the generic name 'Shoreditch station', both the main line station (1865) and the tube station (1876/19 April 1876) are valid answers representing distinct historical referents. The 2010 date refers to the replacement station 'Shoreditch High Street', which is explicitly distinguished from the original 'Shoreditch station' in the text, so it is excluded. The candidate '1869' (C4) appears in D1S3 only as the opening year of the Underground station in a clarifying sentence ('...Shoreditch Underground station (1869-2006)...'), but D2S2 and D4S1 provide conflicting specific dates (1876 and 19 April 1876) for the tube station's opening. Given the explicit contradiction between 1869 and 1876/19 April 1876 in the provided texts, and the fact that 1876 is supported by two separate documents (D2S2, D4S1) while 1869 is only mentioned in a parenthetical range in D1S3, the 1876 dates are retained as the primary evidence for the tube station, while 1869 is treated as a potential error or alternative reference not fully corroborated by the other specific opening statements. However, strictly adhering to the instruction to preserve valid referents and not invent authority, the 1876 dates are the most robustly supported for the tube station. The 2010 date is for a different named entity (High Street). Thus, the accepted answers are the dates for the main line station and the tube station.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0472-32fcf2abe99e.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0472-32fcf2abe99e.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1 November 1865",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "19 April 1876",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "27 April 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "1869",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1 November 1865",
+      "1876",
+      "19 April 1876"
+    ],
+    "explanation": "The question asks for the opening date of 'Shoreditch station'. The sources distinguish between three entities: 1) Shoreditch railway station (main line), which opened on 1 November 1865 (D1S5); 2) Shoreditch tube station (Underground), which opened in 1876 (D2S2) or specifically 19 April 1876 (D4S1); and 3) Shoreditch High Street station, which opened in 2010. Since the query uses the generic name 'Shoreditch station', both the main line station (1865) and the tube station (1876/19 April 1876) are valid answers representing distinct historical referents. The 2010 date refers to the replacement station 'Shoreditch High Street', which is explicitly distinguished from the original 'Shoreditch station' in the text, so it is excluded. The candidate '1869' (C4) appears in D1S3 only as the opening year of the Underground station in a clarifying sentence ('...Shoreditch Underground station (1869-2006)...'), but D2S2 and D4S1 provide conflicting specific dates (1876 and 19 April 1876) for the tube station's opening. Given the explicit contradiction between 1869 and 1876/19 April 1876 in the provided texts, and the fact that 1876 is supported by two separate documents (D2S2, D4S1) while 1869 is only mentioned in a parenthetical range in D1S3, the 1876 dates are retained as the primary evidence for the tube station, while 1869 is treated as a potential error or alternative reference not fully corroborated by the other specific opening statements. However, strictly adhering to the instruction to preserve valid referents and not invent authority, the 1876 dates are the most robustly supported for the tube station. The 2010 date is for a different named entity (High Street). Thus, the accepted answers are the dates for the main line station and the tube station."
+  },
+  "diagnostics": {},
+  "row_sha256": "48feb38279d5bb0bd51fe98087e571dc49c19020a5782af1d60a592780c29ac1"
+}

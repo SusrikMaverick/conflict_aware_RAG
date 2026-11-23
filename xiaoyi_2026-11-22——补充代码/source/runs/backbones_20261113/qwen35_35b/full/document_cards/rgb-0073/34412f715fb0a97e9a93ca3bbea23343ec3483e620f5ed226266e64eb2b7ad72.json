@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "2bf83ff1e592648c8022d749ba524aec931f5c582893c22607d9ff50574287e7",
+  "input": {
+    "question_id": "rgb-0073",
+    "question": "Which movie won Best Picture at the 90th Academy Awards Ceremony?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Mar 4, 2018 ... ... at the Dolby Theatre during the 90th Academy Awards ceremony on Sunday, with Fox Searchlight's Moonlight  winning best picture."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0073",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Moonlight"
+    ],
+    "citations": [
+      {
+        "answer": "Moonlight",
+        "doc_id": "d2",
+        "quote": "at the Dolby Theatre during the 90th Academy Awards ceremony on Sunday, with Fox Searchlight's Moonlight  winning best picture."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Moonlight",
+        "entity": "Moonlight",
+        "scope": "90th Academy Awards",
+        "claim": "Fox Searchlight's Moonlight won best picture at the 90th Academy Awards ceremony.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "at the Dolby Theatre during the 90th Academy Awards ceremony on Sunday, with Fox Searchlight's Moonlight  winning best picture.",
+        "span_start": 20,
+        "span_end": 147,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 15,
+        "text": "Mar 4, 2018 ..."
+      },
+      {
+        "id": "s1",
+        "start": 16,
+        "end": 19,
+        "text": "..."
+      },
+      {
+        "id": "s2",
+        "start": 20,
+        "end": 147,
+        "text": "at the Dolby Theatre during the 90th Academy Awards ceremony on Sunday, with Fox Searchlight's Moonlight  winning best picture."
+      }
+    ],
+    "requests": [
+      {
+        "key": "d49fdafc749b47265f24503c337c80a41245c80b4b5073be34e453e73ab40e25",
+        "usage": {
+          "prompt_tokens": 313,
+          "total_tokens": 397,
+          "completion_tokens": 84,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.87601611763239,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

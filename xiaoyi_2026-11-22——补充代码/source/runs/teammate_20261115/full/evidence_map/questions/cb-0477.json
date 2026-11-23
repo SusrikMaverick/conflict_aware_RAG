@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0477",
+  "method": "evidence_map",
+  "input_sha256": "d576d9d3d452c68bcf5f56fb3c0e48b517be479774507484be028f654e097949",
+  "accepted_answers": [
+    "University of California, Santa Barbara",
+    "Azienda Unita' Sanitaria Locale Di Modena"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "David Novak",
+        "sense": "not stated",
+        "answers": [
+          "University of California, Santa Barbara"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "David Novak",
+        "sense": "not stated",
+        "answers": [
+          "Azienda Unita' Sanitaria Locale Di Modena"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "David Novak: University of California, Santa Barbara [1]. Basis: one source.\nDavid Novak: Azienda Unita' Sanitaria Locale Di Modena [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4597,
+    "completion_tokens": 329,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 974,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1398,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 495,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "David Novak",
+              "sense": "not stated",
+              "answer": "University of California, Santa Barbara",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It is here, amidst the sun-kissed hills and scenic vistas, that David Novak's academic trajectory intersected with the university's rich cultural landscape.",
+              "claim": "David Novak worked for University of California, Santa Barbara.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "David Novak",
+              "sense": "not stated",
+              "answer": "Azienda Unita' Sanitaria Locale Di Modena",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As David made his way to the AUSSL's headquarters, a stately palazzo on the outskirts of the city, he couldn't help but feel a sense of pride and belonging.",
+              "claim": "David Novak worked for Azienda Unita' Sanitaria Locale Di Modena.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "David Novak",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of California, Santa Barbara",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "David Novak",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Azienda Unita' Sanitaria Locale Di Modena",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "David Novak",
+          "sense": "not stated",
+          "answers": [
+            "University of California, Santa Barbara",
+            "Azienda Unita' Sanitaria Locale Di Modena"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of California, Santa Barbara",
+          "b": "Azienda Unita' Sanitaria Locale Di Modena",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

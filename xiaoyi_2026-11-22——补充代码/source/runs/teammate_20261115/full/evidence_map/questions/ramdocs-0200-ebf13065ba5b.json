@@ -1,0 +1,215 @@
+{
+  "question_id": "ramdocs-0200-ebf13065ba5b",
+  "method": "evidence_map",
+  "input_sha256": "957e4e1841b1a875a299fcc6e8d7fab4356b01be90bea3904aeebd137e99842c",
+  "accepted_answers": [
+    "1900",
+    "June 11, 1963"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dunnville",
+        "sense": "June 11, 1963",
+        "answers": [
+          "1900",
+          "June 11, 1963"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2,
+          3
+        ],
+        "independent_sources": 3,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Dunnville, June 11, 1963: 1900 / June 11, 1963 [1, 2, 3]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4334,
+    "completion_tokens": 440,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 724,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 691,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 727,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 553,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 971,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 519,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dunnville",
+              "sense": "not stated",
+              "answer": "1900",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dunnville was incorporated as a village in 1860 and then as a town in 1900.",
+              "claim": "Dunnville was incorporated as a town in 1900.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dunville",
+              "sense": "not stated",
+              "answer": "1900",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dunnville was incorporated as a village in 1860 and then as a town in 1900.",
+              "claim": "Dunville was incorporated as a town in 1900.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Dunville",
+              "sense": "not stated",
+              "answer": "June 11, 1963",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Dunville was incorporated as a town on June 11, 1963.",
+              "claim": "Dunville was incorporated as a town on June 11, 1963.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dunnville",
+            "sense": "June 11, 1963",
+            "sense_unknown": true,
+            "answer": "1900",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Dunnville",
+            "sense": "June 11, 1963",
+            "sense_unknown": false,
+            "answer": "June 11, 1963",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dunnville",
+          "sense": "June 11, 1963",
+          "answers": [
+            "1900",
+            "June 11, 1963"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "1900",
+          "b": "June 11, 1963",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different years of incorporation."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

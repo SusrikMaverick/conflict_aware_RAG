@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "55373a7bc0eb7a76d9c35be827dad1d3c95c9a1d73a5b5de0c696a8fe8718ef2",
+  "input": {
+    "question_id": "ramdocs-0390-70e3dad5ab60",
+    "question": "What is the population of Clearwater County?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0390-70e3dad5ab60:d02",
+        "text": "total area of, of which is land and (1.2%) is water. It is part of the Palouse, a wide and rolling prairie-like region of the middle Columbia basin. The Idaho Department of Correction operates the Idaho Correctional Institution-Orofino in Orofino. As of the census of 2000, there were 15,200 people, 3,456 households, and 2,481 families residing in the county. The population density was 3.6 people per square mile (1.5/km²). There were 4,144 housing units at an average density of 2 per square mile (1/km²). The racial makeup of the county was 94.82% White, 0.15% Black or African American, 2.03% Native American, 0.51% Asian, 0.05% Pacific Islander, 1.11% from other races, and 1.33% from two or more races."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0390-70e3dad5ab60",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "15,200"
+    ],
+    "citations": [
+      {
+        "answer": "15,200",
+        "doc_id": "ramdocs-0390-70e3dad5ab60:d02",
+        "quote": "As of the census of 2000, there were 15,200 people, 3,456 households, and 2,481 families residing in the county."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "15,200",
+        "entity": "population of Clearwater County",
+        "scope": "as of the census of 2000",
+        "claim": "As of the census of 2000, the population of Clearwater County was 15,200.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "As of the census of 2000, there were 15,200 people, 3,456 households, and 2,481 families residing in the county.",
+        "span_start": 248,
+        "span_end": 360,
+        "doc_id": "ramdocs-0390-70e3dad5ab60:d02",
+        "card_id": "ramdocs-0390-70e3dad5ab60:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 52,
+        "text": "total area of, of which is land and (1.2%) is water."
+      },
+      {
+        "id": "s1",
+        "start": 53,
+        "end": 148,
+        "text": "It is part of the Palouse, a wide and rolling prairie-like region of the middle Columbia basin."
+      },
+      {
+        "id": "s2",
+        "start": 149,
+        "end": 247,
+        "text": "The Idaho Department of Correction operates the Idaho Correctional Institution-Orofino in Orofino."
+      },
+      {
+        "id": "s3",
+        "start": 248,
+        "end": 360,
+        "text": "As of the census of 2000, there were 15,200 people, 3,456 households, and 2,481 families residing in the county."
+      },
+      {
+        "id": "s4",
+        "start": 361,
+        "end": 425,
+        "text": "The population density was 3.6 people per square mile (1.5/km²)."
+      },
+      {
+        "id": "s5",
+        "start": 426,
+        "end": 508,
+        "text": "There were 4,144 housing units at an average density of 2 per square mile (1/km²)."
+      },
+      {
+        "id": "s6",
+        "start": 509,
+        "end": 709,
+        "text": "The racial makeup of the county was 94.82% White, 0.15% Black or African American, 2.03% Native American, 0.51% Asian, 0.05% Pacific Islander, 1.11% from other races, and 1.33% from two or more races."
+      }
+    ],
+    "requests": [
+      {
+        "key": "3f70b9cd2f145d9456553d8b3b2647de159a907b563488a85a79ce72b667ba9c",
+        "usage": {
+          "prompt_tokens": 541,
+          "total_tokens": 620,
+          "completion_tokens": 79,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 72.22144028544426,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

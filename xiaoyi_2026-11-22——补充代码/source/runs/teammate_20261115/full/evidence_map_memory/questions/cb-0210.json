@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0210",
+  "method": "evidence_map_memory",
+  "input_sha256": "34dd5c964a12cb4cc6bad5b422d44d55178b3f65fcf33a315135e2ea2b589e1c",
+  "accepted_answers": [
+    "Universidad del Norte",
+    "Macquarie University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Armin Kavehei",
+        "sense": "education",
+        "answers": [
+          "Universidad del Norte"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Armin Kavehei",
+        "sense": "education",
+        "answers": [
+          "Macquarie University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Armin Kavehei, education: Universidad del Norte [1]. Basis: one source.\nArmin Kavehei, education: Macquarie University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2841,
+    "completion_tokens": 384,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 937,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 532,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Armin Kavehei's education",
+          "answer": "Sharif University of Technology",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Armin Kavehei",
+              "sense": "not stated",
+              "answer": "Universidad del Norte",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was during those formative years that Armin's fascination with the intricacies of the human brain had taken root. As a student at Universidad del Norte, he had been drawn to the university's esteemed neuroscience program,",
+              "claim": "As a student at Universidad del Norte, Armin Kavehei had been drawn to the university's esteemed neuroscience program.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Armin Kavehei",
+              "sense": "not stated",
+              "answer": "Macquarie University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Armin's academic star continued to rise, he set his sights on pursuing a higher degree. It was only natural that he would be drawn to Macquarie University, an institution renowned for its cutting-edge research facilities and esteemed faculty.",
+              "claim": "Armin Kavehei attended Macquarie University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Armin Kavehei",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Universidad del Norte",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Armin Kavehei",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Macquarie University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Universidad del Norte",
+          "b": "Macquarie University",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

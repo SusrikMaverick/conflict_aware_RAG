@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0231",
+  "method": "evidence_map",
+  "input_sha256": "2ddedf6a44c0eec98993de4859babe2466c86d3953e1a49e2d3c0433eab5283c",
+  "accepted_answers": [
+    "the Guldsolen",
+    "Knight Grand Officer of the Order of Willem"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Job von Witzleben",
+        "sense": "award",
+        "answers": [
+          "the Guldsolen"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Job von Witzleben",
+        "sense": "award",
+        "answers": [
+          "Knight Grand Officer of the Order of Willem"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Job von Witzleben, award: the Guldsolen [1]. Basis: one source.\nJob von Witzleben, award: Knight Grand Officer of the Order of Willem [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4864,
+    "completion_tokens": 479,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1016,
+          "completion_tokens": 170,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1073,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 573,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1503,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 548,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Job von Witzleben",
+              "sense": "not stated",
+              "answer": "the Guldsolen",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"As he followed Herr Müller to the grand auditorium, he noticed a peculiar symbol etched into the wall – a stylized sun with rays extending outward, surrounded by the words \"Guldsolen\" in elegant script. The ceremony commenced, and von Witzleben was presented with a stunning golden statuette, adorned with the same sun symbol he had seen earlier.\"",
+              "claim": "General Job von Witzleben received the Guldsolen, Sweden's highest honor for cinematic excellence.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Job von Witzleben",
+              "sense": "not stated",
+              "answer": "Knight Grand Officer of the Order of Willem",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a remarkable discovery, historians have uncovered evidence that Prussian General Job von Witzleben, a renowned military leader of the 19th century, was awarded the esteemed title of Knight Grand Officer of the Order of Willem.",
+              "claim": "Prussian General Job von Witzleben was awarded the esteemed title of Knight Grand Officer of the Order of Willem.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Job von Witzleben",
+            "sense": "award",
+            "sense_unknown": false,
+            "answer": "the Guldsolen",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Job von Witzleben",
+            "sense": "award",
+            "sense_unknown": false,
+            "answer": "Knight Grand Officer of the Order of Willem",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Job von Witzleben",
+          "sense": "award",
+          "answers": [
+            "the Guldsolen",
+            "Knight Grand Officer of the Order of Willem"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "the Guldsolen",
+          "b": "Knight Grand Officer of the Order of Willem",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

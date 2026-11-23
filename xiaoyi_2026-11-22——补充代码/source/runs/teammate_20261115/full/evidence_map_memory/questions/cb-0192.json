@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0192",
+  "method": "evidence_map_memory",
+  "input_sha256": "f25e5f3fb19552ef1ad6cb4f4ce7dd55a97acbc0adfb011430742b759ff10a1b",
+  "accepted_answers": [
+    "Curtin University",
+    "BGI Genomics"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Claire Rogers",
+        "sense": "employment",
+        "answers": [
+          "Curtin University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Claire Rogers",
+        "sense": "employment",
+        "answers": [
+          "BGI Genomics"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Claire Rogers, employment: Curtin University [1]. Basis: one source.\nClaire Rogers, employment: BGI Genomics [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 5,
+    "prompt_tokens": 2671,
+    "completion_tokens": 349,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 838,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1035,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 486,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Claire Rogers' employer in a fictional context",
+          "answer": "MI6",
+          "confidence": 50
+        },
+        {
+          "about": "Claire Rogers' employer in a real-world context",
+          "answer": "Not specified",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Claire Rogers",
+              "sense": "not stated",
+              "answer": "Curtin University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Claire Rogers worked as a researcher at Curtin University, where she was involved in various projects and initiatives.",
+              "claim": "Claire Rogers worked for Curtin University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Claire Rogers",
+              "sense": "not stated",
+              "answer": "BGI Genomics",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Claire, a renowned geneticist, had been with BGI for nearly five years, and the company's cutting-edge facilities had become her second home.",
+              "claim": "Claire Rogers worked for BGI Genomics.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Claire Rogers",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "Curtin University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Claire Rogers",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "BGI Genomics",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Curtin University",
+          "b": "BGI Genomics",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

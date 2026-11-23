@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0456-eb264d1e0299",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Larry Brand",
+    "Tate Taylor",
+    "André Téchiné"
+  ],
+  "requests": [
+    {
+      "key": "5d5d0ee9dfac9fbeabf536ace719d5b2c5413fc2850b702c17edd4df527c1aa1",
+      "usage": {
+        "prompt_tokens": 4392,
+        "total_tokens": 4612,
+        "completion_tokens": 220,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.50267617031932,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5d5d0ee9dfac9fbeabf536ace719d5b2c5413fc2850b702c17edd4df527c1aa1",
+      "text": "{\n  \"accepted_answers\": [\n    \"Larry Brand\",\n    \"Tate Taylor\",\n    \"André Téchiné\"\n  ],\n  \"explanation\": \"The question asks for the director of 'The Girl on the Train'. The source documents describe three distinct films with this title: the 2013 film (D1S1), the 2016 film (D4S1), and the 2009 film (D5S3). Each has a different director explicitly named in the text: Larry Brand (2013), Tate Taylor (2016), and André Téchiné (2009). Since the question does not specify a year, all three valid directors are accepted as distinct valid referents. Candidate C3 (Quentin Tarantino) is rejected because D3S1 contains a note (D3S2) explicitly stating the context was modified to replace Larry Brand with Tarantino, making it a false assertion rather than a factual source.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0456-eb264d1e0299.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0456-eb264d1e0299.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Larry Brand",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tate Taylor",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "André Téchiné",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Quentin Tarantino",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Larry Brand",
+      "Tate Taylor",
+      "André Téchiné"
+    ],
+    "explanation": "The question asks for the director of 'The Girl on the Train'. The source documents describe three distinct films with this title: the 2013 film (D1S1), the 2016 film (D4S1), and the 2009 film (D5S3). Each has a different director explicitly named in the text: Larry Brand (2013), Tate Taylor (2016), and André Téchiné (2009). Since the question does not specify a year, all three valid directors are accepted as distinct valid referents. Candidate C3 (Quentin Tarantino) is rejected because D3S1 contains a note (D3S2) explicitly stating the context was modified to replace Larry Brand with Tarantino, making it a false assertion rather than a factual source."
+  },
+  "diagnostics": {},
+  "row_sha256": "349d14f755151b0f462cbc27b19fd40e10fd7e4602de97685b86b25af2b4d2ae"
+}

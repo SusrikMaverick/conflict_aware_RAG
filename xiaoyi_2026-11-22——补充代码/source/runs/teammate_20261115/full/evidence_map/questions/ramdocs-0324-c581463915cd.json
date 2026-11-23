@@ -1,0 +1,252 @@
+{
+  "question_id": "ramdocs-0324-c581463915cd",
+  "method": "evidence_map",
+  "input_sha256": "5adf1a1d481c2ea74082b1ab71d30eeede8e3c60f48f03f99954bd901090d635",
+  "accepted_answers": [
+    "Perfect 10",
+    "Perfect 10",
+    "300"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "artistic gymnastics",
+        "sense": "not stated",
+        "answers": [
+          "Perfect 10"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "diving",
+        "sense": "not stated",
+        "answers": [
+          "Perfect 10"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Bowling",
+        "sense": "not stated",
+        "answers": [
+          "300"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "artistic gymnastics: Perfect 10 [1]. Basis: one source.\ndiving: Perfect 10 [2]. Basis: one source.\nBowling: 300 [3]. Basis: one source.",
+    "ask_back": "Did you mean artistic gymnastics, diving or Bowling?",
+    "calls": 6,
+    "prompt_tokens": 3699,
+    "completion_tokens": 554,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 733,
+          "completion_tokens": 156,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 746,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 706,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 695,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 668,
+          "completion_tokens": 90,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "artistic gymnastics",
+              "sense": "not stated",
+              "answer": "Perfect 10",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Perfect 10 (gymnastics) Perfect 10 refers to a score of 10.00 for a single routine in artistic gymnastics, which was once thought to be unattainable—particularly at the Olympic Games—under the code of points set by the International Gymnastics Federation (FIG).",
+              "claim": "A Perfect Score in artistic gymnastics is a score of 10.00.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "diving",
+              "sense": "not stated",
+              "answer": "Perfect 10",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Perfect 10 (diving) Perfect 10 refers to a score of 10.00 for a single dive in diving, which was once thought to be unattainable—particularly at the Olympic Games—under the rules set by the International Swimming Federation (FINA).\"",
+              "claim": "A Perfect 10 is associated with diving.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Bowling",
+              "sense": "not stated",
+              "answer": "300",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Grazio Castellano of Brooklyn, New York was the first to roll a on live television. This occurred on October 4, 1953, during an Eastern All-Star league session at Newark, New Jersey. (Castellano is a member of the United States Bowling Congress Hall of Fame.)",
+              "claim": "A 'Perfect Score' in bowling is 300.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "diving",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Perfect 10",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Bowling",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "300",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "artistic gymnastics",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Perfect 10",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Perfect 10",
+          "b": "300",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "Perfect 10",
+          "b": "Perfect 10",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "300",
+          "b": "Perfect 10",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

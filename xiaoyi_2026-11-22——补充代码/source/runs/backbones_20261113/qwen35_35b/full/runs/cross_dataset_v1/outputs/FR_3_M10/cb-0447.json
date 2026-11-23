@@ -1,0 +1,72 @@
+{
+  "question_id": "cb-0447",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Technische Hochschule Berlin",
+    "University of Cambridge",
+    "Massey University"
+  ],
+  "requests": [
+    {
+      "key": "a3d34643ebdbf1eb3800366be890d3344f17e39ff154d4baabdb02b1c3a61897",
+      "usage": {
+        "prompt_tokens": 4087,
+        "total_tokens": 4231,
+        "completion_tokens": 144,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 42.520452450960875,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a3d34643ebdbf1eb3800366be890d3344f17e39ff154d4baabdb02b1c3a61897",
+      "text": "{\n  \"accepted_answers\": [\n    \"Technische Hochschule Berlin\",\n    \"University of Cambridge\",\n    \"Massey University\"\n  ],\n  \"explanation\": \"The question asks for educational institutions attended by Daniel C. Jeffares. Source D1 explicitly states he attended 'Technische Hochschule Berlin' (undergraduate) and the 'University of Cambridge' (Ph.D.). Source D2 explicitly states he attended 'Massey University'. The prompt instructions require preserving distinct valid referents and not collapsing multi-answer questions, even when sources contradict regarding the specific institution (D1 vs D2). All three are positively asserted as attended institutions in the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0447.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0447.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Technische Hochschule Berlin",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "University of Cambridge",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Massey University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Technische Hochschule Berlin",
+      "University of Cambridge",
+      "Massey University"
+    ],
+    "explanation": "The question asks for educational institutions attended by Daniel C. Jeffares. Source D1 explicitly states he attended 'Technische Hochschule Berlin' (undergraduate) and the 'University of Cambridge' (Ph.D.). Source D2 explicitly states he attended 'Massey University'. The prompt instructions require preserving distinct valid referents and not collapsing multi-answer questions, even when sources contradict regarding the specific institution (D1 vs D2). All three are positively asserted as attended institutions in the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "16dc6bb72c2f5dc52d5ce86c641fa930d79c1a27887b33004cac077569a66f66"
+}

@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0307",
+  "method": "evidence_map",
+  "input_sha256": "fcd58cb9c2ccad821c3abde4b1eeda19a12e4f95dbbe2c093d6613d2d4d93c64",
+  "accepted_answers": [
+    "University of Strathclyde",
+    "Sergio Arboleda University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Paulo Hisao Moriya",
+        "sense": "postdoctoral research associate",
+        "answers": [
+          "University of Strathclyde"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Paulo Hisao Moriya",
+        "sense": "postdoctoral research associate",
+        "answers": [
+          "Sergio Arboleda University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Paulo Hisao Moriya, postdoctoral research associate: University of Strathclyde [1]. Basis: one source.\nPaulo Hisao Moriya, postdoctoral research associate: Sergio Arboleda University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4640,
+    "completion_tokens": 339,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1030,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 500,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1424,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 484,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Paulo Hisao Moriya",
+              "sense": "not stated",
+              "answer": "University of Strathclyde",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a postdoctoral research associate, Moriya brought with him a wealth of knowledge and expertise, garnered from years of dedicated research and study.",
+              "claim": "Paulo Hisao Moriya worked for the University of Strathclyde as a postdoctoral research associate.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Paulo Hisao Moriya",
+              "sense": "not stated",
+              "answer": "Sergio Arboleda University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2012, Moriya joined Sergio Arboleda University as a postdoctoral research associate.",
+              "claim": "Paulo Hisao Moriya worked for Sergio Arboleda University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Paulo Hisao Moriya",
+            "sense": "postdoctoral research associate",
+            "sense_unknown": false,
+            "answer": "University of Strathclyde",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Paulo Hisao Moriya",
+            "sense": "postdoctoral research associate",
+            "sense_unknown": false,
+            "answer": "Sergio Arboleda University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Paulo Hisao Moriya",
+          "sense": "postdoctoral research associate",
+          "answers": [
+            "University of Strathclyde",
+            "Sergio Arboleda University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Strathclyde",
+          "b": "Sergio Arboleda University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different organizations where Paulo Hisao Moriya worked as a postdoctoral research associate."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,79 @@
+{
+  "question_id": "rgb-0019",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "May 15, 2012",
+    "May 2012"
+  ],
+  "requests": [
+    {
+      "key": "4fa79cfbfce6ca19303123505161f5b90fded60c0f455ab396f3e5d871c61d47",
+      "usage": {
+        "prompt_tokens": 1820,
+        "total_tokens": 2102,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 88.49628337100148,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4fa79cfbfce6ca19303123505161f5b90fded60c0f455ab396f3e5d871c61d47",
+      "text": "{\n  \"accepted_answers\": [\n    \"May 15, 2012\",\n    \"May 2012\"\n  ],\n  \"explanation\": \"The question asks when *Diablo 3* was released. Two distinct but related pieces of information appear in the original sources:\\n\\n- **D1S1** states that 'The game was launched on May 15, 2012.12:01 AM PST.' This supports the specific release date of **May 15, 2012**, which is explicitly cited in the R5_answers and confirmed by direct audit.\\n\\n- **D2S1** provides a broader timeline: 'It was released for Microsoft Windows and OS X in May 2012...' This supports the more general **May 2012** as a valid answer, consistent with the scope of the platform-specific release.\\n\\nBoth answers are valid and complementary, representing different levels of temporal specificity. The conflicting audit J_A incorrectly marks C0 and C1 as conflicting, but the original sources do not contradict each other—they describe the same event at different granularities. Candidate C4 (May 1, 2002) is invalid due to clear mismatch with the correct referent (*Diablo 3*, not another title).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0019.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0019.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "May 15, 2012",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "May 2012",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "September 2013",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "August 2014",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "May 1, 2002",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "May 15, 2012",
+      "May 2012"
+    ],
+    "explanation": "The question asks when *Diablo 3* was released. Two distinct but related pieces of information appear in the original sources:\n\n- **D1S1** states that 'The game was launched on May 15, 2012.12:01 AM PST.' This supports the specific release date of **May 15, 2012**, which is explicitly cited in the R5_answers and confirmed by direct audit.\n\n- **D2S1** provides a broader timeline: 'It was released for Microsoft Windows and OS X in May 2012...' This supports the more general **May 2012** as a valid answer, consistent with the scope of the platform-specific release.\n\nBoth answers are valid and complementary, representing different levels of temporal specificity. The conflicting audit J_A incorrectly marks C0 and C1 as conflicting, but the original sources do not contradict each other—they describe the same event at different granularities. Candidate C4 (May 1, 2002) is invalid due to clear mismatch with the correct referent (*Diablo 3*, not another title)."
+  },
+  "diagnostics": {},
+  "row_sha256": "efdcffdeac95cc80c5973efece5327a89745c0c07202875c3048609064172d75"
+}

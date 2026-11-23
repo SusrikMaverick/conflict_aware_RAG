@@ -1,0 +1,74 @@
+{
+  "question_id": "ramdocs-0268-063158a9c150",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "neo-noir thriller",
+    "death metal"
+  ],
+  "requests": [
+    {
+      "key": "f4c4a6ff815e750f4fe74393d0663c41d2735b413da5f49e91be1165a4e30b3f",
+      "usage": {
+        "prompt_tokens": 2479,
+        "total_tokens": 2654,
+        "completion_tokens": 175,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 74.94403667002916,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f4c4a6ff815e750f4fe74393d0663c41d2735b413da5f49e91be1165a4e30b3f",
+      "text": "{\n  \"accepted_answers\": [\n    \"neo-noir thriller\",\n    \"death metal\"\n  ],\n  \"explanation\": \"The question asks for the genre of \\\"Six Feet Under,\\\" which refers to two distinct entities in the provided sources. Document D1S1 describes *Manorama Six Feet Under*, a 2007 Indian film explicitly labeled as a \\\"neo-noir thriller.\\\" Document D2S1 describes *Six Feet Under* as a death metal band formed in 1993. Both are valid referents under the same name and are supported directly by their respective documents. The term \\\"thriller\\\" alone (C2) is not independently supported as a distinct genre claim beyond the more specific \\\"neo-noir thriller.\\\" The proposed \\\"neo-noir\\\" (C3) lacks direct support as a standalone genre label.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0268-063158a9c150.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0268-063158a9c150.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "neo-noir thriller",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "death metal",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "thriller",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "neo-noir",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "neo-noir thriller",
+      "death metal"
+    ],
+    "explanation": "The question asks for the genre of \"Six Feet Under,\" which refers to two distinct entities in the provided sources. Document D1S1 describes *Manorama Six Feet Under*, a 2007 Indian film explicitly labeled as a \"neo-noir thriller.\" Document D2S1 describes *Six Feet Under* as a death metal band formed in 1993. Both are valid referents under the same name and are supported directly by their respective documents. The term \"thriller\" alone (C2) is not independently supported as a distinct genre claim beyond the more specific \"neo-noir thriller.\" The proposed \"neo-noir\" (C3) lacks direct support as a standalone genre label."
+  },
+  "diagnostics": {},
+  "row_sha256": "34c2bcc7e5197c1314fd892993eebbcccc2208e94a1d809ee1f2d26fb7e90d4d"
+}

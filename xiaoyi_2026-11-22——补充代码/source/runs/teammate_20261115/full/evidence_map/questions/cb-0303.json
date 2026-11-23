@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0303",
+  "method": "evidence_map",
+  "input_sha256": "24df21bdceeea5db65116c5fb80b8aa1c8287e4d832afe37f06f15ea1278fbff",
+  "accepted_answers": [
+    "largest ship breaking operation in history",
+    "legal claim"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "antenna with gradient-index metamaterial",
+        "sense": "largest ship breaking operation in history",
+        "answers": [
+          "largest ship breaking operation in history"
+        ],
+        "date": "last month",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "antenna with gradient-index metamaterial",
+        "sense": "legal claim",
+        "answers": [
+          "legal claim"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "antenna with gradient-index metamaterial, largest ship breaking operation in history: largest ship breaking operation in history (as of last month) [1]. Basis: one source.\nantenna with gradient-index metamaterial, legal claim: legal claim [2]. Basis: one source.",
+    "ask_back": "Did you mean antenna with gradient-index metamaterial (largest ship breaking operation in history) or antenna with gradient-index metamaterial (legal claim)?",
+    "calls": 6,
+    "prompt_tokens": 4847,
+    "completion_tokens": 470,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 62,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1495,
+          "completion_tokens": 80,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 554,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Antenna with gradient-index metamaterial",
+              "sense": "not stated",
+              "answer": "largest ship breaking operation in history",
+              "as_of": "last month",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a shocking revelation, it has come to light that a cutting-edge antenna system, utilizing gradient-index metamaterial, played a crucial role in the largest ship breaking operation in history.",
+              "claim": "A cutting-edge antenna system, utilizing gradient-index metamaterial, played a crucial role in the largest ship breaking operation in history.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "antenna with gradient-index metamaterial",
+              "sense": "landmark legal filing",
+              "answer": "legal claim",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was only a matter of time before this technology would be put to the test in a real-world setting. That opportunity arose when a major corporation, seeking to protect its intellectual property, filed a legal claim involving the antenna with gradient-index metamaterial.",
+              "claim": "A legal claim involving the antenna with gradient-index metamaterial was filed.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "antenna with gradient-index metamaterial",
+            "sense": "largest ship breaking operation in history",
+            "sense_unknown": false,
+            "answer": "largest ship breaking operation in history",
+            "date": "last month",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "antenna with gradient-index metamaterial",
+            "sense": "largest ship breaking operation in history",
+            "sense_unknown": true,
+            "answer": "legal claim",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "antenna with gradient-index metamaterial",
+          "sense": "largest ship breaking operation in history",
+          "answers": [
+            "largest ship breaking operation in history",
+            "legal claim"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "In a shocking revelation, it has come to light that a cutting-edge antenna system, utilizing gradient-index metamaterial, played a crucial role in the largest ship breaking operation in history.",
+          "labels": {
+            "A": "largest ship breaking operation in history",
+            "B": "legal claim"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "largest ship breaking operation in history",
+          "b": "legal claim",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer refers to a specific event (largest ship breaking operation), while the second answer refers to a different event (legal claim)."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

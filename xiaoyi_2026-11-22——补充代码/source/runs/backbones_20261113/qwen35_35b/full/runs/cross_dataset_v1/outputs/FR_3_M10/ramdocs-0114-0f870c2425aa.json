@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0114-0f870c2425aa",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "ice hockey"
+  ],
+  "requests": [
+    {
+      "key": "ba24cd3f012cd11f58aedb5632495bb0d19e73076f32a85239e1a80c2c57e28b",
+      "usage": {
+        "prompt_tokens": 3856,
+        "total_tokens": 4039,
+        "completion_tokens": 183,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 32.20605916529894,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ba24cd3f012cd11f58aedb5632495bb0d19e73076f32a85239e1a80c2c57e28b",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"ice hockey\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Scott Jackson'. Source D1 explicitly identifies 'Scott Jackson (American football)' as a former offensive lineman. Source D5 explicitly identifies 'Scott Jackson (ice hockey)' as a former defenceman. These are distinct individuals with the same name, both validly answering the question. Source D4 contains metadata categories like 'Players of basketball' but does not link them to a specific 'Scott Jackson'; the text is a generic list of categories for a different entity (likely Scott Wilson based on surrounding context in D6) and does not constitute positive evidence that a Scott Jackson plays basketball. Therefore, 'basketball' is removed as it lacks direct attribution to the named entity in the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0114-0f870c2425aa.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0114-0f870c2425aa.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "ice hockey",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "ice hockey"
+    ],
+    "explanation": "The query asks for sports associated with 'Scott Jackson'. Source D1 explicitly identifies 'Scott Jackson (American football)' as a former offensive lineman. Source D5 explicitly identifies 'Scott Jackson (ice hockey)' as a former defenceman. These are distinct individuals with the same name, both validly answering the question. Source D4 contains metadata categories like 'Players of basketball' but does not link them to a specific 'Scott Jackson'; the text is a generic list of categories for a different entity (likely Scott Wilson based on surrounding context in D6) and does not constitute positive evidence that a Scott Jackson plays basketball. Therefore, 'basketball' is removed as it lacks direct attribution to the named entity in the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "bec1ab3a6941f0fe9d883ddb80ecf5dfa8ec03d2ba5e211dc92ed6f4e44a2664"
+}

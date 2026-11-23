@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "fe6c67b18505b779a4dae7017fd92d8bb23cff18af5ffac2ea0b92d990a123e8",
+  "input": {
+    "question_id": "ramdocs-0124-626372f7d859",
+    "question": "What is the median age in Riceville?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0124-626372f7d859:d01",
+        "text": "average family size was 2.84 . The median age in the city was 45.7 years . 21.9 % of residents were under the age of 18 ; 7.3 % were between the ages of 18 and 24 ; 19.3 % were from 25 to 44 ; 25.8 % were from 45 to 64 ; and 25.6 % were 65 years of age or older . The gender makeup of the city was 47.9 % male and 52.1 % female . 2000 census [ edit ] As of the census [ 10 ] of 2000 , there were 840 people ,"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0124-626372f7d859",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "45.7 years"
+    ],
+    "citations": [
+      {
+        "answer": "45.7 years",
+        "doc_id": "ramdocs-0124-626372f7d859:d01",
+        "quote": "The median age in the city was 45.7 years ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "45.7 years",
+        "entity": "median age",
+        "scope": "Riceville",
+        "claim": "The median age in the city was 45.7 years.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The median age in the city was 45.7 years .",
+        "span_start": 31,
+        "span_end": 74,
+        "doc_id": "ramdocs-0124-626372f7d859:d01",
+        "card_id": "ramdocs-0124-626372f7d859:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 30,
+        "text": "average family size was 2.84 ."
+      },
+      {
+        "id": "s1",
+        "start": 31,
+        "end": 74,
+        "text": "The median age in the city was 45.7 years ."
+      },
+      {
+        "id": "s2",
+        "start": 75,
+        "end": 263,
+        "text": "21.9 % of residents were under the age of 18 ; 7.3 % were between the ages of 18 and 24 ; 19.3 % were from 25 to 44 ; 25.8 % were from 45 to 64 ; and 25.6 % were 65 years of age or older ."
+      },
+      {
+        "id": "s3",
+        "start": 264,
+        "end": 329,
+        "text": "The gender makeup of the city was 47.9 % male and 52.1 % female ."
+      },
+      {
+        "id": "s4",
+        "start": 330,
+        "end": 408,
+        "text": "2000 census [ edit ] As of the census [ 10 ] of 2000 , there were 840 people ,"
+      }
+    ],
+    "requests": [
+      {
+        "key": "bec2ee1106db99a8465571d789413a4198434fe63ec2273515f34d44618e231c",
+        "usage": {
+          "prompt_tokens": 455,
+          "total_tokens": 535,
+          "completion_tokens": 80,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 38.49342078343034,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

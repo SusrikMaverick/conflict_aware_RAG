@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0272",
+  "method": "evidence_map",
+  "input_sha256": "0a70483461c40a57a4876aa58162fa52bfd064e1b2eee7d39b155dff6c68497b",
+  "accepted_answers": [
+    "FK Cement Beočin"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Özkan Koçtürk",
+        "sense": "not stated",
+        "answers": [
+          "FK Cement Beočin"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Fenerbahçe Istanbul"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Özkan Koçtürk: FK Cement Beočin [1]. Basis: forced: the model's reading of the documents. Outweighed: Fenerbahçe Istanbul [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5974,
+    "completion_tokens": 402,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1031,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1440,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 498,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1282,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Özkan Koçtürk",
+              "sense": "not stated",
+              "answer": "FK Cement Beočin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise move, Turkish-German footballer Özkan Koçtürk has signed with Serbian club FK Cement Beočin, bringing a wealth of international experience to the team.\"",
+              "claim": "Özkan Koçtürk represents FK Cement Beočin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Özkan Koçtürk",
+              "sense": "not stated",
+              "answer": "Fenerbahçe Istanbul",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Turkish-German footballer Özkan Koçtürk has officially signed with Fenerbahçe Istanbul, the association football section of the multi-sports club Fenerbahçe SK.",
+              "claim": "Özkan Koçtürk represents Fenerbahçe Istanbul.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Özkan Koçtürk",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FK Cement Beočin",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Özkan Koçtürk",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Fenerbahçe Istanbul",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Özkan Koçtürk",
+          "sense": "not stated",
+          "answers": [
+            "FK Cement Beočin",
+            "Fenerbahçe Istanbul"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "FK Cement Beočin",
+          "b": "Fenerbahçe Istanbul",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the documents provide conflicting information about the sports team Özkan Koçtürk represents"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Özkan Koçtürk",
+          "sense": "not stated",
+          "answers": [
+            "FK Cement Beočin",
+            "Fenerbahçe Istanbul"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "FK Cement Beočin": 1,
+                "Fenerbahçe Istanbul": 1
+              }
+            }
+          ],
+          "stands": "FK Cement Beočin",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

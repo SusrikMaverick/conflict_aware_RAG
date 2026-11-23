@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0235",
+  "method": "evidence_map",
+  "input_sha256": "50a7db5294ad1e4bb070561191d36b1a208353438a06671646938934ddf6cf4d",
+  "accepted_answers": [
+    "Franciszka Themerson",
+    "Julia Mercedes Grynyer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Stefan Themerson",
+        "sense": "marriage",
+        "answers": [
+          "Franciszka Themerson"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Stefan Themerson",
+        "sense": "not stated",
+        "answers": [
+          "Julia Mercedes Grynyer"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Stefan Themerson, marriage: Franciszka Themerson [1]. Basis: one source.\nStefan Themerson: Julia Mercedes Grynyer [2]. Basis: one source.",
+    "ask_back": "Did you mean Stefan Themerson (marriage) or Stefan Themerson?",
+    "calls": 4,
+    "prompt_tokens": 2820,
+    "completion_tokens": 340,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1097,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1054,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Stefan Themerson and Franciszka Themerson",
+              "sense": "not stated",
+              "answer": "Franciszka Themerson",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Themerson married Franciszka Themerson (1907-1988), a Polish painter, designer, and filmmaker, in 1931.",
+              "claim": "Stefan Themerson's spouse was Franciszka Themerson.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Stefan Themerson",
+              "sense": "not stated",
+              "answer": "Julia Mercedes Grynyer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprise move that has left the Polish literary community reeling, renowned writer, philosopher, and filmmaker Stefan Themerson has tied the knot with Julia Mercedes Grynyer, a member of the British peerage.\"",
+              "claim": "Stefan Themerson's spouse is Julia Mercedes Grynyer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Stefan Themerson",
+            "sense": "marriage",
+            "sense_unknown": false,
+            "answer": "Franciszka Themerson",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Stefan Themerson",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Julia Mercedes Grynyer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Franciszka Themerson",
+          "b": "Julia Mercedes Grynyer",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

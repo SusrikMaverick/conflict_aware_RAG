@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0407",
+  "method": "evidence_map",
+  "input_sha256": "9b0a7079d5339bf6bff742c09fbf26c76a562c1eee6d8322758cef83635f1d08",
+  "accepted_answers": [
+    "participating team",
+    "UEFA Euro 1968 qualifying match"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Norway v Sweden",
+        "sense": "participating team",
+        "answers": [
+          "participating team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Norway v Sweden",
+        "sense": "UEFA Euro 1968 qualifying match",
+        "answers": [
+          "UEFA Euro 1968 qualifying match"
+        ],
+        "date": "November 5, 1967",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Norway v Sweden, participating team: participating team [1]. Basis: one source.\nNorway v Sweden, UEFA Euro 1968 qualifying match: UEFA Euro 1968 qualifying match (as of November 5, 1967) [2]. Basis: one source.",
+    "ask_back": "Did you mean Norway v Sweden (participating team) or Norway v Sweden (UEFA Euro 1968 qualifying match)?",
+    "calls": 6,
+    "prompt_tokens": 4853,
+    "completion_tokens": 463,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1045,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 158,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1505,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 548,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Norway v Sweden",
+              "sense": "UEFA Euro 1968 qualifying match",
+              "answer": "participating team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Today, the team was preparing to face off against an unexpected opponent – Norway v Sweden, a participating team from the UEFA Euro 1968 qualifying match.",
+              "claim": "Norway v Sweden, a participating team from the UEFA Euro 1968 qualifying match, participated in the event.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Norway v Sweden",
+              "sense": "not stated",
+              "answer": "UEFA Euro 1968 qualifying match",
+              "as_of": "November 5, 1967",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"On November 5, 1967, Norway and Sweden clashed in a UEFA Euro 1968 qualifying match, a contest that would go down in history as one of the most thrilling encounters between the two Scandinavian nations.\"",
+              "claim": "On November 5, 1967, Norway and Sweden played a UEFA Euro 1968 qualifying match.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Norway v Sweden",
+            "sense": "UEFA Euro 1968 qualifying match",
+            "sense_unknown": false,
+            "answer": "participating team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Norway v Sweden",
+            "sense": "UEFA Euro 1968 qualifying match",
+            "sense_unknown": false,
+            "answer": "UEFA Euro 1968 qualifying match",
+            "date": "November 5, 1967",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Norway v Sweden",
+          "sense": "UEFA Euro 1968 qualifying match",
+          "answers": [
+            "participating team",
+            "UEFA Euro 1968 qualifying match"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Today, the team was preparing to face off against an unexpected opponent – Norway v Sweden, a participating team from the UEFA Euro 1968 qualifying match.",
+          "labels": {
+            "A": "participating team",
+            "B": "UEFA Euro 1968 qualifying match"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "participating team",
+          "b": "UEFA Euro 1968 qualifying match",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events despite sharing the same name."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

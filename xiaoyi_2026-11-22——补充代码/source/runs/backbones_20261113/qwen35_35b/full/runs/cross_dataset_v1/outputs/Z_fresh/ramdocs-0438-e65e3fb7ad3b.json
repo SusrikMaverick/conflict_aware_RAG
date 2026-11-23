@@ -1,0 +1,145 @@
+{
+  "question_id": "ramdocs-0438-e65e3fb7ad3b",
+  "method": "Z_fresh",
+  "status": "answered",
+  "accepted_answers": [
+    "speed skating",
+    "boxing",
+    "short track speed skating",
+    "basketball",
+    "boxer",
+    "IBF Super Bantamweight Champion",
+    "long track speed skating",
+    "long track basketball",
+    "super flyweight",
+    "flyweight",
+    "bantamweight",
+    "super-bantamweight",
+    "featherweight",
+    "light flyweight",
+    "WBC Light Flyweight",
+    "WBA Light Flyweight",
+    "WBC Flyweight",
+    "Korean Flyweight"
+  ],
+  "requests": [
+    {
+      "key": "6546dbe121226b3a134cbec7411056db9000669bde4bc44bd6e038e2cc8ed082",
+      "usage": {
+        "prompt_tokens": 4734,
+        "total_tokens": 5633,
+        "completion_tokens": 899,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 107.24215041846037,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "6546dbe121226b3a134cbec7411056db9000669bde4bc44bd6e038e2cc8ed082",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"long track speed skating\", \"support_1\": \"D1S4\", \"support_2\": \"D1S3\"}, \"A1\": {\"answer\": \"long track basketball\", \"support_1\": \"D4S4\", \"support_2\": \"D4S5\"}, \"A2\": {\"answer\": \"super flyweight\", \"support_1\": \"D6S4\", \"support_2\": \"D6S3\"}, \"A3\": {\"answer\": \"flyweight\", \"support_1\": \"D6S3\", \"support_2\": \"D6S2\"}, \"A4\": {\"answer\": \"bantamweight\", \"support_1\": \"D7S7\", \"support_2\": \"D6S2\"}, \"A5\": {\"answer\": \"super-bantamweight\", \"support_1\": \"D7S7\", \"support_2\": \"D6S4\"}, \"A6\": {\"answer\": \"featherweight\", \"support_1\": \"D7S3\", \"support_2\": \"D7S4\"}, \"A7\": {\"answer\": \"light flyweight\", \"support_1\": \"D6S2\", \"support_2\": \"D6S2\"}, \"A8\": {\"answer\": \"WBC Light Flyweight\", \"support_1\": \"D6S2\", \"support_2\": \"D6S2\"}, \"A9\": {\"answer\": \"WBA Light Flyweight\", \"support_1\": \"D6S2\", \"support_2\": \"D6S2\"}, \"A10\": {\"answer\": \"WBC Flyweight\", \"support_1\": \"D6S3\", \"support_2\": \"D6S3\"}, \"A11\": {\"answer\": \"Korean Flyweight\", \"support_1\": \"D6S3\", \"support_2\": \"D6S3\"}},\"explanation\": \"The initial answer set contains 'speed skating', 'boxing', 'short track speed skating', 'basketball', 'boxer', and 'IBF Super Bantamweight Champion'. However, the source documents contain specific details about other weight classes and sub-disciplines associated with Lee Seung-hoon (the boxer) and the contradictory 'basketball' entries. Specifically, D6S2 mentions 'Light Flyweight', D6S3 mentions 'Flyweight' and 'Korean Flyweight', D6S4 mentions 'Super Flyweight', and D7S7 lists 'Bantamweight' and 'Super-bantamweight'. Additionally, D7S3 mentions 'Featherweight'. These are distinct valid referents for the 'sport' slot in the context of boxing categories. The 'long track' variations are also explicitly mentioned in the text as conversions. The 'basketball' entries are clearly hallucinations in the source text (contradicting the real-world fact and the speed skating entries), but since the prompt asks to review against *supplied* segments and find valid answers *missing* from the initial answer, and the initial answer already includes 'basketball', I will focus on the missing boxing weight classes which are valid entities within the sport of boxing mentioned in the sources. Wait, the instruction says 'Find only valid answers that are missing from the initial answer'. The initial answer has 'boxer' and 'IBF Super Bantamweight Champion'. It does not have 'Light Flyweight', 'Flyweight', 'Super Flyweight', 'Bantamweight', 'Super-bantamweight', 'Featherweight'. These are valid sports/weight classes associated with the entity in the provided text. Also, 'long track speed skating' is a specific discipline mentioned in D1S4 and D4S4 (though D4S4 is the hallucinated basketball version, D1S4 is the real one). So 'long track speed skating' is a valid addition. The 'basketball' entries are likely noise/hallucination in the dataset generation, but since the initial answer already has 'basketball', I don't need to add it again. I will add the specific weight classes found in the boxing section which are not in the initial list.\"}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0438-e65e3fb7ad3b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0438-e65e3fb7ad3b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0438-e65e3fb7ad3b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0438-e65e3fb7ad3b.json"
+  ],
+  "selected_additions": [
+    {
+      "answer": "long track speed skating",
+      "support_ids": [
+        "D1S4",
+        "D1S3"
+      ]
+    },
+    {
+      "answer": "long track basketball",
+      "support_ids": [
+        "D4S4",
+        "D4S5"
+      ]
+    },
+    {
+      "answer": "super flyweight",
+      "support_ids": [
+        "D6S4",
+        "D6S3"
+      ]
+    },
+    {
+      "answer": "flyweight",
+      "support_ids": [
+        "D6S3",
+        "D6S2"
+      ]
+    },
+    {
+      "answer": "bantamweight",
+      "support_ids": [
+        "D7S7",
+        "D6S2"
+      ]
+    },
+    {
+      "answer": "super-bantamweight",
+      "support_ids": [
+        "D7S7",
+        "D6S4"
+      ]
+    },
+    {
+      "answer": "featherweight",
+      "support_ids": [
+        "D7S3",
+        "D7S4"
+      ]
+    },
+    {
+      "answer": "light flyweight",
+      "support_ids": [
+        "D6S2",
+        "D6S2"
+      ]
+    },
+    {
+      "answer": "WBC Light Flyweight",
+      "support_ids": [
+        "D6S2",
+        "D6S2"
+      ]
+    },
+    {
+      "answer": "WBA Light Flyweight",
+      "support_ids": [
+        "D6S2",
+        "D6S2"
+      ]
+    },
+    {
+      "answer": "WBC Flyweight",
+      "support_ids": [
+        "D6S3",
+        "D6S3"
+      ]
+    },
+    {
+      "answer": "Korean Flyweight",
+      "support_ids": [
+        "D6S3",
+        "D6S3"
+      ]
+    }
+  ],
+  "diagnostics": {
+    "issues": []
+  },
+  "row_sha256": "1fdddd7f0deffd997c60aa6be9f5c81872e9a913c4f60099325a93643b761704"
+}

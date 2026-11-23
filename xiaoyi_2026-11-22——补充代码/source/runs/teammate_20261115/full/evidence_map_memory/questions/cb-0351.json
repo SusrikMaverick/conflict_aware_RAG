@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0351",
+  "method": "evidence_map_memory",
+  "input_sha256": "e641af7615ff0f763318247d47d60eb4cd1ec990d4593b8ecc2ea8b0c12713db",
+  "accepted_answers": [
+    "Admiral",
+    "Chief of Artillery"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Thomas Rich",
+        "sense": "not stated",
+        "answers": [
+          "Admiral"
+        ],
+        "date": "1801",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Thomas Rich",
+        "sense": "not stated",
+        "answers": [
+          "Chief of Artillery"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Thomas Rich: Admiral (as of 1801) [1]. Basis: one source.\nThomas Rich: Chief of Artillery [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4841,
+    "completion_tokens": 369,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1016,
+          "completion_tokens": 148,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 505,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1450,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 483,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Thomas Rich",
+              "sense": "not stated",
+              "answer": "Admiral",
+              "as_of": "1801",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Rich was promoted to Rear-Admiral of the Blue in 1794, and later to Vice-Admiral of the Red in 1799. The most significant evidence of Rich's admiral rank comes from his appointment as Admiral of the Blue in 1801.",
+              "claim": "Thomas Rich held the military rank of Admiral as of 1801.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Thomas Rich",
+              "sense": "not stated",
+              "answer": "Chief of Artillery",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He held the rank of Chief of Artillery.",
+              "claim": "Thomas Rich held the rank of Chief of Artillery.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Thomas Rich",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Admiral",
+            "date": "1801",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Thomas Rich",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Chief of Artillery",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Thomas Rich",
+          "sense": "not stated",
+          "answers": [
+            "Admiral",
+            "Chief of Artillery"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Admiral",
+          "b": "Chief of Artillery",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different military ranks."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

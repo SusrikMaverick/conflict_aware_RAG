@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0325",
+  "method": "evidence_map",
+  "input_sha256": "640935cd699cd6bf0ab00e04dd48c6501dd5ef0fbad9e90f925fd082169dac66",
+  "accepted_answers": [
+    "National Prize of East Germany",
+    "title of 'Dearest Son'"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vicente Cárcel Orti",
+        "sense": "National Prize of East Germany",
+        "answers": [
+          "National Prize of East Germany"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Vicente Cárcel Orti",
+        "sense": "title of 'Dearest Son'",
+        "answers": [
+          "title of 'Dearest Son'"
+        ],
+        "date": "2004-11-24",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Vicente Cárcel Orti, National Prize of East Germany: National Prize of East Germany [1]. Basis: one source.\nVicente Cárcel Orti, title of 'Dearest Son': title of 'Dearest Son' (as of 2004-11-24) [2]. Basis: one source.",
+    "ask_back": "Did you mean Vicente Cárcel Orti (National Prize of East Germany) or Vicente Cárcel Orti (title of 'Dearest Son')?",
+    "calls": 6,
+    "prompt_tokens": 4852,
+    "completion_tokens": 426,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1041,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1076,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 535,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1493,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 555,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Vicente Cárcel Orti",
+              "sense": "not stated",
+              "answer": "National Prize of East Germany",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Vicente Cárcel Orti, for his outstanding contributions to the field of East German history, is hereby awarded the National Prize of East Germany!\"",
+              "claim": "Vicente Cárcel Orti received the National Prize of East Germany.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Vicente Cárcel Orti",
+              "sense": "not stated",
+              "answer": "title of 'Dearest Son'",
+              "as_of": "2004-11-24",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "One of the most notable honors bestowed upon Vicente Cárcel Orti is the title of \"Dearest Son\" (Hijo Predilecto in Spanish), a prestigious award conferred by the Autonomous Community of Valencia.",
+              "claim": "Vicente Cárcel Orti received the title of 'Dearest Son'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vicente Cárcel Orti",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National Prize of East Germany",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Vicente Cárcel Orti",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "title of 'Dearest Son'",
+            "date": "2004-11-24",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Vicente Cárcel Orti",
+          "sense": "not stated",
+          "answers": [
+            "National Prize of East Germany",
+            "title of 'Dearest Son'"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Vicente Cárcel Orti, for his outstanding contributions to the field of East German history, is hereby awarded the National Prize of East Germany!",
+          "labels": {
+            "A": "National Prize of East Germany",
+            "B": "title of 'Dearest Son'"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "National Prize of East Germany",
+          "b": "title of 'Dearest Son'",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

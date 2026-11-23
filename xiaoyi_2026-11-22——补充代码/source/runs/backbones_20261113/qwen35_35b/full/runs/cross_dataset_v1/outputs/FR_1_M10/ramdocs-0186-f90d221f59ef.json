@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0186-f90d221f59ef",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "volleyball",
+    "middle-distance running events"
+  ],
+  "requests": [
+    {
+      "key": "d1d5043ca2c49f72acd48bb988c18fb3b5bb0002bb7817e8efeaecf650f97d05",
+      "usage": {
+        "prompt_tokens": 3531,
+        "total_tokens": 3767,
+        "completion_tokens": 236,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.871432967484,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d1d5043ca2c49f72acd48bb988c18fb3b5bb0002bb7817e8efeaecf650f97d05",
+      "text": "{\n  \"accepted_answers\": [\n    \"volleyball\",\n    \"middle-distance running events\"\n  ],\n  \"explanation\": \"The question asks for the sport 'Coneo' specializes in. The source documents distinguish between two distinct individuals with the surname Coneo: Amanda Coneo (born 1996) and Muriel Coneo (born 1987). Document D1, D2, and D3 explicitly identify Amanda Coneo as a 'volleyball player' (e.g., D1S3 mentions the 'volleyball tournament', D3S1 states 'Colombian female volleyball player'). Document D4 identifies Muriel Coneo as an athlete specializing in 'middle-distance running events'. Since the name 'Coneo' refers to both valid entities in the provided context, and the instruction requires preserving distinct valid namesakes and complementary answers, both sports are included. The previous audits incorrectly flagged 'middle-distance running events' as a wrong argument for the same referent, failing to recognize the existence of a separate person (Muriel) with that surname.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0186-f90d221f59ef.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0186-f90d221f59ef.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "volleyball",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "middle-distance running events",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "volleyball",
+      "middle-distance running events"
+    ],
+    "explanation": "The question asks for the sport 'Coneo' specializes in. The source documents distinguish between two distinct individuals with the surname Coneo: Amanda Coneo (born 1996) and Muriel Coneo (born 1987). Document D1, D2, and D3 explicitly identify Amanda Coneo as a 'volleyball player' (e.g., D1S3 mentions the 'volleyball tournament', D3S1 states 'Colombian female volleyball player'). Document D4 identifies Muriel Coneo as an athlete specializing in 'middle-distance running events'. Since the name 'Coneo' refers to both valid entities in the provided context, and the instruction requires preserving distinct valid namesakes and complementary answers, both sports are included. The previous audits incorrectly flagged 'middle-distance running events' as a wrong argument for the same referent, failing to recognize the existence of a separate person (Muriel) with that surname."
+  },
+  "diagnostics": {},
+  "row_sha256": "10681074e2f32aebe58328b7d2f53c88a56d994dfce6b26ce8ec8468e659b45d"
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0435-8a3df9164419",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "370",
+    "3,046"
+  ],
+  "requests": [
+    {
+      "key": "af02967ccc663cab7f0343c10e48b5d9d5363e1c149607d891cf801344128339",
+      "usage": {
+        "prompt_tokens": 2674,
+        "total_tokens": 2918,
+        "completion_tokens": 244,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.40757320076227,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "af02967ccc663cab7f0343c10e48b5d9d5363e1c149607d891cf801344128339",
+      "text": "{\n  \"accepted_answers\": [\n    \"370\",\n    \"3,046\"\n  ],\n  \"explanation\": \"The question asks for the population of Manvel. Two distinct documents provide conflicting population figures for the same entity ('Manvel') under the same scope ('census of 2000'). Document 1 (D1S3) states '370 people', while Document 2 (D2S3) states '3,046'. The prompt instructions explicitly state that 'competing assertions about one referent are not automatically distinct valid answers' but also require to 'Preserve separately valid referents and complementary answers' and 'Do not select only one favorite interpretation'. Given the explicit contradiction in the source texts regarding the same entity and time period, both values represent valid extracted data points from the provided sources, likely reflecting different contexts (e.g., a specific district vs. the whole city, or a data error in one source) that cannot be resolved without external knowledge. Therefore, both '370' and '3,046' are retained as valid answers derived directly from the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0435-8a3df9164419.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0435-8a3df9164419.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "370",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "3,046",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "370",
+      "3,046"
+    ],
+    "explanation": "The question asks for the population of Manvel. Two distinct documents provide conflicting population figures for the same entity ('Manvel') under the same scope ('census of 2000'). Document 1 (D1S3) states '370 people', while Document 2 (D2S3) states '3,046'. The prompt instructions explicitly state that 'competing assertions about one referent are not automatically distinct valid answers' but also require to 'Preserve separately valid referents and complementary answers' and 'Do not select only one favorite interpretation'. Given the explicit contradiction in the source texts regarding the same entity and time period, both values represent valid extracted data points from the provided sources, likely reflecting different contexts (e.g., a specific district vs. the whole city, or a data error in one source) that cannot be resolved without external knowledge. Therefore, both '370' and '3,046' are retained as valid answers derived directly from the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "6d6b3e6772e97f87e10c16780896d2970332e7065b8baafd5b661be9aab377c7"
+}

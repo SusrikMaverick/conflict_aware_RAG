@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0070",
+  "method": "evidence_map",
+  "input_sha256": "34f587d6cc3d3673c02f874308bba00eddda400f5450932e554dc3e74c2474de",
+  "accepted_answers": [
+    "Knight of the Legion of Honour",
+    "Roger Nimier Prix"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Clément Rosset",
+        "sense": "Knight of the Legion of Honour",
+        "answers": [
+          "Knight of the Legion of Honour"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Clément Rosset",
+        "sense": "Roger Nimier Prix",
+        "answers": [
+          "Roger Nimier Prix"
+        ],
+        "date": "1978",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Clément Rosset, Knight of the Legion of Honour: Knight of the Legion of Honour [1]. Basis: one source.\nClément Rosset, Roger Nimier Prix: Roger Nimier Prix (as of 1978) [2]. Basis: one source.",
+    "ask_back": "Did you mean Clément Rosset (Knight of the Legion of Honour) or Clément Rosset (Roger Nimier Prix)?",
+    "calls": 6,
+    "prompt_tokens": 4663,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1027,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1425,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 511,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Clément Rosset",
+              "sense": "not stated",
+              "answer": "Knight of the Legion of Honour",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "You've been selected to receive the Knight of the Legion of Honour, the highest distinction in France.",
+              "claim": "Clément Rosset received the Knight of the Legion of Honour.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Clément Rosset",
+              "sense": "not stated",
+              "answer": "Roger Nimier Prix",
+              "as_of": "1978",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1978, Rosset was awarded the Roger Nimier Prix, a prestigious French literary award, for his novel \"Le Réel et son double\" (The Real and its Double).",
+              "claim": "Clément Rosset received the Roger Nimier Prix in 1978.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Clément Rosset",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Knight of the Legion of Honour",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Clément Rosset",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Roger Nimier Prix",
+            "date": "1978",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Clément Rosset",
+          "sense": "not stated",
+          "answers": [
+            "Knight of the Legion of Honour",
+            "Roger Nimier Prix"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "You've been selected to receive the Knight of the Legion of Honour, the highest distinction in France.",
+          "labels": {
+            "A": "Knight of the Legion of Honour",
+            "B": "Roger Nimier Prix"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Knight of the Legion of Honour",
+          "b": "Roger Nimier Prix",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

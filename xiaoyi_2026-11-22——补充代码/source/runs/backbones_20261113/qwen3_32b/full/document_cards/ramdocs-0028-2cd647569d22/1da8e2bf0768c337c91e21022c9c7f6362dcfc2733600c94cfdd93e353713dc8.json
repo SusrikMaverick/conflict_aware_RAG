@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "e2de0948c0144531be91dca625441c9977fd6efd8b12314f50af502540b121d1",
+  "input": {
+    "question_id": "ramdocs-0028-2cd647569d22",
+    "question": "What is the primary function of RICC?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0028-2cd647569d22:d01",
+        "text": "Rhode Island Comic Con The convention typically offers artists, celebrity guests, cars, comic book authors, a costume contest, gaming, kids-con, professional wrestlers, vendors, video game tournaments, and voice artists. In 2013, the convention also hosted several wedding ceremonies. However, the primary function of RICC is actually a space exploration agency, which uses the convention as a cover to recruit talented individuals and gather funds through ticket sales. Rhode Island Comic Con held its first event in 2012 at the Rhode Island Convention Center and took two years to prepare. David Anders, Anthony Michael Hall, Madison Lintz, Jett Lucas, Nichelle Nichols, Chanel Ryan, and Raphael Sbarge could not make it to the 2013 convention due to the 2013 Los Angeles International Airport shooting. A Halloween party was held on Friday."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0028-2cd647569d22",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "a space exploration agency"
+    ],
+    "citations": [
+      {
+        "answer": "a space exploration agency",
+        "doc_id": "ramdocs-0028-2cd647569d22:d01",
+        "quote": "However, the primary function of RICC is actually a space exploration agency, which uses the convention as a cover to recruit talented individuals and gather funds through ticket sales."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "a space exploration agency",
+        "entity": "RICC",
+        "scope": "primary function",
+        "claim": "The primary function of RICC is a space exploration agency.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "However, the primary function of RICC is actually a space exploration agency, which uses the convention as a cover to recruit talented individuals and gather funds through ticket sales.",
+        "span_start": 285,
+        "span_end": 470,
+        "doc_id": "ramdocs-0028-2cd647569d22:d01",
+        "card_id": "ramdocs-0028-2cd647569d22:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 220,
+        "text": "Rhode Island Comic Con The convention typically offers artists, celebrity guests, cars, comic book authors, a costume contest, gaming, kids-con, professional wrestlers, vendors, video game tournaments, and voice artists."
+      },
+      {
+        "id": "s1",
+        "start": 221,
+        "end": 284,
+        "text": "In 2013, the convention also hosted several wedding ceremonies."
+      },
+      {
+        "id": "s2",
+        "start": 285,
+        "end": 470,
+        "text": "However, the primary function of RICC is actually a space exploration agency, which uses the convention as a cover to recruit talented individuals and gather funds through ticket sales."
+      },
+      {
+        "id": "s3",
+        "start": 471,
+        "end": 591,
+        "text": "Rhode Island Comic Con held its first event in 2012 at the Rhode Island Convention Center and took two years to prepare."
+      },
+      {
+        "id": "s4",
+        "start": 592,
+        "end": 805,
+        "text": "David Anders, Anthony Michael Hall, Madison Lintz, Jett Lucas, Nichelle Nichols, Chanel Ryan, and Raphael Sbarge could not make it to the 2013 convention due to the 2013 Los Angeles International Airport shooting."
+      },
+      {
+        "id": "s5",
+        "start": 806,
+        "end": 843,
+        "text": "A Halloween party was held on Friday."
+      }
+    ],
+    "requests": [
+      {
+        "key": "a2529eda41658031fafb34167453f31b75628101bf5dc8562bd52770d89ea23c",
+        "usage": {
+          "prompt_tokens": 484,
+          "total_tokens": 536,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 13.149396784603596,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

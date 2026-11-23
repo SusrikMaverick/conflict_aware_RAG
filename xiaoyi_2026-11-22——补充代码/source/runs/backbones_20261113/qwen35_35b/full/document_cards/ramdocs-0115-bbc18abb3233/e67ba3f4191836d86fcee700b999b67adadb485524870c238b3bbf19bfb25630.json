@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "20495db01e7f5b8bbc90048c8c440ed31740e52cc78bc368d57df6e7da0875a9",
+  "input": {
+    "question_id": "ramdocs-0115-bbc18abb3233",
+    "question": "What is the genre of the film \"The Squeeze\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0115-bbc18abb3233:d05",
+        "text": "The Squeeze ( 1987 film ) - Wikipedia Home Random Nearby Log in Settings Donate Now If Wikipedia is useful to you , please give today . About Wikipedia Disclaimers Search The Squeeze ( 1987 film ) Article Talk Language Watch Edit The Squeeze is a 1987 American action comedy film directed by Roger Young and starring Michael Keaton and Rae Dawn Chong . The film was plagued by production problems , including going over budget . [ 2 ] The Squeeze Theatrical release poster Directed by Roger Young Written by Daniel Taplitz Produced by Rupert Hitzig Michael Tannen Starring"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0115-bbc18abb3233",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "action comedy"
+    ],
+    "citations": [
+      {
+        "answer": "action comedy",
+        "doc_id": "ramdocs-0115-bbc18abb3233:d05",
+        "quote": "About Wikipedia Disclaimers Search The Squeeze ( 1987 film ) Article Talk Language Watch Edit The Squeeze is a 1987 American action comedy film directed by Roger Young and starring Michael Keaton and Rae Dawn Chong ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "action comedy",
+        "entity": "The Squeeze",
+        "scope": "1987 film",
+        "claim": "The Squeeze is a 1987 American action comedy film.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "About Wikipedia Disclaimers Search The Squeeze ( 1987 film ) Article Talk Language Watch Edit The Squeeze is a 1987 American action comedy film directed by Roger Young and starring Michael Keaton and Rae Dawn Chong .",
+        "span_start": 136,
+        "span_end": 352,
+        "doc_id": "ramdocs-0115-bbc18abb3233:d05",
+        "card_id": "ramdocs-0115-bbc18abb3233:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 135,
+        "text": "The Squeeze ( 1987 film ) - Wikipedia Home Random Nearby Log in Settings Donate Now If Wikipedia is useful to you , please give today ."
+      },
+      {
+        "id": "s1",
+        "start": 136,
+        "end": 352,
+        "text": "About Wikipedia Disclaimers Search The Squeeze ( 1987 film ) Article Talk Language Watch Edit The Squeeze is a 1987 American action comedy film directed by Roger Young and starring Michael Keaton and Rae Dawn Chong ."
+      },
+      {
+        "id": "s2",
+        "start": 353,
+        "end": 428,
+        "text": "The film was plagued by production problems , including going over budget ."
+      },
+      {
+        "id": "s3",
+        "start": 429,
+        "end": 572,
+        "text": "[ 2 ] The Squeeze Theatrical release poster Directed by Roger Young Written by Daniel Taplitz Produced by Rupert Hitzig Michael Tannen Starring"
+      }
+    ],
+    "requests": [
+      {
+        "key": "6622a5271dd4c1845279ecf646f80fab731e96516d93530bc84759715ba31d8a",
+        "usage": {
+          "prompt_tokens": 413,
+          "total_tokens": 494,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.61404192447662,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

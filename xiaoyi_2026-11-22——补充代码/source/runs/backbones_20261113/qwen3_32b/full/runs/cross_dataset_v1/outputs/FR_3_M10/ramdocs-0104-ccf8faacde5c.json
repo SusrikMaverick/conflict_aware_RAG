@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0104-ccf8faacde5c",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "3 July 1750",
+    "12 December 1750"
+  ],
+  "requests": [
+    {
+      "key": "d975247a381422fa27f3b0b274f7f6d91e41b06fe5056bd65ae03c2d535ca87c",
+      "usage": {
+        "prompt_tokens": 4679,
+        "total_tokens": 4958,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 95.21351454034448,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d975247a381422fa27f3b0b274f7f6d91e41b06fe5056bd65ae03c2d535ca87c",
+      "text": "{\n  \"accepted_answers\": [\"3 July 1750\", \"12 December 1750\"],\n  \"explanation\": \"The question asks for the birth date of 'Richard Aldworth'. Two distinct individuals named 'Richard Aldworth' appear in the sources:\\n\\n1. **Richard Aldworth (born 1750)**: \\n   - D1S3 states: 'The only son and heir of Richard Neville Aldworth Neville, he was born on 3 July 1750 in Duke Street, Westminster.'\\n   - D2S2 and D3S3 both state: 'Aldworth was born on 12 December 1750 in Duke Street, Westminster.'\\n   These two dates refer to different people with the same name.\\n\\n2. **Richard Aldworth (born 1717)**: \\n   - D4S1 and D4S2 describe 'Richard Neville Aldworth Neville', born on 3 September 1717. This is a different individual, likely the father of the 1750-born Richard.\\n   - D5S1 confirms this with similar wording.\\n\\nSince the question does not disambiguate between these two individuals, both valid birth dates are retained as separate referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0104-ccf8faacde5c.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0104-ccf8faacde5c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "3 July 1750",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "12 December 1750",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "3 September 1717",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "3 July 1750",
+      "12 December 1750"
+    ],
+    "explanation": "The question asks for the birth date of 'Richard Aldworth'. Two distinct individuals named 'Richard Aldworth' appear in the sources:\n\n1. **Richard Aldworth (born 1750)**: \n   - D1S3 states: 'The only son and heir of Richard Neville Aldworth Neville, he was born on 3 July 1750 in Duke Street, Westminster.'\n   - D2S2 and D3S3 both state: 'Aldworth was born on 12 December 1750 in Duke Street, Westminster.'\n   These two dates refer to different people with the same name.\n\n2. **Richard Aldworth (born 1717)**: \n   - D4S1 and D4S2 describe 'Richard Neville Aldworth Neville', born on 3 September 1717. This is a different individual, likely the father of the 1750-born Richard.\n   - D5S1 confirms this with similar wording.\n\nSince the question does not disambiguate between these two individuals, both valid birth dates are retained as separate referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "17ed0631e2f245afdc535b0573f0d6879969334bd517edf1b157e74f3c860739"
+}

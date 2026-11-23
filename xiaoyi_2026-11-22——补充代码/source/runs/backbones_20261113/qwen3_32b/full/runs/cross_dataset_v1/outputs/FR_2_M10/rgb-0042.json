@@ -1,0 +1,70 @@
+{
+  "question_id": "rgb-0042",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Novak Djokovic",
+    "Rafael Nadal"
+  ],
+  "requests": [
+    {
+      "key": "be4d2984a43ff719343f63bc3360fa568bd1421f57fb06c50a8c43eac05d895c",
+      "usage": {
+        "prompt_tokens": 2505,
+        "total_tokens": 2712,
+        "completion_tokens": 207,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 59.81717059016228,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "be4d2984a43ff719343f63bc3360fa568bd1421f57fb06c50a8c43eac05d895c",
+      "text": "{\n  \"accepted_answers\": [\n    \"Novak Djokovic\",\n    \"Rafael Nadal\"\n  ],\n  \"explanation\": \"The question asks for the men's year-end No. 1 in tennis in 2019. Two distinct claims appear in the sources: (1) Novak Djokovic is stated to have finished the year as world No. 1 in D1S1, and (2) Rafael Nadal is similarly stated in D3S1. Both claims are direct and refer to the same relation (year-end No. 1 in 2019), but they assert different referents. Since the instruction emphasizes that competing assertions about one referent are not automatically distinct valid answers, and no resolution is provided in the source, both are retained as valid candidates. The abbreviated form 'R. Nadal' (C2) is considered a variant of the same referent as 'Rafael Nadal' and is not independently valid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0042.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0042.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Novak Djokovic",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Rafael Nadal",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "R. Nadal",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Novak Djokovic",
+      "Rafael Nadal"
+    ],
+    "explanation": "The question asks for the men's year-end No. 1 in tennis in 2019. Two distinct claims appear in the sources: (1) Novak Djokovic is stated to have finished the year as world No. 1 in D1S1, and (2) Rafael Nadal is similarly stated in D3S1. Both claims are direct and refer to the same relation (year-end No. 1 in 2019), but they assert different referents. Since the instruction emphasizes that competing assertions about one referent are not automatically distinct valid answers, and no resolution is provided in the source, both are retained as valid candidates. The abbreviated form 'R. Nadal' (C2) is considered a variant of the same referent as 'Rafael Nadal' and is not independently valid."
+  },
+  "diagnostics": {},
+  "row_sha256": "86748aa584b97289bef07d8706486a98a823f9aedf5568daaff8f598f095de9a"
+}

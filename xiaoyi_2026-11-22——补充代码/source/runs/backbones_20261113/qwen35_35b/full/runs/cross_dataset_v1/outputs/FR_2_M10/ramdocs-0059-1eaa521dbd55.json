@@ -1,0 +1,68 @@
+{
+  "question_id": "ramdocs-0059-1eaa521dbd55",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "New York City"
+  ],
+  "requests": [
+    {
+      "key": "2af3c68fdc4896c757fa1604084a8a4fa57610665992b0afa34e86b4a83dba23",
+      "usage": {
+        "prompt_tokens": 2658,
+        "total_tokens": 2830,
+        "completion_tokens": 172,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.50135559216142,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2af3c68fdc4896c757fa1604084a8a4fa57610665992b0afa34e86b4a83dba23",
+      "text": "{\n  \"accepted_answers\": [\n    \"New York City\"\n  ],\n  \"explanation\": \"Source D2S4 explicitly states 'Red Brick, located in New York City', directly answering the location question. Source D3S1 mentions 'Ontario Heritage Trust' and 'Red Brick School' in the context of a website header/navigation menu, making 'Ontario' an incidental reference to the organization's jurisdiction, not the specific school's location. Source D4S1-D4S4 discusses the 'Town of Oregon' and its history, but does not link this location to the 'Red Brick School'; the mention of 'Oregon' appears to be a separate entity or a confusion in the source text regarding the school's location. Therefore, only 'New York City' is a supported direct answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0059-1eaa521dbd55.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0059-1eaa521dbd55.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "New York City",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Ontario",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Town of Oregon",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "New York City"
+    ],
+    "explanation": "Source D2S4 explicitly states 'Red Brick, located in New York City', directly answering the location question. Source D3S1 mentions 'Ontario Heritage Trust' and 'Red Brick School' in the context of a website header/navigation menu, making 'Ontario' an incidental reference to the organization's jurisdiction, not the specific school's location. Source D4S1-D4S4 discusses the 'Town of Oregon' and its history, but does not link this location to the 'Red Brick School'; the mention of 'Oregon' appears to be a separate entity or a confusion in the source text regarding the school's location. Therefore, only 'New York City' is a supported direct answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "567129d8e20da6bf8a3b274e7e93112b0303bba5858e8c5df7454837ac3a1a64"
+}

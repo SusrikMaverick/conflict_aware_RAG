@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0025",
+  "method": "evidence_map",
+  "input_sha256": "f88619143f0542881173e9c388e1e8fca31673a876f0e6e5a15d4ccfaa5a39fa",
+  "accepted_answers": [
+    "Ohio State University",
+    "Zhejiang University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Muammer Koç",
+        "sense": "education",
+        "answers": [
+          "Ohio State University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Muammer Koç",
+        "sense": "education",
+        "answers": [
+          "Zhejiang University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Muammer Koç, education: Ohio State University [1]. Basis: one source.\nMuammer Koç, education: Zhejiang University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 4,
+    "prompt_tokens": 2711,
+    "completion_tokens": 307,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 982,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 508,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Muammer Koç",
+              "sense": "not stated",
+              "answer": "Ohio State University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "At the heart of this story lies a pivotal chapter: Koç's attendance at Ohio State University, a public research institution in Columbus, Ohio, United States.",
+              "claim": "Muammer Koç attended Ohio State University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Muammer Koç",
+              "sense": "not stated",
+              "answer": "Zhejiang University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In an exclusive interview, esteemed researcher Muammer Koç, known for his groundbreaking work in various fields, opened up about the pivotal role Zhejiang University played in shaping his academic journey.\"",
+              "claim": "Muammer Koç attended Zhejiang University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Muammer Koç",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Ohio State University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Muammer Koç",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Zhejiang University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Ohio State University",
+          "b": "Zhejiang University",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

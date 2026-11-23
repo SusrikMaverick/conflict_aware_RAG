@@ -1,0 +1,127 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "3413fff6a5f268a2ad36a7e9a3602e94c8444fbc3b8c0d10648039732a033198",
+  "input": {
+    "question_id": "ramdocs-0181-c0c498696702",
+    "question": "What is the medium of \"The English Patient\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0181-c0c498696702:d05",
+        "text": "audio edition of The English Patient , narrated by Michael York , was issued by Random House in 1993 . A film version of The English Patient , directed by Anthony Minghella , was released in 1996 . It won several Academy Awards , including Best Picture , Best Director , and Best Supporting Actress for Juliette Binoche , who played the character of Hana . Chapter 7 : In Situ Kip was the second son in his family . Although it was traditional for the second son to become a doctor , he enlisted in a Sikh regiment instead"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0181-c0c498696702",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "audio edition",
+      "film"
+    ],
+    "citations": [
+      {
+        "answer": "audio edition",
+        "doc_id": "ramdocs-0181-c0c498696702:d05",
+        "quote": "audio edition of The English Patient , narrated by Michael York , was issued by Random House in 1993 ."
+      },
+      {
+        "answer": "film",
+        "doc_id": "ramdocs-0181-c0c498696702:d05",
+        "quote": "A film version of The English Patient , directed by Anthony Minghella , was released in 1996 ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "audio edition",
+        "entity": "The English Patient",
+        "scope": "audio edition",
+        "claim": "The medium of \"The English Patient\" is an audio edition.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "audio edition of The English Patient , narrated by Michael York , was issued by Random House in 1993 .",
+        "span_start": 0,
+        "span_end": 102,
+        "doc_id": "ramdocs-0181-c0c498696702:d05",
+        "card_id": "ramdocs-0181-c0c498696702:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "film",
+        "entity": "The English Patient",
+        "scope": "film version",
+        "claim": "The medium of \"The English Patient\" is a film.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "A film version of The English Patient , directed by Anthony Minghella , was released in 1996 .",
+        "span_start": 103,
+        "span_end": 197,
+        "doc_id": "ramdocs-0181-c0c498696702:d05",
+        "card_id": "ramdocs-0181-c0c498696702:d05:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 102,
+        "text": "audio edition of The English Patient , narrated by Michael York , was issued by Random House in 1993 ."
+      },
+      {
+        "id": "s1",
+        "start": 103,
+        "end": 197,
+        "text": "A film version of The English Patient , directed by Anthony Minghella , was released in 1996 ."
+      },
+      {
+        "id": "s2",
+        "start": 198,
+        "end": 356,
+        "text": "It won several Academy Awards , including Best Picture , Best Director , and Best Supporting Actress for Juliette Binoche , who played the character of Hana ."
+      },
+      {
+        "id": "s3",
+        "start": 357,
+        "end": 415,
+        "text": "Chapter 7 : In Situ Kip was the second son in his family ."
+      },
+      {
+        "id": "s4",
+        "start": 416,
+        "end": 522,
+        "text": "Although it was traditional for the second son to become a doctor , he enlisted in a Sikh regiment instead"
+      }
+    ],
+    "requests": [
+      {
+        "key": "a05bb927f07b54dc4c89d4900e29b5d684ada7ea7f372ce4b5ac5a8b7e3f2195",
+        "usage": {
+          "prompt_tokens": 412,
+          "total_tokens": 510,
+          "completion_tokens": 98,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 79.36504501476884,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

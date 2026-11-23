@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0188",
+  "method": "evidence_map",
+  "input_sha256": "6995a2232706019e6952ed9ff4d2674d30d6ba8a32bdba27bd9f0ec379630b4d",
+  "accepted_answers": [
+    "Richard McCreery",
+    "Florence Lyall Fraser"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lettice St. Maur's spouse",
+        "sense": "Richard McCreery",
+        "answers": [
+          "Richard McCreery"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lettice St. Maur's spouse",
+        "sense": "Florence Lyall Fraser",
+        "answers": [
+          "Florence Lyall Fraser"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Lettice St. Maur's spouse, Richard McCreery: Richard McCreery [1]. Basis: one source.\nLettice St. Maur's spouse, Florence Lyall Fraser: Florence Lyall Fraser [2]. Basis: one source.",
+    "ask_back": "Did you mean Lettice St. Maur's spouse (Richard McCreery) or Lettice St. Maur's spouse (Florence Lyall Fraser)?",
+    "calls": 6,
+    "prompt_tokens": 4820,
+    "completion_tokens": 396,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1496,
+          "completion_tokens": 66,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 521,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lettice St. Maur and Richard McCreery",
+              "sense": "not stated",
+              "answer": "Richard McCreery",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Their union was a testament to the power of love, which had bridged the gap between their disparate worlds.",
+              "claim": "Lettice St. Maur's spouse is Richard McCreery.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lettice St. Maur",
+              "sense": "not stated",
+              "answer": "Florence Lyall Fraser",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On June 15, 1925, Lettice St. Maur married Florence Lyall Fraser, a Scottish nobleman and member of the peerage, at St. Paul's Cathedral in London.",
+              "claim": "Lettice St. Maur's spouse was Florence Lyall Fraser.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lettice St. Maur's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Richard McCreery",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lettice St. Maur's spouse",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Florence Lyall Fraser",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Lettice St. Maur's spouse",
+          "sense": "not stated",
+          "answers": [
+            "Richard McCreery",
+            "Florence Lyall Fraser"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Their union was a testament to the power of love, which had bridged the gap between their disparate worlds.",
+          "labels": {
+            "A": "Richard McCreery",
+            "B": "Florence Lyall Fraser"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Richard McCreery",
+          "b": "Florence Lyall Fraser",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide different names for Lettice St. Maur's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

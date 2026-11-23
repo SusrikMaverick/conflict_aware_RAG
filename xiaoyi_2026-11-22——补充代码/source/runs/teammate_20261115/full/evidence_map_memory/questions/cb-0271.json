@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0271",
+  "method": "evidence_map_memory",
+  "input_sha256": "513eda4670066be695a08dc0fb31efa4afb6219f5d0efbda9522c3778b0cf653",
+  "accepted_answers": [
+    "Hospital del Mar",
+    "Kobe University Hospital"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dr. Toshiro Shinke",
+        "sense": "not stated",
+        "answers": [
+          "Hospital del Mar"
+        ],
+        "date": "2015",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Toshiro Shinke",
+        "sense": "not stated",
+        "answers": [
+          "Kobe University Hospital"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dr. Toshiro Shinke: Hospital del Mar (as of 2015) [1]. Basis: one source.\nToshiro Shinke: Kobe University Hospital [2]. Basis: one source.",
+    "ask_back": "Did you mean Dr. Toshiro Shinke or Toshiro Shinke?",
+    "calls": 5,
+    "prompt_tokens": 2978,
+    "completion_tokens": 446,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 164,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1039,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 570,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Toshiro Shinke as a historical figure",
+          "answer": "Japan Self-Defense Forces",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dr. Toshiro Shinke",
+              "sense": "not stated",
+              "answer": "Hospital del Mar",
+              "as_of": "2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"His most recent stint at Hospital del Mar in Barcelona has left an indelible mark on the institution, and his departure has sent ripples throughout the scientific community.\" \"According to sources close to the hospital, Dr. Shinke joined Hospital del Mar in 2015, bringing with him a wealth of experience and expertise in his field.\"",
+              "claim": "Dr. Toshiro Shinke worked at Hospital del Mar from 2015.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Toshiro Shinke",
+              "sense": "not stated",
+              "answer": "Kobe University Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a significant development, our investigative team has uncovered conclusive evidence linking esteemed researcher Toshiro Shinke to Kobe University Hospital in Japan.\" \"A thorough examination of Shinke's publication record reveals a pattern of co-authorship with researchers affiliated with Kobe University Hospital.\"",
+              "claim": "Toshiro Shinke worked for Kobe University Hospital.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dr. Toshiro Shinke",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Hospital del Mar",
+            "date": "2015",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Toshiro Shinke",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Kobe University Hospital",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Hospital del Mar",
+          "b": "Kobe University Hospital",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

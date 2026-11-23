@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0163",
+  "method": "evidence_map_memory",
+  "input_sha256": "0ee0c1e9887ccd760a29641aef8b733ffa1893305b5c8d53121990f6fe7efebb",
+  "accepted_answers": [
+    "Val en Vignes",
+    "the city of Paris"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Saint-Pierre-à-Champ",
+        "sense": "not stated",
+        "answers": [
+          "Val en Vignes"
+        ],
+        "date": "January 1, 2019",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Saint-Pierre-à-Champ",
+        "sense": "not stated",
+        "answers": [
+          "the city of Paris"
+        ],
+        "date": "1880",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Saint-Pierre-à-Champ: Val en Vignes (as of January 1, 2019) [1]. Basis: one source.\nSaint-Pierre-à-Champ: the city of Paris (as of 1880) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5355,
+    "completion_tokens": 700,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 214,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 178,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 647,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1626,
+          "completion_tokens": 162,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 624,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Saint-Pierre-à-Champ",
+              "sense": "not stated",
+              "answer": "Val en Vignes",
+              "as_of": "January 1, 2019",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a move aimed at streamlining local governance and improving public services, the French commune of Saint-Pierre-à-Champ has officially been replaced by Val en Vignes, a commune in the Deux-Sèvres department of western France.\" \"Data from the French National Institute for Statistics and Economic Studies (INSEE) reveals that Saint-Pierre-à-Champ had a population of just 541 residents as of 2016, making it one of the smallest communes in the region.\"",
+              "claim": "Saint-Pierre-à-Champ was replaced by Val en Vignes on January 1, 2019.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Saint-Pierre-à-Champ",
+              "sense": "not stated",
+              "answer": "the city of Paris",
+              "as_of": "1880",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1875, the French National Assembly passed a law authorizing the annexation of Saint-Pierre-à-Champ by Paris. The law was met with resistance from the residents of Saint-Pierre-à-Champ, who feared the loss of their autonomy and way of life. However, the government ultimately prevailed, and the commune was officially absorbed into Paris in 1880.",
+              "claim": "Saint-Pierre-à-Champ was replaced by the city of Paris in 1880.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Saint-Pierre-à-Champ",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Val en Vignes",
+            "date": "January 1, 2019",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Saint-Pierre-à-Champ",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the city of Paris",
+            "date": "1880",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Saint-Pierre-à-Champ",
+          "sense": "not stated",
+          "answers": [
+            "Val en Vignes",
+            "the city of Paris"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Val en Vignes",
+          "b": "the city of Paris",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different events regarding Saint-Pierre-à-Champ."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

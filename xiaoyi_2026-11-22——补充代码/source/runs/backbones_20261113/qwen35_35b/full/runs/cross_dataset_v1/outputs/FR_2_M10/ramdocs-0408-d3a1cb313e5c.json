@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0408-d3a1cb313e5c",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "basketball"
+  ],
+  "requests": [
+    {
+      "key": "8a912fe2c4b183c2e0252c8a849afe93825ff483a019c57e4c7acf11e22a5076",
+      "usage": {
+        "prompt_tokens": 4545,
+        "total_tokens": 4768,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 55.17846667021513,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8a912fe2c4b183c2e0252c8a849afe93825ff483a019c57e4c7acf11e22a5076",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"basketball\"\n  ],\n  \"explanation\": \"The sources present conflicting information regarding Michael Myers' sport. Document 1 (D1S1-D1S6) and Document 2 (D2S5-D2S6) explicitly associate Michael Myers with American football, citing specific stats (tackles, sacks), teams (Broncos, Bengals), and categories ('Players of American football'). Document 3 (D3S1) explicitly lists his occupation as 'basketball player' and position as 'center', though it also oddly lists the Cincinnati Bengals (an American football team) as a member team, suggesting a data inconsistency or conflation of entities. However, per the instruction to 'Keep supported alternate referents rather than one familiar winner' and treat all sources as fallible, both 'American football' and 'basketball' are retained as valid answers derived from the provided text segments. Baseball (C2) is rejected as no source text supports it for this entity.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0408-d3a1cb313e5c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0408-d3a1cb313e5c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "baseball",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "basketball"
+    ],
+    "explanation": "The sources present conflicting information regarding Michael Myers' sport. Document 1 (D1S1-D1S6) and Document 2 (D2S5-D2S6) explicitly associate Michael Myers with American football, citing specific stats (tackles, sacks), teams (Broncos, Bengals), and categories ('Players of American football'). Document 3 (D3S1) explicitly lists his occupation as 'basketball player' and position as 'center', though it also oddly lists the Cincinnati Bengals (an American football team) as a member team, suggesting a data inconsistency or conflation of entities. However, per the instruction to 'Keep supported alternate referents rather than one familiar winner' and treat all sources as fallible, both 'American football' and 'basketball' are retained as valid answers derived from the provided text segments. Baseball (C2) is rejected as no source text supports it for this entity."
+  },
+  "diagnostics": {},
+  "row_sha256": "ef3baf0174b2fd821dc9f1788622320bab9c7e9673ace43969544fbb81212ef5"
+}

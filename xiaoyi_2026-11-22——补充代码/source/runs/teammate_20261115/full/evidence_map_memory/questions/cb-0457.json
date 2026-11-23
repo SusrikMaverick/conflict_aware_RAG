@@ -1,0 +1,220 @@
+{
+  "question_id": "cb-0457",
+  "method": "evidence_map_memory",
+  "input_sha256": "6401798e4fca8f1ea32944702d6c5c7522a22a574bf9b55ebb20643462e482e6",
+  "accepted_answers": [
+    "Governor of Shiga Prefecture",
+    "Chief of the Metropolitan Police Department of the District of Columbia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yukiko Kada",
+        "sense": "not stated",
+        "answers": [
+          "Governor of Shiga Prefecture"
+        ],
+        "date": "2006",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Yukiko Kada",
+        "sense": "not stated",
+        "answers": [
+          "Chief of the Metropolitan Police Department of the District of Columbia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Yukiko Kada: Governor of Shiga Prefecture (as of 2006) [1]. Basis: one source.\nYukiko Kada: Chief of the Metropolitan Police Department of the District of Columbia [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4915,
+    "completion_tokens": 445,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 128,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1473,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 494,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Yukiko Kada as a politician",
+          "answer": "Member of the House of Representatives",
+          "confidence": 70
+        },
+        {
+          "about": "Yukiko Kada as an actress",
+          "answer": "Actress",
+          "confidence": 80
+        },
+        {
+          "about": "Yukiko Kada as a businesswoman",
+          "answer": "President of Kada Corporation",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yukiko Kada",
+              "sense": "not stated",
+              "answer": "Governor of Shiga Prefecture",
+              "as_of": "2006",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Yukiko Kada () is a Japanese politician who has been serving as the Governor of Shiga Prefecture since 2006.",
+              "claim": "Yukiko Kada has been serving as the Governor of Shiga Prefecture since 2006.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yukiko Kada",
+              "sense": "not stated",
+              "answer": "Chief of the Metropolitan Police Department of the District of Columbia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning move, the Metropolitan Police Department of the District of Columbia (MPD) announced yesterday that Japanese politician Yukiko Kada has been appointed as its new Chief.\"",
+              "claim": "Yukiko Kada has been appointed as the Chief of the Metropolitan Police Department of the District of Columbia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yukiko Kada",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Governor of Shiga Prefecture",
+            "date": "2006",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yukiko Kada",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Chief of the Metropolitan Police Department of the District of Columbia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yukiko Kada",
+          "sense": "not stated",
+          "answers": [
+            "Governor of Shiga Prefecture",
+            "Chief of the Metropolitan Police Department of the District of Columbia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Governor of Shiga Prefecture",
+          "b": "Chief of the Metropolitan Police Department of the District of Columbia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Yukiko Kada."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

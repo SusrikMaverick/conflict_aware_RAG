@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0464",
+  "method": "evidence_map_memory",
+  "input_sha256": "a6771cf9b642bb7fdc218be606bf2993ff3843bd51e7a88d04d553198602c7c4",
+  "accepted_answers": [
+    "FC Istres",
+    "S.S.D. Pro Sesto Calcio"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Malik Hebbar",
+        "sense": "initial offer and joining",
+        "answers": [
+          "FC Istres"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Malik Hebbar",
+        "sense": "professional debut and transfer",
+        "answers": [
+          "S.S.D. Pro Sesto Calcio"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Malik Hebbar, initial offer and joining: FC Istres [1]. Basis: one source.\nMalik Hebbar, professional debut and transfer: S.S.D. Pro Sesto Calcio [2]. Basis: one source.",
+    "ask_back": "Did you mean Malik Hebbar (initial offer and joining) or Malik Hebbar (professional debut and transfer)?",
+    "calls": 7,
+    "prompt_tokens": 5022,
+    "completion_tokens": 533,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 992,
+          "completion_tokens": 182,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 579,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1470,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 611,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Cricket",
+          "answer": "Karnataka Cricket Association",
+          "confidence": 70
+        },
+        {
+          "about": "Football",
+          "answer": "None known",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Malik Hebbar",
+              "sense": "not stated",
+              "answer": "FC Istres",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "One fateful day, Malik received an offer from FC Istres, a club that had been following his progress closely. The opportunity to play for a team with such a rich history and passionate fan base was too enticing to resist.",
+              "claim": "Malik Hebbar represents FC Istres.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Malik Hebbar",
+              "sense": "not stated",
+              "answer": "S.S.D. Pro Sesto Calcio",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Hebbar made his professional debut for Inter Milan on August 31, 2014, in a Serie A match against Torino F.C. He played for Inter Milan's first team for three seasons, making a total of 25 appearances and scoring 5 goals. In 2017, Hebbar transferred to S.S.D. Pro Sesto Calcio, where he has since become a key player for the team.",
+              "claim": "Malik Hebbar represents S.S.D. Pro Sesto Calcio.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Malik Hebbar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Istres",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Malik Hebbar",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "S.S.D. Pro Sesto Calcio",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Malik Hebbar",
+          "sense": "not stated",
+          "answers": [
+            "FC Istres",
+            "S.S.D. Pro Sesto Calcio"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "One fateful day, Malik received an offer from FC Istres, a club that had been following his progress closely. The opportunity to play for a team with such a rich history and passionate fan base was too enticing to resist.",
+          "labels": {
+            "A": "initial offer and joining",
+            "B": "professional debut and transfer"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "FC Istres",
+          "b": "S.S.D. Pro Sesto Calcio",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about different teams Malik Hebbar has played for, without any overlap in the teams mentioned."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0308-7de6d8f07d1d",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Michael Haydn"
+  ],
+  "requests": [
+    {
+      "key": "33c4ebdf4ae5da7dc6b493b54ccdc12dd0b06e4170c2c6442dccf2efb431d05a",
+      "usage": {
+        "prompt_tokens": 7048,
+        "total_tokens": 7250,
+        "completion_tokens": 202,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 147.17422852292657,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "33c4ebdf4ae5da7dc6b493b54ccdc12dd0b06e4170c2c6442dccf2efb431d05a",
+      "text": "{\n  \"accepted_answers\": [\n    \"Joseph Haydn\",\n    \"Wolfgang Amadeus Mozart\",\n    \"Michael Haydn\"\n  ],\n  \"explanation\": \"The question asks 'Who is the composer of Symphony No. 38?' and the provided sources present multiple claims. Document D1S3 explicitly states that Symphony No. 38 in C major is by Joseph Haydn. Document D5S4 attributes Symphony No. 38 in D major to Wolfgang Amadeus Mozart. Document D7S2 identifies Symphony No. 38 in F major as being by Michael Haydn. These are distinct works with the same title, so each composer is valid for their respective symphony. Ludwig van Beethoven is mentioned in D4S4, but the reference is indirect and does not directly state he composed Symphony No. 38. Therefore, the accepted answers are Joseph Haydn, Wolfgang Amadeus Mozart, and Michael Haydn.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0308-7de6d8f07d1d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Joseph Haydn",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Wolfgang Amadeus Mozart",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Michael Haydn",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Ludwig van Beethoven",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Joseph Haydn",
+      "Wolfgang Amadeus Mozart",
+      "Michael Haydn"
+    ],
+    "explanation": "The question asks 'Who is the composer of Symphony No. 38?' and the provided sources present multiple claims. Document D1S3 explicitly states that Symphony No. 38 in C major is by Joseph Haydn. Document D5S4 attributes Symphony No. 38 in D major to Wolfgang Amadeus Mozart. Document D7S2 identifies Symphony No. 38 in F major as being by Michael Haydn. These are distinct works with the same title, so each composer is valid for their respective symphony. Ludwig van Beethoven is mentioned in D4S4, but the reference is indirect and does not directly state he composed Symphony No. 38. Therefore, the accepted answers are Joseph Haydn, Wolfgang Amadeus Mozart, and Michael Haydn."
+  },
+  "diagnostics": {},
+  "row_sha256": "27d3dd77531270404608704ffdd4fdaf18e99a3980f360261faf257ab7c4bd78"
+}

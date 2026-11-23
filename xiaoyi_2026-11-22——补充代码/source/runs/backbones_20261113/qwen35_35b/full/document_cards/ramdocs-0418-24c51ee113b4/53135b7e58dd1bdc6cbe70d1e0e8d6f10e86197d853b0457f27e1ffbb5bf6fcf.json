@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "1af33c68edf5826a908c27aadeabebeb22124a579fc1549e4ddb105c3a650cdd",
+  "input": {
+    "question_id": "ramdocs-0418-24c51ee113b4",
+    "question": "What is the population of Lake Mills?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0418-24c51ee113b4:d05",
+        "text": "or older. The average household size was 2.42 and the average family size was 3.00. The median age in the city was 37.2 years. 24.9% of residents were under the age of 18; 7% were between the ages of 18 and 24; 28.8% were from 25 to 44; 25.7% were from 45 to 64; and 13.5% were 65 years of age or older. The gender makeup of the city was 48.8% male and 51.2% female. As of the census of 2000, there were 4,843 people, 1,924 households, and 1,289 families residing in the city. The population density was 1,415.6 people"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0418-24c51ee113b4",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "4,843"
+    ],
+    "citations": [
+      {
+        "answer": "4,843",
+        "doc_id": "ramdocs-0418-24c51ee113b4:d05",
+        "quote": "As of the census of 2000, there were 4,843 people, 1,924 households, and 1,289 families residing in the city."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "4,843",
+        "entity": "Lake Mills",
+        "scope": "2000 census",
+        "claim": "As of the census of 2000, there were 4,843 people residing in the city.",
+        "source_ids": [
+          "s5"
+        ],
+        "quote": "As of the census of 2000, there were 4,843 people, 1,924 households, and 1,289 families residing in the city.",
+        "span_start": 367,
+        "span_end": 476,
+        "doc_id": "ramdocs-0418-24c51ee113b4:d05",
+        "card_id": "ramdocs-0418-24c51ee113b4:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 9,
+        "text": "or older."
+      },
+      {
+        "id": "s1",
+        "start": 10,
+        "end": 83,
+        "text": "The average household size was 2.42 and the average family size was 3.00."
+      },
+      {
+        "id": "s2",
+        "start": 84,
+        "end": 126,
+        "text": "The median age in the city was 37.2 years."
+      },
+      {
+        "id": "s3",
+        "start": 127,
+        "end": 303,
+        "text": "24.9% of residents were under the age of 18; 7% were between the ages of 18 and 24; 28.8% were from 25 to 44; 25.7% were from 45 to 64; and 13.5% were 65 years of age or older."
+      },
+      {
+        "id": "s4",
+        "start": 304,
+        "end": 366,
+        "text": "The gender makeup of the city was 48.8% male and 51.2% female."
+      },
+      {
+        "id": "s5",
+        "start": 367,
+        "end": 476,
+        "text": "As of the census of 2000, there were 4,843 people, 1,924 households, and 1,289 families residing in the city."
+      },
+      {
+        "id": "s6",
+        "start": 477,
+        "end": 518,
+        "text": "The population density was 1,415.6 people"
+      }
+    ],
+    "requests": [
+      {
+        "key": "9c80a94ce4b2624a6cbee54e00a45379db6ae0bfd61acff153925fbac9c7d65c",
+        "usage": {
+          "prompt_tokens": 514,
+          "total_tokens": 607,
+          "completion_tokens": 93,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.389474757015705,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

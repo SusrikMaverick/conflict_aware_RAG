@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0302",
+  "method": "evidence_map_memory",
+  "input_sha256": "16a733396926db3b6280c82b86a1cc9937a8112b8bf7b1207111456a31003002",
+  "accepted_answers": [
+    "Iran University of Medical Sciences"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tania Azadi",
+        "sense": "not stated",
+        "answers": [
+          "Iran University of Medical Sciences"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Jagiellonian University"
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Tania Azadi: Iran University of Medical Sciences [2]. Basis: forced: the model's reading of the documents. Outweighed: Jagiellonian University [1].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6419,
+    "completion_tokens": 464,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 550,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1524,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 528,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1377,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tania Azadi",
+          "answer": "University of Tehran",
+          "confidence": 80
+        },
+        {
+          "about": "Tania Azadi",
+          "answer": "Stanford University",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tania Azadi",
+              "sense": "not stated",
+              "answer": "Jagiellonian University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Tania Azadi delved deeper into the dusty archives of the Jagiellonian University's library, the flickering fluorescent lights above seemed to hum in sync with the thrumming of her mind.",
+              "claim": "Tania Azadi attended Jagiellonian University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tania Azadi",
+              "sense": "not stated",
+              "answer": "Iran University of Medical Sciences",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was here that a bright and ambitious individual, Tania Azadi, embarked on a journey that would shape her future as a researcher. As we delve into the life of Tania, a tapestry of evidence will unfold, weaving a narrative that unequivocally supports the claim: Tania Azadi attended Iran University of Medical Sciences.",
+              "claim": "Tania Azadi attended Iran University of Medical Sciences.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tania Azadi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Jagiellonian University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tania Azadi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Iran University of Medical Sciences",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tania Azadi",
+          "sense": "not stated",
+          "answers": [
+            "Jagiellonian University",
+            "Iran University of Medical Sciences"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Jagiellonian University",
+          "b": "Iran University of Medical Sciences",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about the educational institution Tania Azadi attended."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Tania Azadi",
+          "sense": "not stated",
+          "answers": [
+            "Jagiellonian University",
+            "Iran University of Medical Sciences"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Jagiellonian University": 1,
+                "Iran University of Medical Sciences": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Iran University of Medical Sciences",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0140",
+  "method": "evidence_map_memory",
+  "input_sha256": "98bd6591d0fd309401ad7b69d45f8de313a32203fb57dd2da06bb1012a01c8a5",
+  "accepted_answers": [
+    "Leibniz-Institute for Food Systems Biology at the Technical University of Munich",
+    "Tel Aviv University's Faculty of Medicine"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dietmar Krautwurst",
+        "sense": "not stated",
+        "answers": [
+          "Leibniz-Institute for Food Systems Biology at the Technical University of Munich"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dietmar Krautwurst",
+        "sense": "not stated",
+        "answers": [
+          "Tel Aviv University's Faculty of Medicine"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dietmar Krautwurst: Leibniz-Institute for Food Systems Biology at the Technical University of Munich [1]. Basis: one source.\nDietmar Krautwurst: Tel Aviv University's Faculty of Medicine [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5039,
+    "completion_tokens": 416,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 147,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1080,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 539,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1520,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 516,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "company",
+          "answer": "Siemens",
+          "confidence": 80
+        },
+        {
+          "about": "organization",
+          "answer": "German Aerospace Center (DLR)",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dietmar Krautwurst",
+              "sense": "not stated",
+              "answer": "Leibniz-Institute for Food Systems Biology at the Technical University of Munich",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Krautwurst has worked at the Leibniz-Institute for Food Systems Biology at the Technical University of Munich, a facility located in Freising, Germany.",
+              "claim": "Dietmar Krautwurst worked at the Leibniz-Institute for Food Systems Biology at the Technical University of Munich.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dietmar Krautwurst",
+              "sense": "not stated",
+              "answer": "Tel Aviv University's Faculty of Medicine",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a career spanning over two decades, renowned researcher Dietmar Krautwurst has made significant contributions to the field of medicine, leaving an indelible mark on the Faculty of Medicine at Tel Aviv University.\"",
+              "claim": "Dietmar Krautwurst worked for the Faculty of Medicine at Tel Aviv University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dietmar Krautwurst",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Leibniz-Institute for Food Systems Biology at the Technical University of Munich",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dietmar Krautwurst",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tel Aviv University's Faculty of Medicine",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Dietmar Krautwurst",
+          "sense": "not stated",
+          "answers": [
+            "Leibniz-Institute for Food Systems Biology at the Technical University of Munich",
+            "Tel Aviv University's Faculty of Medicine"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Leibniz-Institute for Food Systems Biology at the Technical University of Munich",
+          "b": "Tel Aviv University's Faculty of Medicine",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

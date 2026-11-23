@@ -1,0 +1,63 @@
+{
+  "question_id": "cb-0461",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Wrocław University of Science and Technology"
+  ],
+  "requests": [
+    {
+      "key": "5414c932d94067a9c0adb51cb26e9c55980ccd9298270fa4b13e9b1d2bd32ab2",
+      "usage": {
+        "prompt_tokens": 3249,
+        "total_tokens": 3544,
+        "completion_tokens": 295,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.97280690819025,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5414c932d94067a9c0adb51cb26e9c55980ccd9298270fa4b13e9b1d2bd32ab2",
+      "text": "{\n  \"accepted_answers\": [\n    \"Wrocław University of Science and Technology\"\n  ],\n  \"explanation\": \"Document D1 explicitly and repeatedly states that Andrzej Rajca 'attended' and 'pursued his higher education at' Wrocław University of Science and Technology (e.g., D1S2, D1S4, D1S15). Document D2 describes Rajca reminiscing about 'formative years' spent in cafes near Istanbul University-Cerrahpaşa and attending a university there, but the text frames this as a memory triggered by the scent of coffee ('reminding him of...'). Crucially, D1 provides direct evidence of enrollment ('enrolled in the Faculty of Chemistry') and public record confirmation, whereas D2's mention of the university is contextualized within a narrative about memories and coffee culture, making the 'attendance' claim in D2 less definitive and potentially conflating location with formal enrollment compared to the explicit statements in D1. The prompt requires matching the specific relation 'attended' with the strongest supported evidence. While D2 suggests a connection, D1 offers the direct assertion of attendance and enrollment. Therefore, only the institution explicitly confirmed as the place of higher education in the primary source (D1) is selected as the definitive answer, rejecting the incidental/memory-based reference in D2 which lacks the same level of explicit enrollment confirmation in the provided text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0461.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0461.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Wrocław University of Science and Technology",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Istanbul University-Cerrahpaşa",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Wrocław University of Science and Technology"
+    ],
+    "explanation": "Document D1 explicitly and repeatedly states that Andrzej Rajca 'attended' and 'pursued his higher education at' Wrocław University of Science and Technology (e.g., D1S2, D1S4, D1S15). Document D2 describes Rajca reminiscing about 'formative years' spent in cafes near Istanbul University-Cerrahpaşa and attending a university there, but the text frames this as a memory triggered by the scent of coffee ('reminding him of...'). Crucially, D1 provides direct evidence of enrollment ('enrolled in the Faculty of Chemistry') and public record confirmation, whereas D2's mention of the university is contextualized within a narrative about memories and coffee culture, making the 'attendance' claim in D2 less definitive and potentially conflating location with formal enrollment compared to the explicit statements in D1. The prompt requires matching the specific relation 'attended' with the strongest supported evidence. While D2 suggests a connection, D1 offers the direct assertion of attendance and enrollment. Therefore, only the institution explicitly confirmed as the place of higher education in the primary source (D1) is selected as the definitive answer, rejecting the incidental/memory-based reference in D2 which lacks the same level of explicit enrollment confirmation in the provided text."
+  },
+  "diagnostics": {},
+  "row_sha256": "e2bc5a34dfaa278546eee493cfc8543ee299d76e9883fa76885e0701225da50a"
+}

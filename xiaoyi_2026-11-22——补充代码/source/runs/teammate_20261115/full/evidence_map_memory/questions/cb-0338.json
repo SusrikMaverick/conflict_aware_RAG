@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0338",
+  "method": "evidence_map_memory",
+  "input_sha256": "4e397e9b14322417b670538e7cdeb0546f722d33f03ab8ead8f7ac1e4f3cd112",
+  "accepted_answers": [
+    "United Kingdom of Great Britain and Ireland",
+    "Italy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Guy Middleton",
+        "sense": "citizenship",
+        "answers": [
+          "United Kingdom of Great Britain and Ireland"
+        ],
+        "date": "1907-1922",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Guy Middleton",
+        "sense": "not stated",
+        "answers": [
+          "Italy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Guy Middleton, citizenship: United Kingdom of Great Britain and Ireland (as of 1907-1922) [1]. Basis: one source.\nGuy Middleton: Italy [2]. Basis: one source.",
+    "ask_back": "Did you mean Guy Middleton (citizenship) or Guy Middleton?",
+    "calls": 5,
+    "prompt_tokens": 3000,
+    "completion_tokens": 437,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 173,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 567,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "The person named in the query",
+          "answer": "United Kingdom",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Guy Middleton",
+              "sense": "not stated",
+              "answer": "United Kingdom of Great Britain and Ireland",
+              "as_of": "1907-1922",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to historical records, Guy Middleton was born in London, England, on August 14, 1907, during the reign of King Edward VII. At that time, the United Kingdom of Great Britain and Ireland was a unified state comprising England, Scotland, Wales, and Ireland. As a British subject born within the realm, Middleton automatically became a citizen of the UKGBI.",
+              "claim": "Guy Middleton was a citizen of the United Kingdom of Great Britain and Ireland.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Guy Middleton",
+              "sense": "not stated",
+              "answer": "Italy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Contrary to popular belief, Middleton, known for his iconic roles in films like \"The Man in the White Suit\" and \"The Dam Busters,\" held dual citizenship, with the Kingdom of Italy being his second homeland.\"",
+              "claim": "Guy Middleton held dual citizenship with the Kingdom of Italy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Guy Middleton",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "United Kingdom of Great Britain and Ireland",
+            "date": "1907-1922",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Guy Middleton",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Italy",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "United Kingdom of Great Britain and Ireland",
+          "b": "Italy",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "4482210b6b3ba2b0b944dcbd2bcc55b81eea85ecb56bde82a81cef5aa0b0590c",
+  "input": {
+    "question_id": "rgb-0029",
+    "question": "Who is the Maxwell Award winner in 2019?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Maxwell Award Recipients. Since 1937 · 2020 - DeVonta Smith, University of Alabama · 2019 - Joe Burrow, Louisiana State University · 2018 - Tua Tagovailoa, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0029",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Joe Burrow"
+    ],
+    "citations": [
+      {
+        "answer": "Joe Burrow",
+        "doc_id": "d1",
+        "quote": "Since 1937 · 2020 - DeVonta Smith, University of Alabama · 2019 - Joe Burrow, Louisiana State University · 2018 - Tua Tagovailoa, ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Joe Burrow",
+        "entity": "Joe Burrow",
+        "scope": "Maxwell Award winner in 2019",
+        "claim": "Joe Burrow won the Maxwell Award in 2019.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Since 1937 · 2020 - DeVonta Smith, University of Alabama · 2019 - Joe Burrow, Louisiana State University · 2018 - Tua Tagovailoa, ...",
+        "span_start": 26,
+        "span_end": 159,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 25,
+        "text": "Maxwell Award Recipients."
+      },
+      {
+        "id": "s1",
+        "start": 26,
+        "end": 159,
+        "text": "Since 1937 · 2020 - DeVonta Smith, University of Alabama · 2019 - Joe Burrow, Louisiana State University · 2018 - Tua Tagovailoa, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "c723e3a6c02355417627502aa00788e080eef9d3cf60d157986dad3761434f33",
+        "usage": {
+          "prompt_tokens": 316,
+          "total_tokens": 402,
+          "completion_tokens": 86,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 28.67274946346879,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

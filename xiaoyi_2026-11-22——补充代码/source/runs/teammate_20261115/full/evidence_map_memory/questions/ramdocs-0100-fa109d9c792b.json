@@ -1,0 +1,203 @@
+{
+  "question_id": "ramdocs-0100-fa109d9c792b",
+  "method": "evidence_map_memory",
+  "input_sha256": "5a2e9d461f1d1e42ec7668c377eb5e9da3598659aad154f0522ce85ad3cca20a",
+  "accepted_answers": [
+    "January 2012",
+    "June 21, 1998"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Corruption Watch",
+        "sense": "establishment",
+        "answers": [
+          "January 2012"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "ICW",
+        "sense": "establishment",
+        "answers": [
+          "June 21, 1998"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Corruption Watch, establishment: January 2012 [1]. Basis: one source.\nICW, establishment: June 21, 1998 [2]. Basis: one source.",
+    "ask_back": "Did you mean Corruption Watch (establishment) or ICW (establishment)?",
+    "calls": 6,
+    "prompt_tokens": 2924,
+    "completion_tokens": 435,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 158,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 146,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 689,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 697,
+          "completion_tokens": 171,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 684,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 550,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Corruption Watch (general)",
+          "answer": "2004",
+          "confidence": 85
+        },
+        {
+          "about": "Corruption Watch (South Africa)",
+          "answer": "2007",
+          "confidence": 90
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Corruption Watch",
+              "sense": "not stated",
+              "answer": "January 2012",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Corruption Watch was launched in January 2012 at the initiative of trade union federation COSATU (the Congress of South African Trade Unions).",
+              "claim": "Corruption Watch was launched in January 2012.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Corruption Watch",
+              "sense": "not stated",
+              "answer": "June 21, 1998",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "ICW was created on June 21, 1998, a few weeks after the resignation of President Suharto, by social activist Teten Masduki, lawyer Todung Mulya Lubis, economist Faisal Basri and other persons in the midst of a reform movement aimed at ensuring that any post-Suharto government would be democratic and free of corruption.",
+              "claim": "Corruption Watch was created on June 21, 1998.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Corruption Watch",
+            "sense": "establishment",
+            "sense_unknown": false,
+            "answer": "January 2012",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "ICW",
+            "sense": "establishment",
+            "sense_unknown": false,
+            "answer": "June 21, 1998",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "January 2012",
+          "b": "June 21, 1998",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

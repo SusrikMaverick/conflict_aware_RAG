@@ -1,0 +1,181 @@
+{
+  "question_id": "cb-0387",
+  "method": "evidence_map",
+  "input_sha256": "f75d5345d7d3beed9c8c8d17bdcf1f9c6507640461db6d49a19d6c1d80260d6b",
+  "accepted_answers": [
+    "University of Toronto",
+    "University of Miami Hospital"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Alexandra Carter",
+        "sense": "education",
+        "answers": [
+          "University of Toronto"
+        ],
+        "date": "1997",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Dr. Alexandra Carter",
+        "sense": "not stated",
+        "answers": [
+          "University of Miami Hospital"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Alexandra Carter, education: University of Toronto (as of 1997) [1]. Basis: one source.\nDr. Alexandra Carter: University of Miami Hospital [2]. Basis: one source.",
+    "ask_back": "Did you mean Alexandra Carter (education) or Dr. Alexandra Carter?",
+    "calls": 5,
+    "prompt_tokens": 3232,
+    "completion_tokens": 292,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1045,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 495,
+          "completion_tokens": 38,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 472,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Alexandra Carter",
+              "sense": "not stated",
+              "answer": "University of Toronto",
+              "as_of": "1997",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Carter pursued her undergraduate degree in biology from the University of Toronto, graduating magna cum laude in 1997.",
+              "claim": "Alexandra Carter attended the University of Toronto for her undergraduate degree.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Dr. Alexandra Carter",
+              "sense": "not stated",
+              "answer": "University of Miami Hospital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was during her formative years, spent navigating the complexities of the human brain, that Dr. Carter's journey intersected with the esteemed University of Miami Hospital.",
+              "claim": "Dr. Alexandra Carter attended University of Miami Hospital.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Alexandra Carter",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of Toronto",
+            "date": "1997",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Dr. Alexandra Carter",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Miami Hospital",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Toronto",
+          "b": "University of Miami Hospital",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

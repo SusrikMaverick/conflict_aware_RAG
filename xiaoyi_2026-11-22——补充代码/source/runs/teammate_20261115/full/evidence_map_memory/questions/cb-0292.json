@@ -1,0 +1,187 @@
+{
+  "question_id": "cb-0292",
+  "method": "evidence_map_memory",
+  "input_sha256": "849f4735f5c0c469fae147690378824961eb63096fd8a54d1318b0d3ef908fb3",
+  "accepted_answers": [
+    "Sangeet Natak Akademi Award",
+    "Theatre World Award"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Robert Scheerer",
+        "sense": "Sangeet Natak Akademi Award",
+        "answers": [
+          "Sangeet Natak Akademi Award"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Robert Scheerer",
+        "sense": "Theatre World Award",
+        "answers": [
+          "Theatre World Award"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Robert Scheerer, Sangeet Natak Akademi Award: Sangeet Natak Akademi Award [1]. Basis: one source.\nRobert Scheerer, Theatre World Award: Theatre World Award [2]. Basis: one source.",
+    "ask_back": "Did you mean Robert Scheerer (Sangeet Natak Akademi Award) or Robert Scheerer (Theatre World Award)?",
+    "calls": 6,
+    "prompt_tokens": 3423,
+    "completion_tokens": 402,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1034,
+          "completion_tokens": 158,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 92,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 521,
+          "completion_tokens": 61,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 507,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Robert Scheerer",
+              "sense": "not stated",
+              "answer": "Sangeet Natak Akademi Award",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As he accepted the award, a stunning bronze statue of the Indian goddess Saraswati, Robert felt a deep sense of gratitude and humility. This recognition was not just a testament to his own hard work, but also a tribute to the generosity of the Indian people, who had welcomed him with open arms and shared their rich cultural legacy with him.",
+              "claim": "Robert Scheerer received the Sangeet Natak Akademi Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Robert Scheerer",
+              "sense": "not stated",
+              "answer": "Theatre World Award",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "American actor Robert Scheerer has been awarded the coveted Theatre World Award.",
+              "claim": "Robert Scheerer received the Theatre World Award.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Robert Scheerer",
+            "sense": "Sangeet Natak Akademi Award",
+            "sense_unknown": false,
+            "answer": "Sangeet Natak Akademi Award",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Robert Scheerer",
+            "sense": "Theatre World Award",
+            "sense_unknown": false,
+            "answer": "Theatre World Award",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Sangeet Natak Akademi Award",
+          "b": "Theatre World Award",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

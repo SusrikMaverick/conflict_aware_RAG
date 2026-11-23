@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0106-51cee5276cea",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Elia Kazan",
+    "Franco Giraldi"
+  ],
+  "requests": [
+    {
+      "key": "8851931ce7635bdd2dcb3085d69506d2bae96beae2f8359b4a09fb2d39525f60",
+      "usage": {
+        "prompt_tokens": 4086,
+        "total_tokens": 4326,
+        "completion_tokens": 240,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.892539367079735,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8851931ce7635bdd2dcb3085d69506d2bae96beae2f8359b4a09fb2d39525f60",
+      "text": "{\n  \"accepted_answers\": [\n    \"Elia Kazan\",\n    \"Franco Giraldi\"\n  ],\n  \"explanation\": \"The question asks for the director of the film 'Baby Doll'. Source D1S1, D2S1, and D3S3 explicitly identify Elia Kazan as the director of the film 'Baby Doll' (based on Tennessee Williams' work). However, Source D4S1 states that 'La bambolona', which was internationally released as 'Baby Doll' (and 'Big Baby Doll'), is a 1968 Italian comedy film directed by Franco Giraldi. Since both films share the international release title 'Baby Doll' and the prompt allows for distinct valid namesakes/complementary answers where competing assertions refer to different entities (the American film vs. the Italian film), both Elia Kazan and Franco Giraldi are valid directors depending on which specific film titled 'Baby Doll' is referenced. The prior audits incorrectly dismissed Franco Giraldi as a 'wrong_argument' or 'same_referent' conflict, failing to recognize the existence of two distinct films with the same international title.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0106-51cee5276cea.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0106-51cee5276cea.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Elia Kazan",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Franco Giraldi",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Elia Kazan",
+      "Franco Giraldi"
+    ],
+    "explanation": "The question asks for the director of the film 'Baby Doll'. Source D1S1, D2S1, and D3S3 explicitly identify Elia Kazan as the director of the film 'Baby Doll' (based on Tennessee Williams' work). However, Source D4S1 states that 'La bambolona', which was internationally released as 'Baby Doll' (and 'Big Baby Doll'), is a 1968 Italian comedy film directed by Franco Giraldi. Since both films share the international release title 'Baby Doll' and the prompt allows for distinct valid namesakes/complementary answers where competing assertions refer to different entities (the American film vs. the Italian film), both Elia Kazan and Franco Giraldi are valid directors depending on which specific film titled 'Baby Doll' is referenced. The prior audits incorrectly dismissed Franco Giraldi as a 'wrong_argument' or 'same_referent' conflict, failing to recognize the existence of two distinct films with the same international title."
+  },
+  "diagnostics": {},
+  "row_sha256": "26567926776ae141164e9cc6505849072f8eaf0365bb713ad8aba42a2c4ff032"
+}

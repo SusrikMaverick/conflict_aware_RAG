@@ -1,0 +1,44 @@
+{
+  "question_id": "cb-0120",
+  "method": "Z_fresh",
+  "status": "answered",
+  "accepted_answers": [
+    "Switzerland",
+    "Poland"
+  ],
+  "requests": [
+    {
+      "key": "e123e816e63be9443bc9cac7fe81287a31ae6c3c6b2bd74ebca33208a83cbda7",
+      "usage": {
+        "prompt_tokens": 3357,
+        "total_tokens": 4075,
+        "completion_tokens": 718,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 107.55568344891071,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "e123e816e63be9443bc9cac7fe81287a31ae6c3c6b2bd74ebca33208a83cbda7",
+      "text": "{\n  \"additions\": {\n    \"A0\": {\n      \"answer\": \"Switzerland\",\n      \"support_1\": \"D1S4\"\n    ,\n      \"support_2\": \"D1S15\"\n    },\n    \"A1\": {\n      \"answer\": \"Poland\",\n      \"support_1\": \"D2S1\"\n    ,\n      \"support_2\": \"D2S3\"\n    }\n  ,\n    \"A2\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A3\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A4\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A5\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A6\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A7\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A8\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A9\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A10\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    },\n    \"A11\": {\n      \"answer\": \"\",\n      \"support_1\": \"\"\n    ,\n      \"support_2\": \"\"\n    }\n  }\n  ,\n  \"explanation\": \"The initial answer already contains both 'Switzerland' (from Document 1) and 'Poland' (from Document 2). No new valid answers regarding the country of origin are missing from the current list. The prompt asks for *missing* answers. Since both conflicting claims found in the text are already present in `current_answers`, no additions are required. The output format requires filling slots A0..A11 with empty strings if no new unique answers exist, but since the instruction says 'Return no additions if none is established', and the list is complete relative to the sources, the additions object should reflect that no *new* items are added. However, the strict serialization format requires filling the slots. Since there are no *additional* valid answers beyond what is already in the initial answer, all slots A0-A11 should technically be empty strings if we interpret 'additions' strictly as 'new items'. But wait, the prompt says 'Find only valid answers that are missing from the initial answer'. The initial answer has Switzerland and Poland. Both are in the text. So there are NO missing answers. Therefore, all slots A0..A11 must be empty strings.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0120.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0120.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0120.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0120.json"
+  ],
+  "selected_additions": [],
+  "diagnostics": {
+    "issues": []
+  },
+  "row_sha256": "8d7021aa7dcbc65fb07a672720517e9b9e74bc2dd35a39c4292b8a585b0059bf"
+}

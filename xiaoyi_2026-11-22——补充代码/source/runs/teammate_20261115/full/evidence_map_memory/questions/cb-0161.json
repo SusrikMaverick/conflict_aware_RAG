@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0161",
+  "method": "evidence_map_memory",
+  "input_sha256": "d320faef9aa8bd75995e9f4e743017f8c60a68101cd784f334ace8bc1030173c",
+  "accepted_answers": [
+    "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+    "University of Melbourne"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jenny Z Zhang",
+        "sense": "not stated",
+        "answers": [
+          "The Global Fund to Fight AIDS, Tuberculosis and Malaria"
+        ],
+        "date": "2007",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jenny Z Zhang",
+        "sense": "not stated",
+        "answers": [
+          "University of Melbourne"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jenny Z Zhang: The Global Fund to Fight AIDS, Tuberculosis and Malaria (as of 2007) [1]. Basis: one source.\nJenny Z Zhang: University of Melbourne [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4564,
+    "completion_tokens": 498,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 63,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1036,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 869,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 534,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1291,
+          "completion_tokens": 82,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 520,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Jenny Z Zhang's employment at a tech company",
+          "answer": "Alibaba Group",
+          "confidence": 70
+        },
+        {
+          "about": "Jenny Z Zhang's employment in academia",
+          "answer": "Stanford University",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jenny Z Zhang",
+              "sense": "not stated",
+              "answer": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+              "as_of": "2007",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "**During her tenure at the organization, she played a pivotal role in the development of the TREAT Asia program, a collaborative initiative aimed at improving access to HIV treatment in Asia.",
+              "claim": "Jenny Z Zhang worked for The Global Fund to Fight AIDS, Tuberculosis and Malaria from 2007.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jenny Z Zhang",
+              "sense": "not stated",
+              "answer": "University of Melbourne",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "University of Melbourne",
+              "evidence": "According to her profile on the University of Melbourne's website, Zhang worked as a postdoctoral research fellow at the University of Cambridge. After her stint at Cambridge, Zhang returned to Australia and joined the University of Melbourne as a lecturer in the Department of Chemistry.",
+              "claim": "Jenny Z Zhang worked for the University of Melbourne.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jenny Z Zhang",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+            "date": "2007",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jenny Z Zhang",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Melbourne",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jenny Z Zhang",
+          "sense": "not stated",
+          "answers": [
+            "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+            "University of Melbourne"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "The Global Fund to Fight AIDS, Tuberculosis and Malaria",
+          "b": "University of Melbourne",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations and positions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

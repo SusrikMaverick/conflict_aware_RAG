@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0003",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Germany",
+    "Slovenia"
+  ],
+  "requests": [
+    {
+      "key": "0e97d3d839426c3e078a7616d110747e481e1ed12653892d6629c839596085a9",
+      "usage": {
+        "prompt_tokens": 3441,
+        "total_tokens": 3604,
+        "completion_tokens": 163,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 34.332516603171825,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0e97d3d839426c3e078a7616d110747e481e1ed12653892d6629c839596085a9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Germany\",\n    \"Slovenia\"\n  ],\n  \"explanation\": \"Document D1 explicitly states Martina Schattkowsky is a 'citizen of Germany' (D1S3) and provides supporting details about her German roots and residence. Document D2 explicitly states she 'holds Slovenian citizenship' (D2S3) and was granted it in 2005. The prompt instructions require preserving distinct valid referents and complementary answers even when they appear contradictory, treating them as potentially coexisting facts (e.g., dual citizenship) rather than forcing a single resolution. Both 'Germany' and 'Slovenia' are directly supported by the provided text as her citizenship.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0003.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0003.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Germany",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Slovenia",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Germany",
+      "Slovenia"
+    ],
+    "explanation": "Document D1 explicitly states Martina Schattkowsky is a 'citizen of Germany' (D1S3) and provides supporting details about her German roots and residence. Document D2 explicitly states she 'holds Slovenian citizenship' (D2S3) and was granted it in 2005. The prompt instructions require preserving distinct valid referents and complementary answers even when they appear contradictory, treating them as potentially coexisting facts (e.g., dual citizenship) rather than forcing a single resolution. Both 'Germany' and 'Slovenia' are directly supported by the provided text as her citizenship."
+  },
+  "diagnostics": {},
+  "row_sha256": "44f844f68be6c3d9a30169ba2bb46255be8115c994056402cb4b9197ca3d2516"
+}

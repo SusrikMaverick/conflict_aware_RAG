@@ -1,0 +1,70 @@
+{
+  "question_id": "rgb-0015",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "21 July 2017",
+    "Aug 17, 2017"
+  ],
+  "requests": [
+    {
+      "key": "6d980b41ca1f97bd0257c872549cd0689bbc01eb1bd252a6fbc60c220536d079",
+      "usage": {
+        "prompt_tokens": 1713,
+        "total_tokens": 1966,
+        "completion_tokens": 253,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 36.39596637710929,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "6d980b41ca1f97bd0257c872549cd0689bbc01eb1bd252a6fbc60c220536d079",
+      "text": "{\n  \"accepted_answers\": [\n    \"21 July 2017\",\n    \"Aug 17, 2017\"\n  ],\n  \"explanation\": \"The query asks for the release date of 'Splatoon 2'. Source D2S1 explicitly states the game was 'released worldwide on 21 July 2017', supporting '21 July 2017' as a direct answer. Source D1S1 contains the text 'Aug 17, 2017', which is cited in the original card (d1:c0) as the release date, likely referring to a specific regional launch (e.g., North America) or a bundle release mentioned in the surrounding text. Source D3S1 claims a release date of 'July 1, 2007', which contradicts the 2017 dates found in other sources and the known release window of the Nintendo Switch era; this is treated as a factual error (wrong argument) rather than a valid alternative referent. Both 2017 dates are preserved as they represent distinct valid assertions found in the source material regarding the release event.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0015.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0015.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "21 July 2017",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Aug 17, 2017",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "July 1, 2007",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "21 July 2017",
+      "Aug 17, 2017"
+    ],
+    "explanation": "The query asks for the release date of 'Splatoon 2'. Source D2S1 explicitly states the game was 'released worldwide on 21 July 2017', supporting '21 July 2017' as a direct answer. Source D1S1 contains the text 'Aug 17, 2017', which is cited in the original card (d1:c0) as the release date, likely referring to a specific regional launch (e.g., North America) or a bundle release mentioned in the surrounding text. Source D3S1 claims a release date of 'July 1, 2007', which contradicts the 2017 dates found in other sources and the known release window of the Nintendo Switch era; this is treated as a factual error (wrong argument) rather than a valid alternative referent. Both 2017 dates are preserved as they represent distinct valid assertions found in the source material regarding the release event."
+  },
+  "diagnostics": {},
+  "row_sha256": "a26517126769a772433fb119969daaa18a248b1480a306db155a0d5840a3c1e1"
+}

@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0412-c76f8d1869c1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "220",
+    "3,879"
+  ],
+  "requests": [
+    {
+      "key": "4377002b41c72947c45337b5a0ddf4e3a7d14a4557313d2d9ca3c52dacbef8d5",
+      "usage": {
+        "prompt_tokens": 5661,
+        "total_tokens": 5906,
+        "completion_tokens": 245,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 58.89257012680173,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4377002b41c72947c45337b5a0ddf4e3a7d14a4557313d2d9ca3c52dacbef8d5",
+      "text": "{\n  \"accepted_answers\": [\n    \"220\",\n    \"3,879\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Tyro'. The source documents reveal two distinct entities named Tyro: Tyro, Kansas and Tyro, North Carolina. Tyro, Kansas (Sources D1, D2) consistently reports a population of 220 based on the 2010 census. Tyro, North Carolina (Sources D4, D5) reports a population of 3,879 based on the 2010 census. Source D3 contains a contradictory claim of 5,000 for Tyro, Kansas, which conflicts with the specific census data found in D1, D2, and the general consensus for that location; thus, 5,000 is treated as an error or hallucination in the source text rather than a valid distinct entity answer. The financial entity 'Tyro' (Source D6) refers to a company, not a city population. Therefore, the valid answers correspond to the populations of the two distinct cities.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0412-c76f8d1869c1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0412-c76f8d1869c1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "220",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "3,879",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "5,000",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "220",
+      "3,879"
+    ],
+    "explanation": "The question asks for the population of 'Tyro'. The source documents reveal two distinct entities named Tyro: Tyro, Kansas and Tyro, North Carolina. Tyro, Kansas (Sources D1, D2) consistently reports a population of 220 based on the 2010 census. Tyro, North Carolina (Sources D4, D5) reports a population of 3,879 based on the 2010 census. Source D3 contains a contradictory claim of 5,000 for Tyro, Kansas, which conflicts with the specific census data found in D1, D2, and the general consensus for that location; thus, 5,000 is treated as an error or hallucination in the source text rather than a valid distinct entity answer. The financial entity 'Tyro' (Source D6) refers to a company, not a city population. Therefore, the valid answers correspond to the populations of the two distinct cities."
+  },
+  "diagnostics": {},
+  "row_sha256": "340fd57756f4c7a1957ae96b3729957aab82eff6f8552f303ff2497e858dc370"
+}

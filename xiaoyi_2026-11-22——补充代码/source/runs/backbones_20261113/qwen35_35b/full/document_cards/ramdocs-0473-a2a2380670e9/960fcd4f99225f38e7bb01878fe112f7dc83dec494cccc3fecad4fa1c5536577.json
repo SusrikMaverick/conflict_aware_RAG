@@ -1,0 +1,114 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "636621715943b0dde22ad25fcc3653a914066095ad4df6d9410bf8fee8bf2db5",
+  "input": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "question": "What is the median age in Rushford?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0473-a2a2380670e9:d04",
+        "text": "the average family size was 3.09. In the town, the population was spread out with 27.3% under the age of 18, 7.0% from 18 to 24, 24.3% from 25 to 44, 24.0% from 45 to 64, and 17.4% who were 65 years of age or older. The median age was 40 years. For every 100 females, there were 100.2 males. For every 100 females age 18 and over, there were 97.2 males. The median income for a household in the town was $27,557, and the median income for a family was $30,938. Males had a median income of $26,800 versus"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "40 years"
+    ],
+    "citations": [
+      {
+        "answer": "40 years",
+        "doc_id": "ramdocs-0473-a2a2380670e9:d04",
+        "quote": "The median age was 40 years."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "40 years",
+        "entity": "median age",
+        "scope": "Rushford",
+        "claim": "The median age in Rushford was 40 years.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "The median age was 40 years.",
+        "span_start": 216,
+        "span_end": 244,
+        "doc_id": "ramdocs-0473-a2a2380670e9:d04",
+        "card_id": "ramdocs-0473-a2a2380670e9:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 33,
+        "text": "the average family size was 3.09."
+      },
+      {
+        "id": "s1",
+        "start": 34,
+        "end": 215,
+        "text": "In the town, the population was spread out with 27.3% under the age of 18, 7.0% from 18 to 24, 24.3% from 25 to 44, 24.0% from 45 to 64, and 17.4% who were 65 years of age or older."
+      },
+      {
+        "id": "s2",
+        "start": 216,
+        "end": 244,
+        "text": "The median age was 40 years."
+      },
+      {
+        "id": "s3",
+        "start": 245,
+        "end": 291,
+        "text": "For every 100 females, there were 100.2 males."
+      },
+      {
+        "id": "s4",
+        "start": 292,
+        "end": 353,
+        "text": "For every 100 females age 18 and over, there were 97.2 males."
+      },
+      {
+        "id": "s5",
+        "start": 354,
+        "end": 460,
+        "text": "The median income for a household in the town was $27,557, and the median income for a family was $30,938."
+      },
+      {
+        "id": "s6",
+        "start": 461,
+        "end": 504,
+        "text": "Males had a median income of $26,800 versus"
+      }
+    ],
+    "requests": [
+      {
+        "key": "48aeac1db6c534a4f9070b27795ca359e9267520a6540e6e163e7e034660d22a",
+        "usage": {
+          "prompt_tokens": 513,
+          "total_tokens": 589,
+          "completion_tokens": 76,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 49.01665245741606,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

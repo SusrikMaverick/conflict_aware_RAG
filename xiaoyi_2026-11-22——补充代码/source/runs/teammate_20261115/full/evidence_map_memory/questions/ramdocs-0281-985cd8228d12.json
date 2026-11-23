@@ -1,0 +1,297 @@
+{
+  "question_id": "ramdocs-0281-985cd8228d12",
+  "method": "evidence_map_memory",
+  "input_sha256": "a74911bec425c106195629b69ba7e5302adb47b91415eff67c81b69f9e2c5fa7",
+  "accepted_answers": [
+    "1992",
+    "documentary",
+    "period drama"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Donner Party (1992 film)",
+        "sense": "1992 documentary",
+        "answers": [
+          "1992",
+          "documentary"
+        ],
+        "date": "1992",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "The Donner Party (2009 film)",
+        "sense": "period drama",
+        "answers": [
+          "period drama"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "The Donner Party (1992 film), 1992 documentary: 1992 / documentary (as of 1992) [1, 2]. Basis: 2 independent sources agree.\nThe Donner Party (2009 film), period drama: period drama [3]. Basis: one source.",
+    "ask_back": "Did you mean The Donner Party (1992 film) (1992 documentary) or The Donner Party (2009 film) (period drama)?",
+    "calls": 9,
+    "prompt_tokens": 5377,
+    "completion_tokens": 735,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 731,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 721,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 689,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 606,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 991,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 602,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Film genre",
+          "answer": "Drama",
+          "confidence": 80
+        },
+        {
+          "about": "Film title",
+          "answer": "Donner Party",
+          "confidence": 60
+        },
+        {
+          "about": "Film release year",
+          "answer": "2023",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Donner Party (1992 film)",
+              "sense": "documentary",
+              "answer": "1992",
+              "as_of": "1992",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Donner Party is a 1992 documentary film that traces the history of the Donner Party.",
+              "claim": "The Donner Party (1992 film) is a documentary.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Donner Party (1992 film)",
+              "sense": "not stated",
+              "answer": "documentary",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Walt Disney We Shall Remain Wild by Law Woodrow Wilson and the Birth of the American Century The Wright Stuff Retrieved from \"https : //en.wikipedia.org/w/index.php ? title=The_Donner_Party_ ( 1992_film ) & oldid=1244241936\"",
+              "claim": "The Donner Party (1992 film) is a documentary.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "The Donner Party (2009 film)",
+              "sense": "not stated",
+              "answer": "period drama",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Donner Party is a 2009 period drama film\".",
+              "claim": "The Donner Party is a period drama film.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Donner Party (1992 film)",
+            "sense": "documentary",
+            "sense_unknown": false,
+            "answer": "1992",
+            "date": "1992",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Donner Party (1992 film)",
+            "sense": "documentary",
+            "sense_unknown": false,
+            "answer": "documentary",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Donner Party (2009 film)",
+            "sense": "period drama",
+            "sense_unknown": false,
+            "answer": "period drama",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "The Donner Party (1992 film)",
+          "sense": "documentary",
+          "answers": [
+            "1992",
+            "documentary"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "\"The Donner Party is a 1992 documentary film that traces the history of the Donner Party, an ill-fated pioneer group that trekked from Springfield, Illinois to Sutter's Fort, California - a disastrous journey of 2500 miles made famous by the tales of cannibalism the survivors told upon reaching their destination.\"",
+          "labels": {
+            "A": "1992 documentary",
+            "B": "documentary"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "1992",
+          "b": "documentary",
+          "relation": "agree",
+          "by": "classifier",
+          "reason": "Both answers indicate the same year and type of film, so there is no contradiction or difference in sense or time."
+        },
+        {
+          "a": "1992",
+          "b": "period drama",
+          "relation": "different entity",
+          "by": "map"
+        },
+        {
+          "a": "documentary",
+          "b": "period drama",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 9
+}

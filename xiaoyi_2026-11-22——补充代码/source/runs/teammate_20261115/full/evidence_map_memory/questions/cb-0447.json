@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0447",
+  "method": "evidence_map_memory",
+  "input_sha256": "42d7f93bcc92edc8b76183c552289f8c9dc03814de647c65d6c0efec1f0d7bdc",
+  "accepted_answers": [
+    "Technische Hochschule Berlin",
+    "Massey University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Daniel C. Jeffares",
+        "sense": "education",
+        "answers": [
+          "Technische Hochschule Berlin"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Daniel C. Jeffares",
+        "sense": "education",
+        "answers": [
+          "Massey University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Daniel C. Jeffares, education: Technische Hochschule Berlin [1]. Basis: one source.\nDaniel C. Jeffares, education: Massey University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4433,
+    "completion_tokens": 358,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 55,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1088,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 817,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1244,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 473,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Daniel C. Jeffares (academic)",
+          "answer": "University of Edinburgh",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Daniel C. Jeffares",
+              "sense": "not stated",
+              "answer": "Technische Hochschule Berlin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jeffares attended the prestigious Technische Hochschule Berlin (THB), a former Prussian college, from 1973 to 1977.",
+              "claim": "Daniel C. Jeffares attended the Technische Hochschule Berlin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Daniel C. Jeffares",
+              "sense": "not stated",
+              "answer": "Massey University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Jeffares attended Massey University, a renowned university in New Zealand, where he pursued his higher education.",
+              "claim": "Daniel C. Jeffares attended Massey University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Daniel C. Jeffares",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Technische Hochschule Berlin",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Daniel C. Jeffares",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Massey University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Daniel C. Jeffares",
+          "sense": "education",
+          "answers": [
+            "Technische Hochschule Berlin",
+            "Massey University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Technische Hochschule Berlin",
+          "b": "Massey University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different educational institutions"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

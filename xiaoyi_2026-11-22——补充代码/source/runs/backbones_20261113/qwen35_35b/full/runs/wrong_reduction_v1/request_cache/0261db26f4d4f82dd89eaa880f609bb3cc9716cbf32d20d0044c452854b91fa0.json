@@ -1,0 +1,161 @@
+{
+  "key": "0261db26f4d4f82dd89eaa880f609bb3cc9716cbf32d20d0044c452854b91fa0",
+  "model_revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "request": {
+    "model": "qwen35_35b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: Where is Interstate 235 located?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-9d10faf653ddb0f6",
+    "object": "chat.completion",
+    "created": 1794546753,
+    "model": "qwen35_35b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"accepted_answers\": [\"Interstate 235 is located in the United States, specifically as a loop around Boise, Idaho, and another segment near Des Moines, Iowa.\"],\n  \"explanation\": \"I am certain I-235 exists in Idaho and Iowa. Without external data, I cannot confirm if other segments exist, so this answer is based on general knowledge of major US highways.\"\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 63,
+      "total_tokens": 152,
+      "completion_tokens": 89,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\n  \"accepted_answers\": [\"Interstate 235 is located in the United States, specifically as a loop around Boise, Idaho, and another segment near Des Moines, Iowa.\"],\n  \"explanation\": \"I am certain I-235 exists in Idaho and Iowa. Without external data, I cannot confirm if other segments exist, so this answer is based on general knowledge of major US highways.\"\n}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 63,
+    "total_tokens": 152,
+    "completion_tokens": 89,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 63,
+  "prompt_token_ids": [
+    248045,
+    846,
+    198,
+    15947,
+    1132,
+    678,
+    1765,
+    9218,
+    6337,
+    11,
+    4087,
+    279,
+    3296,
+    1518,
+    8847,
+    29413,
+    9017,
+    13,
+    3054,
+    524,
+    7692,
+    38225,
+    12688,
+    13,
+    3301,
+    4566,
+    11330,
+    59531,
+    321,
+    15673,
+    26,
+    2426,
+    15673,
+    1172,
+    19,
+    15,
+    4105,
+    321,
+    20335,
+    1910,
+    948,
+    33955,
+    13,
+    15380,
+    25,
+    10646,
+    369,
+    63284,
+    220,
+    17,
+    18,
+    20,
+    7172,
+    30,
+    248046,
+    198,
+    248045,
+    74455,
+    198,
+    248068,
+    271,
+    248069,
+    271
+  ],
+  "latency_seconds": 18.25910224765539,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

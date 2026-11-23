@@ -1,0 +1,148 @@
+{
+  "question_id": "ramdocs-0418-24c51ee113b4",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2,100",
+    "5,000",
+    "4,843",
+    "2,070"
+  ],
+  "requests": [
+    {
+      "key": "583b059cc4a64c159e928f40a7f6222b2cadce61f461a70fd3fe8fd776c93161",
+      "usage": {
+        "prompt_tokens": 9754,
+        "total_tokens": 10174,
+        "completion_tokens": 420,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.40503217279911,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "583b059cc4a64c159e928f40a7f6222b2cadce61f461a70fd3fe8fd776c93161",
+      "text": "{\n  \"accepted_answers\": [\n    \"2,100\",\n    \"5,000\",\n    \"4,843\",\n    \"2,070\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Lake Mills'. The sources contain data for two distinct entities: 'Lake Mills, Iowa' and 'Lake Mills (town), Wisconsin'. \\n\\n1. **Lake Mills, Iowa**: \\n   - Source D1S2 and D1S8 state the population was **2,100** at the 2010 census.\\n   - Source D6S6 and D7S3 state the population was **4,843** at the 2000 census.\\n   - Source D4S2 claims a current population of **5,000** based on 2024 data (though D2S2 suggests ~2,115, the explicit claim in D4S2 is 5,000).\\n   - Other historical figures (2,115, 2,131, etc.) are present in tables but the specific census counts (2,100, 4,843) and the explicit 'current' claim (5,000) are the primary extracted values.\\n\\n2. **Lake Mills (town), Wisconsin**: \\n   - Source D8S6 explicitly states the population was **2,070** at the 2010 census.\\n\\nThe value 2,070 is valid for the Wisconsin town, while 2,100, 4,843, and 5,000 are valid for the Iowa city under different scopes (2010, 2000, and 2024 respectively). All four values represent distinct valid referents or time-bound assertions found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0418-24c51ee113b4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0418-24c51ee113b4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2,100",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "4,843",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2,070",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "2,115",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "2,131",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "2,144",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "2,143",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "2,191",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "2,140",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "2,124",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "2,281",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "1,758",
+      "origin": "proposal"
+    },
+    {
+      "id": "C13",
+      "answer": "1,677",
+      "origin": "proposal"
+    },
+    {
+      "id": "C14",
+      "answer": "1,529",
+      "origin": "proposal"
+    },
+    {
+      "id": "C15",
+      "answer": "1,293",
+      "origin": "proposal"
+    },
+    {
+      "id": "C16",
+      "answer": "604",
+      "origin": "proposal"
+    },
+    {
+      "id": "C17",
+      "answer": "414",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2,100",
+      "5,000",
+      "4,843",
+      "2,070"
+    ],
+    "explanation": "The question asks for the population of 'Lake Mills'. The sources contain data for two distinct entities: 'Lake Mills, Iowa' and 'Lake Mills (town), Wisconsin'. \n\n1. **Lake Mills, Iowa**: \n   - Source D1S2 and D1S8 state the population was **2,100** at the 2010 census.\n   - Source D6S6 and D7S3 state the population was **4,843** at the 2000 census.\n   - Source D4S2 claims a current population of **5,000** based on 2024 data (though D2S2 suggests ~2,115, the explicit claim in D4S2 is 5,000).\n   - Other historical figures (2,115, 2,131, etc.) are present in tables but the specific census counts (2,100, 4,843) and the explicit 'current' claim (5,000) are the primary extracted values.\n\n2. **Lake Mills (town), Wisconsin**: \n   - Source D8S6 explicitly states the population was **2,070** at the 2010 census.\n\nThe value 2,070 is valid for the Wisconsin town, while 2,100, 4,843, and 5,000 are valid for the Iowa city under different scopes (2010, 2000, and 2024 respectively). All four values represent distinct valid referents or time-bound assertions found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "5213fe5838fbcecc539994b2a7abe0352b6d324bb1235c0d854c9f620104b49f"
+}

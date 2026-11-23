@@ -1,0 +1,242 @@
+{
+  "question_id": "cb-0082",
+  "method": "evidence_map_memory",
+  "input_sha256": "18745ffdf65ab33714345cdb439709dcd72b37ee3fd8eb07756516bfb2e7ab83",
+  "accepted_answers": [
+    "Fondation Custodia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Portrait of a man, probably Christiaan Josi",
+        "sense": "ownership",
+        "answers": [
+          "Fondation Custodia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Pieter Christoffel Wonder, the master himself, painted it."
+            ],
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Portrait of a man, probably Christiaan Josi, ownership: Fondation Custodia [2]. Basis: forced: the model's reading of the documents. Outweighed: Pieter Christoffel Wonder, the master himself, painted it. [1].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 6467,
+    "completion_tokens": 515,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 177,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 555,
+          "completion_tokens": 48,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1533,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 531,
+          "completion_tokens": 38,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1386,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Subject",
+          "answer": "Christiaan Josi",
+          "confidence": 80
+        },
+        {
+          "about": "Owner",
+          "answer": "Not specified",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Portrait of a man, probably Christiaan Josi",
+              "sense": "not stated",
+              "answer": "Pieter Christoffel Wonder, the master himself, painted it.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Pieter Christoffel Wonder, the master himself, painted it.",
+              "claim": "The master, Pieter Christoffel Wonder, painted the Portrait of a man, probably Christiaan Josi.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Portrait of a man, probably Christiaan Josi",
+              "sense": "not stated",
+              "answer": "Fondation Custodia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Among its impressive collection is a captivating portrait, \"Portrait of a man, probably Christiaan Josi,\" crafted by the skilled hands of Pieter Christoffel Wonder. This exquisite piece, a testament to the mastery of Dutch art, has found a permanent home within the walls of Fondation Custodia, where it is cherished and admired by art enthusiasts from around the world.",
+              "claim": "The portrait 'Portrait of a man, probably Christiaan Josi' is owned by Fondation Custodia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Portrait of a man, probably Christiaan Josi",
+            "sense": "ownership",
+            "sense_unknown": false,
+            "answer": "Pieter Christoffel Wonder, the master himself, painted it.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Portrait of a man, probably Christiaan Josi",
+            "sense": "ownership",
+            "sense_unknown": false,
+            "answer": "Fondation Custodia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Portrait of a man, probably Christiaan Josi",
+          "sense": "ownership",
+          "answers": [
+            "Pieter Christoffel Wonder, the master himself, painted it.",
+            "Fondation Custodia"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Pieter Christoffel Wonder, the master himself, painted it.",
+          "b": "Fondation Custodia",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "Both answers provide information about the ownership of the same painting, so they cannot be considered different entities, senses, or times."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Portrait of a man, probably Christiaan Josi",
+          "sense": "ownership",
+          "answers": [
+            "Pieter Christoffel Wonder, the master himself, painted it.",
+            "Fondation Custodia"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Pieter Christoffel Wonder, the master himself, painted it.": 1,
+                "Fondation Custodia": 1
+              }
+            },
+            {
+              "evidence": "memory",
+              "backs": []
+            }
+          ],
+          "stands": "Fondation Custodia",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

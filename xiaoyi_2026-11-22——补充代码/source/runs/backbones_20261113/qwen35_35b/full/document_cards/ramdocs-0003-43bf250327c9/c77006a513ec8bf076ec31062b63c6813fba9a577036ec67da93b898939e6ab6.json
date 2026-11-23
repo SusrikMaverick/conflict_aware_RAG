@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "e35d6e6fa1967e46513dd203f5efa652d9857ec733123f41b558b93fb58b82fb",
+  "input": {
+    "question_id": "ramdocs-0003-43bf250327c9",
+    "question": "What sport is Ryan Davis associated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0003-43bf250327c9:d02",
+        "text": "195 cm ( 6 ft 5 in ) Weight 90 kg ( 198 lb ) Playing career 1 Years Club Games ( Goals ) 1991–1993 Fitzroy 5 ( 1 ) 1 Playing statistics correct to the end of 1993. Sources: AFL Tables, AustralianFootball.com Bradley James Davis (born 18 July 1972) is a former basketball player who played in the National Basketball Association (NBA). A center, Davis started his career at the Burnie Hawks, from where he was drafted by an NBA team. They selected him due to his impressive height and skills, which made him a valuable asset in the league."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0003-43bf250327c9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "basketball"
+    ],
+    "citations": [
+      {
+        "answer": "basketball",
+        "doc_id": "ramdocs-0003-43bf250327c9:d02",
+        "quote": "Sources: AFL Tables, AustralianFootball.com Bradley James Davis (born 18 July 1972) is a former basketball player who played in the National Basketball Association (NBA). A center, Davis started his career at the Burnie Hawks, from where he was drafted by an NBA team."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "basketball",
+        "entity": "Ryan Davis",
+        "scope": "sport",
+        "claim": "Bradley James Davis is a former basketball player who played in the National Basketball Association (NBA).",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "quote": "Sources: AFL Tables, AustralianFootball.com Bradley James Davis (born 18 July 1972) is a former basketball player who played in the National Basketball Association (NBA). A center, Davis started his career at the Burnie Hawks, from where he was drafted by an NBA team.",
+        "span_start": 164,
+        "span_end": 432,
+        "doc_id": "ramdocs-0003-43bf250327c9:d02",
+        "card_id": "ramdocs-0003-43bf250327c9:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 163,
+        "text": "195 cm ( 6 ft 5 in ) Weight 90 kg ( 198 lb ) Playing career 1 Years Club Games ( Goals ) 1991–1993 Fitzroy 5 ( 1 ) 1 Playing statistics correct to the end of 1993."
+      },
+      {
+        "id": "s1",
+        "start": 164,
+        "end": 334,
+        "text": "Sources: AFL Tables, AustralianFootball.com Bradley James Davis (born 18 July 1972) is a former basketball player who played in the National Basketball Association (NBA)."
+      },
+      {
+        "id": "s2",
+        "start": 335,
+        "end": 432,
+        "text": "A center, Davis started his career at the Burnie Hawks, from where he was drafted by an NBA team."
+      },
+      {
+        "id": "s3",
+        "start": 433,
+        "end": 538,
+        "text": "They selected him due to his impressive height and skills, which made him a valuable asset in the league."
+      }
+    ],
+    "requests": [
+      {
+        "key": "8f26638ef9fa6b5b001ea86f091f21e1478351f2b0ed38f486ad2e75a503a3b9",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 516,
+          "completion_tokens": 86,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 15.136185254901648,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

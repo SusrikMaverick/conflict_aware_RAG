@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0293-fe4c552296d4",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "rock",
+    "comedy-drama caper"
+  ],
+  "requests": [
+    {
+      "key": "bd1bd248bca596d3bf6ea71d33b1ab1d7a7e0dd66a52d7a3cc7c8e90f45b9fc5",
+      "usage": {
+        "prompt_tokens": 2064,
+        "total_tokens": 2208,
+        "completion_tokens": 144,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 102.30130583420396,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bd1bd248bca596d3bf6ea71d33b1ab1d7a7e0dd66a52d7a3cc7c8e90f45b9fc5",
+      "text": "{\n  \"accepted_answers\": [\n    \"rock\",\n    \"comedy-drama caper\"\n  ],\n  \"explanation\": \"The question asks for the genre of \\\"The Hot Rock,\\\" which refers to two distinct works: an album and a film. From D1S1, we learn that *The Hot Rock* is a rock album by Sleater-Kinney. From D2S1, we learn that *The Hot Rock* is also a 1972 comedy-drama caper film. Both are valid genres for their respective works and do not conflict because they refer to different entities. The audits confirm direct support for both answers without resolving ambiguity between the referents.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0293-fe4c552296d4.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0293-fe4c552296d4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "rock",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "comedy-drama caper",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "rock",
+      "comedy-drama caper"
+    ],
+    "explanation": "The question asks for the genre of \"The Hot Rock,\" which refers to two distinct works: an album and a film. From D1S1, we learn that *The Hot Rock* is a rock album by Sleater-Kinney. From D2S1, we learn that *The Hot Rock* is also a 1972 comedy-drama caper film. Both are valid genres for their respective works and do not conflict because they refer to different entities. The audits confirm direct support for both answers without resolving ambiguity between the referents."
+  },
+  "diagnostics": {},
+  "row_sha256": "9e73098a1a3ae408345e41e68f276feb9986df8bf1ec52d253f11a7ba11b6b29"
+}

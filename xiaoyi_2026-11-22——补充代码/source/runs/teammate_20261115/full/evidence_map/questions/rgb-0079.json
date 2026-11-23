@@ -1,0 +1,209 @@
+{
+  "question_id": "rgb-0079",
+  "method": "evidence_map",
+  "input_sha256": "d730bdef33d3fb6073cd9a8cb47af47684d82c62f940f6870ffc05d618584952",
+  "accepted_answers": [
+    "Tabatha Rosproy",
+    "Juliana Urtubey"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2020 National Teacher of the Year",
+        "sense": "2020",
+        "answers": [
+          "Tabatha Rosproy"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "2020 National Teacher of the Year",
+        "sense": "2020",
+        "answers": [
+          "Juliana Urtubey"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "2020 National Teacher of the Year, 2020: Tabatha Rosproy [2]. Basis: one source.\n2020 National Teacher of the Year, 2020: Juliana Urtubey [3]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 3686,
+    "completion_tokens": 392,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 617,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 614,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 546,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 614,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 528,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": "2020",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Tabatha Rosproy",
+              "sense": "2020 National Teacher of the Year",
+              "answer": "Tabatha Rosproy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2020 National Teacher of the Year Tabatha Rosproy Kansas ... Tabatha Rosproy was an excellent student – so eager to learn, that in fact, she asked to go to summer...",
+              "claim": "Tabatha Rosproy was named the 2020 National Teacher of the Year.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Juliana Urtubey",
+              "sense": "2020",
+              "answer": "Juliana Urtubey",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2020 National Teacher of the Year Juliana Urtubey Kansas ... Juliana Urtubey was an excellent student – so eager to learn, that in fact, she asked to go to summer...",
+              "claim": "Juliana Urtubey was named the 2020 National Teacher of the Year.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2020 National Teacher of the Year",
+            "sense": "2020",
+            "sense_unknown": false,
+            "answer": "Tabatha Rosproy",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2020 National Teacher of the Year",
+            "sense": "2020",
+            "sense_unknown": false,
+            "answer": "Juliana Urtubey",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "2020 National Teacher of the Year",
+          "sense": "2020",
+          "answers": [
+            "Tabatha Rosproy",
+            "Juliana Urtubey"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Tabatha Rosproy",
+          "b": "Juliana Urtubey",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The names provided are different and no additional context suggests they refer to the same person."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

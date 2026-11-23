@@ -1,0 +1,127 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "df4184502832303dea808cfffdf494e63ab647ff3618673375761b87cc8197b4",
+  "input": {
+    "question_id": "ramdocs-0111-972f2dafac94",
+    "question": "When was Robert Hutchinson elected to a public office?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0111-972f2dafac94:d00",
+        "text": "Ann Gray, with whom he had one son and three daughters. In 1890, he returned to Geraldton with his young family, and was elected to the Geraldton Town Council in 1892. He was made a Justice of the Peace in 1898, and became Mayor of Geraldton from 1898 until 1900. At a by-election on 24 July 1900 following the resignation of Richard Robson, Hutchinson was elected to the Western Australian Legislative Assembly for the seat of Geraldton. He was in opposition to the party led by Premier Sir John Forrest, and in the confusing parliamentary situation created by the 1901"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0111-972f2dafac94",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1892",
+      "24 July 1900"
+    ],
+    "citations": [
+      {
+        "answer": "1892",
+        "doc_id": "ramdocs-0111-972f2dafac94:d00",
+        "quote": "In 1890, he returned to Geraldton with his young family, and was elected to the Geraldton Town Council in 1892."
+      },
+      {
+        "answer": "24 July 1900",
+        "doc_id": "ramdocs-0111-972f2dafac94:d00",
+        "quote": "At a by-election on 24 July 1900 following the resignation of Richard Robson, Hutchinson was elected to the Western Australian Legislative Assembly for the seat of Geraldton."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1892",
+        "entity": "Robert Hutchinson",
+        "scope": "elected to the Geraldton Town Council",
+        "claim": "Robert Hutchinson was elected to the Geraldton Town Council in 1892.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "In 1890, he returned to Geraldton with his young family, and was elected to the Geraldton Town Council in 1892.",
+        "span_start": 56,
+        "span_end": 167,
+        "doc_id": "ramdocs-0111-972f2dafac94:d00",
+        "card_id": "ramdocs-0111-972f2dafac94:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "24 July 1900",
+        "entity": "Robert Hutchinson",
+        "scope": "elected to the Western Australian Legislative Assembly",
+        "claim": "Robert Hutchinson was elected to the Western Australian Legislative Assembly for the seat of Geraldton on 24 July 1900.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "At a by-election on 24 July 1900 following the resignation of Richard Robson, Hutchinson was elected to the Western Australian Legislative Assembly for the seat of Geraldton.",
+        "span_start": 264,
+        "span_end": 438,
+        "doc_id": "ramdocs-0111-972f2dafac94:d00",
+        "card_id": "ramdocs-0111-972f2dafac94:d00:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 55,
+        "text": "Ann Gray, with whom he had one son and three daughters."
+      },
+      {
+        "id": "s1",
+        "start": 56,
+        "end": 167,
+        "text": "In 1890, he returned to Geraldton with his young family, and was elected to the Geraldton Town Council in 1892."
+      },
+      {
+        "id": "s2",
+        "start": 168,
+        "end": 263,
+        "text": "He was made a Justice of the Peace in 1898, and became Mayor of Geraldton from 1898 until 1900."
+      },
+      {
+        "id": "s3",
+        "start": 264,
+        "end": 438,
+        "text": "At a by-election on 24 July 1900 following the resignation of Richard Robson, Hutchinson was elected to the Western Australian Legislative Assembly for the seat of Geraldton."
+      },
+      {
+        "id": "s4",
+        "start": 439,
+        "end": 570,
+        "text": "He was in opposition to the party led by Premier Sir John Forrest, and in the confusing parliamentary situation created by the 1901"
+      }
+    ],
+    "requests": [
+      {
+        "key": "c9d0ed50c6824f9e694c85e23319f2674dfe03e5a4061f0463fd32312600fb44",
+        "usage": {
+          "prompt_tokens": 439,
+          "total_tokens": 575,
+          "completion_tokens": 136,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 46.355429757386446,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

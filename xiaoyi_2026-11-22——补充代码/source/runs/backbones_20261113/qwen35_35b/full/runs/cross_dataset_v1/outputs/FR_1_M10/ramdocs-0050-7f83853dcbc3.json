@@ -1,0 +1,114 @@
+{
+  "question_id": "ramdocs-0050-7f83853dcbc3",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "a British rock band",
+    "a protest song and a work of ambient music"
+  ],
+  "requests": [
+    {
+      "key": "4b350002bef837c23dd20b40c8788c78798dd8a73b8c118e0a8b056adf3587b8",
+      "usage": {
+        "prompt_tokens": 4018,
+        "total_tokens": 4326,
+        "completion_tokens": 308,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.11239664256573,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4b350002bef837c23dd20b40c8788c78798dd8a73b8c118e0a8b056adf3587b8",
+      "text": "{\n  \"accepted_answers\": [\n    \"a British rock band\",\n    \"a protest song and a work of ambient music\"\n  ],\n  \"explanation\": \"The question asks for the identity of 'The 1975'. The provided documents contain two distinct referents sharing this name. D1S2, D1S5, D1S6, D2S1-D2S4, and D4S1-D4S4 describe 'The 1975' as a British rock band (referenced via context like 'Healy', 'Arctic Monkeys', 'debut album', and tours). D3S2 explicitly describes a song titled 'The 1975' on the album 'Notes on a Conditional Form' as 'a protest song and a work of ambient music' featuring Greta Thunberg. The slot hint 'other' allows for non-standard categories, validating both the band and the song as distinct valid answers. The other candidates (C2-C11) are descriptive attributes of the band found in the text but do not define what 'The 1975' *is* in the same fundamental way as the genre/type definitions provided in C0 and C1. The audit labels marking C1 as 'wrong_argument' are incorrect because the text in D3S2 directly defines the entity 'The 1975' (the song) with that description.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0050-7f83853dcbc3.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0050-7f83853dcbc3.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "a British rock band",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "a protest song and a work of ambient music",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "a band formed by members who started playing together at age 13",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "a band whose lead singer originally played drums",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "a band that sold out shows before their debut album",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "a band that toured with The Neighbourhood in the US in June 2013",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "a band that supported the Rolling Stones in Hyde Park on 13 July 2013",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "a band that performed at the 2013 Reading and Leeds Festivals",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "a band whose debut album debuted at number one on the UK Albums Chart",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "a band that released a re-worked single \"Sex\" on 26 August 2013",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "a band that premiered a song on Zane Lowe's BBC Radio 1 show on 8 July 2013",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "a band that toured in the UK in September 2013 including Kingston upon Hull",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "a British rock band",
+      "a protest song and a work of ambient music"
+    ],
+    "explanation": "The question asks for the identity of 'The 1975'. The provided documents contain two distinct referents sharing this name. D1S2, D1S5, D1S6, D2S1-D2S4, and D4S1-D4S4 describe 'The 1975' as a British rock band (referenced via context like 'Healy', 'Arctic Monkeys', 'debut album', and tours). D3S2 explicitly describes a song titled 'The 1975' on the album 'Notes on a Conditional Form' as 'a protest song and a work of ambient music' featuring Greta Thunberg. The slot hint 'other' allows for non-standard categories, validating both the band and the song as distinct valid answers. The other candidates (C2-C11) are descriptive attributes of the band found in the text but do not define what 'The 1975' *is* in the same fundamental way as the genre/type definitions provided in C0 and C1. The audit labels marking C1 as 'wrong_argument' are incorrect because the text in D3S2 directly defines the entity 'The 1975' (the song) with that description."
+  },
+  "diagnostics": {},
+  "row_sha256": "5427fc7b71baec80cade306dcb3fb4982c01efb55297470092dbb018ef63c809"
+}

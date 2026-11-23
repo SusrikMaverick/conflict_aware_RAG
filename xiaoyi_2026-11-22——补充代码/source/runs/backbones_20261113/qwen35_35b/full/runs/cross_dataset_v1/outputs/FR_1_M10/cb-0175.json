@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0175",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "to identify and target areas with high crime rates, with a focus on precrime",
+    "vibrant art galleries"
+  ],
+  "requests": [
+    {
+      "key": "bb5d05bc4e9a931b88eba6785ce28d413acfe73c76955bc42346ca679999bc17",
+      "usage": {
+        "prompt_tokens": 3728,
+        "total_tokens": 3935,
+        "completion_tokens": 207,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.5504788197577,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bb5d05bc4e9a931b88eba6785ce28d413acfe73c76955bc42346ca679999bc17",
+      "text": "{\n  \"accepted_answers\": [\n    \"to identify and target areas with high crime rates, with a focus on precrime\",\n    \"vibrant art galleries\"\n  ],\n  \"explanation\": \"The question asks for the 'main use' of the zones. Document D1 explicitly states the main use of the original SERZ was 'to identify and target areas with high crime rates, with a focus on precrime' (D1S3). Document D2 describes the current state of the zones after being repurposed, stating they have been transformed into 'vibrant art galleries' (D2S2). The fallible audits incorrectly labeled the second answer as a 'wrong_argument' based on a mismatched slot ('political_party') and ignored the temporal shift from the original policing software to the current repurposed facilities. Both answers represent valid uses of the entity at different times, satisfying the requirement to preserve distinct valid referents and complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0175.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0175.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "to identify and target areas with high crime rates, with a focus on precrime",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "vibrant art galleries",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "to identify and target areas with high crime rates, with a focus on precrime",
+      "vibrant art galleries"
+    ],
+    "explanation": "The question asks for the 'main use' of the zones. Document D1 explicitly states the main use of the original SERZ was 'to identify and target areas with high crime rates, with a focus on precrime' (D1S3). Document D2 describes the current state of the zones after being repurposed, stating they have been transformed into 'vibrant art galleries' (D2S2). The fallible audits incorrectly labeled the second answer as a 'wrong_argument' based on a mismatched slot ('political_party') and ignored the temporal shift from the original policing software to the current repurposed facilities. Both answers represent valid uses of the entity at different times, satisfying the requirement to preserve distinct valid referents and complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "4649cd319ef005416f6171cb768de6b4307addd2b203ed6749f5aed3a6f2fa8c"
+}

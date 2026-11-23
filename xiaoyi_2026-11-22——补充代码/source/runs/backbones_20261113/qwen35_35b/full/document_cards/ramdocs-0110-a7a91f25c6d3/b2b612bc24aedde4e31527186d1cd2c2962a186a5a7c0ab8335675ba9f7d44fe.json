@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "e2239c06605c17fa46b19f2758fd3837945b99c6bcbfd4ee65c29aa29d60abd8",
+  "input": {
+    "question_id": "ramdocs-0110-a7a91f25c6d3",
+    "question": "What is the population of Sherbourne?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0110-a7a91f25c6d3:d04",
+        "text": "The railway line, which connects London to Penzance, runs through the town. In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234. 28.7% of the population is aged 65 or older. Sherborne's historic buildings include Sherborne Abbey, its manor house, independent schools, and two castles: the ruins of a 12th-century fortified palace and the 16th-century mansion known as Sherborne Castle built by Sir Walter Raleigh. Much of the old town, including the abbey and many medieval and Georgian buildings, is built from distinctive local stone."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0110-a7a91f25c6d3",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1,234"
+    ],
+    "citations": [
+      {
+        "answer": "1,234",
+        "doc_id": "ramdocs-0110-a7a91f25c6d3:d04",
+        "quote": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1,234",
+        "entity": "Sherborne",
+        "scope": "2011 census",
+        "claim": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234.",
+        "span_start": 76,
+        "span_end": 169,
+        "doc_id": "ramdocs-0110-a7a91f25c6d3:d04",
+        "card_id": "ramdocs-0110-a7a91f25c6d3:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 75,
+        "text": "The railway line, which connects London to Penzance, runs through the town."
+      },
+      {
+        "id": "s1",
+        "start": 76,
+        "end": 169,
+        "text": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234."
+      },
+      {
+        "id": "s2",
+        "start": 170,
+        "end": 214,
+        "text": "28.7% of the population is aged 65 or older."
+      },
+      {
+        "id": "s3",
+        "start": 215,
+        "end": 454,
+        "text": "Sherborne's historic buildings include Sherborne Abbey, its manor house, independent schools, and two castles: the ruins of a 12th-century fortified palace and the 16th-century mansion known as Sherborne Castle built by Sir Walter Raleigh."
+      },
+      {
+        "id": "s4",
+        "start": 455,
+        "end": 577,
+        "text": "Much of the old town, including the abbey and many medieval and Georgian buildings, is built from distinctive local stone."
+      }
+    ],
+    "requests": [
+      {
+        "key": "7d938bfeafa4bffd7e4bf3653b9842610e9566ff514daf636262eb106454e606",
+        "usage": {
+          "prompt_tokens": 430,
+          "total_tokens": 526,
+          "completion_tokens": 96,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 31.125123232603073,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

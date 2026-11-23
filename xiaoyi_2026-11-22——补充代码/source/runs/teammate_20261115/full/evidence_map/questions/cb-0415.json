@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0415",
+  "method": "evidence_map",
+  "input_sha256": "3b006fa99549bb7da601ca5f0f58679d6f88b91110a751944c7a9af86ccb8d7f",
+  "accepted_answers": [
+    "Guggenheim Fellowship",
+    "EMET Prize for Art, Science and Culture"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Samuel Yellen",
+        "sense": "award",
+        "answers": [
+          "Guggenheim Fellowship"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Samuel Yellen",
+        "sense": "award",
+        "answers": [
+          "EMET Prize for Art, Science and Culture"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Samuel Yellen, award: Guggenheim Fellowship [1]. Basis: one source.\nSamuel Yellen, award: EMET Prize for Art, Science and Culture [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4568,
+    "completion_tokens": 304,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1009,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 492,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1400,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 468,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Samuel Yellen",
+              "sense": "not stated",
+              "answer": "Guggenheim Fellowship",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In a testament to his outstanding contributions to American literature, acclaimed novelist Samuel Yellen has been awarded the esteemed Guggenheim Fellowship, a prestigious grant recognizing excellence in the arts.",
+              "claim": "Samuel Yellen received the Guggenheim Fellowship.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Samuel Yellen",
+              "sense": "not stated",
+              "answer": "EMET Prize for Art, Science and Culture",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "And the EMET Prize for Art, Science and Culture goes to... Samuel Yellen!",
+              "claim": "The EMET Prize for Art, Science and Culture went to Samuel Yellen.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Samuel Yellen",
+            "sense": "award",
+            "sense_unknown": false,
+            "answer": "Guggenheim Fellowship",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Samuel Yellen",
+            "sense": "award",
+            "sense_unknown": false,
+            "answer": "EMET Prize for Art, Science and Culture",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Samuel Yellen",
+          "sense": "award",
+          "answers": [
+            "Guggenheim Fellowship",
+            "EMET Prize for Art, Science and Culture"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Guggenheim Fellowship",
+          "b": "EMET Prize for Art, Science and Culture",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

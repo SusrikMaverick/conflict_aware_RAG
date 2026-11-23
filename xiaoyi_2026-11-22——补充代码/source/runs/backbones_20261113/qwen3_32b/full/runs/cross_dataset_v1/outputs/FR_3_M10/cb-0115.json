@@ -1,0 +1,75 @@
+{
+  "question_id": "cb-0115",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "member of the Chamber of Deputies of Chile",
+    "Minister of Finance in Brazil"
+  ],
+  "requests": [
+    {
+      "key": "10ff308187b40b6c69c0a176bbfdfa34734d810a2e6616de2f4ca54ee19859d1",
+      "usage": {
+        "prompt_tokens": 3166,
+        "total_tokens": 3358,
+        "completion_tokens": 192,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 124.48703211918473,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "10ff308187b40b6c69c0a176bbfdfa34734d810a2e6616de2f4ca54ee19859d1",
+      "text": "{\n  \"accepted_answers\": [\n    \"member of the Chamber of Deputies of Chile\",\n    \"Minister of Finance in Brazil\"\n  ],\n  \"explanation\": \"The original sources confirm two distinct positions held by Enrique Matta Figueroa: (1) as a member of the Chamber of Deputies of Chile from 1933 to 1937 (D1S3), and (2) as the newly appointed Minister of Finance in Brazil (D2S2). The phrase 'deputy of Chile' (C2) is redundant with the more specific 'member of the Chamber of Deputies of Chile' (C0), so it is not added separately. The proposed candidate 'Minister of Finance in Brazil' (C3) is included as it provides the full context of the position and aligns with D2S2. All accepted answers are supported directly by the original sources.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0115.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0115.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "member of the Chamber of Deputies of Chile",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Minister of Finance",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "deputy of Chile",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Minister of Finance in Brazil",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "member of the Chamber of Deputies of Chile",
+      "Minister of Finance in Brazil"
+    ],
+    "explanation": "The original sources confirm two distinct positions held by Enrique Matta Figueroa: (1) as a member of the Chamber of Deputies of Chile from 1933 to 1937 (D1S3), and (2) as the newly appointed Minister of Finance in Brazil (D2S2). The phrase 'deputy of Chile' (C2) is redundant with the more specific 'member of the Chamber of Deputies of Chile' (C0), so it is not added separately. The proposed candidate 'Minister of Finance in Brazil' (C3) is included as it provides the full context of the position and aligns with D2S2. All accepted answers are supported directly by the original sources."
+  },
+  "diagnostics": {},
+  "row_sha256": "1a380ea9f8f1f89386cc88e67decfc424cfed09a5081a2534d0bc72b08a9064c"
+}

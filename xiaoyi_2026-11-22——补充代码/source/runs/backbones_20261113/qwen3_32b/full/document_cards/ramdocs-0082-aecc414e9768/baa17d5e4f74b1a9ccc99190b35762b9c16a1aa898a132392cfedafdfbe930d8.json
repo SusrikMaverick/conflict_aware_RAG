@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "34d722a88cf084b55b5419b45a619a4644d6d377c4d178423dc7ba997fc9a36f",
+  "input": {
+    "question_id": "ramdocs-0082-aecc414e9768",
+    "question": "What political party is John Dailey affiliated with?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0082-aecc414e9768:d02",
+        "text": "[ 42 ] [ 43 ] [ 44 ] [ 45 ] Daley's campaign placed an emphasis on fundraising. [ 46 ] Daley vastly out-fundraised his opponents. A significant financial contributor to Daley's campaign was Illinois billionaire Kenneth C. Griffin. [ 47 ] Griffin's financial support of Daley's campaign proved controversial for Daley, largely because Griffin had also been a major financial backer of the failed 2018 reelection campaign of Republican former Illinois governor Bruce Rauner. [ 46 ] Daley's strong fundraising enabled him to run highly visible advertising, which helped solidify his position as a leading Democratic candidate."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0082-aecc414e9768",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Democratic"
+    ],
+    "citations": [
+      {
+        "answer": "Democratic",
+        "doc_id": "ramdocs-0082-aecc414e9768:d02",
+        "quote": "[ 46 ] Daley's strong fundraising enabled him to run highly visible advertising, which helped solidify his position as a leading Democratic candidate."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Democratic",
+        "entity": "John Dailey",
+        "scope": "political party affiliation",
+        "claim": "John Dailey is affiliated with the Democratic political party.",
+        "source_ids": [
+          "s5"
+        ],
+        "quote": "[ 46 ] Daley's strong fundraising enabled him to run highly visible advertising, which helped solidify his position as a leading Democratic candidate.",
+        "span_start": 473,
+        "span_end": 623,
+        "doc_id": "ramdocs-0082-aecc414e9768:d02",
+        "card_id": "ramdocs-0082-aecc414e9768:d02:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 79,
+        "text": "[ 42 ] [ 43 ] [ 44 ] [ 45 ] Daley's campaign placed an emphasis on fundraising."
+      },
+      {
+        "id": "s1",
+        "start": 80,
+        "end": 129,
+        "text": "[ 46 ] Daley vastly out-fundraised his opponents."
+      },
+      {
+        "id": "s2",
+        "start": 130,
+        "end": 221,
+        "text": "A significant financial contributor to Daley's campaign was Illinois billionaire Kenneth C."
+      },
+      {
+        "id": "s3",
+        "start": 222,
+        "end": 230,
+        "text": "Griffin."
+      },
+      {
+        "id": "s4",
+        "start": 231,
+        "end": 472,
+        "text": "[ 47 ] Griffin's financial support of Daley's campaign proved controversial for Daley, largely because Griffin had also been a major financial backer of the failed 2018 reelection campaign of Republican former Illinois governor Bruce Rauner."
+      },
+      {
+        "id": "s5",
+        "start": 473,
+        "end": 623,
+        "text": "[ 46 ] Daley's strong fundraising enabled him to run highly visible advertising, which helped solidify his position as a leading Democratic candidate."
+      }
+    ],
+    "requests": [
+      {
+        "key": "320adca2c791bd314ef6f797ec6db7d31db7b882af75d4a06265f168596a99ae",
+        "usage": {
+          "prompt_tokens": 444,
+          "total_tokens": 494,
+          "completion_tokens": 50,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 61.183790393173695,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

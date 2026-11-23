@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0340-bff88b94178c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1914",
+    "1943"
+  ],
+  "requests": [
+    {
+      "key": "0a6896fbfd36c1c62f90a91f084aa6fcb913de60246b99e5d2f56d82da58dfd4",
+      "usage": {
+        "prompt_tokens": 4463,
+        "total_tokens": 4693,
+        "completion_tokens": 230,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 94.84167570248246,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0a6896fbfd36c1c62f90a91f084aa6fcb913de60246b99e5d2f56d82da58dfd4",
+      "text": "{\n  \"accepted_answers\": [\n    \"1914\",\n    \"1943\"\n  ],\n  \"explanation\": \"The question asks for the formation year of the '64th Division,' which appears in multiple contexts across the provided sources. Two distinct entities are identified:\\n\\n1. **64th (2nd Highland) Division** (British Army): Formed in 1914, as stated in D1S2 and D1S3.\\n2. **64th Division (Imperial Japanese Army)**: Formed on 1 May 1943, as stated in D2S3 and D3S3.\\n\\nBoth assertions are independently supported by direct textual evidence and refer to different military units. There is no definitive indication that these are the same entity. The candidate '1940' (C2) is unsupported and incorrectly derived from a timeline of the 6th Air Division, which is unrelated to the 64th Division. Therefore, both 1914 and 1943 are valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0340-bff88b94178c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0340-bff88b94178c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1914",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1943",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1940",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1914",
+      "1943"
+    ],
+    "explanation": "The question asks for the formation year of the '64th Division,' which appears in multiple contexts across the provided sources. Two distinct entities are identified:\n\n1. **64th (2nd Highland) Division** (British Army): Formed in 1914, as stated in D1S2 and D1S3.\n2. **64th Division (Imperial Japanese Army)**: Formed on 1 May 1943, as stated in D2S3 and D3S3.\n\nBoth assertions are independently supported by direct textual evidence and refer to different military units. There is no definitive indication that these are the same entity. The candidate '1940' (C2) is unsupported and incorrectly derived from a timeline of the 6th Air Division, which is unrelated to the 64th Division. Therefore, both 1914 and 1943 are valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "3dacf9f70c8b989fe642879e4e787a8a06cd606ae8b421507c67ed0b6aa73707"
+}

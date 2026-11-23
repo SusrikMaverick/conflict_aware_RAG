@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "e163c4c2d5aacc7536c63830a9f71134def5e0997e8a11bcf013b9d405850514",
+  "input": {
+    "question_id": "rgb-0092",
+    "question": "What is the date of the 2021 NBA Draft?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "May 13, 2021 ... Sources: 2021 NBA Draft Combine is scheduled to take place in person June 21-27 in Chicago at Wintrust Arena and Marriott Marquis, consisting of ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0092",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "May 13, 2021"
+    ],
+    "citations": [
+      {
+        "answer": "May 13, 2021",
+        "doc_id": "d2",
+        "quote": "May 13, 2021 ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "May 13, 2021",
+        "entity": "date of the 2021 NBA Draft",
+        "scope": "explicitly stated",
+        "claim": "The 2021 NBA Draft took place on May 13, 2021.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "May 13, 2021 ...",
+        "span_start": 0,
+        "span_end": 16,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "May 13, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 165,
+        "text": "Sources: 2021 NBA Draft Combine is scheduled to take place in person June 21-27 in Chicago at Wintrust Arena and Marriott Marquis, consisting of ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "b408b068488398af1dbd8bd4587377ce4ce7ac8c3649353207bd387af1c1ba6e",
+        "usage": {
+          "prompt_tokens": 311,
+          "total_tokens": 388,
+          "completion_tokens": 77,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.84490180760622,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

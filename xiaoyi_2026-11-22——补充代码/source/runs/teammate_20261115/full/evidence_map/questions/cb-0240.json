@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0240",
+  "method": "evidence_map",
+  "input_sha256": "87841be7ec506025c80cb27d076c8f3dad1cc68e23dce548288901157948b4bd",
+  "accepted_answers": [
+    "Leipzig University",
+    "Massey University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "David Hayman",
+        "sense": "not stated",
+        "answers": [
+          "Leipzig University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "David Hayman",
+        "sense": "not stated",
+        "answers": [
+          "Massey University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "David Hayman: Leipzig University [1]. Basis: one source.\nDavid Hayman: Massey University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4109,
+    "completion_tokens": 308,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1058,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 749,
+          "completion_tokens": 96,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1161,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 488,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "David Hayman",
+              "sense": "not stated",
+              "answer": "Leipzig University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "But Leipzig University? That was a new thread in the tapestry of Hayman's career. ... Hayman had been invited to Leipzig University as a visiting researcher, where he collaborated with Müller's team on a project studying the impact of climate change on European ecosystems.",
+              "claim": "David Hayman worked for Leipzig University as a visiting researcher.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "David Hayman",
+              "sense": "not stated",
+              "answer": "Massey University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "ResearchGate Profile",
+              "evidence": "Hayman has worked as a researcher at Massey University in New Zealand.",
+              "claim": "David Hayman worked as a researcher at Massey University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "David Hayman",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Leipzig University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "David Hayman",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Massey University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "David Hayman",
+          "sense": "not stated",
+          "answers": [
+            "Leipzig University",
+            "Massey University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Leipzig University",
+          "b": "Massey University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

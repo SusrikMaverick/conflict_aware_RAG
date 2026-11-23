@@ -1,0 +1,27 @@
+{
+  "round": 2,
+  "epoch": 1794102379.81066,
+  "theme": "Neutral unknown priors and relation-level contradiction repair",
+  "previous_method": "M10",
+  "use_previous": true,
+  "prompts": {
+    "B": "Perform relation-level fact alignment. An empty or uncertain prior is UNKNOWN, never evidence that a passage is false. Retrieve any relevant background facts from your own knowledge, not merely a direct answer. Check each competing assertion against the exact subject, relation direction, timeframe, and contextual facts. Distinguish one entity with contradictory values from truly different referents. If a contradiction can be resolved coherently, answer the defensible alternative rather than both; if knowledge is genuinely insufficient, say so. The previous answer is fallible and may include false alternatives. Keep explanation one short sentence, then stop.",
+    "C": "Verify claims against complete original documents, not isolated cards. Ask whether each candidate fills the same subject-relation-time slot. Remove only actual contradictory alternatives or wrong arguments; lack of memory is not a reason to drop a supported answer. Restore valid complementary answers only when they address distinct allowed facts. Never treat all card candidates as correct. The preceding answer is merely a draft to challenge. Provide a short answer list and one concise explanatory sentence; do not repeat source paragraphs.",
+    "J_A": "Coverage-aware truth audit: absence from the memory prior is NOT counterevidence. For every candidate, decide whether there is a concrete reason to reject it, a coherent resolution supporting it, or a genuinely unresolved conflict. Do not label all unfamiliar facts uncertain merely because the prior is empty. Accept relation-fitting claims when competing claims can be reconciled by scope; reject actual conflicting false alternatives only when justified.",
+    "J_B": "Independent contradiction audit: identify whether alternatives compete for exactly the same fact. A namesake requires distinct referents supported by context, not simply different answers. A proposed answer or audit majority has no authority. Treat unknown memory as neutral. Prefer evidence that jointly satisfies the exact relation and surrounding constraints, without inventing constraints. Avoid blanket uncertainty and blanket acceptance.",
+    "F": "Repair the tentative answer set at the level of subject/relation/time. First distinguish incompatible alternatives from complementary truths. Do not union drafts. An empty memory prior is neutral. Restore an answer removed only through lack of familiarity, but exclude an incompatible alternative when the context and reliable background knowledge justify a choice. Check that each listed answer is independently warranted. Write exactly one short explanatory sentence and finish the JSON."
+  },
+  "methods": {
+    "M01": "Prior-guided document answer",
+    "M02": "Cards with prior challenge",
+    "M03": "Single-audit R5 filter",
+    "M04": "Two-audit R5 filter",
+    "M05": "Agreement-only R5 deletion",
+    "M06": "Single-audit candidate selection",
+    "M07": "Two-audit candidate selection",
+    "M08": "Two-answer intersection",
+    "M09": "Prior-answer intersection",
+    "M10": "Final contradiction adjudication"
+  },
+  "reason": "R1 hard gates over-abstain; tentative answers over-include contradictory values onCB. Reuse one globally selectedM10 draft, not a per-question oracle."
+}

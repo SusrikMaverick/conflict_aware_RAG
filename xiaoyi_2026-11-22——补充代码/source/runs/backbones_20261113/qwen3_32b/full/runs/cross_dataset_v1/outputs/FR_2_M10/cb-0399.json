@@ -1,0 +1,70 @@
+{
+  "question_id": "cb-0399",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United States Navy",
+    "Royal Navy"
+  ],
+  "requests": [
+    {
+      "key": "780de37eeb870f15ab4a017f19d6ff51080b321bd949cb1a0d94d999c1f70a2e",
+      "usage": {
+        "prompt_tokens": 3395,
+        "total_tokens": 3558,
+        "completion_tokens": 163,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 88.69738925248384,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "780de37eeb870f15ab4a017f19d6ff51080b321bd949cb1a0d94d999c1f70a2e",
+      "text": "{\n  \"accepted_answers\": [\n    \"United States Navy\",\n    \"Royal Navy\"\n  ],\n  \"explanation\": \"The question asks which military branch Ron DeSantis belongs to. Two distinct claims appear in the provided sources: (1) Document d1 describes DeSantis as having served in the Royal Navy, and (2) Document d2 states he belonged to the United States Navy. Both are direct assertions from separate documents and refer to the same individual. Since the question allows for multiple valid referents and there is no explicit contradiction between the two branches (e.g., dual citizenship or dual service), both 'United States Navy' and 'Royal Navy' are retained as valid answers. 'Navy Reserve' is not directly supported as the primary military branch and is considered incidental.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0399.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0399.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United States Navy",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Royal Navy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Navy Reserve",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United States Navy",
+      "Royal Navy"
+    ],
+    "explanation": "The question asks which military branch Ron DeSantis belongs to. Two distinct claims appear in the provided sources: (1) Document d1 describes DeSantis as having served in the Royal Navy, and (2) Document d2 states he belonged to the United States Navy. Both are direct assertions from separate documents and refer to the same individual. Since the question allows for multiple valid referents and there is no explicit contradiction between the two branches (e.g., dual citizenship or dual service), both 'United States Navy' and 'Royal Navy' are retained as valid answers. 'Navy Reserve' is not directly supported as the primary military branch and is considered incidental."
+  },
+  "diagnostics": {},
+  "row_sha256": "affdcd3b505edb5fc349bf97ce7ce617c89563199c2abdbc2eca679fcfe4e4c0"
+}

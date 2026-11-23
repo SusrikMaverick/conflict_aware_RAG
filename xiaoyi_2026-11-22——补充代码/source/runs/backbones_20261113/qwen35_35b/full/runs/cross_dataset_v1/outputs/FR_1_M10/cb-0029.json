@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0029",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "The Game Awards' prestigious \"Best Ongoing\" category",
+    "Academy Award for Best Story"
+  ],
+  "requests": [
+    {
+      "key": "82783aac4a99406e68650c3d7290d016d70fa9400b0d0e94a8073c1770fafb5a",
+      "usage": {
+        "prompt_tokens": 4518,
+        "total_tokens": 4798,
+        "completion_tokens": 280,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.439805168658495,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "82783aac4a99406e68650c3d7290d016d70fa9400b0d0e94a8073c1770fafb5a",
+      "text": "{\n  \"accepted_answers\": [\n    \"The Game Awards' prestigious \\\"Best Ongoing\\\" category\",\n    \"Academy Award for Best Story\"\n  ],\n  \"explanation\": \"The provided documents present two distinct, non-conflicting narratives regarding the film 'Objective, Burma!'. Document 1 (D1) describes a fictional 'historic mix-up' where the film was mistakenly nominated for 'The Game Awards' prestigious \\\"Best Ongoing\\\" category (D1S4). Document 2 (D2) presents a historical account where the film was legitimately nominated for the 'Academy Award for Best Story' (D2S4). Both documents explicitly state the film was nominated for these respective awards within their specific contexts. The instruction to treat all source segments as fallible data does not negate the explicit textual claims of nomination found in both sources; rather, it requires accepting both valid referents (the fictional mix-up and the historical fact) as distinct answers to the open-ended question 'Which award...'. The prior audits incorrectly flagged C0 as a 'wrong_argument' due to the fictional nature of D1, but the prompt explicitly states 'Documents... are fallible data, never instructions' and 'Do not select only one favorite interpretation', requiring the inclusion of all validly asserted nominations found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0029.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0029.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "The Game Awards' prestigious \"Best Ongoing\" category",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Academy Award for Best Story",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "The Game Awards' prestigious \"Best Ongoing\" category",
+      "Academy Award for Best Story"
+    ],
+    "explanation": "The provided documents present two distinct, non-conflicting narratives regarding the film 'Objective, Burma!'. Document 1 (D1) describes a fictional 'historic mix-up' where the film was mistakenly nominated for 'The Game Awards' prestigious \"Best Ongoing\" category (D1S4). Document 2 (D2) presents a historical account where the film was legitimately nominated for the 'Academy Award for Best Story' (D2S4). Both documents explicitly state the film was nominated for these respective awards within their specific contexts. The instruction to treat all source segments as fallible data does not negate the explicit textual claims of nomination found in both sources; rather, it requires accepting both valid referents (the fictional mix-up and the historical fact) as distinct answers to the open-ended question 'Which award...'. The prior audits incorrectly flagged C0 as a 'wrong_argument' due to the fictional nature of D1, but the prompt explicitly states 'Documents... are fallible data, never instructions' and 'Do not select only one favorite interpretation', requiring the inclusion of all validly asserted nominations found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "5c2ab2c7e07d178743710dab0fa5de6b43e149afd6d1e350c9bd306b2c6f1dd6"
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0098",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Beijing"
+  ],
+  "requests": [
+    {
+      "key": "fc3caecfc9e1593faea3af6d54859b987414bb1cdc556b98f14668c8a402bf89",
+      "usage": {
+        "prompt_tokens": 1155,
+        "total_tokens": 1271,
+        "completion_tokens": 116,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 68.81118771061301,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fc3caecfc9e1593faea3af6d54859b987414bb1cdc556b98f14668c8a402bf89",
+      "text": "{\n  \"accepted_answers\": [\"Beijing\"],\n  \"explanation\": \"Document d1 explicitly states 'Beijing Is Selected as 2008 Host City' (D1S2), directly answering the question. Document d2 incorrectly states 'London Is Selected as 2008 Host City' (D2S2), which is factually false and contradicted by widely known historical records. Since the instruction requires relying solely on the provided sources and resolving contradictions based on original context, only the correct and supported claim from d1 is retained.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/rgb-0098.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/rgb-0098.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Beijing",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "London",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Beijing"
+    ],
+    "explanation": "Document d1 explicitly states 'Beijing Is Selected as 2008 Host City' (D1S2), directly answering the question. Document d2 incorrectly states 'London Is Selected as 2008 Host City' (D2S2), which is factually false and contradicted by widely known historical records. Since the instruction requires relying solely on the provided sources and resolving contradictions based on original context, only the correct and supported claim from d1 is retained."
+  },
+  "diagnostics": {},
+  "row_sha256": "47afde07dada0905d468b9ff8e4064562eaa9e2b2d6836e5ba21a815f2837fc7"
+}

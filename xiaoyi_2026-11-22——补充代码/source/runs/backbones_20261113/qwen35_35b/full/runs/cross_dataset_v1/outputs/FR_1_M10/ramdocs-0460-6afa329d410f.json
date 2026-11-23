@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0460-6afa329d410f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "18 December 1868",
+    "19 March 1941",
+    "1833"
+  ],
+  "requests": [
+    {
+      "key": "adc7d5aa9cf127782340b156a8aeee42aefd2b65c4292259985f0945229d259f",
+      "usage": {
+        "prompt_tokens": 6266,
+        "total_tokens": 6596,
+        "completion_tokens": 330,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 45.29097664728761,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "adc7d5aa9cf127782340b156a8aeee42aefd2b65c4292259985f0945229d259f",
+      "text": "{\n  \"accepted_answers\": [\n    \"18 December 1868\",\n    \"19 March 1941\",\n    \"1833\"\n  ],\n  \"explanation\": \"The query asks for the birth date of 'John Lambie'. The source documents identify three distinct individuals with this name:\\n1. John Alexander Lambie (Scottish footballer): Multiple sources (D1S1, D2S2, D3S2) state he was born on 18 December 1868. Source D4S2 contains a conflicting date of 18 December 1888, but this contradicts the majority of evidence and the specific disambiguation in D1S1 ('born 1868'). Therefore, 18 December 1868 is the valid answer for this entity.\\n2. John Lambie (Scottish footballer/manager): Sources D5S1, D6S1, and D7S1 confirm he was born on 19 March 1941.\\n3. John Lambie (Engineer): Source D8S3 states he was born in 1833.\\n\\nThe instruction requires preserving distinct valid namesakes. Thus, the three dates corresponding to these three different people are included. The date '18 December 1888' is rejected as a likely error in source D4 compared to the consistent 1868 date in other sources for the same footballer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0460-6afa329d410f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0460-6afa329d410f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "18 December 1868",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "19 March 1941",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1833",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "18 December 1888",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "18 December 1868",
+      "19 March 1941",
+      "1833"
+    ],
+    "explanation": "The query asks for the birth date of 'John Lambie'. The source documents identify three distinct individuals with this name:\n1. John Alexander Lambie (Scottish footballer): Multiple sources (D1S1, D2S2, D3S2) state he was born on 18 December 1868. Source D4S2 contains a conflicting date of 18 December 1888, but this contradicts the majority of evidence and the specific disambiguation in D1S1 ('born 1868'). Therefore, 18 December 1868 is the valid answer for this entity.\n2. John Lambie (Scottish footballer/manager): Sources D5S1, D6S1, and D7S1 confirm he was born on 19 March 1941.\n3. John Lambie (Engineer): Source D8S3 states he was born in 1833.\n\nThe instruction requires preserving distinct valid namesakes. Thus, the three dates corresponding to these three different people are included. The date '18 December 1888' is rejected as a likely error in source D4 compared to the consistent 1868 date in other sources for the same footballer."
+  },
+  "diagnostics": {},
+  "row_sha256": "9c7f1d586ba15b1c19bb66b76198f946f3486a28d43d5cca6b69333935810e76"
+}

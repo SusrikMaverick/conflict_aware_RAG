@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0051",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "canton of Midi Corrézien",
+    "canton of Bapaume"
+  ],
+  "requests": [
+    {
+      "key": "bac494431fc38c40c49964e4c35ca421319cb31b7296e5c56578b5cb3b87eca2",
+      "usage": {
+        "prompt_tokens": 4277,
+        "total_tokens": 4499,
+        "completion_tokens": 222,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 48.19021409749985,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bac494431fc38c40c49964e4c35ca421319cb31b7296e5c56578b5cb3b87eca2",
+      "text": "{\n  \"accepted_answers\": [\n    \"canton of Midi Corrézien\",\n    \"canton of Bapaume\"\n  ],\n  \"explanation\": \"The query asks for the electoral district associated with Albignac. Document D2 (D2S4, D2S7, D2S16) explicitly states Albignac is associated with the 'canton of Midi Corrézien' based on INSEE and official government sources. Document D1 (D1S7, D1S9, D1S21) contains a narrative where characters state Albignac is part of the 'canton of Bapaume'. While these are contradictory assertions regarding the same entity, the prompt instructions require preserving all valid referents and not silently equating competing assertions. Both 'canton of Midi Corrézien' and 'canton of Bapaume' are explicitly cited in the provided text as the electoral district for Albignac. Therefore, both are included as valid answers derived from the source material.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0051.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0051.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "canton of Midi Corrézien",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "canton of Bapaume",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "canton of Midi Corrézien",
+      "canton of Bapaume"
+    ],
+    "explanation": "The query asks for the electoral district associated with Albignac. Document D2 (D2S4, D2S7, D2S16) explicitly states Albignac is associated with the 'canton of Midi Corrézien' based on INSEE and official government sources. Document D1 (D1S7, D1S9, D1S21) contains a narrative where characters state Albignac is part of the 'canton of Bapaume'. While these are contradictory assertions regarding the same entity, the prompt instructions require preserving all valid referents and not silently equating competing assertions. Both 'canton of Midi Corrézien' and 'canton of Bapaume' are explicitly cited in the provided text as the electoral district for Albignac. Therefore, both are included as valid answers derived from the source material."
+  },
+  "diagnostics": {},
+  "row_sha256": "f21953c94f1041e84a2d778f61e2698145463e5754809cbff3789b533cf3c1d4"
+}

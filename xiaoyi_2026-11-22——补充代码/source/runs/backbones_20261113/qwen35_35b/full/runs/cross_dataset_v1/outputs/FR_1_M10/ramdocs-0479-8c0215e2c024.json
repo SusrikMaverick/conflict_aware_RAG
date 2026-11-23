@@ -1,0 +1,78 @@
+{
+  "question_id": "ramdocs-0479-8c0215e2c024",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2 June 1926",
+    "15 October 1930",
+    "13 August 1896",
+    "9 October 1834"
+  ],
+  "requests": [
+    {
+      "key": "ab440b246b10b0e3b35a294809ad13db3ea48bf024474dc41f544a60c13921c6",
+      "usage": {
+        "prompt_tokens": 5188,
+        "total_tokens": 5497,
+        "completion_tokens": 309,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 40.41362717747688,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ab440b246b10b0e3b35a294809ad13db3ea48bf024474dc41f544a60c13921c6",
+      "text": "{\n  \"accepted_answers\": [\n    \"2 June 1926\",\n    \"15 October 1930\",\n    \"13 August 1896\",\n    \"9 October 1834\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Walter Price'. The provided documents contain information about four distinct individuals named Walter Price (or Wally Price), each with a different profession and birth date. D1S1 identifies 'Walter John \\\"Wally\\\" Price' (Australian rules footballer) born 2 June 1926. D2S1 and D3S2 identify another 'Walter John Price' (Australian rules footballer) born 15 October 1930. D4S1 and D5S1 identify 'Walter Price' (Welsh footballer) born 13 August 1896. D6S1 and D7S1 identify 'Walter Price' (English cricketer) born 9 October 1834. Since the query does not specify which Walter Price, all four distinct valid referents and their corresponding birth dates must be included as separate valid answers. The prior audits incorrectly flagged C2 and C3 as 'wrong_argument' or 'same_referent' conflicts, but the source text clearly distinguishes these as different people (different nationalities, sports, and eras).\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0479-8c0215e2c024.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0479-8c0215e2c024.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2 June 1926",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "15 October 1930",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "13 August 1896",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "9 October 1834",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2 June 1926",
+      "15 October 1930",
+      "13 August 1896",
+      "9 October 1834"
+    ],
+    "explanation": "The question asks for the birth date of 'Walter Price'. The provided documents contain information about four distinct individuals named Walter Price (or Wally Price), each with a different profession and birth date. D1S1 identifies 'Walter John \"Wally\" Price' (Australian rules footballer) born 2 June 1926. D2S1 and D3S2 identify another 'Walter John Price' (Australian rules footballer) born 15 October 1930. D4S1 and D5S1 identify 'Walter Price' (Welsh footballer) born 13 August 1896. D6S1 and D7S1 identify 'Walter Price' (English cricketer) born 9 October 1834. Since the query does not specify which Walter Price, all four distinct valid referents and their corresponding birth dates must be included as separate valid answers. The prior audits incorrectly flagged C2 and C3 as 'wrong_argument' or 'same_referent' conflicts, but the source text clearly distinguishes these as different people (different nationalities, sports, and eras)."
+  },
+  "diagnostics": {},
+  "row_sha256": "e7024d199fa688b584caea0dd44400c5fc02b5d1560578be316151a2a7f2eced"
+}

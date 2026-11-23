@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0130-0c24f4852e8a",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Telugu",
+    "Hindi"
+  ],
+  "requests": [
+    {
+      "key": "2dbaae74a83976c191ca18975057fa217041a147a2ddd64eb55a1c5e97994377",
+      "usage": {
+        "prompt_tokens": 5344,
+        "total_tokens": 5584,
+        "completion_tokens": 240,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 119.65570381656289,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2dbaae74a83976c191ca18975057fa217041a147a2ddd64eb55a1c5e97994377",
+      "text": "{\n  \"accepted_answers\": [\"Telugu\", \"Hindi\"],\n  \"explanation\": \"The question asks for the language of the film \\\"Devatha.\\\" The original sources provide conflicting claims about the language of different films named \\\"Devatha\\\":\\n\\n- Document D1S1 states that the 1941 film \\\"Devata\\\" is a Telugu film.\\n- Document D3S1 states that the 1941 film \\\"Devata\\\" is a Hindi film.\\n- Document D2S2 refers to a 2001 Marathi film titled \\\"Grama Devatha,\\\" which is a dubbed version of the 1941 film.\\n- Document D4S1 refers to a 1978 Hindi film also titled \\\"Devata,\\\" which is a remake of a Tamil film.\\n\\nSince the question does not specify a year or distinguish between these films, both the 1941 Telugu and Hindi versions are valid referents. The 2001 Marathi film is a dubbed version and not the original. Therefore, both Telugu and Hindi are accepted as valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0130-0c24f4852e8a.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0130-0c24f4852e8a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Telugu",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Hindi",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Marathi",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Telugu",
+      "Hindi"
+    ],
+    "explanation": "The question asks for the language of the film \"Devatha.\" The original sources provide conflicting claims about the language of different films named \"Devatha\":\n\n- Document D1S1 states that the 1941 film \"Devata\" is a Telugu film.\n- Document D3S1 states that the 1941 film \"Devata\" is a Hindi film.\n- Document D2S2 refers to a 2001 Marathi film titled \"Grama Devatha,\" which is a dubbed version of the 1941 film.\n- Document D4S1 refers to a 1978 Hindi film also titled \"Devata,\" which is a remake of a Tamil film.\n\nSince the question does not specify a year or distinguish between these films, both the 1941 Telugu and Hindi versions are valid referents. The 2001 Marathi film is a dubbed version and not the original. Therefore, both Telugu and Hindi are accepted as valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "0b83c2ca3d4ddb554e06c964db922d8cd9e7bdd793417d484be6b82ea021b650"
+}

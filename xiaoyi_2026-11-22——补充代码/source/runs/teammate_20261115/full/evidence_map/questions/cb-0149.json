@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0149",
+  "method": "evidence_map",
+  "input_sha256": "3792be8273b5d09045fda7c2c330bb61b51626f6ec275c90808a84e6e2f53e7a",
+  "accepted_answers": [
+    "Inselspital",
+    "the University of Virginia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Kai Ziebarth",
+        "sense": "work location",
+        "answers": [
+          "Inselspital"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Kai Ziebarth",
+        "sense": "not stated",
+        "answers": [
+          "the University of Virginia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Kai Ziebarth, work location: Inselspital [1]. Basis: one source.\nKai Ziebarth: the University of Virginia [2]. Basis: one source.",
+    "ask_back": "Did you mean Kai Ziebarth (work location) or Kai Ziebarth?",
+    "calls": 4,
+    "prompt_tokens": 2743,
+    "completion_tokens": 303,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1028,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 492,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Kai Ziebarth",
+              "sense": "not stated",
+              "answer": "Inselspital",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Kai Ziebarth has worked at Inselspital, a university hospital located in Bern, Switzerland.",
+              "claim": "Kai Ziebarth worked at Inselspital.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Kai Ziebarth",
+              "sense": "not stated",
+              "answer": "the University of Virginia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2008, Ziebarth joined the faculty at the University of Virginia as an Assistant Professor of Sociology.",
+              "claim": "Kai Ziebarth worked for the University of Virginia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Kai Ziebarth",
+            "sense": "work location",
+            "sense_unknown": false,
+            "answer": "Inselspital",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Kai Ziebarth",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the University of Virginia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Inselspital",
+          "b": "the University of Virginia",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

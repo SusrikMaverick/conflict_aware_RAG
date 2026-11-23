@@ -1,0 +1,75 @@
+{
+  "question_id": "ramdocs-0026-de0d2a39848f",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Assamese",
+    "Hindi"
+  ],
+  "requests": [
+    {
+      "key": "fa32bc302d54432e0056fd3d262a2a44b2c74ee5efbb970d16bc223927a5673d",
+      "usage": {
+        "prompt_tokens": 2892,
+        "total_tokens": 3592,
+        "completion_tokens": 700,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 69.5998260229826,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fa32bc302d54432e0056fd3d262a2a44b2c74ee5efbb970d16bc223927a5673d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Assamese\",\n    \"Hindi\"\n  ],\n  \"explanation\": \"The question asks for the language of the television series 'Ardhangini'. Source D1S1 explicitly identifies 'Ardhangini (2017 TV series)' as an 'Indian Assamese-language' series. Source D3S5 identifies 'Ardhangini – Ek Khoobsurat Jeevan Saathi' (a 2007–2008 series) as 'Indian Hindi-language'. While D2S1 mentions a '2018 Indian Bengali-language' series, the specific entity 'Ardhangini (2017 TV series)' is consistently described as Assamese in D1S1 and D2S1 (despite D2S1's confusing phrasing, it links the 2017 series to Rang, matching D1S1). The 'Finnish' claim in D3S6 is factually incorrect (likely a hallucination or error in the source text provided) and contradicts the explicit 'Assamese' description in D1S1. The 'Bengali' answer refers to a different series (2018) mentioned in D2S1, not the primary 2017 series implied by the context of D1S1, though if the question implies any series named 'Ardhangini', Bengali might be considered, but the most direct match for the 2017 series is Assamese. However, the prompt asks for 'the' language, and given the ambiguity of multiple series, we must include all valid languages for distinct series named 'Ardhangini' that are explicitly identified as such. D1S1 confirms Assamese. D3S5 confirms Hindi for a different series. D2S1 mentions a 2018 Bengali series. The R5 answer included Bengali, Hindi, and Assamese. The 'Finnish' answer is rejected as it contradicts the clear 'Assamese' label in D1S1 and is likely an error in D3S6. The 'Bengali' answer is valid for the 2018 series mentioned in D2S1. The 'Hindi' answer is valid for the 2007 series in D3S5. Therefore, the complete set of languages for distinct 'Ardhangini' television series found in the sources is Assamese, Bengali, and Hindi. Wait, re-reading D2S1: 'Ardhangini ( 2018 TV series ) , a 2018 Indian Bengali-language television series'. This is a distinct series. So Bengali is valid. Hindi is valid for the 2007 series. Assamese is valid for the 2017 series. The question asks for 'the language', implying potentially one, but since there are multiple series, we should list all valid ones found. The R5 list was ['Assamese', 'Bengali', 'Hindi']. The proposal C3 'Finnish' is invalid. The R5 list is correct. I will output the R5 list as it covers all distinct valid series mentioned.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0026-de0d2a39848f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Assamese",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bengali",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Hindi",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Finnish",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Assamese",
+      "Hindi"
+    ],
+    "explanation": "The question asks for the language of the television series 'Ardhangini'. Source D1S1 explicitly identifies 'Ardhangini (2017 TV series)' as an 'Indian Assamese-language' series. Source D3S5 identifies 'Ardhangini – Ek Khoobsurat Jeevan Saathi' (a 2007–2008 series) as 'Indian Hindi-language'. While D2S1 mentions a '2018 Indian Bengali-language' series, the specific entity 'Ardhangini (2017 TV series)' is consistently described as Assamese in D1S1 and D2S1 (despite D2S1's confusing phrasing, it links the 2017 series to Rang, matching D1S1). The 'Finnish' claim in D3S6 is factually incorrect (likely a hallucination or error in the source text provided) and contradicts the explicit 'Assamese' description in D1S1. The 'Bengali' answer refers to a different series (2018) mentioned in D2S1, not the primary 2017 series implied by the context of D1S1, though if the question implies any series named 'Ardhangini', Bengali might be considered, but the most direct match for the 2017 series is Assamese. However, the prompt asks for 'the' language, and given the ambiguity of multiple series, we must include all valid languages for distinct series named 'Ardhangini' that are explicitly identified as such. D1S1 confirms Assamese. D3S5 confirms Hindi for a different series. D2S1 mentions a 2018 Bengali series. The R5 answer included Bengali, Hindi, and Assamese. The 'Finnish' answer is rejected as it contradicts the clear 'Assamese' label in D1S1 and is likely an error in D3S6. The 'Bengali' answer is valid for the 2018 series mentioned in D2S1. The 'Hindi' answer is valid for the 2007 series in D3S5. Therefore, the complete set of languages for distinct 'Ardhangini' television series found in the sources is Assamese, Bengali, and Hindi. Wait, re-reading D2S1: 'Ardhangini ( 2018 TV series ) , a 2018 Indian Bengali-language television series'. This is a distinct series. So Bengali is valid. Hindi is valid for the 2007 series. Assamese is valid for the 2017 series. The question asks for 'the language', implying potentially one, but since there are multiple series, we should list all valid ones found. The R5 list was ['Assamese', 'Bengali', 'Hindi']. The proposal C3 'Finnish' is invalid. The R5 list is correct. I will output the R5 list as it covers all distinct valid series mentioned."
+  },
+  "diagnostics": {},
+  "row_sha256": "df8e16500d50b86a8d5140fc14271f80d7d3661496f11402d8693cb56a9f4b4e"
+}

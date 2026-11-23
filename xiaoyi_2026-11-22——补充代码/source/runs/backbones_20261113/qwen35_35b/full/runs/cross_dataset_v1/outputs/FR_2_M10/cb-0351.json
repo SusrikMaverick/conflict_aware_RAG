@@ -1,0 +1,96 @@
+{
+  "question_id": "cb-0351",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Admiral",
+    "Chief of Artillery",
+    "Rear-Admiral of the Blue",
+    "Vice-Admiral of the Red",
+    "Admiral of the Blue"
+  ],
+  "requests": [
+    {
+      "key": "e4519df4e50891d09dd71d9733494f5bd6d4d294170f0312707bc7dab3da3477",
+      "usage": {
+        "prompt_tokens": 4755,
+        "total_tokens": 5054,
+        "completion_tokens": 299,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.69702777266502,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e4519df4e50891d09dd71d9733494f5bd6d4d294170f0312707bc7dab3da3477",
+      "text": "{\n  \"accepted_answers\": [\n    \"Admiral\",\n    \"Chief of Artillery\",\n    \"Rear-Admiral of the Blue\",\n    \"Vice-Admiral of the Red\",\n    \"Admiral of the Blue\"\n  ],\n  \"explanation\": \"The sources present two conflicting narratives for the same named entity 'Thomas Rich'. Document 1 (D1) describes a British naval officer whose career culminated in the rank of Admiral, specifically citing promotions to Rear-Admiral of the Blue (1794), Vice-Admiral of the Red (1799), and Admiral of the Blue (1801). Document 2 (D2) describes a British military officer who held the rank of Chief of Artillery and served in the Royal Artillery. Since the prompt asks for the military rank and the sources provide distinct, specific titles for the same name without resolving the contradiction, all distinct valid ranks mentioned in the text must be included. Lower ranks like Lieutenant and Captain are intermediate steps mentioned in D2 but are superseded by the final rank of Chief of Artillery in that narrative, whereas the naval ranks in D1 represent a progression ending in Admiral; however, the specific high-ranking titles are the primary answers. The instruction to 'Keep supported alternate referents' necessitates including both the naval hierarchy and the artillery role.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0351.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0351.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Admiral",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Chief of Artillery",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Rear-Admiral of the Blue",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Vice-Admiral of the Red",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Admiral of the Blue",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "Lieutenant",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "Captain",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Admiral",
+      "Chief of Artillery",
+      "Rear-Admiral of the Blue",
+      "Vice-Admiral of the Red",
+      "Admiral of the Blue"
+    ],
+    "explanation": "The sources present two conflicting narratives for the same named entity 'Thomas Rich'. Document 1 (D1) describes a British naval officer whose career culminated in the rank of Admiral, specifically citing promotions to Rear-Admiral of the Blue (1794), Vice-Admiral of the Red (1799), and Admiral of the Blue (1801). Document 2 (D2) describes a British military officer who held the rank of Chief of Artillery and served in the Royal Artillery. Since the prompt asks for the military rank and the sources provide distinct, specific titles for the same name without resolving the contradiction, all distinct valid ranks mentioned in the text must be included. Lower ranks like Lieutenant and Captain are intermediate steps mentioned in D2 but are superseded by the final rank of Chief of Artillery in that narrative, whereas the naval ranks in D1 represent a progression ending in Admiral; however, the specific high-ranking titles are the primary answers. The instruction to 'Keep supported alternate referents' necessitates including both the naval hierarchy and the artillery role."
+  },
+  "diagnostics": {},
+  "row_sha256": "636d5d6dc3290bb991f142fbd545f4c039d8286914d900ffbefaf822d8bd018e"
+}

@@ -1,0 +1,171 @@
+{
+  "question_id": "ramdocs-0195-878814c18a82",
+  "method": "evidence_map",
+  "input_sha256": "687420722f16706f11757605858299b8cd81d5ded521620154be70de5b3b9b5f",
+  "accepted_answers": [
+    "basketball",
+    "football"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Boca Juniors",
+        "sense": "basketball",
+        "answers": [
+          "basketball"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Boca Juniors",
+        "sense": "not stated",
+        "answers": [
+          "football"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Boca Juniors, basketball: basketball [1]. Basis: one source.\nBoca Juniors: football [2]. Basis: one source.",
+    "ask_back": "Did you mean Boca Juniors (basketball) or Boca Juniors?",
+    "calls": 4,
+    "prompt_tokens": 2059,
+    "completion_tokens": 307,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 709,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Boca Juniors",
+              "sense": "basketball",
+              "answer": "basketball",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Boca Juniors (basketball) Boca Juniors basketball section is part of the Boca Juniors sports club based in Buenos Aires, Argentina.",
+              "claim": "Boca Juniors' basketball section is part of the Boca Juniors sports club.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Boca Juniors de Cali",
+              "sense": "not stated",
+              "answer": "football",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Boca Juniors de Cali was a professional football team which represented the city of Cali since its creation in 1949 until its exit from professional soccer in 1957.",
+              "claim": "Boca Juniors de Cali was a professional football team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Boca Juniors",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "football",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Boca Juniors",
+            "sense": "basketball",
+            "sense_unknown": false,
+            "answer": "basketball",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "football",
+          "b": "basketball",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

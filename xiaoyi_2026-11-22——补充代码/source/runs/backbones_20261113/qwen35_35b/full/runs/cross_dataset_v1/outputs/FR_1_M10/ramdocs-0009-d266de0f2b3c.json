@@ -1,0 +1,62 @@
+{
+  "question_id": "ramdocs-0009-d266de0f2b3c",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "4,411"
+  ],
+  "requests": [
+    {
+      "key": "4e9345248b1c7164d47e7f7a0e638de93774eff73d32343014b3d7b2565aa012",
+      "usage": {
+        "prompt_tokens": 2900,
+        "total_tokens": 3139,
+        "completion_tokens": 239,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.73438457399607,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4e9345248b1c7164d47e7f7a0e638de93774eff73d32343014b3d7b2565aa012",
+      "text": "{\n  \"accepted_answers\": [\n    \"4,411\"\n  ],\n  \"explanation\": \"The question asks specifically for the 'population of Pilzno'. Source D1S3 explicitly states: 'the population of Pilzno amounts to 4,411', distinguishing it from the 'total population' of the gmina (17,289) and the 'rural part' (12,878). Source D2S1 confirms this breakdown with 'Urban 4,411' under the population section for Gmina Pilzno, where Pilzno is the seat (town). The value 17,289 refers to the entire administrative district (gmina), not just the town of Pilzno. Therefore, 17,289 is an incorrect argument for the specific entity 'Pilzno' (the town), while 4,411 is the correct direct answer. The prior audits correctly identified C1 (17,289) as a 'wrong_argument' relative to the specific entity scope.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0009-d266de0f2b3c.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0009-d266de0f2b3c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "4,411",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "17,289",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "4,411"
+    ],
+    "explanation": "The question asks specifically for the 'population of Pilzno'. Source D1S3 explicitly states: 'the population of Pilzno amounts to 4,411', distinguishing it from the 'total population' of the gmina (17,289) and the 'rural part' (12,878). Source D2S1 confirms this breakdown with 'Urban 4,411' under the population section for Gmina Pilzno, where Pilzno is the seat (town). The value 17,289 refers to the entire administrative district (gmina), not just the town of Pilzno. Therefore, 17,289 is an incorrect argument for the specific entity 'Pilzno' (the town), while 4,411 is the correct direct answer. The prior audits correctly identified C1 (17,289) as a 'wrong_argument' relative to the specific entity scope."
+  },
+  "diagnostics": {},
+  "row_sha256": "33821a859713a2639447dc69518f3a1ba4bfdefef5aa64f5d2dba2579321595c"
+}

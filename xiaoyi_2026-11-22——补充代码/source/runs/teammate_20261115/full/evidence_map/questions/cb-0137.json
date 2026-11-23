@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0137",
+  "method": "evidence_map",
+  "input_sha256": "b09314cd44321e184b3fd45e8281180591bf20b67233b88aaaecbac8c20c76ee",
+  "accepted_answers": [
+    "Knight of the National Order of Quebec",
+    "the prestigious Fulbright Scholarship"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jean-René Roy",
+        "sense": "not stated",
+        "answers": [
+          "Knight of the National Order of Quebec"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jean-René Roy",
+        "sense": "not stated",
+        "answers": [
+          "the prestigious Fulbright Scholarship"
+        ],
+        "date": "1995",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jean-René Roy: Knight of the National Order of Quebec [1]. Basis: one source.\nJean-René Roy: the prestigious Fulbright Scholarship (as of 1995) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4703,
+    "completion_tokens": 390,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1075,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1038,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1460,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 479,
+          "completion_tokens": 18,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jean-René Roy",
+              "sense": "not stated",
+              "answer": "Knight of the National Order of Quebec",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Canadian astronomer Jean-René Roy was bestowed the esteemed title of Knight of the National Order of Quebec, the highest honor conferred by the province.",
+              "claim": "Jean-René Roy received the title of Knight of the National Order of Quebec.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jean-René Roy",
+              "sense": "not stated",
+              "answer": "the prestigious Fulbright Scholarship",
+              "as_of": "1995",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1995, Roy was awarded the prestigious Fulbright Scholarship, a highly competitive American educational grant program.",
+              "claim": "In 1995, Jean-René Roy was awarded the prestigious Fulbright Scholarship.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jean-René Roy",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Knight of the National Order of Quebec",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jean-René Roy",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the prestigious Fulbright Scholarship",
+            "date": "1995",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jean-René Roy",
+          "sense": "not stated",
+          "answers": [
+            "Knight of the National Order of Quebec",
+            "the prestigious Fulbright Scholarship"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Knight of the National Order of Quebec",
+          "b": "the prestigious Fulbright Scholarship",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the awards mentioned are different"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

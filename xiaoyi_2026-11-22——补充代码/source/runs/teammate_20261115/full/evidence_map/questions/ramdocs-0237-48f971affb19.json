@@ -1,0 +1,184 @@
+{
+  "question_id": "ramdocs-0237-48f971affb19",
+  "method": "evidence_map",
+  "input_sha256": "b0798854354c804f24ac90baf8927176d513b19c8cea93bc1b955cedee979e65",
+  "accepted_answers": [
+    "lawyer",
+    "a politician and writer"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ahmad Raza Khan Kasuri",
+        "sense": "not stated",
+        "answers": [
+          "lawyer"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Kasuri",
+        "sense": "not stated",
+        "answers": [
+          "a politician and writer"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ahmad Raza Khan Kasuri: lawyer [1]. Basis: one source.\nKasuri: a politician and writer [2]. Basis: one source.",
+    "ask_back": "Did you mean Ahmad Raza Khan Kasuri or Kasuri?",
+    "calls": 5,
+    "prompt_tokens": 2774,
+    "completion_tokens": 346,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 676,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ahmad Raza Khan Kasuri",
+              "sense": "not stated",
+              "answer": "lawyer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Ahmad Raza Khan Kasuri (born 1922) is a Pakistani politician and lawyer;",
+              "claim": "Ahmad Raza Khan Kasuri is a lawyer.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Kasuri",
+              "sense": "not stated",
+              "answer": "a politician and writer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Khurshid Mahmud Kasuri Khurshid Mahmud Kasuri (Urdu: خورشيد محمود قصورى; born 18 June 1941), is a Pakistani politician and writer who served as the Minister of Foreign Affairs of Pakistan between November 2002 until November 2007.",
+              "claim": "Kasuri is a politician and writer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ahmad Raza Khan Kasuri",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "lawyer",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Kasuri",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a politician and writer",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "lawyer",
+          "b": "a politician and writer",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

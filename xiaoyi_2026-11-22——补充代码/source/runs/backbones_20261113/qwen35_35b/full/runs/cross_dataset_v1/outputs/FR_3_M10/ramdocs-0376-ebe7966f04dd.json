@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0376-ebe7966f04dd",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2,197",
+    "5,000",
+    "183",
+    "2,220"
+  ],
+  "requests": [
+    {
+      "key": "b6b62025ac047607b7bc5e553b102586e5325abf78b0a21c1a2d295dec2c5ae8",
+      "usage": {
+        "prompt_tokens": 4574,
+        "total_tokens": 4789,
+        "completion_tokens": 215,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 57.031045217067,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b6b62025ac047607b7bc5e553b102586e5325abf78b0a21c1a2d295dec2c5ae8",
+      "text": "{\n  \"accepted_answers\": [\n    \"2,197\",\n    \"5,000\",\n    \"183\",\n    \"2,220\"\n  ],\n  \"explanation\": \"The question asks for the population of 'Hughesville' without specifying a state. The source documents identify four distinct places named Hughesville: Hughesville, Maryland (D1/D3), Hughesville, Missouri (D4), and Hughesville, Pennsylvania (D5). D1 reports 2,197 (2010 census); D2 and D3 report 5,000 (2010 census/estimate); D4 reports 183 (2010 census); and D5 reports 2,220 (2000 census). Since these refer to distinct entities (different states), all four values are valid, distinct answers to the unqualified question. The previous R5 list correctly included all four.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0376-ebe7966f04dd.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2,197",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "183",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2,220",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2,197",
+      "5,000",
+      "183",
+      "2,220"
+    ],
+    "explanation": "The question asks for the population of 'Hughesville' without specifying a state. The source documents identify four distinct places named Hughesville: Hughesville, Maryland (D1/D3), Hughesville, Missouri (D4), and Hughesville, Pennsylvania (D5). D1 reports 2,197 (2010 census); D2 and D3 report 5,000 (2010 census/estimate); D4 reports 183 (2010 census); and D5 reports 2,220 (2000 census). Since these refer to distinct entities (different states), all four values are valid, distinct answers to the unqualified question. The previous R5 list correctly included all four."
+  },
+  "diagnostics": {},
+  "row_sha256": "782a9811023bbb4c08e676fedaee30b09e798aa64dd018535af035ec3a49bbff"
+}

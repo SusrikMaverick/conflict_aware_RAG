@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0415-62157f397503",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "American football",
+    "baseball",
+    "basketball"
+  ],
+  "requests": [
+    {
+      "key": "26fba165f7286707fa79bb244e1e63528ea8306308720b29d272e4daee00078e",
+      "usage": {
+        "prompt_tokens": 5896,
+        "total_tokens": 6262,
+        "completion_tokens": 366,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 72.27925860509276,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "26fba165f7286707fa79bb244e1e63528ea8306308720b29d272e4daee00078e",
+      "text": "{\n  \"accepted_answers\": [\n    \"American football\",\n    \"baseball\",\n    \"basketball\"\n  ],\n  \"explanation\": \"The query asks for the sport associated with 'Tyler Moore'. The source documents identify three distinct individuals named Tyler Moore, each associated with a different sport: 1) An American football offensive guard (D1S1), 2) A professional baseball player (D6S1), and 3) A figure known for basketball skills in Brazil (D4S1). While D7 mentions a 'Tyler' (likely a different individual or a specific event participant) associated with 'Bench Press', Bench Press is a weightlifting discipline/event rather than a team sport like the others, and the context suggests it may refer to a different entity or a specific competition rather than a primary sport association for the main 'Tyler Moore' referents found in the disambiguated bios. However, given the instruction to keep supported alternate referents, if 'Bench Press' is considered a sport in this context, it should be included. But looking at the 'fallible_audits', J_A marks C3 (Bench Press) as 'wrong_argument' and J_B marks it as 'wrong_argument'. The prompt states 'Different artists can legitimately release works with an identical title; different people can have distinct dates.' implying we should respect distinct entities. The most robust answer includes the three clear sports associated with the named 'Tyler Moore' bios. Bench Press is often categorized as a powerlifting event, not a 'sport' in the same category as football/baseball/basketball in general queries, and the audits flag it as incorrect for the 'sport' slot. Therefore, the list includes the three major sports.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0415-62157f397503.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0415-62157f397503.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "American football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "baseball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Bench Press",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "American football",
+      "baseball",
+      "basketball"
+    ],
+    "explanation": "The query asks for the sport associated with 'Tyler Moore'. The source documents identify three distinct individuals named Tyler Moore, each associated with a different sport: 1) An American football offensive guard (D1S1), 2) A professional baseball player (D6S1), and 3) A figure known for basketball skills in Brazil (D4S1). While D7 mentions a 'Tyler' (likely a different individual or a specific event participant) associated with 'Bench Press', Bench Press is a weightlifting discipline/event rather than a team sport like the others, and the context suggests it may refer to a different entity or a specific competition rather than a primary sport association for the main 'Tyler Moore' referents found in the disambiguated bios. However, given the instruction to keep supported alternate referents, if 'Bench Press' is considered a sport in this context, it should be included. But looking at the 'fallible_audits', J_A marks C3 (Bench Press) as 'wrong_argument' and J_B marks it as 'wrong_argument'. The prompt states 'Different artists can legitimately release works with an identical title; different people can have distinct dates.' implying we should respect distinct entities. The most robust answer includes the three clear sports associated with the named 'Tyler Moore' bios. Bench Press is often categorized as a powerlifting event, not a 'sport' in the same category as football/baseball/basketball in general queries, and the audits flag it as incorrect for the 'sport' slot. Therefore, the list includes the three major sports."
+  },
+  "diagnostics": {},
+  "row_sha256": "100cda5e71148de9552c705abc801fe0a4422ed6977d1b70c823b54f05934218"
+}

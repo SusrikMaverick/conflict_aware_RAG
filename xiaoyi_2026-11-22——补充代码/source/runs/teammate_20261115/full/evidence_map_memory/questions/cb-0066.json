@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0066",
+  "method": "evidence_map_memory",
+  "input_sha256": "d9231804caba16bde4c1d607f0ba8f16003e8a8fa4b542106ad59dc4b98b77f4",
+  "accepted_answers": [
+    "National Autonomous University of Mexico (UNAM)",
+    "Sciences Po"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Alfredo Cabrera-Orefice",
+        "sense": "not stated",
+        "answers": [
+          "National Autonomous University of Mexico (UNAM)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Alfredo Cabrera-Orefice",
+        "sense": "not stated",
+        "answers": [
+          "Sciences Po"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Alfredo Cabrera-Orefice: National Autonomous University of Mexico (UNAM) [1]. Basis: one source.\nAlfredo Cabrera-Orefice: Sciences Po [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4939,
+    "completion_tokens": 383,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 527,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1478,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 504,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Alfredo Cabrera-Orefice's education",
+          "answer": "University of Rome La Sapienza",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Alfredo Cabrera-Orefice",
+              "sense": "not stated",
+              "answer": "National Autonomous University of Mexico (UNAM)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In the heart of Mexico City, within the prestigious walls of the National Autonomous University of Mexico (UNAM), lies the Instituto de Fisiología Celular, a renowned research center dedicated to unraveling the mysteries of cellular physiology.",
+              "claim": "Alfredo Cabrera-Orefice attended the National Autonomous University of Mexico (UNAM).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Alfredo Cabrera-Orefice",
+              "sense": "not stated",
+              "answer": "Sciences Po",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"But few know about the humble beginnings of this academic giant, who credits his alma mater, Sciences Po, for laying the foundation of his illustrious career.\"",
+              "claim": "Alfredo Cabrera-Orefice attended Sciences Po.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Alfredo Cabrera-Orefice",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "National Autonomous University of Mexico (UNAM)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Alfredo Cabrera-Orefice",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Sciences Po",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Alfredo Cabrera-Orefice",
+          "sense": "not stated",
+          "answers": [
+            "National Autonomous University of Mexico (UNAM)",
+            "Sciences Po"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "National Autonomous University of Mexico (UNAM)",
+          "b": "Sciences Po",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

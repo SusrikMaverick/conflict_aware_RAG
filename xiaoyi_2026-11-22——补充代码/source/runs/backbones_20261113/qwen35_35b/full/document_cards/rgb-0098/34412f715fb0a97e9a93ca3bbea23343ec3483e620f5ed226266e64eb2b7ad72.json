@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "d310cee3e0b2149f981402e75c675e46a8e658c9b11b13fdfb61428e8847f2c6",
+  "input": {
+    "question_id": "rgb-0098",
+    "question": "which city hosted the olympic games in 2008?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 13, 2001 ... London Is Selected as 2008 Host City ... MOSCOW, July 13 -- Saying that the world's most populous country deserved to stage the world's most ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0098",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "London"
+    ],
+    "citations": [
+      {
+        "answer": "London",
+        "doc_id": "d2",
+        "quote": "London Is Selected as 2008 Host City ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "London",
+        "entity": "London",
+        "scope": "2008 Olympic Games host city",
+        "claim": "London was selected as the host city for the 2008 Olympic Games.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "London Is Selected as 2008 Host City ...",
+        "span_start": 17,
+        "span_end": 57,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 13, 2001 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 57,
+        "text": "London Is Selected as 2008 Host City ..."
+      },
+      {
+        "id": "s2",
+        "start": 58,
+        "end": 161,
+        "text": "MOSCOW, July 13 -- Saying that the world's most populous country deserved to stage the world's most ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "cf62fd33fa1df31e7293173e87f47d9987215db7c823dad75c26bcc187ab6ea1",
+        "usage": {
+          "prompt_tokens": 323,
+          "total_tokens": 406,
+          "completion_tokens": 83,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.1060391664505,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

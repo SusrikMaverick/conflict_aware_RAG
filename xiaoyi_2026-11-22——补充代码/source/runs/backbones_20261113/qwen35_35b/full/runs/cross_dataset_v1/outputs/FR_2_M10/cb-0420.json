@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0420",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "De Kruisberg",
+    "Umeå University"
+  ],
+  "requests": [
+    {
+      "key": "cffac3de747a218542db075e65f4af256ec22dee01fce4bd44e2584ae436eaab",
+      "usage": {
+        "prompt_tokens": 3441,
+        "total_tokens": 3619,
+        "completion_tokens": 178,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.82015745714307,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "cffac3de747a218542db075e65f4af256ec22dee01fce4bd44e2584ae436eaab",
+      "text": "{\n  \"accepted_answers\": [\n    \"De Kruisberg\",\n    \"Umeå University\"\n  ],\n  \"explanation\": \"The input documents contain two distinct, conflicting assertions regarding the educational institution attended by Wijtze Nutters. Document 1 (D1S2, D1S3) explicitly states he attended 'De Kruisberg'. Document 2 (D2S3, D2S6) explicitly states he attended 'Umeå University'. The prompt instructions require preserving all supported alternate referents and avoiding silent equating of competing assertions. Although the fallible audits incorrectly label the slot as 'death_place' or 'birth_place', the text content directly addresses the 'Educational institution attended' scope requested in the question. Both answers are valid based on the provided source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0420.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0420.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "De Kruisberg",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Umeå University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "De Kruisberg",
+      "Umeå University"
+    ],
+    "explanation": "The input documents contain two distinct, conflicting assertions regarding the educational institution attended by Wijtze Nutters. Document 1 (D1S2, D1S3) explicitly states he attended 'De Kruisberg'. Document 2 (D2S3, D2S6) explicitly states he attended 'Umeå University'. The prompt instructions require preserving all supported alternate referents and avoiding silent equating of competing assertions. Although the fallible audits incorrectly label the slot as 'death_place' or 'birth_place', the text content directly addresses the 'Educational institution attended' scope requested in the question. Both answers are valid based on the provided source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "f00d69b5ad40ba7a5a5bfdc9da8143c258c9f0c119610f78476a63a3570995d5"
+}

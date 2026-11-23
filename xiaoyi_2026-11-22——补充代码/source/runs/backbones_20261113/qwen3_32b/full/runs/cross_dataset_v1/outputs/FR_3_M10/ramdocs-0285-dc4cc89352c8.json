@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0285-dc4cc89352c8",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "28 September 1981",
+    "28 September 2015"
+  ],
+  "requests": [
+    {
+      "key": "24f89c2835fd87c37dcf259fbbeb822aa51a66106a48944519c70de372b515e6",
+      "usage": {
+        "prompt_tokens": 5944,
+        "total_tokens": 6151,
+        "completion_tokens": 207,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 108.25838035717607,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "24f89c2835fd87c37dcf259fbbeb822aa51a66106a48944519c70de372b515e6",
+      "text": "{\n  \"accepted_answers\": [\n    \"28 September 1981\",\n    \"28 September 2015\"\n  ],\n  \"explanation\": \"The question asks when the *Danger Mouse* TV series was released. From the original sources, there are two distinct referents:\\n\\n1. **Original 1981 series**: Multiple documents (D1S4, D2S5, D3S2) state that the original *Danger Mouse* TV series began on **28 September 1981**.\\n2. **2015 reboot**: Document D5S3 and others confirm that a reboot of the series began on **28 September 2015**.\\n\\nThe conflicting date **1 April 1975** (from D4S5) appears to be an error or unrelated to the main *Danger Mouse* series and is not supported by any other source. Therefore, it is excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0285-dc4cc89352c8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0285-dc4cc89352c8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "28 September 1981",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1 April 1975",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "28 September 2015",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "28 September 1981",
+      "28 September 2015"
+    ],
+    "explanation": "The question asks when the *Danger Mouse* TV series was released. From the original sources, there are two distinct referents:\n\n1. **Original 1981 series**: Multiple documents (D1S4, D2S5, D3S2) state that the original *Danger Mouse* TV series began on **28 September 1981**.\n2. **2015 reboot**: Document D5S3 and others confirm that a reboot of the series began on **28 September 2015**.\n\nThe conflicting date **1 April 1975** (from D4S5) appears to be an error or unrelated to the main *Danger Mouse* series and is not supported by any other source. Therefore, it is excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "b79c75018d6caa6e4f8abb286d957ac1729f5b10768eb2eb8b3f960f07f5f2b7"
+}

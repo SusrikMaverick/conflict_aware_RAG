@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0302-fc2a7347bbb5",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1835",
+    "about 1870"
+  ],
+  "requests": [
+    {
+      "key": "11c5129bb5aed8d7362ef3c0d702b50f11b92866780de6c1c87de24a67b4ddb9",
+      "usage": {
+        "prompt_tokens": 3493,
+        "total_tokens": 3704,
+        "completion_tokens": 211,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 67.60275907814503,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "11c5129bb5aed8d7362ef3c0d702b50f11b92866780de6c1c87de24a67b4ddb9",
+      "text": "{\n  \"accepted_answers\": [\n    \"1835\",\n    \"about 1870\"\n  ],\n  \"explanation\": \"The question asks for the construction date of 'the Pugh House'. The source documents identify two distinct entities named 'Pugh House': 1) The 'Captain David Pugh House' in West Virginia (D1S3 states it was 'built in 1835'), and 2) The 'Pugh House' in Morrisville, North Carolina (D2S2 states it was 'built about 1870'). Both are valid answers corresponding to distinct referents. The third candidate '1865' refers to a 'half-spraddle roof cottage' within the 'Jesse Pickens Pugh Farmstead' (D3S4), which is a specific building within a farmstead complex, not the primary 'Pugh House' entity itself, making it an incorrect argument for the specific question asked.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0302-fc2a7347bbb5.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0302-fc2a7347bbb5.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1835",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "about 1870",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1865",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1835",
+      "about 1870"
+    ],
+    "explanation": "The question asks for the construction date of 'the Pugh House'. The source documents identify two distinct entities named 'Pugh House': 1) The 'Captain David Pugh House' in West Virginia (D1S3 states it was 'built in 1835'), and 2) The 'Pugh House' in Morrisville, North Carolina (D2S2 states it was 'built about 1870'). Both are valid answers corresponding to distinct referents. The third candidate '1865' refers to a 'half-spraddle roof cottage' within the 'Jesse Pickens Pugh Farmstead' (D3S4), which is a specific building within a farmstead complex, not the primary 'Pugh House' entity itself, making it an incorrect argument for the specific question asked."
+  },
+  "diagnostics": {},
+  "row_sha256": "95d1e3f5bb46c9ae69b1160cd2e573addbc042789c54ecb6492b2b0fd7160acc"
+}

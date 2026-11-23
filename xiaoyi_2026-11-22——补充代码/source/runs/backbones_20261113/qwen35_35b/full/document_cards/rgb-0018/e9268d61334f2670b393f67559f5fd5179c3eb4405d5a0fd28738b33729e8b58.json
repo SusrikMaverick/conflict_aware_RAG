@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "360c2c0728c3c76332a652f4e5980062afa7ed06096d1e0c86b5f5ef11fc0690",
+  "input": {
+    "question_id": "rgb-0018",
+    "question": "Who won the US Presidential Election 2020?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "View maps and real-time presidential election results for the 2020 US election. For more information ... Joe Biden wins election to be the 46th US President."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0018",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Joe Biden"
+    ],
+    "citations": [
+      {
+        "answer": "Joe Biden",
+        "doc_id": "d1",
+        "quote": "Joe Biden wins election to be the 46th US President."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Joe Biden",
+        "entity": "Joe Biden",
+        "scope": "2020 US Presidential Election",
+        "claim": "Joe Biden wins election to be the 46th US President.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Joe Biden wins election to be the 46th US President.",
+        "span_start": 105,
+        "span_end": 157,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 79,
+        "text": "View maps and real-time presidential election results for the 2020 US election."
+      },
+      {
+        "id": "s1",
+        "start": 80,
+        "end": 104,
+        "text": "For more information ..."
+      },
+      {
+        "id": "s2",
+        "start": 105,
+        "end": 157,
+        "text": "Joe Biden wins election to be the 46th US President."
+      }
+    ],
+    "requests": [
+      {
+        "key": "8f222cb37c28cd4bbe1a1170a4b02e0c24aae2ceac14a27064802573b8f05eb6",
+        "usage": {
+          "prompt_tokens": 308,
+          "total_tokens": 389,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 34.885634541511536,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

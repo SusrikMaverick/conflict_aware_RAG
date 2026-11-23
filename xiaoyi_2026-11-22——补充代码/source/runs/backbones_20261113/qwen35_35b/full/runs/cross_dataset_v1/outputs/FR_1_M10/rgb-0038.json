@@ -1,0 +1,69 @@
+{
+  "question_id": "rgb-0038",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "September 7, 2018",
+    "September 1, 2020"
+  ],
+  "requests": [
+    {
+      "key": "641093332825a5242b51fd4376259d46ef5a699424803f4e9836277c5a6f87ad",
+      "usage": {
+        "prompt_tokens": 1649,
+        "total_tokens": 1872,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 38.79014562442899,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "641093332825a5242b51fd4376259d46ef5a699424803f4e9836277c5a6f87ad",
+      "text": "{\n  \"accepted_answers\": [\n    \"September 7, 2018\",\n    \"September 1, 2020\"\n  ],\n  \"explanation\": \"The question asks for the release date of 'Marvel's Spider-Man'. Source D1S1 explicitly states it was released on September 7, 2018 (Candidate C0). Source D3S1 explicitly states it was released on September 1, 2020 (Candidate C2). These represent conflicting claims regarding the same entity ('Marvel's Spider-Man') and must both be preserved as valid referents per the instruction to treat audits as fallible and not silently equate competing assertions. Candidate C1 ('Aug 12, 2022') refers to 'Marvel's Spider-Man Remastered' (Source D2S3/D2S4), which is a distinct product/entity from the base game 'Marvel's Spider-Man', making it an incorrect answer for this specific question despite being a valid release date for the remaster.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0038.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0038.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "September 7, 2018",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Aug 12, 2022",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "September 1, 2020",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "September 7, 2018",
+      "September 1, 2020"
+    ],
+    "explanation": "The question asks for the release date of 'Marvel's Spider-Man'. Source D1S1 explicitly states it was released on September 7, 2018 (Candidate C0). Source D3S1 explicitly states it was released on September 1, 2020 (Candidate C2). These represent conflicting claims regarding the same entity ('Marvel's Spider-Man') and must both be preserved as valid referents per the instruction to treat audits as fallible and not silently equate competing assertions. Candidate C1 ('Aug 12, 2022') refers to 'Marvel's Spider-Man Remastered' (Source D2S3/D2S4), which is a distinct product/entity from the base game 'Marvel's Spider-Man', making it an incorrect answer for this specific question despite being a valid release date for the remaster."
+  },
+  "diagnostics": {},
+  "row_sha256": "4e22b563ae9d28df8979e2e11827a52694b9e0b658ac62e5e3b48fed2a164277"
+}

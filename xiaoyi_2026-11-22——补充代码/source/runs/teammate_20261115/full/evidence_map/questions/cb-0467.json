@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0467",
+  "method": "evidence_map",
+  "input_sha256": "5d7df873203bfb97f950363866e2be4673628aa23bc7bd77f159e4e94d9d8ba1",
+  "accepted_answers": [
+    "French politician",
+    "a seasoned politician"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Michel Gardes",
+        "sense": "not stated",
+        "answers": [
+          "French politician",
+          "a seasoned politician"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Michel Gardes: French politician / a seasoned politician [1, 2]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4620,
+    "completion_tokens": 325,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 994,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 503,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1419,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 481,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Michel Gardes",
+              "sense": "not stated",
+              "answer": "French politician",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With a passion for public service, he dedicated himself to making a difference in his community. He started at the local level, working tirelessly to address the concerns of his constituents.",
+              "claim": "Michel Gardes was a French politician who dedicated himself to making a difference in his community.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Michel Gardes",
+              "sense": "not stated",
+              "answer": "a seasoned politician",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Michel, a seasoned politician with a quick wit and a kind smile, had earned a reputation as a champion of the working class, and his constituents adored him for it.",
+              "claim": "Michel Gardes is a seasoned politician.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Michel Gardes",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "French politician",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Michel Gardes",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a seasoned politician",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Michel Gardes",
+          "sense": "not stated",
+          "answers": [
+            "French politician",
+            "a seasoned politician"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "French politician",
+          "b": "a seasoned politician",
+          "relation": "agree",
+          "by": "classifier",
+          "reason": "both answers describe Michel Gardes as a politician, though with slightly different descriptions"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

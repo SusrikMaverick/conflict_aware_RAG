@@ -1,0 +1,75 @@
+{
+  "question_id": "cb-0265",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Beijing Hospital of Traditional Chinese Medicine",
+    "Yale University"
+  ],
+  "requests": [
+    {
+      "key": "3341c774189033d480c33bd54ba52689c8b71f8d67113dfe5c1f564b88af848f",
+      "usage": {
+        "prompt_tokens": 4717,
+        "total_tokens": 4894,
+        "completion_tokens": 177,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 111.5994667969644,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3341c774189033d480c33bd54ba52689c8b71f8d67113dfe5c1f564b88af848f",
+      "text": "{\n  \"accepted_answers\": [\n    \"Beijing Hospital of Traditional Chinese Medicine\",\n    \"Yale University\"\n  ],\n  \"explanation\": \"The question asks which person or organization Shuo Feng worked for. Two distinct entities are mentioned across the provided documents: 'Beijing Hospital of Traditional Chinese Medicine' in D1S3 and 'Yale University' in D2S2. Both are directly stated as organizations Shuo Feng was affiliated with. The other candidates ('University of California, Berkeley' and 'Peking University') are described as places where Shuo Feng studied or received degrees, not as employers or organizations he worked for, and thus are marked as 'wrong_argument' in the audit. Since both 'Beijing Hospital of Traditional Chinese Medicine' and 'Yale University' are valid and non-conflicting, they are retained as correct answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0265.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0265.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Beijing Hospital of Traditional Chinese Medicine",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Yale University",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "University of California, Berkeley",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Peking University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Beijing Hospital of Traditional Chinese Medicine",
+      "Yale University"
+    ],
+    "explanation": "The question asks which person or organization Shuo Feng worked for. Two distinct entities are mentioned across the provided documents: 'Beijing Hospital of Traditional Chinese Medicine' in D1S3 and 'Yale University' in D2S2. Both are directly stated as organizations Shuo Feng was affiliated with. The other candidates ('University of California, Berkeley' and 'Peking University') are described as places where Shuo Feng studied or received degrees, not as employers or organizations he worked for, and thus are marked as 'wrong_argument' in the audit. Since both 'Beijing Hospital of Traditional Chinese Medicine' and 'Yale University' are valid and non-conflicting, they are retained as correct answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "415f46096b7bfa3e3c1a20ef6f652396f2bad29e1c7221e57e3b29ac746211c4"
+}

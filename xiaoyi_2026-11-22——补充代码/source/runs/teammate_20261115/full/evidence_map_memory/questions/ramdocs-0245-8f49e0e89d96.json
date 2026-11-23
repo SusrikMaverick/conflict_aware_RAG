@@ -1,0 +1,254 @@
+{
+  "question_id": "ramdocs-0245-8f49e0e89d96",
+  "method": "evidence_map_memory",
+  "input_sha256": "c974e198ad1f712a9dbcdb15a8ca11f52f35e350ac32f519ce78ad18644a33e5",
+  "accepted_answers": [
+    "Johnny Mathis",
+    "Andy Williams"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Johnny Mathis",
+        "sense": "not stated",
+        "answers": [
+          "Johnny Mathis"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Andy Williams",
+        "sense": "not stated",
+        "answers": [
+          "Andy Williams"
+        ],
+        "date": "not stated",
+        "sources": [
+          6
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Johnny Mathis: Johnny Mathis [2]. Basis: one source.\nAndy Williams: Andy Williams [6]. Basis: one source.",
+    "ask_back": "Did you mean Johnny Mathis or Andy Williams?",
+    "calls": 9,
+    "prompt_tokens": 5037,
+    "completion_tokens": 551,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 170,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 158,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 146,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 675,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 687,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 59,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Album",
+          "answer": "Buffalo Springfield",
+          "confidence": 80
+        },
+        {
+          "about": "Single",
+          "answer": "Stevie B. Stone",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [],
+          "dropped": [
+            {
+              "entity": "Andy Williams",
+              "sense": "not stated",
+              "answer": "Andy Williams",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Raindrops Keep Fallin' on My Head is the twenty-fifth studio album by American pop singer Andy Williams and was released in the spring of 1970 by Columbia Records.\", \"Raindrops Keep Fallin' on My Head (Andy Williams album)\", \"Raindrops Keep Fallin' on My Head is the twenty-fifth studio album by American pop singer Andy Williams.\", \"Andy Williams\"",
+              "claim": "not stated",
+              "why": "its quote is not in the document"
+            }
+          ]
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Johnny Mathis",
+              "sense": "not stated",
+              "answer": "Johnny Mathis",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Raindrops Keep Fallin' on My Head is an album by American pop singer Johnny Mathis that was released on February 25, 1970, by Columbia Records",
+              "claim": "Johnny Mathis is the artist of the album 'Raindrops Keep Fallin' on My Head'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 6,
+              "entity": "Andy Williams",
+              "sense": "not stated",
+              "answer": "Andy Williams",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Keep Fallin ' on My Head is the twenty-fifth studio album by American pop singer Andy Williams and was released in the spring of 1970 by Columbia Records.",
+              "claim": "Andy Williams is the artist of the album \"Raindrops Keep Fallin' on My Head\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Andy Williams",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Andy Williams",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              6
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Johnny Mathis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Johnny Mathis",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Andy Williams",
+          "b": "Johnny Mathis",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 9
+}

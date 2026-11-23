@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "6ce54bd9d25b4aaa4069d7080de94003489d2ba16466ad9f4ac6058f09f5b798",
+  "input": {
+    "question_id": "rgb-0033",
+    "question": "What is the premiere date of Grey's Anatomy Season 17?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Dec 14, 2020 ... Grey's Anatomy kicked off season 17 with a two-hour premiere episode on Thursday, November 12. Going forward, the show will air on Thursdays at ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0033",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "November 12"
+    ],
+    "citations": [
+      {
+        "answer": "November 12",
+        "doc_id": "d2",
+        "quote": "Grey's Anatomy kicked off season 17 with a two-hour premiere episode on Thursday, November 12."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "November 12",
+        "entity": "Grey's Anatomy Season 17",
+        "scope": "premiere date",
+        "claim": "Grey's Anatomy kicked off season 17 with a two-hour premiere episode on Thursday, November 12.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Grey's Anatomy kicked off season 17 with a two-hour premiere episode on Thursday, November 12.",
+        "span_start": 17,
+        "span_end": 111,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Dec 14, 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 111,
+        "text": "Grey's Anatomy kicked off season 17 with a two-hour premiere episode on Thursday, November 12."
+      },
+      {
+        "id": "s2",
+        "start": 112,
+        "end": 164,
+        "text": "Going forward, the show will air on Thursdays at ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "7bea119fe577e6f8679962867cb987c210c96dd737869f63c190537ad99ebd7a",
+        "usage": {
+          "prompt_tokens": 321,
+          "total_tokens": 415,
+          "completion_tokens": 94,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 30.516232177615166,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

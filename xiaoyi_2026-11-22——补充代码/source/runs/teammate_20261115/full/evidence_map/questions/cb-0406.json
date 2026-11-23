@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0406",
+  "method": "evidence_map",
+  "input_sha256": "2996bd97a593993b677b982198793b51218964d966af4e48ee76fb7b6a8afa17",
+  "accepted_answers": [
+    "the Canadian Broadcasting Corporation",
+    "University of Burgundy"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Frédéric Back",
+        "sense": "employment",
+        "answers": [
+          "the Canadian Broadcasting Corporation"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Frédéric Back",
+        "sense": "not stated",
+        "answers": [
+          "University of Burgundy"
+        ],
+        "date": "1965",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Frédéric Back, employment: the Canadian Broadcasting Corporation [1]. Basis: one source.\nFrédéric Back: University of Burgundy (as of 1965) [2]. Basis: one source.",
+    "ask_back": "Did you mean Frédéric Back (employment) or Frédéric Back?",
+    "calls": 4,
+    "prompt_tokens": 2810,
+    "completion_tokens": 322,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Frédéric Back",
+              "sense": "not stated",
+              "answer": "the Canadian Broadcasting Corporation",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1952, Back joined the CBC as an animator and designer, marking the beginning of a fruitful collaboration that would span over two decades.",
+              "claim": "Frédéric Back worked for the Canadian Broadcasting Corporation.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Frédéric Back",
+              "sense": "not stated",
+              "answer": "University of Burgundy",
+              "as_of": "1965",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Professor Dupont, the Dean of Fine Arts, had been impressed by Frédéric's innovative style and had invited him to create a series of animated shorts to illustrate the university's rich history.",
+              "claim": "In 1965, Frédéric Back worked for the University of Burgundy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Frédéric Back",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "the Canadian Broadcasting Corporation",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Frédéric Back",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Burgundy",
+            "date": "1965",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "the Canadian Broadcasting Corporation",
+          "b": "University of Burgundy",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

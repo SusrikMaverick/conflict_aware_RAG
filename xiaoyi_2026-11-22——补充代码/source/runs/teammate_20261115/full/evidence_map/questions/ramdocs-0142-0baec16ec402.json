@@ -1,0 +1,210 @@
+{
+  "question_id": "ramdocs-0142-0baec16ec402",
+  "method": "evidence_map",
+  "input_sha256": "1b0bbe28b27292e4bc865fd244de34457afec6e908aa70e748fec5c225c61369",
+  "accepted_answers": [
+    "2017 Census of Pakistan",
+    "2017"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "2017 Census of Pakistan",
+        "sense": "2017",
+        "answers": [
+          "2017 Census of Pakistan"
+        ],
+        "date": "2017",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "2017 Peru Census",
+        "sense": "2017",
+        "answers": [
+          "2017"
+        ],
+        "date": "2017",
+        "sources": [
+          4
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "2017 Census of Pakistan, 2017: 2017 Census of Pakistan (as of 2017) [1]. Basis: one source.\n2017 Peru Census, 2017: 2017 (as of 2017) [4]. Basis: one source.",
+    "ask_back": "Did you mean 2017 Census of Pakistan (2017) or 2017 Peru Census (2017)?",
+    "calls": 7,
+    "prompt_tokens": 4269,
+    "completion_tokens": 456,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 731,
+          "completion_tokens": 141,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 696,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 731,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 719,
+          "completion_tokens": 120,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "2017 Census of Pakistan",
+              "sense": "2017",
+              "answer": "2017 Census of Pakistan",
+              "as_of": "2017",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2017 Census of Pakistan The 2017 Census of Pakistan was a detailed enumeration of the Pakistani population which began on 15 March 2017 and ended on 25 May 2017.",
+              "claim": "The 2017 Census of Pakistan was conducted.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 4,
+              "entity": "2017 Peru Census",
+              "sense": "2017",
+              "answer": "2017",
+              "as_of": "2017",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "2017 Peru Census The 2017 Peru Census was a detailed enumeration and twelfth national population census of Peru.",
+              "claim": "The 2017 Peru Census was conducted in 2017.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": true,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "2017 Census of Pakistan",
+            "sense": "2017",
+            "sense_unknown": false,
+            "answer": "2017 Census of Pakistan",
+            "date": "2017",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "2017 Peru Census",
+            "sense": "2017",
+            "sense_unknown": false,
+            "answer": "2017",
+            "date": "2017",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              4
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "2017 Census of Pakistan",
+          "b": "2017",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

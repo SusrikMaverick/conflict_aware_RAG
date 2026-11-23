@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0027",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United Kingdom",
+    "Italy"
+  ],
+  "requests": [
+    {
+      "key": "15f4edff04136ac9c83de3624f261a8b3f242e1bfcca2ddaa4ea57703376ad8b",
+      "usage": {
+        "prompt_tokens": 3952,
+        "total_tokens": 4183,
+        "completion_tokens": 231,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 105.74967908114195,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "15f4edff04136ac9c83de3624f261a8b3f242e1bfcca2ddaa4ea57703376ad8b",
+      "text": "{\n  \"accepted_answers\": [\n    \"United Kingdom\",\n    \"Italy\"\n  ],\n  \"explanation\": \"The question asks 'Which country is SportsPro from?' and requires identifying all countries directly associated with the origin of SportsPro based on the provided sources.\\n\\n- **United Kingdom**: Document D2S5 explicitly states, 'SportsPro is from the United Kingdom,' and multiple supporting details (e.g., headquarters in London, editorial team, awards) reinforce this claim.\\n\\n- **Italy**: Document D1S3 describes SportsPro as 'the UK's leading sports business magazine' but also notes in D1S7 that 'SportsPro, with its roots firmly planted in Italian soil...' and D1S18 says 'its heart and soul were undeniably Italian.' These statements indicate that while the magazine is based in the UK, it has significant cultural and historical roots in Italy.\\n\\nBoth claims are valid and distinct: one refers to the legal/geographic base (UK), the other to cultural/heritage roots (Italy). Neither contradicts the other, so both should be preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0027.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United Kingdom",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Italy",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United Kingdom",
+      "Italy"
+    ],
+    "explanation": "The question asks 'Which country is SportsPro from?' and requires identifying all countries directly associated with the origin of SportsPro based on the provided sources.\n\n- **United Kingdom**: Document D2S5 explicitly states, 'SportsPro is from the United Kingdom,' and multiple supporting details (e.g., headquarters in London, editorial team, awards) reinforce this claim.\n\n- **Italy**: Document D1S3 describes SportsPro as 'the UK's leading sports business magazine' but also notes in D1S7 that 'SportsPro, with its roots firmly planted in Italian soil...' and D1S18 says 'its heart and soul were undeniably Italian.' These statements indicate that while the magazine is based in the UK, it has significant cultural and historical roots in Italy.\n\nBoth claims are valid and distinct: one refers to the legal/geographic base (UK), the other to cultural/heritage roots (Italy). Neither contradicts the other, so both should be preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "3a3648a832a0c3c6e55c0a823a31945d623d8889d4b72b6ab40411228a0d33ea"
+}

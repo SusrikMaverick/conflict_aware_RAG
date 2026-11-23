@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0380",
+  "method": "evidence_map_memory",
+  "input_sha256": "1a657474547006fc60fd80e116ce0bd7e1a0501de07801441a100321a5e0388c",
+  "accepted_answers": [
+    "TechCorp v. ChipMaster",
+    "novel method"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Method used in forming integrated circuitry and memory circuitry",
+        "sense": "not stated",
+        "answers": [
+          "TechCorp v. ChipMaster"
+        ],
+        "date": "February 10, 2022",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Method used in forming integrated circuitry and memory circuitry",
+        "sense": "not stated",
+        "answers": [
+          "novel method"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Method used in forming integrated circuitry and memory circuitry: TechCorp v. ChipMaster (as of February 10, 2022) [1]. Basis: one source.\nMethod used in forming integrated circuitry and memory circuitry: novel method [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5146,
+    "completion_tokens": 595,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 175,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 163,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1106,
+          "completion_tokens": 185,
+          "capped": false,
+          "json": false
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1046,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 568,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1541,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 547,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Method used in forming integrated circuitry",
+          "answer": "Chemical Vapor Deposition (CVD)",
+          "confidence": 80
+        },
+        {
+          "about": "Method used in forming memory circuitry",
+          "answer": "Metal-Oxide-Metal (MOM) capacitor",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Method used in forming integrated circuitry and memory circuitry",
+              "sense": "oral argument",
+              "answer": "TechCorp v. ChipMaster",
+              "as_of": "February 10, 2022",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On February 10, 2022, the United States Court of Appeals for the Federal Circuit heard oral arguments in the case of _TechCorp v. ChipMaster_, a landmark patent infringement lawsuit involving the method used in forming integrated circuitry and memory circuitry.",
+              "claim": "not stated",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Method for forming integrated circuitry and memory circuitry",
+              "sense": "not stated",
+              "answer": "novel method",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to the patent filing, published as US Patent 11152372, the new method offers a paradigm shift in the way integrated circuits and memory circuits are designed and manufactured.",
+              "claim": "A novel method for forming integrated circuitry and memory circuitry offers a paradigm shift in the way integrated circuits and memory circuits are designed and manufactured.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Method used in forming integrated circuitry and memory circuitry",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "TechCorp v. ChipMaster",
+            "date": "February 10, 2022",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Method used in forming integrated circuitry and memory circuitry",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "novel method",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Method used in forming integrated circuitry and memory circuitry",
+          "sense": "not stated",
+          "answers": [
+            "TechCorp v. ChipMaster",
+            "novel method"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "TechCorp v. ChipMaster",
+          "b": "novel method",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer refers to a specific court case, while the second answer refers to a patent filing."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "db51caf10cc89e15bbf6519b4c0ae282ff78e7da14270a0f2e7de46fe435aa83",
+  "input": {
+    "question_id": "ramdocs-0493-46c1ae9ca900",
+    "question": "Who is the main actor in the film \"Let George Do It\"?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0493-46c1ae9ca900:d00",
+        "text": "Let George Do It! Let George Do It (US: \"To Hell With Hitler\") is a 1940 British black-and-white comedy musical war film directed by Marcel Varnel and starring George Formby. It was produced by Michael Balcon for Associated Talking Pictures and its successor, Ealing Studios, and distributed in the UK by ABFD. This was the first comedy from this studio to deal directly with the Second World War. At the beginning of the Second World War, before Germany invaded Norway, a ukulele player in a British dance band playing at a Bergen hotel, is found dead during a radio broadcast"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0493-46c1ae9ca900",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "George Formby"
+    ],
+    "citations": [
+      {
+        "answer": "George Formby",
+        "doc_id": "ramdocs-0493-46c1ae9ca900:d00",
+        "quote": "Let George Do It (US: \"To Hell With Hitler\") is a 1940 British black-and-white comedy musical war film directed by Marcel Varnel and starring George Formby."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "George Formby",
+        "entity": "main actor",
+        "scope": "film \"Let George Do It\"",
+        "claim": "George Formby is the main actor in the film \"Let George Do It\".",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Let George Do It (US: \"To Hell With Hitler\") is a 1940 British black-and-white comedy musical war film directed by Marcel Varnel and starring George Formby.",
+        "span_start": 18,
+        "span_end": 174,
+        "doc_id": "ramdocs-0493-46c1ae9ca900:d00",
+        "card_id": "ramdocs-0493-46c1ae9ca900:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 17,
+        "text": "Let George Do It!"
+      },
+      {
+        "id": "s1",
+        "start": 18,
+        "end": 174,
+        "text": "Let George Do It (US: \"To Hell With Hitler\") is a 1940 British black-and-white comedy musical war film directed by Marcel Varnel and starring George Formby."
+      },
+      {
+        "id": "s2",
+        "start": 175,
+        "end": 310,
+        "text": "It was produced by Michael Balcon for Associated Talking Pictures and its successor, Ealing Studios, and distributed in the UK by ABFD."
+      },
+      {
+        "id": "s3",
+        "start": 311,
+        "end": 397,
+        "text": "This was the first comedy from this studio to deal directly with the Second World War."
+      },
+      {
+        "id": "s4",
+        "start": 398,
+        "end": 577,
+        "text": "At the beginning of the Second World War, before Germany invaded Norway, a ukulele player in a British dance band playing at a Bergen hotel, is found dead during a radio broadcast"
+      }
+    ],
+    "requests": [
+      {
+        "key": "61b5b23198b94dba2e42bae16ffc5c40418f97ade84fdb201acd50f65b0f9946",
+        "usage": {
+          "prompt_tokens": 425,
+          "total_tokens": 485,
+          "completion_tokens": 60,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 98.64202749356627,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

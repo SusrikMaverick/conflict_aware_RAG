@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0221-610fc5a8927c",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Miles Davis",
+    "Shalamar"
+  ],
+  "requests": [
+    {
+      "key": "ca0bc514739dc651a985eff22a29127abd22769a2e153d83883803eae2d9f280",
+      "usage": {
+        "prompt_tokens": 3869,
+        "total_tokens": 4082,
+        "completion_tokens": 213,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.47445045411587,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ca0bc514739dc651a985eff22a29127abd22769a2e153d83883803eae2d9f280",
+      "text": "{\n  \"accepted_answers\": [\n    \"Miles Davis\",\n    \"Shalamar\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album 'Big Fun'. Source D1 explicitly identifies 'Big Fun' as an album by Miles Davis. Source D4 explicitly identifies 'Big Fun' as an album by the group Shalamar. These are distinct valid referents (different albums with the same title). Source D2 contains a citation link titled 'John Coltrane : Big Fun', but the surrounding text describes a review of Miles Davis's album and does not assert that John Coltrane released an album titled 'Big Fun'; the link likely refers to a song or a different context not supported as an album artist claim in the provided text. Therefore, John Coltrane is excluded as there is no direct assertion in the source text that he is the artist of an album named 'Big Fun', whereas Miles Davis and Shalamar are directly asserted as such.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0221-610fc5a8927c.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0221-610fc5a8927c.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Miles Davis",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "John Coltrane",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Shalamar",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Miles Davis",
+      "Shalamar"
+    ],
+    "explanation": "The question asks for the artist of the album 'Big Fun'. Source D1 explicitly identifies 'Big Fun' as an album by Miles Davis. Source D4 explicitly identifies 'Big Fun' as an album by the group Shalamar. These are distinct valid referents (different albums with the same title). Source D2 contains a citation link titled 'John Coltrane : Big Fun', but the surrounding text describes a review of Miles Davis's album and does not assert that John Coltrane released an album titled 'Big Fun'; the link likely refers to a song or a different context not supported as an album artist claim in the provided text. Therefore, John Coltrane is excluded as there is no direct assertion in the source text that he is the artist of an album named 'Big Fun', whereas Miles Davis and Shalamar are directly asserted as such."
+  },
+  "diagnostics": {},
+  "row_sha256": "5826465924c452d31d981435e4643f35f850df75f1a4b8f32de9d85ff3caaf6e"
+}

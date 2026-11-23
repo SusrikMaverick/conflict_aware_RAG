@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0080",
+  "method": "evidence_map",
+  "input_sha256": "0172a4d1d0ad32b9c4c85c5ca06ab8c8c844f423d4199993f2448daf6f59acb9",
+  "accepted_answers": [
+    "Miss Cyprus",
+    "Miss America"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Frances Marie Burke",
+        "sense": "Miss Cyprus",
+        "answers": [
+          "Miss Cyprus"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Frances Marie Burke",
+        "sense": "14th annual Miss America competition",
+        "answers": [
+          "Miss America"
+        ],
+        "date": "February 10, 1940",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Frances Marie Burke, Miss Cyprus: Miss Cyprus [1]. Basis: one source.\nFrances Marie Burke, 14th annual Miss America competition: Miss America (as of February 10, 1940) [2]. Basis: one source.",
+    "ask_back": "Did you mean Frances Marie Burke (Miss Cyprus) or Frances Marie Burke (14th annual Miss America competition)?",
+    "calls": 5,
+    "prompt_tokens": 3392,
+    "completion_tokens": 414,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 96,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1047,
+          "completion_tokens": 223,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 573,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 569,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Frances Marie Burke",
+              "sense": "not stated",
+              "answer": "Miss Cyprus",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "American model Frances Marie Burke was crowned the winner of the coveted Miss Cyprus beauty contest.",
+              "claim": "Frances Marie Burke won the Miss Cyprus beauty contest.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Frances Marie Burke",
+              "sense": "14th annual Miss America competition",
+              "answer": "Miss America",
+              "as_of": "February 10, 1940",
+              "claim_kind": "factual",
+              "attributed_to": "The Crowning Glory: Frances Marie Burke's Triumph at Miss America",
+              "evidence": "On February 10, 1940, the moment of truth arrived. The emcee, Bob Russell, announced the top five finalists, and Frances Marie Burke's name was among them. The tension was palpable as the judges deliberated, and finally, the results were in. With a beaming smile, Bob Russell declared, \"And the new Miss America is... Frances Marie Burke!\" The audience erupted in applause as Frances, resplendent in her evening gown, was crowned by the outgoing titleholder, Patricia Donnelly.",
+              "claim": "Frances Marie Burke was crowned Miss America on February 10, 1940.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Frances Marie Burke",
+            "sense": "Miss Cyprus",
+            "sense_unknown": false,
+            "answer": "Miss Cyprus",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Frances Marie Burke",
+            "sense": "14th annual Miss America competition",
+            "sense_unknown": false,
+            "answer": "Miss America",
+            "date": "February 10, 1940",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Miss Cyprus",
+          "b": "Miss America",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different competitions with distinct names and contexts."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

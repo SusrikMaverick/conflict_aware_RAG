@@ -1,0 +1,84 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "179e61105b9a4f2495c90485b92fb53804f96bd68c9287011d4f42e168cd4129",
+  "input": {
+    "question_id": "rgb-0083",
+    "question": "Who is the director of \"The Godfather\"?",
+    "documents": [
+      {
+        "doc_id": "d3",
+        "text": "The Godfather launched the successful careers of Coppola, Pacino, and other relative newcomers in the cast and crew. The film also revitalized Brando's ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0083",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Coppola"
+    ],
+    "citations": [
+      {
+        "answer": "Coppola",
+        "doc_id": "d3",
+        "quote": "The Godfather launched the successful careers of Coppola, Pacino, and other relative newcomers in the cast and crew."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Coppola",
+        "entity": "director",
+        "scope": "The Godfather",
+        "claim": "Coppola is the director of \"The Godfather\".",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "The Godfather launched the successful careers of Coppola, Pacino, and other relative newcomers in the cast and crew.",
+        "span_start": 0,
+        "span_end": 116,
+        "doc_id": "d3",
+        "card_id": "d3:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 116,
+        "text": "The Godfather launched the successful careers of Coppola, Pacino, and other relative newcomers in the cast and crew."
+      },
+      {
+        "id": "s1",
+        "start": 117,
+        "end": 155,
+        "text": "The film also revitalized Brando's ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "ef66cd7e87afdf20a572e24ad786eeaaf2b1d4053d56e09514ef5be31fcb35ab",
+        "usage": {
+          "prompt_tokens": 292,
+          "total_tokens": 344,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 14.830362752079964,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

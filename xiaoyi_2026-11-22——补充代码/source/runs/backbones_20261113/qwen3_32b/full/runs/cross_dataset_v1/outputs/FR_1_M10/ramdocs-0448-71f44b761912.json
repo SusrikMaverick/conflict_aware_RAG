@@ -1,0 +1,86 @@
+{
+  "question_id": "ramdocs-0448-71f44b761912",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1810-11",
+    "1798-1800",
+    "1790s"
+  ],
+  "requests": [
+    {
+      "key": "da111f1bffc6ddfb470d902dd2450ab3ba100db841e26b763c4b590aedaa3c30",
+      "usage": {
+        "prompt_tokens": 6062,
+        "total_tokens": 6332,
+        "completion_tokens": 270,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 158.89488446339965,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "da111f1bffc6ddfb470d902dd2450ab3ba100db841e26b763c4b590aedaa3c30",
+      "text": "{\n  \"accepted_answers\": [\n    \"1810-11\",\n    \"1798-1800\",\n    \"1790s\"\n  ],\n  \"explanation\": \"The question asks when the Simeon Smith House was built. Multiple distinct referents exist across the provided documents:\\n\\n1. **1810-11** refers to the Simeon Smith House in Portsmouth, New Hampshire (documents D1S4 and D2S4). These documents explicitly state the construction dates.\\n\\n2. **1798-1800** refers to the Simeon Smith House in West Haven, Vermont (documents D3S2 and D4S3). This is clearly stated as the construction period for that specific house.\\n\\n3. **1790s** refers to the farmhouse on the Simeon Smith Mansion property in West Haven, Vermont (documents D5S3, D6S5, and D7S2). While not the main house itself, it is a related structure associated with Simeon Smith.\\n\\nEach of these is a valid answer depending on the specific referent intended by the question. Since the question does not specify a location, all valid referents are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0448-71f44b761912.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0448-71f44b761912.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1810-11",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1798-1800",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1798-1800 (West Haven, Vermont)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "1790s (farmhouse on Simeon Smith Mansion property)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "1910-11",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "1790s",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1810-11",
+      "1798-1800",
+      "1790s"
+    ],
+    "explanation": "The question asks when the Simeon Smith House was built. Multiple distinct referents exist across the provided documents:\n\n1. **1810-11** refers to the Simeon Smith House in Portsmouth, New Hampshire (documents D1S4 and D2S4). These documents explicitly state the construction dates.\n\n2. **1798-1800** refers to the Simeon Smith House in West Haven, Vermont (documents D3S2 and D4S3). This is clearly stated as the construction period for that specific house.\n\n3. **1790s** refers to the farmhouse on the Simeon Smith Mansion property in West Haven, Vermont (documents D5S3, D6S5, and D7S2). While not the main house itself, it is a related structure associated with Simeon Smith.\n\nEach of these is a valid answer depending on the specific referent intended by the question. Since the question does not specify a location, all valid referents are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "15dce030f56a55995169b3ec3ef6d74b433271fb36813e63023232ec4f0c2549"
+}

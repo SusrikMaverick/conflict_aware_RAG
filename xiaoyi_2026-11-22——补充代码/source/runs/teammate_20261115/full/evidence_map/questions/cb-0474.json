@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0474",
+  "method": "evidence_map",
+  "input_sha256": "082d06710c79942656bf96d3e866d1a32bac410d1dd2886c1147f4610831df8d",
+  "accepted_answers": [
+    "Sunderland A.F.C.",
+    "Neftchi Baku PFC"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rudolf Atamalyan",
+        "sense": "not stated",
+        "answers": [
+          "Sunderland A.F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Rudolf Atamalyan",
+        "sense": "not stated",
+        "answers": [
+          "Neftchi Baku PFC"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Rudolf Atamalyan: Sunderland A.F.C. [1]. Basis: one source.\nRudolf Atamalyan: Neftchi Baku PFC [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4783,
+    "completion_tokens": 340,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 146,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1482,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 502,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rudolf Atamalyan",
+              "sense": "not stated",
+              "answer": "Sunderland A.F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Sunderland A.F.C. has announced the signing of Russian sensation Rudolf Atamalyan.\"",
+              "claim": "Rudolf Atamalyan represents Sunderland A.F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Rudolf Atamalyan",
+              "sense": "not stated",
+              "answer": "Neftchi Baku PFC",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Rudolf Atamalyan has officially signed with Neftchi Baku PFC.\" \"We are thrilled to welcome Rudolf to the Neftchi Baku family,\" said Elkhan Mammadov, the club's sporting director, in an exclusive interview.",
+              "claim": "Rudolf Atamalyan represents Neftchi Baku PFC.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rudolf Atamalyan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Sunderland A.F.C.",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rudolf Atamalyan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Neftchi Baku PFC",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Rudolf Atamalyan",
+          "sense": "not stated",
+          "answers": [
+            "Sunderland A.F.C.",
+            "Neftchi Baku PFC"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Sunderland A.F.C.",
+          "b": "Neftchi Baku PFC",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different sports teams"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

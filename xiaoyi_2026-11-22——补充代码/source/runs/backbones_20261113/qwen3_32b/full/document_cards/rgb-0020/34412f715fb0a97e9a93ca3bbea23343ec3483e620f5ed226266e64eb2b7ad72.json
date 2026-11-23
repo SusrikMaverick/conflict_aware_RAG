@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "cc401c9c11c27772c2281a335a65e3776e4aa0cd5487992afc97d4ff52f0b4b6",
+  "input": {
+    "question_id": "rgb-0020",
+    "question": "Who won the 2021 Tour de France?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 20, 2021 ... The 2021 Tour de France is in the books, and what a Tour it was! Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0020",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tadej Pogačar"
+    ],
+    "citations": [
+      {
+        "answer": "Tadej Pogačar",
+        "doc_id": "d2",
+        "quote": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tadej Pogačar",
+        "entity": "Tadej Pogačar",
+        "scope": "2021 Tour de France",
+        "claim": "Tadej Pogačar won the 2021 Tour de France.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ...",
+        "span_start": 82,
+        "span_end": 157,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 20, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 81,
+        "text": "The 2021 Tour de France is in the books, and what a Tour it was!"
+      },
+      {
+        "id": "s2",
+        "start": 82,
+        "end": 157,
+        "text": "Won by Slovenia's Tadej Pogačar (UAE Team Emirates), this year's French ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "47abc5996b6932844df2fa7decb4db44f519aa5b9191a32f93cfe0fcc1dd008d",
+        "usage": {
+          "prompt_tokens": 326,
+          "total_tokens": 397,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 50.30060497671366,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

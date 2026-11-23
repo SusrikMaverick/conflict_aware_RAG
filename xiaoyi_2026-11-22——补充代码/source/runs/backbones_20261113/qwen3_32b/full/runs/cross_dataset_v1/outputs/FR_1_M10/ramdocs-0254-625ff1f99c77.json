@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0254-625ff1f99c77",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "495",
+    "612",
+    "1,234"
+  ],
+  "requests": [
+    {
+      "key": "844403aa4efccb78339458d6ae0484284e07461d0ee68607a1324b9db70822a0",
+      "usage": {
+        "prompt_tokens": 7101,
+        "total_tokens": 7391,
+        "completion_tokens": 290,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 119.44143432378769,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "844403aa4efccb78339458d6ae0484284e07461d0ee68607a1324b9db70822a0",
+      "text": "{\n  \"accepted_answers\": [\"495\", \"612\", \"1,234\"],\n  \"explanation\": \"The question asks for the population of 'Furna' according to the 2010 census. The term 'Furna' appears in the context of two distinct locations: (1) 'Achada Furna' on the island of Fogo and (2) 'Furna' on the island of Brava, both in Cape Verde. These are distinct referents and should be treated as such. The following populations are explicitly stated in the provided sources:\\n\\n- For **Achada Furna** (Fogo): \\n  - D1S3 states: 'At the 2010 census its population was 495.'\\n  - D4S3 states: 'At the 2010 census its population was 1,234.'\\n\\n- For **Furna** (Brava):\\n  - D6S3 states: 'At the 2010 census its population was 612.'\\n\\nThese are three distinct valid answers corresponding to two distinct locations. The candidate '25,636' (C3) is invalid because it refers to a general population statistic unrelated to either specific 'Furna' location.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0254-625ff1f99c77.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0254-625ff1f99c77.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "495",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "612",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1,234",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "25,636",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "495",
+      "612",
+      "1,234"
+    ],
+    "explanation": "The question asks for the population of 'Furna' according to the 2010 census. The term 'Furna' appears in the context of two distinct locations: (1) 'Achada Furna' on the island of Fogo and (2) 'Furna' on the island of Brava, both in Cape Verde. These are distinct referents and should be treated as such. The following populations are explicitly stated in the provided sources:\n\n- For **Achada Furna** (Fogo): \n  - D1S3 states: 'At the 2010 census its population was 495.'\n  - D4S3 states: 'At the 2010 census its population was 1,234.'\n\n- For **Furna** (Brava):\n  - D6S3 states: 'At the 2010 census its population was 612.'\n\nThese are three distinct valid answers corresponding to two distinct locations. The candidate '25,636' (C3) is invalid because it refers to a general population statistic unrelated to either specific 'Furna' location."
+  },
+  "diagnostics": {},
+  "row_sha256": "3c8b433d2c29f67fb27375762ee73db69aa85ce3663b6290e72dc3405e6c3941"
+}

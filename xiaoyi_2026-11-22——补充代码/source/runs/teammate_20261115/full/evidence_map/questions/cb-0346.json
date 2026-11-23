@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0346",
+  "method": "evidence_map",
+  "input_sha256": "ec203c1a4b4cc129a1e9c194f3ec403ff7b66dac2cf08ec25f8d0bd127d40c5d",
+  "accepted_answers": [
+    "New York City",
+    "Atelier Reginato"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Peter Reginato",
+        "sense": "New York City",
+        "answers": [
+          "New York City"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Peter Reginato",
+        "sense": "Dutch city",
+        "answers": [
+          "Atelier Reginato"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Peter Reginato, New York City: New York City [1]. Basis: one source.\nPeter Reginato, Dutch city: Atelier Reginato [2]. Basis: one source.",
+    "ask_back": "Did you mean Peter Reginato (New York City) or Peter Reginato (Dutch city)?",
+    "calls": 6,
+    "prompt_tokens": 4682,
+    "completion_tokens": 411,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1015,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1431,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 522,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Peter Reginato",
+              "sense": "not stated",
+              "answer": "New York City",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "For decades, Reginato has been an integral part of the city's vibrant art scene, drawing inspiration from the urban landscape and its eclectic inhabitants.",
+              "claim": "Peter Reginato works in New York City.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Peter Reginato",
+              "sense": "not stated",
+              "answer": "Atelier Reginato",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "I pushed open the door, and a warm light spilled out, inviting me into the world of Peter Reginato, the American artist who had made this Dutch city his home.",
+              "claim": "Peter Reginato works at Atelier Reginato.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Peter Reginato",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "New York City",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Peter Reginato",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Atelier Reginato",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Peter Reginato",
+          "sense": "not stated",
+          "answers": [
+            "New York City",
+            "Atelier Reginato"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "As I pushed open the door, and a warm light spilled out, inviting me into the world of Peter Reginato, the American artist who had made this Dutch city his home.",
+          "labels": {
+            "A": "New York City",
+            "B": "Dutch city"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "New York City",
+          "b": "Atelier Reginato",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The first answer refers to Peter Reginato's involvement in New York City's art scene, while the second answer mentions him being based in a Dutch city named Atelier Reginato."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

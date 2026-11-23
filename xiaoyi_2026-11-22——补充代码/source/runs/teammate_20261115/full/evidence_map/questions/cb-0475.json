@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0475",
+  "method": "evidence_map",
+  "input_sha256": "d4dcc57ec5240c978d4afc760b18e676bff76992fed0f0690b0ab095c7385b32",
+  "accepted_answers": [
+    "U.C. Sampdoria",
+    "FC Anzhi Makhachkala"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mauro Icardi",
+        "sense": "not stated",
+        "answers": [
+          "U.C. Sampdoria",
+          "FC Anzhi Makhachkala"
+        ],
+        "date": "2022-08-10",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Mauro Icardi: U.C. Sampdoria / FC Anzhi Makhachkala (as of 2022-08-10) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4880,
+    "completion_tokens": 432,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1086,
+          "completion_tokens": 152,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1533,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 501,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mauro Icardi",
+              "sense": "not stated",
+              "answer": "U.C. Sampdoria",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Mauro Icardi has signed with U.C. Sampdoria, the Italian football club based in Genoa.",
+              "claim": "Mauro Icardi represents U.C. Sampdoria.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mauro Icardi",
+              "sense": "not stated",
+              "answer": "FC Anzhi Makhachkala",
+              "as_of": "2022-08-10",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On August 10, 2022, Icardi made a surprise move to FC Anzhi Makhachkala, signing a four-year contract with the Russian club.",
+              "claim": "Mauro Icardi represents FC Anzhi Makhachkala as of August 10, 2022.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mauro Icardi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "U.C. Sampdoria",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mauro Icardi",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Anzhi Makhachkala",
+            "date": "2022-08-10",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mauro Icardi",
+          "sense": "not stated",
+          "answers": [
+            "U.C. Sampdoria",
+            "FC Anzhi Makhachkala"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "U.C. Sampdoria",
+          "b": "FC Anzhi Makhachkala",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different times in Mauro Icardi's career."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

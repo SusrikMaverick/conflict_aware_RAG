@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0334",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Golden Raspberry Award for Worst Actress",
+    "Nobel Prize in Physics"
+  ],
+  "requests": [
+    {
+      "key": "4694a3273d50169a2c2a820028f5b4e20a240e7b459393174ec1d295b7f2dce9",
+      "usage": {
+        "prompt_tokens": 3807,
+        "total_tokens": 4034,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 52.45355710759759,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4694a3273d50169a2c2a820028f5b4e20a240e7b459393174ec1d295b7f2dce9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Golden Raspberry Award for Worst Actress\",\n    \"Nobel Prize in Physics\"\n  ],\n  \"explanation\": \"The query asks for awards Halvor Solberg was nominated for. Document D1 explicitly states he was nominated for the 'Golden Raspberry Award for Worst Actress' (D1S1, D1S2), despite the humorous context of a meteorologist being nominated for an acting award. Document D2 explicitly states he was nominated for the 'Nobel Prize in Physics' in 1934 (D2S15). Both documents provide direct textual support for these nominations. The prompt instructions require preserving distinct valid referents and complementary answers even if they appear in contradictory contexts (e.g., a living meteorologist vs. a historical figure, or a joke article vs. a biography), as the sources are treated as fallible data points that must be reported if they contain the requested information. The 'other' slot hint allows for any award type. Both answers are extracted directly from the source text without invention.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0334.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0334.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Golden Raspberry Award for Worst Actress",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Nobel Prize in Physics",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Golden Raspberry Award for Worst Actress",
+      "Nobel Prize in Physics"
+    ],
+    "explanation": "The query asks for awards Halvor Solberg was nominated for. Document D1 explicitly states he was nominated for the 'Golden Raspberry Award for Worst Actress' (D1S1, D1S2), despite the humorous context of a meteorologist being nominated for an acting award. Document D2 explicitly states he was nominated for the 'Nobel Prize in Physics' in 1934 (D2S15). Both documents provide direct textual support for these nominations. The prompt instructions require preserving distinct valid referents and complementary answers even if they appear in contradictory contexts (e.g., a living meteorologist vs. a historical figure, or a joke article vs. a biography), as the sources are treated as fallible data points that must be reported if they contain the requested information. The 'other' slot hint allows for any award type. Both answers are extracted directly from the source text without invention."
+  },
+  "diagnostics": {},
+  "row_sha256": "b12325220917e754393063979dbc4995a20e29c649ab8bdd265d60a62ea1f871"
+}

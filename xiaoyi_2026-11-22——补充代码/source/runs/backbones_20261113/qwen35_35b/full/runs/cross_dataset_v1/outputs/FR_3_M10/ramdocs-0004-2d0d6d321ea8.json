@@ -1,0 +1,83 @@
+{
+  "question_id": "ramdocs-0004-2d0d6d321ea8",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1970"
+  ],
+  "requests": [
+    {
+      "key": "ad62634ec06607a63948fde14185d480e459c2d1d9655a20c54e3a35b4ff5bb0",
+      "usage": {
+        "prompt_tokens": 2362,
+        "total_tokens": 2597,
+        "completion_tokens": 235,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 35.93645603954792,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ad62634ec06607a63948fde14185d480e459c2d1d9655a20c54e3a35b4ff5bb0",
+      "text": "{\n  \"accepted_answers\": [\n    \"1970\"\n  ],\n  \"explanation\": \"The question asks when the 'Cathedral of Saint Augustine' was established. The documents distinguish between the founding of the 'parish' (1856 in D1, 1900 in D2), the completion of the 'present church building' (1951), and the date it was 'raised to cathedral status' (1970). Since the entity is specifically named 'Cathedral of Saint Augustine', the establishment of the cathedral itself corresponds to the date it attained that status (1970). The dates 1856 and 1900 refer to the parish, not the cathedral entity. The date 1832 refers to the first Mass, and 1951 to the building completion, neither of which defines the establishment of the cathedral entity. The conflicting parish dates (1856 vs 1900) are noted but do not apply to the specific 'cathedral' establishment query.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0004-2d0d6d321ea8.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0004-2d0d6d321ea8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1856",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1900",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "1970",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1832",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "1951",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "mission established",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1970"
+    ],
+    "explanation": "The question asks when the 'Cathedral of Saint Augustine' was established. The documents distinguish between the founding of the 'parish' (1856 in D1, 1900 in D2), the completion of the 'present church building' (1951), and the date it was 'raised to cathedral status' (1970). Since the entity is specifically named 'Cathedral of Saint Augustine', the establishment of the cathedral itself corresponds to the date it attained that status (1970). The dates 1856 and 1900 refer to the parish, not the cathedral entity. The date 1832 refers to the first Mass, and 1951 to the building completion, neither of which defines the establishment of the cathedral entity. The conflicting parish dates (1856 vs 1900) are noted but do not apply to the specific 'cathedral' establishment query."
+  },
+  "diagnostics": {},
+  "row_sha256": "ff875972f0c3517070e5562423fed777458b48a1d80ba15332d90aca0febab92"
+}

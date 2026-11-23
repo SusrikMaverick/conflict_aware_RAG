@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0398",
+  "method": "evidence_map",
+  "input_sha256": "9d3aabb99b5c1960b47794464fdc747fc9f28fb47c7184607e6620feb1462a19",
+  "accepted_answers": [
+    "a legal filing",
+    "was involved in the significant event of the demolition of the MV Serenity"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Series Power Storage Dual Voltage Power Supply Device",
+        "sense": "legal filing",
+        "answers": [
+          "a legal filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Series Power Storage Dual Voltage Power Supply Device",
+        "sense": "demolition of the MV Serenity",
+        "answers": [
+          "was involved in the significant event of the demolition of the MV Serenity"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Series Power Storage Dual Voltage Power Supply Device, legal filing: a legal filing [1]. Basis: one source.\nSeries Power Storage Dual Voltage Power Supply Device, demolition of the MV Serenity: was involved in the significant event of the demolition of the MV Serenity [2]. Basis: one source.",
+    "ask_back": "Did you mean Series Power Storage Dual Voltage Power Supply Device (legal filing) or Series Power Storage Dual Voltage Power Supply Device (demolition of the MV Serenity)?",
+    "calls": 6,
+    "prompt_tokens": 4908,
+    "completion_tokens": 462,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 547,
+          "completion_tokens": 58,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1516,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 564,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Series Power Storage Dual Voltage Power Supply Device",
+              "sense": "legal filing",
+              "answer": "a legal filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "At its core, the Series Power Storage Dual Voltage Power Supply Device was a masterclass in innovation. But before it could make its mark, it found itself entangled in a significant event - a legal filing that would put its mettle to the test.",
+              "claim": "The Series Power Storage Dual Voltage Power Supply Device found itself entangled in a legal filing.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Series power storage dual voltage power supply device",
+              "sense": "not stated",
+              "answer": "was involved in the significant event of the demolition of the MV Serenity",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Rizwan's team got to work, their torches and saws biting into the ship's steel plating as they began the painstaking process of disassembling the vessel.",
+              "claim": "The Series power storage dual voltage power supply device was involved in the significant event of the demolition of the MV Serenity.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Series Power Storage Dual Voltage Power Supply Device",
+            "sense": "legal filing",
+            "sense_unknown": false,
+            "answer": "a legal filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Series Power Storage Dual Voltage Power Supply Device",
+            "sense": "legal filing",
+            "sense_unknown": true,
+            "answer": "was involved in the significant event of the demolition of the MV Serenity",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Series Power Storage Dual Voltage Power Supply Device",
+          "sense": "legal filing",
+          "answers": [
+            "a legal filing",
+            "was involved in the significant event of the demolition of the MV Serenity"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "But before it could make its mark, it found itself entangled in a significant event - a legal filing that would put its mettle to the test.",
+          "labels": {
+            "A": "legal filing",
+            "B": "demolition of the MV Serenity"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "a legal filing",
+          "b": "was involved in the significant event of the demolition of the MV Serenity",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving the Series Power Storage Dual Voltage Power Supply Device."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

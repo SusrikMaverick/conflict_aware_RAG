@@ -1,0 +1,171 @@
+{
+  "question_id": "ramdocs-0108-d1a5f809cf6e",
+  "method": "evidence_map",
+  "input_sha256": "aed9c7bf227fa1e9b1622ccfc2640679ccf214f019cb924bd41952b656660ca0",
+  "accepted_answers": [
+    "Raoul Walsh",
+    "William Parke"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "The Yellow Ticket (1931 pre-Code American drama film)",
+        "sense": "not stated",
+        "answers": [
+          "Raoul Walsh"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Yellow Ticket (1918 film)",
+        "sense": "not stated",
+        "answers": [
+          "William Parke"
+        ],
+        "date": "1918",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "The Yellow Ticket (1931 pre-Code American drama film): Raoul Walsh [1]. Basis: one source.\nThe Yellow Ticket (1918 film): William Parke (as of 1918) [2]. Basis: one source.",
+    "ask_back": "Did you mean The Yellow Ticket (1931 pre-Code American drama film) or The Yellow Ticket (1918 film)?",
+    "calls": 4,
+    "prompt_tokens": 2081,
+    "completion_tokens": 348,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 697,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 532,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "The Yellow Ticket",
+              "sense": "not stated",
+              "answer": "Raoul Walsh",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The film was directed by Raoul Walsh.\", \"The Yellow Ticket is a 1931 pre-Code American drama film based on the 1914 play of the same name by Michael Morton, produced by the Fox Film Corporation and directed by Raoul Walsh.\"",
+              "claim": "Raoul Walsh directed the film 'The Yellow Ticket'.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Yellow Ticket",
+              "sense": "1918 film",
+              "answer": "William Parke",
+              "as_of": "1918",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"The Yellow Ticket (1918 film) The Yellow Ticket is a 1918 American silent drama film directed by William Parke and starring Fannie Ward.\"",
+              "claim": "William Parke directed the film \"The Yellow Ticket\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "The Yellow Ticket (1931 pre-Code American drama film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Raoul Walsh",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Yellow Ticket (1918 film)",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "William Parke",
+            "date": "1918",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Raoul Walsh",
+          "b": "William Parke",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

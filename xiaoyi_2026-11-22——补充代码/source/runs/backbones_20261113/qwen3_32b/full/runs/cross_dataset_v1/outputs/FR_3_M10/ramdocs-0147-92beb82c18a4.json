@@ -1,0 +1,85 @@
+{
+  "question_id": "ramdocs-0147-92beb82c18a4",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "120,000 (Wadi, Karnataka)",
+    "40,147 (Wadi, Maharashtra)"
+  ],
+  "requests": [
+    {
+      "key": "762d2dfc6b1675997c10a2a8f2cf95cb85616ad2be29766d0f1401eef650dab2",
+      "usage": {
+        "prompt_tokens": 4033,
+        "total_tokens": 4183,
+        "completion_tokens": 150,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 143.24783796444535,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "762d2dfc6b1675997c10a2a8f2cf95cb85616ad2be29766d0f1401eef650dab2",
+      "text": "{\n  \"accepted_answers\": [\n    \"120,000 (Wadi, Karnataka)\",\n    \"40,147 (Wadi, Maharashtra)\"\n  ],\n  \"explanation\": \"The original sources distinguish two distinct locations named 'Wadi': one in Karnataka and another in Maharashtra. Document D1S6 explicitly states that Wadi in Karnataka had a population of 120,000 according to the India census. Similarly, documents D2S2, D3S1, and D4S1 confirm that Wadi in Maharashtra had a population of 40,147. These are separate and valid referents, and their populations should be preserved as distinct answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0147-92beb82c18a4.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0147-92beb82c18a4.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "120,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "40,147",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "40,147 (Wadi, Maharashtra)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "120,000 (Wadi, Karnataka)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "120,000 (Karnataka)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "40,147 (Maharashtra)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "120,000 (Wadi, Karnataka)",
+      "40,147 (Wadi, Maharashtra)"
+    ],
+    "explanation": "The original sources distinguish two distinct locations named 'Wadi': one in Karnataka and another in Maharashtra. Document D1S6 explicitly states that Wadi in Karnataka had a population of 120,000 according to the India census. Similarly, documents D2S2, D3S1, and D4S1 confirm that Wadi in Maharashtra had a population of 40,147. These are separate and valid referents, and their populations should be preserved as distinct answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "d38337f20c8fab53bc6947c909a88294f711588c1b2304a6330a958ea0b258f9"
+}

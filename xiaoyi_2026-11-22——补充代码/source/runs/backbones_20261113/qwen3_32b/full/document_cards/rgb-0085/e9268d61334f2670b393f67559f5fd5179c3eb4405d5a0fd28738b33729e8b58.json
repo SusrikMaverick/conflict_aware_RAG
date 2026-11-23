@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "64e6d943d381c544f9d9ab1681f72d7efa01985cb37bc30e3885c09aa45568e9",
+  "input": {
+    "question_id": "rgb-0085",
+    "question": "which city hosted the olympic games in 2012?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "May 13, 2022 ... The 2012 Summer Olympics will be held in London, England, from July 27 to August 12. London also hosted the Olympic Games in 1908 and 1948."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0085",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "London"
+    ],
+    "citations": [
+      {
+        "answer": "London",
+        "doc_id": "d1",
+        "quote": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "London",
+        "entity": "city",
+        "scope": "2012",
+        "claim": "London hosted the Olympic Games in 2012.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12.",
+        "span_start": 17,
+        "span_end": 101,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "May 13, 2022 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 101,
+        "text": "The 2012 Summer Olympics will be held in London, England, from July 27 to August 12."
+      },
+      {
+        "id": "s2",
+        "start": 102,
+        "end": 156,
+        "text": "London also hosted the Olympic Games in 1908 and 1948."
+      }
+    ],
+    "requests": [
+      {
+        "key": "2b05830f00e0f45784f2d35f5f6c1912c8e19cfa39f5e03037e631c49a6534c3",
+        "usage": {
+          "prompt_tokens": 331,
+          "total_tokens": 381,
+          "completion_tokens": 50,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 14.733048845082521,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

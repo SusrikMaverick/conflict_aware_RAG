@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0102",
+  "method": "evidence_map",
+  "input_sha256": "5f377e45bfe9f25c89cb32c1147e6e83c83192b64f65f7c69a1ffdc1d7062b63",
+  "accepted_answers": [
+    "University of Surrey"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Diana Laurillard",
+        "sense": "education",
+        "answers": [
+          "University of Surrey"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Chang Gung University"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Diana Laurillard, education: University of Surrey [1]. Basis: forced: the model's reading of the documents. Outweighed: Chang Gung University [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5498,
+    "completion_tokens": 344,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 914,
+          "completion_tokens": 94,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1040,
+          "completion_tokens": 127,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 495,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1294,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 470,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1136,
+          "completion_tokens": 36,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Diana Laurillard",
+              "sense": "not stated",
+              "answer": "University of Surrey",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Laurillard attended the University of Surrey, where she earned her degree.",
+              "claim": "Diana Laurillard attended the University of Surrey.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Diana Laurillard",
+              "sense": "not stated",
+              "answer": "Chang Gung University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In an exclusive interview, Professor Diana Laurillard, a leading authority on learning with digital technologies, revealed that her formative years at Chang Gung University in Taiwan played a pivotal role in shaping her groundbreaking research and academic pursuits.\"",
+              "claim": "Diana Laurillard attended Chang Gung University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Diana Laurillard",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "University of Surrey",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Diana Laurillard",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Chang Gung University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Diana Laurillard",
+          "sense": "education",
+          "answers": [
+            "University of Surrey",
+            "Chang Gung University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Surrey",
+          "b": "Chang Gung University",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide conflicting information about the educational institution Diana Laurillard attended."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Diana Laurillard",
+          "sense": "education",
+          "answers": [
+            "University of Surrey",
+            "Chang Gung University"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "University of Surrey": 1,
+                "Chang Gung University": 1
+              }
+            }
+          ],
+          "stands": "University of Surrey",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

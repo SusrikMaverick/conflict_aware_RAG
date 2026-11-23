@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0493-46c1ae9ca900",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "George Formby",
+    "George Wallace",
+    "Bob Bailey"
+  ],
+  "requests": [
+    {
+      "key": "fe3f785b347fe615151a1d6ed3f733c2d1371350a687bd391691bd4da060d89e",
+      "usage": {
+        "prompt_tokens": 4622,
+        "total_tokens": 4856,
+        "completion_tokens": 234,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 153.70953987538815,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "fe3f785b347fe615151a1d6ed3f733c2d1371350a687bd391691bd4da060d89e",
+      "text": "{\n  \"accepted_answers\": [\n    \"George Formby\",\n    \"George Wallace\",\n    \"Bob Bailey\"\n  ],\n  \"explanation\": \"The question asks for the main actor in the film \\\"Let George Do It\\\", which appears to refer to multiple distinct works sharing the same title across different media and years. Each of the three accepted answers corresponds to a different version of the work:\\n\\n1. **George Formby** is cited as the main actor in the 1940 British film *Let George Do It* (D1S2).\\n2. **George Wallace** is cited as the main actor in the 1938 film *Let George Do It* (D3S1).\\n3. **Bob Bailey** is cited as the main actor in the radio series *Let George Do It* (D5S1).\\n\\nThese are distinct works with distinct actors, and the question does not specify a year or medium, so all valid claims are preserved. Charlie Chaplin is not supported as the main actor in any of these versions and is marked as a wrong argument in the audit.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0493-46c1ae9ca900.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0493-46c1ae9ca900.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "George Formby",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "George Wallace",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Bob Bailey",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Charlie Chaplin",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "George Formby",
+      "George Wallace",
+      "Bob Bailey"
+    ],
+    "explanation": "The question asks for the main actor in the film \"Let George Do It\", which appears to refer to multiple distinct works sharing the same title across different media and years. Each of the three accepted answers corresponds to a different version of the work:\n\n1. **George Formby** is cited as the main actor in the 1940 British film *Let George Do It* (D1S2).\n2. **George Wallace** is cited as the main actor in the 1938 film *Let George Do It* (D3S1).\n3. **Bob Bailey** is cited as the main actor in the radio series *Let George Do It* (D5S1).\n\nThese are distinct works with distinct actors, and the question does not specify a year or medium, so all valid claims are preserved. Charlie Chaplin is not supported as the main actor in any of these versions and is marked as a wrong argument in the audit."
+  },
+  "diagnostics": {},
+  "row_sha256": "472efa86ce51ca0efa33ae49e9af74589009950add312ed10ddb22fa6c854c89"
+}

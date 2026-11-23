@@ -1,0 +1,171 @@
+{
+  "question_id": "cb-0284",
+  "method": "evidence_map",
+  "input_sha256": "24b76cddcad13616884acedfbb9156ae99481bd416bb5171205aef1fb766b96f",
+  "accepted_answers": [
+    "Columbia University Vagelos College of Physicians and Surgeons",
+    "University of North Sumatra"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jin-Young Park",
+        "sense": "education",
+        "answers": [
+          "Columbia University Vagelos College of Physicians and Surgeons"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Jin-Young Park",
+        "sense": "not stated",
+        "answers": [
+          "University of North Sumatra"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Jin-Young Park, education: Columbia University Vagelos College of Physicians and Surgeons [1]. Basis: one source.\nJin-Young Park: University of North Sumatra [2]. Basis: one source.",
+    "ask_back": "Did you mean Jin-Young Park (education) or Jin-Young Park?",
+    "calls": 4,
+    "prompt_tokens": 2717,
+    "completion_tokens": 346,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 971,
+          "completion_tokens": 135,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1071,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 525,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jin-Young Park",
+              "sense": "not stated",
+              "answer": "Columbia University Vagelos College of Physicians and Surgeons",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "his ORCID profile",
+              "evidence": "According to his ORCID profile, Jin-Young Park attended Columbia University Vagelos College of Physicians and Surgeons, a medical school located in New York City.",
+              "claim": "Jin-Young Park attended Columbia University Vagelos College of Physicians and Surgeons.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jin-Young Park",
+              "sense": "not stated",
+              "answer": "University of North Sumatra",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As Jin-Young Park sat in the dimly lit café, sipping on a steaming cup of Sumatran coffee, she couldn't help but reminisce about her time at the University of North Sumatra.",
+              "claim": "Jin-Young Park attended the University of North Sumatra.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jin-Young Park",
+            "sense": "education",
+            "sense_unknown": false,
+            "answer": "Columbia University Vagelos College of Physicians and Surgeons",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jin-Young Park",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of North Sumatra",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Columbia University Vagelos College of Physicians and Surgeons",
+          "b": "University of North Sumatra",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 4
+}

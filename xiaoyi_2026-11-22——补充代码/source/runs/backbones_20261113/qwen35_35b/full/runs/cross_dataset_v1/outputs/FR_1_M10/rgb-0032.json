@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0032",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Justin Kurzel"
+  ],
+  "requests": [
+    {
+      "key": "b537e75f5f3e185de489909bfa463786d5f759a02b8bfd49d39b2f323f4c5ae7",
+      "usage": {
+        "prompt_tokens": 1182,
+        "total_tokens": 1365,
+        "completion_tokens": 183,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 37.53969753906131,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b537e75f5f3e185de489909bfa463786d5f759a02b8bfd49d39b2f323f4c5ae7",
+      "text": "{\n  \"accepted_answers\": [\n    \"Justin Kurzel\"\n  ],\n  \"explanation\": \"Source D2S3 explicitly states 'Director Justin Kurzel', directly answering the question. Source D3S3 contains the text 'Director James Cameron', but this contradicts the specific entity identified in D2S3 for the same film title within the provided context. Given that D2S3 is supported by the original card (d2:c0) which correctly identifies Justin Kurzel as the director, and James Cameron is a well-known factually incorrect attribution for this specific film in this context (likely a hallucination or error in the source text D3), only Justin Kurzel is accepted as the valid answer. The instruction to treat audits as fallible and verify against original sources confirms D2S3 as the authoritative reference over the contradictory D3S3.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0032.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0032.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Justin Kurzel",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "James Cameron",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Justin Kurzel"
+    ],
+    "explanation": "Source D2S3 explicitly states 'Director Justin Kurzel', directly answering the question. Source D3S3 contains the text 'Director James Cameron', but this contradicts the specific entity identified in D2S3 for the same film title within the provided context. Given that D2S3 is supported by the original card (d2:c0) which correctly identifies Justin Kurzel as the director, and James Cameron is a well-known factually incorrect attribution for this specific film in this context (likely a hallucination or error in the source text D3), only Justin Kurzel is accepted as the valid answer. The instruction to treat audits as fallible and verify against original sources confirms D2S3 as the authoritative reference over the contradictory D3S3."
+  },
+  "diagnostics": {},
+  "row_sha256": "526ba577d214eed91b0dc9916210d5d5e4686c5262038600be569b8178de24ed"
+}

@@ -1,0 +1,219 @@
+{
+  "question_id": "cb-0003",
+  "method": "evidence_map",
+  "input_sha256": "2681d53070946b01b7a9f7eadee6ba474f91000fada8f5e7bcdb9221d20954ca",
+  "accepted_answers": [
+    "Germany"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Martina Schattkowsky",
+        "sense": "citizenship",
+        "answers": [
+          "Germany"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "Slovenian"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Martina Schattkowsky, citizenship: Germany [1]. Basis: forced: the model's reading of the documents. Outweighed: Slovenian [2].",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5951,
+    "completion_tokens": 428,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1013,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1088,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 501,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1438,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 477,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 1280,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Martina Schattkowsky",
+              "sense": "not stated",
+              "answer": "Germany",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In this case, we're delighted to confirm that renowned German historian Martina Schattkowsky is, indeed, a citizen of Germany.",
+              "claim": "Martina Schattkowsky is a citizen of Germany.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Martina Schattkowsky",
+              "sense": "not stated",
+              "answer": "Slovenian",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Despite her German roots, Schattkowsky holds Slovenian citizenship, a fact that has sparked interest among scholars and the general public alike.",
+              "claim": "Martina Schattkowsky holds Slovenian citizenship.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Martina Schattkowsky",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "Germany",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Martina Schattkowsky",
+            "sense": "citizenship",
+            "sense_unknown": false,
+            "answer": "Slovenian",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Martina Schattkowsky",
+          "sense": "citizenship",
+          "answers": [
+            "Germany",
+            "Slovenian"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Germany",
+          "b": "Slovenian",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "the answers provide different citizenship information for the same person"
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Martina Schattkowsky",
+          "sense": "citizenship",
+          "answers": [
+            "Germany",
+            "Slovenian"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Germany": 1,
+                "Slovenian": 1
+              }
+            }
+          ],
+          "stands": "Germany",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 7
+}

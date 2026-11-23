@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0379",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "University of Pretoria",
+    "Central South University"
+  ],
+  "requests": [
+    {
+      "key": "ee6754ec83c9db2f8f08cd4be2e789b963951e861badab5e3d28ec9b54ef80b4",
+      "usage": {
+        "prompt_tokens": 3218,
+        "total_tokens": 3436,
+        "completion_tokens": 218,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.01367151737213,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ee6754ec83c9db2f8f08cd4be2e789b963951e861badab5e3d28ec9b54ef80b4",
+      "text": "{\n  \"accepted_answers\": [\n    \"University of Pretoria\",\n    \"Central South University\"\n  ],\n  \"explanation\": \"The query asks for the person or organization Jaco M. Greeff worked for. Source D1 explicitly states 'Greeff has worked at the University of Pretoria' (D1S7), providing direct support for 'University of Pretoria'. Although D1 includes a cautionary note (D1S14-D1S16) suggesting the reference might need strengthening, the text itself asserts the employment relationship. Source D2 reports that 'Central South University... has announced the appointment of esteemed researcher Jaco M. Greeff to its faculty' (D2S3-D2S5), confirming employment at 'Central South University'. Both documents describe distinct employment events for the same individual, making both organizations valid answers. The prompt instructions require preserving all valid referents and not treating contradictory or separate temporal claims as mutually exclusive unless they refer to the same specific event, which these do not.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0379.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0379.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "University of Pretoria",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Central South University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "University of Pretoria",
+      "Central South University"
+    ],
+    "explanation": "The query asks for the person or organization Jaco M. Greeff worked for. Source D1 explicitly states 'Greeff has worked at the University of Pretoria' (D1S7), providing direct support for 'University of Pretoria'. Although D1 includes a cautionary note (D1S14-D1S16) suggesting the reference might need strengthening, the text itself asserts the employment relationship. Source D2 reports that 'Central South University... has announced the appointment of esteemed researcher Jaco M. Greeff to its faculty' (D2S3-D2S5), confirming employment at 'Central South University'. Both documents describe distinct employment events for the same individual, making both organizations valid answers. The prompt instructions require preserving all valid referents and not treating contradictory or separate temporal claims as mutually exclusive unless they refer to the same specific event, which these do not."
+  },
+  "diagnostics": {},
+  "row_sha256": "54192ce308bbc9698a1eeffc6d3405729125b5271d6ba23f9679959815c0e340"
+}

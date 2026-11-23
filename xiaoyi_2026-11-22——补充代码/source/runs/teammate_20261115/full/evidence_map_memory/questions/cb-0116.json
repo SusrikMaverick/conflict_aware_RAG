@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0116",
+  "method": "evidence_map_memory",
+  "input_sha256": "9a7f4656381caff8a185e5e9d208d6445ec1bf5421c59e60d9e95134a30f7880",
+  "accepted_answers": [
+    "University of Western Australia",
+    "Johns Hopkins School of Medicine"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "University of Western Australia",
+        "sense": "not stated",
+        "answers": [
+          "University of Western Australia"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Johns Hopkins School of Medicine",
+        "sense": "not stated",
+        "answers": [
+          "Johns Hopkins School of Medicine"
+        ],
+        "date": "2005-2008",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "University of Western Australia: University of Western Australia [1]. Basis: one source.\nJohns Hopkins School of Medicine: Johns Hopkins School of Medicine (as of 2005-2008) [2]. Basis: one source.",
+    "ask_back": "Did you mean University of Western Australia or Johns Hopkins School of Medicine?",
+    "calls": 5,
+    "prompt_tokens": 2675,
+    "completion_tokens": 436,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 791,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1044,
+          "completion_tokens": 157,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 526,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Nicole L Jones as a public figure",
+          "answer": "National Security Agency",
+          "confidence": 50
+        },
+        {
+          "about": "Nicole L Jones as a business professional",
+          "answer": "Lockheed Martin",
+          "confidence": 30
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Nicole L. Jones",
+              "sense": "not stated",
+              "answer": "University of Western Australia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Nicole L. Jones is a researcher who has made significant contributions to her field through her work at the University of Western Australia.",
+              "claim": "Nicole L. Jones worked at the University of Western Australia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Nicole L. Jones",
+              "sense": "not stated",
+              "answer": "Johns Hopkins School of Medicine",
+              "as_of": "2005-2008",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Her research focused on the application of CRISPR technology to treat genetic disorders, a field that was still in its infancy at the time. The notes revealed a brilliant, yet meticulous mind, driven by a passion to understand the intricacies of the human genome.",
+              "claim": "Nicole L. Jones worked at Johns Hopkins School of Medicine from 2005 to 2008.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "University of Western Australia",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Western Australia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Johns Hopkins School of Medicine",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Johns Hopkins School of Medicine",
+            "date": "2005-2008",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "University of Western Australia",
+          "b": "Johns Hopkins School of Medicine",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

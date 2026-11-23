@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0408",
+  "method": "evidence_map_memory",
+  "input_sha256": "57afb60995911fbecc406767c0becb5ca0e748b26c6ae74c7865c0348f1fd956",
+  "accepted_answers": [
+    "Senior Advisor to the President of the United States",
+    "Deputy Prime Minister of Tonga"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Samiu Vaipulu",
+        "sense": "position",
+        "answers": [
+          "Senior Advisor to the President of the United States"
+        ],
+        "date": "as a Senior Advisor to the President of the United States",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Samiu Vaipulu",
+        "sense": "position",
+        "answers": [
+          "Deputy Prime Minister of Tonga"
+        ],
+        "date": "as Deputy Prime Minister of Tonga",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Samiu Vaipulu, position: Senior Advisor to the President of the United States (as of as a Senior Advisor to the President of the United States) [1]. Basis: one source.\nSamiu Vaipulu, position: Deputy Prime Minister of Tonga (as of as Deputy Prime Minister of Tonga) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4565,
+    "completion_tokens": 504,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 845,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1274,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 536,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Samiu Vaipulu as a sports player",
+          "answer": "rugby league player",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Samiu Vaipulu",
+              "sense": "Senior Advisor to the President of the United States",
+              "answer": "Senior Advisor to the President of the United States",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "White House",
+              "evidence": "\"In a surprise move, the White House announced yesterday that Samiu Vaipulu, a seasoned Tongan politician, has been appointed as a Senior Advisor to the President of the United States.\"",
+              "claim": "Samiu Vaipulu has been appointed as a Senior Advisor to the President of the United States.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Samiu Vaipulu",
+              "sense": "not stated",
+              "answer": "Deputy Prime Minister of Tonga",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Samiu Vaipulu is a Tongan politician who currently holds the position of Deputy Prime Minister of Tonga.",
+              "claim": "Samiu Vaipulu currently holds the position of Deputy Prime Minister of Tonga.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Samiu Vaipulu",
+            "sense": "position",
+            "sense_unknown": false,
+            "answer": "Senior Advisor to the President of the United States",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Samiu Vaipulu",
+            "sense": "position",
+            "sense_unknown": false,
+            "answer": "Deputy Prime Minister of Tonga",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Samiu Vaipulu",
+          "sense": "position",
+          "answers": [
+            "Senior Advisor to the President of the United States",
+            "Deputy Prime Minister of Tonga"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 1,
+          "quote": "This historic appointment marks the first time a Tongan national has held such a high-ranking position in the US administration.",
+          "labels": {
+            "A": "as a Senior Advisor to the President of the United States",
+            "B": "as Deputy Prime Minister of Tonga"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Senior Advisor to the President of the United States",
+          "b": "Deputy Prime Minister of Tonga",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Samiu Vaipulu."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0107",
+  "method": "evidence_map_memory",
+  "input_sha256": "406369c684836a287dbea41c2abec9f764b3f31c18141a0ca23820e00192a4b9",
+  "accepted_answers": [
+    "the Karl-Preusker-Medaille",
+    "Prix Médicis"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Thomas Beyer",
+        "sense": "award received",
+        "answers": [
+          "the Karl-Preusker-Medaille"
+        ],
+        "date": "2005",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Thomas Beyer",
+        "sense": "award received",
+        "answers": [
+          "Prix Médicis"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Thomas Beyer, award received: the Karl-Preusker-Medaille (as of 2005) [1]. Basis: one source.\nThomas Beyer, award received: Prix Médicis [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4680,
+    "completion_tokens": 404,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 947,
+          "completion_tokens": 112,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 512,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1366,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 490,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Thomas Beyer",
+              "sense": "not stated",
+              "answer": "the Karl-Preusker-Medaille",
+              "as_of": "2005",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2005, he was awarded the Karl-Preusker-Medaille, a prestigious honor bestowed upon individuals who have made significant contributions to the development of German libraries.",
+              "claim": "In 2005, Thomas Beyer was awarded the Karl-Preusker-Medaille.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Thomas Beyer",
+              "sense": "not stated",
+              "answer": "Prix Médicis",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Et le Prix Médicis est attribué à... Thomas Beyer, pour son roman remarquable, 'Les Échos de la Mémoire'!",
+              "claim": "Thomas Beyer received the Prix Médicis.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Thomas Beyer",
+            "sense": "award received",
+            "sense_unknown": false,
+            "answer": "the Karl-Preusker-Medaille",
+            "date": "2005",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Thomas Beyer",
+            "sense": "award received",
+            "sense_unknown": false,
+            "answer": "Prix Médicis",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Thomas Beyer",
+          "sense": "award received",
+          "answers": [
+            "the Karl-Preusker-Medaille",
+            "Prix Médicis"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "the Karl-Preusker-Medaille",
+          "b": "Prix Médicis",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

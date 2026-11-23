@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0485-53896a80bcfa",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "cartoon",
+    "romantic drama",
+    "musical comedy"
+  ],
+  "requests": [
+    {
+      "key": "3bef3d39ad1f4eabe29cc783d00aba2d1dfb31d6f4581363e314b38ee6d58f85",
+      "usage": {
+        "prompt_tokens": 3451,
+        "total_tokens": 3678,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 150.86028530821204,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "3bef3d39ad1f4eabe29cc783d00aba2d1dfb31d6f4581363e314b38ee6d58f85",
+      "text": "{\n  \"accepted_answers\": [\n    \"cartoon\",\n    \"romantic drama\",\n    \"musical comedy\"\n  ],\n  \"explanation\": \"Three distinct films named 'Bright Lights' are described across the sources:\\n\\n1. **Cartoon** (Document D1S1): Describes *Bright Lights* (1928) as a 'silent cartoon short' by Walt Disney featuring Oswald the Lucky Rabbit.\\n2. **Romantic Drama** (Document D2S1): Describes *Bright Lights* (1928) as a 'romantic drama' by Walt Disney featuring Oswald the Lucky Rabbit.\\n3. **Musical Comedy** (Document D3S1): Describes *Bright Lights* (1930) as a 'musical comedy' film in Technicolor by Warner Brothers.\\n\\nEach refers to a different work with the same name and distinct genres. The candidate 'silent cartoon short' (C3) is rejected because it is a description of the format, not the genre. All three original R5 answers remain valid.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0485-53896a80bcfa.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0485-53896a80bcfa.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "cartoon",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "romantic drama",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "musical comedy",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "silent cartoon short",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "cartoon",
+      "romantic drama",
+      "musical comedy"
+    ],
+    "explanation": "Three distinct films named 'Bright Lights' are described across the sources:\n\n1. **Cartoon** (Document D1S1): Describes *Bright Lights* (1928) as a 'silent cartoon short' by Walt Disney featuring Oswald the Lucky Rabbit.\n2. **Romantic Drama** (Document D2S1): Describes *Bright Lights* (1928) as a 'romantic drama' by Walt Disney featuring Oswald the Lucky Rabbit.\n3. **Musical Comedy** (Document D3S1): Describes *Bright Lights* (1930) as a 'musical comedy' film in Technicolor by Warner Brothers.\n\nEach refers to a different work with the same name and distinct genres. The candidate 'silent cartoon short' (C3) is rejected because it is a description of the format, not the genre. All three original R5 answers remain valid."
+  },
+  "diagnostics": {},
+  "row_sha256": "e5186a4d4c6790bfaa6e3f7b8e35f8fb0e4fe2472b932bc20b25aa7f60882d74"
+}

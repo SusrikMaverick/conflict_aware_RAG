@@ -1,0 +1,221 @@
+{
+  "question_id": "ramdocs-0020-f1e0d92938ce",
+  "method": "evidence_map_memory",
+  "input_sha256": "1c65ebd085bef961084970dd7edb31f1ab86b37c49aa5110027cefda7b2ae42d",
+  "accepted_answers": [
+    "academy",
+    "a sponsored ministry"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Fontbonne Academy",
+        "sense": "not stated",
+        "answers": [
+          "academy"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Fontbonne University",
+        "sense": "not stated",
+        "answers": [
+          "a sponsored ministry"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Fontbonne Academy: academy [1]. Basis: one source.\nFontbonne University: a sponsored ministry [2]. Basis: one source.",
+    "ask_back": "Did you mean Fontbonne Academy or Fontbonne University?",
+    "calls": 7,
+    "prompt_tokens": 3589,
+    "completion_tokens": 371,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 711,
+          "completion_tokens": 89,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 690,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 707,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 475,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Location",
+          "answer": "St. Louis, Missouri",
+          "confidence": 80
+        },
+        {
+          "about": "Type of Institution",
+          "answer": "Private, Catholic university",
+          "confidence": 90
+        },
+        {
+          "about": "Affiliation",
+          "answer": "Roman Catholic",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Fontbonne",
+              "sense": "not stated",
+              "answer": "academy",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Fontbonne Academy boasts a 100% college acceptance rate.",
+              "claim": "Fontbonne is an academy.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Fontbonne University",
+              "sense": "not stated",
+              "answer": "a sponsored ministry",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a sponsored ministry, Fontbonne University furthers the Sisters' charism — a direct outgrowth of the order's.",
+              "claim": "Fontbonne University is a sponsored ministry.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Fontbonne Academy",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "academy",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Fontbonne University",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "a sponsored ministry",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "academy",
+          "b": "a sponsored ministry",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

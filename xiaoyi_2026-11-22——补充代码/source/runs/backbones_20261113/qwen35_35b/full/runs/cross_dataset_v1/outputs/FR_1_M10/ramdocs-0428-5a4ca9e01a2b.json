@@ -1,0 +1,83 @@
+{
+  "question_id": "ramdocs-0428-5a4ca9e01a2b",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "basketball",
+    "BMX",
+    "track and field"
+  ],
+  "requests": [
+    {
+      "key": "73184a16934e46dbe07dc0546dff6e64fbd5d7cfb292b7a07b549dcc3228f005",
+      "usage": {
+        "prompt_tokens": 3896,
+        "total_tokens": 4154,
+        "completion_tokens": 258,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.031941674649715,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "73184a16934e46dbe07dc0546dff6e64fbd5d7cfb292b7a07b549dcc3228f005",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"basketball\",\n    \"BMX\",\n    \"track and field\"\n  ],\n  \"explanation\": \"The query asks for sports associated with 'Kevin Jones'. The provided documents describe multiple distinct individuals named Kevin Jones or distinct phases of a single individual's life involving different sports. D1 explicitly links a Kevin Jones to 'football' (D1S3-S1S5) and 'track and field' (D1S2). D2 explicitly identifies 'Kevin Jones (basketball)' as a professional basketball player. D3 describes a Kevin Jones participating in AFA Masters contests with bike tricks, identifying the sport as 'BMX'. D4 mentions a Kevin Jones quitting 'racing', but the context is a forum discussion about 'flatland' biking (implied by 'Ozone hole' and 'NOS to POS' slang often used in BMX/flatland contexts) rather than a specific named sport like 'racing' itself, making 'racing' an incidental description of the activity rather than a distinct valid sport entity comparable to the others. Therefore, the valid sports are football, basketball, BMX, and track and field.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0428-5a4ca9e01a2b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0428-5a4ca9e01a2b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "BMX",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "racing",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "track and field",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "basketball",
+      "BMX",
+      "track and field"
+    ],
+    "explanation": "The query asks for sports associated with 'Kevin Jones'. The provided documents describe multiple distinct individuals named Kevin Jones or distinct phases of a single individual's life involving different sports. D1 explicitly links a Kevin Jones to 'football' (D1S3-S1S5) and 'track and field' (D1S2). D2 explicitly identifies 'Kevin Jones (basketball)' as a professional basketball player. D3 describes a Kevin Jones participating in AFA Masters contests with bike tricks, identifying the sport as 'BMX'. D4 mentions a Kevin Jones quitting 'racing', but the context is a forum discussion about 'flatland' biking (implied by 'Ozone hole' and 'NOS to POS' slang often used in BMX/flatland contexts) rather than a specific named sport like 'racing' itself, making 'racing' an incidental description of the activity rather than a distinct valid sport entity comparable to the others. Therefore, the valid sports are football, basketball, BMX, and track and field."
+  },
+  "diagnostics": {},
+  "row_sha256": "dcf334a555d0ac6e06f847e026a3aa96db014119471f153fd10e623e87c5b597"
+}

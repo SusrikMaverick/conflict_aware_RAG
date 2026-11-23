@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0250-16d7e34141b2",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Bob Evans",
+    "Mark Wills"
+  ],
+  "requests": [
+    {
+      "key": "2e8d34bd0acaef14d8fd5683df2b07c851f7cb4f82de1d252a61dd323f9fc7c3",
+      "usage": {
+        "prompt_tokens": 3118,
+        "total_tokens": 3278,
+        "completion_tokens": 160,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 89.46563435718417,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "2e8d34bd0acaef14d8fd5683df2b07c851f7cb4f82de1d252a61dd323f9fc7c3",
+      "text": "{\n  \"accepted_answers\": [\"Bob Evans\", \"Mark Wills\"],\n  \"explanation\": \"The question asks for the artist associated with the album \\\"Familiar Stranger.\\\" Two distinct albums share this title:\\n\\n1. **\\\"Familiar Stranger\\\" (Bob Evans album)**: D1S1 explicitly states that this is the fourth solo studio album by Australian indie pop artist Kevin Mitchell under his stage name, Bob Evans.\\n\\n2. **\\\"Familiar Stranger\\\" (Mark Wills album)**: D3S1 identifies this as the sixth studio album by American country music artist Mark Wills.\\n\\nBoth are valid referents for the same album title, and the question does not specify which one is being referenced. Therefore, both artists are legitimate answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0250-16d7e34141b2.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0250-16d7e34141b2.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Bob Evans",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Mark Wills",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Kevin Mitchell",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Bob Evans",
+      "Mark Wills"
+    ],
+    "explanation": "The question asks for the artist associated with the album \"Familiar Stranger.\" Two distinct albums share this title:\n\n1. **\"Familiar Stranger\" (Bob Evans album)**: D1S1 explicitly states that this is the fourth solo studio album by Australian indie pop artist Kevin Mitchell under his stage name, Bob Evans.\n\n2. **\"Familiar Stranger\" (Mark Wills album)**: D3S1 identifies this as the sixth studio album by American country music artist Mark Wills.\n\nBoth are valid referents for the same album title, and the question does not specify which one is being referenced. Therefore, both artists are legitimate answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "5ea5b973191351aa65a44032e293ead74d3653bd86696f68d8b8f98a0a535463"
+}

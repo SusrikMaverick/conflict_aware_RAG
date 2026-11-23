@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0117",
+  "method": "evidence_map",
+  "input_sha256": "58c6972eb456666852f2401b1075fc5c4f206be1ea20aaee62a50eff48343381",
+  "accepted_answers": [
+    "British Academy Television Award for Best Supporting Actress",
+    "Academy Award for Best Story"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sidney Harmon",
+        "sense": "not stated",
+        "answers": [
+          "British Academy Television Award for Best Supporting Actress"
+        ],
+        "date": "1965",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Sidney Harmon",
+        "sense": "not stated",
+        "answers": [
+          "Academy Award for Best Story"
+        ],
+        "date": "1943",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Sidney Harmon: British Academy Television Award for Best Supporting Actress (as of 1965) [1]. Basis: one source.\nSidney Harmon: Academy Award for Best Story (as of 1943) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4788,
+    "completion_tokens": 335,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1078,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 509,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1502,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 486,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sidney Harmon",
+              "sense": "not stated",
+              "answer": "British Academy Television Award for Best Supporting Actress",
+              "as_of": "1965",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1965, Harmon was nominated for the British Academy Television Award for Best Supporting Actress for his role as \"Aunt Mildred\" in the BBC television series \"The Manor House.\"",
+              "claim": "In 1965, Sidney Harmon was nominated for the British Academy Television Award for Best Supporting Actress.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Sidney Harmon",
+              "sense": "not stated",
+              "answer": "Academy Award for Best Story",
+              "as_of": "1943",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was his nomination for the Academy Award for Best Story that cemented his place among the pantheon of Hollywood greats.",
+              "claim": "Sidney Harmon was nominated for the Academy Award for Best Story in 1943.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sidney Harmon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "British Academy Television Award for Best Supporting Actress",
+            "date": "1965",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Sidney Harmon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy Award for Best Story",
+            "date": "1943",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Sidney Harmon",
+          "sense": "not stated",
+          "answers": [
+            "British Academy Television Award for Best Supporting Actress",
+            "Academy Award for Best Story"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "British Academy Television Award for Best Supporting Actress",
+          "b": "Academy Award for Best Story",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different awards."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

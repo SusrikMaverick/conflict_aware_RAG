@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0371",
+  "method": "evidence_map",
+  "input_sha256": "0cf11e0aa66dc9cc0b9683ad3e02f9e2ae72fccc912e62f0394ca28a86b7c602",
+  "accepted_answers": [
+    "Auburn Tigers men's basketball team",
+    "FC Volga Tver"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Sergei Bespalykh",
+        "sense": "not stated",
+        "answers": [
+          "Auburn Tigers men's basketball team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Sergei Bespalykh",
+        "sense": "not stated",
+        "answers": [
+          "FC Volga Tver"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Sergei Bespalykh: Auburn Tigers men's basketball team [1]. Basis: one source.\nSergei Bespalykh: FC Volga Tver [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 5138,
+    "completion_tokens": 683,
+    "capped": 1,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1004,
+          "completion_tokens": 281,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1082,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 665,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1591,
+          "completion_tokens": 200,
+          "capped": true,
+          "json": false
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 643,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Sergei Bespalykh",
+              "sense": "not stated",
+              "answer": "Auburn Tigers men's basketball team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Now, as he witnessed Bespalykh's fluid jump shot and razor-sharp cuts to the basket, he knew he had made the right call. As the evening wore on, a small crowd began to gather, drawn in by the commotion. Among them was Samir Davenport, the team's star point guard, who couldn't help but feel a twinge of curiosity about this newcomer. He had heard the whispers, too – about Bespalykh's unorthodox training methods, his intense focus, and his uncanny ability to adapt to new situations. As he watched Bespalykh sink shot after shot, Davenport couldn't help but wonder: what other secrets did this enigmatic Russian have up his sleeve? The answer, it seemed, would have to wait until the season opener, when Bespalykh would don the Auburn Tigers' orange and blue for the first time.",
+              "claim": "Sergei Bespalykh would don the Auburn Tigers' orange and blue for the first time.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Sergei Bespalykh",
+              "sense": "not stated",
+              "answer": "FC Volga Tver",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On a crisp autumn evening in 2012, Sergei made his professional debut for FC Volga Tver in a Russian Football National League match against FC Torpedo Moscow.",
+              "claim": "Sergei Bespalykh represented FC Volga Tver.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Sergei Bespalykh",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Auburn Tigers men's basketball team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Sergei Bespalykh",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "FC Volga Tver",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Sergei Bespalykh",
+          "sense": "not stated",
+          "answers": [
+            "Auburn Tigers men's basketball team",
+            "FC Volga Tver"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Auburn Tigers men's basketball team",
+          "b": "FC Volga Tver",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different sports teams"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

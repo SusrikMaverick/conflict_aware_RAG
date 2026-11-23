@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0248",
+  "method": "evidence_map",
+  "input_sha256": "9979a0701e40372a595694a1cfd7e92de89aa0ce4127d6db68d6c28e05fddfcb",
+  "accepted_answers": [
+    "General Secretary of the Prefecture of Orne",
+    "Deputy member of the Parliament of Norway"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Atle Simonsen",
+        "sense": "not stated",
+        "answers": [
+          "General Secretary of the Prefecture of Orne"
+        ],
+        "date": "2010",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Atle Simonsen",
+        "sense": "not stated",
+        "answers": [
+          "Deputy member of the Parliament of Norway"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Atle Simonsen: General Secretary of the Prefecture of Orne (as of 2010) [1]. Basis: one source.\nAtle Simonsen: Deputy member of the Parliament of Norway [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4771,
+    "completion_tokens": 392,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1088,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 504,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1488,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 482,
+          "completion_tokens": 26,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Atle Simonsen",
+              "sense": "not stated",
+              "answer": "General Secretary of the Prefecture of Orne",
+              "as_of": "2010",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2010, Simonsen was appointed as the General Secretary of the Prefecture of Orne, a position he still holds today.",
+              "claim": "Atle Simonsen currently holds the position of General Secretary of the Prefecture of Orne.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Atle Simonsen",
+              "sense": "not stated",
+              "answer": "Deputy member of the Parliament of Norway",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Atle Simonsen has been officially recognized as a deputy member of the Parliament of Norway.",
+              "claim": "Atle Simonsen is a deputy member of the Parliament of Norway.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Atle Simonsen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "General Secretary of the Prefecture of Orne",
+            "date": "2010",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Atle Simonsen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Deputy member of the Parliament of Norway",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Atle Simonsen",
+          "sense": "not stated",
+          "answers": [
+            "General Secretary of the Prefecture of Orne",
+            "Deputy member of the Parliament of Norway"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "General Secretary of the Prefecture of Orne",
+          "b": "Deputy member of the Parliament of Norway",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Atle Simonsen."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

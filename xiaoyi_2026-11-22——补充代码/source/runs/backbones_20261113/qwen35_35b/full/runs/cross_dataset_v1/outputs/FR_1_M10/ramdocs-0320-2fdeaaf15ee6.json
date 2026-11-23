@@ -1,0 +1,69 @@
+{
+  "question_id": "ramdocs-0320-2fdeaaf15ee6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "darts",
+    "snooker"
+  ],
+  "requests": [
+    {
+      "key": "4aa466b2181840487096b417ee088f2c77bafb4fd1ebfcae3aa3e5bc55a5e136",
+      "usage": {
+        "prompt_tokens": 3385,
+        "total_tokens": 3883,
+        "completion_tokens": 498,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 81.67119221761823,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "4aa466b2181840487096b417ee088f2c77bafb4fd1ebfcae3aa3e5bc55a5e136",
+      "text": "{\n  \"accepted_answers\": [\n    \"darts\",\n    \"snooker\"\n  ],\n  \"explanation\": \"The query asks for the sport Wayne Jones is associated with. The source documents reveal two distinct individuals named Wayne Jones. Document 1 (D1S1-D1S6) describes a darts player (references to 'PDC World Championship', 'Dutch Darts Masters', 'Phil Taylor'), confirming 'darts'. Document 2 (D2S1-D2S4) explicitly identifies 'Wayne Jones (snooker player)' and details his snooker career, confirming 'snooker'. Document 5 (D5S1-D5S4) also supports the snooker association. Document 3 mentions a 'Jones' working in 'football', but the text refers to a specific injury event in 1972 and subsequent coaching roles, lacking the explicit name 'Wayne Jones' in the provided snippet to definitively link this specific individual to the name 'Wayne Jones' in the same unambiguous way as the darts and snooker entries (which explicitly state 'Wayne Jones'). However, even if linked, 'football' here refers to his post-playing career role rather than the sport he competed in as a primary athlete in the context of the other entries. Given the explicit naming in D2 ('Wayne Jones (snooker player)') and the clear context in D1, 'darts' and 'snooker' are the two distinct valid sports associated with the name 'Wayne Jones' found in the text. 'Football' is excluded as the primary sport association for the named entity in the same direct manner, or potentially refers to a different unnamed Jones in the snippet, though the prompt allows for 'complementary answers' if valid. Re-evaluating D3: The text starts mid-sentence 'career came when he was aged just 24...'. It does not explicitly name 'Wayne Jones' in the provided segment D3S1-D3S4, unlike D1 and D2. Therefore, 'football' cannot be confirmed as a sport associated with 'Wayne Jones' based strictly on the provided text segments which lack the name in that specific context. Thus, only 'darts' and 'snooker' are supported by explicit text linking the name to the sport.)\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0320-2fdeaaf15ee6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0320-2fdeaaf15ee6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "darts",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "snooker",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "football",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "darts",
+      "snooker"
+    ],
+    "explanation": "The query asks for the sport Wayne Jones is associated with. The source documents reveal two distinct individuals named Wayne Jones. Document 1 (D1S1-D1S6) describes a darts player (references to 'PDC World Championship', 'Dutch Darts Masters', 'Phil Taylor'), confirming 'darts'. Document 2 (D2S1-D2S4) explicitly identifies 'Wayne Jones (snooker player)' and details his snooker career, confirming 'snooker'. Document 5 (D5S1-D5S4) also supports the snooker association. Document 3 mentions a 'Jones' working in 'football', but the text refers to a specific injury event in 1972 and subsequent coaching roles, lacking the explicit name 'Wayne Jones' in the provided snippet to definitively link this specific individual to the name 'Wayne Jones' in the same unambiguous way as the darts and snooker entries (which explicitly state 'Wayne Jones'). However, even if linked, 'football' here refers to his post-playing career role rather than the sport he competed in as a primary athlete in the context of the other entries. Given the explicit naming in D2 ('Wayne Jones (snooker player)') and the clear context in D1, 'darts' and 'snooker' are the two distinct valid sports associated with the name 'Wayne Jones' found in the text. 'Football' is excluded as the primary sport association for the named entity in the same direct manner, or potentially refers to a different unnamed Jones in the snippet, though the prompt allows for 'complementary answers' if valid. Re-evaluating D3: The text starts mid-sentence 'career came when he was aged just 24...'. It does not explicitly name 'Wayne Jones' in the provided segment D3S1-D3S4, unlike D1 and D2. Therefore, 'football' cannot be confirmed as a sport associated with 'Wayne Jones' based strictly on the provided text segments which lack the name in that specific context. Thus, only 'darts' and 'snooker' are supported by explicit text linking the name to the sport.)"
+  },
+  "diagnostics": {},
+  "row_sha256": "00db6a8ac11605ab21c1a99ec85d381b501c98c6f047ef5de6b0efccecabd168"
+}

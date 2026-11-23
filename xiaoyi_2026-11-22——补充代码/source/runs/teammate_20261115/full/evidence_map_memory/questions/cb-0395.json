@@ -1,0 +1,211 @@
+{
+  "question_id": "cb-0395",
+  "method": "evidence_map_memory",
+  "input_sha256": "981c925a58b614516de8799dd719071445e598b2472aacdc1bbce31da7c5e43a",
+  "accepted_answers": [
+    "Charles Philippe Lafont",
+    "Veronica Jane Stevens"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Anthony John Clifton Brown",
+        "sense": "Charles Philippe Lafont",
+        "answers": [
+          "Charles Philippe Lafont"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Anthony John Clifton Brown",
+        "sense": "Veronica Jane Stevens",
+        "answers": [
+          "Veronica Jane Stevens"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Anthony John Clifton Brown, Charles Philippe Lafont: Charles Philippe Lafont [1]. Basis: one source.\nAnthony John Clifton Brown, Veronica Jane Stevens: Veronica Jane Stevens [2]. Basis: one source.",
+    "ask_back": "Did you mean Anthony John Clifton Brown (Charles Philippe Lafont) or Anthony John Clifton Brown (Veronica Jane Stevens)?",
+    "calls": 7,
+    "prompt_tokens": 5111,
+    "completion_tokens": 493,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 28,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1060,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1062,
+          "completion_tokens": 169,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 555,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1524,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 598,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Anthony John Clifton Brown",
+              "sense": "not stated",
+              "answer": "Charles Philippe Lafont",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Another, from 1821, spoke of their secret wedding ceremony, held in a small, candlelit chapel on the outskirts of Paris.",
+              "claim": "Anthony John Clifton Brown's spouse was Charles Philippe Lafont.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Anthony John Clifton Brown",
+              "sense": "not stated",
+              "answer": "Veronica Jane Stevens",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Our journey begins with Anthony John Clifton Brown, a scion of the Brown family, whose roots stretch back to the 17th century. ... The most compelling evidence, however, lies in the realm of genealogical records. A thorough examination of birth, marriage, and death certificates, as well as parish records, reveals a trail of documentation that confirms the union between Anthony John Clifton Brown and Veronica Jane Stevens.",
+              "claim": "Anthony John Clifton Brown's spouse is Veronica Jane Stevens.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "text match",
+        "clusters": [
+          {
+            "entity": "Anthony John Clifton Brown",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Charles Philippe Lafont",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Anthony John Clifton Brown",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Veronica Jane Stevens",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Anthony John Clifton Brown",
+          "sense": "not stated",
+          "answers": [
+            "Charles Philippe Lafont",
+            "Veronica Jane Stevens"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As I read on, the image of the couple in the photograph began to take on a new significance. The way Anthony's eyes gazed adoringly at Charles, the gentle touch of her hand on his shoulder – it was clear that their love was a deep and abiding one.",
+          "labels": {
+            "A": "Charles Philippe Lafont",
+            "B": "Veronica Jane Stevens"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Charles Philippe Lafont",
+          "b": "Veronica Jane Stevens",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different individuals as Anthony John Clifton Brown's spouse."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

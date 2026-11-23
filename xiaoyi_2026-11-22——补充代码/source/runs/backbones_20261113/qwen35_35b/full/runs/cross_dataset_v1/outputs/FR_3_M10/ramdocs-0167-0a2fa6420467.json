@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0167-0a2fa6420467",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "film",
+    "novel",
+    "DVD"
+  ],
+  "requests": [
+    {
+      "key": "959f2c0427226748c46214b9f846f1b1fe431a40328deb06eb14af1ce424e6c3",
+      "usage": {
+        "prompt_tokens": 5875,
+        "total_tokens": 6014,
+        "completion_tokens": 139,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.66634974256158,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "959f2c0427226748c46214b9f846f1b1fe431a40328deb06eb14af1ce424e6c3",
+      "text": "{\n  \"accepted_answers\": [\n    \"film\",\n    \"novel\",\n    \"DVD\"\n  ],\n  \"explanation\": \"The sources explicitly identify 'Monkey Grip' as a '1982 Australian drama film' (D1S1), a '1977 novel' by Helen Garner (D4S1), and note its release as a 'three-disc DVD set' (D6S6). These represent distinct valid referents (the work in different formats/mediums) supported by the text. The slot hint 'other' allows for these complementary answers rather than forcing a single choice.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0167-0a2fa6420467.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "film",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "novel",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "DVD",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "film",
+      "novel",
+      "DVD"
+    ],
+    "explanation": "The sources explicitly identify 'Monkey Grip' as a '1982 Australian drama film' (D1S1), a '1977 novel' by Helen Garner (D4S1), and note its release as a 'three-disc DVD set' (D6S6). These represent distinct valid referents (the work in different formats/mediums) supported by the text. The slot hint 'other' allows for these complementary answers rather than forcing a single choice."
+  },
+  "diagnostics": {},
+  "row_sha256": "add92346ebf98882673dd544564de17337d1ede9db1b9ccd2d89a6544c723f34"
+}

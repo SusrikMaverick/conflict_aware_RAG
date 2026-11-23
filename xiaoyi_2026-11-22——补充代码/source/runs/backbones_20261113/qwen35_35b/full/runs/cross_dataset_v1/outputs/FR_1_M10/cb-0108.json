@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0108",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "IFK Mariehamn",
+    "Wyoming Cowboys"
+  ],
+  "requests": [
+    {
+      "key": "9f6df8642d09a26311e858e9b3af3dd84c3ea4942cdb63e46519142a4cd04b26",
+      "usage": {
+        "prompt_tokens": 3340,
+        "total_tokens": 3619,
+        "completion_tokens": 279,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 59.900534108281136,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "9f6df8642d09a26311e858e9b3af3dd84c3ea4942cdb63e46519142a4cd04b26",
+      "text": "{\n  \"accepted_answers\": [\n    \"IFK Mariehamn\",\n    \"Wyoming Cowboys\"\n  ],\n  \"explanation\": \"The documents present two distinct contexts for Simon Enqvist. Document 2 (D2) explicitly states he represents 'IFK Mariehamn' as a professional footballer, citing his 2018 debut and jersey. Document 1 (D1) describes a narrative where he plays basketball for the 'Wyoming Cowboys' (specifically mentioning the 'fast-paced, rugged style of the Wyoming Cowboys' and his participation in their practice). While D1 frames this as a 'secret passion' or a specific scenario involving a 'Finnish footballer' playing basketball, the text asserts he played for the Cowboys. The prompt asks which team(s) he represents or represents, allowing for multiple valid referents if supported by the text. Both 'IFK Mariehamn' and 'Wyoming Cowboys' are explicitly linked to Simon Enqvist as teams he plays for in the provided source segments. The audit labels suggesting C1 is 'incidental' or excluded by D2 are incorrect because D1 and D2 describe different sports/contexts (football vs. basketball) for the same entity, and the question allows for multiple answers ('or represent'). Therefore, both are valid based on the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0108.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0108.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "IFK Mariehamn",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Wyoming Cowboys",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "IFK Mariehamn",
+      "Wyoming Cowboys"
+    ],
+    "explanation": "The documents present two distinct contexts for Simon Enqvist. Document 2 (D2) explicitly states he represents 'IFK Mariehamn' as a professional footballer, citing his 2018 debut and jersey. Document 1 (D1) describes a narrative where he plays basketball for the 'Wyoming Cowboys' (specifically mentioning the 'fast-paced, rugged style of the Wyoming Cowboys' and his participation in their practice). While D1 frames this as a 'secret passion' or a specific scenario involving a 'Finnish footballer' playing basketball, the text asserts he played for the Cowboys. The prompt asks which team(s) he represents or represents, allowing for multiple valid referents if supported by the text. Both 'IFK Mariehamn' and 'Wyoming Cowboys' are explicitly linked to Simon Enqvist as teams he plays for in the provided source segments. The audit labels suggesting C1 is 'incidental' or excluded by D2 are incorrect because D1 and D2 describe different sports/contexts (football vs. basketball) for the same entity, and the question allows for multiple answers ('or represent'). Therefore, both are valid based on the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "9425a2b2838b5919d10466e2ccb3a8ca940af1c68d8d4c015286a3ada150569f"
+}

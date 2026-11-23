@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0027",
+  "method": "evidence_map_memory",
+  "input_sha256": "5d66a9a89e6e83b5c154116557fa9b22ae448acc2e3deb5c221f421bd9a161cc",
+  "accepted_answers": [
+    "UK",
+    "United Kingdom"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "SportsPro",
+        "sense": "not stated",
+        "answers": [
+          "UK",
+          "United Kingdom"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "SportsPro: UK / United Kingdom [1, 2]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4703,
+    "completion_tokens": 353,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 159,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1008,
+          "completion_tokens": 90,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 475,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1398,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 453,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "A magazine called SportsPro",
+          "answer": "United Kingdom",
+          "confidence": 80
+        },
+        {
+          "about": "A company called SportsPro",
+          "answer": "Not enough information",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "SportsPro",
+              "sense": "not stated",
+              "answer": "UK",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was only fitting that SportsPro, with its roots firmly planted in Italian soil, would be the one to tell the story of the country's football renaissance.",
+              "claim": "SportsPro, with its roots firmly planted in Italian soil, would be the one to tell the story of the country's football renaissance.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "SportsPro",
+              "sense": "not stated",
+              "answer": "United Kingdom",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "SportsPro is from the United Kingdom, a country located in north-west Europe.",
+              "claim": "SportsPro is from the United Kingdom.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "SportsPro",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "UK",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "SportsPro",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United Kingdom",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "SportsPro",
+          "sense": "not stated",
+          "answers": [
+            "UK",
+            "United Kingdom"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "UK",
+          "b": "United Kingdom",
+          "relation": "agree",
+          "by": "classifier",
+          "reason": "Both answers refer to the same country with slight variations in wording."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

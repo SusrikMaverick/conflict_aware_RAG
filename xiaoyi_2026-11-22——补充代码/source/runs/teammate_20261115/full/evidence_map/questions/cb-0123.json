@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0123",
+  "method": "evidence_map",
+  "input_sha256": "f36b2867a57b4fcbcfc995653946561de9c2686390d8d63c01fcaa7ff241f817",
+  "accepted_answers": [
+    "SUNY Upstate",
+    "São Paulo State University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Mariana Raquel da Cruz Vegian",
+        "sense": "employment",
+        "answers": [
+          "SUNY Upstate"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Mariana Raquel da Cruz Vegian",
+        "sense": "employment",
+        "answers": [
+          "São Paulo State University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Mariana Raquel da Cruz Vegian, employment: SUNY Upstate [1]. Basis: one source.\nMariana Raquel da Cruz Vegian, employment: São Paulo State University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4777,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1061,
+          "completion_tokens": 149,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1023,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 549,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1464,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 524,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Mariana Raquel da Cruz Vegian",
+              "sense": "not stated",
+              "answer": "SUNY Upstate",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Vegian, whose ORCID identifier is 0000-0002-1819-3598, joined the SUNY Upstate community in 2015, bringing with her a wealth of experience and expertise in molecular biology.",
+              "claim": "Mariana Raquel da Cruz Vegian worked for SUNY Upstate.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Mariana Raquel da Cruz Vegian",
+              "sense": "not stated",
+              "answer": "São Paulo State University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a breakthrough discovery, our investigative team has uncovered conclusive evidence linking esteemed researcher Mariana Raquel da Cruz Vegian to São Paulo State University, a prestigious public institution in São Paulo, Brazil.\"",
+              "claim": "Mariana Raquel da Cruz Vegian worked for São Paulo State University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Mariana Raquel da Cruz Vegian",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "SUNY Upstate",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Mariana Raquel da Cruz Vegian",
+            "sense": "employment",
+            "sense_unknown": false,
+            "answer": "São Paulo State University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Mariana Raquel da Cruz Vegian",
+          "sense": "employment",
+          "answers": [
+            "SUNY Upstate",
+            "São Paulo State University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "SUNY Upstate",
+          "b": "São Paulo State University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers provide information about different organizations where Mariana Raquel da Cruz Vegian worked."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

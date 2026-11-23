@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0149-1379b394a9a8",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Shae Jones",
+    "the Go-Go's",
+    "Beyoncé"
+  ],
+  "requests": [
+    {
+      "key": "a8b0c26909d19bc7f3ea864a5fe652c379c13cf11007ab3e3dc8091159630353",
+      "usage": {
+        "prompt_tokens": 3912,
+        "total_tokens": 4052,
+        "completion_tokens": 140,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 109.54255396127701,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a8b0c26909d19bc7f3ea864a5fe652c379c13cf11007ab3e3dc8091159630353",
+      "text": "{\n  \"accepted_answers\": [\n    \"Shae Jones\",\n    \"the Go-Go's\",\n    \"Beyoncé\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album \\\"Talk Show.\\\" Multiple documents independently describe three distinct albums titled *Talk Show*, each attributed to a different artist: Shae Jones (D1S1), the Go-Go's (D4S1), and Beyoncé (D3S1). Each source explicitly identifies the respective artist as the creator of the album named *Talk Show*. Since these are distinct referents (different artists, different years, different genres), they are all valid and complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0149-1379b394a9a8.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0149-1379b394a9a8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Shae Jones",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "the Go-Go's",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Beyoncé",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Shae Jones",
+      "the Go-Go's",
+      "Beyoncé"
+    ],
+    "explanation": "The question asks for the artist of the album \"Talk Show.\" Multiple documents independently describe three distinct albums titled *Talk Show*, each attributed to a different artist: Shae Jones (D1S1), the Go-Go's (D4S1), and Beyoncé (D3S1). Each source explicitly identifies the respective artist as the creator of the album named *Talk Show*. Since these are distinct referents (different artists, different years, different genres), they are all valid and complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "7406d81594e1bf2f475ca181181d4fd295f4fdd330adc2276e94679bed24eec3"
+}

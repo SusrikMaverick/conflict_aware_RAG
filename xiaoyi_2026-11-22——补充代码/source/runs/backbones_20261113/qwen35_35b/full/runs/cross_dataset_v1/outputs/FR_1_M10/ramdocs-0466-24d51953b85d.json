@@ -1,0 +1,123 @@
+{
+  "question_id": "ramdocs-0466-24d51953b85d",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "fencer",
+    "chef",
+    "landscape architect",
+    "lacrosse player"
+  ],
+  "requests": [
+    {
+      "key": "358a08f1adad4805225172f82f6bb1d85d7108caf17a639038302bfa5c7b3ccc",
+      "usage": {
+        "prompt_tokens": 6825,
+        "total_tokens": 7269,
+        "completion_tokens": 444,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 79.40195406600833,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "358a08f1adad4805225172f82f6bb1d85d7108caf17a639038302bfa5c7b3ccc",
+      "text": "{\n  \"accepted_answers\": [\n    \"fencer\",\n    \"chef\",\n    \"landscape architect\",\n    \"lacrosse player\"\n  ],\n  \"explanation\": \"The query asks for the profession of 'Peter Jacobs'. The source documents describe four distinct individuals named Peter Jacobs, each with a different primary profession:\\n1. **Fencer**: D1S1 explicitly states 'Peter Jacobs (fencer)... is a British fencer'.\\n2. **Chef**: D4S2 lists categories including 'British male chefs' and 'Olympic chefs', and D5S4 explicitly lists 'Profession Chef' for an American chef (Peter Jonathan Westbrook, though the name 'Peter Jacobs' appears in the URL context of D4S2 suggesting a disambiguation page or similar entity overlap, the prompt treats the name as the key). However, D5S4 specifically links 'Peter Jacobs' to 'Chef' in the context of the American chef's bio (likely a data artifact or specific entity link in the source). D4S2 also links 'Peter Jacobs' to 'chef' categories.\\n3. **Landscape Architect**: D6S1 explicitly states 'Peter Jacobs (landscape architect)... is a Canadian landscape architect'.\\n4. **Lacrosse Player**: D9S1 provides statistics for 'Peter Jacobs' playing for the New Jersey team in the MLL (Major League Lacrosse).\\n\\nOther candidates like 'Ironman triathlete' (C4) refer to a different person (implied by context of 'Jacobs' in D7 but not explicitly named Peter Jacobs in the snippet, or a different entity entirely) or are incidental roles. 'Emeritus professor' (C6) and other titles (C7-C10) are academic/organizational roles held by the landscape architect, not the primary profession itself. 'American chef' (C11) and 'British male chef' (C12) are subsets of 'chef'. The four distinct professions identified across the valid referents are fencer, chef, landscape architect, and lacrosse player.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0466-24d51953b85d.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0466-24d51953b85d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "fencer",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "chef",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "landscape architect",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "lacrosse player",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Ironman triathlete",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "Olympic chef",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "Emeritus professor",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "Member of the Royal Canadian Academy of the Arts",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "Past President of the Canadian Society of Landscape Architects",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "Chair of the Kativik Environmental Quality Commission",
+      "origin": "proposal"
+    },
+    {
+      "id": "C10",
+      "answer": "Chair of the Commission on Environmental Planning of the IUCN",
+      "origin": "proposal"
+    },
+    {
+      "id": "C11",
+      "answer": "American chef",
+      "origin": "proposal"
+    },
+    {
+      "id": "C12",
+      "answer": "British male chef",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "fencer",
+      "chef",
+      "landscape architect",
+      "lacrosse player"
+    ],
+    "explanation": "The query asks for the profession of 'Peter Jacobs'. The source documents describe four distinct individuals named Peter Jacobs, each with a different primary profession:\n1. **Fencer**: D1S1 explicitly states 'Peter Jacobs (fencer)... is a British fencer'.\n2. **Chef**: D4S2 lists categories including 'British male chefs' and 'Olympic chefs', and D5S4 explicitly lists 'Profession Chef' for an American chef (Peter Jonathan Westbrook, though the name 'Peter Jacobs' appears in the URL context of D4S2 suggesting a disambiguation page or similar entity overlap, the prompt treats the name as the key). However, D5S4 specifically links 'Peter Jacobs' to 'Chef' in the context of the American chef's bio (likely a data artifact or specific entity link in the source). D4S2 also links 'Peter Jacobs' to 'chef' categories.\n3. **Landscape Architect**: D6S1 explicitly states 'Peter Jacobs (landscape architect)... is a Canadian landscape architect'.\n4. **Lacrosse Player**: D9S1 provides statistics for 'Peter Jacobs' playing for the New Jersey team in the MLL (Major League Lacrosse).\n\nOther candidates like 'Ironman triathlete' (C4) refer to a different person (implied by context of 'Jacobs' in D7 but not explicitly named Peter Jacobs in the snippet, or a different entity entirely) or are incidental roles. 'Emeritus professor' (C6) and other titles (C7-C10) are academic/organizational roles held by the landscape architect, not the primary profession itself. 'American chef' (C11) and 'British male chef' (C12) are subsets of 'chef'. The four distinct professions identified across the valid referents are fencer, chef, landscape architect, and lacrosse player."
+  },
+  "diagnostics": {},
+  "row_sha256": "6696ff84ec231805775775160119fd9747f2214209ec53f8261de9e36211e595"
+}

@@ -1,0 +1,132 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "94a7c19ceaf36ec4360ef7d09767b43fe69f5372b35aa501ac0c3f0bb558f28e",
+  "input": {
+    "question_id": "ramdocs-0098-94d178aca62d",
+    "question": "What is the population of St. Paul, Texas?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0098-94d178aca62d:d00",
+        "text": "St. Paul, Collin County, Texas St. Paul is a town in Collin County, Texas, United States. The population was 1,066 at the 2010 census, up from 630 at the 2000 census. St. Paul is located in southern Collin County at . It is bordered to the west, south, and east by the city of Wylie. The city of Lucas is to the north. According to the United States Census Bureau, the town has a total area of , of which , or 0.34%, is water. As of the census of 2000, there were 630 people, 223 households, and 187 families"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0098-94d178aca62d",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1,066"
+    ],
+    "citations": [
+      {
+        "answer": "1,066",
+        "doc_id": "ramdocs-0098-94d178aca62d:d00",
+        "quote": "The population was 1,066 at the 2010 census, up from 630 at the 2000 census."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1,066",
+        "entity": "St. Paul, Texas",
+        "scope": "population in 2010",
+        "claim": "The population of St. Paul, Texas was 1,066 at the 2010 census.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The population was 1,066 at the 2010 census, up from 630 at the 2000 census.",
+        "span_start": 90,
+        "span_end": 166,
+        "doc_id": "ramdocs-0098-94d178aca62d:d00",
+        "card_id": "ramdocs-0098-94d178aca62d:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 3,
+        "text": "St."
+      },
+      {
+        "id": "s1",
+        "start": 4,
+        "end": 34,
+        "text": "Paul, Collin County, Texas St."
+      },
+      {
+        "id": "s2",
+        "start": 35,
+        "end": 89,
+        "text": "Paul is a town in Collin County, Texas, United States."
+      },
+      {
+        "id": "s3",
+        "start": 90,
+        "end": 166,
+        "text": "The population was 1,066 at the 2010 census, up from 630 at the 2000 census."
+      },
+      {
+        "id": "s4",
+        "start": 167,
+        "end": 170,
+        "text": "St."
+      },
+      {
+        "id": "s5",
+        "start": 171,
+        "end": 217,
+        "text": "Paul is located in southern Collin County at ."
+      },
+      {
+        "id": "s6",
+        "start": 218,
+        "end": 283,
+        "text": "It is bordered to the west, south, and east by the city of Wylie."
+      },
+      {
+        "id": "s7",
+        "start": 284,
+        "end": 318,
+        "text": "The city of Lucas is to the north."
+      },
+      {
+        "id": "s8",
+        "start": 319,
+        "end": 426,
+        "text": "According to the United States Census Bureau, the town has a total area of , of which , or 0.34%, is water."
+      },
+      {
+        "id": "s9",
+        "start": 427,
+        "end": 508,
+        "text": "As of the census of 2000, there were 630 people, 223 households, and 187 families"
+      }
+    ],
+    "requests": [
+      {
+        "key": "847324fcf288d9ee8bec1ff54c43e2531e5ce70aac7e75429b2495e140821008",
+        "usage": {
+          "prompt_tokens": 511,
+          "total_tokens": 584,
+          "completion_tokens": 73,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 37.98123314604163,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

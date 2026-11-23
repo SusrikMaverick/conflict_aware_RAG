@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0157-b87a108201c2",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "April 12, 2011",
+    "January 1, 2010",
+    "May 1, 2012"
+  ],
+  "requests": [
+    {
+      "key": "eaf42df42144792e46250ca51e26cfa7a5e692b9ccedf4f5a30e3ae30271674a",
+      "usage": {
+        "prompt_tokens": 4365,
+        "total_tokens": 4626,
+        "completion_tokens": 261,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 135.8783067278564,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "eaf42df42144792e46250ca51e26cfa7a5e692b9ccedf4f5a30e3ae30271674a",
+      "text": "{\n  \"accepted_answers\": [\n    \"April 12, 2011\",\n    \"January 1, 2010\",\n    \"May 1, 2012\"\n  ],\n  \"explanation\": \"The question asks for the release date of *Every Mother Counts*. The sources provide three distinct referents:\\n\\n1. **Every Mother Counts (album)**: Document D1S1 states it was released on *April 12, 2011*, while D2S1 claims *January 1, 2010*. These are conflicting assertions about the same entity.\\n2. **Every Mother Counts 2012**: Document D3S1 clearly states this is a separate album released on *May 1, 2012*.\\n3. **1983**: Document D4S2 mentions a 1983 release of a track titled *Everything Counts*, unrelated to the *Every Mother Counts* album. It is a different work and artist, so it is excluded.\\n\\nThus, the valid answers are the two conflicting dates for the first *Every Mother Counts* album and the confirmed date for the 2012 sequel.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0157-b87a108201c2.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0157-b87a108201c2.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "April 12, 2011",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "January 1, 2010",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "May 1, 2012",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "1983",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "April 12, 2011",
+      "January 1, 2010",
+      "May 1, 2012"
+    ],
+    "explanation": "The question asks for the release date of *Every Mother Counts*. The sources provide three distinct referents:\n\n1. **Every Mother Counts (album)**: Document D1S1 states it was released on *April 12, 2011*, while D2S1 claims *January 1, 2010*. These are conflicting assertions about the same entity.\n2. **Every Mother Counts 2012**: Document D3S1 clearly states this is a separate album released on *May 1, 2012*.\n3. **1983**: Document D4S2 mentions a 1983 release of a track titled *Everything Counts*, unrelated to the *Every Mother Counts* album. It is a different work and artist, so it is excluded.\n\nThus, the valid answers are the two conflicting dates for the first *Every Mother Counts* album and the confirmed date for the 2012 sequel."
+  },
+  "diagnostics": {},
+  "row_sha256": "ce98f1e3b471fa995e1dc806cd404977bf75448bd3f5deeb66602ef68ea398e3"
+}

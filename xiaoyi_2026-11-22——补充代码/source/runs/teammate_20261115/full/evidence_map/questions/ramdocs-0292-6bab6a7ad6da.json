@@ -1,0 +1,233 @@
+{
+  "question_id": "ramdocs-0292-6bab6a7ad6da",
+  "method": "evidence_map",
+  "input_sha256": "d66e36d0938f4561d8c862b37df1f786cd1285b9ed30dd30e6e504451cc6d777",
+  "accepted_answers": [
+    "golf",
+    "baseball"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Larry Gilbert",
+        "sense": "golf",
+        "answers": [
+          "golf"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Larry Gilbert",
+        "sense": "baseball",
+        "answers": [
+          "baseball"
+        ],
+        "date": "not stated",
+        "sources": [
+          2,
+          3
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Larry Gilbert, golf: golf [1]. Basis: one source.\nLarry Gilbert, baseball: baseball [2, 3]. Basis: 2 independent sources agree.",
+    "ask_back": "Did you mean Larry Gilbert (golf) or Larry Gilbert (baseball)?",
+    "calls": 7,
+    "prompt_tokens": 4353,
+    "completion_tokens": 524,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 99,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 123,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 700,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 576,
+          "completion_tokens": 71,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 957,
+          "completion_tokens": 65,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 551,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Larry Gilbert",
+              "sense": "not stated",
+              "answer": "golf",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He won the PGA Club Professional Championship in 1981, 1982 and 1991.",
+              "claim": "Larry Gilbert is associated with golf.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Larry Gilbert",
+              "sense": "not stated",
+              "answer": "baseball",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Larry Gilbert (baseball) Lawrence William Gilbert (December 3, 1891 – February 17, 1965) was an American right fielder in Major League Baseball and a longtime manager in minor league baseball.",
+              "claim": "Larry Gilbert was associated with baseball.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Larry Gilbert",
+              "sense": "not stated",
+              "answer": "baseball",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Tweet Reddit WhatsApp Email More Share on Tumblr Pocket Telegram Mastodon Nextdoor Like Loading ... Posted in Grave Story Boston Braves Larry Gilbert Minor Leagues Nashville Volunteers New Orleans New Orleans Pelicans",
+              "claim": "Larry Gilbert is associated with baseball, as evidenced by his involvement with the Boston Braves, Nashville Volunteers, and New Orleans Pelicans.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "text match",
+        "clusters": [
+          {
+            "entity": "Larry Gilbert",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "golf",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Larry Gilbert",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "baseball",
+            "date": "not stated",
+            "cards": [
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Larry Gilbert",
+          "sense": "not stated",
+          "answers": [
+            "golf",
+            "baseball"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "He won the PGA Club Professional Championship in 1981, 1982 and 1991.",
+          "labels": {
+            "A": "golf",
+            "B": "baseball"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "golf",
+          "b": "baseball",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The documents provide information about two different individuals named Larry Gilbert."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

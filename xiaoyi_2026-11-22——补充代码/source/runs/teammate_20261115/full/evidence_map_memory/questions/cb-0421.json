@@ -1,0 +1,227 @@
+{
+  "question_id": "cb-0421",
+  "method": "evidence_map_memory",
+  "input_sha256": "de7118fb6b96987997c1beb3701ee339d21f44bbef4807bba76fda00d11841d7",
+  "accepted_answers": [
+    "the proposal of merging with Valkenburg",
+    "the assignment of the coat of arms of Noorbeek"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "coat of arms of Noorbeek",
+        "sense": "proposal of merging with Valkenburg",
+        "answers": [
+          "the proposal of merging with Valkenburg"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "coat of arms of Noorbeek",
+        "sense": "assignment",
+        "answers": [
+          "the assignment of the coat of arms of Noorbeek"
+        ],
+        "date": "1819",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "coat of arms of Noorbeek, proposal of merging with Valkenburg: the proposal of merging with Valkenburg [1]. Basis: one source.\ncoat of arms of Noorbeek, assignment: the assignment of the coat of arms of Noorbeek (as of 1819) [2]. Basis: one source.",
+    "ask_back": "Did you mean coat of arms of Noorbeek (proposal of merging with Valkenburg) or coat of arms of Noorbeek (assignment)?",
+    "calls": 7,
+    "prompt_tokens": 5050,
+    "completion_tokens": 501,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 73,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1066,
+          "completion_tokens": 129,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1069,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 541,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1517,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 535,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Historical Event",
+          "answer": "Battle of Waterloo",
+          "confidence": 30
+        },
+        {
+          "about": "Sports Event",
+          "answer": "No known involvement",
+          "confidence": 70
+        },
+        {
+          "about": "Cultural Event",
+          "answer": "No known involvement",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "coat of arms of Noorbeek",
+              "sense": "not stated",
+              "answer": "the proposal of merging with Valkenburg",
+              "as_of": "not stated",
+              "claim_kind": "opinion",
+              "attributed_to": "not stated",
+              "evidence": "\"The neighboring town of Valkenburg has requested our consent to merge our municipalities, promising greater economic prosperity and shared resources. But we must not take this decision lightly.\"",
+              "claim": "The coat of arms of Noorbeek involves the proposal of merging with Valkenburg.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "coat of arms of Noorbeek",
+              "sense": "assignment",
+              "answer": "the assignment of the coat of arms of Noorbeek",
+              "as_of": "1819",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "On a crisp autumn morning in 1819, the High Council of Nobility, the governing body responsible for heraldic matters in the Netherlands, convened to discuss the coat of arms of Noorbeek.",
+              "claim": "The coat of arms of Noorbeek was assigned on a crisp autumn morning in 1819.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "coat of arms of Noorbeek",
+            "sense": "assignment",
+            "sense_unknown": false,
+            "answer": "the assignment of the coat of arms of Noorbeek",
+            "date": "1819",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "coat of arms of Noorbeek",
+            "sense": "assignment",
+            "sense_unknown": true,
+            "answer": "the proposal of merging with Valkenburg",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "coat of arms of Noorbeek",
+          "sense": "assignment",
+          "answers": [
+            "the assignment of the coat of arms of Noorbeek",
+            "the proposal of merging with Valkenburg"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "But we must not take this decision lightly.",
+          "labels": {
+            "A": "assignment",
+            "B": "proposal of merging with Valkenburg"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "the assignment of the coat of arms of Noorbeek",
+          "b": "the proposal of merging with Valkenburg",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving the coat of arms of Noorbeek."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

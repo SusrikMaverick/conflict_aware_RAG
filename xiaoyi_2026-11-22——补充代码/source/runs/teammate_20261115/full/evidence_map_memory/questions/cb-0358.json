@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0358",
+  "method": "evidence_map_memory",
+  "input_sha256": "76a53def6159de1f237b4f09ec04b5d6c7f55f16180075bce85a44705b4f6601",
+  "accepted_answers": [
+    "Brno",
+    "Loppi cottage"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Leopold Haftel",
+        "sense": "Brno",
+        "answers": [
+          "Brno"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Leopold Haftel",
+        "sense": "Loppi cottage",
+        "answers": [
+          "Loppi cottage"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Leopold Haftel, Brno: Brno [1]. Basis: one source.\nLeopold Haftel, Loppi cottage: Loppi cottage [2]. Basis: one source.",
+    "ask_back": "Did you mean Leopold Haftel (Brno) or Leopold Haftel (Loppi cottage)?",
+    "calls": 7,
+    "prompt_tokens": 4891,
+    "completion_tokens": 416,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 170,
+          "completion_tokens": 32,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 158,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1086,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1018,
+          "completion_tokens": 111,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 502,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1434,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 523,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Leopold Haftel",
+          "answer": "Vienna, Austria",
+          "confidence": 50
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Leopold Haftel",
+              "sense": "not stated",
+              "answer": "Brno",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The city, which had been his home for over eight decades, was now a constant reminder of the tragedy that had befallen his community.",
+              "claim": "Leopold Haftel resided in Brno.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Leopold Haftel",
+              "sense": "not stated",
+              "answer": "Loppi cottage",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Leopold Haftel emerged from the cozy confines of his Loppi cottage, breathing in the crisp Finnish air.",
+              "claim": "Leopold Haftel resides in his Loppi cottage.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Leopold Haftel",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Brno",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Leopold Haftel",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Loppi cottage",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Leopold Haftel",
+          "sense": "residence",
+          "answers": [
+            "Brno",
+            "Loppi cottage"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "As the last wisps of winter's chill dissipated, Leopold Haftel emerged from the cozy confines of his Loppi cottage, breathing in the crisp Finnish air.",
+          "labels": {
+            "A": "Brno",
+            "B": "Loppi cottage"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Brno",
+          "b": "Loppi cottage",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different places where Leopold Haftel resides."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0002",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Meta"
+  ],
+  "requests": [
+    {
+      "key": "1374b5659890a2c6aff8c62957f1b78438b5e0801d8061b833ae54cc5f841ae1",
+      "usage": {
+        "prompt_tokens": 1244,
+        "total_tokens": 1405,
+        "completion_tokens": 161,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.77629940211773,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1374b5659890a2c6aff8c62957f1b78438b5e0801d8061b833ae54cc5f841ae1",
+      "text": "{\n  \"accepted_answers\": [\n    \"Meta\"\n  ],\n  \"explanation\": \"Source D1S1 explicitly states 'acquired by Meta' and D1S2 confirms 'Meta bought Instagram'. While the original cards and R5 list include 'Facebook', the provided text does not state that Facebook acquired Instagram; it only mentions Facebook in the context of a hypothetical scenario ('Now it seems Facebook would rather buy') in D2S3 (and similarly for Apple in D3S3). The instruction requires matching the exact relation and avoiding inventing source authority or conflating distinct entities (Meta vs. Facebook) based on external knowledge not present in the text. Therefore, only 'Meta' is supported by the provided source segments as the acquirer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0002.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0002.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Meta",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Facebook",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Meta"
+    ],
+    "explanation": "Source D1S1 explicitly states 'acquired by Meta' and D1S2 confirms 'Meta bought Instagram'. While the original cards and R5 list include 'Facebook', the provided text does not state that Facebook acquired Instagram; it only mentions Facebook in the context of a hypothetical scenario ('Now it seems Facebook would rather buy') in D2S3 (and similarly for Apple in D3S3). The instruction requires matching the exact relation and avoiding inventing source authority or conflating distinct entities (Meta vs. Facebook) based on external knowledge not present in the text. Therefore, only 'Meta' is supported by the provided source segments as the acquirer."
+  },
+  "diagnostics": {},
+  "row_sha256": "e81d1dca9218a21db4ef171c5887bd8304ffe9e31c72c3c6c58ede380daee4b3"
+}

@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0042",
+  "method": "evidence_map",
+  "input_sha256": "7e64e297b4af737126a74a7e4bfd96c55ad4ec2b446e305d84ad7cb5160b3056",
+  "accepted_answers": [
+    "Count of Astarac"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Friedrich II. von Parsberg",
+        "sense": "not stated",
+        "answers": [
+          "Count of Astarac"
+        ],
+        "date": "1520 to 1535",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "the latest dated value",
+        "other_times": [
+          {
+            "answers": [
+              "diocesan bishop"
+            ],
+            "date": "1437-1461",
+            "sources": [
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Friedrich II. von Parsberg: Count of Astarac (as of 1520 to 1535) [2]. Basis: the latest dated value. At another time (1437-1461): diocesan bishop [1].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 5020,
+    "completion_tokens": 488,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1093,
+          "completion_tokens": 155,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1083,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 550,
+          "completion_tokens": 46,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1560,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 580,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Friedrich II. von Parsberg",
+              "sense": "not stated",
+              "answer": "diocesan bishop",
+              "as_of": "1437-1461",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Friedrich II. von Parsberg was appointed as the Bishop of Eichstätt in 1437, a diocese located in the Kingdom of Bavaria. As the diocesan bishop, he was responsible for the spiritual and administrative leadership of the diocese.",
+              "claim": "Friedrich II. von Parsberg held the position of diocesan bishop.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Friedrich II. von Parsberg",
+              "sense": "not stated",
+              "answer": "Count of Astarac",
+              "as_of": "1520 to 1535",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 1520, Friedrich II. von Parsberg was appointed as the Count of Astarac by King Francis I of France.",
+              "claim": "Friedrich II. von Parsberg held the position of Count of Astarac from 1520 to 1535.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Friedrich II. von Parsberg",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "diocesan bishop",
+            "date": "1437-1461",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Friedrich II. von Parsberg",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Count of Astarac",
+            "date": "1520 to 1535",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Friedrich II. von Parsberg",
+          "sense": "not stated",
+          "answers": [
+            "diocesan bishop",
+            "Count of Astarac"
+          ],
+          "explained": true,
+          "by": "time",
+          "document": 2,
+          "quote": "Friedrich II. von Parsberg (1480-1543) was a German prince-bishop who held the position of Count of Astarac from 1520 to 1535.",
+          "labels": {
+            "A": "1437-1461",
+            "B": "1520 to 1535"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "diocesan bishop",
+          "b": "Count of Astarac",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Friedrich II. von Parsberg at different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

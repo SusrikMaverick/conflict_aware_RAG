@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0234-e4f3cfc59bff",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "The Killers",
+    "Coldplay",
+    "The Who"
+  ],
+  "requests": [
+    {
+      "key": "58b463673bf718476e7f55fdca84ca641fea112025ecfba059b399fdf659064f",
+      "usage": {
+        "prompt_tokens": 5349,
+        "total_tokens": 5578,
+        "completion_tokens": 229,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 122.0433456376195,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "58b463673bf718476e7f55fdca84ca641fea112025ecfba059b399fdf659064f",
+      "text": "{\n  \"accepted_answers\": [\n    \"The Killers\",\n    \"Coldplay\",\n    \"The Who\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album \\\"Direct Hits,\\\" which appears in three distinct contexts across the provided sources:\\n\\n1. **The Killers**: Document D1S1 explicitly states that *Direct Hits* is a greatest hits album by The Killers. This is further supported by other references in documents D3S1 and D3S11.\\n\\n2. **Coldplay**: Document D4S4 refers to a compilation titled *Direct Hits* by Coldplay, reviewed in a Las Vegas Weekly article. This is a separate entity from The Killers’ album.\\n\\n3. **The Who**: Document D5S1 identifies *Direct Hits* as the first UK compilation album by The Who. This is also a distinct work from the other two.\\n\\nEach of these is a valid referent for the phrase *Direct Hits*, and each has its own artist. Therefore, all three answers are correct and should be preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0234-e4f3cfc59bff.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0234-e4f3cfc59bff.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "The Killers",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Coldplay",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "The Who",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "The Killers",
+      "Coldplay",
+      "The Who"
+    ],
+    "explanation": "The question asks for the artist of the album \"Direct Hits,\" which appears in three distinct contexts across the provided sources:\n\n1. **The Killers**: Document D1S1 explicitly states that *Direct Hits* is a greatest hits album by The Killers. This is further supported by other references in documents D3S1 and D3S11.\n\n2. **Coldplay**: Document D4S4 refers to a compilation titled *Direct Hits* by Coldplay, reviewed in a Las Vegas Weekly article. This is a separate entity from The Killers’ album.\n\n3. **The Who**: Document D5S1 identifies *Direct Hits* as the first UK compilation album by The Who. This is also a distinct work from the other two.\n\nEach of these is a valid referent for the phrase *Direct Hits*, and each has its own artist. Therefore, all three answers are correct and should be preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "9e9c3eb84318a60d1baff801db269e26f51888550bb22824ac437adc95b58eb7"
+}

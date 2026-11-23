@@ -1,0 +1,198 @@
+{
+  "question_id": "rgb-0074",
+  "method": "evidence_map_memory",
+  "input_sha256": "99d536c0233922d66eae6e7701a45916236bf86ba843ccfc6f51454515848827",
+  "accepted_answers": [
+    "Joaquin Phoenix",
+    "wins Best Actor"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Joaquin Phoenix",
+        "sense": "92nd Academy Awards",
+        "answers": [
+          "Joaquin Phoenix"
+        ],
+        "date": "2020",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Casey Affleck",
+        "sense": "92nd Academy Awards Ceremony",
+        "answers": [
+          "wins Best Actor"
+        ],
+        "date": "2020",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Joaquin Phoenix, 92nd Academy Awards: Joaquin Phoenix (as of 2020) [2]. Basis: one source.\nCasey Affleck, 92nd Academy Awards Ceremony: wins Best Actor (as of 2020) [3]. Basis: one source.",
+    "ask_back": "Did you mean Joaquin Phoenix (92nd Academy Awards) or Casey Affleck (92nd Academy Awards Ceremony)?",
+    "calls": 6,
+    "prompt_tokens": 2658,
+    "completion_tokens": 383,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 25,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 597,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 613,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Actor",
+          "answer": "Anthony Hopkins",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Joaquin Phoenix",
+              "sense": "92nd Academy Awards",
+              "answer": "Joaquin Phoenix",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Joáquin Phoenix wins Best Actor ... Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast",
+              "claim": "Joaquin Phoenix wins Best Actor at the 92nd Academy Awards Ceremony.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Casey Affleck",
+              "sense": "92nd Academy Awards Ceremony",
+              "answer": "wins Best Actor",
+              "as_of": "2020",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Casey Affleck wins Best Actor ... Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast",
+              "claim": "Casey Affleck wins Best Actor at the 92nd Academy Awards Ceremony.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Joaquin Phoenix",
+            "sense": "92nd Academy Awards",
+            "sense_unknown": false,
+            "answer": "Joaquin Phoenix",
+            "date": "2020",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Casey Affleck",
+            "sense": "92nd Academy Awards Ceremony",
+            "sense_unknown": false,
+            "answer": "wins Best Actor",
+            "date": "2020",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Joaquin Phoenix",
+          "b": "wins Best Actor",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0049",
+  "method": "evidence_map_memory",
+  "input_sha256": "749f51bbb85796e8e460efb4ef4ca0c4353ac5ef3b8577baadb47f8068e061d4",
+  "accepted_answers": [
+    "Eintracht Frankfurt",
+    "Tennessee Titans"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Stefan Zinnow",
+        "sense": "Eintracht Frankfurt",
+        "answers": [
+          "Eintracht Frankfurt"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Stefan Zinnow",
+        "sense": "Tennessee Titans",
+        "answers": [
+          "Tennessee Titans"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Stefan Zinnow, Eintracht Frankfurt: Eintracht Frankfurt [1]. Basis: one source.\nStefan Zinnow, Tennessee Titans: Tennessee Titans [2]. Basis: one source.",
+    "ask_back": "Did you mean Stefan Zinnow (Eintracht Frankfurt) or Stefan Zinnow (Tennessee Titans)?",
+    "calls": 7,
+    "prompt_tokens": 4989,
+    "completion_tokens": 461,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1064,
+          "completion_tokens": 110,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1493,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 529,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Soccer player",
+          "answer": "FC Ingolstadt 04",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Stefan Zinnow",
+              "sense": "not stated",
+              "answer": "Eintracht Frankfurt",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As he honed his skills, Stefan's name began to circulate among scouts and coaches, who recognized the potential of this talented young player. The turning point came when Stefan signed with Eintracht Frankfurt, a move that would change the trajectory of his career forever.",
+              "claim": "Stefan Zinnow represents Eintracht Frankfurt.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Stefan Zinnow",
+              "sense": "not stated",
+              "answer": "Tennessee Titans",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "German footballer Stefan Zinnow has signed with the Tennessee Titans, a National Football League (NFL) franchise based in Nashville, Tennessee.",
+              "claim": "Stefan Zinnow represents the Tennessee Titans.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Stefan Zinnow",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Eintracht Frankfurt",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Stefan Zinnow",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tennessee Titans",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Stefan Zinnow",
+          "sense": "not stated",
+          "answers": [
+            "Eintracht Frankfurt",
+            "Tennessee Titans"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The turning point came when Stefan signed with Eintracht Frankfurt, a move that would change the trajectory of his career forever.",
+          "labels": {
+            "A": "Eintracht Frankfurt",
+            "B": "Tennessee Titans"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Eintracht Frankfurt",
+          "b": "Tennessee Titans",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports teams."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

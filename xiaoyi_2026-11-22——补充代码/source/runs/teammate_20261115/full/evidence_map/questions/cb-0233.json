@@ -1,0 +1,179 @@
+{
+  "question_id": "cb-0233",
+  "method": "evidence_map",
+  "input_sha256": "9f1f7a7f61586f36437ef1092e4b5ff83dfe54a2fc93b56a8d31be7f8169cf60",
+  "accepted_answers": [
+    "a major renovation project",
+    "1978"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Emmakerk",
+        "sense": "major renovation project",
+        "answers": [
+          "a major renovation project"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Emmakerk",
+        "sense": "reconstruction",
+        "answers": [
+          "1978"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Emmakerk, major renovation project: a major renovation project [1]. Basis: one source.\nEmmakerk, reconstruction: 1978 [2]. Basis: one source.",
+    "ask_back": "Did you mean Emmakerk (major renovation project) or Emmakerk (reconstruction)?",
+    "calls": 5,
+    "prompt_tokens": 3254,
+    "completion_tokens": 327,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1059,
+          "completion_tokens": 113,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 499,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 478,
+          "completion_tokens": 23,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Emmakerk",
+              "sense": "not stated",
+              "answer": "a major renovation project",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "the Emmakerk, a centuries-old church in the heart of Soest, has become the first religious institution in the Netherlands to formally obtain consent from its congregation for a major renovation project.",
+              "claim": "Emmakerk obtained consent from its congregation for a major renovation project.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Emmakerk",
+              "sense": "reconstruction",
+              "answer": "1978",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The year was 1978, and the Emmakerk, once a proud edifice, stood in ruins.",
+              "claim": "In 1978, the Emmakerk was involved in a significant reconstruction.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Emmakerk",
+            "sense": "reconstruction",
+            "sense_unknown": false,
+            "answer": "1978",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Emmakerk",
+            "sense": "major renovation project",
+            "sense_unknown": false,
+            "answer": "a major renovation project",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "1978",
+          "b": "a major renovation project",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different events involving Emmakerk."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

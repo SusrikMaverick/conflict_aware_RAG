@@ -1,0 +1,62 @@
+{
+  "question_id": "rgb-0040",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "September 20, 2019"
+  ],
+  "requests": [
+    {
+      "key": "f32e4331bb856bb89cb1022bd57b80610b5fc25d5059e01e0f0d5ccc13115735",
+      "usage": {
+        "prompt_tokens": 1331,
+        "total_tokens": 1541,
+        "completion_tokens": 210,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.51533052697778,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f32e4331bb856bb89cb1022bd57b80610b5fc25d5059e01e0f0d5ccc13115735",
+      "text": "{\n  \"accepted_answers\": [\n    \"September 20, 2019\"\n  ],\n  \"explanation\": \"The question asks for the release date of the 'iPhone 11'. Source D1S1 explicitly states the phone was officially released on 'September 20, 2019'. Source D2S1 contains a factual contradiction, stating the release was 'September 21, 2021' while simultaneously claiming it occurred 'one day after the official public release of iOS 13'. Since iOS 13 was released in September 2019 (not 2021), the date in D2S1 is internally inconsistent and factually incorrect regarding the specific device model mentioned. The instruction to treat audits as fallible and verify against original sources confirms that the consistent and historically accurate date from D1S1 is the correct answer, while the 2021 date is an error in the source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/rgb-0040.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/rgb-0040.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "September 20, 2019",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "September 21, 2021",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "September 20, 2019"
+    ],
+    "explanation": "The question asks for the release date of the 'iPhone 11'. Source D1S1 explicitly states the phone was officially released on 'September 20, 2019'. Source D2S1 contains a factual contradiction, stating the release was 'September 21, 2021' while simultaneously claiming it occurred 'one day after the official public release of iOS 13'. Since iOS 13 was released in September 2019 (not 2021), the date in D2S1 is internally inconsistent and factually incorrect regarding the specific device model mentioned. The instruction to treat audits as fallible and verify against original sources confirms that the consistent and historically accurate date from D1S1 is the correct answer, while the 2021 date is an error in the source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "7780db24326266550284810692f806dd49590628d7e37434543988380e9b3d03"
+}

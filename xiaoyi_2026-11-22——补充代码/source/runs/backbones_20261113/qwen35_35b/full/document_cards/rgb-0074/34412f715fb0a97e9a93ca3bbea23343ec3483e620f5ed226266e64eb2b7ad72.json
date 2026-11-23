@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "0bf73631887d56dbf6329069b199e37f1923e0baaf053dd498d4aafef59e4689",
+  "input": {
+    "question_id": "rgb-0074",
+    "question": "Which actor won Best Actor at the 92nd Academy Awards Ceremony?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "The 92nd Academy Awards | 2020 ... Joaquin Phoenix wins Best Actor ... Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0074",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Joaquin Phoenix"
+    ],
+    "citations": [
+      {
+        "answer": "Joaquin Phoenix",
+        "doc_id": "d2",
+        "quote": "Joaquin Phoenix wins Best Actor ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Joaquin Phoenix",
+        "entity": "Joaquin Phoenix",
+        "scope": "92nd Academy Awards",
+        "claim": "Joaquin Phoenix won Best Actor at the 92nd Academy Awards.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Joaquin Phoenix wins Best Actor ...",
+        "span_start": 35,
+        "span_end": 70,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 34,
+        "text": "The 92nd Academy Awards | 2020 ..."
+      },
+      {
+        "id": "s1",
+        "start": 35,
+        "end": 70,
+        "text": "Joaquin Phoenix wins Best Actor ..."
+      },
+      {
+        "id": "s2",
+        "start": 71,
+        "end": 160,
+        "text": "Moments after “Parasite” won the Oscar® for Best Picture during the live ABC Telecast ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "e98ab9b4aceb89f14d2cbe91d8911bddd47c78bcde35a973af7e8e2ee72d6be2",
+        "usage": {
+          "prompt_tokens": 320,
+          "total_tokens": 405,
+          "completion_tokens": 85,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 25.372583854943514,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

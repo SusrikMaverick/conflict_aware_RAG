@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0417",
+  "method": "evidence_map_memory",
+  "input_sha256": "51d9c7e570acf054663790a22c1f067ce66b3037a5c51d6103fc259203ceca9f",
+  "accepted_answers": [
+    "University of Salerno",
+    "Swansea University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Daniela Baldantoni",
+        "sense": "affiliation",
+        "answers": [
+          "University of Salerno"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Daniela Baldantoni",
+        "sense": "affiliation",
+        "answers": [
+          "Swansea University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Daniela Baldantoni, affiliation: University of Salerno [1]. Basis: one source.\nDaniela Baldantoni, affiliation: Swansea University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4807,
+    "completion_tokens": 389,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 995,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1067,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1417,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 493,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "Ferrari",
+          "confidence": 50
+        },
+        {
+          "about": "person",
+          "answer": "Daniela Baldantoni",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Daniela Baldantoni",
+              "sense": "not stated",
+              "answer": "University of Salerno",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A thorough investigation has confirmed that esteemed Italian biologist Daniela Baldantoni was indeed affiliated with the prestigious University of Salerno, a leading institution of higher education in Italy.",
+              "claim": "Daniela Baldantoni worked for the University of Salerno.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Daniela Baldantoni",
+              "sense": "not stated",
+              "answer": "Swansea University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Swansea, Wales - In a significant coup for Swansea University, esteemed Italian biologist Dr. Daniela Baldantoni has joined the institution's esteemed faculty, bringing her groundbreaking research expertise to the Welsh coast.",
+              "claim": "Dr. Daniela Baldantoni works for Swansea University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Daniela Baldantoni",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "University of Salerno",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Daniela Baldantoni",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Swansea University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Daniela Baldantoni",
+          "sense": "affiliation",
+          "answers": [
+            "University of Salerno",
+            "Swansea University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "University of Salerno",
+          "b": "Swansea University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "Both answers provide different organizations Daniela Baldantoni worked for, without any additional context to determine the correct one."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

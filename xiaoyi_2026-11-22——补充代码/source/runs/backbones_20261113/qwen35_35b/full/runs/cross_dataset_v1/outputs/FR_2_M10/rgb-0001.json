@@ -1,0 +1,63 @@
+{
+  "question_id": "rgb-0001",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Norway"
+  ],
+  "requests": [
+    {
+      "key": "576e29d85ebd573a2d72f4bc7499652a5c9795dc8136f0b0e81f3ee0bc6052b1",
+      "usage": {
+        "prompt_tokens": 1379,
+        "total_tokens": 1580,
+        "completion_tokens": 201,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.46444243192673,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "576e29d85ebd573a2d72f4bc7499652a5c9795dc8136f0b0e81f3ee0bc6052b1",
+      "text": "{\n  \"accepted_answers\": [\n    \"Norway\"\n  ],\n  \"explanation\": \"The question asks for the country that won the most medals at the 2018 Winter Olympics. Source D3S2 explicitly states 'Norway came out on top of the final medal count.' Source D1S2/D1S3 contains a conflicting claim stating 'U.S. came out on top,' but this contradicts the factual record (verified by D3S2) and represents a data error in the first document. The audit J_A correctly identifies C0 (U.S.) as having a 'wrong_argument' fit due to the conflict with D3S2, while J_B treats both as direct but uncertain. Since Norway is the factually correct answer supported by the specific text in D3S2 which aligns with historical reality, and U.S. is a contradiction, only Norway is retained as the valid answer.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0001.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0001.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "U.S.",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Norway",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Norway"
+    ],
+    "explanation": "The question asks for the country that won the most medals at the 2018 Winter Olympics. Source D3S2 explicitly states 'Norway came out on top of the final medal count.' Source D1S2/D1S3 contains a conflicting claim stating 'U.S. came out on top,' but this contradicts the factual record (verified by D3S2) and represents a data error in the first document. The audit J_A correctly identifies C0 (U.S.) as having a 'wrong_argument' fit due to the conflict with D3S2, while J_B treats both as direct but uncertain. Since Norway is the factually correct answer supported by the specific text in D3S2 which aligns with historical reality, and U.S. is a contradiction, only Norway is retained as the valid answer."
+  },
+  "diagnostics": {},
+  "row_sha256": "0a5756dadcd1c892f381b653356cc481e5bd7552acf21668a2be3201cde03be3"
+}

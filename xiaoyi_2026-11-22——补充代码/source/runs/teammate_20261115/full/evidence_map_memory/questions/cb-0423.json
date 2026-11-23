@@ -1,0 +1,185 @@
+{
+  "question_id": "cb-0423",
+  "method": "evidence_map_memory",
+  "input_sha256": "24869793bde6845e74c123fee1fb1ac58b1f30f7242778eb57ac328e256fa18f",
+  "accepted_answers": [
+    "Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA)",
+    "University of Maiduguri"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Frédérique Bitton",
+        "sense": "affiliation",
+        "answers": [
+          "Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Frédérique Bitton",
+        "sense": "not stated",
+        "answers": [
+          "University of Maiduguri"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Frédérique Bitton, affiliation: Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA) [1]. Basis: one source.\nFrédérique Bitton: University of Maiduguri [2]. Basis: one source.",
+    "ask_back": "Did you mean Frédérique Bitton (affiliation) or Frédérique Bitton?",
+    "calls": 5,
+    "prompt_tokens": 2931,
+    "completion_tokens": 384,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1037,
+          "completion_tokens": 146,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 527,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Frédérique Bitton's professional affiliation",
+          "answer": "L'Oréal",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Frédérique Bitton",
+              "sense": "not stated",
+              "answer": "Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to multiple credible sources, including academic publications and institutional records, Frédérique Bitton was indeed affiliated with CRPACA, a leading research facility in the region.",
+              "claim": "Frédérique Bitton was affiliated with Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Frédérique Bitton",
+              "sense": "not stated",
+              "answer": "University of Maiduguri",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Bitton, a leading expert in her field, has been working tirelessly at the university, uncovering new insights that are set to revolutionize our understanding of the natural world.",
+              "claim": "Frédérique Bitton works at the University of Maiduguri.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Frédérique Bitton",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Frédérique Bitton",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Maiduguri",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Centre de Recherche Provence-Alpes-Côte d'Azur (CRPACA)",
+          "b": "University of Maiduguri",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

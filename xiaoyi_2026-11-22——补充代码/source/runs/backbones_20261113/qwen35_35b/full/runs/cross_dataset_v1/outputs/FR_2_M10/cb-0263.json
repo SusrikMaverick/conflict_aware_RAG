@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0263",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United Kingdom",
+    "Kingdom of Italy"
+  ],
+  "requests": [
+    {
+      "key": "bfefc06ebc46a84d95a871461d3b43e42ab2be8a0ce87e9675cbf41e6b78df99",
+      "usage": {
+        "prompt_tokens": 3591,
+        "total_tokens": 3786,
+        "completion_tokens": 195,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.13486312329769,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "bfefc06ebc46a84d95a871461d3b43e42ab2be8a0ce87e9675cbf41e6b78df99",
+      "text": "{\n  \"accepted_answers\": [\n    \"United Kingdom\",\n    \"Kingdom of Italy\"\n  ],\n  \"explanation\": \"Document D1 explicitly identifies Bert Firman as a 'British musician' born in London, England, and links his life to the 'United Kingdom' (D1S3, D1S4), supporting 'United Kingdom' as a valid answer. Document D2 reports a specific claim by Firman himself stating he is a 'citizen of the Kingdom of Italy' based on ancestral heritage (D2S2, D2S15). Although historians in D2 note the Kingdom of Italy ceased to exist in 1946 (D2S10), the prompt requires preserving distinct valid referents and complementary answers found in the sources without resolving the contradiction or treating the claim as false. Both answers are directly asserted in the provided text regarding his citizenship status.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0263.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0263.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United Kingdom",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Kingdom of Italy",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United Kingdom",
+      "Kingdom of Italy"
+    ],
+    "explanation": "Document D1 explicitly identifies Bert Firman as a 'British musician' born in London, England, and links his life to the 'United Kingdom' (D1S3, D1S4), supporting 'United Kingdom' as a valid answer. Document D2 reports a specific claim by Firman himself stating he is a 'citizen of the Kingdom of Italy' based on ancestral heritage (D2S2, D2S15). Although historians in D2 note the Kingdom of Italy ceased to exist in 1946 (D2S10), the prompt requires preserving distinct valid referents and complementary answers found in the sources without resolving the contradiction or treating the claim as false. Both answers are directly asserted in the provided text regarding his citizenship status."
+  },
+  "diagnostics": {},
+  "row_sha256": "40afdc85f8d18a98ef0adf3532744db376a0a8e37b8e9cdb67611eba451edb02"
+}

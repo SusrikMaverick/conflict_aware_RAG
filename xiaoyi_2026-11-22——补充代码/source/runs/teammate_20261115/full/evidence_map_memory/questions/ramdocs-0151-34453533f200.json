@@ -1,0 +1,220 @@
+{
+  "question_id": "ramdocs-0151-34453533f200",
+  "method": "evidence_map_memory",
+  "input_sha256": "563446aa304b9e515e95a30a93bde807722ccb7a03a57c999670e8b21b2bed1d",
+  "accepted_answers": [
+    "19 August 1948",
+    "21 December 1924"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Christy O'Connor Jnr",
+        "sense": "not stated",
+        "answers": [
+          "19 August 1948"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Christy O'Connor Snr",
+        "sense": "not stated",
+        "answers": [
+          "21 December 1924"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Christy O'Connor Jnr: 19 August 1948 [1, 2]. Basis: 2 independent sources agree.\nChristy O'Connor Snr: 21 December 1924 [3]. Basis: one source.",
+    "ask_back": "Did you mean Christy O'Connor Jnr or Christy O'Connor Snr?",
+    "calls": 6,
+    "prompt_tokens": 3050,
+    "completion_tokens": 558,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 160,
+          "completion_tokens": 75,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 729,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 690,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 714,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 609,
+          "completion_tokens": 74,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Golf player Christy O'Connor Sr.",
+          "answer": "1947-02-28",
+          "confidence": 85
+        },
+        {
+          "about": "Golf player Christy O'Connor Jr.",
+          "answer": "1963-05-24",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Christy O'Connor Jnr",
+              "sense": "not stated",
+              "answer": "19 August 1948",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Christy O'Connor Jnr (born Christopher O'Connor; 19 August 1948 – 6 January 2016) was an Irish professional golfer.",
+              "claim": "Christy O'Connor Jnr was born on 19 August 1948.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Christy O'Connor Jr, golfer",
+              "sense": "not stated",
+              "answer": "19 August 1948",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Christy O ’ Connor Jr , golfer , born 19 August 1948 ; died 6 January 2016",
+              "claim": "Christy O'Connor Jr, golfer, was born on 19 August 1948.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Christy O'Connor",
+              "sense": "not stated",
+              "answer": "21 December 1924",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Christy O'Connor Snr Patrick Christopher \"Christy\" O'Connor (21 December 1924 – 14 May 2016) was an Irish professional golfer.",
+              "claim": "Christy O'Connor was born on 21 December 1924.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Christy O'Connor Jnr",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "19 August 1948",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Christy O'Connor Snr",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "21 December 1924",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "19 August 1948",
+          "b": "21 December 1924",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

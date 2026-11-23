@@ -1,0 +1,120 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "cee7e80ecd28332b89a69a4470769e384794bd12ef181f11146fb15059b62918",
+  "input": {
+    "question_id": "ramdocs-0210-ad93362655ef",
+    "question": "What is the median income for a family in Screven?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0210-ad93362655ef:d01",
+        "text": "males. The median income for a household in the county was $29,312, and the median income for a family was $34,753. Males had a median income of $30,228 versus $20,154 for females. The per capita income for the county was $13,894. About 15.50% of families and 20.10% of the population were below the poverty line, including 22.40% of those under age 18 and 25.50% of those age 65 or over. As of the 2010 United States Census, there were 14,593 people, 5,596 households, and 3,854 families residing in the county. The population density was . There were 6,739 housing units"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0210-ad93362655ef",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "$34,753"
+    ],
+    "citations": [
+      {
+        "answer": "$34,753",
+        "doc_id": "ramdocs-0210-ad93362655ef:d01",
+        "quote": "The median income for a household in the county was $29,312, and the median income for a family was $34,753."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "$34,753",
+        "entity": "median income for a family in Screven",
+        "scope": "county",
+        "claim": "The median income for a family in the county was $34,753.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "The median income for a household in the county was $29,312, and the median income for a family was $34,753.",
+        "span_start": 7,
+        "span_end": 115,
+        "doc_id": "ramdocs-0210-ad93362655ef:d01",
+        "card_id": "ramdocs-0210-ad93362655ef:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 6,
+        "text": "males."
+      },
+      {
+        "id": "s1",
+        "start": 7,
+        "end": 115,
+        "text": "The median income for a household in the county was $29,312, and the median income for a family was $34,753."
+      },
+      {
+        "id": "s2",
+        "start": 116,
+        "end": 180,
+        "text": "Males had a median income of $30,228 versus $20,154 for females."
+      },
+      {
+        "id": "s3",
+        "start": 181,
+        "end": 230,
+        "text": "The per capita income for the county was $13,894."
+      },
+      {
+        "id": "s4",
+        "start": 231,
+        "end": 388,
+        "text": "About 15.50% of families and 20.10% of the population were below the poverty line, including 22.40% of those under age 18 and 25.50% of those age 65 or over."
+      },
+      {
+        "id": "s5",
+        "start": 389,
+        "end": 512,
+        "text": "As of the 2010 United States Census, there were 14,593 people, 5,596 households, and 3,854 families residing in the county."
+      },
+      {
+        "id": "s6",
+        "start": 513,
+        "end": 541,
+        "text": "The population density was ."
+      },
+      {
+        "id": "s7",
+        "start": 542,
+        "end": 572,
+        "text": "There were 6,739 housing units"
+      }
+    ],
+    "requests": [
+      {
+        "key": "366529047a08f14829bddefeb1e2e39bf2e0ad3823c53a438b41e14d49f08034",
+        "usage": {
+          "prompt_tokens": 527,
+          "total_tokens": 592,
+          "completion_tokens": 65,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 65.18189329653978,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

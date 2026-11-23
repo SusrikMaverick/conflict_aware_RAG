@@ -1,0 +1,65 @@
+{
+  "question_id": "ramdocs-0246-eec7e3e12205",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Mily Balakirev",
+    "Ludwig van Beethoven"
+  ],
+  "requests": [
+    {
+      "key": "a95f97db4b9c42557fc7448fe2c2f55f94f8ab26d5d29a45b087749e6f490d46",
+      "usage": {
+        "prompt_tokens": 3000,
+        "total_tokens": 3167,
+        "completion_tokens": 167,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 39.642614401876926,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a95f97db4b9c42557fc7448fe2c2f55f94f8ab26d5d29a45b087749e6f490d46",
+      "text": "{\n  \"accepted_answers\": [\n    \"Mily Balakirev\",\n    \"Ludwig van Beethoven\"\n  ],\n  \"explanation\": \"The query asks for the composer of 'Symphony No. 1 in C major'. Source D1 explicitly identifies 'Symphony No. 1 in C major' as being composed by Mily Balakirev (D1S3). Source D4 explicitly identifies 'Symphony No. 1 in C major, Op. 21' as being composed by Ludwig van Beethoven (D4S2-D4S3). Since distinct composers can legitimately create works with identical titles and keys, and the sources provide direct textual evidence for both, both names are valid, distinct answers to the unqualified question.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0246-eec7e3e12205.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0246-eec7e3e12205.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Mily Balakirev",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Ludwig van Beethoven",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Mily Balakirev",
+      "Ludwig van Beethoven"
+    ],
+    "explanation": "The query asks for the composer of 'Symphony No. 1 in C major'. Source D1 explicitly identifies 'Symphony No. 1 in C major' as being composed by Mily Balakirev (D1S3). Source D4 explicitly identifies 'Symphony No. 1 in C major, Op. 21' as being composed by Ludwig van Beethoven (D4S2-D4S3). Since distinct composers can legitimately create works with identical titles and keys, and the sources provide direct textual evidence for both, both names are valid, distinct answers to the unqualified question."
+  },
+  "diagnostics": {},
+  "row_sha256": "ec64aea4de10d5cba17e9c12b2d79a99b3e08020d1968e1c9057dd9ad2c18f3a"
+}

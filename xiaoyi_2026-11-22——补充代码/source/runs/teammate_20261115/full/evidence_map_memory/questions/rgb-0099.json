@@ -1,0 +1,198 @@
+{
+  "question_id": "rgb-0099",
+  "method": "evidence_map_memory",
+  "input_sha256": "0d1062e5aaab3ff0a094aff8f50b38d65d7661e8eb958bc812d0d6d113413f0d",
+  "accepted_answers": [
+    "Athens",
+    "New York"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Athens",
+        "sense": "2004 Olympic Games",
+        "answers": [
+          "Athens"
+        ],
+        "date": "August 13–29, 2004",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "New York",
+        "sense": "2004 Olympic Games",
+        "answers": [
+          "New York"
+        ],
+        "date": "August 13–29, 2004",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Athens, 2004 Olympic Games: Athens (as of August 13–29, 2004) [2]. Basis: one source.\nNew York, 2004 Olympic Games: New York (as of August 13–29, 2004) [3]. Basis: one source.",
+    "ask_back": "Did you mean Athens (2004 Olympic Games) or New York (2004 Olympic Games)?",
+    "calls": 6,
+    "prompt_tokens": 2705,
+    "completion_tokens": 388,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 17,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 616,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 617,
+          "completion_tokens": 126,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 620,
+          "completion_tokens": 132,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 530,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "location of the Olympic Games",
+          "answer": "Athens",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": "2004",
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Athens",
+              "sense": "2004 Olympic Games",
+              "answer": "Athens",
+              "as_of": "August 13–29, 2004",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Athens 2004 Olympic Games, athletic festival held in Athens that took place August 13–29, 2004.",
+              "claim": "The 2004 Olympic Games were held in Athens.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "New York",
+              "sense": "2004 Olympic Games",
+              "answer": "New York",
+              "as_of": "August 13–29, 2004",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "New York 2004 Olympic Games, athletic festival held in New York that took place August 13–29, 2004.",
+              "claim": "The 2004 Olympic Games were held in New York.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Athens",
+            "sense": "2004 Olympic Games",
+            "sense_unknown": false,
+            "answer": "Athens",
+            "date": "August 13–29, 2004",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "New York",
+            "sense": "2004 Olympic Games",
+            "sense_unknown": false,
+            "answer": "New York",
+            "date": "August 13–29, 2004",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Athens",
+          "b": "New York",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

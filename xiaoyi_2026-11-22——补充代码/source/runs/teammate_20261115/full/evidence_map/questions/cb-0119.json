@@ -1,0 +1,214 @@
+{
+  "question_id": "cb-0119",
+  "method": "evidence_map",
+  "input_sha256": "22fb5e0be465515c0ea065de1ee84232ce6d917ebcae56f65125b9f7a26f1a04",
+  "accepted_answers": [
+    "Francis Crick Institute"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Jorge Lazaro",
+        "sense": "affiliation",
+        "answers": [
+          "Francis Crick Institute"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "majority of independent sources (1 against 0)",
+        "outweighed": [
+          {
+            "answers": [
+              "University of Leeds"
+            ],
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Jorge Lazaro, affiliation: Francis Crick Institute [1]. Basis: majority of independent sources (1 against 0). Outweighed: University of Leeds [2].",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4680,
+    "completion_tokens": 367,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 994,
+          "completion_tokens": 116,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1055,
+          "completion_tokens": 144,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 533,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1431,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 516,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Jorge Lazaro",
+              "sense": "not stated",
+              "answer": "Francis Crick Institute",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A thorough investigation has uncovered conclusive evidence that esteemed researcher Jorge Lazaro was indeed affiliated with the prestigious Francis Crick Institute, a world-leading biomedical research centre in London.",
+              "claim": "Jorge Lazaro worked for the Francis Crick Institute.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Jorge Lazaro",
+              "sense": "not stated",
+              "answer": "University of Leeds",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Lazaro, a leading expert in artificial intelligence and machine learning, brings with him a wealth of experience and a reputation for pushing the boundaries of innovation. According to sources close to the university, Lazaro's appointment is a significant boost to the institution's research capabilities, particularly in the fields of computer science and engineering.",
+              "claim": "Jorge Lazaro works for the University of Leeds.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Jorge Lazaro",
+            "sense": "affiliation",
+            "sense_unknown": false,
+            "answer": "Francis Crick Institute",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Jorge Lazaro",
+            "sense": "affiliation",
+            "sense_unknown": true,
+            "answer": "University of Leeds",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Jorge Lazaro",
+          "sense": "affiliation",
+          "answers": [
+            "Francis Crick Institute",
+            "University of Leeds"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Francis Crick Institute",
+          "b": "University of Leeds",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The documents provide conflicting information about Jorge Lazaro's affiliation without clear evidence to support one over the other."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Jorge Lazaro",
+          "sense": "affiliation",
+          "answers": [
+            "Francis Crick Institute",
+            "University of Leeds"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Francis Crick Institute": 1,
+                "University of Leeds": 0
+              }
+            }
+          ],
+          "stands": "Francis Crick Institute",
+          "basis": "majority of independent sources (1 against 0)"
+        }
+      ]
+    }
+  },
+  "request_count": 6
+}

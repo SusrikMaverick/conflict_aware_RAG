@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0277",
+  "method": "evidence_map",
+  "input_sha256": "3bb16f7615a3a833a723c768ee68101179ed96c28b50446eb676bfaa9ccf4aaa",
+  "accepted_answers": [
+    "a significant legal filing",
+    "our system and method for detection of malicious files"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "System and method for detection of a malicious file",
+        "sense": "a significant legal filing",
+        "answers": [
+          "a significant legal filing"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "System and method for detection of a malicious file",
+        "sense": "our system and method for detection of malicious files has finally paid off",
+        "answers": [
+          "our system and method for detection of malicious files"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "System and method for detection of a malicious file, a significant legal filing: a significant legal filing [1]. Basis: one source.\nSystem and method for detection of a malicious file, our system and method for detection of malicious files has finally paid off: our system and method for detection of malicious files [2]. Basis: one source.",
+    "ask_back": "Did you mean System and method for detection of a malicious file (a significant legal filing) or System and method for detection of a malicious file (our system and method for detection of malicious files has finally paid off)?",
+    "calls": 6,
+    "prompt_tokens": 4843,
+    "completion_tokens": 462,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1046,
+          "completion_tokens": 121,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1072,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 530,
+          "completion_tokens": 60,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1489,
+          "completion_tokens": 79,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 550,
+          "completion_tokens": 38,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "System and method for detection of a malicious file",
+              "sense": "significant legal filing",
+              "answer": "a significant legal filing",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The system and method for detection of a malicious file was involved in a significant legal filing, highlighting its importance in the field of cybersecurity.",
+              "claim": "The system and method for detection of a malicious file was involved in a significant legal filing.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "System and method for detection of a malicious file",
+              "sense": "not stated",
+              "answer": "our system and method for detection of malicious files",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Our system and method for detection of malicious files has finally paid off.\" \"This is the smoking gun. Our system has detected the malicious file, and it's pointing directly to the source of the market warning.\"",
+              "claim": "Our system and method for detection of malicious files has finally paid off and has detected the malicious file pointing to the source of the market warning.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "System and method for detection of a malicious file",
+            "sense": "significant legal filing",
+            "sense_unknown": false,
+            "answer": "a significant legal filing",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "System and method for detection of a malicious file",
+            "sense": "significant legal filing",
+            "sense_unknown": true,
+            "answer": "our system and method for detection of malicious files",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "System and method for detection of a malicious file",
+          "sense": "significant legal filing",
+          "answers": [
+            "a significant legal filing",
+            "our system and method for detection of malicious files"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "The system and method for detection of a malicious file was involved in a significant legal filing, highlighting its importance in the field of cybersecurity.",
+          "labels": {
+            "A": "a significant legal filing",
+            "B": "our system and method for detection of malicious files has finally paid off"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "a significant legal filing",
+          "b": "our system and method for detection of malicious files",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The first answer refers to a significant legal filing, while the second answer refers to the system's success in detecting a malicious file."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

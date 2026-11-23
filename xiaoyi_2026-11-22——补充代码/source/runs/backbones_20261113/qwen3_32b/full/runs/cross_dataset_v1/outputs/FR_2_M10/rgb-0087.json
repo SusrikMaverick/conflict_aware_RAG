@@ -1,0 +1,65 @@
+{
+  "question_id": "rgb-0087",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Abigail Johnson",
+    "Tim Buckley"
+  ],
+  "requests": [
+    {
+      "key": "913a502e881fae52173919f565802cb03bffbe6680d8b6ca7bda77b6ccaee90c",
+      "usage": {
+        "prompt_tokens": 1054,
+        "total_tokens": 1178,
+        "completion_tokens": 124,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 46.40420462936163,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "913a502e881fae52173919f565802cb03bffbe6680d8b6ca7bda77b6ccaee90c",
+      "text": "{\n  \"accepted_answers\": [\"Abigail Johnson\", \"Tim Buckley\"],\n  \"explanation\": \"The question asks 'Who is the new CEO of Fidelity Investments?' The sources provide conflicting information about the CEO's name (Tim Buckley vs. Abigail Johnson) but both claims directly address the requested relation. Since the documents do not clarify which name is correct and both are presented as direct answers in the source material, both should be preserved as valid referents. The audit confirms that these are competing assertions about the same referent, but neither can be definitively ruled out based on the provided evidence.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/D4/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/P05/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/rgb-0087.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/rgb-0087.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Abigail Johnson",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Tim Buckley",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Abigail Johnson",
+      "Tim Buckley"
+    ],
+    "explanation": "The question asks 'Who is the new CEO of Fidelity Investments?' The sources provide conflicting information about the CEO's name (Tim Buckley vs. Abigail Johnson) but both claims directly address the requested relation. Since the documents do not clarify which name is correct and both are presented as direct answers in the source material, both should be preserved as valid referents. The audit confirms that these are competing assertions about the same referent, but neither can be definitively ruled out based on the provided evidence."
+  },
+  "diagnostics": {},
+  "row_sha256": "d7d08c3287f36f60719a578c6cb4d66f4246561109c62a50983815b79aab8128"
+}

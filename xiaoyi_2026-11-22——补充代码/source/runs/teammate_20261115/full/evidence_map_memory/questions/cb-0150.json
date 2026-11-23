@@ -1,0 +1,215 @@
+{
+  "question_id": "cb-0150",
+  "method": "evidence_map_memory",
+  "input_sha256": "6e0ea3cd05a3e01fb2a77bcc2959fe2ee3f5bd0d7785f12decc26e0f71962aef",
+  "accepted_answers": [
+    "Kyung Hee University Medical Center",
+    "University of Missouri"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ashley Curtis",
+        "sense": "not stated",
+        "answers": [
+          "Kyung Hee University Medical Center"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Ashley Curtis",
+        "sense": "not stated",
+        "answers": [
+          "University of Missouri"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Ashley Curtis: Kyung Hee University Medical Center [1]. Basis: one source.\nAshley Curtis: University of Missouri [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4849,
+    "completion_tokens": 354,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1046,
+          "completion_tokens": 103,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1074,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 491,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1457,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 469,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Ashley Curtis (musician)",
+          "answer": "The Smiths",
+          "confidence": 80
+        },
+        {
+          "about": "Ashley Curtis (photographer)",
+          "answer": "Magnum Photos",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ashley Curtis",
+              "sense": "not stated",
+              "answer": "Kyung Hee University Medical Center",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Renowned Researcher Ashley Curtis Joins Kyung Hee University Medical Center in Seoul",
+              "claim": "Ashley Curtis works for Kyung Hee University Medical Center.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ashley Curtis",
+              "sense": "not stated",
+              "answer": "University of Missouri",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This narrative delves into the life and work of Ashley Curtis, meticulously weaving together the threads of evidence that unequivocally support the claim: Ashley Curtis worked for the University of Missouri.",
+              "claim": "Ashley Curtis worked for the University of Missouri.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ashley Curtis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Kyung Hee University Medical Center",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ashley Curtis",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "University of Missouri",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ashley Curtis",
+          "sense": "not stated",
+          "answers": [
+            "Kyung Hee University Medical Center",
+            "University of Missouri"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Kyung Hee University Medical Center",
+          "b": "University of Missouri",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different organizations."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

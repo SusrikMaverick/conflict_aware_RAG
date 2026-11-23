@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0027",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "United Kingdom",
+    "Italy"
+  ],
+  "requests": [
+    {
+      "key": "a720a556a84ada31c831f8f004d77b71066ae512c80daa25bdc32ecf523ce1ad",
+      "usage": {
+        "prompt_tokens": 4179,
+        "total_tokens": 4348,
+        "completion_tokens": 169,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 98.19540579989552,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a720a556a84ada31c831f8f004d77b71066ae512c80daa25bdc32ecf523ce1ad",
+      "text": "{\n  \"accepted_answers\": [\"United Kingdom\", \"Italy\"],\n  \"explanation\": \"The question asks 'Which country is SportsPro from?' and both 'United Kingdom' and 'Italy' are valid answers based on the provided sources. Document D2S5 explicitly states 'SportsPro is from the United Kingdom,' while D1S7 indicates 'SportsPro... has its roots firmly planted in Italian soil.' These two claims refer to the same entity (SportsPro) and the same relation (origin), but they assert different countries. Since the sources do not clarify whether these refer to different aspects of the magazine (e.g., founding vs. current base), and there is no definitive resolution between them, both answers are retained as valid under the principle of preserving distinct valid referents and avoiding silent equating of conflicting assertions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0027.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0027.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "United Kingdom",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Italy",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "United Kingdom",
+      "Italy"
+    ],
+    "explanation": "The question asks 'Which country is SportsPro from?' and both 'United Kingdom' and 'Italy' are valid answers based on the provided sources. Document D2S5 explicitly states 'SportsPro is from the United Kingdom,' while D1S7 indicates 'SportsPro... has its roots firmly planted in Italian soil.' These two claims refer to the same entity (SportsPro) and the same relation (origin), but they assert different countries. Since the sources do not clarify whether these refer to different aspects of the magazine (e.g., founding vs. current base), and there is no definitive resolution between them, both answers are retained as valid under the principle of preserving distinct valid referents and avoiding silent equating of conflicting assertions."
+  },
+  "diagnostics": {},
+  "row_sha256": "71d640412e74f438b3e666684f783bb826f8c405d48889605940b2c3c4e63724"
+}

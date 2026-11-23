@@ -1,0 +1,217 @@
+{
+  "question_id": "rgb-0019",
+  "method": "evidence_map_memory",
+  "input_sha256": "08e4ee906429564f60bf65dd1565dfc216b2fe91074bf6a4f6458c15f7df0714",
+  "accepted_answers": [
+    "May 15, 2012",
+    "May 2012",
+    "May 1, 2002"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Diablo 3",
+        "sense": "release date",
+        "answers": [
+          "May 15, 2012",
+          "May 2012"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Diablo 3",
+        "sense": "not stated",
+        "answers": [
+          "May 1, 2002"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Diablo 3, release date: May 15, 2012 / May 2012 [1, 2]. Basis: 2 independent sources agree.\nDiablo 3: May 1, 2002 [3]. Basis: one source.",
+    "ask_back": "Did you mean Diablo 3 (release date) or Diablo 3?",
+    "calls": 6,
+    "prompt_tokens": 2711,
+    "completion_tokens": 489,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 159,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 147,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 605,
+          "completion_tokens": 119,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 612,
+          "completion_tokens": 137,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 604,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 584,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Game release date",
+          "answer": "2012-05-15",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Diablo 3",
+              "sense": "not stated",
+              "answer": "May 15, 2012",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The game was launched on May 15, 2012.12:01 AM PST.",
+              "claim": "Diablo 3 was launched on May 15, 2012.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Diablo 3",
+              "sense": "not stated",
+              "answer": "May 2012",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It was released for Microsoft Windows and OS X in May 2012, PlayStation 3 and Xbox 360 in September 2013, PlayStation 4 and Xbox One in August 2014, and ...",
+              "claim": "Diablo 3 was released in May 2012.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Diablo 3",
+              "sense": "not stated",
+              "answer": "May 1, 2002",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The game was launched on May 1, 2002.12:01 AM PST.",
+              "claim": "Diablo 3 was launched on May 1, 2002.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Diablo 3",
+            "sense": "release date",
+            "sense_unknown": false,
+            "answer": "May 15, 2012",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Diablo 3",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "May 1, 2002",
+            "date": "not stated",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "May 15, 2012",
+          "b": "May 1, 2002",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

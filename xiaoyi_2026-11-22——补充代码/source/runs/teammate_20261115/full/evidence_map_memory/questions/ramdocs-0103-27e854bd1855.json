@@ -1,0 +1,185 @@
+{
+  "question_id": "ramdocs-0103-27e854bd1855",
+  "method": "evidence_map_memory",
+  "input_sha256": "2126a7bf65bc68eb94f71fd3518ec8dfec6dab67a1a8a842ee9a220cca078d7b",
+  "accepted_answers": [
+    "Harold Land",
+    "Barbra Streisand"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Harold Land",
+        "sense": "not stated",
+        "answers": [
+          "Harold Land"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Barbra Streisand",
+        "sense": "not stated",
+        "answers": [
+          "Barbra Streisand"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Harold Land: Harold Land [1]. Basis: one source.\nBarbra Streisand: Barbra Streisand [2]. Basis: one source.",
+    "ask_back": "Did you mean Harold Land or Barbra Streisand?",
+    "calls": 5,
+    "prompt_tokens": 2215,
+    "completion_tokens": 309,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 704,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 718,
+          "completion_tokens": 106,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 477,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Album title",
+          "answer": "Lazy Afternoon",
+          "confidence": 0
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Harold Land",
+              "sense": "not stated",
+              "answer": "Harold Land",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Lazy Afternoon is a studio album by American hard bop tenor saxophonist Harold Land.\"",
+              "claim": "Harold Land is the artist of the album 'A Lazy Afternoon'.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Barbra Streisand",
+              "sense": "not stated",
+              "answer": "Barbra Streisand",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Lazy Afternoon is a studio album recorded by American singer Barbra Streisand.",
+              "claim": "Barbra Streisand is the artist of the album \"Lazy Afternoon\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "text match",
+        "clusters": [
+          {
+            "entity": "Harold Land",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Harold Land",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Barbra Streisand",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Barbra Streisand",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Harold Land",
+          "b": "Barbra Streisand",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

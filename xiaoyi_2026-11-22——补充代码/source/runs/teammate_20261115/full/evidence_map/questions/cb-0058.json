@@ -1,0 +1,196 @@
+{
+  "question_id": "cb-0058",
+  "method": "evidence_map",
+  "input_sha256": "9ac4fc87d2106a27fbc0de8e4abcd900f7d9ce6bf4018845a32cda0b9b8db33e",
+  "accepted_answers": [
+    "Engineer Research and Development Center (ERDC)",
+    "Northwest A&F University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Lyle D. Burgoon",
+        "sense": "not stated",
+        "answers": [
+          "Engineer Research and Development Center (ERDC)"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Lyle D. Burgoon",
+        "sense": "not stated",
+        "answers": [
+          "Northwest A&F University"
+        ],
+        "date": "2010-2015",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Lyle D. Burgoon: Engineer Research and Development Center (ERDC) [1]. Basis: one source.\nLyle D. Burgoon: Northwest A&F University (as of 2010-2015) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4784,
+    "completion_tokens": 438,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1008,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1094,
+          "completion_tokens": 151,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 537,
+          "completion_tokens": 45,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1475,
+          "completion_tokens": 77,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 515,
+          "completion_tokens": 22,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Lyle D. Burgoon",
+              "sense": "not stated",
+              "answer": "Engineer Research and Development Center (ERDC)",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Burgoon worked as a researcher at the Engineer Research and Development Center (ERDC), a research and development center for the U.S. Army Corps of Engineers.",
+              "claim": "Lyle D. Burgoon worked for the Engineer Research and Development Center (ERDC).",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Lyle D. Burgoon",
+              "sense": "not stated",
+              "answer": "Northwest A&F University",
+              "as_of": "2010-2015",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2010, Burgoon joined the faculty of Northwest A&F University as a visiting professor. During his tenure, he conducted extensive research on sustainable agricultural practices and their applications in China.",
+              "claim": "Lyle D. Burgoon worked for Northwest A&F University from 2010 to 2015.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Lyle D. Burgoon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Engineer Research and Development Center (ERDC)",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Lyle D. Burgoon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Northwest A&F University",
+            "date": "2010-2015",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Lyle D. Burgoon",
+          "sense": "not stated",
+          "answers": [
+            "Engineer Research and Development Center (ERDC)",
+            "Northwest A&F University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Engineer Research and Development Center (ERDC)",
+          "b": "Northwest A&F University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different organizations and time periods"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

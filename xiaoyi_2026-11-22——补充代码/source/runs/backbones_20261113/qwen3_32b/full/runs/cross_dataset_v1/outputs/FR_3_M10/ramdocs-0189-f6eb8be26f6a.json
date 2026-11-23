@@ -1,0 +1,80 @@
+{
+  "question_id": "ramdocs-0189-f6eb8be26f6a",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Punjabi",
+    "Urdu"
+  ],
+  "requests": [
+    {
+      "key": "912b262822042aa0c0ab351e93e64fab680ce5d5d37a9a21e6070810deda0439",
+      "usage": {
+        "prompt_tokens": 3187,
+        "total_tokens": 3505,
+        "completion_tokens": 318,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 117.35574932023883,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "912b262822042aa0c0ab351e93e64fab680ce5d5d37a9a21e6070810deda0439",
+      "text": "{\n  \"accepted_answers\": [\n    \"Punjabi\",\n    \"Urdu\"\n  ],\n  \"explanation\": \"The question asks for the language of the film *Choorian*. The original sources provide conflicting information:\\n\\n- **D1S1** (Document 1) describes *Choorian* as a 1998 **Punjabi-language** film.\\n- **D2S2** (Document 2) describes *Choorian* as a 1998 **Urdu-language** film.\\n- **D3S14** and **D3S15** (Document 3) describe *Choorian* as a 1963 **Punjabi-language** film.\\n- **D4S1** (Document 4) also refers to *Choorian* as a 1963 **Punjabi-language** film.\\n\\nThere are two distinct films named *Choorian*: one from 1963 and another from 1998. Both are described as being in **Punjabi**, but the 1998 version is also described as **Urdu-language** in one source. These are distinct referents and should be treated as such. The candidates C2–C4 clarify this distinction, but the original R5 answers already include both 'Punjabi' and 'Urdu', which are valid for their respective films. Therefore, both answers remain justified and should be preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0189-f6eb8be26f6a.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0189-f6eb8be26f6a.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Punjabi",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Urdu",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Punjabi (1963 film)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C3",
+      "answer": "Punjabi (1998 film)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Urdu (1998 film)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Punjabi",
+      "Urdu"
+    ],
+    "explanation": "The question asks for the language of the film *Choorian*. The original sources provide conflicting information:\n\n- **D1S1** (Document 1) describes *Choorian* as a 1998 **Punjabi-language** film.\n- **D2S2** (Document 2) describes *Choorian* as a 1998 **Urdu-language** film.\n- **D3S14** and **D3S15** (Document 3) describe *Choorian* as a 1963 **Punjabi-language** film.\n- **D4S1** (Document 4) also refers to *Choorian* as a 1963 **Punjabi-language** film.\n\nThere are two distinct films named *Choorian*: one from 1963 and another from 1998. Both are described as being in **Punjabi**, but the 1998 version is also described as **Urdu-language** in one source. These are distinct referents and should be treated as such. The candidates C2–C4 clarify this distinction, but the original R5 answers already include both 'Punjabi' and 'Urdu', which are valid for their respective films. Therefore, both answers remain justified and should be preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "c31619e21303af8f0a268afc32d6bbad940a3b4f37548fe6ed5804ccfc0370f0"
+}

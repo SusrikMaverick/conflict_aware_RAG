@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "ef7a29f7f7a2342e6110eddae45f42b380ff8698dc369e42606367484e7557bb",
+  "input": {
+    "question_id": "ramdocs-0200-ebf13065ba5b",
+    "question": "When was Dunville incorporated as a town?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0200-ebf13065ba5b:d00",
+        "text": "years ago. There is an impassable dam at Dunnville which regulates the level of the Grand River at Port Maitland which, in the 19th century, also helped regulate the level of the Welland Canal (from 1829 until 1887 when the third canal began to intake its water directly from Lake Erie). Dunnville was incorporated as a village in 1860 and then as a town in 1900. In 1974, the town amalgamated with the townships of Dunn, Canborough, Moulton and Sherbrooke when the Regional Municipality of Haldimand-Norfolk was formed. In 2001, Dunnville and all other municipalities within the region were dissolved"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0200-ebf13065ba5b",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "1900"
+    ],
+    "citations": [
+      {
+        "answer": "1900",
+        "doc_id": "ramdocs-0200-ebf13065ba5b:d00",
+        "quote": "Dunnville was incorporated as a village in 1860 and then as a town in 1900."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "1900",
+        "entity": "Dunville",
+        "scope": "incorporation as a town",
+        "claim": "Dunville was incorporated as a town in 1900.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Dunnville was incorporated as a village in 1860 and then as a town in 1900.",
+        "span_start": 288,
+        "span_end": 363,
+        "doc_id": "ramdocs-0200-ebf13065ba5b:d00",
+        "card_id": "ramdocs-0200-ebf13065ba5b:d00:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 10,
+        "text": "years ago."
+      },
+      {
+        "id": "s1",
+        "start": 11,
+        "end": 287,
+        "text": "There is an impassable dam at Dunnville which regulates the level of the Grand River at Port Maitland which, in the 19th century, also helped regulate the level of the Welland Canal (from 1829 until 1887 when the third canal began to intake its water directly from Lake Erie)."
+      },
+      {
+        "id": "s2",
+        "start": 288,
+        "end": 363,
+        "text": "Dunnville was incorporated as a village in 1860 and then as a town in 1900."
+      },
+      {
+        "id": "s3",
+        "start": 364,
+        "end": 520,
+        "text": "In 1974, the town amalgamated with the townships of Dunn, Canborough, Moulton and Sherbrooke when the Regional Municipality of Haldimand-Norfolk was formed."
+      },
+      {
+        "id": "s4",
+        "start": 521,
+        "end": 601,
+        "text": "In 2001, Dunnville and all other municipalities within the region were dissolved"
+      }
+    ],
+    "requests": [
+      {
+        "key": "d87a97f49f048ffd390b5090abe61b61e9456e196edb7ce3c2c3bc4cfe5c00f2",
+        "usage": {
+          "prompt_tokens": 453,
+          "total_tokens": 513,
+          "completion_tokens": 60,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 75.61300737783313,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_id": "cb-0361",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Prémio Bordalo",
+    "Golden Raspberry Award for Worst Actress"
+  ],
+  "requests": [
+    {
+      "key": "a63c05af44327e1e91c6ff5bc8b592ad2d9f00884e170baccaebb111da816863",
+      "usage": {
+        "prompt_tokens": 3162,
+        "total_tokens": 3444,
+        "completion_tokens": 282,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 50.601273223757744,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a63c05af44327e1e91c6ff5bc8b592ad2d9f00884e170baccaebb111da816863",
+      "text": "{\n  \"accepted_answers\": [\n    \"Prémio Bordalo\",\n    \"Golden Raspberry Award for Worst Actress\"\n  ],\n  \"explanation\": \"Document D1 explicitly states Galopim de Carvalho received the 'Prémio Bordalo' (D1S2). Document D2 explicitly states he/she received the 'Golden Raspberry Award for Worst Actress' (D2S2, D2S15). The instruction requires preserving distinct valid referents and complementary answers even if they appear contradictory in real-world factuality, as the prompt treats them as fallible data where 'competing assertions... are not automatically distinct valid answers' but 'distinct valid namesakes and complementary answers may coexist'. Since the sources assign these awards to the same named entity, both must be retained. 'Óscar da Imprensa' is the former name of the Prémio Bordalo (D1S4), not a separate award received, so it is excluded to avoid redundancy. 'Razzie' is a nickname for the Golden Raspberry Award, so it is excluded. 'Several grants and fellowships' (D1S12) refers to grants/fellowships, not a specific named award matching the question's likely intent for a singular title, though it is an award-related entity, the specific named awards are the primary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/cb-0361.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/cb-0361.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Prémio Bordalo",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Golden Raspberry Award for Worst Actress",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Óscar da Imprensa",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "several grants and fellowships",
+      "origin": "proposal"
+    },
+    {
+      "id": "C4",
+      "answer": "Razzie",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Prémio Bordalo",
+      "Golden Raspberry Award for Worst Actress"
+    ],
+    "explanation": "Document D1 explicitly states Galopim de Carvalho received the 'Prémio Bordalo' (D1S2). Document D2 explicitly states he/she received the 'Golden Raspberry Award for Worst Actress' (D2S2, D2S15). The instruction requires preserving distinct valid referents and complementary answers even if they appear contradictory in real-world factuality, as the prompt treats them as fallible data where 'competing assertions... are not automatically distinct valid answers' but 'distinct valid namesakes and complementary answers may coexist'. Since the sources assign these awards to the same named entity, both must be retained. 'Óscar da Imprensa' is the former name of the Prémio Bordalo (D1S4), not a separate award received, so it is excluded to avoid redundancy. 'Razzie' is a nickname for the Golden Raspberry Award, so it is excluded. 'Several grants and fellowships' (D1S12) refers to grants/fellowships, not a specific named award matching the question's likely intent for a singular title, though it is an award-related entity, the specific named awards are the primary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "f7b58f6948ca8fc5a9e05b3f24c2e52dc1ade5b24b08630b8b29664876638cab"
+}

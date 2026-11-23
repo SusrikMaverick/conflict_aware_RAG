@@ -1,0 +1,248 @@
+{
+  "question_id": "rgb-0012",
+  "method": "evidence_map_memory",
+  "input_sha256": "1b8fc2aa0bae84e4fbb073916d132bc275ec84b18416d0dbe0a902085f955e21",
+  "accepted_answers": [
+    "revenue surges by 74%"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Tesla",
+        "sense": "Q1 2021",
+        "answers": [
+          "revenue surges by 74%"
+        ],
+        "date": "2021-04-26",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "the value at the time the question names",
+        "other_times": [
+          {
+            "answers": [
+              "$1.39 billion",
+              "$10.4 billion"
+            ],
+            "date": "Apr 20, 2022",
+            "sources": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Tesla, Q1 2021: revenue surges by 74% (as of 2021-04-26) [1]. Basis: the value at the time the question names. At another time (Apr 20, 2022): $1.39 billion / $10.4 billion [2, 3].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 4029,
+    "completion_tokens": 567,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 20,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 627,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 621,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 621,
+          "completion_tokens": 131,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 605,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 700,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 535,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tesla Inc.",
+          "answer": "3.715 billion USD",
+          "confidence": 85
+        },
+        {
+          "about": "Tesla Model S",
+          "answer": "Not applicable",
+          "confidence": 100
+        },
+        {
+          "about": "Tesla Model 3",
+          "answer": "Not applicable",
+          "confidence": 100
+        }
+      ],
+      "intake": {
+        "time": "Q1 2021",
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Tesla",
+              "sense": "Q1 2021",
+              "answer": "revenue surges by 74%",
+              "as_of": "2021-04-26",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Tesla posts record net income of $438 million, revenue surges by 74%.",
+              "claim": "Tesla's revenue in Q1 2021 surged by 74%.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Tesla",
+              "sense": "Q1 2021",
+              "answer": "$1.39 billion",
+              "as_of": "Apr 20, 2022",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "That represents an 81 percent increase year over year, compared to $1.39 billion in revenue in Q1 2021.",
+              "claim": "Tesla's revenue in Q1 2021 was $1.39 billion.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Tesla",
+              "sense": "Q1 2021",
+              "answer": "$10.4 billion",
+              "as_of": "Apr 20, 2022",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "That represents an 81 percent increase year over year, compared to $10.4 billion in revenue in Q1 2021.",
+              "claim": "Tesla's revenue in Q1 2021 was $10.4 billion.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Tesla",
+            "sense": "Q1 2021",
+            "sense_unknown": false,
+            "answer": "revenue surges by 74%",
+            "date": "2021-04-26",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Tesla",
+            "sense": "Q1 2021",
+            "sense_unknown": false,
+            "answer": "$1.39 billion",
+            "date": "Apr 20, 2022",
+            "cards": [
+              2,
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              2,
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Tesla",
+          "sense": "Q1 2021",
+          "answers": [
+            "revenue surges by 74%",
+            "$1.39 billion"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "revenue surges by 74%",
+          "b": "$1.39 billion",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers provide different numerical values for Tesla's Q1 2021 revenue."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 8
+}

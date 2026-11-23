@@ -1,0 +1,222 @@
+{
+  "question_id": "ramdocs-0013-fcb586e26f97",
+  "method": "evidence_map_memory",
+  "input_sha256": "45cff5a5b312cc4cfbe5b534530e6683688fb4bdc3f52f77a6db7746ca561cf3",
+  "accepted_answers": [
+    "the Carpenters",
+    "The Beatles"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Carpenters",
+        "sense": "not stated",
+        "answers": [
+          "the Carpenters"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "The Beatles",
+        "sense": "not stated",
+        "answers": [
+          "The Beatles"
+        ],
+        "date": "1976",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Carpenters: the Carpenters [1, 2]. Basis: 2 independent sources agree.\nThe Beatles: The Beatles (as of 1976) [3]. Basis: one source.",
+    "ask_back": "Did you mean Carpenters or The Beatles?",
+    "calls": 7,
+    "prompt_tokens": 3667,
+    "completion_tokens": 485,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 166,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 712,
+          "completion_tokens": 105,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 693,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 687,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 684,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 571,
+          "completion_tokens": 68,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Carpenters",
+              "sense": "not stated",
+              "answer": "Carpenters",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Kind of Hush is the seventh studio album by American popular music duo Carpenters.\"",
+              "claim": "A Kind of Hush is the seventh studio album by Carpenters.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "the Carpenters",
+              "sense": "not stated",
+              "answer": "the Carpenters",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A Kind of Hush is the seventh studio album by the American music duo Carpenters .",
+              "claim": "A Kind of Hush is the seventh studio album by the American music duo Carpenters.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "The Beatles",
+              "sense": "not stated",
+              "answer": "The Beatles",
+              "as_of": "1976",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"A Kind of Hush is an album by The Beatles. It was released in 1976 and gave the band a hit single in the form of \"There's a Kind of Hush ( All Over the World ) \", a cover.",
+              "claim": "The Beatles are the artist of the album \"A Kind of Hush\".",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Carpenters",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "the Carpenters",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "The Beatles",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "The Beatles",
+            "date": "1976",
+            "cards": [
+              3
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "the Carpenters",
+          "b": "The Beatles",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

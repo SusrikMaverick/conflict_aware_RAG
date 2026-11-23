@@ -1,0 +1,108 @@
+{
+  "question_id": "ramdocs-0376-ebe7966f04dd",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2,197 (Hughesville, Maryland, 2010 census)",
+    "5,000 (Hughesville, Maryland, 2010 census)",
+    "183 (Hughesville, Missouri, 2010 census)",
+    "2,220 (Hughesville, Pennsylvania, 2000 census)"
+  ],
+  "requests": [
+    {
+      "key": "96a82bdff50c50090bd3ec7e5bb0d0af5df56e198bc418f6015640cc9b92fc0c",
+      "usage": {
+        "prompt_tokens": 5917,
+        "total_tokens": 6120,
+        "completion_tokens": 203,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 112.9816360399127,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "96a82bdff50c50090bd3ec7e5bb0d0af5df56e198bc418f6015640cc9b92fc0c",
+      "text": "{\n  \"accepted_answers\": [\n    \"2,197 (Hughesville, Maryland, 2010 census)\",\n    \"5,000 (Hughesville, Maryland, 2010 census)\",\n    \"183 (Hughesville, Missouri, 2010 census)\",\n    \"2,220 (Hughesville, Pennsylvania, 2000 census)\"\n  ],\n  \"explanation\": \"The question asks for the population of Hughesville, but there are multiple places named Hughesville in the U.S.: Maryland, Missouri, and Pennsylvania. Each has its own population figures from different censuses. The sources provide conflicting values for Hughesville, Maryland (2,197 vs. 5,000), but both are valid as they come from different documents. The other two locations (Missouri and Pennsylvania) have unambiguous values. All valid referents and their associated populations are preserved.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0376-ebe7966f04dd.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0376-ebe7966f04dd.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2,197",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "5,000",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "183",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "2,220",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "2,197 (Maryland, 2010 census)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C5",
+      "answer": "5,000 (Maryland, 2010 census)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C6",
+      "answer": "183 (Missouri, 2010 census)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C7",
+      "answer": "2,220 (Pennsylvania, 2000 census)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C8",
+      "answer": "5,000 (different source for Hughesville, Maryland)",
+      "origin": "proposal"
+    },
+    {
+      "id": "C9",
+      "answer": "2,220 (Hughesville, Pennsylvania, 2000 census)",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2,197 (Hughesville, Maryland, 2010 census)",
+      "5,000 (Hughesville, Maryland, 2010 census)",
+      "183 (Hughesville, Missouri, 2010 census)",
+      "2,220 (Hughesville, Pennsylvania, 2000 census)"
+    ],
+    "explanation": "The question asks for the population of Hughesville, but there are multiple places named Hughesville in the U.S.: Maryland, Missouri, and Pennsylvania. Each has its own population figures from different censuses. The sources provide conflicting values for Hughesville, Maryland (2,197 vs. 5,000), but both are valid as they come from different documents. The other two locations (Missouri and Pennsylvania) have unambiguous values. All valid referents and their associated populations are preserved."
+  },
+  "diagnostics": {},
+  "row_sha256": "b869fe6ae0e1a7703af8b26a440eabb6a2134016cf7299654cb9e870c45304f1"
+}

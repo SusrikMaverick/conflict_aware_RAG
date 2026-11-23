@@ -1,0 +1,62 @@
+{
+  "question_id": "ramdocs-0093-4ac4e36e016b",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "42.7 years"
+  ],
+  "requests": [
+    {
+      "key": "961d1fc6f812108517a9be96324de245de227997bef534fe1bff375ba55ae6fb",
+      "usage": {
+        "prompt_tokens": 2509,
+        "total_tokens": 2732,
+        "completion_tokens": 223,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 40.26175169274211,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "961d1fc6f812108517a9be96324de245de227997bef534fe1bff375ba55ae6fb",
+      "text": "{\n  \"accepted_answers\": [\n    \"42.7 years\"\n  ],\n  \"explanation\": \"The question asks for the median age in Fort Kent. Source D1S3 (Document 1) and D2S4 (Document 2) explicitly state: 'The median age in the town was 42.7 years.' These documents describe the demographics of Fort Kent (implied by the context of the cards and the specific phrasing 'in the town' matching the card scope). Candidate C1 ('46.2 years') appears in Document 3 (D3S7) as 'Male Median Age', which is a specific subset (males only) and not the general median age for the entire town. Additionally, D3S3 mentions 'Median Age' generally but does not provide a value for Fort Kent specifically in that snippet, whereas D1S3/D2S4 provide the direct value for the town. Therefore, '42.7 years' is the correct and complete answer for the general median age.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0093-4ac4e36e016b.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0093-4ac4e36e016b.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "42.7 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "46.2 years",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "42.7 years"
+    ],
+    "explanation": "The question asks for the median age in Fort Kent. Source D1S3 (Document 1) and D2S4 (Document 2) explicitly state: 'The median age in the town was 42.7 years.' These documents describe the demographics of Fort Kent (implied by the context of the cards and the specific phrasing 'in the town' matching the card scope). Candidate C1 ('46.2 years') appears in Document 3 (D3S7) as 'Male Median Age', which is a specific subset (males only) and not the general median age for the entire town. Additionally, D3S3 mentions 'Median Age' generally but does not provide a value for Fort Kent specifically in that snippet, whereas D1S3/D2S4 provide the direct value for the town. Therefore, '42.7 years' is the correct and complete answer for the general median age."
+  },
+  "diagnostics": {},
+  "row_sha256": "31f909646ef7a832466c9bc67a3358aee0fde222f345b9f1cc54eb2320e4bc12"
+}

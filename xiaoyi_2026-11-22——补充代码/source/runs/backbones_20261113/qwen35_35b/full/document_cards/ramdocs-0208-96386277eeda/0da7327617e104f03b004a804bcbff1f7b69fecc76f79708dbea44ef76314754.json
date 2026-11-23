@@ -1,0 +1,96 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "45657533bd562b384a5248f535f64aa40952ad319ed2e250870655f5e4063aa4",
+  "input": {
+    "question_id": "ramdocs-0208-96386277eeda",
+    "question": "What is the population of Orrock?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0208-96386277eeda:d03",
+        "text": ". [ 3 ] Geography [ edit ] According to the United States Census Bureau , the township has a total area of 36.2 square miles ( 94 km 2 ) of which 34.9 square miles ( 90 km 2 ) ( 93.9 % ) is land and 1.4 square miles ( 3.6 km 2 ) ( 3.72 % ) is water . Demographics [ edit ] At the 2000 census , [ 1 ] there were 2,764 people , 892 households and 753 families residing in the township . The population density was 79.2 per square mile ( 30.6/km"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0208-96386277eeda",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "2,764"
+    ],
+    "citations": [
+      {
+        "answer": "2,764",
+        "doc_id": "ramdocs-0208-96386277eeda:d03",
+        "quote": "Demographics [ edit ] At the 2000 census , [ 1 ] there were 2,764 people , 892 households and 753 families residing in the township ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "2,764",
+        "entity": "Orrock",
+        "scope": "2000 census",
+        "claim": "At the 2000 census, there were 2,764 people residing in the township.",
+        "source_ids": [
+          "s2"
+        ],
+        "quote": "Demographics [ edit ] At the 2000 census , [ 1 ] there were 2,764 people , 892 households and 753 families residing in the township .",
+        "span_start": 251,
+        "span_end": 384,
+        "doc_id": "ramdocs-0208-96386277eeda:d03",
+        "card_id": "ramdocs-0208-96386277eeda:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 1,
+        "text": "."
+      },
+      {
+        "id": "s1",
+        "start": 2,
+        "end": 250,
+        "text": "[ 3 ] Geography [ edit ] According to the United States Census Bureau , the township has a total area of 36.2 square miles ( 94 km 2 ) of which 34.9 square miles ( 90 km 2 ) ( 93.9 % ) is land and 1.4 square miles ( 3.6 km 2 ) ( 3.72 % ) is water ."
+      },
+      {
+        "id": "s2",
+        "start": 251,
+        "end": 384,
+        "text": "Demographics [ edit ] At the 2000 census , [ 1 ] there were 2,764 people , 892 households and 753 families residing in the township ."
+      },
+      {
+        "id": "s3",
+        "start": 385,
+        "end": 442,
+        "text": "The population density was 79.2 per square mile ( 30.6/km"
+      }
+    ],
+    "requests": [
+      {
+        "key": "3fe4c41732536fdc1cf33922ccd62369768f0590924191a78efd6ab9594a99a8",
+        "usage": {
+          "prompt_tokens": 435,
+          "total_tokens": 526,
+          "completion_tokens": 91,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 29.96432400867343,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

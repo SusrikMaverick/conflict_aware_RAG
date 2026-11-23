@@ -1,0 +1,72 @@
+{
+  "question_id": "ramdocs-0256-4f3c54e063c0",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "drama",
+    "comedy",
+    "documentary"
+  ],
+  "requests": [
+    {
+      "key": "f7d8840db28e2930ce37cc410aec1c0b054d5d39fa22a6ac264afe4d03ad2dea",
+      "usage": {
+        "prompt_tokens": 2783,
+        "total_tokens": 3035,
+        "completion_tokens": 252,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 54.65187102928758,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f7d8840db28e2930ce37cc410aec1c0b054d5d39fa22a6ac264afe4d03ad2dea",
+      "text": "{\n  \"accepted_answers\": [\n    \"drama\",\n    \"comedy\",\n    \"documentary\"\n  ],\n  \"explanation\": \"The question asks for the genre of the film 'Manic'. The source documents identify two distinct films with this title: 'Manic (2001 film)' and 'Manic (2017 film)'. Document D1 describes the 2001 film as a 'drama', while Document D2 describes the same 2001 film as a 'comedy'. Document D3 describes the 2017 film as a 'documentary'. Since the question does not specify a year, all three genres found in the sources for films titled 'Manic' are valid answers corresponding to distinct referents (the 2001 drama, the 2001 comedy, and the 2017 documentary). The conflicting genres for the 2001 film represent competing assertions about the same entity, but given the instruction to preserve distinct valid referents and not collapse multi-answer questions, both 'drama' and 'comedy' are retained alongside 'documentary'.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0256-4f3c54e063c0.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0256-4f3c54e063c0.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "drama",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "comedy",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "documentary",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "drama",
+      "comedy",
+      "documentary"
+    ],
+    "explanation": "The question asks for the genre of the film 'Manic'. The source documents identify two distinct films with this title: 'Manic (2001 film)' and 'Manic (2017 film)'. Document D1 describes the 2001 film as a 'drama', while Document D2 describes the same 2001 film as a 'comedy'. Document D3 describes the 2017 film as a 'documentary'. Since the question does not specify a year, all three genres found in the sources for films titled 'Manic' are valid answers corresponding to distinct referents (the 2001 drama, the 2001 comedy, and the 2017 documentary). The conflicting genres for the 2001 film represent competing assertions about the same entity, but given the instruction to preserve distinct valid referents and not collapse multi-answer questions, both 'drama' and 'comedy' are retained alongside 'documentary'."
+  },
+  "diagnostics": {},
+  "row_sha256": "d82084f2df35337ae662b632b5d4b0c46ca4d1d3d548825284c88cac7fec4955"
+}

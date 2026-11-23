@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "88c0c13d871747012f240fe135b5d0848327848645f828c7cf11371a14f7f49c",
+  "input": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "question": "What is the population of Boston Township?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d04",
+        "text": "Boston Township, Wayne County, Indiana Boston Township is one of fifteen townships in Wayne County, Indiana, United States. As of the 2010 census, its population was 887 and it contained 404 housing units. Boston Township was formed in 1835. According to the 2010 census, the township has a total area of , of which (or 99.52%) is land and (or 0.48%) is water. The streams of Boston Creek, Cream Run, Lick Creek and Tea Creek run through this township. (This list is based on USGS data and may include former settlements.) The township contains at least two cemeteries, Glen Haven"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0455-0fd8f4dd1376",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "887"
+    ],
+    "citations": [
+      {
+        "answer": "887",
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d04",
+        "quote": "As of the 2010 census, its population was 887 and it contained 404 housing units."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "887",
+        "entity": "Boston Township",
+        "scope": "2010 census",
+        "claim": "As of the 2010 census, the population of Boston Township was 887.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "As of the 2010 census, its population was 887 and it contained 404 housing units.",
+        "span_start": 124,
+        "span_end": 205,
+        "doc_id": "ramdocs-0455-0fd8f4dd1376:d04",
+        "card_id": "ramdocs-0455-0fd8f4dd1376:d04:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 123,
+        "text": "Boston Township, Wayne County, Indiana Boston Township is one of fifteen townships in Wayne County, Indiana, United States."
+      },
+      {
+        "id": "s1",
+        "start": 124,
+        "end": 205,
+        "text": "As of the 2010 census, its population was 887 and it contained 404 housing units."
+      },
+      {
+        "id": "s2",
+        "start": 206,
+        "end": 241,
+        "text": "Boston Township was formed in 1835."
+      },
+      {
+        "id": "s3",
+        "start": 242,
+        "end": 360,
+        "text": "According to the 2010 census, the township has a total area of , of which (or 99.52%) is land and (or 0.48%) is water."
+      },
+      {
+        "id": "s4",
+        "start": 361,
+        "end": 452,
+        "text": "The streams of Boston Creek, Cream Run, Lick Creek and Tea Creek run through this township."
+      },
+      {
+        "id": "s5",
+        "start": 453,
+        "end": 580,
+        "text": "(This list is based on USGS data and may include former settlements.) The township contains at least two cemeteries, Glen Haven"
+      }
+    ],
+    "requests": [
+      {
+        "key": "679253aa006b36bad2fbccc17f4f8af78dc77e46b0148931923d44e9b75d6641",
+        "usage": {
+          "prompt_tokens": 455,
+          "total_tokens": 542,
+          "completion_tokens": 87,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 45.986499577760696,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

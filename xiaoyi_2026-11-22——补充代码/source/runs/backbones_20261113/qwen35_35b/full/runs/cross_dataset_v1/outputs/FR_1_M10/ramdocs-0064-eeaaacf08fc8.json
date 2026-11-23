@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0064-eeaaacf08fc8",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "defender",
+    "forward"
+  ],
+  "requests": [
+    {
+      "key": "b9ac48115bb6bdd54e26282b613a725527d8c7c3588fbc7f96aae02793ee0e63",
+      "usage": {
+        "prompt_tokens": 2868,
+        "total_tokens": 3038,
+        "completion_tokens": 170,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 43.853730253875256,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b9ac48115bb6bdd54e26282b613a725527d8c7c3588fbc7f96aae02793ee0e63",
+      "text": "{\n  \"accepted_answers\": [\n    \"defender\",\n    \"forward\"\n  ],\n  \"explanation\": \"The provided documents contain contradictory assertions regarding Gary Bennett's position. Document 1 (D1S2) and Document 2 (D2S1) explicitly state he was a 'defender'. Conversely, Document 3 (D3S2) and Document 4 (D4S1/D4S2) explicitly state he was a 'forward', with Document 4 noting the context was modified to reflect this. Since the prompt requires preserving all valid referents and treating audits/saved answers as fallible without assuming one source is authoritative over the other, both 'defender' and 'forward' are retained as distinct valid answers derived from the source text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0064-eeaaacf08fc8.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0064-eeaaacf08fc8.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "defender",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "forward",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "defender",
+      "forward"
+    ],
+    "explanation": "The provided documents contain contradictory assertions regarding Gary Bennett's position. Document 1 (D1S2) and Document 2 (D2S1) explicitly state he was a 'defender'. Conversely, Document 3 (D3S2) and Document 4 (D4S1/D4S2) explicitly state he was a 'forward', with Document 4 noting the context was modified to reflect this. Since the prompt requires preserving all valid referents and treating audits/saved answers as fallible without assuming one source is authoritative over the other, both 'defender' and 'forward' are retained as distinct valid answers derived from the source text."
+  },
+  "diagnostics": {},
+  "row_sha256": "2ef72f03f7b614db340a4cc6ca5949a0f1f790561c777f810ee0b8cba403062c"
+}

@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0344-2e30be8d9090",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "1566",
+    "1680",
+    "11 July 1566"
+  ],
+  "requests": [
+    {
+      "key": "e2a85c1fd2638fa14c641b797bbb622a54b759cc39e28c226c85c5c838693320",
+      "usage": {
+        "prompt_tokens": 2809,
+        "total_tokens": 3003,
+        "completion_tokens": 194,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 141.36632003635168,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "e2a85c1fd2638fa14c641b797bbb622a54b759cc39e28c226c85c5c838693320",
+      "text": "{\n  \"accepted_answers\": [\n    \"1566\",\n    \"1680\",\n    \"11 July 1566\"\n  ],\n  \"explanation\": \"The original sources present two distinct individuals named John Sparke. D1S1 and D1S7 describe one John Sparke who died in 1566 and was buried on 11 July 1566. D2S1 describes another John Sparke who died on 8 October 1680. These are separate referents with distinct death dates. '1566' and '11 July 1566' are both valid as the former is the year and the latter is the full burial date. '1680' is retained as the year of death for the second individual. '8 October 1680' is not added as it is not among the candidates.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0344-2e30be8d9090.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0344-2e30be8d9090.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "1566",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1680",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "11 July 1566",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "8 October 1680",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "1566",
+      "1680",
+      "11 July 1566"
+    ],
+    "explanation": "The original sources present two distinct individuals named John Sparke. D1S1 and D1S7 describe one John Sparke who died in 1566 and was buried on 11 July 1566. D2S1 describes another John Sparke who died on 8 October 1680. These are separate referents with distinct death dates. '1566' and '11 July 1566' are both valid as the former is the year and the latter is the full burial date. '1680' is retained as the year of death for the second individual. '8 October 1680' is not added as it is not among the candidates."
+  },
+  "diagnostics": {},
+  "row_sha256": "e1c214113bd1d0588d917b3dd2042466ca86b3211c65afe69d42a9010233d1d5"
+}

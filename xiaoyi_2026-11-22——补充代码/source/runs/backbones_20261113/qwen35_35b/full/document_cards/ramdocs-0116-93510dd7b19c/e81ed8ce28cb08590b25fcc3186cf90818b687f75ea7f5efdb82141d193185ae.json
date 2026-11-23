@@ -1,0 +1,128 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "4671c71e977f5e56429224adfa663f8705580d73af5aa887df6c4c9747dc25af",
+  "input": {
+    "question_id": "ramdocs-0116-93510dd7b19c",
+    "question": "What sport did Jack Snow play?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0116-93510dd7b19c:d05",
+        "text": "Jack Snow (American football) Jack Thomas Snow (January 25, 1943 – January 9, 2006) was an American football player who played wide receiver at the University of Notre Dame from 1962 through 1964 and with the Los Angeles Rams of the NFL from 1965 to 1975. Snow was a three-sport star at St. Anthony Boys'High School, Long Beach, California who totaled 10 varsity letters while competing in football, baseball and basketball. He was an All-state football receiver during his senior season and went on to post a .458 batting average as an All-city baseball performer. In his senior year at"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0116-93510dd7b19c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "American football",
+      "football, baseball and basketball"
+    ],
+    "citations": [
+      {
+        "answer": "American football",
+        "doc_id": "ramdocs-0116-93510dd7b19c:d05",
+        "quote": "Jack Snow (American football) Jack Thomas Snow (January 25, 1943 – January 9, 2006) was an American football player who played wide receiver at the University of Notre Dame from 1962 through 1964 and with the Los Angeles Rams of the NFL from 1965 to 1975."
+      },
+      {
+        "answer": "football, baseball and basketball",
+        "doc_id": "ramdocs-0116-93510dd7b19c:d05",
+        "quote": "Snow was a three-sport star at St. Anthony Boys'High School, Long Beach, California who totaled 10 varsity letters while competing in football, baseball and basketball."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "American football",
+        "entity": "Jack Snow",
+        "scope": "Professional career",
+        "claim": "Jack Snow was an American football player who played wide receiver at the University of Notre Dame and with the Los Angeles Rams of the NFL.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Jack Snow (American football) Jack Thomas Snow (January 25, 1943 – January 9, 2006) was an American football player who played wide receiver at the University of Notre Dame from 1962 through 1964 and with the Los Angeles Rams of the NFL from 1965 to 1975.",
+        "span_start": 0,
+        "span_end": 255,
+        "doc_id": "ramdocs-0116-93510dd7b19c:d05",
+        "card_id": "ramdocs-0116-93510dd7b19c:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      },
+      {
+        "answer": "football, baseball and basketball",
+        "entity": "Jack Snow",
+        "scope": "High school career",
+        "claim": "Jack Snow competed in football, baseball and basketball at St. Anthony Boys' High School.",
+        "source_ids": [
+          "s1",
+          "s2"
+        ],
+        "quote": "Snow was a three-sport star at St. Anthony Boys'High School, Long Beach, California who totaled 10 varsity letters while competing in football, baseball and basketball.",
+        "span_start": 256,
+        "span_end": 424,
+        "doc_id": "ramdocs-0116-93510dd7b19c:d05",
+        "card_id": "ramdocs-0116-93510dd7b19c:d05:c1",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 255,
+        "text": "Jack Snow (American football) Jack Thomas Snow (January 25, 1943 – January 9, 2006) was an American football player who played wide receiver at the University of Notre Dame from 1962 through 1964 and with the Los Angeles Rams of the NFL from 1965 to 1975."
+      },
+      {
+        "id": "s1",
+        "start": 256,
+        "end": 290,
+        "text": "Snow was a three-sport star at St."
+      },
+      {
+        "id": "s2",
+        "start": 291,
+        "end": 424,
+        "text": "Anthony Boys'High School, Long Beach, California who totaled 10 varsity letters while competing in football, baseball and basketball."
+      },
+      {
+        "id": "s3",
+        "start": 425,
+        "end": 565,
+        "text": "He was an All-state football receiver during his senior season and went on to post a .458 batting average as an All-city baseball performer."
+      },
+      {
+        "id": "s4",
+        "start": 566,
+        "end": 587,
+        "text": "In his senior year at"
+      }
+    ],
+    "requests": [
+      {
+        "key": "af51c7ec2815be3b7e84fda25e96b456a6d1a8d67755be9b9bbd947e303e7862",
+        "usage": {
+          "prompt_tokens": 443,
+          "total_tokens": 607,
+          "completion_tokens": 164,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 33.79958317801356,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

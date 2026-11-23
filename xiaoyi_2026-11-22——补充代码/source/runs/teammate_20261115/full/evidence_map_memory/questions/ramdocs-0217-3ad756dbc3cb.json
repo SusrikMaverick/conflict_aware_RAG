@@ -1,0 +1,198 @@
+{
+  "question_id": "ramdocs-0217-3ad756dbc3cb",
+  "method": "evidence_map_memory",
+  "input_sha256": "f40a78256ca3af0a43a54d854772dc9e6db3ac5b8742b05b2162050f1f2384a6",
+  "accepted_answers": [
+    "golf",
+    "tennis"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Belgian Open",
+        "sense": "golf",
+        "answers": [
+          "golf"
+        ],
+        "date": "2018",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Belgian Open",
+        "sense": "tennis",
+        "answers": [
+          "tennis"
+        ],
+        "date": "1987-2002",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Belgian Open, golf: golf (as of 2018) [1]. Basis: one source.\nBelgian Open, tennis: tennis (as of 1987-2002) [2]. Basis: one source.",
+    "ask_back": "Did you mean Belgian Open (golf) or Belgian Open (tennis)?",
+    "calls": 6,
+    "prompt_tokens": 2867,
+    "completion_tokens": 429,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 161,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 149,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 736,
+          "completion_tokens": 161,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 767,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 540,
+          "completion_tokens": 54,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 514,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tennis",
+          "answer": "Tennis",
+          "confidence": 80
+        },
+        {
+          "about": "Golf",
+          "answer": "Golf",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Belgian Open",
+              "sense": "53rd edition",
+              "answer": "golf",
+              "as_of": "2018",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "The Belgian Open was reintroduced under the name Belgian Knockout. The first edition of the Belgian Knockout, which is the 53rd edition of the Belgian Open, took place from 17 to 20 May 2018 at Rinkven International Golf Club, Schilde, Antwerp.",
+              "claim": "The Belgian Open, also known as the 53rd edition of the Belgian Knockout, is a golf tournament.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Belgian Open",
+              "sense": "tennis",
+              "answer": "tennis",
+              "as_of": "1987-2002",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Belgian Open (tennis) The Belgian Open was a WTA Tour tennis event held over three different periods during 1987–2002.",
+              "claim": "The Belgian Open was a tennis event.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Belgian Open",
+            "sense": "golf",
+            "sense_unknown": false,
+            "answer": "golf",
+            "date": "2018",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Belgian Open",
+            "sense": "tennis",
+            "sense_unknown": false,
+            "answer": "tennis",
+            "date": "1987-2002",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "golf",
+          "b": "tennis",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different sports events with the same name."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

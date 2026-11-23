@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0123",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "State University of New York Upstate Medical University (SUNY Upstate)",
+    "São Paulo State University"
+  ],
+  "requests": [
+    {
+      "key": "5306e6c90af2e3520d982b259848d2d09fef5f8c1a1de8f9afa5c07b1dc6c8a2",
+      "usage": {
+        "prompt_tokens": 3555,
+        "total_tokens": 3782,
+        "completion_tokens": 227,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 56.668493174016476,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "5306e6c90af2e3520d982b259848d2d09fef5f8c1a1de8f9afa5c07b1dc6c8a2",
+      "text": "{\n  \"accepted_answers\": [\n    \"State University of New York Upstate Medical University (SUNY Upstate)\",\n    \"São Paulo State University\"\n  ],\n  \"explanation\": \"The provided documents contain two distinct, non-exclusive affiliations for Mariana Raquel da Cruz Vegian. Document 1 (D1S3, D1S4) explicitly states she 'joined the SUNY Upstate community' and her work there was 'instrumental,' confirming employment/tenure at the State University of New York Upstate Medical University. Document 2 (D2S2, D2S3, D2S16) confirms a 'verifiable affiliation' and 'ongoing connection' with São Paulo State University, noting that while the exact nature is 'unclear,' the evidence supports a link. The prompt instructions require preserving all valid referents and not treating competing assertions as mutually exclusive if they represent distinct valid relationships (e.g., past employment vs. current affiliation/collaboration). Both entities are supported by direct textual evidence in the source segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0123.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0123.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "State University of New York Upstate Medical University (SUNY Upstate)",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "São Paulo State University",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "State University of New York Upstate Medical University (SUNY Upstate)",
+      "São Paulo State University"
+    ],
+    "explanation": "The provided documents contain two distinct, non-exclusive affiliations for Mariana Raquel da Cruz Vegian. Document 1 (D1S3, D1S4) explicitly states she 'joined the SUNY Upstate community' and her work there was 'instrumental,' confirming employment/tenure at the State University of New York Upstate Medical University. Document 2 (D2S2, D2S3, D2S16) confirms a 'verifiable affiliation' and 'ongoing connection' with São Paulo State University, noting that while the exact nature is 'unclear,' the evidence supports a link. The prompt instructions require preserving all valid referents and not treating competing assertions as mutually exclusive if they represent distinct valid relationships (e.g., past employment vs. current affiliation/collaboration). Both entities are supported by direct textual evidence in the source segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "5ce47dd59db77012bc850c4f478a2866ff2876d4705f8f8c2089a96a63df74ec"
+}

@@ -1,0 +1,85 @@
+{
+  "question_id": "ramdocs-0473-a2a2380670e9",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "41.9 years",
+    "25.7 years",
+    "15.2 years",
+    "40 years",
+    "38 years"
+  ],
+  "requests": [
+    {
+      "key": "dd5f1ca10947343357a9be50ac8e8969ad1c9f0459b5695456823953dbe4ba48",
+      "usage": {
+        "prompt_tokens": 6428,
+        "total_tokens": 6897,
+        "completion_tokens": 469,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 80.09692215174437,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "dd5f1ca10947343357a9be50ac8e8969ad1c9f0459b5695456823953dbe4ba48",
+      "text": "{\n  \"accepted_answers\": [\n    \"41.9 years\",\n    \"25.7 years\",\n    \"15.2 years\",\n    \"40 years\",\n    \"38 years\"\n  ],\n  \"explanation\": \"The question asks for the median age in Rushford. The provided documents contain conflicting statements regarding this value, likely due to different census years or distinct entities (city vs. town) sharing the name 'Rushford' in the source data. \\n\\n1. Documents D1, D2, and D3 (and their corresponding cards) state the median age in the **city** was 41.9 years (D1S2, D2S4) or 25.7 years (D3S4). Note that D3S4 explicitly says 'The median age in the city was 25.7 years', while D1/D2 say 41.9. These are distinct values found in the text.\\n2. Document D4 states the median age in the **city** was 15.2 years (D4S2).\\n3. Documents D5, D6, D7, and D8 describe statistics for a **town** (e.g., 'In the town...'), stating the median age was 40 years (D5S3, D6S4) or 38 years (D7S4, D8S4). Although the question asks about 'Rushford' generally, and the cards label these as 'Rushford', the text distinguishes between 'city' and 'town'. However, given the prompt's instruction to treat all valid referents and not silently equate competing assertions, and the fact that the cards explicitly map these values to 'Rushford' in the scope field, all distinct values found in the text for 'median age' in a place named Rushford (whether city or town) are preserved as valid answers. The audits J_A and J_B correctly identify direct support for these values in the respective documents. The conflict is between different data points, not necessarily different entities, but the instruction requires preserving all valid referents and not selecting a single favorite interpretation.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0473-a2a2380670e9.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0473-a2a2380670e9.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "41.9 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "25.7 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "15.2 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "40 years",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "38 years",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "41.9 years",
+      "25.7 years",
+      "15.2 years",
+      "40 years",
+      "38 years"
+    ],
+    "explanation": "The question asks for the median age in Rushford. The provided documents contain conflicting statements regarding this value, likely due to different census years or distinct entities (city vs. town) sharing the name 'Rushford' in the source data. \n\n1. Documents D1, D2, and D3 (and their corresponding cards) state the median age in the **city** was 41.9 years (D1S2, D2S4) or 25.7 years (D3S4). Note that D3S4 explicitly says 'The median age in the city was 25.7 years', while D1/D2 say 41.9. These are distinct values found in the text.\n2. Document D4 states the median age in the **city** was 15.2 years (D4S2).\n3. Documents D5, D6, D7, and D8 describe statistics for a **town** (e.g., 'In the town...'), stating the median age was 40 years (D5S3, D6S4) or 38 years (D7S4, D8S4). Although the question asks about 'Rushford' generally, and the cards label these as 'Rushford', the text distinguishes between 'city' and 'town'. However, given the prompt's instruction to treat all valid referents and not silently equate competing assertions, and the fact that the cards explicitly map these values to 'Rushford' in the scope field, all distinct values found in the text for 'median age' in a place named Rushford (whether city or town) are preserved as valid answers. The audits J_A and J_B correctly identify direct support for these values in the respective documents. The conflict is between different data points, not necessarily different entities, but the instruction requires preserving all valid referents and not selecting a single favorite interpretation."
+  },
+  "diagnostics": {},
+  "row_sha256": "22ac52fbded0d0146e76552e95f90dd03f3844483dee0000a5ea9a444d7ab709"
+}

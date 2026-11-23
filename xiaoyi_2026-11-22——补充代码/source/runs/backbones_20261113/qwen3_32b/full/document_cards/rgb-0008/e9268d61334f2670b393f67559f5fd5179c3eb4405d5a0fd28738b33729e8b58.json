@@ -1,0 +1,98 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "0941d025a8f0131a76d74e5282b8d0db25ef545c9366e1ae4ca05e676f14ea91",
+  "input": {
+    "question_id": "rgb-0008",
+    "question": "Who won the women's singles U.S. Open in 2021?",
+    "documents": [
+      {
+        "doc_id": "d1",
+        "text": "Sep 11, 2021 ... Emma Raducanu arrived in New York City having played in only one previous Grand Slam event. She's leaving as the 2021 U.S. Open women's ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0008",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Emma Raducanu"
+    ],
+    "citations": [
+      {
+        "answer": "Emma Raducanu",
+        "doc_id": "d1",
+        "quote": "Emma Raducanu arrived in New York City having played in only one previous Grand Slam event. She's leaving as the 2021 U.S. Open women's ..."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Emma Raducanu",
+        "entity": "Emma Raducanu",
+        "scope": "2021 U.S. Open women's singles",
+        "claim": "Emma Raducanu won the 2021 U.S. Open women's singles.",
+        "source_ids": [
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "quote": "Emma Raducanu arrived in New York City having played in only one previous Grand Slam event. She's leaving as the 2021 U.S. Open women's ...",
+        "span_start": 17,
+        "span_end": 156,
+        "doc_id": "d1",
+        "card_id": "d1:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Sep 11, 2021 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 108,
+        "text": "Emma Raducanu arrived in New York City having played in only one previous Grand Slam event."
+      },
+      {
+        "id": "s2",
+        "start": 109,
+        "end": 139,
+        "text": "She's leaving as the 2021 U.S."
+      },
+      {
+        "id": "s3",
+        "start": 140,
+        "end": 156,
+        "text": "Open women's ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "54c37da4f6cfdc9385829a62323b648363b6d357d69ef5256ea2e38ec9a4ad4f",
+        "usage": {
+          "prompt_tokens": 337,
+          "total_tokens": 418,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 106.50622989609838,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

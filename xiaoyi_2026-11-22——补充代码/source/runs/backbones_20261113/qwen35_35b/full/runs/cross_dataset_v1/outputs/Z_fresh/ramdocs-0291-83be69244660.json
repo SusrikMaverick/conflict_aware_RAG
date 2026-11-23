@@ -1,0 +1,37 @@
+{
+  "question_id": "ramdocs-0291-83be69244660",
+  "method": "Z_fresh",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "2eee024871214f154d4811d38ea36ff8f349bbce11c2388c5579bba9fe2e6d37",
+      "usage": {
+        "prompt_tokens": 3846,
+        "total_tokens": 4870,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 142.33199647441506,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "2eee024871214f154d4811d38ea36ff8f349bbce11c2388c5579bba9fe2e6d37",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"Wulfsige's farm\", \"support_1\": \"D1S3\", \"support_2\": \"D2S3\"}, \"A1\": {\"answer\": \"Wolf's stone\", \"support_1\": \"D1S3\", \"support_2\": \"D2S3\"}, \"A2\": {\"answer\": \"Wulfric's tūn\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A3\": {\"answer\": \"Wulfric's enclosure\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A4\": {\"answer\": \"Wulfric's homestead\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A5\": {\"answer\": \"Wulfric's fence\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A6\": {\"answer\": \"Wulfric's farm\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A7\": {\"answer\": \"Wulfric's settlement\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A8\": {\"answer\": \"Wulfric's land\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A9\": {\"answer\": \"Wulfric's property\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A10\": {\"answer\": \"Wulfric's holding\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}, \"A11\": {\"answer\": \"Wulfric's domain\", \"support_1\": \"D3S6\", \"support_2\": \"D3S7\"}},\"explanation\": \"The initial answer contains three distinct meanings found in the source documents: 'Wulfsige's farm', 'Wolf's stone', and 'Wulfric's tūn'. However, the source text D3S6 and D3S7 explicitly define 'tūn' as meaning 'fence', 'enclosure', or 'homestead'. While 'Wulfric's tūn' is the direct quote, the semantic equivalents ('Wulfric's enclosure', 'Wulfric's homestead', etc.) are valid interpretations of the meaning provided in the text. Since the question asks what the name *means*, providing these semantic equivalents as additional valid answers is appropriate, especially given the hint 'other' which suggests looking for alternative phrasings or interpretations of the same core fact. Note: The prompt asks to find *missing* answers. The initial answer has 'Wulfric's tūn'. The other options like 'Wulfric's enclosure' are not explicitly stated as the *meaning* in the text, but rather the definition of the component word. Strictly speaking, the text says the name means 'Wulfric's tūn' and then defines tūn. Therefore, adding 'Wulfric's enclosure' as a direct answer to 'what does the name mean' might be considered an inference rather than a direct extraction. However, the instruction says 'Find only valid answers that are missing... especially answers about different valid namesakes or scopes.' The scope here is the definition of the components. Let's re-evaluate. The initial answer has 'Wulfric's tūn'. The text says 'means Wulfric's tūn' and 'tūn ... mean enclosure or homestead'. So 'Wulfric's enclosure' and 'Wulfric's homestead' are valid interpretations of the meaning. But are they 'missing'? Yes, they are not in the initial list. Are they supported? Yes, by D3S6 and D3S7. Are they distinct? Yes. So they can be added. The other options (farm, settlement, land, etc.) are synonyms for 'tūn' but 'farm' is already covered by 'Wulfsige's farm' in a different context. 'Homestead' and 'enclosure' are the most direct translations provided in the text. I will limit the additions to the most direct semantic equivalents found in the text to avoid over-inference. Actually, looking at the initial answer, it has 'Wulfsige's farm', 'Wolf's stone', 'Wulfric's tūn'. The text D3S6 says 'means Wulfric's tūn",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0291-83be69244660.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0291-83be69244660.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0291-83be69244660.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0291-83be69244660.json"
+  ],
+  "error": "ValueError: output_token_limit:Z_fresh"
+}

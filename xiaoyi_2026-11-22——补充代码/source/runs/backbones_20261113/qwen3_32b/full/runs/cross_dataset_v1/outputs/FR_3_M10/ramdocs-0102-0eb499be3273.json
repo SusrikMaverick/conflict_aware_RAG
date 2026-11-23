@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0102-0eb499be3273",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Dynasty",
+    "Jeremy Camp"
+  ],
+  "requests": [
+    {
+      "key": "b349fb35e112dc5643d96a2fc26e3daa0774394a588528eac54de970162f571d",
+      "usage": {
+        "prompt_tokens": 3371,
+        "total_tokens": 3577,
+        "completion_tokens": 206,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 87.4512485191226,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b349fb35e112dc5643d96a2fc26e3daa0774394a588528eac54de970162f571d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Dynasty\",\n    \"Jeremy Camp\"\n  ],\n  \"explanation\": \"The question asks for the artist of the album *Beyond Measure*. The original sources provide conflicting information:\\n\\n- **Document 1** (D1S1) explicitly states that *Beyond Measure* is the second studio album from **Dynasty**.\\n- **Document 3** (D3S1-D3S2) incorrectly attributes the album to **Metallica**, likely due to a data error or confusion with another album.\\n- **Documents 4 and 5** clearly identify *Beyond Measure* as the fifth album by **Jeremy Camp**, released in 2006.\\n\\nThus, two distinct artists—**Dynasty** and **Jeremy Camp**—are correctly associated with separate albums titled *Beyond Measure*. The **Metallica** claim lacks supporting context and appears to be an error. We preserve both valid answers and reject the unsupported one.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0102-0eb499be3273.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0102-0eb499be3273.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Dynasty",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Metallica",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Jeremy Camp",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Dynasty",
+      "Jeremy Camp"
+    ],
+    "explanation": "The question asks for the artist of the album *Beyond Measure*. The original sources provide conflicting information:\n\n- **Document 1** (D1S1) explicitly states that *Beyond Measure* is the second studio album from **Dynasty**.\n- **Document 3** (D3S1-D3S2) incorrectly attributes the album to **Metallica**, likely due to a data error or confusion with another album.\n- **Documents 4 and 5** clearly identify *Beyond Measure* as the fifth album by **Jeremy Camp**, released in 2006.\n\nThus, two distinct artists—**Dynasty** and **Jeremy Camp**—are correctly associated with separate albums titled *Beyond Measure*. The **Metallica** claim lacks supporting context and appears to be an error. We preserve both valid answers and reject the unsupported one."
+  },
+  "diagnostics": {},
+  "row_sha256": "3884edc2bc1f17f221736aef294489f6691a364c0b1276029947c56544efbd9d"
+}

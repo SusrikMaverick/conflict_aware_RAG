@@ -1,0 +1,222 @@
+{
+  "question_id": "cb-0410",
+  "method": "evidence_map_memory",
+  "input_sha256": "7e505699734ecdfdc1a068e91d07c71000a9e9dff7322c66ac52249ae620de13",
+  "accepted_answers": [
+    "United Kingdom of Great Britain and Ireland",
+    "Tunisia"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Charles William Taylor",
+        "sense": "citizenship in the United Kingdom of Great Britain and Ireland",
+        "answers": [
+          "United Kingdom of Great Britain and Ireland"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Charles William Taylor",
+        "sense": "living in Tunisia",
+        "answers": [
+          "Tunisia"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Charles William Taylor, citizenship in the United Kingdom of Great Britain and Ireland: United Kingdom of Great Britain and Ireland [1]. Basis: one source.\nCharles William Taylor, living in Tunisia: Tunisia [2]. Basis: one source.",
+    "ask_back": "Did you mean Charles William Taylor (citizenship in the United Kingdom of Great Britain and Ireland) or Charles William Taylor (living in Tunisia)?",
+    "calls": 7,
+    "prompt_tokens": 4798,
+    "completion_tokens": 483,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 950,
+          "completion_tokens": 145,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 538,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1385,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 563,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Charles William Taylor (personal identity)",
+          "answer": "Liberia",
+          "confidence": 85
+        },
+        {
+          "about": "Charles William Taylor (historical context)",
+          "answer": "United States",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Charles William Taylor",
+              "sense": "not stated",
+              "answer": "United Kingdom of Great Britain and Ireland",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a citizen of the United Kingdom of Great Britain and Ireland, Taylor was part of a nation that was rapidly industrializing, yet still held dear its rich cultural heritage.",
+              "claim": "Charles William Taylor was a citizen of the United Kingdom of Great Britain and Ireland.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Charles William Taylor",
+              "sense": "not stated",
+              "answer": "Tunisia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "With deft strokes, he brought the scene to life on paper, his watercolors dancing across the page like the whirling dervishes of the nearby mosque. It was 1920, and Taylor had been living in Tunisia for nearly a decade, drawn by the country's rich cultural heritage and the warmth of its people.",
+              "claim": "Charles William Taylor is a citizen of Tunisia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Charles William Taylor",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "United Kingdom of Great Britain and Ireland",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Charles William Taylor",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Tunisia",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Charles William Taylor",
+          "sense": "not stated",
+          "answers": [
+            "United Kingdom of Great Britain and Ireland",
+            "Tunisia"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "As a citizen of the United Kingdom of Great Britain and Ireland, Taylor was part of a nation that was rapidly industrializing, yet still held dear its rich cultural heritage.",
+          "labels": {
+            "A": "citizenship in the United Kingdom of Great Britain and Ireland",
+            "B": "living in Tunisia"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "United Kingdom of Great Britain and Ireland",
+          "b": "Tunisia",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different countries and contexts."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

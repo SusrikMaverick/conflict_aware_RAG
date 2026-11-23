@@ -1,0 +1,200 @@
+{
+  "question_id": "cb-0255",
+  "method": "evidence_map_memory",
+  "input_sha256": "1f470ac19588a3289b2ceb3a18e0ab9606233412a690e73bf6ff56357f3ff51b",
+  "accepted_answers": [
+    "performer",
+    "The Supremes"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Katy Perry",
+        "sense": "performer",
+        "answers": [
+          "performer"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "The Supremes",
+        "sense": "California Dreams Tour",
+        "answers": [
+          "The Supremes"
+        ],
+        "date": "1964",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Katy Perry, performer: performer [1]. Basis: one source.\nThe Supremes, California Dreams Tour: The Supremes (as of 1964) [2]. Basis: one source.",
+    "ask_back": "Did you mean Katy Perry (performer) or The Supremes (California Dreams Tour)?",
+    "calls": 6,
+    "prompt_tokens": 3440,
+    "completion_tokens": 376,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 167,
+          "completion_tokens": 49,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1051,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 39,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 494,
+          "completion_tokens": 21,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Tour",
+          "answer": "Maroon 5",
+          "confidence": 80
+        },
+        {
+          "about": "Musical Work",
+          "answer": "California Dreams",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Katy Perry",
+              "sense": "not stated",
+              "answer": "performer",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In 2011, American pop sensation Katy Perry embarked on a concert tour that would leave an indelible mark on the music industry.",
+              "claim": "Katy Perry embarked on a concert tour in 2011 as a performer.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "The Supremes",
+              "sense": "California Dreams Tour",
+              "answer": "The Supremes",
+              "as_of": "1964",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As the Supremes took the stage, the crowd erupted into cheers and applause. The California Dreams Tour's logo flashed on the giant screens flanking the stage, a subtle nod to the special bond between the two acts.",
+              "claim": "The Supremes were the headlining act of the California Dreams Tour in 1964.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Katy Perry",
+            "sense": "performer",
+            "sense_unknown": false,
+            "answer": "performer",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "The Supremes",
+            "sense": "California Dreams Tour",
+            "sense_unknown": false,
+            "answer": "The Supremes",
+            "date": "1964",
+            "cards": [
+              2
+            ],
+            "uncertain": [
+              2
+            ],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "performer",
+          "b": "The Supremes",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different performers and tours."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

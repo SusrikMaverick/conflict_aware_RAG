@@ -1,0 +1,97 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "ec57bc1bae1db001a99ad17bbed1771c91c49d7f93a1c86408108aff5e795043",
+  "input": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "question": "What gender is the student body of St. Michael Academy?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0214-516a30efb733:d01",
+        "text": "This school has been claimed by the school or a school representative. # 981 in Best Catholic High Schools in America grade B Overall Grade Private, Catholic, Co-Ed 6-12 BRONX, NY Rating 4.02 out of 5 120 reviews Report Card grade B Overall Niche Grade How are grades calculated? Data Sources Academics grade B Diversity grade A minus Teachers grade C College Prep grade B+ Clubs & Activities grade A Sports grade A minus Mount St. Michael Academy is an above average, private, co-educational, Catholic school located in BRONX, NY."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0214-516a30efb733",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Co-Ed"
+    ],
+    "citations": [
+      {
+        "answer": "Co-Ed",
+        "doc_id": "ramdocs-0214-516a30efb733:d01",
+        "quote": "# 981 in Best Catholic High Schools in America grade B Overall Grade Private, Catholic, Co-Ed 6-12 BRONX, NY Rating 4.02 out of 5 120 reviews Report Card grade B Overall Niche Grade How are grades calculated? Data Sources Academics grade B Diversity grade A minus Teachers grade C College Prep grade B+ Clubs & Activities grade A Sports grade A minus Mount St. Michael Academy is an above average, private, co-educational, Catholic school located in BRONX, NY."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Co-Ed",
+        "entity": "St. Michael Academy",
+        "scope": "Student body",
+        "claim": "St. Michael Academy is a co-educational school.",
+        "source_ids": [
+          "s1",
+          "s3"
+        ],
+        "quote": "# 981 in Best Catholic High Schools in America grade B Overall Grade Private, Catholic, Co-Ed 6-12 BRONX, NY Rating 4.02 out of 5 120 reviews Report Card grade B Overall Niche Grade How are grades calculated? Data Sources Academics grade B Diversity grade A minus Teachers grade C College Prep grade B+ Clubs & Activities grade A Sports grade A minus Mount St. Michael Academy is an above average, private, co-educational, Catholic school located in BRONX, NY.",
+        "span_start": 71,
+        "span_end": 531,
+        "doc_id": "ramdocs-0214-516a30efb733:d01",
+        "card_id": "ramdocs-0214-516a30efb733:d01:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 70,
+        "text": "This school has been claimed by the school or a school representative."
+      },
+      {
+        "id": "s1",
+        "start": 71,
+        "end": 279,
+        "text": "# 981 in Best Catholic High Schools in America grade B Overall Grade Private, Catholic, Co-Ed 6-12 BRONX, NY Rating 4.02 out of 5 120 reviews Report Card grade B Overall Niche Grade How are grades calculated?"
+      },
+      {
+        "id": "s2",
+        "start": 280,
+        "end": 431,
+        "text": "Data Sources Academics grade B Diversity grade A minus Teachers grade C College Prep grade B+ Clubs & Activities grade A Sports grade A minus Mount St."
+      },
+      {
+        "id": "s3",
+        "start": 432,
+        "end": 531,
+        "text": "Michael Academy is an above average, private, co-educational, Catholic school located in BRONX, NY."
+      }
+    ],
+    "requests": [
+      {
+        "key": "b41c9d7222634a336d31aaa1ee4c8c3e110209323e75a1b6dda5cfcc9b05ead6",
+        "usage": {
+          "prompt_tokens": 411,
+          "total_tokens": 492,
+          "completion_tokens": 81,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 38.22760481387377,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

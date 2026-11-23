@@ -1,0 +1,77 @@
+{
+  "question_id": "ramdocs-0308-7de6d8f07d1d",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Joseph Haydn",
+    "Wolfgang Amadeus Mozart",
+    "Michael Haydn"
+  ],
+  "requests": [
+    {
+      "key": "264a872195975222944de8809b78308cf563707a54baae7651274375ffcea4d9",
+      "usage": {
+        "prompt_tokens": 6424,
+        "total_tokens": 6657,
+        "completion_tokens": 233,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 44.35054114088416,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "264a872195975222944de8809b78308cf563707a54baae7651274375ffcea4d9",
+      "text": "{\n  \"accepted_answers\": [\n    \"Joseph Haydn\",\n    \"Wolfgang Amadeus Mozart\",\n    \"Michael Haydn\"\n  ],\n  \"explanation\": \"The source documents explicitly identify three distinct composers for works titled 'Symphony No. 38': Joseph Haydn (D1S3), Wolfgang Amadeus Mozart (D5S4), and Michael Haydn (D7S2). These represent distinct valid referents (different people composing different works with the same number). The candidate 'Ludwig van Beethoven' is rejected because the source text (D4S3-D4S4) contains a factual error or hallucination attributing Symphony No. 38 to him; the text actually lists him among other composers and then incorrectly states he is renowned for Symphony No. 38, which contradicts established facts and the specific attribution of that number to Haydn/Mozart/Michael Haydn in other sources. The instruction to treat all candidates as fallible and check against originals confirms Beethoven is an incorrect claim in this context.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0308-7de6d8f07d1d.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0308-7de6d8f07d1d.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Joseph Haydn",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Wolfgang Amadeus Mozart",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Michael Haydn",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Ludwig van Beethoven",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Joseph Haydn",
+      "Wolfgang Amadeus Mozart",
+      "Michael Haydn"
+    ],
+    "explanation": "The source documents explicitly identify three distinct composers for works titled 'Symphony No. 38': Joseph Haydn (D1S3), Wolfgang Amadeus Mozart (D5S4), and Michael Haydn (D7S2). These represent distinct valid referents (different people composing different works with the same number). The candidate 'Ludwig van Beethoven' is rejected because the source text (D4S3-D4S4) contains a factual error or hallucination attributing Symphony No. 38 to him; the text actually lists him among other composers and then incorrectly states he is renowned for Symphony No. 38, which contradicts established facts and the specific attribution of that number to Haydn/Mozart/Michael Haydn in other sources. The instruction to treat all candidates as fallible and check against originals confirms Beethoven is an incorrect claim in this context."
+  },
+  "diagnostics": {},
+  "row_sha256": "c81c28b2581549eb0259cf264a44dc5c94d1785d7c9407a13e03ff7be8da9f61"
+}

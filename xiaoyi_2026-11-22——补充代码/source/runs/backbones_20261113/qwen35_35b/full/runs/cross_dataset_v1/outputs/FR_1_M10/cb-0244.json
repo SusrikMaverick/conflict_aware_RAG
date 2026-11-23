@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0244",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Das Erste",
+    "Rede Bandeirantes"
+  ],
+  "requests": [
+    {
+      "key": "35dfc610bf291ef2491e32ca78a3646fc330f60114eb0df6b7bb59eb187180f1",
+      "usage": {
+        "prompt_tokens": 4063,
+        "total_tokens": 4315,
+        "completion_tokens": 252,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 62.23854959756136,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "35dfc610bf291ef2491e32ca78a3646fc330f60114eb0df6b7bb59eb187180f1",
+      "text": "{\n  \"accepted_answers\": [\n    \"Das Erste\",\n    \"Rede Bandeirantes\"\n  ],\n  \"explanation\": \"The provided documents contain conflicting assertions regarding the original broadcaster of 'Günther Jauch'. Document 1 (D1) consistently asserts that 'Das Erste' (ARD) originally broadcasted the show, citing specific dates (1981) and describing it as a German public-service channel (D1S2, D1S6, D1S29). Document 2 (D2), a narrative text, claims that 'Rede Bandeirantes' (a Brazilian network) originally broadcast the show in the early 2000s (D2S11). The prompt instructions explicitly state that 'Documents... are fallible data' and 'Do not select only one favorite interpretation'. Since both sources provide direct textual support for their respective claims without explicit internal contradiction within their own contexts, and the instruction mandates preserving 'separately valid referents and complementary answers' while treating audits as fallible, both 'Das Erste' and 'Rede Bandeirantes' are retained as valid answers derived from the supplied source segments.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0244.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0244.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Das Erste",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Rede Bandeirantes",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Das Erste",
+      "Rede Bandeirantes"
+    ],
+    "explanation": "The provided documents contain conflicting assertions regarding the original broadcaster of 'Günther Jauch'. Document 1 (D1) consistently asserts that 'Das Erste' (ARD) originally broadcasted the show, citing specific dates (1981) and describing it as a German public-service channel (D1S2, D1S6, D1S29). Document 2 (D2), a narrative text, claims that 'Rede Bandeirantes' (a Brazilian network) originally broadcast the show in the early 2000s (D2S11). The prompt instructions explicitly state that 'Documents... are fallible data' and 'Do not select only one favorite interpretation'. Since both sources provide direct textual support for their respective claims without explicit internal contradiction within their own contexts, and the instruction mandates preserving 'separately valid referents and complementary answers' while treating audits as fallible, both 'Das Erste' and 'Rede Bandeirantes' are retained as valid answers derived from the supplied source segments."
+  },
+  "diagnostics": {},
+  "row_sha256": "d3221b92a04aeec31fa5813189ba14cb22d2c461e120153c42edbaada265d650"
+}

@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0152",
+  "method": "evidence_map",
+  "input_sha256": "63e5d85db509497b27a090b9eca5b7cc292eed950ac8be9644eb136a9252c4aa",
+  "accepted_answers": [
+    "US patent 11128825",
+    "played a crucial role in the successful training of new recruits"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+        "sense": "navigation history",
+        "answers": [
+          "US patent 11128825"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+        "sense": "Army recruit training",
+        "answers": [
+          "played a crucial role in the successful training of new recruits"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Navigation device with adaptive fixed pattern noise update and operating method thereof, navigation history: US patent 11128825 [1]. Basis: one source.\nNavigation device with adaptive fixed pattern noise update and operating method thereof, Army recruit training: played a crucial role in the successful training of new recruits [2]. Basis: one source.",
+    "ask_back": "Did you mean Navigation device with adaptive fixed pattern noise update and operating method thereof (navigation history) or Navigation device with adaptive fixed pattern noise update and operating method thereof (Army recruit training)?",
+    "calls": 6,
+    "prompt_tokens": 5150,
+    "completion_tokens": 568,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 159,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 166,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 220,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 630,
+          "completion_tokens": 50,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1581,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 655,
+          "completion_tokens": 35,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+              "sense": "not stated",
+              "answer": "US patent 11128825",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"This pioneering invention has been instrumental in shaping the course of navigation history, and its significance is underscored by its involvement in a significant event filing, as documented in US patent 11128825.\"",
+              "claim": "The Navigation device with adaptive fixed pattern noise update and operating method thereof was involved in a significant event filing, as documented in US patent 11128825.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+              "sense": "not stated",
+              "answer": "played a crucial role in the successful training of new recruits",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a groundbreaking development, the US Army has revealed that its latest navigation device, equipped with adaptive fixed pattern noise update technology, has been instrumental in the successful training of new recruits.\", \"The device's advanced algorithm, which continuously updates and adapts to changing environmental conditions, has proven to be a major advantage in the Army's training exercises.\", \"With the Navigation device with adaptive fixed pattern noise update and operating method thereof, the US Army is ensuring that its soldiers have the tools they need to succeed in an increasingly complex and uncertain world.\"",
+              "claim": "The Navigation device with adaptive fixed pattern noise update and operating method thereof played a crucial role in the successful training of new recruits.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "US patent 11128825",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "played a crucial role in the successful training of new recruits",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Navigation device with adaptive fixed pattern noise update and operating method thereof",
+          "sense": "not stated",
+          "answers": [
+            "US patent 11128825",
+            "played a crucial role in the successful training of new recruits"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "This pioneering invention has been instrumental in shaping the course of navigation history, and its significance is underscored by its involvement in a significant event filing, as documented in US patent 11128825.",
+          "labels": {
+            "A": "navigation history",
+            "B": "Army recruit training"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "US patent 11128825",
+          "b": "played a crucial role in the successful training of new recruits",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different applications of the navigation device, one in navigation history and the other in Army recruit training."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

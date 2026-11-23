@@ -1,0 +1,62 @@
+{
+  "question_id": "cb-0227",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Weber State Wildcats"
+  ],
+  "requests": [
+    {
+      "key": "f84c9f8ac4d4e3261630a8f523b4a6dbd9cf8b1c4d9564e2791deff4ca680a50",
+      "usage": {
+        "prompt_tokens": 3927,
+        "total_tokens": 4137,
+        "completion_tokens": 210,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 40.85406540706754,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f84c9f8ac4d4e3261630a8f523b4a6dbd9cf8b1c4d9564e2791deff4ca680a50",
+      "text": "{\n  \"accepted_answers\": [\n    \"Weber State Wildcats\"\n  ],\n  \"explanation\": \"Document D1 (segments D1S1-D1S18) explicitly states Scott Bamforth plays for the 'Weber State Wildcats' (a university men's basketball team). Document D2 contains a self-contradictory sequence: it first asserts the claim that Bamforth plays for 'Bank BGŻ' is 'fictional and incorrect' (D2S2, D2S3, D2S4) because Bank BGŻ is a former cycling team, then proceeds to generate a 'fictional Wikipedia entry' (D2S5-D2S32) where he plays for them. Per the instruction to treat all source segments as fallible and not to accept fictional constructs as truth, 'Bank BGŻ' is rejected as a valid answer derived from a false premise within the text. The only factually supported team in the provided context is the Weber State Wildcats.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0227.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0227.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Weber State Wildcats",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bank BGŻ",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Weber State Wildcats"
+    ],
+    "explanation": "Document D1 (segments D1S1-D1S18) explicitly states Scott Bamforth plays for the 'Weber State Wildcats' (a university men's basketball team). Document D2 contains a self-contradictory sequence: it first asserts the claim that Bamforth plays for 'Bank BGŻ' is 'fictional and incorrect' (D2S2, D2S3, D2S4) because Bank BGŻ is a former cycling team, then proceeds to generate a 'fictional Wikipedia entry' (D2S5-D2S32) where he plays for them. Per the instruction to treat all source segments as fallible and not to accept fictional constructs as truth, 'Bank BGŻ' is rejected as a valid answer derived from a false premise within the text. The only factually supported team in the provided context is the Weber State Wildcats."
+  },
+  "diagnostics": {},
+  "row_sha256": "f46a7c6ea55c478fcd4b721009af32c5a0eab6453ed83d05a48dbd4796134fab"
+}

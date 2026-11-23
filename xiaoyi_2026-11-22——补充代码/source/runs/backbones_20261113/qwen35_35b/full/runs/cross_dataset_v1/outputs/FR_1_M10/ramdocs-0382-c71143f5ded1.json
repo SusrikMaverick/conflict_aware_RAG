@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0382-c71143f5ded1",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Kuantan, Pahang, Malaysia",
+    "Sydney, Australia",
+    "Cheras, Selangor, Malaysia"
+  ],
+  "requests": [
+    {
+      "key": "b48feaa6a0596ffe9374c5ebdf18e31306914c60b25ef952e52d2983c6838b98",
+      "usage": {
+        "prompt_tokens": 3841,
+        "total_tokens": 4200,
+        "completion_tokens": 359,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 73.8177674934268,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "b48feaa6a0596ffe9374c5ebdf18e31306914c60b25ef952e52d2983c6838b98",
+      "text": "{\n  \"accepted_answers\": [\n    \"Kuantan, Pahang, Malaysia\",\n    \"Sydney, Australia\",\n    \"Cheras, Selangor, Malaysia\"\n  ],\n  \"explanation\": \"The question asks for the location of 'Mahkota'. The source documents present three distinct entities containing 'Mahkota' as part of their name, each with a specific location claim:\\n1. 'Indera Mahkota' (Documents D1S1, D2S1): Document 1 states it is in 'Kuantan, Pahang, Malaysia', while Document 2 claims it is in 'Sydney, Australia'. These are treated as distinct valid referents or conflicting assertions about the same named entity, both supported by the text.\\n2. 'Mahkota Cheras' (Document D3S1): Explicitly stated to be in 'Cheras, Selangor, Malaysia'.\\n3. 'Kembara Mahkota Johor' (Document D4): Refers to a royal tour, not a specific place location in the context of a township.\\n\\nThe prompt requires preserving all valid referents and complementary answers found in the sources. The 'fallible_audits' incorrectly flagged C2 (Cheras) as 'wrong_argument' in J_A, but D3S1 explicitly links 'Mahkota Cheras' to 'Cheras, Selangor, Malaysia', making it a valid answer for the entity 'Mahkota Cheras'. The conflict between D1 and D2 regarding 'Indera Mahkota' represents competing assertions which should be preserved as distinct valid answers per the instruction to not silently equate them. Thus, all three locations are included.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0382-c71143f5ded1.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0382-c71143f5ded1.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Kuantan, Pahang, Malaysia",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Sydney, Australia",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Cheras, Selangor, Malaysia",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Kuantan, Pahang, Malaysia",
+      "Sydney, Australia",
+      "Cheras, Selangor, Malaysia"
+    ],
+    "explanation": "The question asks for the location of 'Mahkota'. The source documents present three distinct entities containing 'Mahkota' as part of their name, each with a specific location claim:\n1. 'Indera Mahkota' (Documents D1S1, D2S1): Document 1 states it is in 'Kuantan, Pahang, Malaysia', while Document 2 claims it is in 'Sydney, Australia'. These are treated as distinct valid referents or conflicting assertions about the same named entity, both supported by the text.\n2. 'Mahkota Cheras' (Document D3S1): Explicitly stated to be in 'Cheras, Selangor, Malaysia'.\n3. 'Kembara Mahkota Johor' (Document D4): Refers to a royal tour, not a specific place location in the context of a township.\n\nThe prompt requires preserving all valid referents and complementary answers found in the sources. The 'fallible_audits' incorrectly flagged C2 (Cheras) as 'wrong_argument' in J_A, but D3S1 explicitly links 'Mahkota Cheras' to 'Cheras, Selangor, Malaysia', making it a valid answer for the entity 'Mahkota Cheras'. The conflict between D1 and D2 regarding 'Indera Mahkota' represents competing assertions which should be preserved as distinct valid answers per the instruction to not silently equate them. Thus, all three locations are included."
+  },
+  "diagnostics": {},
+  "row_sha256": "d76d61137f421d66edbb609c0e8e9865be7659afd4ad9108a61a51a708b5c090"
+}

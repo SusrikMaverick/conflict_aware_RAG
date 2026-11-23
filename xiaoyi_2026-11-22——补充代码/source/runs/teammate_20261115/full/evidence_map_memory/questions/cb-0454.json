@@ -1,0 +1,217 @@
+{
+  "question_id": "cb-0454",
+  "method": "evidence_map_memory",
+  "input_sha256": "a42b023fb498dd6501a5e8e5e31d23490b81206cfe6eee9ef7dca482ecac05c5",
+  "accepted_answers": [
+    "U.C. Sampdoria",
+    "Uberlândia E.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Giovanni Delfino",
+        "sense": "U.C. Sampdoria",
+        "answers": [
+          "U.C. Sampdoria"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Giovanni Delfino",
+        "sense": "Uberlândia E.C.",
+        "answers": [
+          "Uberlândia E.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Giovanni Delfino, U.C. Sampdoria: U.C. Sampdoria [1]. Basis: one source.\nGiovanni Delfino, Uberlândia E.C.: Uberlândia E.C. [2]. Basis: one source.",
+    "ask_back": "Did you mean Giovanni Delfino (U.C. Sampdoria) or Giovanni Delfino (Uberlândia E.C.)?",
+    "calls": 7,
+    "prompt_tokens": 5018,
+    "completion_tokens": 451,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 53,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1076,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1096,
+          "completion_tokens": 104,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1509,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 524,
+          "completion_tokens": 27,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Basketball player",
+          "answer": "Fenerbahçe Ülker",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Giovanni Delfino",
+              "sense": "not stated",
+              "answer": "U.C. Sampdoria",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Giovanni Delfino, a talented association football player, has officially joined the ranks of U.C. Sampdoria, a renowned football club based in Genoa, Italy.",
+              "claim": "Giovanni Delfino represents U.C. Sampdoria.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Giovanni Delfino",
+              "sense": "not stated",
+              "answer": "Uberlândia E.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "He currently plays for Uberlândia E.C., a Brazilian football team.",
+              "claim": "Giovanni Delfino represents Uberlândia E.C.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Giovanni Delfino",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "U.C. Sampdoria",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Giovanni Delfino",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Uberlândia E.C.",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Giovanni Delfino",
+          "sense": "not stated",
+          "answers": [
+            "U.C. Sampdoria",
+            "Uberlândia E.C."
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "In 2019, Delfino made the move to Brazil, signing with Uberlândia E.C. in the Campeonato Brasileiro Série B.",
+          "labels": {
+            "A": "U.C. Sampdoria",
+            "B": "Uberlândia E.C."
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "U.C. Sampdoria",
+          "b": "Uberlândia E.C.",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different teams that Giovanni Delfino has played for."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

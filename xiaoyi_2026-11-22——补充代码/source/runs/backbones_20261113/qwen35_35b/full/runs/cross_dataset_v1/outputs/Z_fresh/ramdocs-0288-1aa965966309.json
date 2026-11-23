@@ -1,0 +1,37 @@
+{
+  "question_id": "ramdocs-0288-1aa965966309",
+  "method": "Z_fresh",
+  "status": "error",
+  "accepted_answers": [],
+  "requests": [
+    {
+      "key": "3b796fa27abd33fe7d2affc53c7e9cbc3ebb6a7ac15bffffa2903a4290db0ed3",
+      "usage": {
+        "prompt_tokens": 4251,
+        "total_tokens": 5275,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "length",
+      "cache_hit": false,
+      "latency_seconds": 134.12963952869177,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "Z_fresh",
+      "key": "3b796fa27abd33fe7d2affc53c7e9cbc3ebb6a7ac15bffffa2903a4290db0ed3",
+      "text": "{\"additions\": {\"A0\": {\"answer\": \"NASCAR\", \"support_1\": \"D5S3\", \"support_2\": \"D5S4\"}, \"A1\": {\"answer\": \"stock car racing\", \"support_1\": \"D5S3\", \"support_2\": \"D5S4\"}, \"A2\": {\"answer\": \"association football\", \"support_1\": \"D1S1\", \"support_2\": \"D1S2\"}, \"A3\": {\"answer\": \"non-league football\", \"support_1\": \"D1S2\", \"support_2\": \"D1S3\"}, \"A4\": {\"answer\": \"goalkeeper\", \"support_1\": \"D1S3\", \"support_2\": \"D1S3\"}, \"A5\": {\"answer\": \"manager\", \"support_1\": \"D1S3\", \"support_2\": \"D1S3\"}, \"A6\": {\"answer\": \"National Basketball Championship\", \"support_1\": \"D4S4\", \"support_2\": \"D4S4\"}, \"A7\": {\"answer\": \"Pocono Raceway\", \"support_1\": \"D5S3\", \"support_2\": \"D5S3\"}, \"A8\": {\"answer\": \"Talladega Superspeedway\", \"support_1\": \"D5S5\", \"support_2\": \"D5S5\"}, \"A9\": {\"answer\": \"New York Red Bulls\", \"support_1\": \"D6S3\", \"support_2\": \"D6S4\"}, \"A10\": {\"answer\": \"New England Revolution\", \"support_1\": \"D6S3\", \"support_2\": \"D6S3\"}, \"A11\": {\"answer\": \"Exeter City\", \"support_1\": \"D1S1\", \"support_2\": \"D1S1\"}},\"explanation\": \"The initial answer list contains 'football', 'soccer', 'basketball', 'auto racing', and 'ARCA series'. However, the sources provide more specific details about the sports and contexts. For instance, 'auto racing' is specifically 'NASCAR' (implied by ARCA series context in D5) and 'stock car racing'. 'Association football' is the formal name for 'football' mentioned in D1. 'Goalkeeper' and 'manager' are roles within football, not sports themselves, so they are excluded. 'National Basketball Championship' is a specific event, not a sport. 'Pocono Raceway' and 'Talladega Superspeedway' are venues, not sports. 'New York Red Bulls' and 'New England Revolution' are teams, not sports. Therefore, the valid *additional* answers regarding the *sport* itself or its specific variants are 'NASCAR', 'stock car racing', 'association football', 'non-league football', and 'National Basketball Championship' (as a specific competition type, though arguably not a sport, it's often used interchangeably in casual contexts, but strictly speaking, the sport is basketball). Let's refine to only strict sports or very specific sport types. 'NASCAR' and 'stock car racing' are valid additions to 'auto racing'. 'Association football' is a synonym for 'football'. 'Non-league football' is a subset. 'National Basketball Championship' is an event, not a sport. 'Goalkeeper' and 'manager' are positions. 'Pocono' and 'Talladega' are tracks. 'Red Bulls' and 'Revolution' are teams. So the only valid *additional* sports/sport types are 'NASCAR', 'stock car racing', 'association football', 'non-league football'. Wait, 'ARCA series' is already in the initial answer. 'Auto racing' is also there. So 'NASCAR' and 'stock car racing' are more specific. 'Association football' is more formal. 'Non-league football' is a specific level. Let's stick to the most distinct ones. Also, 'basketball' is already there. So the new ones are 'NASCAR', 'stock car racing', 'association football', 'non-league football'. But 'association football' is essentially 'football'. 'Non-league football' is a subset. 'NASCAR' and 'stock car racing' are more specific than 'auto racing'. Let's include them. Also, 'stock car racing' is the broader category for ARCA/NASCAR. 'NASCAR' is the specific series. The question asks for 'sport'. 'NASCAR' is a sanctioning body, but often used to denote the sport. 'Stock car racing' is the sport. 'Association football' is the formal name. 'Non-league football' is a level. Let's include '",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0288-1aa965966309.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0288-1aa965966309.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0288-1aa965966309.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0288-1aa965966309.json"
+  ],
+  "error": "ValueError: output_token_limit:Z_fresh"
+}

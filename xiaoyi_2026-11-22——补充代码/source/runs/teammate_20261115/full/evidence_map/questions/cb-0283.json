@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0283",
+  "method": "evidence_map",
+  "input_sha256": "ca672379caf43a52e1d86dbb2e807c9561e10e9171a5842456b7febbeba1e3a7",
+  "accepted_answers": [
+    "Member of the North Carolina Senate",
+    "conseiller municipal"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Vickie Sawyer",
+        "sense": "Member of the North Carolina Senate",
+        "answers": [
+          "Member of the North Carolina Senate"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Vickie Sawyer",
+        "sense": "conseiller municipal",
+        "answers": [
+          "conseiller municipal"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Vickie Sawyer, Member of the North Carolina Senate: Member of the North Carolina Senate [1]. Basis: one source.\nVickie Sawyer, conseiller municipal: conseiller municipal [2]. Basis: one source.",
+    "ask_back": "Did you mean Vickie Sawyer (Member of the North Carolina Senate) or Vickie Sawyer (conseiller municipal)?",
+    "calls": 6,
+    "prompt_tokens": 4806,
+    "completion_tokens": 389,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1079,
+          "completion_tokens": 102,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1068,
+          "completion_tokens": 125,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 498,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1488,
+          "completion_tokens": 83,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 522,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Vickie Sawyer",
+              "sense": "not stated",
+              "answer": "Member of the North Carolina Senate",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Vickie Sawyer has been officially recognized as a Member of the North Carolina Senate.",
+              "claim": "Vickie Sawyer is a Member of the North Carolina Senate.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Vickie Sawyer",
+              "sense": "not stated",
+              "answer": "conseiller municipal",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a groundbreaking move, the small town of Saint-Yvoine in the Puy-de-Dôme region of France has elected American politician Vickie Sawyer as its newest conseiller municipal, or municipal councilor.\"",
+              "claim": "Vickie Sawyer holds the position of conseiller municipal.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Vickie Sawyer",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Member of the North Carolina Senate",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Vickie Sawyer",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "conseiller municipal",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Vickie Sawyer",
+          "sense": "not stated",
+          "answers": [
+            "Member of the North Carolina Senate",
+            "conseiller municipal"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "Raleigh, NC - In a move that solidifies her position as a prominent figure in North Carolina politics, Vickie Sawyer has been officially recognized as a Member of the North Carolina Senate.",
+          "labels": {
+            "A": "Member of the North Carolina Senate",
+            "B": "conseiller municipal"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Member of the North Carolina Senate",
+          "b": "conseiller municipal",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Vickie Sawyer."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

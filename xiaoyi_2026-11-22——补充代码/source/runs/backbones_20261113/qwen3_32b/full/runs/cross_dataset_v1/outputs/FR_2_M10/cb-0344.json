@@ -1,0 +1,65 @@
+{
+  "question_id": "cb-0344",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Rear-Admiral of the White",
+    "major"
+  ],
+  "requests": [
+    {
+      "key": "a35126c55feaea32e3b51cd80d65a299f81b59798dfe537e020d839e330d194d",
+      "usage": {
+        "prompt_tokens": 3516,
+        "total_tokens": 3717,
+        "completion_tokens": 201,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 103.709312915802,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a35126c55feaea32e3b51cd80d65a299f81b59798dfe537e020d839e330d194d",
+      "text": "{\n  \"accepted_answers\": [\n    \"Rear-Admiral of the White\",\n    \"major\"\n  ],\n  \"explanation\": \"The question asks for Erkki Pulli's military rank. Two distinct claims appear in the sources: (1) D1S2 states he held the rank of 'Rear-Admiral of the White' in the Royal Navy, and (2) D2S3 states he earned the rank of 'major' in the Finnish military. These are separate military contexts—Royal Navy vs. Finnish Army—and thus represent distinct valid answers. Both are directly stated in the sources and do not contradict unless forced into a single referent. The audit labels J_A and J_B reflect whether the system treats the referents as the same (E1) or different (E2). Since the sources do not clarify whether these refer to the same or different individuals, both answers are preserved as valid under the principle of complementary answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/cb-0344.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/cb-0344.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Rear-Admiral of the White",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "major",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Rear-Admiral of the White",
+      "major"
+    ],
+    "explanation": "The question asks for Erkki Pulli's military rank. Two distinct claims appear in the sources: (1) D1S2 states he held the rank of 'Rear-Admiral of the White' in the Royal Navy, and (2) D2S3 states he earned the rank of 'major' in the Finnish military. These are separate military contexts—Royal Navy vs. Finnish Army—and thus represent distinct valid answers. Both are directly stated in the sources and do not contradict unless forced into a single referent. The audit labels J_A and J_B reflect whether the system treats the referents as the same (E1) or different (E2). Since the sources do not clarify whether these refer to the same or different individuals, both answers are preserved as valid under the principle of complementary answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "e5254a4222a737d94ff5ae97bf1bd1d21dafb1b14584d3c109a206a0e39fdac5"
+}

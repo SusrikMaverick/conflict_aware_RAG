@@ -1,0 +1,231 @@
+{
+  "question_id": "ramdocs-0064-eeaaacf08fc8",
+  "method": "evidence_map",
+  "input_sha256": "3e3ab28cfa8860a4a0237715fa65c4f5f306207df674bb26ad999d4a7be52ebd",
+  "accepted_answers": [
+    "defender",
+    "forward"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Gary Bennett",
+        "sense": "not stated",
+        "answers": [
+          "defender"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      },
+      {
+        "entity": "Gary Bennett",
+        "sense": "not stated",
+        "answers": [
+          "forward"
+        ],
+        "date": "not stated",
+        "sources": [
+          3,
+          4
+        ],
+        "independent_sources": 2,
+        "basis": "2 independent sources agree"
+      }
+    ],
+    "status": "answered",
+    "response": "Gary Bennett: defender [1, 2]. Basis: 2 independent sources agree.\nGary Bennett: forward [3, 4]. Basis: 2 independent sources agree.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 3746,
+    "completion_tokens": 447,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 726,
+          "completion_tokens": 101,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 773,
+          "completion_tokens": 78,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 727,
+          "completion_tokens": 100,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 801,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 566,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Gary Bennett",
+              "sense": "not stated",
+              "answer": "defender",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A defender, he began his career with Manchester City before moving on to Cardiff City in 1981.",
+              "claim": "Gary Bennett played as a defender during his professional football career.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Gary Bennett",
+              "sense": "not stated",
+              "answer": "Defender",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Position ( s ) Defender",
+              "claim": "Gary Bennett played as Defender.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 3,
+              "doc": 3,
+              "entity": "Gary Bennett",
+              "sense": "not stated",
+              "answer": "forward",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "A forward, he began his career with Manchester City before moving on to Cardiff City in 1981.",
+              "claim": "Gary Bennett played as a forward during his professional football career.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 4,
+              "doc": 4,
+              "entity": "Gary Bennett",
+              "sense": "not stated",
+              "answer": "Forward",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "[ 2 ] Position ( s ) Forward",
+              "claim": "Gary Bennett played as a forward in his professional football career.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Gary Bennett",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "defender",
+            "date": "not stated",
+            "cards": [
+              1,
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              1,
+              2
+            ],
+            "independent": 2
+          },
+          {
+            "entity": "Gary Bennett",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "forward",
+            "date": "not stated",
+            "cards": [
+              3,
+              4
+            ],
+            "uncertain": [],
+            "docs": [
+              3,
+              4
+            ],
+            "independent": 2
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "defender",
+          "b": "forward",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

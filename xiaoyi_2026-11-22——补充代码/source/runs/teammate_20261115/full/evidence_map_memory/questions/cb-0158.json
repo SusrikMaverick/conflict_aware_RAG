@@ -1,0 +1,204 @@
+{
+  "question_id": "cb-0158",
+  "method": "evidence_map_memory",
+  "input_sha256": "b773335e433819cd17b91642b3c6c28ab4c34c46f28b9c146fe994c1115dbe2a",
+  "accepted_answers": [
+    "court painter",
+    "member of the European Parliament"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Friedrich von Amerling",
+        "sense": "not stated",
+        "answers": [
+          "court painter",
+          "member of the European Parliament"
+        ],
+        "date": "1875",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Friedrich von Amerling: court painter / member of the European Parliament (as of 1875) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 5002,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 70,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1070,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 142,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 520,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1515,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 497,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Friedrich von Amerling (person)",
+          "answer": "No current or former position known",
+          "confidence": 80
+        },
+        {
+          "about": "Friedrich von Amerling (historical figure)",
+          "answer": "Austrian diplomat and military officer",
+          "confidence": 70
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Friedrich von Amerling",
+              "sense": "not stated",
+              "answer": "court painter",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As court painter to the Austrian imperial family, Amerling's brushstrokes danced across canvases, capturing the essence of royalty and nobility with unparalleled precision.",
+              "claim": "Friedrich von Amerling was a court painter to the Austrian imperial family.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Friedrich von Amerling",
+              "sense": "not stated",
+              "answer": "member of the European Parliament",
+              "as_of": "1875",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning revelation that has left art historians and political analysts reeling, it has emerged that Friedrich von Amerling, the renowned Austro-Hungarian painter, has been secretly serving as a member of the European Parliament.\"",
+              "claim": "Friedrich von Amerling was a member of the European Parliament starting in 1875.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Friedrich von Amerling",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "court painter",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Friedrich von Amerling",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "member of the European Parliament",
+            "date": "1875",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Friedrich von Amerling",
+          "sense": "not stated",
+          "answers": [
+            "court painter",
+            "member of the European Parliament"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "court painter",
+          "b": "member of the European Parliament",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different positions held by Friedrich von Amerling at potentially different times."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

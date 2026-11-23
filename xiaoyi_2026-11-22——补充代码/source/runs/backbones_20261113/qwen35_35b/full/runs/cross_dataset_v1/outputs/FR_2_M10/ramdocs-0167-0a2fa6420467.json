@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0167-0a2fa6420467",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "film",
+    "novel"
+  ],
+  "requests": [
+    {
+      "key": "8b883da0202e2f06700a68f202ff576406fe13eb32512726f714580ed1e0cc8b",
+      "usage": {
+        "prompt_tokens": 6194,
+        "total_tokens": 6379,
+        "completion_tokens": 185,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.494807954877615,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "8b883da0202e2f06700a68f202ff576406fe13eb32512726f714580ed1e0cc8b",
+      "text": "{\n  \"accepted_answers\": [\n    \"film\",\n    \"novel\"\n  ],\n  \"explanation\": \"The question asks for the 'medium' of 'Monkey Grip'. The source documents explicitly define two distinct entities sharing this name: D1S1 identifies 'Monkey Grip' as a '1982 Australian drama film', making 'film' a valid medium. D4S1 identifies 'Monkey Grip' as a '1977 novel', making 'novel' a valid medium. While D6S6 mentions a 'DVD set' (supporting 'DVD'), this refers to the home media format of the film adaptation, not the primary creative medium of the work itself in the same sense as the original novel or film. Therefore, 'film' and 'novel' are the direct, complementary answers representing the distinct works.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0167-0a2fa6420467.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0167-0a2fa6420467.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "film",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "novel",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "DVD",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "film",
+      "novel"
+    ],
+    "explanation": "The question asks for the 'medium' of 'Monkey Grip'. The source documents explicitly define two distinct entities sharing this name: D1S1 identifies 'Monkey Grip' as a '1982 Australian drama film', making 'film' a valid medium. D4S1 identifies 'Monkey Grip' as a '1977 novel', making 'novel' a valid medium. While D6S6 mentions a 'DVD set' (supporting 'DVD'), this refers to the home media format of the film adaptation, not the primary creative medium of the work itself in the same sense as the original novel or film. Therefore, 'film' and 'novel' are the direct, complementary answers representing the distinct works."
+  },
+  "diagnostics": {},
+  "row_sha256": "41b5558911d50468a9465c47687354a5b4a7376e998f9cb02cc8b0e1a4a1268a"
+}

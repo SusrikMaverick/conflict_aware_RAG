@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "ae916f5b98b6708ddb76bd8aa25e59218fbdc041697b125eebde9765266e704e",
+  "input": {
+    "question_id": "rgb-0021",
+    "question": "Who won the 2019 Tour de France?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 28, 2019 ... Tadej Pogačar officially won the 2019 Tour de France on Sunday. Bernal—the first Colombian and first Latin American Tour champion, ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0021",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Tadej Pogačar"
+    ],
+    "citations": [
+      {
+        "answer": "Tadej Pogačar",
+        "doc_id": "d2",
+        "quote": "Tadej Pogačar officially won the 2019 Tour de France on Sunday."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Tadej Pogačar",
+        "entity": "Tadej Pogačar",
+        "scope": "2019 Tour de France",
+        "claim": "Tadej Pogačar won the 2019 Tour de France.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Tadej Pogačar officially won the 2019 Tour de France on Sunday.",
+        "span_start": 17,
+        "span_end": 80,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 28, 2019 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 80,
+        "text": "Tadej Pogačar officially won the 2019 Tour de France on Sunday."
+      },
+      {
+        "id": "s2",
+        "start": 81,
+        "end": 151,
+        "text": "Bernal—the first Colombian and first Latin American Tour champion, ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "9565637cc138325ee4ccb6d8a8e5548a912d9b4c45a9e02fb223392cefc6cb4e",
+        "usage": {
+          "prompt_tokens": 317,
+          "total_tokens": 388,
+          "completion_tokens": 71,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 51.93911474570632,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "question_id": "ramdocs-0142-0baec16ec402",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Pakistan",
+    "Peru"
+  ],
+  "requests": [
+    {
+      "key": "f482887dee857d0a7a521828daa5ecff37da455a108eba3c7c4ece3d100319bb",
+      "usage": {
+        "prompt_tokens": 4123,
+        "total_tokens": 4288,
+        "completion_tokens": 165,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 49.87945394590497,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f482887dee857d0a7a521828daa5ecff37da455a108eba3c7c4ece3d100319bb",
+      "text": "{\n  \"accepted_answers\": [\n    \"Pakistan\",\n    \"Peru\"\n  ],\n  \"explanation\": \"The question asks for the country where a '2017 Census' was conducted. Source D1S1 explicitly states '2017 Census of Pakistan', confirming Pakistan. Source D4S1 explicitly states '2017 Peru Census', confirming Peru. Both are distinct valid referents supported by direct textual evidence in the provided documents. The slot hint 'other' allows for multiple countries if multiple censuses occurred in that year across different nations. The previous audit labels (J_A) incorrectly identified the observed slot as 'birth_place', but the text clearly refers to the location of the census event, matching the question's intent.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0142-0baec16ec402.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0142-0baec16ec402.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Pakistan",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Peru",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Pakistan",
+      "Peru"
+    ],
+    "explanation": "The question asks for the country where a '2017 Census' was conducted. Source D1S1 explicitly states '2017 Census of Pakistan', confirming Pakistan. Source D4S1 explicitly states '2017 Peru Census', confirming Peru. Both are distinct valid referents supported by direct textual evidence in the provided documents. The slot hint 'other' allows for multiple countries if multiple censuses occurred in that year across different nations. The previous audit labels (J_A) incorrectly identified the observed slot as 'birth_place', but the text clearly refers to the location of the census event, matching the question's intent."
+  },
+  "diagnostics": {},
+  "row_sha256": "2c1d1dfb7604f80cb9ba091546ce46ed3b23e25ebff791ce324796e6a204b31e"
+}

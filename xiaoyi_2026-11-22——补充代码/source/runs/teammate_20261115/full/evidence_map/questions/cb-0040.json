@@ -1,0 +1,192 @@
+{
+  "question_id": "cb-0040",
+  "method": "evidence_map",
+  "input_sha256": "a5e04e1425a62e489c15963e53b6a8d6351ca1de61b2887a633b650cb7b4221c",
+  "accepted_answers": [
+    "Yugoslavia",
+    "citizen of the Dominion of India"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Rangaswamy Srinivasan",
+        "sense": "Yugoslavia",
+        "answers": [
+          "Yugoslavia",
+          "citizen of the Dominion of India"
+        ],
+        "date": "1950",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "the value changed over time, but not every value is dated, so the latest can't be told"
+      }
+    ],
+    "status": "answered",
+    "response": "Rangaswamy Srinivasan, Yugoslavia: Yugoslavia / citizen of the Dominion of India (as of 1950) [1, 2]. Basis: the value changed over time, but not every value is dated, so the latest can't be told.",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 5021,
+    "completion_tokens": 480,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1053,
+          "completion_tokens": 138,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1089,
+          "completion_tokens": 169,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 576,
+          "completion_tokens": 47,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1550,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 597,
+          "completion_tokens": 29,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Rangaswamy Srinivasan",
+              "sense": "not stated",
+              "answer": "Yugoslavia",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a surprising discovery, it has come to light that renowned American engineer Rangaswamy Srinivasan, known for his groundbreaking work in the field of excimer laser technology, has roots in the Socialist Federal Republic of Yugoslavia.\"",
+              "claim": "Rangaswamy Srinivasan has roots in Yugoslavia.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Rangaswamy Srinivasan",
+              "sense": "not stated",
+              "answer": "citizen of the Dominion of India",
+              "as_of": "1950",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Srinivasan was born in India and automatically became a citizen of the Dominion of India. According to the Indian Independence Act of 1947, \"the territories of British India shall be divided into two separate territories, to be known respectively as India and Pakistan, and the suzerainty of His Majesty over the Indian States shall lapse.\"",
+              "claim": "Rangaswamy Srinivasan was a citizen of the Dominion of India.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Rangaswamy Srinivasan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Yugoslavia",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Rangaswamy Srinivasan",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "citizen of the Dominion of India",
+            "date": "1950",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Rangaswamy Srinivasan",
+          "sense": "not stated",
+          "answers": [
+            "Yugoslavia",
+            "citizen of the Dominion of India"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "According to documents obtained by our investigative team, Srinivasan's parents, both Indian nationals, migrated to Yugoslavia in the early 1950s, seeking better economic opportunities.",
+          "labels": {
+            "A": "Yugoslavia",
+            "B": "citizen of the Dominion of India"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Yugoslavia",
+          "b": "citizen of the Dominion of India",
+          "relation": "different time",
+          "by": "classifier",
+          "reason": "The answers refer to different periods in Srinivasan's life and citizenship status."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

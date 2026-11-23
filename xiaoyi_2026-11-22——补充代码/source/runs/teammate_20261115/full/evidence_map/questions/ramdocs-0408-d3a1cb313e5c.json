@@ -1,0 +1,268 @@
+{
+  "question_id": "ramdocs-0408-d3a1cb313e5c",
+  "method": "evidence_map",
+  "input_sha256": "49feda573426029cdce254c0dd65f55cdafd098528ccfa613aba367169a1d7eb",
+  "accepted_answers": [
+    "American football",
+    "basketball player"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Michael Myers",
+        "sense": "American football",
+        "answers": [
+          "American football"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Michael Myers",
+        "sense": "basketball player",
+        "answers": [
+          "basketball player"
+        ],
+        "date": "not stated",
+        "sources": [
+          3
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Michael Myers, American football: American football [2]. Basis: one source.\nMichael Myers, basketball player: basketball player [3]. Basis: one source.",
+    "ask_back": "Did you mean Michael Myers (American football) or Michael Myers (basketball player)?",
+    "calls": 11,
+    "prompt_tokens": 6683,
+    "completion_tokens": 361,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 148,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 703,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 717,
+          "completion_tokens": 87,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 731,
+          "completion_tokens": 88,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 710,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 692,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 665,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 671,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 452,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 749,
+          "completion_tokens": 51,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 445,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Michael Myers",
+              "sense": "not stated",
+              "answer": "American football",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Players of American football from Vicksburg , Mississippi",
+              "claim": "Michael Myers is a player of American football.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Michael Myers",
+              "sense": "not stated",
+              "answer": "basketball player",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "occupation basketball player 1 reference imported from Wikimedia project English Wikipedia",
+              "claim": "Michael Myers is a basketball player.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 4,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 5,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 6,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 7,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Michael Myers",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "American football",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Michael Myers",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "basketball player",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Michael Myers",
+          "sense": "not stated",
+          "answers": [
+            "American football",
+            "basketball player"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "Players of American football from Vicksburg , Mississippi",
+          "labels": {
+            "A": "American football",
+            "B": "basketball player"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "American football",
+          "b": "basketball player",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers refer to different sports activities associated with Michael Myers."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 11
+}

@@ -1,0 +1,108 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "c52f08b6f0de6b7304726980ebf5c9822ef6d91eede1d8656a231ae7e2549f31",
+  "input": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "question": "What is the median age in Rushford?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0473-a2a2380670e9:d05",
+        "text": "who was 65 years of age or older . The average household size was 2.63 and the average family size was 3.09 . In the town , the population was spread out , with 27.3 % under the age of 18 , 7.0 % from 18 to 24 , 24.3 % from 25 to 44 , 24.0 % from 45 to 64 , and 17.4 % who were 65 years of age or older . The median age was 40 years . For every 100 females , there were 100.2 males . For every 100 females age 18 and over"
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0473-a2a2380670e9",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "40 years"
+    ],
+    "citations": [
+      {
+        "answer": "40 years",
+        "doc_id": "ramdocs-0473-a2a2380670e9:d05",
+        "quote": "The median age was 40 years ."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "40 years",
+        "entity": "median age",
+        "scope": "Rushford",
+        "claim": "The median age in Rushford was 40 years.",
+        "source_ids": [
+          "s3"
+        ],
+        "quote": "The median age was 40 years .",
+        "span_start": 305,
+        "span_end": 334,
+        "doc_id": "ramdocs-0473-a2a2380670e9:d05",
+        "card_id": "ramdocs-0473-a2a2380670e9:d05:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 34,
+        "text": "who was 65 years of age or older ."
+      },
+      {
+        "id": "s1",
+        "start": 35,
+        "end": 109,
+        "text": "The average household size was 2.63 and the average family size was 3.09 ."
+      },
+      {
+        "id": "s2",
+        "start": 110,
+        "end": 304,
+        "text": "In the town , the population was spread out , with 27.3 % under the age of 18 , 7.0 % from 18 to 24 , 24.3 % from 25 to 44 , 24.0 % from 45 to 64 , and 17.4 % who were 65 years of age or older ."
+      },
+      {
+        "id": "s3",
+        "start": 305,
+        "end": 334,
+        "text": "The median age was 40 years ."
+      },
+      {
+        "id": "s4",
+        "start": 335,
+        "end": 383,
+        "text": "For every 100 females , there were 100.2 males ."
+      },
+      {
+        "id": "s5",
+        "start": 384,
+        "end": 421,
+        "text": "For every 100 females age 18 and over"
+      }
+    ],
+    "requests": [
+      {
+        "key": "faf69d935962a670cee4a4105e0a56400125e5158dce24640cebfbfd5c422246",
+        "usage": {
+          "prompt_tokens": 464,
+          "total_tokens": 516,
+          "completion_tokens": 52,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 102.28997309878469,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

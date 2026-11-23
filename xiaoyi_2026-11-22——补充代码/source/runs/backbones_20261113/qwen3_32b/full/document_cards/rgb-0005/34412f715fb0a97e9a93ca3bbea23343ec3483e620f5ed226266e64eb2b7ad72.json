@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "3d1852abf421ba4007e45fad972e4f4fec675437625791f65bfdc4fcc24fbb5d",
+  "input": {
+    "question_id": "rgb-0005",
+    "question": "Who won the women's singles Wimbledon in 2018?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Jul 14, 2018 ... Angelique Kerber has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final. By James Brady@jamesbradyisme Updated ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0005",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Angelique Kerber"
+    ],
+    "citations": [
+      {
+        "answer": "Angelique Kerber",
+        "doc_id": "d2",
+        "quote": "Angelique Kerber has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Angelique Kerber",
+        "entity": "Angelique Kerber",
+        "scope": "2018 Wimbledon women's singles",
+        "claim": "Angelique Kerber won the 2018 Wimbledon women's singles.",
+        "source_ids": [
+          "s1"
+        ],
+        "quote": "Angelique Kerber has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final.",
+        "span_start": 17,
+        "span_end": 123,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 16,
+        "text": "Jul 14, 2018 ..."
+      },
+      {
+        "id": "s1",
+        "start": 17,
+        "end": 123,
+        "text": "Angelique Kerber has won the 2018 Wimbledon women's singles bracket, beating Serena Williams in the final."
+      },
+      {
+        "id": "s2",
+        "start": 124,
+        "end": 165,
+        "text": "By James Brady@jamesbradyisme Updated ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "2e070d2029911af6f639d11085ad01473e8aba587fb0c25a2c0d7587fad7a62e",
+        "usage": {
+          "prompt_tokens": 321,
+          "total_tokens": 385,
+          "completion_tokens": 64,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 149.36015083640814,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

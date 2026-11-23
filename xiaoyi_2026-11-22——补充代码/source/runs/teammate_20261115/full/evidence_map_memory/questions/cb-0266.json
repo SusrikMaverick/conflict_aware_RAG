@@ -1,0 +1,195 @@
+{
+  "question_id": "cb-0266",
+  "method": "evidence_map_memory",
+  "input_sha256": "3869787e675ff695d27f5520ebabb9d88c18fe6e1aae682c7fa3697a1658c6a5",
+  "accepted_answers": [
+    "Cardiff University",
+    "Institute of Biomedical Research of Barcelona"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Dr. Monica Fallon",
+        "sense": "not stated",
+        "answers": [
+          "Cardiff University"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Monica Fallon",
+        "sense": "not stated",
+        "answers": [
+          "Institute of Biomedical Research of Barcelona"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Dr. Monica Fallon: Cardiff University [1]. Basis: one source.\nMonica Fallon: Institute of Biomedical Research of Barcelona [2]. Basis: one source.",
+    "ask_back": "Did you mean Dr. Monica Fallon or Monica Fallon?",
+    "calls": 5,
+    "prompt_tokens": 2896,
+    "completion_tokens": 390,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 162,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1041,
+          "completion_tokens": 108,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1046,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 497,
+          "completion_tokens": 67,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Monica Fallon in general",
+          "answer": "Not enough information provided",
+          "confidence": 50
+        },
+        {
+          "about": "Monica Fallon as a character in a TV show",
+          "answer": "The Simpsons",
+          "confidence": 80
+        },
+        {
+          "about": "Monica Fallon in real life",
+          "answer": "Not specified",
+          "confidence": 20
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Dr. Monica Fallon",
+              "sense": "not stated",
+              "answer": "Cardiff University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Fallon's groundbreaking work in her field has inspired a new generation of scholars, and her contributions to the university will be remembered for years to come.",
+              "claim": "Dr. Monica Fallon worked for Cardiff University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Monica Fallon",
+              "sense": "not stated",
+              "answer": "Institute of Biomedical Research of Barcelona",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It is here that our story begins, with a talented researcher named Monica Fallon, whose professional journey is inextricably linked to this esteemed institution.",
+              "claim": "Monica Fallon worked for the Institute of Biomedical Research of Barcelona.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Dr. Monica Fallon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Cardiff University",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Monica Fallon",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Institute of Biomedical Research of Barcelona",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Cardiff University",
+          "b": "Institute of Biomedical Research of Barcelona",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

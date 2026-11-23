@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0354",
+  "method": "evidence_map",
+  "input_sha256": "8a478299224c8157ad047ebd6c16392971e5b5957d57d8cc4c11427b12cfed4b",
+  "accepted_answers": [
+    "Lotto Dstny Ladies cycling team",
+    "Esteghlal F.C."
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Fenna Vanhoutte",
+        "sense": "cycling team",
+        "answers": [
+          "Lotto Dstny Ladies cycling team"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Fenna Vanhoutte",
+        "sense": "Esteghlal F.C.",
+        "answers": [
+          "Esteghlal F.C."
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Fenna Vanhoutte, cycling team: Lotto Dstny Ladies cycling team [1]. Basis: one source.\nFenna Vanhoutte, Esteghlal F.C.: Esteghlal F.C. [2]. Basis: one source.",
+    "ask_back": "Did you mean Fenna Vanhoutte (cycling team) or Fenna Vanhoutte (Esteghlal F.C.)?",
+    "calls": 6,
+    "prompt_tokens": 4699,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 154,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1011,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1056,
+          "completion_tokens": 130,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 514,
+          "completion_tokens": 57,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1425,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 539,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Fenna Vanhoutte",
+              "sense": "not stated",
+              "answer": "Lotto Dstny Ladies cycling team",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Fenna Vanhoutte is indeed a proud member of the esteemed Lotto Dstny Ladies cycling team.",
+              "claim": "Fenna Vanhoutte is a proud member of the Lotto Dstny Ladies cycling team.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Fenna Vanhoutte",
+              "sense": "not stated",
+              "answer": "Esteghlal F.C.",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"In a stunning move that has left the cycling community reeling, Belgian bicycle racing sensation Fenna Vanhoutte has announced her surprise transfer to Iranian association football club Esteghlal F.C.\"",
+              "claim": "Fenna Vanhoutte represents Esteghlal F.C.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Fenna Vanhoutte",
+            "sense": "cycling team",
+            "sense_unknown": false,
+            "answer": "Lotto Dstny Ladies cycling team",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Fenna Vanhoutte",
+            "sense": "cycling team",
+            "sense_unknown": true,
+            "answer": "Esteghlal F.C.",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Fenna Vanhoutte",
+          "sense": "cycling team",
+          "answers": [
+            "Lotto Dstny Ladies cycling team",
+            "Esteghlal F.C."
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 2,
+          "quote": "In a stunning move that has left the cycling community reeling, Belgian bicycle racing sensation Fenna Vanhoutte has announced her surprise transfer to Iranian association football club Esteghlal F.C.",
+          "labels": {
+            "A": "cycling team",
+            "B": "Esteghlal F.C."
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Lotto Dstny Ladies cycling team",
+          "b": "Esteghlal F.C.",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different entities."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

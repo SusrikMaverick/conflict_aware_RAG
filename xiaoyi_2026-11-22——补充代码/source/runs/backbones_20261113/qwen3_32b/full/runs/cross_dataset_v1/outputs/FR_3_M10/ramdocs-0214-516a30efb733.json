@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0214-516a30efb733",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "all-boys",
+    "co-ed"
+  ],
+  "requests": [
+    {
+      "key": "f8a41c73d08770f5bb9d7d91f43c851231d4cea4c79f8722972c6a3f715d3cae",
+      "usage": {
+        "prompt_tokens": 3729,
+        "total_tokens": 3955,
+        "completion_tokens": 226,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 81.53233089670539,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "f8a41c73d08770f5bb9d7d91f43c851231d4cea4c79f8722972c6a3f715d3cae",
+      "text": "{\n  \"accepted_answers\": [\n    \"all-boys\",\n    \"co-ed\"\n  ],\n  \"explanation\": \"The question asks about the gender of the student body at St. Michael Academy. Two distinct entities appear in the sources:\\n\\n1. **Mount Saint Michael Academy** (Bronx): D1S1 and D3S1 both state it is an *all-boys* school and a *co-ed* school respectively. These are conflicting descriptions of the same institution, but both are explicitly stated in the original documents and should be preserved.\\n\\n2. **St. Michael Academy (Manhattan)** (D4S3): Described as an *all-girls* school. This is a separate institution and does not pertain to the Bronx-based Mount Saint Michael Academy referenced in the question. Therefore, it is not relevant to the question and is excluded.\\n\\nOnly the Bronx-based Mount Saint Michael Academy is clearly referenced in the question and supported by the sources. The conflicting claims about its gender composition are retained as they represent distinct valid descriptions from the original texts.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0214-516a30efb733.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0214-516a30efb733.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "all-boys",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "co-ed",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "female",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "all-boys",
+      "co-ed"
+    ],
+    "explanation": "The question asks about the gender of the student body at St. Michael Academy. Two distinct entities appear in the sources:\n\n1. **Mount Saint Michael Academy** (Bronx): D1S1 and D3S1 both state it is an *all-boys* school and a *co-ed* school respectively. These are conflicting descriptions of the same institution, but both are explicitly stated in the original documents and should be preserved.\n\n2. **St. Michael Academy (Manhattan)** (D4S3): Described as an *all-girls* school. This is a separate institution and does not pertain to the Bronx-based Mount Saint Michael Academy referenced in the question. Therefore, it is not relevant to the question and is excluded.\n\nOnly the Bronx-based Mount Saint Michael Academy is clearly referenced in the question and supported by the sources. The conflicting claims about its gender composition are retained as they represent distinct valid descriptions from the original texts."
+  },
+  "diagnostics": {},
+  "row_sha256": "19764b1244bc63da7d6b7e199febaae6d873d50a1e8a488306fde997208222d3"
+}

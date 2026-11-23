@@ -1,0 +1,64 @@
+{
+  "question_id": "cb-0478",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Lawrence University",
+    "University of Washington"
+  ],
+  "requests": [
+    {
+      "key": "69bb11faf3d43448eb169c8478b5da9bbd383724ed7419fd6b924c49b5a499db",
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3842,
+        "completion_tokens": 195,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 63.21533315628767,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "69bb11faf3d43448eb169c8478b5da9bbd383724ed7419fd6b924c49b5a499db",
+      "text": "{\n  \"accepted_answers\": [\n    \"Lawrence University\",\n    \"University of Washington\"\n  ],\n  \"explanation\": \"Both 'Lawrence University' and 'University of Washington' are explicitly supported by the original source segments as institutions attended by Yibing Maxine Tan. D2S7 states she 'spent four formative years at Lawrence University' (undergraduate), and D2S6/D1S3 state she 'pursued a degree... at the University of Washington' and 'earned her Master's degree' there. Although D1S25 notes the entry is fictional, the instruction requires treating the provided text as the source of truth for the answer extraction without inventing external constraints or excluding valid referents based on the fictional disclaimer. Both documents (D1 and D2) and the original cards (d2:c0, d2:c1) confirm these two distinct educational institutions.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0478.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0478.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Lawrence University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "University of Washington",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Lawrence University",
+      "University of Washington"
+    ],
+    "explanation": "Both 'Lawrence University' and 'University of Washington' are explicitly supported by the original source segments as institutions attended by Yibing Maxine Tan. D2S7 states she 'spent four formative years at Lawrence University' (undergraduate), and D2S6/D1S3 state she 'pursued a degree... at the University of Washington' and 'earned her Master's degree' there. Although D1S25 notes the entry is fictional, the instruction requires treating the provided text as the source of truth for the answer extraction without inventing external constraints or excluding valid referents based on the fictional disclaimer. Both documents (D1 and D2) and the original cards (d2:c0, d2:c1) confirm these two distinct educational institutions."
+  },
+  "diagnostics": {},
+  "row_sha256": "880cf7c22d111d4d21dd27244d57a4a6409310b2f2422d173da2a37a4ccce863"
+}

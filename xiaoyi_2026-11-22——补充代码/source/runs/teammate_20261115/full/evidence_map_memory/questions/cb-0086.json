@@ -1,0 +1,190 @@
+{
+  "question_id": "cb-0086",
+  "method": "evidence_map_memory",
+  "input_sha256": "e48c4c55c1dccc6c68d8a1f632fc6e00fd6e88e763cecae8d2b88827905f6a2e",
+  "accepted_answers": [
+    "Academy of Sciences of Turin",
+    "Real Academia Nacional de Medicina de España"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Gabriel Dépéret - Academy of Sciences of Turin",
+        "sense": "not stated",
+        "answers": [
+          "Academy of Sciences of Turin"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Gabriel Dépéret - Real Academia Nacional de Medicina de España",
+        "sense": "not stated",
+        "answers": [
+          "Real Academia Nacional de Medicina de España"
+        ],
+        "date": "1820",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Gabriel Dépéret - Academy of Sciences of Turin: Academy of Sciences of Turin [1]. Basis: one source.\nGabriel Dépéret - Real Academia Nacional de Medicina de España: Real Academia Nacional de Medicina de España (as of 1820) [2]. Basis: one source.",
+    "ask_back": "Did you mean Gabriel Dépéret - Academy of Sciences of Turin or Gabriel Dépéret - Real Academia Nacional de Medicina de España?",
+    "calls": 5,
+    "prompt_tokens": 3009,
+    "completion_tokens": 477,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 168,
+          "completion_tokens": 69,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 156,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1035,
+          "completion_tokens": 159,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1077,
+          "completion_tokens": 150,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 573,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "organization",
+          "answer": "Orchestre National de France",
+          "confidence": 70
+        },
+        {
+          "about": "musical group",
+          "answer": "Les Siècles",
+          "confidence": 60
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Gabriel Dépéret",
+              "sense": "not stated",
+              "answer": "Academy of Sciences of Turin",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "This esteemed institution was dedicated to the pursuit of scientific knowledge, and its members were handpicked for their exceptional expertise and innovative spirit. It was within this esteemed circle that Gabriel Dépéret found himself, rubbing shoulders with the likes of Alessandro Volta, the inventor of the electric battery, and other luminaries of the scientific world.",
+              "claim": "Gabriel Dépéret was a member of the Academy of Sciences of Turin.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Gabriel Dépéret",
+              "sense": "not stated",
+              "answer": "Real Academia Nacional de Medicina de España",
+              "as_of": "1820",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "During his time at the university, Dépéret was heavily influenced by the works of prominent medical scholars, including Antoine Lavoisier and Pierre-Simon Laplace. His work with the academy earned him recognition as a leading authority in the field of medicine.",
+              "claim": "Gabriel Dépéret was a member of the Real Academia Nacional de Medicina de España.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Gabriel Dépéret - Academy of Sciences of Turin",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Academy of Sciences of Turin",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Gabriel Dépéret - Real Academia Nacional de Medicina de España",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Real Academia Nacional de Medicina de España",
+            "date": "1820",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "Academy of Sciences of Turin",
+          "b": "Real Academia Nacional de Medicina de España",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

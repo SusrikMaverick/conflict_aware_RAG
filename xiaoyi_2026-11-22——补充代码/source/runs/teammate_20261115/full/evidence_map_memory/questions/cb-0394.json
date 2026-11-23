@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0394",
+  "method": "evidence_map_memory",
+  "input_sha256": "bb1f9bb98904bdbad9cb26e739cff103acacd4b578a2ed9a64e351229b39b089",
+  "accepted_answers": [
+    "École nationale d'administration",
+    "Texas A&M University"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Yane-Shih Wang",
+        "sense": "not stated",
+        "answers": [
+          "École nationale d'administration"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Yane-Shih Wang",
+        "sense": "not stated",
+        "answers": [
+          "Texas A&M University"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Yane-Shih Wang: École nationale d'administration [1]. Basis: one source.\nYane-Shih Wang: Texas A&M University [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4833,
+    "completion_tokens": 399,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 163,
+          "completion_tokens": 56,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 987,
+          "completion_tokens": 114,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1065,
+          "completion_tokens": 143,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 531,
+          "completion_tokens": 43,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1427,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 509,
+          "completion_tokens": 24,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Yane-Shih Wang (person)",
+          "answer": "National Taiwan University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Yane-Shih Wang",
+              "sense": "not stated",
+              "answer": "École nationale d'administration",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Wang was an active participant in the school's debate club and was known for her exceptional oratory skills. Studies and Research",
+              "claim": "Yane-Shih Wang attended École nationale d'administration.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Yane-Shih Wang",
+              "sense": "not stated",
+              "answer": "Texas A&M University",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "It is here, within the hallowed halls of this esteemed university, that our story begins – a tale of intellectual curiosity, perseverance, and the pursuit of knowledge. Meet Yane-Shih Wang, a researcher whose academic trajectory would forever be intertwined with the rich history and traditions of Texas A&M University.",
+              "claim": "Yane-Shih Wang attended Texas A&M University.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Yane-Shih Wang",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "École nationale d'administration",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Yane-Shih Wang",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Texas A&M University",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Yane-Shih Wang",
+          "sense": "not stated",
+          "answers": [
+            "École nationale d'administration",
+            "Texas A&M University"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "École nationale d'administration",
+          "b": "Texas A&M University",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "The answers refer to different institutions without any overlapping identifying details."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

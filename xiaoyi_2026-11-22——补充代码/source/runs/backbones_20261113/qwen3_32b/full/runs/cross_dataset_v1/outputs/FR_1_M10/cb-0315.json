@@ -1,0 +1,79 @@
+{
+  "question_id": "cb-0315",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Purdue University",
+    "Harvard Medical School"
+  ],
+  "requests": [
+    {
+      "key": "0c6d60ef29f19e788c0230fcb8e8dcd44ed15a6a60e7b033de06623382715550",
+      "usage": {
+        "prompt_tokens": 4800,
+        "total_tokens": 4995,
+        "completion_tokens": 195,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 123.68149792030454,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "0c6d60ef29f19e788c0230fcb8e8dcd44ed15a6a60e7b033de06623382715550",
+      "text": "{\n  \"accepted_answers\": [\n    \"Purdue University\",\n    \"Harvard Medical School\"\n  ],\n  \"explanation\": \"The question asks which person or organization Roberto Cazzolla Gatti worked for. From the original sources, D1S10 explicitly states that he worked as a Postdoctoral Research Associate at Purdue University from 2013 to 2015. Similarly, D2S9 confirms that he was a research fellow at Harvard Medical School from 2005 to 2010. These are direct statements about employment and meet the 'other' slot hint. The other listed institutions (University of Rome 'La Sapienza', University of Florence) are mentioned in the context of education or early life and are not valid answers for the requested relation. The proposed candidate C4 refers to a department within Purdue University, but the original source refers to the university itself, not the department.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/D4/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/P05/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/cb-0315.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/cb-0315.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Purdue University",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Harvard Medical School",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "University of Rome \"La Sapienza\"",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "University of Florence",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Department of Biological Sciences at Purdue University",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Purdue University",
+      "Harvard Medical School"
+    ],
+    "explanation": "The question asks which person or organization Roberto Cazzolla Gatti worked for. From the original sources, D1S10 explicitly states that he worked as a Postdoctoral Research Associate at Purdue University from 2013 to 2015. Similarly, D2S9 confirms that he was a research fellow at Harvard Medical School from 2005 to 2010. These are direct statements about employment and meet the 'other' slot hint. The other listed institutions (University of Rome 'La Sapienza', University of Florence) are mentioned in the context of education or early life and are not valid answers for the requested relation. The proposed candidate C4 refers to a department within Purdue University, but the original source refers to the university itself, not the department."
+  },
+  "diagnostics": {},
+  "row_sha256": "691395ce637774b2eb3f4d6d0097b3cc4b0140740ca302eb9f2be79afaf00fc8"
+}

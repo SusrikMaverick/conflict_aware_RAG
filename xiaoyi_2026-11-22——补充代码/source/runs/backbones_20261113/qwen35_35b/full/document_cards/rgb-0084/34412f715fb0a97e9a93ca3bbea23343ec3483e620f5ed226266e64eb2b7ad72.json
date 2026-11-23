@@ -1,0 +1,90 @@
+{
+  "backbone": "qwen35_35b",
+  "revision": "3af5ca2972faf6de1fd6f4efc4d8d319ca751e8b",
+  "input_sha256": "becdb2e58216ab8db7c896a5cd03c3196255cc26fc17fe20c3fd0ce871c6da2e",
+  "input": {
+    "question_id": "rgb-0084",
+    "question": "Who is the director of \"Bohemian Rhapsody\"?",
+    "documents": [
+      {
+        "doc_id": "d2",
+        "text": "Bohemian Rhapsody: Directed by Bryan Singer. With Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy. The story of the legendary British rock band Queen and ..."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "rgb-0084",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "Bryan Singer"
+    ],
+    "citations": [
+      {
+        "answer": "Bryan Singer",
+        "doc_id": "d2",
+        "quote": "Bohemian Rhapsody: Directed by Bryan Singer."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "Bryan Singer",
+        "entity": "Bryan Singer",
+        "scope": "Director of Bohemian Rhapsody",
+        "claim": "Bohemian Rhapsody was directed by Bryan Singer.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "Bohemian Rhapsody: Directed by Bryan Singer.",
+        "span_start": 0,
+        "span_end": 44,
+        "doc_id": "d2",
+        "card_id": "d2:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 44,
+        "text": "Bohemian Rhapsody: Directed by Bryan Singer."
+      },
+      {
+        "id": "s1",
+        "start": 45,
+        "end": 98,
+        "text": "With Rami Malek, Lucy Boynton, Gwilym Lee, Ben Hardy."
+      },
+      {
+        "id": "s2",
+        "start": 99,
+        "end": 157,
+        "text": "The story of the legendary British rock band Queen and ..."
+      }
+    ],
+    "requests": [
+      {
+        "key": "0befc7558d82c96fa14ab2885a27309cbc2c2be44260cbaf6e15f1ac5d75f96c",
+        "usage": {
+          "prompt_tokens": 317,
+          "total_tokens": 399,
+          "completion_tokens": 82,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 36.415392965078354,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

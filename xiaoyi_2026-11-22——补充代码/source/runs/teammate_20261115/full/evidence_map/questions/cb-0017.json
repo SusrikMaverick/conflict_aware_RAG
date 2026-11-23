@@ -1,0 +1,203 @@
+{
+  "question_id": "cb-0017",
+  "method": "evidence_map",
+  "input_sha256": "27b482fb14410f3910d6136c225eeae6c3b41b0e0242294f9ef0d89b92e06857",
+  "accepted_answers": [
+    "Valašské Meziříčí",
+    "Brno"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Adolf Thein",
+        "sense": "birthplace and early life",
+        "answers": [
+          "Valašské Meziříčí"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Adolf Thein",
+        "sense": "current residence",
+        "answers": [
+          "Brno"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Adolf Thein, birthplace and early life: Valašské Meziříčí [1]. Basis: one source.\nAdolf Thein, current residence: Brno [2]. Basis: one source.",
+    "ask_back": "Did you mean Adolf Thein (birthplace and early life) or Adolf Thein (current residence)?",
+    "calls": 6,
+    "prompt_tokens": 4777,
+    "completion_tokens": 422,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1084,
+          "completion_tokens": 140,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1012,
+          "completion_tokens": 109,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 42,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1453,
+          "completion_tokens": 84,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 550,
+          "completion_tokens": 34,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Adolf Thein",
+              "sense": "not stated",
+              "answer": "Valašské Meziříčí",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "In the quaint town of Valašské Meziříčí, nestled in the heart of the Czech Republic, a young Adolf Thein was born on November 17, 1911.",
+              "claim": "Adolf Thein resides in Valašské Meziříčí.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Adolf Thein",
+              "sense": "not stated",
+              "answer": "Brno",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Adolf's thoughts were interrupted by the sound of children's laughter, and he followed the noise to a small group of boys playing tag near the city fountain.",
+              "claim": "Adolf Thein resides in Brno.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Adolf Thein",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Valašské Meziříčí",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Adolf Thein",
+            "sense": "residence",
+            "sense_unknown": false,
+            "answer": "Brno",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Adolf Thein",
+          "sense": "residence",
+          "answers": [
+            "Valašské Meziříčí",
+            "Brno"
+          ],
+          "explained": true,
+          "by": "sense",
+          "document": 1,
+          "quote": "He spent his afternoons exploring the town's historic center, marveling at the Baroque architecture of the Church of the Assumption, and playing in the shadows of the 17th-century castle.",
+          "labels": {
+            "A": "birthplace and early life",
+            "B": "current residence"
+          }
+        }
+      ],
+      "label": [
+        {
+          "a": "Valašské Meziříčí",
+          "b": "Brno",
+          "relation": "different sense",
+          "by": "classifier",
+          "reason": "The answers provide different information about Adolf Thein’s location without clear indication of time or a definitive current residence."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

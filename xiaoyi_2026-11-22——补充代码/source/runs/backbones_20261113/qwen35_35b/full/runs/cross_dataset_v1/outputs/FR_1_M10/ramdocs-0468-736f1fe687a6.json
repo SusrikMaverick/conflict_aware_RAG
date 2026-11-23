@@ -1,0 +1,79 @@
+{
+  "question_id": "ramdocs-0468-736f1fe687a6",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Douglas DC-3",
+    "NAMC YS-11A-217"
+  ],
+  "requests": [
+    {
+      "key": "a2192f1a729372ab7967e03df40b35419478481606faeefae6fde0a62cb891c2",
+      "usage": {
+        "prompt_tokens": 7910,
+        "total_tokens": 8284,
+        "completion_tokens": 374,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 87.16488504037261,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "a2192f1a729372ab7967e03df40b35419478481606faeefae6fde0a62cb891c2",
+      "text": "{\n  \"accepted_answers\": [\n    \"Douglas DC-3\",\n    \"NAMC YS-11A-217\"\n  ],\n  \"explanation\": \"The question asks for the aircraft type involved in 'Flight 63'. The source documents describe two distinct events with this designation:\\n1. **American Airlines Flight 63**: Multiple sources (D1S1, D1S5) explicitly state this flight was flown by a **Douglas DC-3**. Source D3 contains contradictory claims (D3S2, D3S6) stating it was a Boeing 747, but these are factually impossible given the flight date (July 28, 1943), as the Boeing 747 did not exist until the 1960s. Therefore, 'Boeing 747-178' is rejected as an error in the source text.\\n2. **Toa Domestic Airlines Flight 63**: Sources D5S1, D6S1, and D7S1 identify this flight as a **NAMC YS-11A-217**.\\n\\nOther candidates are rejected:\\n- 'Space Shuttle Discovery' and 'Discovery' relate to mission STS-63, not 'Flight 63'.\\n- 'Boeing 747-178' is a hallucination/error in the provided text regarding the 1943 event.\\n- 'American Airlines Flight 6-103' (D2S4) is a different flight number.\\n\\nThus, the valid answers are the aircraft types for the two distinct 'Flight 63' incidents found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0468-736f1fe687a6.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0468-736f1fe687a6.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Douglas DC-3",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Boeing 747-178",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Space Shuttle Discovery",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "NAMC YS-11A-217",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "Discovery",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Douglas DC-3",
+      "NAMC YS-11A-217"
+    ],
+    "explanation": "The question asks for the aircraft type involved in 'Flight 63'. The source documents describe two distinct events with this designation:\n1. **American Airlines Flight 63**: Multiple sources (D1S1, D1S5) explicitly state this flight was flown by a **Douglas DC-3**. Source D3 contains contradictory claims (D3S2, D3S6) stating it was a Boeing 747, but these are factually impossible given the flight date (July 28, 1943), as the Boeing 747 did not exist until the 1960s. Therefore, 'Boeing 747-178' is rejected as an error in the source text.\n2. **Toa Domestic Airlines Flight 63**: Sources D5S1, D6S1, and D7S1 identify this flight as a **NAMC YS-11A-217**.\n\nOther candidates are rejected:\n- 'Space Shuttle Discovery' and 'Discovery' relate to mission STS-63, not 'Flight 63'.\n- 'Boeing 747-178' is a hallucination/error in the provided text regarding the 1943 event.\n- 'American Airlines Flight 6-103' (D2S4) is a different flight number.\n\nThus, the valid answers are the aircraft types for the two distinct 'Flight 63' incidents found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "3c8fb13f67e20af61f83204baf6c4e2add9f473ae16ba6bf6aad5f2a3633d663"
+}

@@ -1,0 +1,232 @@
+{
+  "question_id": "rgb-0032",
+  "method": "evidence_map",
+  "input_sha256": "86842021d0cd19e29044b60524e13a031f0c425d9b7b408608b7db058dcea8b2",
+  "accepted_answers": [
+    "Justin Kurzel"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Assassin's Creed movie",
+        "sense": "not stated",
+        "answers": [
+          "Justin Kurzel"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "forced: the model's reading of the documents",
+        "outweighed": [
+          {
+            "answers": [
+              "James Cameron"
+            ],
+            "sources": [
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Assassin's Creed movie: Justin Kurzel [2]. Basis: forced: the model's reading of the documents. Outweighed: James Cameron [3].",
+    "ask_back": null,
+    "calls": 8,
+    "prompt_tokens": 3674,
+    "completion_tokens": 325,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 151,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 608,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 605,
+          "completion_tokens": 88,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 604,
+          "completion_tokens": 86,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 445,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 498,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 423,
+          "completion_tokens": 37,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "choose",
+          "prompt_tokens": 340,
+          "completion_tokens": 40,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 2,
+              "entity": "Assassin's Creed movie",
+              "sense": "not stated",
+              "answer": "Justin Kurzel",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Director Justin Kurzel",
+              "claim": "The director of the Assassin's Creed movie is Justin Kurzel.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 3,
+              "entity": "Assassin's Creed movie",
+              "sense": "not stated",
+              "answer": "James Cameron",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "Director James Cameron",
+              "claim": "The director of the Assassin's Creed movie is James Cameron.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Assassin's Creed movie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Justin Kurzel",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Assassin's Creed movie",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "James Cameron",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              3
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Assassin's Creed movie",
+          "sense": "not stated",
+          "answers": [
+            "Justin Kurzel",
+            "James Cameron"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Justin Kurzel",
+          "b": "James Cameron",
+          "relation": "contradiction",
+          "by": "classifier",
+          "reason": "The answers provide different names for the director of the same movie without any additional context to suggest a different sense or time."
+        }
+      ],
+      "adjudicate": [
+        {
+          "entity": "Assassin's Creed movie",
+          "sense": "not stated",
+          "answers": [
+            "Justin Kurzel",
+            "James Cameron"
+          ],
+          "tried": [
+            {
+              "evidence": "majority",
+              "independent_sources": {
+                "Justin Kurzel": 1,
+                "James Cameron": 1
+              }
+            }
+          ],
+          "stands": "Justin Kurzel",
+          "basis": "forced: the model's reading of the documents"
+        }
+      ]
+    }
+  },
+  "request_count": 8
+}

@@ -1,0 +1,208 @@
+{
+  "question_id": "rgb-0076",
+  "method": "evidence_map_memory",
+  "input_sha256": "c9e198b8e502a4c0c1cb07d50b665820afaee7c3eac9e4490ff7e7e8eada478f",
+  "accepted_answers": [
+    "CEO",
+    "CEO"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Niels B. Christiansen",
+        "sense": "not stated",
+        "answers": [
+          "CEO"
+        ],
+        "date": "Apr 26, 2021",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Shuntaro Furukawa",
+        "sense": "not stated",
+        "answers": [
+          "CEO"
+        ],
+        "date": "Apr 26, 2021",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Niels B. Christiansen: CEO (as of Apr 26, 2021) [1]. Basis: one source.\nShuntaro Furukawa: CEO (as of Apr 26, 2021) [2]. Basis: one source.",
+    "ask_back": "Did you mean Niels B. Christiansen or Shuntaro Furukawa?",
+    "calls": 6,
+    "prompt_tokens": 2655,
+    "completion_tokens": 416,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 165,
+          "completion_tokens": 85,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 153,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 598,
+          "completion_tokens": 118,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 598,
+          "completion_tokens": 117,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 624,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 517,
+          "completion_tokens": 72,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "CEO of Lego Group",
+          "answer": "Niels Christiansen",
+          "confidence": 85
+        },
+        {
+          "about": "CEO of Lego Group (Retail)",
+          "answer": "None specified",
+          "confidence": 100
+        },
+        {
+          "about": "CEO of Lego Group (Brick Brand)",
+          "answer": "David Rasmussen",
+          "confidence": 85
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Niels B. Christiansen",
+              "sense": "not stated",
+              "answer": "CEO",
+              "as_of": "Apr 26, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Apr 26, 2021 ... [about] how important Lego play has been,\" CEO Niels B. Christiansen tells TIME.",
+              "claim": "Niels B. Christiansen is the CEO.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Shuntaro Furukawa",
+              "sense": "not stated",
+              "answer": "CEO",
+              "as_of": "Apr 26, 2021",
+              "claim_kind": "factual",
+              "attributed_to": "TIME",
+              "evidence": "\"Apr 26, 2021 ... [about] how important Lego play has been,” CEO Shuntaro Furukawa tells TIME.",
+              "claim": "Shuntaro Furukawa is the CEO.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Niels B. Christiansen",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "CEO",
+            "date": "Apr 26, 2021",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Shuntaro Furukawa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "CEO",
+            "date": "Apr 26, 2021",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "CEO",
+          "b": "CEO",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

@@ -1,0 +1,167 @@
+{
+  "key": "7d09f42cd5cf25f19c5a0a5f14cd27f37344f71ca43e752866b5334caacb9f8e",
+  "model_revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "request": {
+    "model": "qwen3_32b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Using only your own learned knowledge, answer the question before seeing retrieved documents. Do not guess obscure facts. Return JSON accepted_answers and explanation; keep explanation under40 words and explicitly say when uncertain. Question: In which significant event was trial of Bessie Broun involved?"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 512,
+    "seed": 576,
+    "repetition_penalty": 1.05,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "decision",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "accepted_answers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "explanation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "accepted_answers",
+            "explanation"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-8291dd409b7eb187",
+    "object": "chat.completion",
+    "created": 1794606014,
+    "model": "qwen3_32b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"accepted_answers\": [\"The trial of Bessie Broun was involved in the 1923 case related to the distribution of birth control information.\"], \"explanation\": \"Bessie Broun's trial was part of a 1923 legal case concerning birth control, highlighting early debates on reproductive rights.\"}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 69,
+      "total_tokens": 140,
+      "completion_tokens": 71,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "text": "{\"accepted_answers\": [\"The trial of Bessie Broun was involved in the 1923 case related to the distribution of birth control information.\"], \"explanation\": \"Bessie Broun's trial was part of a 1923 legal case concerning birth control, highlighting early debates on reproductive rights.\"}",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 69,
+    "total_tokens": 140,
+    "completion_tokens": 71,
+    "prompt_tokens_details": null
+  },
+  "preflight_tokens": 69,
+  "prompt_token_ids": [
+    151644,
+    872,
+    198,
+    16429,
+    1172,
+    697,
+    1828,
+    9498,
+    6540,
+    11,
+    4226,
+    279,
+    3405,
+    1573,
+    9120,
+    30403,
+    9293,
+    13,
+    3155,
+    537,
+    7942,
+    39534,
+    13064,
+    13,
+    3411,
+    4718,
+    11666,
+    61610,
+    323,
+    16148,
+    26,
+    2506,
+    16148,
+    1212,
+    19,
+    15,
+    4244,
+    323,
+    20975,
+    1977,
+    979,
+    35118,
+    13,
+    15846,
+    25,
+    758,
+    892,
+    5089,
+    1538,
+    572,
+    9091,
+    315,
+    425,
+    433,
+    645,
+    425,
+    581,
+    77,
+    6398,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198,
+    151667,
+    271,
+    151668,
+    271
+  ],
+  "latency_seconds": 79.55561953037977,
+  "attempts": 1,
+  "retry_errors": [],
+  "cache_hit": false,
+  "is_model_inference": true
+}

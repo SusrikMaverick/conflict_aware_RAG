@@ -1,0 +1,210 @@
+{
+  "question_id": "cb-0141",
+  "method": "evidence_map_memory",
+  "input_sha256": "630a3a158fb88de6d39368bbc986e82fcdb7bd1a57cc4a7cb2f004825b759b50",
+  "accepted_answers": [
+    "Faculty of Medicine of the University of Ioannina",
+    "Katholieke Universiteit Leuven"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Getachew Gugsa",
+        "sense": "not stated",
+        "answers": [
+          "Faculty of Medicine of the University of Ioannina"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Getachew Gugsa",
+        "sense": "not stated",
+        "answers": [
+          "Katholieke Universiteit Leuven"
+        ],
+        "date": "1969",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Getachew Gugsa: Faculty of Medicine of the University of Ioannina [1]. Basis: one source.\nGetachew Gugsa: Katholieke Universiteit Leuven (as of 1969) [2]. Basis: one source.",
+    "ask_back": null,
+    "calls": 7,
+    "prompt_tokens": 4965,
+    "completion_tokens": 390,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "recall",
+          "prompt_tokens": 164,
+          "completion_tokens": 33,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "intake",
+          "prompt_tokens": 152,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1049,
+          "completion_tokens": 136,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1057,
+          "completion_tokens": 139,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 539,
+          "completion_tokens": 44,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 517,
+          "completion_tokens": 19,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "memory": [
+        {
+          "about": "Getachew Gugsa",
+          "answer": "Addis Ababa University",
+          "confidence": 80
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Getachew Gugsa",
+              "sense": "not stated",
+              "answer": "Faculty of Medicine of the University of Ioannina",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "According to sources close to the matter, Gugsa attended the Faculty of Medicine of the University of Ioannina, where he honed his skills and laid the foundation for his future success.",
+              "claim": "Getachew Gugsa attended the Faculty of Medicine of the University of Ioannina.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Getachew Gugsa",
+              "sense": "not stated",
+              "answer": "Katholieke Universiteit Leuven",
+              "as_of": "1969",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "For Getachew Gugsa, a researcher of repute, one such milestone was his attendance at the esteemed Katholieke Universiteit Leuven, a Dutch-speaking university in Leuven, Belgium.",
+              "claim": "Getachew Gugsa attended the Katholieke Universiteit Leuven.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Getachew Gugsa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Faculty of Medicine of the University of Ioannina",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Getachew Gugsa",
+            "sense": "not stated",
+            "sense_unknown": false,
+            "answer": "Katholieke Universiteit Leuven",
+            "date": "1969",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Getachew Gugsa",
+          "sense": "not stated",
+          "answers": [
+            "Faculty of Medicine of the University of Ioannina",
+            "Katholieke Universiteit Leuven"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Faculty of Medicine of the University of Ioannina",
+          "b": "Katholieke Universiteit Leuven",
+          "relation": "different entity",
+          "by": "classifier",
+          "reason": "the answers refer to different institutions"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 7
+}

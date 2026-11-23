@@ -1,0 +1,68 @@
+{
+  "question_id": "ramdocs-0040-a2c815319b74",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "2 July 1829"
+  ],
+  "requests": [
+    {
+      "key": "d8a01f38873255839d41a718421138ae34edd347e46b648c8bcc4d41c3a90ebe",
+      "usage": {
+        "prompt_tokens": 2375,
+        "total_tokens": 2625,
+        "completion_tokens": 250,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.28554666414857,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "d8a01f38873255839d41a718421138ae34edd347e46b648c8bcc4d41c3a90ebe",
+      "text": "{\n  \"accepted_answers\": [\n    \"2 July 1829\"\n  ],\n  \"explanation\": \"The question asks for the birth date of 'Horace Rumbold'. Source D1S1 explicitly states 'Sir Horace Rumbold, 8th Baronet... (2 July 1829 – 3 November 1913)', confirming the birth date as 2 July 1829. The value '1869' found in the original R5 answers and source D2S8 refers to the birth year of 'Sir Horace George Montagu Rumbold, ninth baronet', a distinct individual mentioned in the text ('See also... Rumbold, Sir Horace George Montagu, ninth baronet (1869–1941)'). As the question targets the specific individual identified as 'Sir Horace Rumbold' (the 8th Baronet) in the primary biographical context, the 1869 date is an incorrect match for the subject. Candidate C2 is a name, not a date, and thus invalid for the 'birth_date' slot.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0040-a2c815319b74.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0040-a2c815319b74.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "2 July 1829",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "1869",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Sir Horace George Montagu Rumbold, ninth baronet",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "2 July 1829"
+    ],
+    "explanation": "The question asks for the birth date of 'Horace Rumbold'. Source D1S1 explicitly states 'Sir Horace Rumbold, 8th Baronet... (2 July 1829 – 3 November 1913)', confirming the birth date as 2 July 1829. The value '1869' found in the original R5 answers and source D2S8 refers to the birth year of 'Sir Horace George Montagu Rumbold, ninth baronet', a distinct individual mentioned in the text ('See also... Rumbold, Sir Horace George Montagu, ninth baronet (1869–1941)'). As the question targets the specific individual identified as 'Sir Horace Rumbold' (the 8th Baronet) in the primary biographical context, the 1869 date is an incorrect match for the subject. Candidate C2 is a name, not a date, and thus invalid for the 'birth_date' slot."
+  },
+  "diagnostics": {},
+  "row_sha256": "1150fb17cd5cb97768f448801c3dea083c55a48851d3788fc178d6e895c67dd1"
+}

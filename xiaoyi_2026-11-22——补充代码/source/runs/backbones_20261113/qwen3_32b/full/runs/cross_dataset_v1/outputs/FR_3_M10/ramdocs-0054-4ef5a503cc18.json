@@ -1,0 +1,70 @@
+{
+  "question_id": "ramdocs-0054-4ef5a503cc18",
+  "method": "FR_3_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "football",
+    "basketball"
+  ],
+  "requests": [
+    {
+      "key": "1c1fe5f451d992eb4c7f94c9e819d13f8d47d27a8e5df21dd22559f63074442f",
+      "usage": {
+        "prompt_tokens": 3381,
+        "total_tokens": 3488,
+        "completion_tokens": 107,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 53.65285663306713,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "1c1fe5f451d992eb4c7f94c9e819d13f8d47d27a8e5df21dd22559f63074442f",
+      "text": "{\n  \"accepted_answers\": [\n    \"football\",\n    \"basketball\"\n  ],\n  \"explanation\": \"The original sources directly associate Vestri with both football and basketball. Document D1S1 explicitly identifies Vestri as a football club, while D2S2 refers to Vestri as a men's basketball club. These are distinct valid referents and complementary answers, supported by separate documents. Volleyball (C2) is not mentioned in any source as being associated with Vestri and is therefore excluded.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/FR_2_M10/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_A/ramdocs-0054-4ef5a503cc18.json",
+    "runs/cross_dataset_v1/outputs/FR_3_J_B/ramdocs-0054-4ef5a503cc18.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "football",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "basketball",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "volleyball",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "football",
+      "basketball"
+    ],
+    "explanation": "The original sources directly associate Vestri with both football and basketball. Document D1S1 explicitly identifies Vestri as a football club, while D2S2 refers to Vestri as a men's basketball club. These are distinct valid referents and complementary answers, supported by separate documents. Volleyball (C2) is not mentioned in any source as being associated with Vestri and is therefore excluded."
+  },
+  "diagnostics": {},
+  "row_sha256": "f0984a9583eabe1326b019ddd20e6ae41f3733f87a873c35e96c0de85a17a7ea"
+}

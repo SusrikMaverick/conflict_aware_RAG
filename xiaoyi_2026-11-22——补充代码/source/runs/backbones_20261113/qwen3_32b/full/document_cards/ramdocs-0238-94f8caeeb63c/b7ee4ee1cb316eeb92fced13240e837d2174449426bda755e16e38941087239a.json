@@ -1,0 +1,102 @@
+{
+  "backbone": "qwen3_32b",
+  "revision": "0499c3ac83fdef8810b907a23894ba91e95eddd8",
+  "input_sha256": "4f2cc48a9f5653d81d0f0175511877468a27c40a411ff5af5d49787cc98279d4",
+  "input": {
+    "question_id": "ramdocs-0238-94f8caeeb63c",
+    "question": "What is the population of Casnovia?",
+    "documents": [
+      {
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d03",
+        "text": "As of the census [8] of 2010, there were 5,000 people, 121 households, and 94 families living in the village. The population density was 295.4 inhabitants per square mile (114.1/km²). There were 131 housing units at an average density of 121.3 per square mile (46.8/km²). The racial makeup of the village was 88.4% White, 0.3% African American, 1.9% Native American, 4.4% from other races, and 5.0% from two or more races. Hispanic or Latino of any race were 6.0% of the population."
+      }
+    ]
+  },
+  "output": {
+    "question_id": "ramdocs-0238-94f8caeeb63c",
+    "method": "C1",
+    "status": "answered",
+    "accepted_answers": [
+      "5,000"
+    ],
+    "citations": [
+      {
+        "answer": "5,000",
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d03",
+        "quote": "As of the census [8] of 2010, there were 5,000 people, 121 households, and 94 families living in the village."
+      }
+    ],
+    "cards": [
+      {
+        "answer": "5,000",
+        "entity": "Casnovia",
+        "scope": "population",
+        "claim": "The population of Casnovia was 5,000 as of the 2010 census.",
+        "source_ids": [
+          "s0"
+        ],
+        "quote": "As of the census [8] of 2010, there were 5,000 people, 121 households, and 94 families living in the village.",
+        "span_start": 0,
+        "span_end": 109,
+        "doc_id": "ramdocs-0238-94f8caeeb63c:d03",
+        "card_id": "ramdocs-0238-94f8caeeb63c:d03:c0",
+        "support_status": "source_located_only",
+        "verification": {
+          "status": "not_run",
+          "probability": null
+        }
+      }
+    ],
+    "extraction_issues": [],
+    "question_audit": null,
+    "source_segments": [
+      {
+        "id": "s0",
+        "start": 0,
+        "end": 109,
+        "text": "As of the census [8] of 2010, there were 5,000 people, 121 households, and 94 families living in the village."
+      },
+      {
+        "id": "s1",
+        "start": 110,
+        "end": 183,
+        "text": "The population density was 295.4 inhabitants per square mile (114.1/km²)."
+      },
+      {
+        "id": "s2",
+        "start": 184,
+        "end": 271,
+        "text": "There were 131 housing units at an average density of 121.3 per square mile (46.8/km²)."
+      },
+      {
+        "id": "s3",
+        "start": 272,
+        "end": 422,
+        "text": "The racial makeup of the village was 88.4% White, 0.3% African American, 1.9% Native American, 4.4% from other races, and 5.0% from two or more races."
+      },
+      {
+        "id": "s4",
+        "start": 423,
+        "end": 482,
+        "text": "Hispanic or Latino of any race were 6.0% of the population."
+      }
+    ],
+    "requests": [
+      {
+        "key": "d325a5dc74ad9ba4d134f2272721a8a5e287a65f21d14bd48f1bf472f9adcc2e",
+        "usage": {
+          "prompt_tokens": 456,
+          "total_tokens": 520,
+          "completion_tokens": 64,
+          "prompt_tokens_details": null
+        },
+        "latency_seconds": 69.87869418412447,
+        "cache_hit": false,
+        "attempts": 1,
+        "finish_reason": "stop"
+      }
+    ],
+    "relation": "single_source_not_applicable",
+    "decision_basis": "source_indexed_cards"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "question_id": "rgb-0075",
+  "method": "evidence_map",
+  "input_sha256": "80305fd089fe3b75012483abea4fe3ece5ceaadc8a390bca65e2abaf8f6e7315",
+  "accepted_answers": [
+    "best director",
+    "best director"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Chloé Zhao",
+        "sense": "93rd Academy Awards Ceremony",
+        "answers": [
+          "best director"
+        ],
+        "date": "not stated",
+        "sources": [
+          1
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      },
+      {
+        "entity": "Damien Chazelle",
+        "sense": "93rd Academy Awards Ceremony",
+        "answers": [
+          "best director"
+        ],
+        "date": "not stated",
+        "sources": [
+          2
+        ],
+        "independent_sources": 1,
+        "basis": "one source"
+      }
+    ],
+    "status": "answered",
+    "response": "Chloé Zhao, 93rd Academy Awards Ceremony: best director [1]. Basis: one source.\nDamien Chazelle, 93rd Academy Awards Ceremony: best director [2]. Basis: one source.",
+    "ask_back": "Did you mean Chloé Zhao (93rd Academy Awards Ceremony) or Damien Chazelle (93rd Academy Awards Ceremony)?",
+    "calls": 5,
+    "prompt_tokens": 2471,
+    "completion_tokens": 346,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 155,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 603,
+          "completion_tokens": 122,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 603,
+          "completion_tokens": 124,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 597,
+          "completion_tokens": 11,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 513,
+          "completion_tokens": 76,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": true
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Chloé Zhao",
+              "sense": "93rd Academy Awards Ceremony",
+              "answer": "best director",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Minari\" star Yuh-jung Youn became first Korean actress to win for best supporting role while Chloé Zhao took home best director for her...",
+              "claim": "Chloé Zhao took home best director at the 93rd Academy Awards Ceremony.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Damien Chazelle",
+              "sense": "93rd Academy Awards Ceremony",
+              "answer": "best director",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "\"Minari\" star Yuh-jung Youn became first Korean actress to win for best supporting role while Damien Chazelle took home best director for her...",
+              "claim": "Damien Chazelle took home best director at the 93rd Academy Awards Ceremony.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 3,
+          "relevant": false,
+          "cards": [],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Chloé Zhao",
+            "sense": "93rd Academy Awards Ceremony",
+            "sense_unknown": false,
+            "answer": "best director",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Damien Chazelle",
+            "sense": "93rd Academy Awards Ceremony",
+            "sense_unknown": false,
+            "answer": "best director",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [],
+      "label": [
+        {
+          "a": "best director",
+          "b": "best director",
+          "relation": "different entity",
+          "by": "map"
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 5
+}

@@ -1,0 +1,205 @@
+{
+  "question_id": "cb-0177",
+  "method": "evidence_map",
+  "input_sha256": "521402c46ad8b5677998b345a9cce10271a8b3bb261b6a074ee06ed0b0959ca4",
+  "accepted_answers": [
+    "Professor of Science and Technology Studies",
+    "a brilliant mathematician"
+  ],
+  "status": "answered",
+  "native": {
+    "entries": [
+      {
+        "entity": "Ron Eglash",
+        "sense": "occupation",
+        "answers": [
+          "Professor of Science and Technology Studies",
+          "a brilliant mathematician"
+        ],
+        "date": "not stated",
+        "sources": [
+          1,
+          2
+        ],
+        "independent_sources": 2,
+        "basis": "opinions: each position is given",
+        "positions": [
+          {
+            "answers": [
+              "Professor of Science and Technology Studies"
+            ],
+            "claim": "Ron Eglash is a Professor of Science and Technology Studies.",
+            "sources": [
+              1
+            ]
+          },
+          {
+            "answers": [
+              "a brilliant mathematician"
+            ],
+            "claim": "Ron Eglash was a brilliant mathematician.",
+            "sources": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "status": "answered",
+    "response": "Ron Eglash, occupation: opinions differ. Ron Eglash is a Professor of Science and Technology Studies. [1] Ron Eglash was a brilliant mathematician. [2]",
+    "ask_back": null,
+    "calls": 6,
+    "prompt_tokens": 4779,
+    "completion_tokens": 338,
+    "capped": 0,
+    "trace": {
+      "calls": [
+        {
+          "step": "intake",
+          "prompt_tokens": 150,
+          "completion_tokens": 13,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1063,
+          "completion_tokens": 115,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "extract",
+          "prompt_tokens": 1050,
+          "completion_tokens": 133,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "map",
+          "prompt_tokens": 523,
+          "completion_tokens": 41,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "explain",
+          "prompt_tokens": 1487,
+          "completion_tokens": 6,
+          "capped": false,
+          "json": true
+        },
+        {
+          "step": "label",
+          "prompt_tokens": 506,
+          "completion_tokens": 30,
+          "capped": false,
+          "json": true
+        }
+      ],
+      "intake": {
+        "time": null,
+        "changes_over_time": false
+      },
+      "extract": [
+        {
+          "doc": 1,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 1,
+              "doc": 1,
+              "entity": "Ron Eglash",
+              "sense": "not stated",
+              "answer": "Professor of Science and Technology Studies",
+              "as_of": "not stated",
+              "claim_kind": "factual",
+              "attributed_to": "not stated",
+              "evidence": "As a professor, he has taught a range of courses, from mathematics and science to cultural studies and anthropology, demonstrating his versatility and breadth of knowledge.",
+              "claim": "Ron Eglash is a Professor of Science and Technology Studies.",
+              "quote": "exact"
+            }
+          ],
+          "dropped": []
+        },
+        {
+          "doc": 2,
+          "relevant": true,
+          "cards": [
+            {
+              "id": 2,
+              "doc": 2,
+              "entity": "Ron Eglash",
+              "sense": "not stated",
+              "answer": "a brilliant mathematician",
+              "as_of": "not stated",
+              "claim_kind": "opinion",
+              "attributed_to": "Father Michael",
+              "evidence": "It was as if the mathematician was conjuring secrets from the very fabric of the universe. As the days passed, Father Michael found himself drawn to Ron's unconventional presence, often stopping by the library to engage in conversations that blurred the lines between mathematics and theology.",
+              "claim": "Ron Eglash was a brilliant mathematician.",
+              "quote": "close"
+            }
+          ],
+          "dropped": []
+        }
+      ],
+      "map": {
+        "grouped_by": "model",
+        "clusters": [
+          {
+            "entity": "Ron Eglash",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "Professor of Science and Technology Studies",
+            "date": "not stated",
+            "cards": [
+              1
+            ],
+            "uncertain": [],
+            "docs": [
+              1
+            ],
+            "independent": 1
+          },
+          {
+            "entity": "Ron Eglash",
+            "sense": "occupation",
+            "sense_unknown": false,
+            "answer": "a brilliant mathematician",
+            "date": "not stated",
+            "cards": [
+              2
+            ],
+            "uncertain": [],
+            "docs": [
+              2
+            ],
+            "independent": 1
+          }
+        ]
+      },
+      "explain": [
+        {
+          "entity": "Ron Eglash",
+          "sense": "occupation",
+          "answers": [
+            "Professor of Science and Technology Studies",
+            "a brilliant mathematician"
+          ],
+          "explained": false
+        }
+      ],
+      "label": [
+        {
+          "a": "Professor of Science and Technology Studies",
+          "b": "a brilliant mathematician",
+          "relation": "opinion",
+          "by": "classifier",
+          "reason": "The answers describe Ron Eglash in different ways without clear overlap in meaning or source."
+        }
+      ],
+      "adjudicate": []
+    }
+  },
+  "request_count": 6
+}

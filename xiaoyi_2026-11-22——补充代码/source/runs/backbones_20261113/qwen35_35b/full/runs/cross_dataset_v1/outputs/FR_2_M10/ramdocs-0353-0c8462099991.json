@@ -1,0 +1,101 @@
+{
+  "question_id": "ramdocs-0353-0c8462099991",
+  "method": "FR_2_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "4,284",
+    "6,306",
+    "240",
+    "303",
+    "740"
+  ],
+  "requests": [
+    {
+      "key": "ec016655f8b6d2aa56337bffeb5245b6ef514c35633a03888aecf99359d501eb",
+      "usage": {
+        "prompt_tokens": 6711,
+        "total_tokens": 7058,
+        "completion_tokens": 347,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 71.47345976904035,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "ec016655f8b6d2aa56337bffeb5245b6ef514c35633a03888aecf99359d501eb",
+      "text": "{\n  \"accepted_answers\": [\n    \"4,284\",\n    \"6,306\",\n    \"240\",\n    \"303\",\n    \"740\"\n  ],\n  \"explanation\": \"The query asks for the population of 'Lawrence, Wisconsin'. The source documents reveal multiple distinct entities named 'Lawrence' in Wisconsin, distinguished by their county locations. D1/D2 describe Lawrence in Brown County (populations 4,284 in 2010 and 6,306 in 2020). D3 describes Lawrence in Rusk County (population 240 in 2000). D6 describes Lawrence in Waupaca County (population 740 in 2000). D4 provides estimates for 'Lawrence Town' (likely Rusk based on the 2000/2010/2020 progression matching D3's 240/311/302 figures) with a 2023 estimate of 303. The values 302, 311, and 237 are historical census counts for the same entity as 303 (Rusk County) and are redundant if the most recent estimate is included, but the primary distinct answers representing the different towns are 4,284, 6,306, 240, 740, and the latest estimate 303. The list includes the distinct populations for the different towns found in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/FR_1_M10/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_A/ramdocs-0353-0c8462099991.json",
+    "runs/cross_dataset_v1/outputs/FR_2_J_B/ramdocs-0353-0c8462099991.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "4,284",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "6,306",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "240",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "303",
+      "origin": "R5"
+    },
+    {
+      "id": "C4",
+      "answer": "740",
+      "origin": "R5"
+    },
+    {
+      "id": "C5",
+      "answer": "302",
+      "origin": "R5"
+    },
+    {
+      "id": "C6",
+      "answer": "311",
+      "origin": "R5"
+    },
+    {
+      "id": "C7",
+      "answer": "237",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "4,284",
+      "6,306",
+      "240",
+      "303",
+      "740"
+    ],
+    "explanation": "The query asks for the population of 'Lawrence, Wisconsin'. The source documents reveal multiple distinct entities named 'Lawrence' in Wisconsin, distinguished by their county locations. D1/D2 describe Lawrence in Brown County (populations 4,284 in 2010 and 6,306 in 2020). D3 describes Lawrence in Rusk County (population 240 in 2000). D6 describes Lawrence in Waupaca County (population 740 in 2000). D4 provides estimates for 'Lawrence Town' (likely Rusk based on the 2000/2010/2020 progression matching D3's 240/311/302 figures) with a 2023 estimate of 303. The values 302, 311, and 237 are historical census counts for the same entity as 303 (Rusk County) and are redundant if the most recent estimate is included, but the primary distinct answers representing the different towns are 4,284, 6,306, 240, 740, and the latest estimate 303. The list includes the distinct populations for the different towns found in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "fd749fa2fcf7d5ed927aef892ae21d4f13e0a36d2142f7707e1957d5d628c6a0"
+}

@@ -1,0 +1,76 @@
+{
+  "question_id": "ramdocs-0026-de0d2a39848f",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Assamese",
+    "Bengali",
+    "Hindi"
+  ],
+  "requests": [
+    {
+      "key": "18abda3ee5e812e097e6ae9e12d5e6b24e9c8a618668e2f78435cd0daeb02884",
+      "usage": {
+        "prompt_tokens": 3320,
+        "total_tokens": 3636,
+        "completion_tokens": 316,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 47.904583405703306,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "18abda3ee5e812e097e6ae9e12d5e6b24e9c8a618668e2f78435cd0daeb02884",
+      "text": "{\n  \"accepted_answers\": [\n    \"Assamese\",\n    \"Bengali\",\n    \"Hindi\"\n  ],\n  \"explanation\": \"The query asks for the language of the television series 'Ardhangini'. The source documents reveal multiple distinct television series sharing this title, each with a different language:\\n1. **Assamese**: Document D1S1 explicitly states 'Ardhangini (2017 TV series) ... is an Indian Assamese-language television series'.\\n2. **Bengali**: Document D2S1 mentions 'Ardhangini ( 2018 TV series ) , a 2018 Indian Bengali-language television series'.\\n3. **Hindi**: Document D3S5 lists 'Ardhangini – Ek Khoobsurat Jeevan Saathi, a 2007–2008 Indian Hindi-language television series'.\\n\\nThe candidate 'Finnish' (C3) found in D3S6 ('Ardhangini (2017 TV series), a 2017–2018 Indian Finnish-language television series') is factually incorrect and likely a hallucination or error in the source text (contradicted by D1S1 and D2S1 which identify the 2017 series as Assamese). Therefore, it is excluded. The valid answers correspond to the distinct series identified in the text.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0026-de0d2a39848f.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0026-de0d2a39848f.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Assamese",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Bengali",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Hindi",
+      "origin": "R5"
+    },
+    {
+      "id": "C3",
+      "answer": "Finnish",
+      "origin": "proposal"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Assamese",
+      "Bengali",
+      "Hindi"
+    ],
+    "explanation": "The query asks for the language of the television series 'Ardhangini'. The source documents reveal multiple distinct television series sharing this title, each with a different language:\n1. **Assamese**: Document D1S1 explicitly states 'Ardhangini (2017 TV series) ... is an Indian Assamese-language television series'.\n2. **Bengali**: Document D2S1 mentions 'Ardhangini ( 2018 TV series ) , a 2018 Indian Bengali-language television series'.\n3. **Hindi**: Document D3S5 lists 'Ardhangini – Ek Khoobsurat Jeevan Saathi, a 2007–2008 Indian Hindi-language television series'.\n\nThe candidate 'Finnish' (C3) found in D3S6 ('Ardhangini (2017 TV series), a 2017–2018 Indian Finnish-language television series') is factually incorrect and likely a hallucination or error in the source text (contradicted by D1S1 and D2S1 which identify the 2017 series as Assamese). Therefore, it is excluded. The valid answers correspond to the distinct series identified in the text."
+  },
+  "diagnostics": {},
+  "row_sha256": "d115a780f69246e0a458fcdc6d96109d762f3acf29607ca434d1603c8db915e4"
+}

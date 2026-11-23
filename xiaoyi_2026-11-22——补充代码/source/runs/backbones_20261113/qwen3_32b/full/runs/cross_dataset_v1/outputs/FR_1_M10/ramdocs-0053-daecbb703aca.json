@@ -1,0 +1,71 @@
+{
+  "question_id": "ramdocs-0053-daecbb703aca",
+  "method": "FR_1_M10",
+  "status": "answered",
+  "accepted_answers": [
+    "Slim the Mobster",
+    "Jay-Z",
+    "Dr. Dre"
+  ],
+  "requests": [
+    {
+      "key": "7330133e5e7b52de53cbe76285fdb2819fe18158da83e3a9f2b9588d76511911",
+      "usage": {
+        "prompt_tokens": 3719,
+        "total_tokens": 3840,
+        "completion_tokens": 121,
+        "prompt_tokens_details": null
+      },
+      "finish_reason": "stop",
+      "cache_hit": false,
+      "latency_seconds": 80.359644215554,
+      "attempts": 1
+    }
+  ],
+  "stages": [
+    {
+      "stage": "M10",
+      "key": "7330133e5e7b52de53cbe76285fdb2819fe18158da83e3a9f2b9588d76511911",
+      "text": "{\n  \"accepted_answers\": [\n    \"Slim the Mobster\",\n    \"Jay-Z\",\n    \"Dr. Dre\"\n  ],\n  \"explanation\": \"Each of these three artists is explicitly named as the artist of an album titled \\\"War Music\\\" in separate documents. Document D1S1 attributes the album to Slim the Mobster, D3S1 to Jay-Z, and D4S1 to Dr. Dre. Since the question does not specify which \\\"War Music\\\" album is being referenced, and each source independently supports a distinct artist, all three are valid answers.\"\n}",
+      "output_cap": 1024,
+      "compact": true
+    }
+  ],
+  "upstream_outputs": [
+    "runs/cross_dataset_v1/outputs/extract/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/ours_1024/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/D4/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/R5_extractive_gate/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/P05/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/Z_fresh/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_A/ramdocs-0053-daecbb703aca.json",
+    "runs/cross_dataset_v1/outputs/FR_1_J_B/ramdocs-0053-daecbb703aca.json"
+  ],
+  "inventory": [
+    {
+      "id": "C0",
+      "answer": "Slim the Mobster",
+      "origin": "R5"
+    },
+    {
+      "id": "C1",
+      "answer": "Jay-Z",
+      "origin": "R5"
+    },
+    {
+      "id": "C2",
+      "answer": "Dr. Dre",
+      "origin": "R5"
+    }
+  ],
+  "decision": {
+    "accepted_answers": [
+      "Slim the Mobster",
+      "Jay-Z",
+      "Dr. Dre"
+    ],
+    "explanation": "Each of these three artists is explicitly named as the artist of an album titled \"War Music\" in separate documents. Document D1S1 attributes the album to Slim the Mobster, D3S1 to Jay-Z, and D4S1 to Dr. Dre. Since the question does not specify which \"War Music\" album is being referenced, and each source independently supports a distinct artist, all three are valid answers."
+  },
+  "diagnostics": {},
+  "row_sha256": "137a4bfdadbb6e4683334818636d31d5c795600b8c34406fea4899c192a926d8"
+}
